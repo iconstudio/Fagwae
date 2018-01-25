@@ -1,0 +1,82 @@
+/// @description Drawing main menu
+
+draw_set_valign(0)
+draw_set_halign(0)
+
+camera_projection_set(-200, 0, -200, 0, 0, 0, 0, -1, 0, 48, 1.05, 32, 32000)
+draw_set_color($ffffff)
+
+var aalpha, dy, dalpha, sw
+if menurot > 0
+	aalpha = (90 - menurot) / 90
+else
+	aalpha = 1
+
+draw_set_alpha(aalpha * (120 - rpush[0]) / 120 * get_ralpha(rflash[0]))
+menu_text(8 + rpush[0], -24, "FAGWAE", 5, menurot + 90)
+draw_set_alpha(aalpha * (120 - rpush[1]) / 120 * get_ralpha(rflash[1]))
+menu_text(8 + rpush[1], 9, "ZNIQ", 3, menurot + 90)
+menu_text(8 + rpush[1], 26, "ICONSTUDIO", 3, menurot + 90)
+
+aalpha = max((120 - rpush[2]) / 120 * get_ralpha(rflash[2]), 0)
+
+for (var j = 0; j <= maxdepth; ++j) {
+	dy = menupos[j] - 10
+	dalpha = 1 - abs(menurot / 90 - j)
+
+	for (var i = 0; i < menucnt[j]; ++i) {
+		if i == menusel[j]
+			draw_set_alpha(aalpha)
+		else
+			draw_set_alpha(dalpha * aalpha)
+
+		if i == menusel[j]
+			dscl = 3 - menuscl[j] * 1.5
+		else if i == menuold[j]
+			dscl = 1.5 + menuscl[j] * 1.5
+		else
+			dscl = 1.5
+
+		draw_set_color(make_color_hsv(0, 0, 255 * menucol[j, i]))
+		sw = menu_text(8 + rpush[2], dy, menucap[j, i], dscl, menurot - j * 90)
+		ldy = dy
+		dy += 5 * dscl + 3
+
+		if menuinf[j, i] != "" {
+			if i == menusel[j] {
+				draw_set_alpha(aalpha * infoscl[j])
+				menu_text(8 + rpush[2], dy - 0.875 * infoscl[j], "- " + menuinf[j, i], infoscl[j] * 1.75, menurot - j * 90)
+				dy += 10.5 * infoscl[j]
+			} else if i == menuold[j] {
+				draw_set_alpha(aalpha * infosco[j])
+				menu_text(8 + rpush[2], dy - 0.875 * infosco[j], "- " + menuinf[j, i], infosco[j] * 1.75, menurot - j * 90)
+				dy += 10.5 * infosco[j]
+			}
+		}
+
+		if menuvar[j, i] != "" {
+			draw_set_alpha(dalpha * aalpha)
+			draw_set_color(make_color_hsv(0, 0, 176 * menucol[j, i]))
+			draw_transform_set_rotation_y(90)
+			draw_transform_add_translation(-sw, 0, -sw)
+			draw_transform_add_rotation_y(menurot - j * 90)
+			draw_transform_add_translation(sw, 0, sw)
+			draw_text_transformed(8 + (string_width(menucap[j, i]) + 3) * dscl + rpush[2], ldy, string(variable_global_get(menuvar[j, i])), dscl, dscl, 0)
+			draw_transform_set_identity()
+			draw_set_color(make_color_hsv(0, 0, 255 * menucol[j, i]))
+		}
+	}
+}
+draw_set_alpha(1)
+
+camera_projection_identity()
+
+draw_set_color($ffffff)
+draw_set_halign(1)
+/*
+draw_text_transformed(lx, ly + rpush[1], "" + global.p_name, 2, 2, 0)
+if global.network
+	draw_text_transformed(lx, ly + 10 + rpush[1], "SERVER ON", 1, 1, 0)
+else
+	draw_text_transformed(lx, ly + 10 + rpush[1], "SERVER OFF", 1, 1, 0)
+*/
