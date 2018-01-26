@@ -37,7 +37,11 @@ if draw_mode > 0 {
 				draw_mode = 4
 				break
 			case 5:
-				//instance_create(0, 0, objAchivements)
+				instance_create_layer(0, 0, "UI", oMainAchievement)
+				draw_mode = 4
+				break
+			case 6:
+				instance_create_layer(0, 0, "Backend_2", oProfileResetter)
 				draw_mode = 4
 				break
 		}
@@ -46,8 +50,6 @@ if draw_mode > 0 {
 	if sgrv > 55 {
 		if draw_mode == 2 {
 			instance_destroy()
-			camera_projection_identity()
-			draw_transform_set_identity()
 		} else if draw_mode == 3 {
 			game_end()
 		}

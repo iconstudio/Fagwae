@@ -19,6 +19,8 @@ menu_text(8 + rpush[1], 9, "ZNIQ", 3, menurot + 90)
 menu_text(8 + rpush[1], 26, "ICONSTUDIO", 3, menurot + 90)
 
 aalpha = max((120 - rpush[2]) / 120 * get_ralpha(rflash[2]), 0)
+if aalpha <= 0
+	exit
 
 for (var j = 0; j <= maxdepth; ++j) {
 	dy = menupos[j] - 10
@@ -67,12 +69,11 @@ for (var j = 0; j <= maxdepth; ++j) {
 		}
 	}
 }
-draw_set_alpha(1)
+draw_set_alpha(aalpha)
 
 camera_projection_identity()
 draw_transform_set_identity()
 
 draw_set_color($ffffff)
-draw_set_alpha(1)
 draw_set_halign(1)
 draw_text_transformed(lx, ly + rpush[1], global.status_name, 1, 1, 0)

@@ -2,7 +2,10 @@
 /// @function profile_load
 /// @param file { string }
 
-global.achievement_count = 5
+global.achievement_count = 0
+global.achievement = []
+global.achievement_caption = []
+global.achievement_description = []
 global.achievement_getter = []
 
 if !file_exists(argument0) {

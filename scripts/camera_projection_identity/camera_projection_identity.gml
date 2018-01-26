@@ -1,8 +1,5 @@
 /// @description camera_projection_identity()
 /// @function camera_projection_identity 
-/// @param w		w of view
-/// @param h		h of view
-/// @param angle	rotation angle of the projection
 
 var ww = view_wport
 var hh = view_hport

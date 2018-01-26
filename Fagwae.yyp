@@ -63,6 +63,14 @@
             }
         },
         {
+            "Key": "167c9af9-8574-4e5f-b4a0-b63a37094ef7",
+            "Value": {
+                "id": "6709fa56-c76b-466c-8d5e-a8d819cbff8b",
+                "resourcePath": "scripts\\achievement_add\\achievement_add.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "168eb891-d369-451a-8790-2fb044754cca",
             "Value": {
                 "id": "ea159c2a-1e12-41e8-8701-d9d053e40ed9",
@@ -183,11 +191,27 @@
             }
         },
         {
+            "Key": "49dd4482-d182-4493-a25b-0c574f68052b",
+            "Value": {
+                "id": "9d026bc9-a010-48a2-abae-accef5a1b43f",
+                "resourcePath": "views\\49dd4482-d182-4493-a25b-0c574f68052b.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "4bbc97a1-b785-417a-bf13-747aacdafaf1",
             "Value": {
                 "id": "ade4ac55-258d-4354-9f29-1f1900dac924",
                 "resourcePath": "scripts\\draw_transform_add_translation\\draw_transform_add_translation.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "4e9edadd-e900-4d93-b385-afc496d53bab",
+            "Value": {
+                "id": "470aa1d1-b72f-496f-b8d7-8d8b1deec115",
+                "resourcePath": "objects\\oMainAchievement\\oMainAchievement.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -236,6 +260,14 @@
                 "id": "66535a82-0a5a-49b1-9691-30a0467babcc",
                 "resourcePath": "sprites\\sFontBorder\\sFontBorder.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "714504cb-41bb-4676-ad45-fe771f9879f7",
+            "Value": {
+                "id": "72f7218f-1bb7-40bc-9d3b-8d6032d1e69e",
+                "resourcePath": "objects\\oProfileResetter\\oProfileResetter.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -455,6 +487,14 @@
             }
         },
         {
+            "Key": "c7796ce8-1f9f-422f-90f0-11e2080f7f4b",
+            "Value": {
+                "id": "c7c49f6a-15fc-4d66-bdb4-50e666688112",
+                "resourcePath": "objects\\oWave\\oWave.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "cc98d028-7bdd-4680-85f3-c87a7baa481e",
             "Value": {
                 "id": "e556ef36-0a49-4180-b2e8-bedc7d36fe02",
@@ -532,6 +572,14 @@
                 "id": "eae3a4f2-6c35-4ad5-80d0-328aeae0fec2",
                 "resourcePath": "views\\dfc6efc7-5508-4fc8-8bc2-3604dadc8f73.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "e1626af3-a0a2-4758-a4c2-67c4da322b18",
+            "Value": {
+                "id": "9b36a94f-8a49-490d-9f78-3a0193635d89",
+                "resourcePath": "sprites\\sAchievement\\sAchievement.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -664,7 +712,8 @@
         "41c581fa-e5ce-4183-8a09-4c0c42f5b77a",
         "447b57af-64ea-4c6e-a89e-b4366b853729",
         "91b22788-78fd-498c-8bac-0158e44e571d",
-        "0e37f3cc-5ef3-474a-9748-73604cae136b"
+        "0e37f3cc-5ef3-474a-9748-73604cae136b",
+        "167c9af9-8574-4e5f-b4a0-b63a37094ef7"
     ],
     "tutorial": ""
 }

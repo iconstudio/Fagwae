@@ -9,7 +9,6 @@ if profile_load(global.profilefile) {
 	instance_destroy()
 	exit
 } else {
-	profile_clear()
 	show_debug_message("Cannot load profile.")
 }
 

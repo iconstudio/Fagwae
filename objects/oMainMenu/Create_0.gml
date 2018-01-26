@@ -4,8 +4,8 @@ draw_mode = 0
 sgrv = 0
 rfrm = 0
 for (var i = 0; i < 3; ++i) {
- rpush[i] = 120
- rflash[i] = 0
+	rpush[i] = 120
+	rflash[i] = 0
 }
 
 lx = global.screen_gui_cx

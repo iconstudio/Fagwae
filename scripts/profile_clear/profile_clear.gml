@@ -16,9 +16,8 @@ global.log_openextreme = 0
 global.log_highscore_1 = 0
 global.log_highscore_2 = 0
 
+global.achievement_count = 0
 global.achievement = []
-global.achievement_count = 5
-for (var i = 0; i < global.achievement_count; ++i) {
-	global.achievement[i] = 0
-	global.achievement_getter[i] = 0
-}
+global.achievement_caption = []
+global.achievement_description = []
+global.achievement_getter = []

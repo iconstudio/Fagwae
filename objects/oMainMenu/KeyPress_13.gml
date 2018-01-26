@@ -46,7 +46,7 @@ if menudepth == 0 {
 		else if menusel[1] == 1 && global.log_openextreme > 0 // extreme
 			setmode = 2
 
-		if setmode < 3 {
+		if setmode < 3 { // add 4 areas
 			menu_clear(2)
 			menu_add(2, "AREA 1", "", 1)
 			for (var i = 1; i < 4; ++i) {
@@ -136,9 +136,8 @@ if menudepth == 0 {
 		}
 	}
 } else if menudepth == 3 {
-	if menusel[3] == 0 {
-		//instance_create_layer(0, 0, "Backend_1", oProfileReset)
-		draw_mode = 2
+	if menusel[3] == 0 { // deleting profile
+		draw_mode = 6
 	} else {
 		menudepth = 2
 	}
