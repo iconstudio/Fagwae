@@ -1,6 +1,6 @@
 /// @description Initialize Basic Data, Back-End
 
-#macro file_header $cafe
+#macro file_header $a1
 global.profilefile = "profile.dat"
 global.network = true
 
@@ -10,8 +10,9 @@ draw_set_circle_precision(60)
 
 game_set_speed(60, gamespeed_fps)
 
-globalvar matrix_identical;
+globalvar matrix_identical, projection_identical;
 matrix_identical = matrix_build_identity()
+projection_identical = matrix_build_projection_ortho(view_wport, view_hport, 1, 32000)
 
 global.font = font_add_sprite(sFont, 33, 1, 1)
 global.fontborder = font_add_sprite(sFontBorder, 33, 1, 1)

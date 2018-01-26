@@ -11,7 +11,7 @@
     "option_windows_description_info": "",
     "option_windows_display_cursor": false,
     "option_windows_display_name": "Fagwae",
-    "option_windows_enable_steam": true,
+    "option_windows_enable_steam": false,
     "option_windows_executable_name": "${project_name}",
     "option_windows_icon": "${options_dir}\\windows\\icons\\icon.ico",
     "option_windows_installer_finished": "${base_options_dir}\\windows\\installer\\finished.bmp",
@@ -27,12 +27,12 @@
     "option_windows_splash_screen": "${base_options_dir}\\windows\\splash\\splash.png",
     "option_windows_start_fullscreen": false,
     "option_windows_texture_page": "2048x2048",
-    "option_windows_use_splash": true,
+    "option_windows_use_splash": false,
     "option_windows_version": {
         "build": 0,
         "major": 1,
         "minor": 0,
-        "revision": 0
+        "revision": 1
     },
     "option_windows_vsync": false
 }

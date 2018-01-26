@@ -70,7 +70,9 @@ for (var j = 0; j <= maxdepth; ++j) {
 draw_set_alpha(1)
 
 camera_projection_identity()
+draw_transform_set_identity()
 
 draw_set_color($ffffff)
+draw_set_alpha(1)
 draw_set_halign(1)
-
+draw_text_transformed(lx, ly + rpush[1], global.status_name, 1, 1, 0)

@@ -10,6 +10,7 @@ if profile_load(global.profilefile) {
 	exit
 } else {
 	profile_clear()
+	show_debug_message("Cannot load profile.")
 }
 
 kstring = ""

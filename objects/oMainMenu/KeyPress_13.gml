@@ -116,12 +116,15 @@ if menudepth == 0 {
 			if menusel[1] == 0 { // music volume
 				global.setting_music = menusel[2]
 				menudepth = 1
+				profile_save(global.profilefile)
 			} else if menusel[1] == 1 { // sfx volume
 				global.setting_sfx = menusel[2]
 				menudepth = 1
+				profile_save(global.profilefile)
 			} else if menusel[1] == 2 { // effect
 				global.setting_effect = !menusel[2]
 				menudepth = 1
+				profile_save(global.profilefile)
 			} else if menusel[1] == 3 {
 				if menusel[2] == 0 { // deleting profile
 					menu_clear(3, 1)
