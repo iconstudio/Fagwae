@@ -33,23 +33,21 @@ if draw_mode > 0 {
 	if sgrv++ > 20 {
 		switch draw_mode {
 			case 1:
-				//instance_create(0, 0, objHighScores)
+				//instance_create(0, 0, oHighScore)
 				draw_mode = 4
 				break
 			case 5:
-				//instance_create(0, 0, objAchivement)
-				draw_mode = 4
-				break
-			case 6:
-				//instance_create(0, 0, objProfileStatic)
+				//instance_create(0, 0, objAchivements)
 				draw_mode = 4
 				break
 		}
 	}
 
-	if sgrv > 50 {
+	if sgrv > 55 {
 		if draw_mode == 2 {
 			instance_destroy()
+			camera_projection_identity()
+			draw_transform_set_identity()
 		} else if draw_mode == 3 {
 			game_end()
 		}

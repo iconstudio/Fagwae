@@ -5,7 +5,7 @@
 /// @param zt z value { real }
 
 // build the rotation matrix
-var m = matrix_build_identity()
+var m = matrix_identical
 m[12] = argument0
 m[13] = argument1
 m[14] = argument2

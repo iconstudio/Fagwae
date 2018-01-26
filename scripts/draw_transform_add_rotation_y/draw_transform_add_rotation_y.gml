@@ -7,7 +7,7 @@ var c = dcos(argument0)
 var s = dsin(argument0)
 
 // build the rotation matrix
-var mT = matrix_build_identity()
+var mT = matrix_identical
 mT[0] = c
 mT[2] = s
 mT[8] = -s

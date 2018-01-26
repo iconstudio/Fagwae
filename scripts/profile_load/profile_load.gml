@@ -2,8 +2,8 @@
 /// @function profile_load
 /// @param file { string }
 
-global.achievement = []
 global.achievement_count = 5
+global.achievement_getter = []
 
 if !file_exists(argument0)
  return false

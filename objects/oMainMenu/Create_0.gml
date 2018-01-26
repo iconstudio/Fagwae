@@ -21,7 +21,7 @@ menuscr = 1
 menu_clear(0)
 menu_add(0, "START", "", 1)
 menu_add(0, "HIGHSCORE", "", 1)
-menu_add(0, "ACHIVEMENT", "", 1)
+menu_add(0, "ACHIVEMENTS", "", 1)
 menu_add(0, "SETTING", "", 1)
 menu_add(0, "EXIT", "", 1)
 
@@ -35,4 +35,4 @@ event_user(1)
 global.extreme = false
 
 audio_stop_all()
-audio_play_sound(musicMainMenu, 0, true)
+//audio_play_sound(musicMainMenu, 0, true)

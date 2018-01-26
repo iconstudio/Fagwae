@@ -9,9 +9,21 @@ if !global.screenlock {
  surface_reset_target()
 }
 
+if fade_current < fade_target {
+	fade_alpha = script_execute(fade_easer, fade_current)
+	fade_current += 0.01
+} else {
+	fade_current = fade_target
+	fade_alpha = fade_current
+}
+
 gpu_set_blendmode_ext(bm_one, bm_zero)
 draw_surface_ext(surf, 0, 0, 1, 1, 0, $ffffff, 1)
 gpu_set_blendmode(bm_normal)
+
+if fade_alpha > 0 {
+	
+}
 
 if global.screenshake {
 	speed = global.screenshake
