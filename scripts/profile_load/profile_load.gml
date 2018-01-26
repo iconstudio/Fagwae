@@ -2,12 +2,6 @@
 /// @function profile_load
 /// @param file { string }
 
-global.achievement_count = 0
-global.achievement = []
-global.achievement_caption = []
-global.achievement_description = []
-global.achievement_getter = []
-
 if !file_exists(argument0) {
 	show_debug_message("Cannot find buffer file.")
 	return false

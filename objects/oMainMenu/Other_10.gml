@@ -1,7 +1,6 @@
 /// @description Restart main menu
 
-global.extreme = false
-dmode = 0
+draw_mode = 0
 rfrm = 0
 sgrv = 0
 for (var i = 0; i < 3; ++i) {

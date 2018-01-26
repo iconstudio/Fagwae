@@ -40,7 +40,7 @@
                     "id": "9751bf8b-7999-4c5d-9fcb-c5cf131cf275",
                     "modelName": "GMTextureGroup",
                     "mvc": "1.0",
-                    "groupName": "Entity",
+                    "groupName": "Entity_Shapes",
                     "targets": 29263750006690030,
                     "autocrop": true,
                     "border": 2,
@@ -71,6 +71,66 @@
                     "modelName": "GMTextureGroup",
                     "mvc": "1.0",
                     "groupName": "Other",
+                    "targets": 29263750006690030,
+                    "autocrop": true,
+                    "border": 2,
+                    "groupParent": "00000000-0000-0000-0000-000000000000",
+                    "mipsToGenerate": 0,
+                    "scaled": true
+                }
+            },
+            {
+                "Key": 6,
+                "Value": {
+                    "id": "6d1e69ef-6b62-4229-b979-c0d7fbe8aa55",
+                    "modelName": "GMTextureGroup",
+                    "mvc": "1.0",
+                    "groupName": "Entity_Frames",
+                    "targets": 29263750006690030,
+                    "autocrop": true,
+                    "border": 2,
+                    "groupParent": "00000000-0000-0000-0000-000000000000",
+                    "mipsToGenerate": 0,
+                    "scaled": true
+                }
+            },
+            {
+                "Key": 7,
+                "Value": {
+                    "id": "cabc86aa-b686-4f75-bdf9-8be84abb6cc8",
+                    "modelName": "GMTextureGroup",
+                    "mvc": "1.0",
+                    "groupName": "Entity_Indeterminate",
+                    "targets": 29263750006690030,
+                    "autocrop": true,
+                    "border": 2,
+                    "groupParent": "00000000-0000-0000-0000-000000000000",
+                    "mipsToGenerate": 0,
+                    "scaled": true
+                }
+            },
+            {
+                "Key": 8,
+                "Value": {
+                    "id": "4ebdc0ab-42d7-4223-9246-a01f7d598448",
+                    "modelName": "GMTextureGroup",
+                    "mvc": "1.0",
+                    "groupName": "Entity_Player",
+                    "targets": 29263750006690030,
+                    "autocrop": true,
+                    "border": 2,
+                    "groupParent": "00000000-0000-0000-0000-000000000000",
+                    "mipsToGenerate": 0,
+                    "scaled": true
+                }
+            },
+            {
+                "Key": 9,
+                "Value": {
+                    "id": "2488abf4-0f81-4aaf-9cd7-5a4607ac89ee",
+                    "modelName": "GMTextureGroup",
+                    "mvc": "1.0",
+                    "groupName": "Entity_General",
                     "targets": 29263750006690030,
                     "autocrop": true,
                     "border": 2,
