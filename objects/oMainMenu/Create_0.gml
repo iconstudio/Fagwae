@@ -33,3 +33,6 @@ background_color = 0
 event_user(1)
 
 global.extreme = false
+
+audio_stop_all()
+audio_play_sound(musicMainMenu, 0, true)

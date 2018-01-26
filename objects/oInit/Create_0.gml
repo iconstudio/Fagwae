@@ -1,11 +1,14 @@
 /// @description Initialize Basic Data, Back-End
 
+#macro file_header $cafe
 global.profilefile = "profile.dat"
 global.network = true
 
 application_surface_draw_enable(false)
 gpu_set_blendenable(true)
 draw_set_circle_precision(60)
+
+game_set_speed(60, gamespeed_fps)
 
 global.d3dcamera = camera_create()
 

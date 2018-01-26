@@ -15,6 +15,6 @@ menucnt[menu_index] = 0
 menusel[menu_index] = defsel
 menuold[menu_index] = defsel
 menuscl[menu_index] = 0
-menupos[menu_index] = -13 * defsel
+menupos[menu_index] = -15 * defsel
 infoscl[menu_index] = 0
 infosco[menu_index] = 0

@@ -3,7 +3,7 @@
 draw_set_valign(0)
 draw_set_halign(0)
 
-camera_projection_set(-200, 0, -200, 0, 0, 0, 0, -1, 0, 48, 1.05, 32, 32000)
+camera_projection_set(-200, 10, -200, 0, 10, 0, 0, -1, 0, 48, 1.05, 32, 32000)
 draw_set_color($ffffff)
 
 var aalpha, dy, dalpha, sw
@@ -13,10 +13,10 @@ else
 	aalpha = 1
 
 draw_set_alpha(aalpha * (120 - rpush[0]) / 120 * get_ralpha(rflash[0]))
-menu_text(8 + rpush[0], -24, "FAGWAE", 5, menurot + 90)
+menu_text(8 + rpush[0], -20, "FAGWAE", 5, menurot + 90)
 draw_set_alpha(aalpha * (120 - rpush[1]) / 120 * get_ralpha(rflash[1]))
-menu_text(8 + rpush[1], 9, "ZNIQ", 3, menurot + 90)
-menu_text(8 + rpush[1], 26, "ICONSTUDIO", 3, menurot + 90)
+menu_text(8 + rpush[1], 13, "ZNIQ", 3, menurot + 90)
+menu_text(8 + rpush[1], 30, "ICONSTUDIO", 3, menurot + 90)
 
 aalpha = max((120 - rpush[2]) / 120 * get_ralpha(rflash[2]), 0)
 
