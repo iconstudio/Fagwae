@@ -1,6 +1,6 @@
 /// @description 
 
-scroll += (-selected * 128 - scroll) / 8
+scroll += (selected * scroll_gab - scroll) / 8
 rots += 2
 if rots > 360
 	rots -= 360
@@ -34,7 +34,7 @@ for (var i = 0; i < global.achievement_count; ++i) {
 	var aclph = 0.5 + archc[i] * 0.5
 	if selected == i {
 		alpha[i] += (aclph - alpha[i]) / 13
-		angle[i] += (30 - angle[i]) / 10
+		angle[i] += (60 - angle[i]) / 10
 	} else {
 		alpha[i] -= alpha[i] / (aclph * 10 + 2)
 		angle[i] -= angle[i] / 10

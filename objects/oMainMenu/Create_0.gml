@@ -1,12 +1,6 @@
 /// @description Initialize main menu
 
-draw_mode = 0
-sgrv = 0
-rfrm = 0
-for (var i = 0; i < 3; ++i) {
-	rpush[i] = 120
-	rflash[i] = 0
-}
+event_user(0)
 
 lx = global.screen_gui_cx
 ly = global.screen_gui_cy * 2 - 20
@@ -30,9 +24,8 @@ autostop = false
 
 background_color = 0
 
-event_user(1)
-
 global.extreme = false
+global.diff = 0
 
 audio_stop_all()
 //audio_play_sound(musicMainMenu, 0, true)

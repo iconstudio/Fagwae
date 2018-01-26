@@ -6,11 +6,20 @@ if menu_outta()
 if menudepth == 0 {
 	if menusel[0] == 0 { // start
 		menu_clear(1, 0)
-		menu_add(1, "NORMAL MODE", "", 1)
-		if !global.log_openextreme
-			menu_add(1, "EXTREME MODE", "COMPLETE NORMAL MODE", 0.5)
+		menu_add(1, "SHAPE AREA", "", 1)
+
+		if global.log_openframe <= 0
+			menu_add(1, "FRAME AREA", "COMPLETE SHAPE AREA", 0.5)
 		else
-			menu_add(1, "EXTREME MODE", "", 1)
+			menu_add(1, "FRAME AREA", "", 1)
+
+		if global.log_openframe <= 0
+			menu_add(1, "INDETERMINATE AREA", "COMPLETE SHAPE AREA", 0.5)
+		else if global.log_openindet <= 0
+			menu_add(1, "INDETERMINATE AREA", "COMPLETE FRAME AREA", 0.5)
+		else
+			menu_add(1, "INDETERMINATE AREA", "", 1)
+
 		menu_add(1, "BACK", "", 1)
 
 	} else if menusel[0] == 1 { // highscore
@@ -40,20 +49,21 @@ if menudepth == 0 {
 	if menusel[1] == menucnt[1] - 1 { // when choose back
 		menudepth = 0
 	} else if menusel[0] == 0 { // start
-		var setmode = 3
-		if menusel[1] == 0 // normal
-			setmode = 1
-		else if menusel[1] == 1 && global.log_openextreme > 0 // extreme
-			setmode = 2
+		// add 3 stages for each area
+		var cond_shape = (menusel[1] == 0 && global.log_openshape > 0)
+		var cond_frame = (menusel[1] == 1 && global.log_openframe > 0)
+		var cond_indeterminate = (menusel[1] == 2 && global.log_openindet > 0)
 
-		if setmode < 3 { // add 4 areas
+		if cond_shape or cond_frame or cond_indeterminate {
 			menu_clear(2)
-			menu_add(2, "AREA 1", "", 1)
-			for (var i = 1; i < 4; ++i) {
-				if (setmode == 1 && global.log_opennormal > i) or (setmode == 2 && global.p_openextreme > i)
-					menu_add(2, "AREA " + string(i + 1), "", 1)
+			menu_add(2, "STAGE 1", "", 1)
+			for (var i = 1; i < 3; ++i) {
+				if (menusel[1] == 0 && global.log_openshape > i) or
+				(menusel[1] == 1 && global.log_openframe > i) or
+				(menusel[1] == 2 && global.log_openindet > i)
+					menu_add(2, "STAGE " + string(i + 1), "", 1)
 				else
-					menu_add(2, "AREA " + string(i + 1), "CLEAR AREA " + string(i), 0.5)
+					menu_add(2, "STAGE " + string(i + 1), "CLEAR STAGE " + string(i), 0.5)
 			}
 			menu_add(2, "BACK", "", 1)
 			menudepth = 2
@@ -89,29 +99,30 @@ if menudepth == 0 {
 		menudepth = 1
 	} else {
 		if menusel[0] = 0 { // start a game
-			var cond_normal = (menusel[1] == 0 && global.log_opennormal > menusel[2])
-			var cond_extreme = (menusel[1] == 1 && global.log_openextreme > menusel[2])
-			if (cond_normal or cond_extreme) {
-				if menusel[1] == 1 { // extreme
-					global.diff = 5
-					global.extreme = true
-				} else { // normal
-					global.diff = 1
-					global.extreme = false
-				}
+			var cond_shape = (menusel[1] == 0 && global.log_openshape > menusel[2])
+			var cond_frame = (menusel[1] == 1 && global.log_openframe > menusel[2])
+			var cond_indeterminate = (menusel[1] == 2 && global.log_openindet > menusel[2])
 
+			var area_creating = ""
+			if cond_shape
+				area_creating = "oAreaShape"
+			else if cond_frame
+				area_creating = "oAreaFrame"
+			else if cond_indeterminate
+				area_creating = "oAreaIndeterminate"
+
+			if cond_shape or cond_frame or cond_indeterminate {
 				instance_create_layer(0, 0, "UI", oGameGlobal)
-				instance_create_layer(0, 0, "UI", oAchiveString)
-				if menusel[2] == 0
-					instance_create_layer(0, 0, "Backend_1", oArea1)
-				else if menusel[2] == 1
-					instance_create_layer(0, 0, "Backend_1", oArea2)
-				else if menusel[2] == 2
-					instance_create_layer(0, 0, "Backend_1", oArea3)
-				else if menusel[2] == 3
-					instance_create_layer(0, 0, "Backend_1", oArea4)
+				global.diff = menusel[2] + 1
+				global.extreme = false
 				draw_mode = 2
+
+				var area_required = asset_get_index(area_creating + string(menusel[2] + 1))
+				if area_required <= 0
+					show_error("Error when creating a area:\nfrom area_creating to " + string(area_required), true)
+				instance_create_layer(0, 0, "Backend_1", area_required)
 			}
+				
 		} else if menusel[0] == 3 { // setting
 			if menusel[1] == 0 { // music volume
 				global.setting_music = menusel[2]
