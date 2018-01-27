@@ -4,8 +4,10 @@
 
 var count = buffer_read(argument0, buffer_u16)
 if count > 0 {
-	for (var i = 0; i < count; ++i)
+	for (var i = 0; i < count; ++i) {
 		global.achievement[i] = buffer_read(argument0, buffer_s16)
+		global.achievement_cleared[i] = buffer_read(argument0, buffer_bool)
+	}
 }
 
 return true

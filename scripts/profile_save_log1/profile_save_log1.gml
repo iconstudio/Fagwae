@@ -4,6 +4,8 @@
 
 buffer_write(argument0, buffer_u16, global.achievement_count)
 if global.achievement_count > 0 {
-	for (var i = 0; i < global.achievement_count; ++i)
+	for (var i = 0; i < global.achievement_count; ++i) {
 		buffer_write(argument0, buffer_s16, global.achievement[i])
+		buffer_write(argument0, buffer_bool, global.achievement_cleared[i])
+	}
 }

@@ -6,8 +6,8 @@ if global.playeralive
 score = 0
 global.playeralive = true
 global.pscore = 0
-global.px = 320
-global.py = 384
+global.px = 225
+global.py = 704
 
 global.player_fever_laser = 0
 global.player_fever_shield = 0

@@ -1,7 +1,7 @@
 /// @description Initialize Basic Data, Back-End
 
 // external
-#macro file_header $ab
+#macro file_header $ac
 global.profilefile = "profile.dat"
 global.network = true
 
@@ -16,8 +16,15 @@ game_set_speed(60, gamespeed_fps)
 globalvar matrix_identical;
 matrix_identical = matrix_build_identity()
 
+// game
 global.extreme = false
 global.diff = 0
+
+#macro areapush_object 0
+#macro areapush_message 1
+#macro areapush_script 2
+#macro areapush_global 3
+#macro areapush_delay 4
 
 // gamepad input
 global.Gamepad = -1
