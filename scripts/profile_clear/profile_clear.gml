@@ -25,20 +25,19 @@ global.achievement_cleared = [] // 도전과제 달성 여부
 global.achievement_caption = [] // 제목
 global.achievement_description = [] // 설명
 global.achievement_updater = [] // 도전과제 검사 스크립트
-
 global.achievement_getter = [] // 도전과제를 지금 달성할 수 있는가
 
 // easy
-achievement_add("SHIELD GRINDER", "DIE 15 TIMES\nIN NORMAL MODE", -1)
-achievement_add("FIRST BLOOD", "GET 100,000 POINTS", -1)
-achievement_add("HOW TO FAGWAE", "COMPLETE NORMAL MODE", -1)
-achievement_add("BASIC", "DON'T DIE\nIN NORMAL MODE", -1)
+achievement_add("SHIELD GRINDER", "DIE 15 TIMES\nIN ANY MODE", trophy_check0)
+achievement_add("FIRST BLOOD", "GET 100000 POINTS", trophy_check1)
+achievement_add("HOW TO FAGWAE", "COMPLETE NORMAL MODE", trophy_check2)
+achievement_add("BASIC", "DON'T DIE\nIN NORMAL MODE", trophy_check3)
 
 // hard
-achievement_add("GETTING OVER IT", "GET 500,000 POINTS", -1)
-achievement_add("GOD MODE", "HAS NO DEAD\nIN EXTREME MODE", -1)
-achievement_add("GLORIUS MAN", "COMPLETE EXTREME MODE", -1)
-achievement_add("JUNK DEALER", "DESTROY ALL STEAL FRAMES\nIN ANY MODE", -1)
+achievement_add("GETTING OVER IT", "GET 500000 POINTS", trophy_check4)
+achievement_add("GOD MODE", "DON'T DIE\nIN EXTREME MODE", trophy_check5)
+achievement_add("GLORIUS MAN", "COMPLETE EXTREME MODE", trophy_check6)
+achievement_add("JUNK DEALER", "DESTROY ALL STEAL FRAMES\nIN ANY MODE", trophy_check7)
 
 // other
-achievement_add("MARATHON", "PLAY FROM FIRST\n TO LAST AREA", -1)
+achievement_add("MARATHON", "PLAY FROM FIRST\n TO LAST AREA", trophy_check8)

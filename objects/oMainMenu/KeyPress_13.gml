@@ -113,7 +113,7 @@ if menudepth == 0 {
 
 			if cond_shape or cond_frame or cond_indeterminate {
 				instance_create_layer(0, 0, "UI", oGameGlobal)
-				global.diff = menusel[2] + 1
+				global.stage = menusel[2] + 1
 				global.extreme = false
 				draw_mode = 2
 

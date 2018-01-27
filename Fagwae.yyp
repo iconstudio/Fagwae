@@ -79,6 +79,14 @@
             }
         },
         {
+            "Key": "10663d15-2f99-4567-9482-f96fc79798b5",
+            "Value": {
+                "id": "7c1f0cf6-9f99-4a1a-8af7-591d6f450acb",
+                "resourcePath": "sprites\\sPlayerShield\\sPlayerShield.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "167c9af9-8574-4e5f-b4a0-b63a37094ef7",
             "Value": {
                 "id": "6709fa56-c76b-466c-8d5e-a8d819cbff8b",
@@ -231,6 +239,14 @@
             }
         },
         {
+            "Key": "3d033a42-3b22-4256-bcba-bf09272dea17",
+            "Value": {
+                "id": "d15bc282-d49a-4e68-86ac-c85f2c13054c",
+                "resourcePath": "scripts\\trophy_check6\\trophy_check6.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "3e344786-1d40-4378-9965-8b716f0684d4",
             "Value": {
                 "id": "e1f230f5-80af-4cde-9260-3dc4ca663393",
@@ -271,10 +287,26 @@
             }
         },
         {
+            "Key": "4475868e-851f-4cdf-a8fb-ce4c5cfed972",
+            "Value": {
+                "id": "94799ed1-f4d4-4df6-916f-7af394496c4e",
+                "resourcePath": "scripts\\trophy_check8\\trophy_check8.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "447b57af-64ea-4c6e-a89e-b4366b853729",
             "Value": {
                 "id": "0bd9b6f6-f18a-4e99-920e-8bfa1e4b0e03",
                 "resourcePath": "scripts\\profile_save_status\\profile_save_status.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "4762c6ed-e4a5-4f4f-9f2b-b6e11d405b40",
+            "Value": {
+                "id": "89594b04-7766-4361-a99c-990dd3125aa4",
+                "resourcePath": "scripts\\trophy_check7\\trophy_check7.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -359,6 +391,14 @@
             }
         },
         {
+            "Key": "60c02dc3-a94b-4025-9edd-49b4618106ac",
+            "Value": {
+                "id": "175a8e58-fe40-4a0b-87cc-733d243ec3d3",
+                "resourcePath": "scripts\\trophy_check2\\trophy_check2.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "619f53f9-d41e-4e93-bf2d-874ab0476eef",
             "Value": {
                 "id": "c42235d7-c24a-45e5-a8d4-894d591265ee",
@@ -387,6 +427,14 @@
             "Value": {
                 "id": "45f75b52-b377-4103-9438-3b4e6b9dc419",
                 "resourcePath": "scripts\\menu_outta\\menu_outta.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "6a91fb6a-e04e-4392-8cd8-bc6c5db0d752",
+            "Value": {
+                "id": "5827b3da-502f-4d14-82e9-18f317dac765",
+                "resourcePath": "scripts\\trophy_check5\\trophy_check5.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -503,6 +551,14 @@
             }
         },
         {
+            "Key": "82b1a747-3843-469f-b6f4-0617731ed1e2",
+            "Value": {
+                "id": "2df28f5f-8449-4af8-86d9-84054b09b897",
+                "resourcePath": "scripts\\trophy_check4\\trophy_check4.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "82e61a04-dc99-4ce3-9c6b-bd9c594fd85c",
             "Value": {
                 "id": "4dfceac0-f53e-4357-b1a6-491122252e2a",
@@ -580,6 +636,14 @@
                 "id": "0edca65e-dfca-4b7e-b17f-ed0b609f99f9",
                 "resourcePath": "views\\909c5240-2f6d-412d-9f9a-ddaa4720a516.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "9114bab7-50f6-4078-acf6-61beb2eb20af",
+            "Value": {
+                "id": "0c2a3f52-c0dd-488a-b1f0-aae1d222797f",
+                "resourcePath": "scripts\\trophy_check1\\trophy_check1.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -683,6 +747,14 @@
             "Value": {
                 "id": "7372c8a1-85b6-4ed5-bad3-7084a18c29c4",
                 "resourcePath": "sprites\\sAreaEntrance\\sAreaEntrance.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a737edda-4c13-4fb4-b642-520ccabaca1c",
+            "Value": {
+                "id": "1c6f8423-b7db-4673-932c-51940a515e22",
+                "resourcePath": "sprites\\sTemp\\sTemp.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -855,6 +927,14 @@
             }
         },
         {
+            "Key": "c338ab2f-3047-435f-beb6-3698490d993c",
+            "Value": {
+                "id": "e9a49bd8-2462-4c51-9846-0701d6462520",
+                "resourcePath": "objects\\oAreaEntrance\\oAreaEntrance.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c7796ce8-1f9f-422f-90f0-11e2080f7f4b",
             "Value": {
                 "id": "c7c49f6a-15fc-4d66-bdb4-50e666688112",
@@ -1015,10 +1095,26 @@
             }
         },
         {
+            "Key": "e684d360-8d28-47f5-a529-ba46d8b06e33",
+            "Value": {
+                "id": "8c4c60c7-3f4b-4b2f-a48a-930c5438a96d",
+                "resourcePath": "scripts\\trophy_check3\\trophy_check3.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e9826762-b6b2-46fc-86b2-d19ee966b467",
             "Value": {
                 "id": "ebb0915d-1d92-4bd0-9020-de5c04d343ad",
                 "resourcePath": "objects\\oPlayer\\oPlayer.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "e995417c-7c29-41ee-a87a-61c7da81c6ca",
+            "Value": {
+                "id": "6a564cb0-8dfe-4932-9c8f-2459a75bcea6",
+                "resourcePath": "objects\\oAreaShape1\\oAreaShape1.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1084,6 +1180,14 @@
                 "id": "bc5c4435-6ef3-4e58-a174-3a5da7152e99",
                 "resourcePath": "options\\mac\\options_mac.yy",
                 "resourceType": "GMMacOptions"
+            }
+        },
+        {
+            "Key": "f51cfd60-9f52-4d38-9d1d-0a85218e0f73",
+            "Value": {
+                "id": "f3b14032-4699-4f2d-ba43-4700b0c60558",
+                "resourcePath": "scripts\\trophy_check0\\trophy_check0.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1170,6 +1274,15 @@
         "263e0311-d862-46ea-b5b0-6bec81ec7cb6",
         "b570c985-2adf-4137-a36c-224d899582d6",
         "167c9af9-8574-4e5f-b4a0-b63a37094ef7",
+        "f51cfd60-9f52-4d38-9d1d-0a85218e0f73",
+        "9114bab7-50f6-4078-acf6-61beb2eb20af",
+        "60c02dc3-a94b-4025-9edd-49b4618106ac",
+        "e684d360-8d28-47f5-a529-ba46d8b06e33",
+        "82b1a747-3843-469f-b6f4-0617731ed1e2",
+        "6a91fb6a-e04e-4392-8cd8-bc6c5db0d752",
+        "3d033a42-3b22-4256-bcba-bf09272dea17",
+        "4762c6ed-e4a5-4f4f-9f2b-b6e11d405b40",
+        "4475868e-851f-4cdf-a8fb-ce4c5cfed972",
         "4da2b5a2-ecb7-4f21-bac0-d26a882c4f13"
     ],
     "tutorial": ""

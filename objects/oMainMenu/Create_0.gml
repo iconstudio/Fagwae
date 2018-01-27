@@ -19,7 +19,7 @@ menu_add(0, "EXIT", "", 1)
 background_color = 0
 
 global.extreme = false
-global.diff = 0
+global.stage = 0
 
 audio_stop_all()
 //audio_play_sound(musicMainMenu, 0, true)

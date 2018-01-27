@@ -16,9 +16,9 @@ if global.player_fever_laser > 0 {
 
 draw_set_color($ffffff)
 if global.extreme
-	draw_text_transformed(dx, dy, "EXTREME / " + string(global.diff), 1, 1, 0)
+	draw_text_transformed(dx, dy, "EXTREME / " + string(global.stage), 1, 1, 0)
 else
-	draw_text_transformed(dx, dy, "NORMAL / " + string(global.diff), 1, 1, 0)
+	draw_text_transformed(dx, dy, "NORMAL / " + string(global.stage), 1, 1, 0)
 
 if !instance_exists(global.gauge_target)
 	exit

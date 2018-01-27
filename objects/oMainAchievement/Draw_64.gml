@@ -5,7 +5,7 @@ draw_set_halign(1)
 draw_set_valign(0)
 draw_set_alpha(1 - rpush[0])
 
-draw_text_transformed(225, 20 - 80 * rpush[0], "ACHIVEMENTS", 2, 2, 0)
+draw_text_transformed(225, 110 - 80 * rpush[0], "ACHIEVEMENTS", 2, 2, 0)
 
 var aalpha
 for (var i = 0; i < global.achievement_count; ++i) {
@@ -14,9 +14,9 @@ for (var i = 0; i < global.achievement_count; ++i) {
 	else
 		aalpha = 0.5
 
-	camera_projection_set(300, 0, 400, -50, 0, 0, 0, -1, 0, 50 - selected * 2, 1.3, 12, 32000)
-	draw_transform_set_rotation_y(30 - angle[i])
-	draw_transform_add_translation(archx[i] + scroll, -50 - 60 * rpush[0] + lengthdir_y(10, rots), 0)
+	camera_projection_set(300, 0, 360, -50, 0, 0, 0, -1, 0, 42, 1.3, 12, 32000)
+	draw_transform_set_rotation_y(20 - angle[i])
+	draw_transform_add_translation(archx[i] + scroll, -50 - 60 * rpush[0] + lengthdir_y(4, rots), 80)
 	draw_sprite_ext(sAchievement, i, 0, 0, 2, 2, 0, $ffffff, (1 - rpush[0]) * aalpha + (selected == i) / 2)
 	draw_transform_set_identity()
 	camera_projection_identity()
@@ -35,7 +35,7 @@ for (var i = 0; i < global.achievement_count; ++i) {
 
 	if selected == i {
 		draw_set_alpha(1 - rpush[1])
-		draw_text_transformed(global.screen_gui_cx, 740 + 100 * rpush[1], archg[i], 2, 2, 0)
+		draw_text_transformed(global.screen_gui_cx, 600 + 300 * rpush[1], archg[i], 2, 2, 0)
 	}
 }
 

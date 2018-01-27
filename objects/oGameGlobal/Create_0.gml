@@ -8,7 +8,7 @@ event_user(0)
 event_user(1)
 
 // achievements update
-global.achiveved_list = ds_list_create()
+event_user(2)
 
 // screen effecf
 shadow_alpha = 0

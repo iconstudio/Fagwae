@@ -1,9 +1,10 @@
 /// @description Going menu back
 
-if menu_outta() or menusel[menudepth] == menucnt[menudepth] - 1
+if menu_outta()
 	exit
 
-menu_change_ready(menudepth)
-
-menusel[menudepth] = menucnt[menudepth] - 1
+if menusel[menudepth] != menucnt[menudepth] - 1 {
+	menu_change_ready(menudepth)
+	menusel[menudepth] = menucnt[menudepth] - 1
+}
 event_perform(ev_keypress, vk_enter)

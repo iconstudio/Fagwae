@@ -1,7 +1,7 @@
 /// @description Initialize Basic Data, Back-End
 
 // external
-#macro file_header $ac
+#macro file_header $ad
 global.profilefile = "profile.dat"
 global.network = true
 
@@ -18,7 +18,7 @@ matrix_identical = matrix_build_identity()
 
 // game
 global.extreme = false
-global.diff = 0
+global.stage = 0 // 0: None, 1 ~ 9: Game, 10: Complete a mode
 
 #macro areapush_object 0
 #macro areapush_message 1
