@@ -1,10 +1,19 @@
 {
-    "id": "33d41447-2bf3-4df6-9e2e-eac55ebba13c",
+    "id": "cbfdbca5-db77-4d86-b670-516cdf313b77",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oIgnoreSurface",
+    "name": "oBackFlash",
     "eventList": [
-        
+        {
+            "id": "7a4efd24-bc59-4e1d-a931-beae6a7cdb1f",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "cbfdbca5-db77-4d86-b670-516cdf313b77"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
@@ -22,23 +31,8 @@
     "physicsShape": 1,
     "physicsShapePoints": null,
     "physicsStartAwake": true,
-    "properties": [
-        {
-            "id": "f82f733e-4e14-47b7-9c2e-6e9b101330b5",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "True",
-            "varName": "vsave",
-            "varType": 3
-        }
-    ],
+    "properties": null,
     "solid": false,
-    "spriteId": "00000000-0000-0000-0000-000000000000",
+    "spriteId": "30adace8-51ad-4727-8fb7-deacc45d3c02",
     "visible": true
 }

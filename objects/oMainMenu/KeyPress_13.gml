@@ -112,7 +112,7 @@ if menudepth == 0 {
 				area_creating = "oAreaIndeterminate"
 
 			if cond_shape or cond_frame or cond_indeterminate {
-				instance_create_layer(0, 0, "UI", oGameGlobal)
+				var gg = instance_create_layer(0, 0, "UI", oGameGlobal)
 				global.stage = menusel[2] + 1
 				global.extreme = false
 				draw_mode = 2
@@ -120,7 +120,8 @@ if menudepth == 0 {
 				var area_required = asset_get_index(area_creating + string(menusel[2] + 1))
 				if area_required <= 0
 					show_error("Error when creating a area:\nfrom area_creating to " + string(area_required), true)
-				instance_create_layer(0, 0, "Backend_1", area_required)
+				gg.area_content = area_required
+				//instance_create_layer(0, 0, "Backend_1", area_required)
 			}
 				
 		} else if menusel[0] == 3 { // setting

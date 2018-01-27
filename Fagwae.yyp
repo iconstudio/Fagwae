@@ -175,10 +175,26 @@
             }
         },
         {
+            "Key": "2e7c868d-8c8c-4368-acbc-2b4f5c3ed736",
+            "Value": {
+                "id": "e7c2fe28-5b60-437f-a46d-11b1e871e018",
+                "resourcePath": "views\\2e7c868d-8c8c-4368-acbc-2b4f5c3ed736.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "2ebaeab2-841d-493e-9367-1d6de6676d22",
             "Value": {
                 "id": "7ead0cff-8332-43fa-90c1-ace7241b743f",
                 "resourcePath": "sprites\\sSpreaderExtreme\\sSpreaderExtreme.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "30adace8-51ad-4727-8fb7-deacc45d3c02",
+            "Value": {
+                "id": "2e3a1b49-dc1b-4963-9801-a0640f476203",
+                "resourcePath": "sprites\\sBackSquare\\sBackSquare.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -204,14 +220,6 @@
                 "id": "da4c4f00-9bf8-4fca-9e5a-6dcee6ad2320",
                 "resourcePath": "sprites\\sIconControllerPlayStation\\sIconControllerPlayStation.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "33d41447-2bf3-4df6-9e2e-eac55ebba13c",
-            "Value": {
-                "id": "f97e1ec8-0277-4c45-9c17-f82e6729c552",
-                "resourcePath": "objects\\oIgnoreSurface\\oIgnoreSurface.yy",
-                "resourceType": "GMObject"
             }
         },
         {
@@ -363,6 +371,14 @@
             "Value": {
                 "id": "94004270-51ba-4ed5-ad4a-6d9ec87f6375",
                 "resourcePath": "sprites\\sGauge\\sGauge.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "53eac6a8-78ed-49de-974f-ea2ab1828321",
+            "Value": {
+                "id": "728f4bf4-8308-475a-9f53-16d9069e8fd7",
+                "resourcePath": "sprites\\sFrameTurretHead\\sFrameTurretHead.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -575,6 +591,14 @@
             }
         },
         {
+            "Key": "84ec2fc8-4e33-4d38-bd6e-258c2218e7e6",
+            "Value": {
+                "id": "4c52f33c-fa48-4f37-acb9-9a87e315fc48",
+                "resourcePath": "objects\\oUnderBack\\oUnderBack.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "85b7a0db-02b4-474b-93bc-b9ee33bb91ab",
             "Value": {
                 "id": "444c6eb1-8ef6-42f6-9a69-30e9ec6a4477",
@@ -663,6 +687,14 @@
             }
         },
         {
+            "Key": "92050eab-4524-4082-91b7-91464dde57e3",
+            "Value": {
+                "id": "c87b95f1-95a8-4867-9abd-5c9cde627fa2",
+                "resourcePath": "scripts\\color_parse\\color_parse.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "92bf5e37-73c8-483f-9a6a-f4d6cd2edc88",
             "Value": {
                 "id": "37a9ba8b-6f4d-447f-a3c7-667033defb10",
@@ -716,6 +748,14 @@
                 "id": "a6a5f634-f057-433b-a0e7-ca5f1cfb2d8f",
                 "resourcePath": "objects\\oAreaParent\\oAreaParent.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "9ea1c9c8-711a-43ee-81af-24569fe370c4",
+            "Value": {
+                "id": "2a34f900-6eb1-4821-9565-03a96cf98152",
+                "resourcePath": "sprites\\sFrameTurret\\sFrameTurret.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -943,6 +983,14 @@
             }
         },
         {
+            "Key": "cbfdbca5-db77-4d86-b670-516cdf313b77",
+            "Value": {
+                "id": "6bee68b2-c06f-4fc1-9dca-799666a9cc60",
+                "resourcePath": "objects\\oBackFlash\\oBackFlash.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "cc98d028-7bdd-4680-85f3-c87a7baa481e",
             "Value": {
                 "id": "e556ef36-0a49-4180-b2e8-bedc7d36fe02",
@@ -1151,6 +1199,14 @@
             }
         },
         {
+            "Key": "ef45b398-e5af-4878-959d-4586e91265a3",
+            "Value": {
+                "id": "dfe2f24a-88f6-418c-abd3-5d1eefb4ffd2",
+                "resourcePath": "sprites\\sFrameTurretDouble\\sFrameTurretDouble.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "efede0e2-db74-434b-b80a-f84d06b2c355",
             "Value": {
                 "id": "953899d3-24de-425b-9ce5-7a1b167de1b0",
@@ -1283,7 +1339,8 @@
         "3d033a42-3b22-4256-bcba-bf09272dea17",
         "4762c6ed-e4a5-4f4f-9f2b-b6e11d405b40",
         "4475868e-851f-4cdf-a8fb-ce4c5cfed972",
-        "4da2b5a2-ecb7-4f21-bac0-d26a882c4f13"
+        "4da2b5a2-ecb7-4f21-bac0-d26a882c4f13",
+        "92050eab-4524-4082-91b7-91464dde57e3"
     ],
     "tutorial": ""
 }

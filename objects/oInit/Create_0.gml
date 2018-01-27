@@ -6,6 +6,13 @@ global.profilefile = "profile.dat"
 global.network = true
 
 // screen
+global.__ttw = display_get_gui_width()
+global.__tth = display_get_gui_height()
+
+#macro view_width 450
+#macro view_height 800
+#macro screen_width global.__ttw
+#macro screen_height global.__tth
 application_surface_draw_enable(false)
 gpu_set_blendenable(true)
 draw_set_circle_precision(60)

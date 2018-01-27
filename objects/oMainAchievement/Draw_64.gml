@@ -1,11 +1,12 @@
 /// @description Drawing trophy board
 
+gpu_set_cullmode(cull_counterclockwise)
 draw_set_color($ffffff)
 draw_set_halign(1)
 draw_set_valign(0)
 draw_set_alpha(1 - rpush[0])
 
-draw_text_transformed(225, 110 - 80 * rpush[0], "ACHIEVEMENTS", 2, 2, 0)
+draw_text_transformed(screen_width / 2, 110 - 80 * rpush[0], "ACHIEVEMENTS", 2, 2, 0)
 
 var aalpha
 for (var i = 0; i < global.achievement_count; ++i) {
@@ -28,15 +29,16 @@ for (var i = 0; i < global.achievement_count; ++i) {
 
 	if selected == i {
 		draw_transform_set_rotation_y(-45)
-		draw_transform_add_translation(global.screen_gui_cx + scroll - selected * scroll_gab, 130 - 50 * rpush[0], 0)
+		draw_transform_add_translation(screen_width / 2 + scroll - selected * scroll_gab, 130 - 50 * rpush[0], 0)
 		draw_text_transformed(0, 0, archn[i], 3, 3, 0)
 		draw_transform_set_identity()
 	}
 
 	if selected == i {
 		draw_set_alpha(1 - rpush[1])
-		draw_text_transformed(global.screen_gui_cx, 600 + 300 * rpush[1], archg[i], 2, 2, 0)
+		draw_text_transformed(screen_width / 2, 600 + 300 * rpush[1], archg[i], 2, 2, 0)
 	}
 }
 
 draw_set_alpha(1)
+gpu_set_cullmode(cull_noculling)

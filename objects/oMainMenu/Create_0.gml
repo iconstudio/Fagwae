@@ -2,8 +2,8 @@
 
 event_user(0)
 
-lx = global.screen_gui_cx
-ly = global.screen_gui_cy * 2 - 20
+lx = screen_width / 2
+ly = screen_height - 20
 menuppdepth = 0
 menupdepth = 0
 menuldepth = 0

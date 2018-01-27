@@ -19,7 +19,8 @@
         "77e3e78b-c497-4c8a-8bae-8452e210cfce",
         "81487df7-abfe-4570-86b4-9bad53f1e315",
         "db032efb-c68b-4242-aa13-b0d00368434e",
-        "ccea56ab-0385-411b-807d-d60b88cd4ad7"
+        "ccea56ab-0385-411b-807d-d60b88cd4ad7",
+        "30adace8-51ad-4727-8fb7-deacc45d3c02"
     ],
     "filterType": "GMSprite",
     "folderName": "Shapes",

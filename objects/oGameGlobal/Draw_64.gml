@@ -3,8 +3,8 @@
 draw_set_alpha(1 - ipush)
 
 var dscore = ceil(global.vscore)
-var dx = global.screen_gui_cx
-var dy = global.screen_gui_cy * 2 - 8 + ipush * 16
+var dx = screen_width / 2
+var dy = screen_height - 8 + ipush * 16
 
 if global.player_fever_laser > 0 {
 	draw_set_halign(1)
@@ -25,7 +25,7 @@ if !instance_exists(global.gauge_target)
 
 draw_set_alpha(global.gauge_alpha)
 var gratio = global.gauge_hp / global.gauge_hpmax
-var gsiz = gratio * 225
+var gsiz = gratio * screen_width * 0.5
 var gcol1 = make_color_hsv(gratio * 40, 240, 96)
 var gcol2 = make_color_hsv(gratio * 85, 240, 96)
 

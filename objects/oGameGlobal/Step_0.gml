@@ -41,5 +41,3 @@ gaugerots = (gaugerots + 3) mod 360
 
 global.player_fever_laser = max(0, min(100, global.player_fever_laser))
 global.player_fever_shield = max(0, min(100, global.player_fever_shield))
-
-event_user(15)

@@ -1,9 +1,9 @@
 /// @description Create a surface
 
-surf = surface_create(view_wport, view_hport)
-stex = surface_get_texture(surf)
-swid = texture_get_width(stex)
-shei = texture_get_height(stex)
+surf = surface_create(view_width, view_height)
+global.surface_tex = surface_get_texture(surf)
+global.surface_w = texture_get_width(global.surface_tex)
+global.surface_h = texture_get_height(global.surface_tex)
 
 surface_set_target(surf)
 draw_clear_alpha(0, 0)
