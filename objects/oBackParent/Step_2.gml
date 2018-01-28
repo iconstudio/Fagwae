@@ -1,5 +1,7 @@
 /// @description Updating Background
 
+event_inherited()
+
 if !available
 	exit
 
@@ -19,15 +21,6 @@ if brightness < 1
 	brightness += 0.014
 else
 	brightness = 1
-
-square_saturation += 0.1
-background_saturation += (0.1 * 192 - 5) / 192
-scroll += 0.75
-if scroll > 144 {
-	scroll -= 144
-	rots -= 42
-	square_saturation -= 5
-}
 
 var ascore = (score - global.vscore) / 3
 global.vscore += ascore

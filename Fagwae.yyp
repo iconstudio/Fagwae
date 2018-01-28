@@ -159,6 +159,14 @@
             }
         },
         {
+            "Key": "28e5a188-8dc5-46ac-8111-6e72584f99ca",
+            "Value": {
+                "id": "3b3515d3-eafc-4fb6-96b7-9dc50c88bb2b",
+                "resourcePath": "objects\\oStageShape1\\oStageShape1.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2905ce53-1e78-4751-8d5a-141dc52c775d",
             "Value": {
                 "id": "b9485713-9f85-49ad-86cf-421c83c9b7c6",
@@ -242,7 +250,7 @@
             "Key": "3cbea320-2f5b-4e48-9bfb-7c15c264f829",
             "Value": {
                 "id": "e0281d07-eda9-41e9-a757-067c7fc21d67",
-                "resourcePath": "objects\\oBack\\oBack.yy",
+                "resourcePath": "objects\\oBackShape\\oBackShape.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -383,6 +391,14 @@
             }
         },
         {
+            "Key": "55412e72-8545-4f01-b290-6d84e82c79fa",
+            "Value": {
+                "id": "7c004fd0-e2b5-43f6-8a58-1928f0dd5b08",
+                "resourcePath": "notes\\역활.yy",
+                "resourceType": "GMNotes"
+            }
+        },
+        {
             "Key": "5643da29-9309-463f-9883-5b4f7bc21193",
             "Value": {
                 "id": "5e7249f1-3f8b-486a-8832-9c809b01db3e",
@@ -471,6 +487,14 @@
             }
         },
         {
+            "Key": "6d9ef6f9-7bfd-49b6-92ee-7c59652b2c91",
+            "Value": {
+                "id": "f1ae6e0e-c6d8-4ec6-9829-35a2b8392a63",
+                "resourcePath": "scripts\\background_create\\background_create.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "6e9586d4-caa5-4470-a935-bfd2a7784207",
             "Value": {
                 "id": "129dd456-7cd1-4bca-92d7-0abd53ffa232",
@@ -543,6 +567,14 @@
             }
         },
         {
+            "Key": "792e8975-a51a-415d-84e3-142463007373",
+            "Value": {
+                "id": "1f937cbc-d6ca-48cd-ae4a-1e2e2922c4cb",
+                "resourcePath": "views\\792e8975-a51a-415d-84e3-142463007373.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "7976a188-9163-484c-823b-21f344b59b84",
             "Value": {
                 "id": "c10f5393-0cfc-40f2-bc0c-6f65438774e3",
@@ -591,14 +623,6 @@
             }
         },
         {
-            "Key": "84ec2fc8-4e33-4d38-bd6e-258c2218e7e6",
-            "Value": {
-                "id": "4c52f33c-fa48-4f37-acb9-9a87e315fc48",
-                "resourcePath": "objects\\oUnderBack\\oUnderBack.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "85b7a0db-02b4-474b-93bc-b9ee33bb91ab",
             "Value": {
                 "id": "444c6eb1-8ef6-42f6-9a69-30e9ec6a4477",
@@ -612,6 +636,14 @@
                 "id": "2340e3d4-792e-400c-b8e3-153de4b36c35",
                 "resourcePath": "scripts\\camera_projection_set\\camera_projection_set.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "87e162d0-5f06-457e-ade7-38a8daee1795",
+            "Value": {
+                "id": "58861e49-ba70-45be-bb6c-ba65ae215dc2",
+                "resourcePath": "objects\\oMainHighscore\\oMainHighscore.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -743,10 +775,18 @@
             }
         },
         {
+            "Key": "9b93c750-2fe4-49bc-8081-68d412bb940c",
+            "Value": {
+                "id": "ce1102ca-82a2-471e-8527-d97435488fce",
+                "resourcePath": "views\\9b93c750-2fe4-49bc-8081-68d412bb940c.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "9c51bf1a-8bf9-45e3-b2f6-cd7910195abb",
             "Value": {
                 "id": "a6a5f634-f057-433b-a0e7-ca5f1cfb2d8f",
-                "resourcePath": "objects\\oAreaParent\\oAreaParent.yy",
+                "resourcePath": "objects\\oStageParent\\oStageParent.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -967,10 +1007,10 @@
             }
         },
         {
-            "Key": "c338ab2f-3047-435f-beb6-3698490d993c",
+            "Key": "c3983ae9-392b-4f77-b682-b6d8594a3f1f",
             "Value": {
-                "id": "e9a49bd8-2462-4c51-9846-0701d6462520",
-                "resourcePath": "objects\\oAreaEntrance\\oAreaEntrance.yy",
+                "id": "a73504ab-e1b6-4b68-8f2c-79f391d698a9",
+                "resourcePath": "objects\\oBackParent\\oBackParent.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1087,6 +1127,14 @@
             }
         },
         {
+            "Key": "db3f490f-634a-42e5-bbdb-16833980778c",
+            "Value": {
+                "id": "266b5b7d-6675-4062-a603-fdbe74db60ab",
+                "resourcePath": "views\\db3f490f-634a-42e5-bbdb-16833980778c.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "dfc6efc7-5508-4fc8-8bc2-3604dadc8f73",
             "Value": {
                 "id": "eae3a4f2-6c35-4ad5-80d0-328aeae0fec2",
@@ -1162,7 +1210,7 @@
             "Key": "e995417c-7c29-41ee-a87a-61c7da81c6ca",
             "Value": {
                 "id": "6a564cb0-8dfe-4932-9c8f-2459a75bcea6",
-                "resourcePath": "objects\\oAreaShape1\\oAreaShape1.yy",
+                "resourcePath": "objects\\oStageShapeParent\\oStageShapeParent.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1340,6 +1388,7 @@
         "4762c6ed-e4a5-4f4f-9f2b-b6e11d405b40",
         "4475868e-851f-4cdf-a8fb-ce4c5cfed972",
         "4da2b5a2-ecb7-4f21-bac0-d26a882c4f13",
+        "6d9ef6f9-7bfd-49b6-92ee-7c59652b2c91",
         "92050eab-4524-4082-91b7-91464dde57e3"
     ],
     "tutorial": ""

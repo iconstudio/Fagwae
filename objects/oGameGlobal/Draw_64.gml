@@ -2,19 +2,18 @@
 
 draw_set_alpha(1 - ipush)
 
-var dscore = ceil(global.vscore)
 var dx = screen_width / 2
 var dy = screen_height - 8 + ipush * 16
 
 if global.player_fever_laser > 0 {
-	draw_set_halign(1)
-	draw_set_valign(1)
 	var division = global.player_fever_laser / 100
 	draw_set_color(make_color_hsv(30, (1 - division) * 255, 64 + division * 127 + lengthdir_y(64, gaugerots)))
 	draw_rectangle(10, dy - 2, 26, dy - 2 - division * 20, 0)
 }
 
 draw_set_color($ffffff)
+draw_set_halign(1)
+draw_set_valign(1)
 if global.extreme
 	draw_text_transformed(dx, dy, "EXTREME / " + string(global.stage), 1, 1, 0)
 else

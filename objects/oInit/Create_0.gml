@@ -23,6 +23,9 @@ game_set_speed(60, gamespeed_fps)
 globalvar matrix_identical;
 matrix_identical = matrix_build_identity()
 
+// UI / UX
+#macro area_vspeed 0.5625 * 2
+
 // game
 global.extreme = false
 global.stage = 0 // 0: None, 1 ~ 9: Game, 10: Complete a mode

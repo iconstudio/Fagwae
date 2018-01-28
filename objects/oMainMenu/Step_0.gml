@@ -33,7 +33,7 @@ if draw_mode > 0 {
 	if sgrv++ > 20 {
 		switch draw_mode {
 			case 1:
-				//instance_create(0, 0, oHighScore)
+				instance_create_layer(0, 0, "UI", oMainHighscore)
 				draw_mode = 4
 				break
 			case 5:

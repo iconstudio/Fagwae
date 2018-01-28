@@ -1,5 +1,21 @@
 /// @description Create enemies
 
+entrance_x++
+if entrance_y < screen_height + 40 // on gui
+	entrance_y += entrance_vspeed
+
+if back_mode == 0 {
+	if y < 0 // on gui
+		y += entrance_vspeed
+	else
+		y = 0
+} else {
+	if y < 0 // on gui
+		y += entrance_vspeed
+	else
+		y = 0	
+}
+
 for (var i = 0; i < prohibit_count; ++i) {
 	if instance_exists(prohibit_push[i])
 		exit

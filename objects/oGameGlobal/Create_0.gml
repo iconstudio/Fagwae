@@ -32,5 +32,3 @@ global.gauge_hpmax = 0
 
 gaugetexy = 0
 gaugerots = 0
-
-instance_create_depth(0, 0, "Background", oBack)
