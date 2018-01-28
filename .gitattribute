@@ -1,0 +1,13 @@
+*.sd text
+*.bat text
+*.txt text
+*.yy text
+*.gml text
+*.md text
+
+.gitignore text
+README.md text
+CONTRIBUTING text
+LICENSE text
+
+*.exe binar
