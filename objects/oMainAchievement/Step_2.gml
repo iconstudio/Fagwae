@@ -19,7 +19,7 @@ rots += 2
 if rots > 360
 	rots -= 360
 
-if !dmode {
+if draw_mode == 0 {
 	rfrm++
 	for (var i = 0; i < 3; ++i) {
 		if rfrm > i * 12 + 6

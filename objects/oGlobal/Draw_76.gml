@@ -22,7 +22,10 @@ draw_surface_ext(surf, 0, 0, 1, 1, 0, $ffffff, 1)
 gpu_set_blendmode(bm_normal)
 
 if fade_alpha > 0 {
-	
+	draw_set_alpha(fade_alpha)
+	draw_set_color(0)
+	draw_rectangle(0, 0, view_width, view_height, 0)
+	draw_set_alpha(1)
 }
 
 if global.screenshake {

@@ -24,7 +24,7 @@ globalvar matrix_identical;
 matrix_identical = matrix_build_identity()
 
 // UI / UX
-#macro area_vspeed 0.5625 * 2
+#macro area_vspeed 0.5625 * 4
 
 // game
 global.extreme = false

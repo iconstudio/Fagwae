@@ -22,7 +22,7 @@ for (var i = 0; i < global.achievement_count; ++i) {
 	draw_transform_set_identity()
 	camera_projection_identity()
 
-	if dmode == 0
+	if draw_mode == 0
 		draw_set_alpha(alpha[i])
 	else if alpha[i] < 1 - rpush[0]
 		draw_set_alpha(1 - rpush[0])

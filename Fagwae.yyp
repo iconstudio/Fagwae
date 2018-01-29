@@ -903,6 +903,14 @@
             }
         },
         {
+            "Key": "94fc85b5-c66d-4f2e-ac30-8cc1fa33ae58",
+            "Value": {
+                "id": "3555a33f-a018-4aa9-9bff-56e6671bddbc",
+                "resourcePath": "scripts\\game_resume\\game_resume.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "965c9e0e-4013-4ec4-96aa-e8b3ff2f8ed9",
             "Value": {
                 "id": "00623174-cec2-4360-b0d1-dceb2034da50",
@@ -1020,6 +1028,14 @@
                 "id": "7372c8a1-85b6-4ed5-bad3-7084a18c29c4",
                 "resourcePath": "sprites\\sAreaEntrance\\sAreaEntrance.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a715b1b1-b955-4851-9d54-fa6254a74a14",
+            "Value": {
+                "id": "814cabdb-7eaf-4bd8-b78e-9ebd5f8d7558",
+                "resourcePath": "objects\\oIgnore\\oIgnore.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1164,6 +1180,14 @@
                 "id": "46d9c7f4-ca69-4954-878b-fe0d8cbe9367",
                 "resourcePath": "sprites\\sFrameOctagon\\sFrameOctagon.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ba47441b-5eab-4fa9-a4ee-7671c12e007b",
+            "Value": {
+                "id": "cc315e90-0403-4e68-b7d5-72fb7fedd72f",
+                "resourcePath": "scripts\\game_pause\\game_pause.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1380,6 +1404,14 @@
                 "id": "5084eba8-cdea-4f68-b297-89a357ef252d",
                 "resourcePath": "scripts\\io_check_buttonR\\io_check_buttonR.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "de004f7f-42ab-4007-a97f-442e9ec2d233",
+            "Value": {
+                "id": "43167ac7-cd31-4743-aae6-4f56e21179b5",
+                "resourcePath": "objects\\oContinue\\oContinue.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1663,6 +1695,8 @@
         "4475868e-851f-4cdf-a8fb-ce4c5cfed972",
         "4da2b5a2-ecb7-4f21-bac0-d26a882c4f13",
         "6d9ef6f9-7bfd-49b6-92ee-7c59652b2c91",
+        "ba47441b-5eab-4fa9-a4ee-7671c12e007b",
+        "94fc85b5-c66d-4f2e-ac30-8cc1fa33ae58",
         "92050eab-4524-4082-91b7-91464dde57e3",
         "e10c8525-65c7-48b5-80cb-48b5a299b5f1",
         "ca82e430-fcc3-43e8-b2ea-80d084c2699d",

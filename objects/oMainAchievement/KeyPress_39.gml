@@ -1,6 +1,6 @@
 /// @description Select right one
 
-if dmode or rpush[0] >= 0.05
+if draw_mode > 0 or rpush[0] >= 0.05
 	exit
 
 if selected < global.achievement_count - 1

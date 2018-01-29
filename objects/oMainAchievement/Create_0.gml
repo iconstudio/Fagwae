@@ -3,7 +3,7 @@
 if global.achievement_count <= 0
 	show_debug_message("There is no achievement!")
 
-dmode = 0
+draw_mode = 0
 rfrm = 0
 scroll = 0
 scroll_gab = -132

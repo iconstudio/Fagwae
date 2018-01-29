@@ -1,6 +1,6 @@
 /// @description Select left one
 
-if dmode or rpush[0] >= 0.05
+if draw_mode > 0 or rpush[0] >= 0.05
 	exit
 
 if selected > 0
