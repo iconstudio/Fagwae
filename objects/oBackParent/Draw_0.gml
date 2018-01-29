@@ -1,5 +1,8 @@
 /// @description Drawing score
 
+if score_alpha <= 0
+	exit
+
 draw_set_alpha(max(score_alpha, 0))
 draw_set_halign(0)
 draw_set_valign(1)

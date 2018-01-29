@@ -1,8 +1,10 @@
 /// @description Initialization
 
 with oStageParent {
-	if id != other.id
+	if id != other.id {
 		depth -= 1
+		back_mode = 1 // the others would be gone
+	}
 }
 
 //eint[0] = oEnemyBossHexagonMiddle
@@ -21,7 +23,7 @@ back_mode = 0
 back = noone
 
 // create background surface
-//event_user(0)
+event_user(0)
 
-// create background
+// create background (if doesn't exist)
 event_user(1)

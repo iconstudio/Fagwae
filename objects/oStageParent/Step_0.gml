@@ -5,15 +5,15 @@ if entrance_y < screen_height + 40 // on gui
 	entrance_y += entrance_vspeed
 
 if back_mode == 0 {
-	if y < 0 // on gui
+	if y < 0 // to bottom of screen
 		y += entrance_vspeed
 	else
 		y = 0
 } else {
-	if y < 0 // on gui
+	if y < screen_height + 40 // to beyond of the screen
 		y += entrance_vspeed
 	else
-		y = 0	
+		instance_destroy()
 }
 
 for (var i = 0; i < prohibit_count; ++i) {

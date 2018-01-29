@@ -5,6 +5,11 @@ if menu_outta()
 
 if menudepth == 0 {
 	if menusel[0] == 0 { // start
+		var gg = instance_create_layer(0, 0, "UI", oGameGlobal)
+		global.stage = 1
+		draw_mode = 2
+		gg.stage_content = oStageShape1
+		/*
 		menu_clear(1, 0)
 		menu_add(1, "SHAPE AREA", "", 1)
 
@@ -21,6 +26,7 @@ if menudepth == 0 {
 			menu_add(1, "INDETERMINATE AREA", "", 1)
 
 		menu_add(1, "BACK", "", 1)
+		*/
 
 	} else if menusel[0] == 1 { // highscore
 		draw_mode = 1

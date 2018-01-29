@@ -60,12 +60,30 @@ if draw_mode > 0 {
 	exit
 }
 
+if !menu_outta() {
+	if io_check_pressed_left() or io_check_pressed_up() {
+		autostop = true
+		menu_change_up(menudepth)
+	}
+	
+	if io_check_pressed_right() or io_check_pressed_down() {
+		autostop = true
+		menu_change_down(menudepth)
+	}
+	
+	if io_check_pressed_padA()
+		event_perform(ev_keypress, vk_enter)
+
+	if io_check_pressed_padB()
+		event_perform(ev_keypress, vk_escape)
+}
+
 rfrm++
 for (var i = 0; i < 3; ++i) {
 	if rfrm > i * 10 + 12 && rpush[i] != 0 {
 		rpush[i] -= rpush[i] / 4
-		if (rpush[i] < 8) {
-			if (rflash[i]++ > 15)
+		if rpush[i] < 8 {
+			if rflash[i]++ > 15
 				rpush[i] = 0
 		}
 	}

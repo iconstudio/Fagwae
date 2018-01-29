@@ -1,5 +1,8 @@
 /// @description Select left one
 
+if dmode or rpush[0] >= 0.05
+	exit
+
 if selected > 0
 	selected -= 1
 else

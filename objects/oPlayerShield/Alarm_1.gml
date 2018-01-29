@@ -1,0 +1,3 @@
+/// @description 
+
+pow = 2

@@ -5,7 +5,12 @@ event_inherited()
 if !available
 	exit
 
-if instance_exists(oPlayer) {
+if draw_mode > 0 {
+	if score_alpha > 0
+		score_alpha -= 0.01
+	else
+		instance_destroy()
+} else if instance_exists(oPlayer) {
 	if score_alpha < 1
 		score_alpha += 0.01
 	else
