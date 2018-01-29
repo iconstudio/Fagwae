@@ -42,11 +42,11 @@
                     "mvc": "1.0",
                     "groupName": "Entity_Shapes",
                     "targets": 29263750006690030,
-                    "autocrop": true,
+                    "autocrop": false,
                     "border": 2,
                     "groupParent": "00000000-0000-0000-0000-000000000000",
                     "mipsToGenerate": 0,
-                    "scaled": true
+                    "scaled": false
                 }
             },
             {
@@ -57,11 +57,11 @@
                     "mvc": "1.0",
                     "groupName": "Effect",
                     "targets": 29263750006690030,
-                    "autocrop": true,
+                    "autocrop": false,
                     "border": 2,
                     "groupParent": "00000000-0000-0000-0000-000000000000",
                     "mipsToGenerate": 0,
-                    "scaled": true
+                    "scaled": false
                 }
             },
             {
@@ -72,11 +72,11 @@
                     "mvc": "1.0",
                     "groupName": "Other",
                     "targets": 29263750006690030,
-                    "autocrop": true,
+                    "autocrop": false,
                     "border": 2,
                     "groupParent": "00000000-0000-0000-0000-000000000000",
                     "mipsToGenerate": 0,
-                    "scaled": true
+                    "scaled": false
                 }
             },
             {
@@ -87,11 +87,11 @@
                     "mvc": "1.0",
                     "groupName": "Entity_Frames",
                     "targets": 29263750006690030,
-                    "autocrop": true,
+                    "autocrop": false,
                     "border": 2,
                     "groupParent": "00000000-0000-0000-0000-000000000000",
                     "mipsToGenerate": 0,
-                    "scaled": true
+                    "scaled": false
                 }
             },
             {
@@ -102,11 +102,11 @@
                     "mvc": "1.0",
                     "groupName": "Entity_Indeterminate",
                     "targets": 29263750006690030,
-                    "autocrop": true,
+                    "autocrop": false,
                     "border": 2,
                     "groupParent": "00000000-0000-0000-0000-000000000000",
                     "mipsToGenerate": 0,
-                    "scaled": true
+                    "scaled": false
                 }
             },
             {
@@ -117,11 +117,11 @@
                     "mvc": "1.0",
                     "groupName": "Entity_Player",
                     "targets": 29263750006690030,
-                    "autocrop": true,
+                    "autocrop": false,
                     "border": 2,
                     "groupParent": "00000000-0000-0000-0000-000000000000",
                     "mipsToGenerate": 0,
-                    "scaled": true
+                    "scaled": false
                 }
             },
             {
@@ -132,11 +132,11 @@
                     "mvc": "1.0",
                     "groupName": "Entity_General",
                     "targets": 29263750006690030,
-                    "autocrop": true,
+                    "autocrop": false,
                     "border": 2,
                     "groupParent": "00000000-0000-0000-0000-000000000000",
                     "mipsToGenerate": 0,
-                    "scaled": true
+                    "scaled": false
                 }
             }
         ],
@@ -149,7 +149,9 @@
         ]
     }
 }←1225f6b0-ac20-43bd-a82e-be73fa0b6f4f|{
-    "targets": 29263750006690030
+    "targets": 29263750006690030,
+    "scaled": false,
+    "autocrop": false
 }←7b2c4976-1e09-44e5-8256-c527145e03bb|{
     "targets": 29263750006690030
 }

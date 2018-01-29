@@ -17,14 +17,16 @@ application_surface_draw_enable(false)
 gpu_set_blendenable(true)
 draw_set_circle_precision(60)
 
-// general
-game_set_speed(60, gamespeed_fps)
-
 globalvar matrix_identical;
 matrix_identical = matrix_build_identity()
 
-// UI / UX
+// general
+game_set_speed(60, gamespeed_fps)
+randomize()
+
+// UX
 #macro area_vspeed 0.5625 * 4
+gpu_set_fog(false, $ffffff, 32, 32000)
 
 // game
 global.extreme = false
@@ -79,5 +81,4 @@ global.screen_gui_cx = display_get_gui_width() / 2
 global.screen_gui_cy = display_get_gui_height() / 2
 
 profile_clear()
-
-alarm[0] = 1
+instance_create_depth(0, 0, 0, oProfileEntry)

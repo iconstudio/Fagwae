@@ -50,6 +50,7 @@ if draw_mode > 0 {
 	if sgrv > 55 {
 		if draw_mode == 2 {
 			instance_destroy()
+			room_goto_next()
 		} else if draw_mode == 3 {
 			game_end()
 		}

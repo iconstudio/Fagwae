@@ -4,7 +4,7 @@ if dmode {
 	if dalpha > -1 
 		dalpha -= 0.01
 	else
-		instance_destroy()
+		room_goto_next()
 	exit
 }
 

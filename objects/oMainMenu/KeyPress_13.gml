@@ -5,10 +5,9 @@ if menu_outta()
 
 if menudepth == 0 {
 	if menusel[0] == 0 { // start
-		var gg = instance_create_layer(0, 0, "UI", oGameGlobal)
-		global.stage = 1
+		//var gg = instance_create_layer(0, 0, "UI", oGameGlobal)
 		draw_mode = 2
-		gg.stage_content = oStageShape1
+		//gg.stage_content = oStageShape1
 		/*
 		menu_clear(1, 0)
 		menu_add(1, "SHAPE AREA", "", 1)

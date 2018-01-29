@@ -1,7 +1,11 @@
 /// @description Initialization
 
+camera_projection_identity()
+
 // initiator
-area_content = noone
+player_isfirst = true
+stage_content = oStageShape1
+global.stage = 1
 alarm[2] = 30
 
 global.playeralive = false

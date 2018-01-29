@@ -503,6 +503,14 @@
             }
         },
         {
+            "Key": "5d33e3be-1250-4cb3-9475-f777c8fe9d5e",
+            "Value": {
+                "id": "c800cef2-d361-4eee-b922-59c75401d82a",
+                "resourcePath": "rooms\\roomGame\\roomGame.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "5f5547bd-5133-4658-b09a-35853160fab0",
             "Value": {
                 "id": "4ed70000-0670-44f1-a5f8-46bb643f6e8b",
@@ -715,6 +723,14 @@
             "Value": {
                 "id": "a6fbe4af-6a65-4d31-b605-11c68867efb8",
                 "resourcePath": "scripts\\io_check_padB\\io_check_padB.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "7fac7662-6346-4bbf-b47b-aa7a1101a013",
+            "Value": {
+                "id": "5d8b25fe-deeb-4a1a-b9f2-fe6134311c61",
+                "resourcePath": "scripts\\menu_projection\\menu_projection.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1367,6 +1383,14 @@
             }
         },
         {
+            "Key": "d83d9119-a9b1-4b90-ba24-d342da716477",
+            "Value": {
+                "id": "760d8d30-7cde-418a-856f-d92f3f0e3bb6",
+                "resourcePath": "objects\\oPlayerPiece\\oPlayerPiece.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d855cfab-cadd-45c2-ad62-8d343f493ed6",
             "Value": {
                 "id": "d8953dfd-d498-4cd9-9de7-e155f0bb2210",
@@ -1599,6 +1623,14 @@
             }
         },
         {
+            "Key": "f656df51-66b2-4cc1-ad96-c94403b959ab",
+            "Value": {
+                "id": "c23ef4fe-7d8c-42dc-bcb7-659bfed035a6",
+                "resourcePath": "sprites\\sGameOver\\sGameOver.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "f6e74f11-0848-4a79-abc4-61665f70ea3a",
             "Value": {
                 "id": "99140eb2-553a-4a82-a90b-0e11bc4b57d6",
@@ -1643,6 +1675,7 @@
         "b9970846-3a22-4d64-8cb8-351360b8e826",
         "417c8284-8f94-463c-a5cf-b8be1ed7b9fe",
         "a8e8c4ab-1cf3-4cff-a481-159f26acd6b6",
+        "7fac7662-6346-4bbf-b47b-aa7a1101a013",
         "a9b69a83-5b1d-4250-82f9-4a455a6eda91",
         "968dd525-b5cf-48a6-8d7b-4003ea79e742",
         "bda69e3a-3274-4d19-9619-d8f592dc97bf",

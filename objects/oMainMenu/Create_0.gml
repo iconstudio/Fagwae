@@ -1,5 +1,7 @@
 /// @description Initialize main menu
 
+menu_camera = camera_create_view(0, 0, 450, 800, 0, noone, 0, 0, -1, -1)
+camera_apply(menu_camera)
 event_user(0)
 
 lx = screen_width / 2

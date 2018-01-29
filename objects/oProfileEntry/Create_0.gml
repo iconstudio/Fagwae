@@ -7,6 +7,7 @@ if keyboard_check(vk_shift)
 
 if profile_load(global.profilefile) {
 	instance_destroy()
+	room_goto_next()
 	exit
 } else {
 	show_debug_message("Cannot load profile.")

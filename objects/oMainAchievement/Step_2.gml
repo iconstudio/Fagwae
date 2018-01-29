@@ -1,10 +1,7 @@
 /// @description 
 
 for (var i = 0; i < global.achievement_count; ++i) {
-	if archc[i] != global.achievement[i]
-		archc[i] = global.achievement[i]
-
-	var aclph = 0.5 + archc[i] * 0.5
+	var aclph = 0.5 + global.achievement_cleared[i] * 0.5
 	if selected == i {
 		alpha[i] += (aclph - alpha[i]) / 13
 		angle[i] += (60 - angle[i]) / 10

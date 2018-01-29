@@ -1,6 +1,6 @@
 /// @description Drawing
 
-draw_surface_ext(back_surface, -16, y + screen_height, 1, -1, 0, $ffffff, 1)
+draw_surface_ext(back_surface, 0, y, 1, 1, 0, $ffffff, 1)
 
 with back {
 	if other.entrance_y < screen_height + 40 { // optimizataion

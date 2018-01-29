@@ -12,7 +12,11 @@ global.py = 704
 global.player_fever_laser = 0
 global.player_fever_shield = 0
 
-instance_create_layer(global.px, global.py, "Player", oPlayerInit)
+var player = instance_create_layer(global.px, global.py, "Player", oPlayerInit)
+if player_isfirst {
+	player.invincible = 600
+	player_isfirst = false
+}
 
 //if (!instance_exists(oPauseManager))
 // instance_create_layer(0, 0, "Screen", oPauseManager)

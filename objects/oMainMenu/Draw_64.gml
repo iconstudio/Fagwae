@@ -1,9 +1,9 @@
-/// @description Drawing main menu
+/// @description Drawing main menu and name of the player
 
 draw_set_valign(0)
 draw_set_halign(0)
-achievement_available()
-camera_projection_set(-220, -10, -220, 0, 10, 0, 0, -1, 0, 45, 16 / 12, 32, 32000)
+
+camera_projection_set(-230, 0, -230, 0, 0, 0, 0, -1, 0, 45, 4 / 3, 1, 32000)
 draw_set_color($ffffff)
 
 var aalpha, dy, dalpha, sw
@@ -13,7 +13,7 @@ else
 	aalpha = 1
 
 draw_set_alpha(aalpha * (120 - rpush[0]) / 120 * get_ralpha(rflash[0]))
-menu_text(8 + rpush[0], -25, "FAGWAE", 6, menurot + 90)
+menu_text(rpush[0], -25, "FAGWAE", 6, menurot + 90)
 draw_set_alpha(aalpha * (120 - rpush[1]) / 120 * get_ralpha(rflash[1]))
 menu_text(8 + rpush[1], 9, "ZNIQ", 3, menurot + 90)
 menu_text(8 + rpush[1], 26, "ICONSTUDIO", 3, menurot + 90)
@@ -69,11 +69,11 @@ for (var j = 0; j <= maxdepth; ++j) {
 		}
 	}
 }
-draw_set_alpha(aalpha)
-
-camera_projection_identity()
 draw_transform_set_identity()
+camera_projection_identity()
+//camera_apply(view_camera)
 
+draw_set_alpha(1)
 draw_set_color($ffffff)
 draw_set_halign(1)
 draw_text_transformed(lx, ly + rpush[1], global.status_name, 1, 1, 0)

@@ -7,9 +7,6 @@ with oStageParent {
 	}
 }
 
-//eint[0] = oEnemyBossHexagonMiddle
-//eint[1] = oEnemyBossPlatformMiddle
-
 // for stage title (each stage, not for 3 areas)
 entrance_caption = ""
 entrance_x = 0
@@ -27,3 +24,6 @@ event_user(0)
 
 // create background (if doesn't exist)
 event_user(1)
+
+// initial waiting
+area_delay_push(480)
