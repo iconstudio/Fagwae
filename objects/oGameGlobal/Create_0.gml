@@ -4,10 +4,11 @@ camera_projection_identity()
 
 // initiator
 player_isfirst = true
-stage_content = oStageShape1
+instance_create_layer(0, 0, "Background_Instance_1", oStageShape1)
 global.stage = 1
 alarm[2] = 30
 
+// player
 global.playeralive = false
 global.pscore = 0
 global.px = 225
@@ -36,3 +37,7 @@ global.gauge_hpmax = 0
 
 gaugetexy = 0
 gaugerots = 0
+
+// bgm
+audio_stop_all()
+audio_play_sound(musicStage1, 0, true)

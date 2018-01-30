@@ -70,7 +70,7 @@
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 64,
+            "enumb": 0,
             "eventtype": 8,
             "m_owner": "e9826762-b6b2-46fc-86b2-d19ee966b467"
         }
@@ -329,6 +329,62 @@
             "value": "16",
             "varName": "bomb_brange",
             "varType": 0
+        },
+        {
+            "id": "eee03f05-7872-4c0e-91be-f63001c106d1",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "false",
+            "varName": "attack_check",
+            "varType": 3
+        },
+        {
+            "id": "c0ffd5f5-c7e2-4209-8a17-49a4fd977a26",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "attack_delay",
+            "varType": 1
+        },
+        {
+            "id": "db82758b-8562-4657-a29d-72a3347300a9",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "attack_frame",
+            "varType": 1
+        },
+        {
+            "id": "a9d860ab-c2ba-4b68-bfe1-89e99bc7982e",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "attack_count",
+            "varType": 1
         }
     ],
     "solid": false,

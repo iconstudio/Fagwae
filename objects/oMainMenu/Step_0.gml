@@ -33,15 +33,15 @@ if draw_mode > 0 {
 	if sgrv++ > 20 {
 		switch draw_mode {
 			case 1:
-				instance_create_layer(0, 0, "UI", oMainHighscore)
+				instance_create_layer(0, 0, "Submenu", oMainHighscore)
 				draw_mode = 4
 				break
 			case 5:
-				instance_create_layer(0, 0, "UI", oMainAchievement)
+				instance_create_layer(0, 0, "Submenu", oMainAchievement)
 				draw_mode = 4
 				break
 			case 6:
-				instance_create_layer(0, 0, "Backend_2", oProfileResetter)
+				instance_create_layer(0, 0, "Backend", oProfileResetter)
 				draw_mode = 4
 				break
 		}

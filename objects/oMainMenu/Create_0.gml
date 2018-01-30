@@ -24,4 +24,4 @@ global.extreme = false
 global.stage = 0
 
 audio_stop_all()
-//audio_play_sound(musicMainMenu, 0, true)
+audio_play_sound(musicMainMenu, 0, true)

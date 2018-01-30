@@ -65,3 +65,32 @@ angle_player = -hspeed * 2
 
 if speed > movespd
 	speed = movespd
+
+attack_check = (bomb_mode == 0) and (keyboard_check(ord("Z")) or io_check_triggerR() or io_check_buttonR() or io_check_padA())
+
+if attack_check
+	attack_count = 3
+
+if attack_delay > 0 {
+	attack_delay--
+} else {
+	if attack_count > 0 {
+		var let, sangle = 90 + angle_arm + angle_player + random(1) - 0.5
+		let = instance_create_depth(x + out_ax + lengthdir_x(40, sangle - cangle), y + 3 + out_ay + lengthdir_y(40, sangle - cangle), depth + 1, oPlayerBullet)
+		let.direction = sangle - cangle
+		let.image_angle = let.direction - 90
+		let.image_index = attack_frame
+		let.speed = 26
+
+		let = instance_create_depth(x - out_ax + lengthdir_x(40, sangle + cangle), y + 3 - out_ay + lengthdir_y(40, sangle + cangle), depth + 1, oPlayerBullet)
+		let.direction = sangle + cangle
+		let.image_angle = let.direction - 90
+		let.image_index = attack_frame
+		let.speed = 26
+		//sinBassSamplePlay(global.SounDresource[3])
+	}
+
+	attack_count -= 1
+	attack_frame = (attack_frame + 1) mod 4
+	attack_delay = 3
+}

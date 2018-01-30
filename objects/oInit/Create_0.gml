@@ -80,5 +80,23 @@ draw_set_font(global.font)
 global.screen_gui_cx = display_get_gui_width() / 2
 global.screen_gui_cy = display_get_gui_height() / 2
 
+// audio
+switch os_browser {
+	case browser_not_a_browser:
+		switch os_type {
+		case os_windows:
+		case os_macosx:
+			audio_channel_num(200)
+			break
+		default:
+			audio_channel_num(64)
+			break
+		}
+		break
+	default:
+		audio_channel_num(16)
+		break
+}
+
 profile_clear()
 instance_create_depth(0, 0, 0, oProfileEntry)
