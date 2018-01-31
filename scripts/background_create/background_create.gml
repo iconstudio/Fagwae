@@ -3,4 +3,4 @@
 /// @param index { object }
 
 if !instance_exists(back)
-	back = instance_create_depth(0, 0, "Background_Instance_2", argument0)
+	back = instance_create_depth(0, 0, "Score", argument0)

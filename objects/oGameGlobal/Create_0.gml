@@ -3,18 +3,11 @@
 camera_projection_identity()
 
 // initiator
+// player
 player_isfirst = true
-instance_create_layer(0, 0, "Background_Instance_1", oStageShape1)
+instance_create_layer(0, 0, "Backend", oStageShape1)
 global.stage = 1
 alarm[2] = 30
-
-// player
-global.playeralive = false
-global.pscore = 0
-global.px = 225
-global.py = 704
-global.player_fever_laser = 0
-global.player_fever_shield = 0
 
 // achievements
 event_user(1)

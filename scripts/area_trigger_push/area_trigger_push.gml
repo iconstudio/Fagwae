@@ -7,7 +7,7 @@
 /// @param [x] { real }
 /// @param [y] { real }
 
-var data = 0, dother = 0, cx = 0, cy = 0
+var data = undefined, dother = undefined, cx = undefined, cy = undefined
 
 if argument_count > 2 {
 	data = argument[2]
@@ -21,4 +21,11 @@ if argument_count > 2 {
 	}
 }
 
-var pusher = array_create(6, argument[0], argument[1], data, dother, cx, cy)
+var pusher = array_create(6)
+pusher[0] = argument[0]
+pusher[1] = argument[1]
+pusher[2] = data
+pusher[3] = dother
+pusher[4] = cx
+pusher[5] = cy
+trigger_push[trigger_size++] = pusher

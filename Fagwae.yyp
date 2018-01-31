@@ -495,6 +495,22 @@
             }
         },
         {
+            "Key": "53fe5020-01ec-41fd-b27f-da4679537b90",
+            "Value": {
+                "id": "e1656da2-f96b-47bf-b7e5-165da58044e4",
+                "resourcePath": "objects\\oPlayerLife\\oPlayerLife.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "54bfebb2-9cb5-469d-acf4-698a1892da6a",
+            "Value": {
+                "id": "2fa49310-2fec-4047-84d0-e9e72fc58a6c",
+                "resourcePath": "objects\\oFrameJoint\\oFrameJoint.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "55412e72-8545-4f01-b290-6d84e82c79fa",
             "Value": {
                 "id": "7c004fd0-e2b5-43f6-8a58-1928f0dd5b08",
@@ -671,6 +687,14 @@
             }
         },
         {
+            "Key": "72b799d2-9678-4b4c-94a9-f4164a5016ad",
+            "Value": {
+                "id": "773304e7-30ad-47d3-9cc8-ce47060b9adc",
+                "resourcePath": "sprites\\sEnemyBullet2\\sEnemyBullet2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "73b1b48c-dfc3-4e8b-9582-ce5ee0d5a790",
             "Value": {
                 "id": "793ac2a4-a6ad-439c-9a9e-e427851f97b5",
@@ -747,6 +771,14 @@
             "Value": {
                 "id": "c10f5393-0cfc-40f2-bc0c-6f65438774e3",
                 "resourcePath": "sprites\\sHexagonArmNormal\\sHexagonArmNormal.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "7a7cdd36-343c-451c-9a1a-0ee294cd5f6b",
+            "Value": {
+                "id": "91bdd40c-abf1-4f77-ac74-1c4d952cfbd5",
+                "resourcePath": "sprites\\sPlayerScorePiece\\sPlayerScorePiece.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1159,6 +1191,14 @@
             }
         },
         {
+            "Key": "a95de9fd-8485-4b00-8bf7-2ce3aa8e63e8",
+            "Value": {
+                "id": "62b3e1d0-5532-4386-901d-475d9763a8c5",
+                "resourcePath": "objects\\oParticleFlameGenerator\\oParticleFlameGenerator.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a9b69a83-5b1d-4250-82f9-4a455a6eda91",
             "Value": {
                 "id": "91088757-5cd9-43af-b17a-f8dd90e3842f",
@@ -1543,6 +1583,14 @@
             }
         },
         {
+            "Key": "dbbf6ebe-237a-4f5d-896b-da6a21f364e6",
+            "Value": {
+                "id": "31302951-756d-40be-94e7-474c4abf6177",
+                "resourcePath": "objects\\oEnemyBullet\\oEnemyBullet.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "dc1f4872-b5a4-4dc3-9587-8a8000945561",
             "Value": {
                 "id": "5084eba8-cdea-4f68-b297-89a357ef252d",
@@ -1751,6 +1799,14 @@
             }
         },
         {
+            "Key": "f43c58ad-210f-4cff-9951-fad06231d5e0",
+            "Value": {
+                "id": "5c597d0c-c548-4ad2-ab02-d25cc140bc73",
+                "resourcePath": "objects\\oPlayerScorePiece\\oPlayerScorePiece.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "f51cfd60-9f52-4d38-9d1d-0a85218e0f73",
             "Value": {
                 "id": "f3b14032-4699-4f2d-ba43-4700b0c60558",
@@ -1810,7 +1866,7 @@
             "Key": "fc97f414-b6c2-4299-aa28-863776d1e9e0",
             "Value": {
                 "id": "ee905d14-d1f7-4632-9629-9efbf87cf6e1",
-                "resourcePath": "objects\\oParticleParent\\oParticleParent.yy",
+                "resourcePath": "objects\\oParticleFlameParent\\oParticleFlameParent.yy",
                 "resourceType": "GMObject"
             }
         },

@@ -55,17 +55,17 @@ if menudepth == 0 {
 		menudepth = 0
 	} else if menusel[0] == 0 { // start
 		// add 3 stages for each area
-		var cond_shape = (menusel[1] == 0 && global.log_openshape > 0)
-		var cond_frame = (menusel[1] == 1 && global.log_openframe > 0)
-		var cond_indeterminate = (menusel[1] == 2 && global.log_openindet > 0)
+		var cond_shape = (menusel[1] == 0 and global.log_openshape > 0)
+		var cond_frame = (menusel[1] == 1 and global.log_openframe > 0)
+		var cond_indeterminate = (menusel[1] == 2 and global.log_openindet > 0)
 
 		if cond_shape or cond_frame or cond_indeterminate {
 			menu_clear(2)
 			menu_add(2, "STAGE 1", "", 1)
 			for (var i = 1; i < 3; ++i) {
-				if (menusel[1] == 0 && global.log_openshape > i) or
-				(menusel[1] == 1 && global.log_openframe > i) or
-				(menusel[1] == 2 && global.log_openindet > i)
+				if (menusel[1] == 0 and global.log_openshape > i) or
+				(menusel[1] == 1 and global.log_openframe > i) or
+				(menusel[1] == 2 and global.log_openindet > i)
 					menu_add(2, "STAGE " + string(i + 1), "", 1)
 				else
 					menu_add(2, "STAGE " + string(i + 1), "CLEAR STAGE " + string(i), 0.5)
@@ -104,9 +104,9 @@ if menudepth == 0 {
 		menudepth = 1
 	} else {
 		if menusel[0] = 0 { // start a game
-			var cond_shape = (menusel[1] == 0 && global.log_openshape > menusel[2])
-			var cond_frame = (menusel[1] == 1 && global.log_openframe > menusel[2])
-			var cond_indeterminate = (menusel[1] == 2 && global.log_openindet > menusel[2])
+			var cond_shape = (menusel[1] == 0 and global.log_openshape > menusel[2])
+			var cond_frame = (menusel[1] == 1 and global.log_openframe > menusel[2])
+			var cond_indeterminate = (menusel[1] == 2 and global.log_openindet > menusel[2])
 
 			var stage_creating = ""
 			if cond_shape

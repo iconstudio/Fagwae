@@ -20,5 +20,5 @@ fade_easer = ease_straight
 
 // Push Notification
 callto = noone
-construct = array_create(3, noone, "", "")
+construct = array_create(3)
 notification_list = ds_list_create()

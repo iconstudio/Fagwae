@@ -81,7 +81,7 @@ if !menu_outta() {
 
 rfrm++
 for (var i = 0; i < 3; ++i) {
-	if rfrm > i * 10 + 12 && rpush[i] != 0 {
+	if rfrm > i * 10 + 12 and rpush[i] != 0 {
 		rpush[i] -= rpush[i] / 4
 		if rpush[i] < 8 {
 			if rflash[i]++ > 15

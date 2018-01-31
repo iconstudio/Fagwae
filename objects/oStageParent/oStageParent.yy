@@ -92,9 +92,23 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "ds_queue_create()",
+            "value": "",
             "varName": "trigger_push",
-            "varType": 4
+            "varType": 6
+        },
+        {
+            "id": "7758440a-fddd-4a13-98ca-1b90a120ce64",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "trigger_pos",
+            "varType": 1
         },
         {
             "id": "f560e9d3-970b-489d-a0e0-894a424be4a8",

@@ -41,7 +41,9 @@ global.stage = 0 // 0: None, 1 ~ 9: Game, 10: Complete a mode
 // gamepad input
 global.Gamepad = -1
 global.GamepadType = 0
-global.GamepadSprite = array_create(3, sIconControllerXbox, sIconControllerPlayStation, sIconControllerOther)
+global.GamepadSprite = array_create(3, sIconControllerXbox)
+global.GamepadSprite[1] = sIconControllerPlayStation
+global.GamepadSprite[2] = sIconControllerOther
 
 #macro gamepad_type_xbox 0
 #macro gamepad_type_playstation 1

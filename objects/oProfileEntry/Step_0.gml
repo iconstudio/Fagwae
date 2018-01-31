@@ -12,7 +12,7 @@ var len = string_length(keyboard_string)
 for (var i = 0; i < len; ++i) {
 	alarm[0] = -1
 	dchr = ord(string_char_at(keyboard_string, i + 1))
-	if dchr > 96 && dchr < 123
+	if dchr > 96 and dchr < 123
 		dchr -= 32
 
 	if char_check(dchr) {

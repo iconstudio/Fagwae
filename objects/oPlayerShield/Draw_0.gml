@@ -11,7 +11,7 @@ for (var i = 0; i < 8; ++i) {
 	dx = x - sprite_xoffset
 	dy = y - sprite_yoffset - 8
 
-	if draw_piecepos > 0 && draw_piecepos - 23 + draw_size > 0
+	if draw_piecepos > 0 and draw_piecepos - 23 + draw_size > 0
 		draw_sprite_part_ext(sprite_index, i + progress, 0, 0, 92, draw_piecepos - 23 + draw_size, dx, dy, 1, 1, draw_color, 1)
 
 	for (var j = draw_piecepos; j < 69; j += 23) {

@@ -1,7 +1,7 @@
 /// @description Complete input
 
 var len = string_length(kstring)
-if len > 2 && len < 17 && dmode == 0 {
+if len > 2 and len < 17 and dmode == 0 {
  global.status_name = kstring
 
  profile_save(global.profilefile)

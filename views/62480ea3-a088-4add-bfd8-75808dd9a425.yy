@@ -6,7 +6,8 @@
     "children": [
         "fc97f414-b6c2-4299-aa28-863776d1e9e0",
         "8ec56018-8608-4233-a317-0e0080a93d38",
-        "aa7394b1-a2c2-449d-a36d-98ba428e195c"
+        "aa7394b1-a2c2-449d-a36d-98ba428e195c",
+        "a95de9fd-8485-4b00-8bf7-2ce3aa8e63e8"
     ],
     "filterType": "GMObject",
     "folderName": "Effect",

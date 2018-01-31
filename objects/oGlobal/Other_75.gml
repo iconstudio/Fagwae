@@ -5,7 +5,7 @@ var type = ds_map_find_value(async_load, "event_type");
 if type == "gamepad discovered" {
 	var index = ds_map_find_value(async_load, "pad_index");
 	
-	if index >= 0 && gamepad_index != index {
+	if index >= 0 and gamepad_index != index {
 		 gamepad_index = index
 		 gamepad_setting(index)
 		 

@@ -22,14 +22,16 @@ for (var i = 0; i < prohibit_count; ++i) {
 }
 
 if trigger_counter-- <= 0 {
-	if trigger_size > 0 {
-		trigger_datalast = ds_queue_dequeue(trigger_push)
-		var type = trigger_datalast[0]
+	if trigger_size - trigger_pos > 0 {
+		trigger_datalast = trigger_push[trigger_pos++]
 		var time = trigger_datalast[1]
+		var type = trigger_datalast[0]
 		var data = trigger_datalast[2]
 		var dother = trigger_datalast[3]
 		var cx = trigger_datalast[4]
 		var cy = trigger_datalast[5]
+		show_debug_message("Time: " + string(time) + ", Type: " + string(type) + ", Data: " + string(data))
+		show_debug_message("Other: " + string(dother) + ", x: " + string(cx) + ", y: " + string(cy))
 		
 		switch type {
 		case areapush_object:
@@ -56,6 +58,5 @@ if trigger_counter-- <= 0 {
 		}
 
 		trigger_counter = time
-		trigger_size = ds_queue_size(trigger_push)
 	}
 }

@@ -2,7 +2,7 @@
     "id": "fc97f414-b6c2-4299-aa28-863776d1e9e0",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oParticleParent",
+    "name": "oParticleFlameParent",
     "eventList": [
         {
             "id": "97d755c0-79e1-4907-bcd5-9ab813f1bdb2",

@@ -51,7 +51,7 @@ if keyboard_check(vk_shift) or io_check_triggerL() or io_check_buttonL() {
 var mhs = mx * 2
 var mvs = my * 2
 
-if mx != 0 && my != 0 {
+if mx != 0 and my != 0 {
 	mhs *= movesqr
 	mvs *= movesqr
 }
