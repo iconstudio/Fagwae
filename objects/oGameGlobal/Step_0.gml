@@ -2,8 +2,14 @@
 
 event_user(2)
 
-if global.screenlock
+if !window_has_focus() and !global.screenlock and !global.paused
+	game_pause()
+
+if global.screenlock or global.paused
 	exit
+
+if io_check_pressed_start() or io_check_pressed_select()
+	event_perform(ev_keypress, ord("P"))
 
 if global.screenshadowy > 0 {
 	shadow_alpha += (1 - shadow_alpha) / 3
@@ -12,6 +18,15 @@ if global.screenshadowy > 0 {
 
 } else if shadow_alpha != 0 {
 	shadow_alpha -= shadow_alpha / 4
+}
+
+if player_counter > 0 {
+	player_counter--
+} else {
+	if player_counter == 0 {
+		player_counter = -1
+		event_user(0)
+	}
 }
 
 if instance_exists(oPlayerParent) {

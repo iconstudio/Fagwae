@@ -29,6 +29,7 @@ randomize()
 gpu_set_fog(false, $ffffff, 32, 32000)
 
 // game
+global.paused = false
 global.extreme = false
 global.stage = 0 // 0: None, 1 ~ 9: Game, 10: Complete a mode
 

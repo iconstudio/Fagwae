@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "0470808a-1052-4b99-aeef-77aace2a719f",
+            "Value": {
+                "id": "709eb128-21da-4cb5-92e2-e1845c8ea522",
+                "resourcePath": "scripts\\io_check_pressed_select\\io_check_pressed_select.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "059c83af-33bf-4730-aa18-34fa59164956",
             "Value": {
                 "id": "7cdc3671-7400-4944-accb-3ee1d232cdd1",
@@ -855,14 +863,6 @@
             }
         },
         {
-            "Key": "8427047f-9ef8-4c77-89f3-9c20623d07b6",
-            "Value": {
-                "id": "9bdd0515-48b5-4dfa-bf0b-31075cb7df80",
-                "resourcePath": "options\\ios\\options_ios.yy",
-                "resourceType": "GMiOSOptions"
-            }
-        },
-        {
             "Key": "85b7a0db-02b4-474b-93bc-b9ee33bb91ab",
             "Value": {
                 "id": "444c6eb1-8ef6-42f6-9a69-30e9ec6a4477",
@@ -1615,6 +1615,14 @@
             }
         },
         {
+            "Key": "dff49c90-d907-4d95-adf8-2ff299b5cc97",
+            "Value": {
+                "id": "b212ec80-1417-4c30-9826-65ebe80b7b42",
+                "resourcePath": "scripts\\io_check_pressed_start\\io_check_pressed_start.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e10c8525-65c7-48b5-80cb-48b5a299b5f1",
             "Value": {
                 "id": "e9e95835-2511-49c2-aeb6-fc50b2708432",
@@ -1660,14 +1668,6 @@
                 "id": "aed17ab0-194e-4199-9828-f16a5802d94a",
                 "resourcePath": "objects\\oGameGlobal\\oGameGlobal.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "e42bf5cc-3f46-4d67-a6d0-a4885a11ac3f",
-            "Value": {
-                "id": "a5906105-489d-45ce-b25d-1ead9d31817d",
-                "resourcePath": "options\\android\\options_android.yy",
-                "resourceType": "GMAndroidOptions"
             }
         },
         {
@@ -1949,6 +1949,8 @@
         "9bce7c29-0d39-413e-ae98-e598654a8d11",
         "dc1f4872-b5a4-4dc3-9587-8a8000945561",
         "e2fe8492-f457-4644-a1f9-3128279d3d66",
+        "dff49c90-d907-4d95-adf8-2ff299b5cc97",
+        "0470808a-1052-4b99-aeef-77aace2a719f",
         "03ed9ba2-7b99-4567-bfad-8e9aa4592cad",
         "326ce431-f278-4a6e-9b52-95436aa41b95",
         "5bac3531-bf5b-4713-b4d2-8626c13a37da",

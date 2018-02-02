@@ -4,10 +4,10 @@ camera_projection_identity()
 
 // initiator
 // player
+player_counter = 30
 player_isfirst = true
 instance_create_layer(0, 0, "Backend", oStageShape1)
 global.stage = 1
-alarm[2] = 30
 
 // achievements
 event_user(1)
