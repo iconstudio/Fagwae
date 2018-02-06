@@ -3,7 +3,7 @@
 event_inherited()
 
 // stat
-hpmax = 2
+hp_max = 2
 shield = instance_create_depth(x, y, depth + 1, oPlayerShield)
 shield.parent = id
 

@@ -5,7 +5,7 @@ if global.playeralive
 
 score = 0
 global.playeralive = true
-global.pscore = 0
+global.score_combo = 0
 global.px = 225
 global.py = 704
 

@@ -7,19 +7,18 @@ if !global.playeralive or instance_exists(oGameOver) or instance_exists(oContinu
 if hp > 0 {
 	screen_wave(x, y, 96)
 	hp--
-	if global.pscore != 0 {
-		if global.pscore > 10
-			mscr = floor(global.pscore / 2)
+	if global.score_combo != 0 {
+		if global.score_combo > 10
+			mscr = floor(global.score_combo / 2)
 		else
-			mscr = global.pscore
-		global.pscore -= mscr
-		//show_flashstring(x, y - 12, "-" + number_format(mscr / 10), 1)
+			mscr = global.score_combo
+		global.score_combo -= mscr
+		show_flashstring(x, y - 12, "-" + number_format(mscr / 10), 1)
 	}
 
 	screen_shake(10)
-	//bullet_clear()
+	bullet_clear()
 	invincible = 210
-	//urange = ubrange
 } else {
 	//highscore_update()
 	screen_wave(x, y, 216)
@@ -58,11 +57,12 @@ if hp > 0 {
 	global.playeralive = false
 
 	screen_shake(14)
+	bullet_clear()
 	profile_save(global.profilefile)
 
-	with (oPlayerShield)
+	with oPlayerShield
 		instance_destroy()
-	with (oGameGlobal)
+	with oGameGlobal
 		alarm[1] = 120
 	instance_destroy()
 }

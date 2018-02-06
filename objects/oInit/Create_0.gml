@@ -33,11 +33,27 @@ global.paused = false
 global.extreme = false
 global.stage = 0 // 0: None, 1 ~ 9: Game, 10: Complete a mode
 
+global.enemy_dictionary = ds_map_create()
+
+#macro enemy_shape_octagon_1 "eoctagon1" // shots 1, 5 times (blue octagon mk.1)
+#macro enemy_shape_octagon_2 "eoctagon2" // shots 3, 3 times (blue octagon mk.2)
+#macro enemy_shape_hexagon_1 "ehexagon1" // shots 1 for each 3 arms, 1 times (purple hexagon mk.1)
+#macro enemy_shape_hexagon_2 "ehexagon2" // shots 3 for each 3 arms, 2 times, and change (purple hexagon mk.2)
+#macro enemy_shape_octagon_3 "eoctagon3" // shots 4, 16 times, and change (green octagon mk.1)
+#macro enemy_shape_octagon_4 "eoctagon4" // shots 4, 4 times, and change (green octagon mk.2)
+
+#macro enemy_frame_joint_1 "fjoint1" // falls
+
+enemy_register(enemy_shape_octagon_1, oOctagonStraight, "OCTAGON", sOctagonNormal, sOctagonExtreme, 18, 600, 1, 0)
+enemy_register(enemy_shape_hexagon_1, oHexagonSpatial, "HEXAGON", sHexagonNormal, sHexagonExtreme, 30, 1200, 1, 2)
+enemy_register(enemy_frame_joint_1, oFrameJoint, "STEEL FRAME", sFrameJoint, sFrameJoint, 50, 650, 2, 0)
+
 #macro areapush_object 0
-#macro areapush_message 1
-#macro areapush_script 2
-#macro areapush_global 3
-#macro areapush_delay 4
+#macro areapush_enemy 1
+#macro areapush_message 2
+#macro areapush_script 3
+#macro areapush_global 4
+#macro areapush_delay 5
 
 // gamepad input
 global.Gamepad = -1

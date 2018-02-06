@@ -15,7 +15,8 @@
         "41c581fa-e5ce-4183-8a09-4c0c42f5b77a",
         "447b57af-64ea-4c6e-a89e-b4366b853729",
         "91b22788-78fd-498c-8bac-0158e44e571d",
-        "0e37f3cc-5ef3-474a-9748-73604cae136b"
+        "0e37f3cc-5ef3-474a-9748-73604cae136b",
+        "1fa8c9c6-bc1f-43d2-8fcc-606c4ed98d1e"
     ],
     "filterType": "GMScript",
     "folderName": "External",

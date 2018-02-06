@@ -1,7 +1,7 @@
 /// @description Initialization
 
 // initiator
-alarm[1] = 30
+alarm[1] = 60
 
 // background
 var layer_id = layer_get_id("Background_Color")

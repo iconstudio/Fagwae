@@ -4,7 +4,7 @@ camera_projection_identity()
 
 // initiator
 // player
-player_counter = 30
+player_counter = 60
 player_isfirst = true
 instance_create_layer(0, 0, "Backend", oStageShape1)
 global.stage = 1
@@ -26,11 +26,12 @@ global.gauge_alpha = 0
 
 global.gauge_caption = ""
 global.gauge_hp = 0
-global.gauge_hpmax = 0
+global.gauge_hp_max = 0
 
 gaugetexy = 0
 gaugerots = 0
 
 // bgm
-audio_stop_all()
-audio_play_sound(musicStage1, 0, true)
+audio_play_sound(musicStage1, 100, true)
+audio_sound_gain(musicMainMenu, 0, 2000)
+alarm[3] = 120

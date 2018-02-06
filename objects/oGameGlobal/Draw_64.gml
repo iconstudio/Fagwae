@@ -23,7 +23,7 @@ if !instance_exists(global.gauge_target)
 	exit
 
 draw_set_alpha(global.gauge_alpha)
-var gratio = global.gauge_hp / global.gauge_hpmax
+var gratio = global.gauge_hp / global.gauge_hp_max
 var gsiz = gratio * screen_width * 0.5
 var gcol1 = make_color_hsv(gratio * 40, 240, 96)
 var gcol2 = make_color_hsv(gratio * 85, 240, 96)
@@ -40,4 +40,16 @@ draw_set_color($ffffff)
 draw_set_halign(1)
 draw_set_valign(0)
 draw_text_transformed(dx, 745, global.gauge_caption, 2, 2, 0)
-draw_set_alpha(1)
+
+if global.paused {
+	draw_set_valign(1)
+	draw_set_alpha(0.5)
+	draw_set_color(0)
+	
+	draw_set_alpha(1)
+	draw_set_color($ffffff)
+	draw_text_transformed(global.screen_gui_cx, global.screen_gui_cy - 20, "PAUSED", 3, 3, 0)
+	draw_text_transformed(global.screen_gui_cx, global.screen_gui_cy + 10, "PRESS ESC TO GO TO MAIN MENU", 2, 2, 0)
+} else {
+	draw_set_alpha(1)
+}
