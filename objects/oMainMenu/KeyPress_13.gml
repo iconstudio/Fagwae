@@ -3,6 +3,8 @@
 if menu_outta()
  exit
 
+var __depth = menudepth, __mode = draw_mode
+
 if menudepth == 0 {
 	if menusel[0] == 0 { // start
 		//var gg = instance_create_layer(0, 0, "UI", oGameGlobal)
@@ -159,6 +161,14 @@ if menudepth == 0 {
 	} else {
 		menudepth = 2
 	}
+}
+
+
+if draw_mode > 0 {
+	if draw_mode != 3 and draw_mode != 6
+		audio_play_sound(soundMenuEnter, 5, false)
+} else {
+	audio_play_sound(soundMenuClick, 5, false)
 }
 
 alarm[0] = -1

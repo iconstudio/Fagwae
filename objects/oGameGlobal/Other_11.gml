@@ -8,8 +8,6 @@ for (var i = 0; i < 8; ++i)
 score = 0
 global.playeralive = false
 global.score_combo = 0
-global.px = 225
-global.py = 704
 
 global.player_fever_laser = 0
 global.player_fever_shield = 0

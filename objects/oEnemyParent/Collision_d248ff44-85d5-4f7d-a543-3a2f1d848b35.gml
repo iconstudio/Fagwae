@@ -6,5 +6,7 @@ if other.pow <= 0 or dead
 hurt = other.pow
 event_user(15)
 
+audio_play_sound(soundHitPlayer, 20, false)
+
 with other
 	event_user(0)

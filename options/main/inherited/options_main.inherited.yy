@@ -152,6 +152,28 @@
     "targets": 29263750006690030,
     "scaled": false,
     "autocrop": false
+}←7fa50043-cea6-4cd0-9521-a8ba8c6ea9f0|{
+    "audioGroups": {
+        "Additions": [
+            {
+                "Key": 1,
+                "Value": {
+                    "id": "551fddd6-0be3-441d-8d3c-fec80b34bfcf",
+                    "modelName": "GMAudioGroup",
+                    "mvc": "1.0",
+                    "groupName": "audiogroup_sfx",
+                    "targets": 29263750006690030
+                }
+            }
+        ],
+        "Checksum": "濑Ⱥ朦씁ᬄ縈",
+        "Deletions": [
+            
+        ],
+        "Ordering": [
+            
+        ]
+    }
 }←7b2c4976-1e09-44e5-8256-c527145e03bb|{
     "targets": 29263750006690030
 }

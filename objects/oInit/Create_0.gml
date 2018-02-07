@@ -6,11 +6,16 @@ global.profilefile = "profile.dat"
 global.network = true
 
 // screen
+global.__trw = window_get_width()
+global.__trh = window_get_height()
 global.__ttw = display_get_gui_width()
 global.__tth = display_get_gui_height()
 
-#macro view_width 450
-#macro view_height 800
+global.screen_gui_cx = global.__ttw / 2
+global.screen_gui_cy = global.__tth / 2
+
+#macro view_width global.__trw
+#macro view_height global.__trh
 #macro screen_width global.__ttw
 #macro screen_height global.__tth
 application_surface_draw_enable(false)
@@ -46,7 +51,7 @@ global.enemy_dictionary = ds_map_create()
 
 enemy_register(enemy_shape_octagon_1, oOctagonStraight, "OCTAGON", sOctagonNormal, sOctagonExtreme, 18, 600, 1, 0)
 enemy_register(enemy_shape_hexagon_1, oHexagonSpatial, "HEXAGON", sHexagonNormal, sHexagonExtreme, 30, 1200, 1, 2)
-enemy_register(enemy_frame_joint_1, oFrameJoint, "STEEL FRAME", sFrameJoint, sFrameJoint, 50, 650, 2, 0)
+enemy_register(enemy_frame_joint_1, oFrameJoint, "STEEL FRAME", sFrameJoint, sFrameJoint, 34, 650, 2, 0)
 
 #macro areapush_object 0
 #macro areapush_enemy 1
@@ -95,9 +100,6 @@ if gamepad_is_supported() {
 global.font = font_add_sprite(sFont, 33, 1, 1)
 global.fontborder = font_add_sprite(sFontBorder, 33, 1, 1)
 draw_set_font(global.font)
-
-global.screen_gui_cx = display_get_gui_width() / 2
-global.screen_gui_cy = display_get_gui_height() / 2
 
 // audio
 switch os_browser {

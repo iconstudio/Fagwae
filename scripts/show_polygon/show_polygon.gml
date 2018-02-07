@@ -1,8 +1,11 @@
-/// @description show_polygon(x, y, vertex, size, color, interpolate)
+/// @description show_polygon(x, y, vertex, size, color, rotated)
 /// @function show_polygon
 /// @param x { real }
 /// @param y { real }
-/// @param description {string}
+/// @param vertex { integer }
+/// @param size { real }
+/// @param color { real }
+/// @param rotated { boolean }
 
 if argument4 <= 0
 	exit

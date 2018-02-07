@@ -10,5 +10,7 @@ if hp < hp_max {
 	show_flashstring(x, y, "+" + string(ascore), 2)
 }
 
+audio_play_sound(soundLifeUp, 20, false)
+
 with other
 	instance_destroy()

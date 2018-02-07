@@ -11,7 +11,7 @@ var attributes = ds_map_find_value(global.enemy_dictionary, argument[0])
 if !is_array(attributes)
 	show_error("Error when getting enemy attributes", true)
 
-with instance_create_layer(argument[1], argument[2], "Instances", oDummy) {
+with instance_create_layer(argument[1], argument[2], "Instances", attributes[0]) {
 	name = attributes[1]
 	sprite_normal = attributes[2]
 	sprite_extreme = attributes[3]
@@ -27,12 +27,8 @@ with instance_create_layer(argument[1], argument[2], "Instances", oDummy) {
 		image_angle = argument[4]
 	if argument_count >= 4
 		type_create = argument[3]
-	show_debug_message("Object: " + object_get_name(attributes[0]) + ", Name: " + name + ", Type of creation: " + string(type_create))
-	show_debug_message("Score: " + string(score_dead) + ", Loot: " + string(score_loot))
-	show_debug_message("hp: " + string(hp) + ", Sprite: " + sprite_get_name(sprite_normal))
-
-	instance_change(attributes[0], false)
-	event_perform_object(attributes[0], ev_create, 0)
-
+	//show_debug_message("Object: " + object_get_name(attributes[0]) + ", Name: " + name + ", Type of creation: " + string(type_create))
+	//show_debug_message("Score: " + string(score_dead) + ", Loot: " + string(score_loot))
+	//show_debug_message("hp: " + string(hp) + ", Sprite: " + sprite_get_name(sprite_normal))
 	return id
 }

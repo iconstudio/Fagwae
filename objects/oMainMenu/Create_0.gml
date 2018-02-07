@@ -25,4 +25,4 @@ global.stage = 0
 
 audio_stop_all()
 audio_play_sound(musicMainMenu, 100, true)
-audio_sound_gain(musicMainMenu, 1, 2000)
+audio_sound_gain(musicMainMenu, global.setting_music / 10, 2000)

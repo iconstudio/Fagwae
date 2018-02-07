@@ -40,16 +40,7 @@ draw_set_color($ffffff)
 draw_set_halign(1)
 draw_set_valign(0)
 draw_text_transformed(dx, 745, global.gauge_caption, 2, 2, 0)
+draw_set_alpha(1)
 
-if global.paused {
-	draw_set_valign(1)
-	draw_set_alpha(0.5)
-	draw_set_color(0)
-	
-	draw_set_alpha(1)
-	draw_set_color($ffffff)
-	draw_text_transformed(global.screen_gui_cx, global.screen_gui_cy - 20, "PAUSED", 3, 3, 0)
-	draw_text_transformed(global.screen_gui_cx, global.screen_gui_cy + 10, "PRESS ESC TO GO TO MAIN MENU", 2, 2, 0)
-} else {
-	draw_set_alpha(1)
-}
+if shadow_alpha > 0
+	draw_sprite_ext(sScreenShadow, 0, 0, 0, 1, 1, 0, $ffffff, shadow_alpha * 2)

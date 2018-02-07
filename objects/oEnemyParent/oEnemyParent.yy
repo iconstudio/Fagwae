@@ -187,20 +187,6 @@
             "varType": 1
         },
         {
-            "id": "f8a35621-7f94-4e56-a9eb-60d1a60e96d0",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "0",
-            "varName": "damaged",
-            "varType": 0
-        },
-        {
             "id": "658614c5-e207-4190-8a60-051eadf3acbb",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
