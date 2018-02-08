@@ -1,3 +1,3 @@
-/// @description Update
+/// @description Creation
 
-image_angle += rotation_step
+// empty

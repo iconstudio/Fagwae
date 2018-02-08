@@ -12,4 +12,5 @@ rscale = 2
 alpha = 1
 rotation = 0
 
+type_create = 0
 alarm[0] = 60

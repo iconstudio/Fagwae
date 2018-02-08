@@ -1,7 +1,8 @@
 /// @description 
 
-var inst = instance_create_depth(x, y, depth + 1, oParticleFlameSmoke)
-inst.direction = direction + random(60) - 30
-inst.vspeed = random(speed / 2) + speed / 4
+with instance_create_depth(x, y, depth + 1, oParticleFlameSmoke) {
+	direction = other.direction + random(60) - 30
+	vspeed = random(other.speed / 2) + other.speed / 4
+}
 
 alarm[0] = 2 + random(2)

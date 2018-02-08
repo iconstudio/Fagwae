@@ -1,3 +1,0 @@
-/// @description Shadow can scalable
-
-

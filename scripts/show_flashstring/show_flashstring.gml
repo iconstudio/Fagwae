@@ -7,6 +7,6 @@
 
 with instance_create_layer(argument0, argument1, "UI", oFlashString) {
 	ncaption = argument2
-	ctype = argument3
+	type_create = argument3
 	event_user(0)
 }

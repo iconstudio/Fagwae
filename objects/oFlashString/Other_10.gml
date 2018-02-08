@@ -2,12 +2,12 @@
 
 with object_index {
 	if id != other.id {
-		if type_create == other.ctype or (other.type_create == 3 && type_create == 2)
+		if type_create == other.type_create or (other.type_create == 3 && type_create == 2)
 			dmode = 2
 	}
 }
 
-if ctype == 0 or ctype == 3 {
+if type_create == 0 or type_create == 3 {
 	rscale = 3
 } else {
 	rscale = 2

@@ -26,4 +26,4 @@ event_user(0)
 event_user(1)
 
 // initial waiting
-area_delay_push(480)
+area_delay_push(180)

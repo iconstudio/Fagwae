@@ -6,3 +6,5 @@ sound_dead = noone
 
 hurt = 0 // for dying
 damaged = 0 // for drawing
+
+event_user(1)

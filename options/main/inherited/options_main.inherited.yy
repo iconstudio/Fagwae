@@ -161,7 +161,7 @@
                     "id": "551fddd6-0be3-441d-8d3c-fec80b34bfcf",
                     "modelName": "GMAudioGroup",
                     "mvc": "1.0",
-                    "groupName": "audiogroup_sfx",
+                    "groupName": "audiogroup_game",
                     "targets": 29263750006690030
                 }
             }

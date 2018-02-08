@@ -1,16 +1,17 @@
-/// @description enemy_explode(shake_magnitude, wave_amplitude, flame_count, ax, ay)
+/// @description enemy_explode(shake_magnitude, wave_amplitude, flame_count, score_count, [ax], [ay])
 /// @function enemy_explode
 /// @param shake_magnitude { real }
 /// @param wave_amplitude { real }
 /// @param flame_count { integer }
-/// @param ax { real }
-/// @param ay { real }
+/// @param score_count { integer }
+/// @param [ax] { real }
+/// @param [ay] { real }
 
 var ax = 0, ay = 0
-if argument_count >= 6 {
-	ax = argument[5]
-	if argument_count >= 7
-		ay = argument[6]
+if argument_count >= 5 {
+	ax = argument[4]
+	if argument_count >= 6
+		ay = argument[5]
 }
 
 if global.setting_effect && argument[0] > 0

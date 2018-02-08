@@ -5,16 +5,6 @@
     "name": "oOctagonStraight",
     "eventList": [
         {
-            "id": "38f28a5c-60bd-4e39-8d3f-69045e59385d",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "81b5b926-cfc6-438c-b8c8-0a53def2879b"
-        },
-        {
             "id": "9063a67a-18e9-44b9-8d99-c38c12bee303",
             "modelName": "GMEvent",
             "mvc": "1.0",
@@ -41,6 +31,16 @@
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 10,
+            "eventtype": 7,
+            "m_owner": "81b5b926-cfc6-438c-b8c8-0a53def2879b"
+        },
+        {
+            "id": "b2f5088c-c47c-424a-bc73-cf9b6a1fc82f",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 11,
             "eventtype": 7,
             "m_owner": "81b5b926-cfc6-438c-b8c8-0a53def2879b"
         }

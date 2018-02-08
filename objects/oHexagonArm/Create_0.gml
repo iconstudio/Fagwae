@@ -2,14 +2,4 @@
 
 event_inherited()
 
-vspeed = 12
-
-speed_shot = 4.5 + global.diff / 4
-count_shot = 0
-alarm[0] = 40
-
-polygon = 8
-if global.extreme
-	polygon_color = make_color_rgb(174, 60, 60)
-else
-	polygon_color = make_color_rgb(60, 103, 174)
+alarm[0] = max(1, 6 - global.stage * 0.5)

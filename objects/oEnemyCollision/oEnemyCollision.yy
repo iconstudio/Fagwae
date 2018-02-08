@@ -65,6 +65,20 @@
             "value": "noone",
             "varName": "dead_object",
             "varType": 5
+        },
+        {
+            "id": "aa854a44-0f15-49ea-b810-448eb5c1c6b0",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "false",
+            "varName": "infect",
+            "varType": 3
         }
     ],
     "solid": false,

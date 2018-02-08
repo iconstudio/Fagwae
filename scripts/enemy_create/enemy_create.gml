@@ -11,15 +11,22 @@ var attributes = ds_map_find_value(global.enemy_dictionary, argument[0])
 if !is_array(attributes)
 	show_error("Error when getting enemy attributes", true)
 
-with instance_create_layer(argument[1], argument[2], "Instances", attributes[0]) {
-	name = attributes[1]
+with instance_create_layer(argument[1], argument[2], "Instances", oDummy) {
 	sprite_normal = attributes[2]
 	sprite_extreme = attributes[3]
+	rotation_step = attributes[7]
+
+	instance_change(attributes[0], true)
+
+	name = attributes[1]
 	hp = attributes[4]
 	hp_max = attributes[4]
 	score_dead = attributes[5]
 	score_loot = attributes[6]
-	rotation_step = attributes[7]
+	if global.extreme
+		sprite_index = sprite_extremes
+	else
+		sprite_index = sprite_normal
 
 	if argument_count >= 6
 		parent = argument[5]

@@ -1,5 +1,7 @@
 /// @description 
 
+pow = 0
+
 var inst
 repeat 1 + irandom(1) {
 	with instance_create_depth(x, y, depth + 1, oParticleFlameBlue) {

@@ -1,7 +1,5 @@
 /// @description Updating Background
 
-event_inherited()
-
 if !available
 	exit
 

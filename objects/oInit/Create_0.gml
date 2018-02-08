@@ -44,14 +44,21 @@ global.enemy_dictionary = ds_map_create()
 #macro enemy_shape_octagon_2 "eoctagon2" // shots 3, 3 times (blue octagon mk.2)
 #macro enemy_shape_hexagon_1 "ehexagon1" // shots 1 for each 3 arms, 1 times (purple hexagon mk.1)
 #macro enemy_shape_hexagon_2 "ehexagon2" // shots 3 for each 3 arms, 2 times, and change (purple hexagon mk.2)
-#macro enemy_shape_octagon_3 "eoctagon3" // shots 4, 16 times, and change (green octagon mk.1)
-#macro enemy_shape_octagon_4 "eoctagon4" // shots 4, 4 times, and change (green octagon mk.2)
+#macro enemy_shape_spread_1 "espread1" // shots 4, 16 times, and change (green octagon mk.1)
+#macro enemy_shape_spread_2 "espread2" // shots 4, 4 times, and change (green octagon mk.2)
 
 #macro enemy_frame_joint_1 "fjoint1" // falls
 
-enemy_register(enemy_shape_octagon_1, oOctagonStraight, "OCTAGON", sOctagonNormal, sOctagonExtreme, 18, 600, 1, 0)
+#macro enemy_arm_hexagon_1 "ahexagon1"
+#macro enemy_arm_spread_1 "aspread1"
+
+enemy_register(enemy_shape_octagon_1, oOctagonStraight, "OCTAGON", sOctagonNormal, sOctagonExtreme, 12, 600, 1, 0)
 enemy_register(enemy_shape_hexagon_1, oHexagonSpatial, "HEXAGON", sHexagonNormal, sHexagonExtreme, 30, 1200, 1, 2)
+enemy_register(enemy_shape_spread_1, oOctagonSpreader, "SPREADING OCTAGON", sOctagonSpreaderNormal, sOctagonSpreaderExtreme, 45, 2000, 1, 0)
+
 enemy_register(enemy_frame_joint_1, oFrameJoint, "STEEL FRAME", sFrameJoint, sFrameJoint, 34, 650, 2, 0)
+enemy_register(enemy_arm_hexagon_1, oHexagonArm, "ARM OF HEXAGON", sHexagonArmNormal, sHexagonArmExtreme, 10, 200, 1, 0)
+enemy_register(enemy_arm_spread_1, oOctagonSpreaderArm, "ARM OF SPREADING OCTAGON", sOctagonSpreaderArmNormal, sOctagonSpreaderArmExtreme, 18, 200, 1, 0)
 
 #macro areapush_object 0
 #macro areapush_enemy 1
@@ -118,6 +125,10 @@ switch os_browser {
 		audio_channel_num(16)
 		break
 }
+audio_group_load(audiogroup_game)
 
-profile_clear()
-instance_create_depth(0, 0, 0, oProfileEntry)
+audio_loaded = false
+if !audio_group_is_loaded(audiogroup_game)
+  audio_loaded = true
+else
+  audio_group_load(audiogroup_game)

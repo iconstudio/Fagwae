@@ -16,7 +16,7 @@ var tx = 0
 for (var i = 1; i <= slen; ++i) {
 	dchr = string_char_at(sstr, i)
 	draw_text_transformed(sx + tx, sy + lengthdir_y(score_wave + 4, background_param * 32 + i * 57), dchr, 6, (1 + lengthdir_x(score_wave, score_rotation + i * 57)) * 6, 0)
-	tx += string_width(dchr) * 6
+	tx += (string_width(dchr) - 1) * 6
 }
 
 draw_set_alpha(1)

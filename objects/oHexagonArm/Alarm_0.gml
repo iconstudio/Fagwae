@@ -1,25 +1,10 @@
 /// @description 
 
-if y >= 700
-	exit
+if y < 500 {
+	enemy_shot(x + lengthdir_x(22, image_angle), y + lengthdir_y(22, image_angle), 3, image_angle)
 
-if scount == 0 {
- var pd = point_direction(x, y, global.px, global.py)
- //enemy_shot(x, y, sspd, pd)
-} else {
- //enemy_shot(x, y, sspd, pd - scount * 12)
- //enemy_shot(x, y, sspd, pd + scount * 12)
-}
-
-if ++scount < 4 {
 	if global.extreme
-		alarm[0] = max(2, 9 - global.diff / 2)
+		alarm[0] = max(1, 8 - global.stage / 3)
 	else
-		alarm[0] = max(2, 12 - global.diff / 2)
-} else {
-	scount = 0
-	if global.extreme
-		alarm[0] = max(5, 12 - global.diff / 5)
-	else
-		alarm[0] = max(8, 60 - global.diff * 4)
+		alarm[0] = max(1, 18 - global.stage * 1.8)
 }

@@ -11,7 +11,7 @@ if dmode == 0 {
 			bmode = 1
 	}
 } else if dmode == 1 {
-	alpha -= 0.02;
+	alpha -= 0.02
 } else {
 	alpha -= 0.1
 }

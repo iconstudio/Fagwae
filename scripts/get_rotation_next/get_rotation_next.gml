@@ -18,4 +18,4 @@ else
 	return sign(angle) * argument2
 */
 
-return clamp(angle_difference(argument0, argument1), -argument2, argument2)
+return clamp(-angle_difference(argument0, argument1), -argument2, argument2)

@@ -70,7 +70,7 @@
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 11,
+            "enumb": 12,
             "eventtype": 7,
             "m_owner": "896708b1-61b4-493d-9766-dbe3630fc34a"
         },
@@ -82,6 +82,16 @@
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 2,
             "eventtype": 3,
+            "m_owner": "896708b1-61b4-493d-9766-dbe3630fc34a"
+        },
+        {
+            "id": "e69663d6-6406-4bf4-b6f3-da04cf218c8c",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 11,
+            "eventtype": 7,
             "m_owner": "896708b1-61b4-493d-9766-dbe3630fc34a"
         }
     ],
@@ -102,20 +112,6 @@
     "physicsShapePoints": null,
     "physicsStartAwake": true,
     "properties": [
-        {
-            "id": "ec7716b6-0579-443f-95c8-eb9f782b915b",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "\"\"",
-            "varName": "name",
-            "varType": 2
-        },
         {
             "id": "eb793b66-9b69-489b-92c2-134572d3b305",
             "modelName": "GMObjectProperty",
@@ -157,34 +153,6 @@
             "value": "1",
             "varName": "hp_max",
             "varType": 0
-        },
-        {
-            "id": "281dc959-1d36-48bd-be45-9921b1503432",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "0",
-            "varName": "score_dead",
-            "varType": 0
-        },
-        {
-            "id": "f43d59d9-491e-48f4-8179-62558b45ad5e",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "0",
-            "varName": "score_loot",
-            "varType": 1
         },
         {
             "id": "658614c5-e207-4190-8a60-051eadf3acbb",

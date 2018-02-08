@@ -168,7 +168,7 @@ if draw_mode > 0 {
 	if draw_mode != 3 and draw_mode != 6
 		audio_play_sound(soundMenuEnter, 5, false)
 } else {
-	audio_play_sound(soundMenuClick, 5, false)
+	//audio_play_sound(soundMenuClick, 5, false)
 }
 
 alarm[0] = -1

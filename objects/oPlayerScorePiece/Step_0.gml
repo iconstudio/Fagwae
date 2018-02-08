@@ -4,7 +4,7 @@ if y > room_height + 10
 	instance_destroy()
 
 image_angle++
-if henable {
+if enable {
 	if homing {
 		if !global.playeralive {
 			homing = false
