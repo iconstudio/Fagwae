@@ -26,7 +26,7 @@ for (var i = 0; i < arm_number; ++i) {
 
 	with arm_instances[i] {
 		parent = other.id
-		depth--
+		depth -= 2
 
 		if arm_scriptinit != -1
 			script_execute(arm_scriptinit, i)

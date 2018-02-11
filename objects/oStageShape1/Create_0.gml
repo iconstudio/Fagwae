@@ -12,4 +12,4 @@ area_enemy_push(110, enemy_shape_octagon_1, 0, 400, -48)
 area_enemy_push(170, enemy_shape_spread_1, 0, 340, -48)
 
 for (var i = 1; i < 13; ++i)
-	area_enemy_push(90, enemy_shape_hexagon_1, 0, 100 + (i * 187) mod 540, -48)
+	area_enemy_push(90, enemy_shape_hexagon_1, 0, 100 + (i * 187) mod 540, 10)

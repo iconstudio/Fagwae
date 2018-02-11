@@ -21,7 +21,7 @@ with instance_create_depth(argument[0], argument[1], depth + 1, type) {
 	audio_play_sound(soundShotEnemy, 2, false)
 
 	if object_index == oEnemyBullet {
-		with instance_create_depth(x, y, depth - 2, oEnemyBulletCreate) {
+		with instance_create_depth(x, y, depth - 5, oEnemyBulletCreate) {
 			parent = other.id
 			speed = other.speed
 			direction = other.direction
