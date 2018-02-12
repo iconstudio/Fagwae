@@ -167,20 +167,6 @@
             "value": "false",
             "varName": "dead",
             "varType": 3
-        },
-        {
-            "id": "7aa68eda-62cb-4ea4-ad76-8be6e6cde907",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "0",
-            "varName": "type_create",
-            "varType": 0
         }
     ],
     "solid": false,

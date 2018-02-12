@@ -327,6 +327,14 @@
             }
         },
         {
+            "Key": "31799dd6-45a7-4ad7-b34b-91bb23ba28f0",
+            "Value": {
+                "id": "ec66bb93-2a68-4ffe-9229-44b2cddc14e8",
+                "resourcePath": "objects\\oOctagonNormal\\oOctagonNormal.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "31eab6c6-45f5-4880-95ee-226aa80a7b66",
             "Value": {
                 "id": "da4c4f00-9bf8-4fca-9e5a-6dcee6ad2320",

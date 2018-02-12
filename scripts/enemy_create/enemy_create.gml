@@ -18,6 +18,12 @@ with instance_create_layer(argument[1], argument[2], "Instances", oDummy) {
 	if argument_count >= 4
 		type_create = argument[3]
 
+	polygon = attributes[8]
+	if global.extreme
+		polygon_color = attributes[10]
+	else
+		polygon_color = attributes[9]
+
 	instance_change(attributes[0], true)
 
 	name = attributes[1]

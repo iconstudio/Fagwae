@@ -25,13 +25,16 @@ draw_set_circle_precision(60)
 globalvar matrix_identical;
 matrix_identical = matrix_build_identity()
 
+
+// ui / ux / drawing
+global.font = font_add_sprite(sFont, 33, 1, 1)
+global.fontborder = font_add_sprite(sFontBorder, 33, 1, 1)
+draw_set_font(global.font)
+gpu_set_fog(false, $ffffff, 32, 32000)
+
 // general
 game_set_speed(60, gamespeed_fps)
 randomize()
-
-// UX
-#macro area_vspeed 0.5625 * 4
-gpu_set_fog(false, $ffffff, 32, 32000)
 
 // game
 global.paused = false
@@ -40,25 +43,40 @@ global.stage = 0 // 0: None, 1 ~ 9: Game, 10: Complete a mode
 
 global.enemy_dictionary = ds_map_create()
 
-#macro enemy_shape_octagon_1 "eoctagon1" // shots 1, 5 times (blue octagon mk.1)
-#macro enemy_shape_octagon_2 "eoctagon2" // shots 3, 3 times (blue octagon mk.2)
-#macro enemy_shape_hexagon_1 "ehexagon1" // shots 1 for each 3 arms, 1 times (purple hexagon mk.1)
-#macro enemy_shape_hexagon_2 "ehexagon2" // shots 3 for each 3 arms, 2 times, and change (purple hexagon mk.2)
-#macro enemy_shape_spread_1 "espread1" // shots 4, 16 times, and change (green octagon mk.1)
-#macro enemy_shape_spread_2 "espread2" // shots 4, 4 times, and change (green octagon mk.2)
+#macro area_vspeed 0.5625 * 4
 
-#macro enemy_frame_joint_1 "fjoint1" // falls
+#macro enemy_octagon_1 "eoctagon1" // shots 5 (blue octagon mk.1)
+#macro enemy_octagon_2 "eoctagon2" // shots 3, 3 times (blue octagon mk.2)
+#macro enemy_hexagon_1 "ehexagon1" // shots 1 for each 3 arms, 1 times (purple hexagon mk.1)
+#macro enemy_hexagon_2 "ehexagon2" // shots 3 for each 3 arms, 2 times, and change (purple hexagon mk.2)
+#macro enemy_spread_1 "espread1" // shots 4, 16 times, and change (green octagon mk.1)
+#macro enemy_spread_2 "espread2" // shots 4, 4 times, and change (green octagon mk.2)
+
+#macro enemy_joint_1 "fjoint1" // falls
 
 #macro enemy_arm_hexagon_1 "ahexagon1"
 #macro enemy_arm_spread_1 "aspread1"
 
-enemy_register(enemy_shape_octagon_1, oOctagonStraight, "OCTAGON", sOctagonNormal, sOctagonExtreme, 12, 600, 1, 0)
-enemy_register(enemy_shape_hexagon_1, oHexagonSpatial, "HEXAGON", sHexagonNormal, sHexagonExtreme, 30, 1200, 1, 2)
-enemy_register(enemy_shape_spread_1, oOctagonSpreader, "SPREADING OCTAGON", sOctagonSpreaderNormal, sOctagonSpreaderExtreme, 45, 2000, 1, 0)
+enemy_register(enemy_octagon_1, oOctagonNormal, "OCTAGON", sOctagonNormal, sOctagonExtreme, 
+12, 600, 1, 0, 8, make_color_rgb(60, 103, 174), make_color_rgb(174, 60, 60))
 
-enemy_register(enemy_frame_joint_1, oFrameJoint, "STEEL FRAME", sFrameJoint, sFrameJoint, 34, 650, 2, 0)
-enemy_register(enemy_arm_hexagon_1, oHexagonArm, "ARM OF HEXAGON", sHexagonArmNormal, sHexagonArmExtreme, 10, 200, 1, 0)
-enemy_register(enemy_arm_spread_1, oOctagonSpreaderArm, "ARM OF SPREADING OCTAGON", sOctagonSpreaderArmNormal, sOctagonSpreaderArmExtreme, 18, 200, 1, 0)
+enemy_register(enemy_octagon_2, oOctagonStraight, "OCTAGON", sOctagonNormal, sOctagonExtreme, 
+10, 400, 1, 0, 8, make_color_rgb(60, 103, 174), make_color_rgb(174, 60, 60))
+
+enemy_register(enemy_hexagon_1, oHexagonSpatial, "HEXAGON", sHexagonNormal, sHexagonExtreme, 
+30, 1200, 1, 2, 6, make_color_rgb(153, 117, 183), make_color_rgb(127, 26, 124))
+
+enemy_register(enemy_spread_1, oOctagonSpreader, "SPREADING OCTAGON", sOctagonSpreaderNormal, sOctagonSpreaderExtreme, 
+45, 2000, 1, 0, 8, make_color_rgb(80, 148, 56), make_color_rgb(41, 102, 63))
+
+enemy_register(enemy_joint_1, oFrameJoint, "STEEL FRAME", sFrameJoint, sFrameJoint, 
+34, 650, 2, 0, 0, 0, 0)
+
+enemy_register(enemy_arm_hexagon_1, oHexagonArm, "ARM OF HEXAGON", sHexagonArmNormal, sHexagonArmExtreme, 
+10, 200, 1, 0, 0, 0, 0)
+
+enemy_register(enemy_arm_spread_1, oOctagonSpreaderArm, "ARM OF SPREADING OCTAGON", sOctagonSpreaderArmNormal, sOctagonSpreaderArmExtreme, 
+18, 200, 1, 0, 0, 0, 0)
 
 #macro areapush_object 0
 #macro areapush_enemy 1
@@ -103,17 +121,13 @@ if gamepad_is_supported() {
 	}
 }
 
-// drawing
-global.font = font_add_sprite(sFont, 33, 1, 1)
-global.fontborder = font_add_sprite(sFontBorder, 33, 1, 1)
-draw_set_font(global.font)
-
 // audio
 switch os_browser {
 	case browser_not_a_browser:
 		switch os_type {
 		case os_windows:
 		case os_macosx:
+		case os_linux:
 			audio_channel_num(200)
 			break
 		default:

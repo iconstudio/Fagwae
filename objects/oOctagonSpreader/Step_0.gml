@@ -1,7 +1,9 @@
 /// @description 
 
-if smode == 0 {
- vspeed += (0.5 - vspeed) / 12
+if shot_mode == 0 {
+	if y < 20
+		alarm[0] = 55
+	vspeed += (0.5 - vspeed) / 10
 } else {
 	if speed < 2
 		speed += 0.03
