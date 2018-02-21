@@ -69,6 +69,9 @@ enemy_register(enemy_hexagon_1, oHexagonSpatial, "HEXAGON", sHexagonNormal, sHex
 enemy_register(enemy_spread_1, oOctagonSpreader, "SPREADING OCTAGON", sOctagonSpreaderNormal, sOctagonSpreaderExtreme, 
 45, 2000, 1, 0, 8, make_color_rgb(80, 148, 56), make_color_rgb(41, 102, 63))
 
+enemy_register(enemy_spread_2, oOctagonArtillery, "SPREADING OCTAGON", sOctagonSpreaderNormal, sOctagonSpreaderExtreme, 
+70, 8000, 2, 0, 8, make_color_rgb(80, 148, 56), make_color_rgb(41, 102, 63))
+
 enemy_register(enemy_joint_1, oFrameJoint, "STEEL FRAME", sFrameJoint, sFrameJoint, 
 34, 650, 2, 0, 0, 0, 0)
 

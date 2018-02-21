@@ -2,7 +2,7 @@
     "id": "916d6983-e7b7-43f9-adfe-b757729e86f8",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "sRectangleSidewinderExtreme",
+    "name": "sRectangleExtreme",
     "For3D": false,
     "HTile": false,
     "VTile": false,

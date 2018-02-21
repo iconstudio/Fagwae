@@ -2,6 +2,6 @@
 /// @function screen_fade
 /// @param alpha { real }
 
-with oGlobal {
+with oGameGlobal {
 	fade_target = argument0
 }

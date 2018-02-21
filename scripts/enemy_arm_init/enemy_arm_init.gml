@@ -10,7 +10,7 @@ arm_number = argument[1]
 arm_width = argument[2]
 arm_startangle = 0
 
-var arm_scriptinit = -1
+var arm_scriptinit = noone
 if argument_count >= 4 {
 	arm_scriptinit = argument[3]
 	if argument_count >= 5
@@ -28,7 +28,7 @@ for (var i = 0; i < arm_number; ++i) {
 		parent = other.id
 		depth -= 2
 
-		if arm_scriptinit != -1
+		if arm_scriptinit != noone
 			script_execute(arm_scriptinit, i)
 	}
 }

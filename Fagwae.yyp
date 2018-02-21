@@ -199,6 +199,14 @@
             }
         },
         {
+            "Key": "1d698156-62ff-401b-9715-0c90012bf375",
+            "Value": {
+                "id": "9efc5003-6867-4252-9d8e-5266af4fd1dc",
+                "resourcePath": "objects\\oRectangleLauncherArm\\oRectangleLauncherArm.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1e2afc73-339a-417e-abdf-d323787e5e1c",
             "Value": {
                 "id": "38755522-f562-45a8-9091-1b2372950331",
@@ -575,6 +583,14 @@
             }
         },
         {
+            "Key": "52eb9133-dbd6-4aca-9301-0d88687bd48c",
+            "Value": {
+                "id": "5d64bc04-c5d5-470b-8f40-8ba69e06b783",
+                "resourcePath": "objects\\oRectangleLauncher\\oRectangleLauncher.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "53eac6a8-78ed-49de-974f-ea2ab1828321",
             "Value": {
                 "id": "728f4bf4-8308-475a-9f53-16d9069e8fd7",
@@ -620,6 +636,14 @@
                 "id": "7c004fd0-e2b5-43f6-8a58-1928f0dd5b08",
                 "resourcePath": "notes\\역활.yy",
                 "resourceType": "GMNotes"
+            }
+        },
+        {
+            "Key": "55a4b74f-d6f4-4e27-8cd1-ec28cc79dc57",
+            "Value": {
+                "id": "0d749916-65bf-468a-8f0c-33da91308d74",
+                "resourcePath": "objects\\oRectangleSidewinder\\oRectangleSidewinder.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -839,6 +863,14 @@
             }
         },
         {
+            "Key": "7345d300-1117-48aa-8cd4-d2d70689da2c",
+            "Value": {
+                "id": "dc74a9e5-dcbf-4adb-b7a2-c761ec3713d5",
+                "resourcePath": "objects\\oEnemyBullet2\\oEnemyBullet2.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "73b1b48c-dfc3-4e8b-9582-ce5ee0d5a790",
             "Value": {
                 "id": "793ac2a4-a6ad-439c-9a9e-e427851f97b5",
@@ -871,14 +903,6 @@
             }
         },
         {
-            "Key": "76d9e6c2-3386-46ec-9f2a-94977d884468",
-            "Value": {
-                "id": "42b94678-354a-4564-b6e4-c1f3e561a23f",
-                "resourcePath": "views\\76d9e6c2-3386-46ec-9f2a-94977d884468.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
             "Key": "77048ee1-cbfa-4b9e-a3b1-451d034b5c45",
             "Value": {
                 "id": "b5093ab5-f99c-4e93-aa97-a84a923328c4",
@@ -890,7 +914,7 @@
             "Key": "77e3e78b-c497-4c8a-8bae-8452e210cfce",
             "Value": {
                 "id": "d60eb1ce-a870-49bf-aeca-790aeb4494e8",
-                "resourcePath": "sprites\\sRectangleSidewinderArmNormal\\sRectangleSidewinderArmNormal.yy",
+                "resourcePath": "sprites\\sRectangleArmNormal\\sRectangleArmNormal.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -970,7 +994,7 @@
             "Key": "81487df7-abfe-4570-86b4-9bad53f1e315",
             "Value": {
                 "id": "236be1f3-35d8-47c3-9ed1-234de6a34b0f",
-                "resourcePath": "sprites\\sRectangleSidewinderArmExtreme\\sRectangleSidewinderArmExtreme.yy",
+                "resourcePath": "sprites\\sRectangleArmExtreme\\sRectangleArmExtreme.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1146,7 +1170,7 @@
             "Key": "916d6983-e7b7-43f9-adfe-b757729e86f8",
             "Value": {
                 "id": "6ab12f13-3461-4af5-b261-c33ea6c83432",
-                "resourcePath": "sprites\\sRectangleSidewinderExtreme\\sRectangleSidewinderExtreme.yy",
+                "resourcePath": "sprites\\sRectangleExtreme\\sRectangleExtreme.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1188,14 +1212,6 @@
                 "id": "0aa4b2c0-b216-42f5-bb78-4013e4752f62",
                 "resourcePath": "scripts\\io_check_pressed_padX\\io_check_pressed_padX.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "94d332e0-f927-4ef5-8c5d-56f9fd8b5ce3",
-            "Value": {
-                "id": "bd4ac603-d31b-4551-a427-69fd6559ddf2",
-                "resourcePath": "views\\94d332e0-f927-4ef5-8c5d-56f9fd8b5ce3.yy",
-                "resourceType": "GMFolder"
             }
         },
         {
@@ -1242,7 +1258,7 @@
             "Key": "98e515af-d97c-44f0-ab34-37998902c364",
             "Value": {
                 "id": "b3a6bc32-9bc9-4812-9439-0531fa8ea700",
-                "resourcePath": "sprites\\sRectangleSidewinderNormal\\sRectangleSidewinderNormal.yy",
+                "resourcePath": "sprites\\sRectangleNormal\\sRectangleNormal.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1251,6 +1267,14 @@
             "Value": {
                 "id": "39c2d43a-d8c4-47c8-bdea-4286f7f5f3cb",
                 "resourcePath": "scripts\\profile_load\\profile_load.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "9a421c59-3b9a-4823-8608-ac49d54bd849",
+            "Value": {
+                "id": "edb40f3a-bd9f-4984-af85-3d48136454a2",
+                "resourcePath": "scripts\\script_enemy_arm_init_0\\script_enemy_arm_init_0.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1823,14 +1847,6 @@
             }
         },
         {
-            "Key": "db3f490f-634a-42e5-bbdb-16833980778c",
-            "Value": {
-                "id": "266b5b7d-6675-4062-a603-fdbe74db60ab",
-                "resourcePath": "views\\db3f490f-634a-42e5-bbdb-16833980778c.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
             "Key": "dbb0563b-5486-43ea-a87f-b23262503bef",
             "Value": {
                 "id": "109e9d82-515c-4ca5-a1ce-07d7a1923ed9",
@@ -1859,6 +1875,14 @@
             "Value": {
                 "id": "43167ac7-cd31-4743-aae6-4f56e21179b5",
                 "resourcePath": "objects\\oContinue\\oContinue.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "de62a221-ef83-48e3-b9d0-7a2f14e2bd43",
+            "Value": {
+                "id": "9f2fb500-ed88-4501-ba0a-6a6dbd226fd4",
+                "resourcePath": "objects\\oOctagonArtillery\\oOctagonArtillery.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -2277,6 +2301,7 @@
         "21319fe0-0cba-4224-a1b3-18b657ba19fe",
         "b256a706-70b4-4f9c-b479-ff1ca01212a4",
         "6315f5e1-7c68-47be-8b99-b68d5a9f527b",
+        "9a421c59-3b9a-4823-8608-ac49d54bd849",
         "92050eab-4524-4082-91b7-91464dde57e3",
         "a1c15792-658b-432a-9707-fd5567711059",
         "3a12875c-0641-4f7a-ac8d-e9cabfa99dbb",

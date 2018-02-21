@@ -1,5 +1,7 @@
 /// @description Creation
 
+event_inherited()
+
 vspeed = 10
 
 enemy_arm_init(enemy_arm_spread_1, 5, 20)
