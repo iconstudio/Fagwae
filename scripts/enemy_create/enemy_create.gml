@@ -24,6 +24,11 @@ with instance_create_layer(argument[1], argument[2], "Instances", oDummy) {
 	else
 		polygon_color = attributes[9]
 
+	if argument_count >= 6
+		parent = argument[5]
+	if argument_count >= 5
+		image_angle = argument[4]
+
 	instance_change(attributes[0], true)
 
 	name = attributes[1]
@@ -36,10 +41,6 @@ with instance_create_layer(argument[1], argument[2], "Instances", oDummy) {
 	else
 		sprite_index = sprite_normal
 
-	if argument_count >= 6
-		parent = argument[5]
-	if argument_count >= 5
-		image_angle = argument[4]
 	//show_debug_message("Object: " + object_get_name(attributes[0]) + ", Name: " + name + ", Type of creation: " + string(type_create))
 	//show_debug_message("Score: " + string(score_dead) + ", Loot: " + string(score_loot))
 	//show_debug_message("hp: " + string(hp) + ", Sprite: " + sprite_get_name(sprite_normal))

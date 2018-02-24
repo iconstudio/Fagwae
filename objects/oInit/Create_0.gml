@@ -25,7 +25,6 @@ draw_set_circle_precision(60)
 globalvar matrix_identical;
 matrix_identical = matrix_build_identity()
 
-
 // ui / ux / drawing
 global.font = font_add_sprite(sFont, 33, 1, 1)
 global.fontborder = font_add_sprite(sFontBorder, 33, 1, 1)
@@ -50,12 +49,16 @@ global.enemy_dictionary = ds_map_create()
 #macro enemy_hexagon_1 "ehexagon1" // shots 1 for each 3 arms, 1 times (purple hexagon mk.1)
 #macro enemy_hexagon_2 "ehexagon2" // shots 3 for each 3 arms, 2 times, and change (purple hexagon mk.2)
 #macro enemy_spread_1 "espread1" // shots 4, 16 times, and change (green octagon mk.1)
-#macro enemy_spread_2 "espread2" // shots 4, 4 times, and change (green octagon mk.2)
+#macro enemy_spread_2 "espread2" // shots 4, 3 times (green octagon mk.2)
+#macro enemy_rectangle_1 "erect1" // shots 1, 4 times (coral rectangle mk.1)
+#macro enemy_rectangle_2 "erect2" // (coral rectangle mk.2)
 
 #macro enemy_joint_1 "fjoint1" // falls
 
 #macro enemy_arm_hexagon_1 "ahexagon1"
 #macro enemy_arm_spread_1 "aspread1"
+#macro enemy_arm_rectangle_1 "arect1"
+#macro enemy_arm_rectangle_2 "arect2"
 
 enemy_register(enemy_octagon_1, oOctagonNormal, "OCTAGON", sOctagonNormal, sOctagonExtreme, 
 12, 600, 1, 0, 8, make_color_rgb(60, 103, 174), make_color_rgb(174, 60, 60))
@@ -72,6 +75,12 @@ enemy_register(enemy_spread_1, oOctagonSpreader, "SPREADING OCTAGON", sOctagonSp
 enemy_register(enemy_spread_2, oOctagonArtillery, "SPREADING OCTAGON", sOctagonSpreaderNormal, sOctagonSpreaderExtreme, 
 70, 8000, 2, 0, 8, make_color_rgb(80, 148, 56), make_color_rgb(41, 102, 63))
 
+enemy_register(enemy_rectangle_1, oRectangleLauncher, "RECTANGLE", sRectangleNormal, sRectangleExtreme, 
+20, 1600, 1, 1, 4, make_color_rgb(222, 88, 78), make_color_rgb(232, 62, 62))
+
+enemy_register(enemy_rectangle_2, oRectangleSidewinder, "RECTANGLE", sRectangleNormal, sRectangleExtreme, 
+23, 2000, 1, 1.5, 4, make_color_rgb(222, 88, 78), make_color_rgb(232, 62, 62))
+
 enemy_register(enemy_joint_1, oFrameJoint, "STEEL FRAME", sFrameJoint, sFrameJoint, 
 34, 650, 2, 0, 0, 0, 0)
 
@@ -80,6 +89,12 @@ enemy_register(enemy_arm_hexagon_1, oHexagonArm, "ARM OF HEXAGON", sHexagonArmNo
 
 enemy_register(enemy_arm_spread_1, oOctagonSpreaderArm, "ARM OF SPREADING OCTAGON", sOctagonSpreaderArmNormal, sOctagonSpreaderArmExtreme, 
 18, 200, 1, 0, 0, 0, 0)
+
+enemy_register(enemy_arm_rectangle_1, oRectangleLauncherArm, "ARM OF RECTANGLE", sRectangleArmNormal, sRectangleArmExtreme, 
+16, 400, 1, 0, 0, 0, 0)
+
+enemy_register(enemy_arm_rectangle_2, oRectangleSidewinderArm, "ARM OF RECTANGLE", sRectangleArmNormal, sRectangleArmExtreme, 
+16, 400, 1, 0, 0, 0, 0)
 
 #macro areapush_object 0
 #macro areapush_enemy 1

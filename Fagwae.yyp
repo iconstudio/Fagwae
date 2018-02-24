@@ -639,14 +639,6 @@
             }
         },
         {
-            "Key": "55a4b74f-d6f4-4e27-8cd1-ec28cc79dc57",
-            "Value": {
-                "id": "0d749916-65bf-468a-8f0c-33da91308d74",
-                "resourcePath": "objects\\oRectangleSidewinder\\oRectangleSidewinder.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "55e71917-0792-4fd6-a99b-b660d9091c73",
             "Value": {
                 "id": "4d9c64a0-0ec8-4adc-b284-709fd364547f",
@@ -1359,6 +1351,14 @@
             }
         },
         {
+            "Key": "a3613813-2c88-40c6-acc2-d15b94b12113",
+            "Value": {
+                "id": "cb3455a3-b4b9-400d-8eab-dd615217f9f2",
+                "resourcePath": "objects\\oRectangleSidewinder\\oRectangleSidewinder.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a4aad50d-b21a-4b25-be1a-a53c026f9cb3",
             "Value": {
                 "id": "9b89cefe-d13c-4b1b-90a1-2c6ef86d5f51",
@@ -1396,6 +1396,14 @@
                 "id": "1c6f8423-b7db-4673-932c-51940a515e22",
                 "resourcePath": "sprites\\sTemp\\sTemp.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a8ce7605-f771-4e26-9ea6-a9b63ed051d2",
+            "Value": {
+                "id": "2c837233-f277-410d-b356-ff28095b03b2",
+                "resourcePath": "scripts\\enemy_arm_launch\\enemy_arm_launch.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1732,6 +1740,14 @@
                 "id": "8505639d-6a24-46fd-985f-bc62f380b391",
                 "resourcePath": "sprites\\sCircleExtreme\\sCircleExtreme.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "cd90b94d-9806-4dea-80a2-92909367ef3c",
+            "Value": {
+                "id": "e514269f-85f9-4846-8407-33d6f4896672",
+                "resourcePath": "objects\\oRectangleSidewinderArm\\oRectangleSidewinderArm.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -2301,6 +2317,7 @@
         "21319fe0-0cba-4224-a1b3-18b657ba19fe",
         "b256a706-70b4-4f9c-b479-ff1ca01212a4",
         "6315f5e1-7c68-47be-8b99-b68d5a9f527b",
+        "a8ce7605-f771-4e26-9ea6-a9b63ed051d2",
         "9a421c59-3b9a-4823-8608-ac49d54bd849",
         "92050eab-4524-4082-91b7-91464dde57e3",
         "a1c15792-658b-432a-9707-fd5567711059",

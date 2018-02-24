@@ -2,4 +2,7 @@
 
 event_inherited()
 
-enemy_arm_fix(pangle)
+if vspeed != 1.5
+	vspeed += (1.5 - vspeed) / 3
+
+enemy_arm_fix()

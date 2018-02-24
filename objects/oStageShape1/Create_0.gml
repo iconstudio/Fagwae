@@ -6,8 +6,8 @@ global.stage = 1
 entrance_caption = "STAGE 1"
 
 //area_enemy_push(60, enemy_octagon_2, 0, 115, -48)
-area_enemy_push(110, enemy_spread_2, 0, 0, -48)
-area_enemy_push(110, enemy_spread_2, 1, 0, -48)
+area_enemy_push(110, enemy_rectangle_1, 0, 200, -48)
+//area_enemy_push(110, enemy_spread_2, 1, 0, -48)
 //area_enemy_push(10, enemy_octagon_1, 0, 270, -48)
 //area_enemy_push(170, enemy_spread_1, 0, 340, -48)
 //area_enemy_push(140, enemy_spread_2, 0, 500, -48)
