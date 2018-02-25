@@ -1,4 +1,3 @@
 /// @description 
 
-if !instance_exists(parent)
-	instance_destroy()
+event_perform_object(oRectangleLauncherArm, ev_other, ev_outside)

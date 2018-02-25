@@ -79,7 +79,7 @@ enemy_register(enemy_rectangle_1, oRectangleLauncher, "RECTANGLE", sRectangleNor
 20, 1600, 1, 1, 4, make_color_rgb(222, 88, 78), make_color_rgb(232, 62, 62))
 
 enemy_register(enemy_rectangle_2, oRectangleSidewinder, "RECTANGLE", sRectangleNormal, sRectangleExtreme, 
-23, 2000, 1, 1.5, 4, make_color_rgb(222, 88, 78), make_color_rgb(232, 62, 62))
+37, 2000, 1, 0, 4, make_color_rgb(222, 88, 78), make_color_rgb(232, 62, 62))
 
 enemy_register(enemy_joint_1, oFrameJoint, "STEEL FRAME", sFrameJoint, sFrameJoint, 
 34, 650, 2, 0, 0, 0, 0)

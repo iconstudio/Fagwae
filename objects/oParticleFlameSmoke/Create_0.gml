@@ -19,7 +19,7 @@ ca[2] = 0
 
 frame_max = 2
 frame = random(0.5)
-cspd = 0.05 + random(0.04)
+frame_speed = 0.05 + random(0.04)
 
 ra = choose(2, -2)
 
