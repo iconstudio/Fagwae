@@ -1,6 +1,6 @@
 /// @description 
 
-with instance_create_depth(x, y, depth + 1, oParticleFlameSmoke) {
+with instance_create_layer(x, y, layer, oParticleFlameSmoke) {
 	direction = other.direction + random(60) - 30
 	vspeed = random(other.speed / 2) + other.speed / 4
 }

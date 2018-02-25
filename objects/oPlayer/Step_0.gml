@@ -2,7 +2,7 @@
 
 if invincible > 0 {
 	if !instance_exists(oPlayerShield) { 
-		shield = instance_create_depth(x, y, depth + 1, oPlayerShield)
+		shield = instance_create_layer(x, y, layer, oPlayerShield)
 		shield.parent = id
 	}
 	invincible--
@@ -76,13 +76,13 @@ if attack_delay > 0 {
 } else {
 	if attack_count > 0 {
 		var let, sangle = 90 + angle_arm + angle_player + random(1) - 0.5
-		let = instance_create_depth(x + out_ax + lengthdir_x(40, sangle - cangle), y + 3 + out_ay + lengthdir_y(40, sangle - cangle), depth + 1, oPlayerBullet)
+		let = instance_create_layer(x + out_ax + lengthdir_x(40, sangle - cangle), y + 3 + out_ay + lengthdir_y(40, sangle - cangle), "Bullet_Player", oPlayerBullet)
 		let.direction = sangle - cangle
 		let.image_angle = let.direction - 90
 		let.image_index = attack_frame
 		let.speed = 26
 
-		let = instance_create_depth(x - out_ax + lengthdir_x(40, sangle + cangle), y + 3 - out_ay + lengthdir_y(40, sangle + cangle), depth + 1, oPlayerBullet)
+		let = instance_create_layer(x - out_ax + lengthdir_x(40, sangle + cangle), y + 3 - out_ay + lengthdir_y(40, sangle + cangle), "Bullet_Player", oPlayerBullet)
 		let.direction = sangle + cangle
 		let.image_angle = let.direction - 90
 		let.image_index = attack_frame

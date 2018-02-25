@@ -2,5 +2,7 @@
 
 event_inherited()
 
-if speed > 10
-	speed = 10
+enemy_arm_fix()
+
+if speed > 5
+	speed = 5

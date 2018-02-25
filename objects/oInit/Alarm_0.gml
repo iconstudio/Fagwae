@@ -1,4 +1,4 @@
 /// @description Clearing
 
 profile_clear()
-instance_create_depth(0, 0, 0, oProfileEntry)
+instance_create_layer(0, 0, "UI", oProfileEntry)

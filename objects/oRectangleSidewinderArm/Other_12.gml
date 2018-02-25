@@ -2,5 +2,5 @@
 
 event_inherited()
 
-if speed > 10
-	speed = 10
+if speed > 6
+	speed = 6

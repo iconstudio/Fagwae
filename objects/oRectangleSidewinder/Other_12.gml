@@ -2,4 +2,4 @@
 
 event_inherited()
 
-enemy_arm_fix()
+enemy_arm_fix(pangle)

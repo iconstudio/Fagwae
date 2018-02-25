@@ -4,6 +4,7 @@
     "mvc": "1.1",
     "name": "85b7a0db-02b4-474b-93bc-b9ee33bb91ab",
     "children": [
+        "30adace8-51ad-4727-8fb7-deacc45d3c02",
         "a4aad50d-b21a-4b25-be1a-a53c026f9cb3",
         "ae24b441-1c9d-4f0d-83bb-d3314d323702",
         "b03c1cb5-5c28-4dca-95cf-a0b398722e7e",
@@ -20,7 +21,12 @@
         "81487df7-abfe-4570-86b4-9bad53f1e315",
         "db032efb-c68b-4242-aa13-b0d00368434e",
         "ccea56ab-0385-411b-807d-d60b88cd4ad7",
-        "30adace8-51ad-4727-8fb7-deacc45d3c02"
+        "ff582590-f88c-4901-a63d-902b8efe8c52",
+        "49efc596-1233-4913-9a75-5e7aef6d510e",
+        "091e01ae-4601-40a0-be3a-80bb329d8411",
+        "9cf05e04-0385-4079-b9bb-938dbbeb2aa9",
+        "17bac3d6-803d-4739-8d01-8d9cc0081cd9",
+        "0552f97e-f382-4b8f-9daf-624c0b9afbc0"
     ],
     "filterType": "GMSprite",
     "folderName": "Shapes",

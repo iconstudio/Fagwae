@@ -13,15 +13,17 @@ var type = oEnemyBullet
 if argument_count == 5
 	type = argument[4]
 
-with instance_create_depth(argument[0], argument[1], depth + 1, type) {
+with instance_create_layer(argument[0], argument[1], "Bullet", type) {
 	speed = argument[2]
 	direction = argument[3]
 	image_angle = argument[3]
 
+	motion_add(other.direction, other.speed)
+
 	audio_play_sound(soundShotEnemy, 2, false)
 
 	if object_index == oEnemyBullet {
-		with instance_create_depth(x, y, depth - 5, oEnemyBulletCreate) {
+		with instance_create_layer(x, y, "Bullet_Effect", oEnemyBulletCreate) {
 			parent = other.id
 			speed = other.speed
 			direction = other.direction

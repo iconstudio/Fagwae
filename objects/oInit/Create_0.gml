@@ -46,12 +46,18 @@ global.enemy_dictionary = ds_map_create()
 
 #macro enemy_octagon_1 "eoctagon1" // shots 5 (blue octagon mk.1)
 #macro enemy_octagon_2 "eoctagon2" // shots 3, 3 times (blue octagon mk.2)
+#macro enemy_octagon_3 "eoctagon3" // Going up while shots 3, 3 times (blue octagon mk.3)
+#macro enemy_octagon_4 "eoctagon4" // shots 1, 3 times (blue octagon mk.4)
 #macro enemy_hexagon_1 "ehexagon1" // shots 1 for each 3 arms, 1 times (purple hexagon mk.1)
-#macro enemy_hexagon_2 "ehexagon2" // shots 3 for each 3 arms, 2 times, and change (purple hexagon mk.2)
+#macro enemy_hexagon_2 "ehexagon2" // Falling while shots 1 for each 3 arms, 1 times (purple hexagon mk.2)
+#macro enemy_hexagon_3 "ehexagon3" // shots 3 for each 3 arms, 2 times, and change (purple hexagon mk.3)
 #macro enemy_spread_1 "espread1" // shots 4, 16 times, and change (green octagon mk.1)
 #macro enemy_spread_2 "espread2" // shots 4, 3 times (green octagon mk.2)
 #macro enemy_rectangle_1 "erect1" // shots 1, 4 times (coral rectangle mk.1)
 #macro enemy_rectangle_2 "erect2" // (coral rectangle mk.2)
+#macro enemy_circle_1 "ecircle1" // shots 12 around (gray circle mk.1)
+#macro enemy_circle_2 "ecircle2" // Jumping while shots 3 or shots 12 around (gray circle mk.2)
+#macro enemy_circle_3 "ecircle3" // shots 12 around to player (gray circle mk.3)
 
 #macro enemy_joint_1 "fjoint1" // falls
 
@@ -60,30 +66,13 @@ global.enemy_dictionary = ds_map_create()
 #macro enemy_arm_rectangle_1 "arect1"
 #macro enemy_arm_rectangle_2 "arect2"
 
-enemy_register(enemy_octagon_1, oOctagonNormal, "OCTAGON", sOctagonNormal, sOctagonExtreme, 
-12, 600, 1, 0, 8, make_color_rgb(60, 103, 174), make_color_rgb(174, 60, 60))
+enemy_init_shape()
 
-enemy_register(enemy_octagon_2, oOctagonStraight, "OCTAGON", sOctagonNormal, sOctagonExtreme, 
-10, 400, 1, 0, 8, make_color_rgb(60, 103, 174), make_color_rgb(174, 60, 60))
-
-enemy_register(enemy_hexagon_1, oHexagonSpatial, "HEXAGON", sHexagonNormal, sHexagonExtreme, 
-30, 1200, 1, 2, 6, make_color_rgb(153, 117, 183), make_color_rgb(127, 26, 124))
-
-enemy_register(enemy_spread_1, oOctagonSpreader, "SPREADING OCTAGON", sOctagonSpreaderNormal, sOctagonSpreaderExtreme, 
-45, 2000, 1, 0, 8, make_color_rgb(80, 148, 56), make_color_rgb(41, 102, 63))
-
-enemy_register(enemy_spread_2, oOctagonArtillery, "SPREADING OCTAGON", sOctagonSpreaderNormal, sOctagonSpreaderExtreme, 
-70, 8000, 2, 0, 8, make_color_rgb(80, 148, 56), make_color_rgb(41, 102, 63))
-
-enemy_register(enemy_rectangle_1, oRectangleLauncher, "RECTANGLE", sRectangleNormal, sRectangleExtreme, 
-20, 1600, 1, 1, 4, make_color_rgb(222, 88, 78), make_color_rgb(232, 62, 62))
-
-enemy_register(enemy_rectangle_2, oRectangleSidewinder, "RECTANGLE", sRectangleNormal, sRectangleExtreme, 
-37, 2000, 1, 0, 4, make_color_rgb(222, 88, 78), make_color_rgb(232, 62, 62))
-
+// frames
 enemy_register(enemy_joint_1, oFrameJoint, "STEEL FRAME", sFrameJoint, sFrameJoint, 
 34, 650, 2, 0, 0, 0, 0)
 
+// arms
 enemy_register(enemy_arm_hexagon_1, oHexagonArm, "ARM OF HEXAGON", sHexagonArmNormal, sHexagonArmExtreme, 
 10, 200, 1, 0, 0, 0, 0)
 
@@ -94,8 +83,9 @@ enemy_register(enemy_arm_rectangle_1, oRectangleLauncherArm, "ARM OF RECTANGLE",
 16, 400, 1, 0, 0, 0, 0)
 
 enemy_register(enemy_arm_rectangle_2, oRectangleSidewinderArm, "ARM OF RECTANGLE", sRectangleArmNormal, sRectangleArmExtreme, 
-16, 400, 1, 0, 0, 0, 0)
+19, 400, 1, 0, 0, 0, 0)
 
+// constants for triggers of the area
 #macro areapush_object 0
 #macro areapush_enemy 1
 #macro areapush_message 2

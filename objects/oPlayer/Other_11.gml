@@ -25,7 +25,7 @@ if hp > 0 {
 	hp = 0
 
 	repeat (8) {
-		with instance_create_depth(x, y, depth + 2, oParticleFlameGenerator) {
+		with instance_create_layer(x, y, "Bullet_Effect", oParticleFlameGenerator) {
 			direction = random(360)
 			speed = random(8) + 8
 		}
