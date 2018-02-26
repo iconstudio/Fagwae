@@ -44,22 +44,26 @@ global.enemy_dictionary = ds_map_create()
 
 #macro area_vspeed 0.5625 * 4
 
-#macro enemy_octagon_1 "eoctagon1" // shots 5 (blue octagon mk.1)
-#macro enemy_octagon_2 "eoctagon2" // shots 3, 3 times (blue octagon mk.2)
-#macro enemy_octagon_3 "eoctagon3" // Going up while shots 3, 3 times (blue octagon mk.3)
-#macro enemy_octagon_4 "eoctagon4" // shots 1, 3 times (blue octagon mk.4)
-#macro enemy_hexagon_1 "ehexagon1" // shots 1 for each 3 arms, 1 times (purple hexagon mk.1)
-#macro enemy_hexagon_2 "ehexagon2" // Falling while shots 1 for each 3 arms, 1 times (purple hexagon mk.2)
-#macro enemy_hexagon_3 "ehexagon3" // shots 3 for each 3 arms, 2 times, and change (purple hexagon mk.3)
-#macro enemy_spread_1 "espread1" // shots 4, 16 times, and change (green octagon mk.1)
-#macro enemy_spread_2 "espread2" // shots 4, 3 times (green octagon mk.2)
-#macro enemy_rectangle_1 "erect1" // shots 1, 4 times (coral rectangle mk.1)
-#macro enemy_rectangle_2 "erect2" // (coral rectangle mk.2)
-#macro enemy_circle_1 "ecircle1" // shots 12 around (gray circle mk.1)
-#macro enemy_circle_2 "ecircle2" // Jumping while shots 3 or shots 12 around (gray circle mk.2)
-#macro enemy_circle_3 "ecircle3" // shots 12 around to player (gray circle mk.3)
+#macro enemy_octagon_1		"eoctagon1" // shots 5 (blue octagon mk.1)
+#macro enemy_octagon_2		"eoctagon2" // shots 3, 3 times (blue octagon mk.2)
+#macro enemy_octagon_3		"eoctagon3" // Going up while shots 3, 3 times (blue octagon mk.3)
+#macro enemy_octagon_4		"eoctagon4" // shots 1, 3 times (blue octagon mk.4)
+#macro enemy_hexagon_1		"ehexagon1" // shots 1 for each 3 arms, 1 times (purple hexagon mk.1)
+#macro enemy_hexagon_2		"ehexagon2" // Falling while shots 1 for each 3 arms, 1 times (purple hexagon mk.2)
+#macro enemy_hexagon_3		"ehexagon3" // shots 3 for each 3 arms, 2 times, and change (purple hexagon mk.3)
+#macro enemy_spread_1			"espread1" // shots 4, 16 times, and change (green octagon mk.1)
+#macro enemy_spread_2			"espread2" // shots 4, 3 times (green octagon mk.2)
+#macro enemy_rectangle_1	"erect1" // shots 1, 4 times (coral rectangle mk.1)
+#macro enemy_rectangle_2	"erect2" // (coral rectangle mk.2)
+#macro enemy_circle_1			"ecircle1" // shots 12 around (gray circle mk.1)
+#macro enemy_circle_2			"ecircle2" // Jumping while shots 3 or shots 12 around (gray circle mk.2)
+#macro enemy_circle_3			"ecircle3" // shots 12 around to player (gray circle mk.3)
 
-#macro enemy_joint_1 "fjoint1" // falls
+#macro enemy_square_1			"fsquare1" // square
+#macro enemy_square_2			"fsquare2" // square with a turret
+#macro enemy_line_1				"fline1" // falls
+#macro enemy_joint_1			"fjoint1" // falls
+#macro enemy_joint_2			"fjoint2" // falls
 
 #macro enemy_arm_hexagon_1 "ahexagon1"
 #macro enemy_arm_spread_1 "aspread1"
@@ -69,8 +73,14 @@ global.enemy_dictionary = ds_map_create()
 enemy_init_shape()
 
 // frames
+enemy_register(enemy_square_1, oFrameSquare, "STEEL FRAME", sFrameSquare, sFrameSquare, 
+34, 250, 2, 0, 0, 0, 0)
+
+enemy_register(enemy_square_2, oFrameTurretSquare, "STEEL FRAME", sFrameSquare, sFrameSquare, 
+37, 400, 2, 0, 0, 0, 0)
+
 enemy_register(enemy_joint_1, oFrameJoint, "STEEL FRAME", sFrameJoint, sFrameJoint, 
-34, 650, 2, 0, 0, 0, 0)
+20, 300, 2, 0, 0, 0, 0)
 
 // arms
 enemy_register(enemy_arm_hexagon_1, oHexagonArm, "ARM OF HEXAGON", sHexagonArmNormal, sHexagonArmExtreme, 

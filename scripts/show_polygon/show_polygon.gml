@@ -7,7 +7,7 @@
 /// @param color { real }
 /// @param rotated { boolean }
 
-if argument4 <= 0
+if argument3 <= 0 or argument4 <= 0
 	exit
 
 with instance_create_layer(argument0, argument1, "Effect", oParticleShape) {

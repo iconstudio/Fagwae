@@ -1,5 +1,16 @@
 /// @description Update
 
+if fade_current < fade_target {
+	fade_alpha = script_execute(fade_easer, fade_current)
+	fade_current += 0.01
+} else if fade_current > fade_target {
+	fade_alpha = fade_current
+	fade_current -= 0.1
+} else {
+	fade_current = fade_target
+	fade_alpha = fade_current
+}
+
 event_user(2)
 
 if !window_has_focus() and !global.screenlock and !global.paused

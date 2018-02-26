@@ -1743,6 +1743,14 @@
             }
         },
         {
+            "Key": "bfb058bd-a97f-441a-8c5c-65691dda1612",
+            "Value": {
+                "id": "63c1b976-1c0a-4db9-967d-8004b05223ea",
+                "resourcePath": "objects\\oFrameSquare\\oFrameSquare.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c2bb1fda-0b81-48d6-8c12-d0f4431f5a5f",
             "Value": {
                 "id": "313d5c17-859e-4a06-b0dd-8a368e68dfe9",
@@ -1932,6 +1940,14 @@
                 "id": "920156f9-bfea-49b4-b182-d91079e40a7d",
                 "resourcePath": "scripts\\camera_projection_identity\\camera_projection_identity.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "da1a3294-c4d0-425a-bbeb-1fb07a39e96b",
+            "Value": {
+                "id": "10ad5ba5-fbd6-4138-9027-bbc8acc53742",
+                "resourcePath": "objects\\oFrameTurretSquare\\oFrameTurretSquare.yy",
+                "resourceType": "GMObject"
             }
         },
         {

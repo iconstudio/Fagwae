@@ -19,6 +19,12 @@ event_user(2)
 shadow_alpha = 0
 global.screenshadowy = 0
 
+// fade
+fade_current = 0
+fade_target = 0
+fade_alpha = 0
+fade_easer = ease_straight
+
 // drawing hp bar
 global.gauge_count = 0
 global.gauge_target = noone
