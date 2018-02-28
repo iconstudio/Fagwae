@@ -207,6 +207,14 @@
             }
         },
         {
+            "Key": "1b15eb0b-066c-4f91-ae03-a46acfb6d50e",
+            "Value": {
+                "id": "59571083-e4ce-4600-b0e4-d6b3cbd47cb7",
+                "resourcePath": "objects\\oBoss1A\\oBoss1A.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1bcc0735-3f39-4621-a986-d44f100a4a26",
             "Value": {
                 "id": "62d50550-2ec4-47fb-b3c9-bae300aef726",
@@ -283,6 +291,14 @@
             "Value": {
                 "id": "2f40c9bf-0989-46f7-8671-6bc30e8e4a3b",
                 "resourcePath": "scripts\\area_script_push\\area_script_push.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "271a397f-372c-40bd-a73f-0d79a32f7439",
+            "Value": {
+                "id": "da852bd4-0b3e-4ced-bcd0-5362e659cd8f",
+                "resourcePath": "scripts\\enemy_init_arm\\enemy_init_arm.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -412,6 +428,14 @@
                 "id": "569f62fe-d78a-4658-8750-b5c7388b9501",
                 "resourcePath": "sprites\\sFrameBulletBox\\sFrameBulletBox.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "38577485-8432-4e63-a312-d1a1d38866b4",
+            "Value": {
+                "id": "c304a268-7fe3-4b6f-b6dc-d97150f1ccf6",
+                "resourcePath": "objects\\oFrameParent\\oFrameParent.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -603,6 +627,14 @@
             "Value": {
                 "id": "470aa1d1-b72f-496f-b8d7-8d8b1deec115",
                 "resourcePath": "objects\\oMainAchievement\\oMainAchievement.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "50b1fbce-a576-4a1c-b6a9-d4557871b692",
+            "Value": {
+                "id": "c4b82102-f65a-45ba-b04b-77a126bc4146",
+                "resourcePath": "objects\\oBoss1B\\oBoss1B.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1012,6 +1044,14 @@
                 "id": "fb77b518-6cb1-45ea-ad9d-410fc390d598",
                 "resourcePath": "views\\7b963358-322c-41ff-8625-b78edc4a7fa1.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "7c430564-63cf-4a0d-ab4c-24f19ac932ad",
+            "Value": {
+                "id": "34acb464-4f44-4f3f-aa29-411901db88f0",
+                "resourcePath": "objects\\oBoss1C\\oBoss1C.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1695,6 +1735,14 @@
             }
         },
         {
+            "Key": "ba76b566-802f-4e67-9fbe-886e4d93041a",
+            "Value": {
+                "id": "5d7a5f63-4039-44c4-9dc2-270bf4571ec9",
+                "resourcePath": "objects\\oBoss1Core\\oBoss1Core.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ba88cde1-ae8c-4e6f-a1f0-64e9bf1dde58",
             "Value": {
                 "id": "a16ee707-9f29-4dd2-ba96-3ebb66b6bc44",
@@ -2159,6 +2207,14 @@
             }
         },
         {
+            "Key": "f0a66efe-8036-4938-af95-c47891dd7f38",
+            "Value": {
+                "id": "2fde6b1d-fd23-4284-a4a7-c183f2332780",
+                "resourcePath": "objects\\oFrameTurret\\oFrameTurret.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "f1968d7e-6071-4d44-ae5b-782d38223b86",
             "Value": {
                 "id": "9f7d8506-72e2-481d-be7d-1318d590bbc7",
@@ -2422,6 +2478,7 @@
         "94fc85b5-c66d-4f2e-ac30-8cc1fa33ae58",
         "94f21c2a-780a-42cd-a50c-6254e2bc9f04",
         "f3395f44-1094-4c54-afdd-2b6f2100e643",
+        "271a397f-372c-40bd-a73f-0d79a32f7439",
         "d0a92550-e0bd-424b-88a9-720c87294374",
         "57ae2d5b-7eb1-49d8-b349-e10e378ff69f",
         "d606151b-12c0-42e3-93e1-6635842923a4",

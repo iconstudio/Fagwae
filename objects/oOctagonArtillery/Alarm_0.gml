@@ -1,5 +1,8 @@
 /// @description 
 
+if moving_mode == 4
+	exit
+
 var dir = point_direction(x, y, global.px, global.py)
 if shot_count mod 2 == 0 and shot_mode < 2 {
 	enemy_shot(x, y, shot_speed, dir - 15)

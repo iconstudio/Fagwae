@@ -4,9 +4,11 @@
     "mvc": "1.1",
     "name": "1bcc0735-3f39-4621-a986-d44f100a4a26",
     "children": [
+        "38577485-8432-4e63-a312-d1a1d38866b4",
         "bfb058bd-a97f-441a-8c5c-65691dda1612",
         "da1a3294-c4d0-425a-bbeb-1fb07a39e96b",
-        "54bfebb2-9cb5-469d-acf4-698a1892da6a"
+        "54bfebb2-9cb5-469d-acf4-698a1892da6a",
+        "f0a66efe-8036-4938-af95-c47891dd7f38"
     ],
     "filterType": "GMObject",
     "folderName": "Frames",

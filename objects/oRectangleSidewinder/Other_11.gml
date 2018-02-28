@@ -6,11 +6,11 @@ y = 120
 x_target = x
 x_begin = x
 var xborder = 120
-if type_create == 0 {
+if type_create == RIGHT {
 	x_target = xborder
 	x = view_width + 100
 	x_begin = view_width - xborder
-} else if type_create == 1 {
+} else if type_create == LEFT {
 	x_target = view_width - xborder
 	x = -100
 	x_begin = xborder

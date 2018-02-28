@@ -21,7 +21,7 @@ bsurf = -1
 bsurf2 = -1
 
 bleft = 16
-bright = room_width - 16
+bright = screen_width - 16
 btop = 14
-bbottom = room_height - 8
+bbottom = screen_height - 8
 blockable = false

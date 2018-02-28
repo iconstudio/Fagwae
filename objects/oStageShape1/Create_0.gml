@@ -1,14 +1,17 @@
-/// @description Initialization
+/// @description Initializing stage
 
 event_inherited()
+
+//global.status_tutorial = false
 
 global.stage = 1
 entrance_caption = "STAGE 1"
 
-//area_enemy_push(60, enemy_octagon_2, 0, 115, -48)
-area_enemy_push(120, enemy_octagon_4, 1, 270, -48)
-//area_enemy_push(130, enemy_rectangle_2, 0, 420, 100)
-//area_enemy_push(110, enemy_spread_2, 1, 0, -48)
+area_enemy_push(60, enemy_octagon_4, 0, 115, -32)
+
+//area_enemy_push(120, enemy_octagon_4, 0, 270, -48)
+//area_enemy_push(130, enemy_rectangle_2, LEFT, 0, 0)
+area_enemy_push(110, enemy_spread_2, LEFT, 0, 0)
 //area_enemy_push(10, enemy_octagon_1, 0, 270, -48)
 //area_enemy_push(170, enemy_spread_1, 0, 340, -48)
 //area_enemy_push(140, enemy_spread_2, 0, 500, -48)

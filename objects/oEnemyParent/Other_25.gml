@@ -5,7 +5,7 @@ if hp > 0 {
 	damaged = 1
 
 	if global.extreme
-		score += score_loot * 1.1
+		score += ceil(score_loot * 1.1)
 	else
 		score += score_loot
 	//laser_charge(ceil(score_loot / 5) * 5)
