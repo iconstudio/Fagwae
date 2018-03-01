@@ -20,7 +20,8 @@
         "b256a706-70b4-4f9c-b479-ff1ca01212a4",
         "6315f5e1-7c68-47be-8b99-b68d5a9f527b",
         "a8ce7605-f771-4e26-9ea6-a9b63ed051d2",
-        "9a421c59-3b9a-4823-8608-ac49d54bd849"
+        "9a421c59-3b9a-4823-8608-ac49d54bd849",
+        "85ab0339-162f-4009-a77f-db4dc9b9485b"
     ],
     "filterType": "GMScript",
     "folderName": "In-Game",

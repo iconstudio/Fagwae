@@ -21,8 +21,8 @@ arm_instances = array_create(arm_number, noone)
 arm_angle = array_create(arm_number, 0)
 
 for (var i = 0; i < arm_number; ++i) {
-	arm_instances[i] = enemy_create(argument[0], x, y)
 	arm_angle[i] = (arm_startangle + 360 / arm_number * i) mod 360
+	arm_instances[i] = enemy_create(argument[0], x, y, 0, arm_angle[i], id, "Instances_Arms")
 
 	with arm_instances[i] {
 		parent = other.id

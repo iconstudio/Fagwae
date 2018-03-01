@@ -1,6 +1,6 @@
-/// @description 
+/// @description Collide with other bullets
 
-if other.parent == id or other.dead
+if other.parent == id
 	exit
 
 with other {

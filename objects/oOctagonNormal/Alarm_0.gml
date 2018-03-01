@@ -1,4 +1,4 @@
-/// @description 
+/// @description Attacking
 
 if y >= 700
 	exit

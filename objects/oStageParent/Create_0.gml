@@ -7,6 +7,9 @@ with oStageParent {
 	}
 }
 
+// flags
+flag_boss = false
+
 // for stage title (each stage, not for 3 areas)
 entrance_caption = ""
 entrance_x = 0

@@ -1,6 +1,6 @@
 /// @description 
 
-rotation = (rotation + 37) mod 360
+rotation = (rotation + 37) mod 91800
 
 if dmode == 0 {
 	if bmode > 0 {

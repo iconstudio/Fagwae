@@ -1127,6 +1127,14 @@
             }
         },
         {
+            "Key": "85ab0339-162f-4009-a77f-db4dc9b9485b",
+            "Value": {
+                "id": "e132f2a5-b4ad-4279-8c9e-8b2a2c49c492",
+                "resourcePath": "scripts\\script_boss_apear\\script_boss_apear.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "85b7a0db-02b4-474b-93bc-b9ee33bb91ab",
             "Value": {
                 "id": "444c6eb1-8ef6-42f6-9a69-30e9ec6a4477",
@@ -2489,6 +2497,7 @@
         "6315f5e1-7c68-47be-8b99-b68d5a9f527b",
         "a8ce7605-f771-4e26-9ea6-a9b63ed051d2",
         "9a421c59-3b9a-4823-8608-ac49d54bd849",
+        "85ab0339-162f-4009-a77f-db4dc9b9485b",
         "92050eab-4524-4082-91b7-91464dde57e3",
         "a1c15792-658b-432a-9707-fd5567711059",
         "3a12875c-0641-4f7a-ac8d-e9cabfa99dbb",

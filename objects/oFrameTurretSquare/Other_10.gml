@@ -7,4 +7,5 @@ with turret {
 }
 
 enemy_explode(7, 72, 4 + irandom(2), 0)
+
 instance_destroy()

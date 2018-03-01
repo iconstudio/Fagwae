@@ -40,7 +40,12 @@ if trigger_counter-- <= 0 {
 			break
 
 		case areapush_enemy:
-			instance_last = enemy_create(data, cx, cy, dother)
+			if flag_boss {
+				instance_last = enemy_create(data, cx, cy, dother, 0, noone, "Boss")
+				flag_boss = false
+			} else {
+				instance_last = enemy_create(data, cx, cy, dother)
+			}
 			//with instance_last
 			//	event_user(1)
 			break
