@@ -1,7 +1,7 @@
 /// @description Initializing stage
 
 event_inherited()
-
+/*
 global.stage = 1
 entrance_caption = "STAGE 1"
 
@@ -66,7 +66,7 @@ for (var j = 0; j < 14; ++j) { // 14 rows
 }
 
 area_delay_push(240)
-
+//*/
 area_script_push(0, script_boss_apear, 0, 0, 0)
 area_enemy_push(0, enemy_boss_1, 0, 270, -128)
 

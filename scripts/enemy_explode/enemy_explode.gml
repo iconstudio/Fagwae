@@ -30,7 +30,7 @@ repeat argument[2] {
 if	!dead
 	exit
 
-repeat argument[3] + global.extreme * 3 {
+repeat argument[3] + global.extreme * 2 {
 	with instance_create_layer(x + ax, y + ay, "Effect", oPlayerScorePiece) {
 		speed = 4 + random(3) + speed / 2
 		direction = 45 + random(90)
@@ -42,5 +42,5 @@ repeat argument[3] + global.extreme * 3 {
 if audio_exists(sound_dead)
 	audio_play_sound(sound_dead, 10, false)
 
-show_flashstring(x, y - 12, "-" + number_format(argument[0]), 1)
+show_flashstring(x, y - 12, "+" + number_format(argument[0]), 1)
 
