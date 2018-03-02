@@ -15,10 +15,13 @@ alarm[1] = 1800
 brots = 0
 bsurfx = 20
 bsurfy = 16
-bsurfw = bsurfx * 
+bsurfw = bsurfx * 1.5
 bsurfh = round(bsurfy * 1.5)
 bsurf = -1
 bsurf2 = -1
+
+event_user(0)
+event_user(1)
 
 bleft = 16
 bright = screen_width - 16

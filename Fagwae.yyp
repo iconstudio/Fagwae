@@ -2031,6 +2031,14 @@
             }
         },
         {
+            "Key": "dbe6e8d3-e0a9-4a33-afad-45a59d5bbf2a",
+            "Value": {
+                "id": "cf4ecb77-0f26-4666-a8cf-578b526642c3",
+                "resourcePath": "objects\\oStageShape2\\oStageShape2.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "dc1f4872-b5a4-4dc3-9587-8a8000945561",
             "Value": {
                 "id": "5084eba8-cdea-4f68-b297-89a357ef252d",

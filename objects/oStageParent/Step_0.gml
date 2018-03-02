@@ -46,8 +46,6 @@ if trigger_counter-- <= 0 {
 			} else {
 				instance_last = enemy_create(data, cx, cy, dother)
 			}
-			//with instance_last
-			//	event_user(1)
 			break
 
 		case areapush_message:

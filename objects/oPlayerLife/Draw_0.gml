@@ -12,6 +12,8 @@ if (brots < 0)
 surface_set_target(bsurf)
 draw_clear_alpha(0, 0)
 draw_sprite_ext(sprite_index, 1, bsurfx, bsurfy, 0.5, 0.5, 0, $ffffff, 1)
+surface_reset_target()
+
 surface_set_target(bsurf2)
 draw_clear_alpha(0, 0)
 draw_sprite_ext(sprite_index, 2, bsurfx, bsurfy, 0.5,  0.5, 0, $ffffff, 1)

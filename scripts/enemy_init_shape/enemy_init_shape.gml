@@ -47,10 +47,10 @@ enemy_register(enemy_circle_3, oCircleSplitter, "CIRCLE", sCircleNormal, sCircle
 
 // boses
 enemy_register(enemy_boss_1, oBoss1Core, "SUPER HEXAGON", sBoss1A, sBoss1A, 
-1000, 5400, 1, 0, 6, $B77599, $B77599)
+1100, 5400, 1, 0, 6, $B77599, $B77599)
 enemy_register(enemy_boss_1A, oBoss1A, "SUPER HEXAGON", sBoss1A, sBoss1A, 
-170, 600, 1, 0, 6, 0, 0)
+160, 600, 1, 0, 6, 0, 0)
 enemy_register(enemy_boss_1B, oBoss1B, "SUPER HEXAGON", sBoss1B, sBoss1B, 
-130, 600, 1, 0, 6, 0, 0)
+140, 600, 1, 0, 6, 0, 0)
 enemy_register(enemy_boss_1C, oBoss1C, "SUPER HEXAGON", sBoss1C, sBoss1C, 
 100, 600, 1, 0, 6, 0, 0)
