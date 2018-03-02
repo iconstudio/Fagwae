@@ -8,5 +8,6 @@ enemy_explode(25, 256, 9, 9)
 
 if global.extreme
 	instance_create_layer(x, y, "Player", oPlayerLife)
+instance_create_layer(x, y, "Backend", global.area_list[++global.stage])
 
 instance_destroy()

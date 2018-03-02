@@ -6,7 +6,7 @@ camera_projection_identity()
 // player
 player_counter = 60
 player_isfirst = true
-instance_create_layer(0, 0, "Backend", oStageShape1)
+instance_create_layer(0, 0, "Backend", global.area_list[0] )
 global.stage = 1
 
 // achievements

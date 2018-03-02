@@ -2,7 +2,7 @@
 
 if invincible > 0 {
 	if !instance_exists(oPlayerShield) { 
-		shield = instance_create_layer(x, y, layer, oPlayerShield)
+		shield = instance_create_layer(x, y, "Player_Shield", oPlayerShield)
 		shield.parent = id
 	}
 	invincible--

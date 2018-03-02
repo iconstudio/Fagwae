@@ -4,7 +4,7 @@ event_inherited()
 
 // stat
 hp_max = 2
-shield = instance_create_layer(x, y, layer, oPlayerShield)
+shield = instance_create_layer(x, y, "Player_Shield", oPlayerShield)
 shield.parent = id
 
 // movement

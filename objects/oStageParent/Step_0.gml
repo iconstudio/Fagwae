@@ -5,20 +5,22 @@ if entrance_y < screen_height + 40 // on gui
 	entrance_y += entrance_vspeed
 
 if back_mode == 0 {
-	if y < 0 // to bottom of screen
-		y += entrance_vspeed
+	if back_alpha < 1
+		back_alpha += 0.08
 	else
-		y = 0
+		back_alpha = 1
 } else {
-	if y < screen_height + 40 // to beyond of the screen
-		y += entrance_vspeed
+	if back_alpha > 0
+		back_alpha -= 0.08
 	else
 		instance_destroy()
 }
 
-for (var i = 0; i < prohibit_count; ++i) {
-	if instance_exists(prohibit_push[i])
-		exit
+if prohibit_count > 0 {
+	for (var i = 0; i < prohibit_count; ++i) {
+		if instance_exists(prohibit_push[i])
+			exit
+	}
 }
 
 if trigger_counter-- <= 0 {
@@ -46,6 +48,7 @@ if trigger_counter-- <= 0 {
 			} else {
 				instance_last = enemy_create(data, cx, cy, dother)
 			}
+			prohibit_push[prohibit_count++] = instance_last
 			break
 
 		case areapush_message:

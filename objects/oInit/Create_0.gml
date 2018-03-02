@@ -6,16 +6,33 @@ global.profilefile = "profile.dat"
 global.network = true
 
 // screen
-global.__trw = window_get_width()
-global.__trh = window_get_height()
-global.__ttw = display_get_gui_width()
-global.__tth = display_get_gui_height()
+var width_default = 540, height_default = 960 // 9 : 16
+global.__trw = window_get_width()					// Full size
+global.__trh = window_get_height()				// Full size
+if os_type == os_android or os_type == os_ios {
+	window_set_fullscreen(true)
+
+	var gui_width, gui_height
+	if global.__trw > global.__trh {				// Landscape (Does not support)
+	} else {																// Portrait (Support via option) or Square
+		gui_height = floor(global.__trh / 16) * 16
+		gui_width = gui_height * 9 / 16
+	}
+	window_set_size(global.__trw, global.__trh)
+	display_set_gui_size(gui_width, gui_height)
+	surface_resize(application_surface, global.__trw, global.__trh)
+}
+
+global.__ttw = display_get_gui_width()		// Adjusted
+global.__tth = display_get_gui_height()		// Adjusted
 
 global.screen_gui_cx = global.__ttw / 2
 global.screen_gui_cy = global.__tth / 2
 
+// View is 'entire' screen									(Game)
 #macro view_width global.__trw
 #macro view_height global.__trh
+// However GUI fits into 'aspected' screen	(Interface)
 #macro screen_width global.__ttw
 #macro screen_height global.__tth
 application_surface_draw_enable(false)
@@ -41,6 +58,14 @@ global.extreme = false
 global.stage = 0 // 0: None, 1 ~ 9: Game, 10: Complete a mode
 
 global.enemy_dictionary = ds_map_create()
+
+global.area_list = array_create(6, noone)
+global.area_list[0] = oStageShape1
+global.area_list[1] = oStageShape2
+global.area_list[2] = oStageShape2
+global.area_list[3] = oStageShape2
+global.area_list[4] = oStageShape2
+global.area_list[5] = oStageShape2
 
 #macro area_vspeed 0.5625 * 4
 

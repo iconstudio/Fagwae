@@ -1,4 +1,4 @@
-/// @description Renove background of shape
+/// @description Remove background of shape
 
 event_inherited()
 

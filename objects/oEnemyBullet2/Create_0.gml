@@ -2,4 +2,4 @@
 
 event_inherited()
 
-object_dead = oEnemyBulletDead
+object_dead = oEnemyBullet2Dead

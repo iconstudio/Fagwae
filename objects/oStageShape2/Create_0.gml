@@ -3,7 +3,6 @@
 event_inherited()
 
 global.extreme = true
-global.stage = 1
 entrance_caption = "STAGE 1"
 
 if !global.status_tutorial

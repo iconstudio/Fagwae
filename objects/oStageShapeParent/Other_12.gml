@@ -3,7 +3,7 @@
 with back {
 	draw_set_alpha(1)
 	draw_set_color(back_color)
-	draw_rectangle(-32, -32, screen_width + 32, screen_height + 32, false)
+	draw_rectangle(-32, -32, 572, 992, false)
 
 	var i, lx, ly
 	for (i = dcnt1; i <= 3; ++i) {

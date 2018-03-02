@@ -759,6 +759,14 @@
             }
         },
         {
+            "Key": "5a2ee538-f449-4ebc-a634-bc14618b5b6b",
+            "Value": {
+                "id": "b4c44c8c-4b91-4495-8b40-6ee8e4207d02",
+                "resourcePath": "objects\\oEnemyBullet2Dead\\oEnemyBullet2Dead.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "5bac3531-bf5b-4713-b4d2-8626c13a37da",
             "Value": {
                 "id": "946d7272-c136-4a46-a703-be1dfbb9ff06",
@@ -2199,6 +2207,14 @@
             }
         },
         {
+            "Key": "ee964cc9-ae30-4a82-9c9d-2ca002662a28",
+            "Value": {
+                "id": "afa22c17-c93a-4804-bdc8-f4e76e316d8d",
+                "resourcePath": "scripts\\script_stage_complete\\script_stage_complete.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "ef0004a3-7a70-465d-8df2-9eeb4895ed99",
             "Value": {
                 "id": "8d00b9fd-75af-4e0c-93fb-494412ff7fb8",
@@ -2506,6 +2522,7 @@
         "a8ce7605-f771-4e26-9ea6-a9b63ed051d2",
         "9a421c59-3b9a-4823-8608-ac49d54bd849",
         "85ab0339-162f-4009-a77f-db4dc9b9485b",
+        "ee964cc9-ae30-4a82-9c9d-2ca002662a28",
         "92050eab-4524-4082-91b7-91464dde57e3",
         "a1c15792-658b-432a-9707-fd5567711059",
         "3a12875c-0641-4f7a-ac8d-e9cabfa99dbb",
