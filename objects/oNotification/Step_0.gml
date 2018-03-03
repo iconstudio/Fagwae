@@ -1,7 +1,7 @@
 /// @description Update
 
 if begin_y != y
-	y += (begin_y - y) / 5
+	y += (begin_y - y) * 0.2
 
 var _sec = 60
 if dmode == 0 {

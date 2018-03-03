@@ -1,3 +1,3 @@
 /// @description Update
 
-brightness -= brightness / 3
+brightness -= brightness * 0.333

@@ -39,4 +39,4 @@ background_id = layer_background_get_id(layer_id)
 event_user(0)
 
 // initial waiting
-area_delay_push(180)
+area_delay_push(300)

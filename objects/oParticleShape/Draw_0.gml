@@ -3,7 +3,7 @@
 if size - isize > 2
 	image_alpha = 1
 else
-	image_alpha = (size - isize) / 2
+	image_alpha = (size - isize) * 0.5
 
 draw_set_alpha(image_alpha)
 draw_set_color(vcol)

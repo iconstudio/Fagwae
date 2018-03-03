@@ -18,7 +18,7 @@ for (var i = 0; i < global.achievement_count; ++i) {
 	menu_projection(300, 20, 360, 0, 0, 0, 0, -1, 0, 42, 1.3, 1, 32000)
 	draw_transform_set_rotation_y(20 - angle[i])
 	draw_transform_add_translation(archx[i] + scroll, -50 - 60 * rpush[0] + lengthdir_y(4, rots), 80)
-	draw_sprite_ext(sAchievement, i, 0, 0, 2, 2, 0, $ffffff, (1 - rpush[0]) * aalpha + (selected == i) / 2)
+	draw_sprite_ext(sAchievement, i, 0, 0, 2, 2, 0, $ffffff, (1 - rpush[0]) * aalpha + (selected == i) * 0.5)
 	camera_projection_identity()
 
 	if draw_mode == 0

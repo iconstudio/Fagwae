@@ -1,15 +1,15 @@
 /// @description 
 
 for (var i = 0; i <= maxdepth; ++i) {
-	menupos[i] += (-13 * menusel[i] - menupos[i]) / 5
-	menuscl[i] -= menuscl[i] / 5
+	menupos[i] += (-13 * menusel[i] - menupos[i]) * 0.2
+	menuscl[i] -= menuscl[i] * 0.2
 	if menuinf[i, menusel[i]] != ""
-		infoscl[i] += (1 - infoscl[i]) / 5
+		infoscl[i] += (1 - infoscl[i]) * 0.2
 	else
-		infoscl[i] -= infoscl[i] / 5
+		infoscl[i] -= infoscl[i] * 0.2
 
 	if menuinf[i, menuold[i]] != ""
-		infosco[i] -= infosco[i] / 5
+		infosco[i] -= infosco[i] * 0.2
 }
 
 if menudepth != menuldepth {
@@ -57,7 +57,7 @@ if draw_mode > 0 {
 	}
 
 	for (var i = 0; i < 3; ++i)
-		rpush[i] += sgrv / 4
+		rpush[i] += sgrv * 0.25
 	exit
 }
 
@@ -82,7 +82,7 @@ if !menu_outta() {
 rfrm++
 for (var i = 0; i < 3; ++i) {
 	if rfrm > i * 10 + 12 and rpush[i] != 0 {
-		rpush[i] -= rpush[i] / 4
+		rpush[i] -= rpush[i] * 0.25
 		if rpush[i] < 8 {
 			if rflash[i]++ > 15
 				rpush[i] = 0

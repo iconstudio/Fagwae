@@ -16,7 +16,7 @@ xstart = x
 y_target = 100
 
 shot_mode = 0
-shot_speed = 6.5 + global.stage / 3
+shot_speed = 6.5 + global.stage * 0.333
 shot_count = 0
 
 moving_mode = -1 // 0: none, 1: go faster, 2: rotate, 3: slow down

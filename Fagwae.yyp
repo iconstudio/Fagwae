@@ -1527,14 +1527,6 @@
             }
         },
         {
-            "Key": "a8e8c4ab-1cf3-4cff-a481-159f26acd6b6",
-            "Value": {
-                "id": "1946cb11-6f9f-46f4-9842-0f9efb4b4286",
-                "resourcePath": "scripts\\screen_fade\\screen_fade.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
             "Value": {
                 "id": "d05b8c2f-5219-4c8e-9b0a-a1ebc4a30de9",
@@ -2434,7 +2426,6 @@
     "script_order": [
         "b9970846-3a22-4d64-8cb8-351360b8e826",
         "417c8284-8f94-463c-a5cf-b8be1ed7b9fe",
-        "a8e8c4ab-1cf3-4cff-a481-159f26acd6b6",
         "7fac7662-6346-4bbf-b47b-aa7a1101a013",
         "a9b69a83-5b1d-4250-82f9-4a455a6eda91",
         "968dd525-b5cf-48a6-8d7b-4003ea79e742",

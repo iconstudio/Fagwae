@@ -8,4 +8,4 @@ if y > 10 {
 }
 
 if vspeed != 2.5
-	speed += (2.5 - vspeed) / 5
+	speed += (2.5 - vspeed) * 0.2

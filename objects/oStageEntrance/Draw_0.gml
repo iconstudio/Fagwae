@@ -6,7 +6,7 @@ with oStageParent {
 	var __acol, __str, __swid
 	__acol = make_color_hsv(background_param - 25, 144, 128)
 
-	for (var i = (other.x / 2) mod 64 - 64; i < 576; i += 64)
+	for (var i = (other.x * 0.5) mod 64 - 64; i < 576; i += 64)
 		draw_sprite_ext(sStageEntrance, 0, i, other.y, 1, 1, 0, __acol, 1)
  
 	__str = other.caption

@@ -1,6 +1,6 @@
 /// @description Creation
 
-x = screen_width / 2
+x = view_width * 0.5
 y = -80
 fixy = y
 

@@ -19,7 +19,7 @@ moving_mode = 2
 moving_count = 0
 
 shot_dir = 0
-shot_speed = 4.5 + global.stage / 4
+shot_speed = 4.5 + global.stage * 0.25
 shot_count = 0
 shot_mode = 0
 

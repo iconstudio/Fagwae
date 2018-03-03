@@ -7,31 +7,36 @@ global.network = true
 
 // screen
 var width_default = 540, height_default = 960 // 9 : 16
-global.__trw = window_get_width()					// Full size
-global.__trh = window_get_height()				// Full size
+
+global.__view_width = width_default				// Original Size
+global.__view_height = height_default			// Original Size 
+
 if os_type == os_android or os_type == os_ios {
 	window_set_fullscreen(true)
+	
+	var window_width = window_get_width()		// Full size
+	var window_height = window_get_width()	// Full size
 
 	var gui_width, gui_height
-	if global.__trw > global.__trh {				// Landscape (Does not support)
+	if window_width > window_height {				// Landscape (Does not support)
 	} else {																// Portrait (Support via option) or Square
-		gui_height = floor(global.__trh / 16) * 16
+		gui_height = floor(window_height / 16) * 16
 		gui_width = gui_height * 9 / 16
 	}
-	window_set_size(global.__trw, global.__trh)
-	display_set_gui_size(gui_width, gui_height)
-	surface_resize(application_surface, global.__trw, global.__trh)
+	window_set_size(window_width, window_height)		// game window
+	display_set_gui_size(gui_width, gui_height)			// gui in the game window
+	surface_resize(application_surface, global.__view_width, global.__view_height) // application surface is static
 }
 
 global.__ttw = display_get_gui_width()		// Adjusted
 global.__tth = display_get_gui_height()		// Adjusted
 
-global.screen_gui_cx = global.__ttw / 2
-global.screen_gui_cy = global.__tth / 2
+global.screen_gui_cx = global.__ttw * 0.5
+global.screen_gui_cy = global.__tth * 0.5
 
 // View is 'entire' screen									(Game)
-#macro view_width global.__trw
-#macro view_height global.__trh
+#macro view_width global.__view_width
+#macro view_height global.__view_height
 // However GUI fits into 'aspected' screen	(Interface)
 #macro screen_width global.__ttw
 #macro screen_height global.__tth

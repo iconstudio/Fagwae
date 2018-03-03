@@ -25,7 +25,7 @@ if shot_mode >= 2 {
 
 	alarm[1] = 5
 } else if ++shot_count < 3 + global.extreme {
-	alarm[0] = max(7, 11.5 - global.stage / 2 - global.extreme * 2)
+	alarm[0] = max(7, 11.5 - global.stage * 0.5 - global.extreme * 2)
 } else {
 	shot_count = 0
 	shot_mode++

@@ -5,10 +5,10 @@ if moving_mode == 0 {
 		moving_mode = 1
 	} else if x > x_target { // left
 		if hspeed != -2
-			hspeed += (-2 - hspeed) / 5
+			hspeed += (-2 - hspeed) * 0.2
 	} else if x < x_target { // right
 		if hspeed != 2
-			hspeed += (2 - hspeed) / 5
+			hspeed += (2 - hspeed) * 0.2
 	}
 	pangle += 2
 } else if moving_mode == 1 { // await
@@ -25,10 +25,10 @@ if moving_mode == 0 {
 		moving_mode = 3
 	} else if x > x_begin {
 		if hspeed != -2
-			hspeed += (-2 - hspeed) / 5
+			hspeed += (-2 - hspeed) * 0.2
 	} else if x < x_begin {
 		if hspeed != 2
-			hspeed += (2 - hspeed) / 5
+			hspeed += (2 - hspeed) * 0.2
 	}
 	pangle += 2
 } else if moving_mode == 3 { // await

@@ -6,7 +6,7 @@ if global.playeralive
 score = 0
 global.playeralive = true
 global.score_combo = 0
-global.px = view_width / 2
+global.px = view_width * 0.5
 global.py = view_height - 100
 
 global.player_fever_laser = 0

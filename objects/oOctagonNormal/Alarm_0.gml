@@ -13,13 +13,13 @@ if shot_count == 0 {
 
 if ++shot_count < 4 {
 	if global.extreme
-		alarm[0] = max(2, 9 - global.stage / 2)
+		alarm[0] = max(2, 9 - global.stage * 0.5)
 	else
-		alarm[0] = max(2, 12 - global.stage / 2)
+		alarm[0] = max(2, 12 - global.stage * 0.5)
 } else {
 	shot_count = 0
 	if global.extreme
-		alarm[0] = max(5, 12 - global.stage / 5) + 10
+		alarm[0] = max(5, 12 - global.stage * 0.2) + 10
 	else
 		alarm[0] = max(8, 60 - global.stage * 4) + 10
 }

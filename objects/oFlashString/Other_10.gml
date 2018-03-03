@@ -16,7 +16,7 @@ if type_create == 0 or type_create == 3 {
 }
 
 draw_set_font(global.font)
-sw = string_width(ncaption) * (rscale) / 2
+sw = string_width(ncaption) * (rscale) * 0.5
 if x < sw
 	x = sw
 if x > screen_width - sw

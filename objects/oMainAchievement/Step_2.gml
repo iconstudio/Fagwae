@@ -4,10 +4,10 @@ for (var i = 0; i < global.achievement_count; ++i) {
 	var aclph = 0.5 + global.achievement_cleared[i] * 0.5
 	if selected == i {
 		alpha[i] += (aclph - alpha[i]) / 13
-		angle[i] += (60 - angle[i]) / 10
+		angle[i] += (60 - angle[i]) * 0.1
 	} else {
 		alpha[i] -= alpha[i] / (aclph * 10 + 2)
-		angle[i] -= angle[i] / 10
+		angle[i] -= angle[i] * 0.1
 	}
 }
 
@@ -20,7 +20,7 @@ if draw_mode == 0 {
 	rfrm++
 	for (var i = 0; i < 3; ++i) {
 		if rfrm > i * 12 + 6
-			rpush[i] -= rpush[i] / 4
+			rpush[i] -= rpush[i] * 0.25
 	}
 } else {
 	if rfrm == 0 {

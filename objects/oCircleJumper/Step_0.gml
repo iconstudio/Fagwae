@@ -6,5 +6,5 @@ if moving_mode != 0 {
 }
 
 if speed != 0 {
-	speed -= speed / 3
+	speed -= speed * 0.333
 }

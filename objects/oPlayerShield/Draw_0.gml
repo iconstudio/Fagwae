@@ -2,7 +2,7 @@
 
 var draw_size = 23
 with parent
-	draw_size = min(23, invincible / 2)
+	draw_size = min(23, invincible * 0.5)
 
 var draw_piecepos, draw_color, dx, dy
 for (var i = 0; i < 8; ++i) {

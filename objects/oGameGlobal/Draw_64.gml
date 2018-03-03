@@ -6,7 +6,7 @@ var dx = global.screen_gui_cx
 var dy = screen_height - 8 + ipush * 16
 
 if global.player_fever_laser > 0 {
-	var division = global.player_fever_laser / 100
+	var division = global.player_fever_laser * 0.10
 	draw_set_color(make_color_hsv(30, (1 - division) * 255, 64 + division * 127 + lengthdir_y(64, gaugerots)))
 	draw_rectangle(10, dy - 2, 26, dy - 2 - division * 20, 0)
 }
@@ -46,7 +46,7 @@ if shadow_alpha > 0
 	draw_sprite_ext(sScreenShadow, 0, 0, 0, 1, 1, 0, $ffffff, shadow_alpha * 2)
 
 if fade_alpha > 0 {
-	draw_set_alpha(fade_alpha)
+	draw_set_alpha(fade_alpha * 0.5)
 	draw_set_color(0)
 	draw_rectangle(0, 0, view_width, view_height, 0)
 

@@ -1,7 +1,7 @@
 /// @description Initializing stage
 
 event_inherited()
-/*
+
 if !global.status_tutorial
 	area_message_push(60, "ARROW KEY TO MOVE", global.screen_gui_cx, global.screen_gui_cy)
 if !global.status_tutorial
@@ -63,10 +63,8 @@ for (var j = 0; j < 14; ++j) { // 14 rows
 }
 
 area_delay_push(240)
-*/
+
 area_script_push(0, script_boss_apear, 0, 0, 0)
 area_enemy_push(0, enemy_boss_1, 0, 270, -128)
-
-area_enemy_push(60, enemy_octagon_4, 0, 270, -48)
 
 global.status_tutorial = true

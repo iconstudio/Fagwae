@@ -17,7 +17,7 @@ if argument4 > 90
  draw_set_alpha((180 - argument4) / 90 * __pa)
 else if argument4 < 0
  draw_set_alpha((90 + argument4) / 90 * __pa)
-__sw = ((string_width(__str) - 1) * __sscl + __sx * 2) / 2
+__sw = ((string_width(__str) - 1) * __sscl + __sx * 2) * 0.5
 
 draw_transform_set_rotation_y(90)
 draw_transform_add_translation(-__sw, 0, -__sw)

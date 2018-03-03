@@ -3,7 +3,7 @@
 draw_set_valign(0)
 draw_set_halign(0)
 
-camera_projection_set(-230, 0, -230, 0, 0, 0, 0, -1, 0, 45, 4 / 3, 1, 32000)
+camera_projection_set(-230, 0, -230, 0, 0, 0, 0, -1, 0, 45, 4 * 0.333, 1, 32000)
 draw_set_color($ffffff)
 
 var aalpha, dy, dalpha, sw

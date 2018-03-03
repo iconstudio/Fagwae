@@ -23,12 +23,12 @@ if io_check_pressed_start() or io_check_pressed_select()
 	event_perform(ev_keypress, ord("P"))
 
 if global.screenshadowy > 0 {
-	shadow_alpha += (1 - shadow_alpha) / 3
+	shadow_alpha += (1 - shadow_alpha) * 0.333
 
-	global.screenshadowy -= global.screenshadowy / 2
+	global.screenshadowy -= global.screenshadowy * 0.5
 
 } else if shadow_alpha != 0 {
-	shadow_alpha -= shadow_alpha / 4
+	shadow_alpha -= shadow_alpha * 0.25
 }
 
 if player_counter > 0 {
@@ -44,7 +44,7 @@ if instance_exists(oPlayerParent) {
 	ipush -= ipush / 7
 } else {
 	if ipush < 1
-		ipush += 0.004 + ipush / 10
+		ipush += 0.004 + ipush * 0.1
 	else
 		ipush = 1
 }

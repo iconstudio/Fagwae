@@ -4,7 +4,7 @@ menu_camera = camera_create_view(0, 0, 450, 800, 0, noone, 0, 0, -1, -1)
 camera_apply(menu_camera)
 event_user(0)
 
-lx = screen_width / 2
+lx = screen_width * 0.5
 ly = screen_height - 20
 menuppdepth = 0
 menupdepth = 0
@@ -25,4 +25,4 @@ global.stage = 0
 
 audio_stop_all()
 audio_play_sound(musicMainMenu, 100, true)
-audio_sound_gain(musicMainMenu, global.setting_music / 10, 2000)
+audio_sound_gain(musicMainMenu, global.setting_music * 0.1, 2000)

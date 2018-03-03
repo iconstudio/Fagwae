@@ -32,10 +32,10 @@ if brightness < 1
 else
 	brightness = 1
 
-var ascore = (score - global.vscore) / 3
+var ascore = (score - global.vscore) * 0.333
 global.vscore += ascore
 
-score_wave -= min(score_wave + max(0, ascore) / 10, 7) / 7
+score_wave -= min(score_wave + max(0, ascore) * 0.1, 7) / 7
 score_rotation = (score_rotation + 5) mod 360
 
 if prohibit_count > 0 {
@@ -67,10 +67,10 @@ if trigger_counter-- <= 0 {
 			if flag_boss {
 				instance_last = enemy_create(data, cx, cy, dother, 0, noone, "Boss")
 				flag_boss = false
+				prohibit_push[prohibit_count++] = instance_last
 			} else {
 				instance_last = enemy_create(data, cx, cy, dother)
 			}
-			prohibit_push[prohibit_count++] = instance_last
 			break
 
 		case areapush_message:

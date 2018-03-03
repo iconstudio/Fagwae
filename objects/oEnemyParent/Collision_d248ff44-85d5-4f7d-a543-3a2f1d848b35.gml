@@ -6,7 +6,7 @@ if other.pow <= 0 or dead
 hurt = other.pow
 if instance_exists(parent) {
 	with parent {
-		hurt = other.hurt / 3
+		hurt = other.hurt * 0.333
 		event_user(15)
 	}
 }

@@ -8,7 +8,7 @@ if hp > 0 {
 		score += ceil(score_loot * 1.1)
 	else
 		score += score_loot
-	//laser_charge(ceil(score_loot / 5) * 5)
+	//laser_charge(ceil(score_loot * 0.2) * 5)
 } else if !dead {
 	dead = true
 	event_user(0)
@@ -16,9 +16,9 @@ if hp > 0 {
 	if parent != noone or score_loot == 0 {
 		score += score_dead
 	} else {
-		var ppscore = floor(global.score_combo / 10)
+		var ppscore = floor(global.score_combo * 0.1)
 		//if (other.object_index != objPlayerLaser)
-		//	laser_charge(floor(ppscore / 5) * 5)
+		//	laser_charge(floor(ppscore * 0.2) * 5)
 
 		score += score_dead + ppscore
 		if ppscore >= 1

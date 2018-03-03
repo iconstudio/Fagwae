@@ -1,6 +1,6 @@
 /// @description 
 
-alarm[0] = max(4, 17 - global.stage / 3)
+alarm[0] = max(4, 17 - global.stage * 0.333)
 
 if y >= screen_height - 200 || x < 8 || x > screen_height - 8 or y < 10
 	exit

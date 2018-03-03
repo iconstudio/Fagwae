@@ -9,11 +9,11 @@ if hp > 0 {
 	hp--
 	if global.score_combo != 0 {
 		if global.score_combo > 10
-			mscr = floor(global.score_combo / 2)
+			mscr = floor(global.score_combo * 0.5)
 		else
 			mscr = global.score_combo
 		global.score_combo -= mscr
-		show_flashstring(x, y - 12, "-" + number_format(mscr / 10), 1)
+		show_flashstring(x, y - 12, "-" + number_format(mscr * 0.1), 1)
 	}
 
 	screen_shake(10)

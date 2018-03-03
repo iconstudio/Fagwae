@@ -29,4 +29,4 @@ draw_sprite_ext(sprite_index, 0, dx, dy, 0.5, 0.5, 0, $ffffff, 1)
 
 dcol = make_color_hsv(32, 216, 255)
 for (var i = 0; i < bsurfh; i += 2)
-	draw_surface_part_ext(bsurf2, 0, i, bsurfw, 2, dx - bsurfx, dy - bsurfy + i, 1, 1, dcol, 0.2 + lengthdir_x(0.2, brots / 3 + i * 7))
+	draw_surface_part_ext(bsurf2, 0, i, bsurfw, 2, dx - bsurfx, dy - bsurfy + i, 1, 1, dcol, 0.2 + lengthdir_x(0.2, brots * 0.333 + i * 7))

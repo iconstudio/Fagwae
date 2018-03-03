@@ -8,7 +8,7 @@ if global.extreme {
 }
 
 if ++shot_count < 2 {
-	alarm[1] = max(6, 10 - global.stage / 3 - global.extreme * 2)
+	alarm[1] = max(6, 10 - global.stage * 0.333 - global.extreme * 2)
 } else {
 	shot_count = 0
 

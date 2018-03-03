@@ -3,7 +3,7 @@
 if shot_mode == 0 {
 	if y < 20
 		alarm[0] = 55
-	vspeed += (0.5 - vspeed) / 10
+	vspeed += (0.5 - vspeed) * 0.1
 } else {
 	if speed < 2
 		speed += 0.03

@@ -4,9 +4,9 @@ rotation = (rotation + 37) mod 91800
 
 if dmode == 0 {
 	if bmode > 0 {
-		scale += (1 - scale) / 3
+		scale += (1 - scale) * 0.333
 	} else {
-		scale += (1.6 - scale) / 2
+		scale += (1.6 - scale) * 0.5
 		if scale > 1.4
 			bmode = 1
 	}

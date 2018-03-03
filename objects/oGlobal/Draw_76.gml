@@ -24,7 +24,7 @@ if global.screenshake {
 	yn = vspeed
 	for (var i = 1; i <= shakelevel; ++i)
 		draw_surface_ext(surf, xo + (xn - xo) / shakelevel * i, yo + (yn - yo) / shakelevel * i, 1, 1, 0, $ffffff, 1 / shakelevel)
-	global.screenshake -= global.screenshake / 10
+	global.screenshake -= global.screenshake * 0.1
 } else {
 	camera_set_view_pos(view_camera, 0, 0)
 }

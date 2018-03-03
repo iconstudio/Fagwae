@@ -32,7 +32,7 @@ if	!dead
 
 repeat argument[3] + global.extreme * 2 {
 	with instance_create_layer(x + ax, y + ay, "Effect", oPlayerScorePiece) {
-		speed = 4 + random(3) + speed / 2
+		speed = 4 + random(3) + speed * 0.5
 		direction = 45 + random(90)
 	}
 }

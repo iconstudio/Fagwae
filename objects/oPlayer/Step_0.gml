@@ -56,7 +56,7 @@ if mx != 0 and my != 0 {
 	mvs *= movesqr
 }
 
-cangle += (ta - cangle) / 4
+cangle += (ta - cangle) * 0.25
 
 hspeed += mhs
 vspeed += mvs
