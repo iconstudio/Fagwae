@@ -2,7 +2,7 @@
     "id": "a5710de3-17ea-4dae-8e70-16fe2dea7222",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "sAreaEntrance",
+    "name": "sStageEntrance",
     "For3D": false,
     "HTile": false,
     "VTile": false,

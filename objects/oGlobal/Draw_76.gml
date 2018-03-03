@@ -3,11 +3,11 @@
 if !surface_exists(surf)
  event_user(0)
 
-if !global.screenlock {
+//if !global.screenlock {
  surface_set_target(surf)
  draw_surface_ext(application_surface, 0, 0, 1, 1, 0, $ffffff, 1)
  surface_reset_target()
-}
+//}
 
 gpu_set_blendmode_ext(bm_one, bm_zero)
 draw_surface_ext(surf, 0, 0, 1, 1, 0, $ffffff, 1)

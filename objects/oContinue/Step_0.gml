@@ -1,15 +1,13 @@
 /// @description Update
 
-screen_fade(rpush[2])
-
 if draw_mode > 0 {
 	frame++
 	for (var i = 0; i < 3; ++i) {
 		if frame > i * 20 + 12 and rpush[i] != 0
-			rpush[i] -= rpush[i] / 3
+			rpush[i] -= rpush[i] / 8
 	}
 	
-	if rpush[2] < 0.01
+	if rpush[2] < 0.001
 		instance_destroy()
 	exit
 }
@@ -17,5 +15,5 @@ if draw_mode > 0 {
 frame++
 for (var i = 0; i < 3; ++i) {
 	if frame > i * 20 + 12 and rpush[i] != 1
-		rpush[i] += (1 - rpush[i]) / 2
+		rpush[i] += (1 - rpush[i]) / 5
 }

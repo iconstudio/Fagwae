@@ -1,5 +1,9 @@
 /// @description Initialization
 
+// initiator
+alarm[1] = 60
+available = false
+
 with oStageParent {
 	if id != other.id {
 		depth -= 1
@@ -11,23 +15,28 @@ with oStageParent {
 flag_boss = false
 flag_stop = false
 
-// for stage title (each stage, not for 3 areas)
-entrance_caption = ""
-entrance_x = 0
-entrance_y = -30
-entrance_vspeed = area_vspeed
+// for stage title (each stage)
+alarm[2] = 1
 
-// for area separator (each area, not for all 12 stages)
+// background
 back_surface = -1
 back_mode = 0
-back = noone
 back_alpha = 0
 
-// create background surface
-event_user(0)
+background_param = 0
+scroll = 0
+rotation = 0
+brightness = 0
 
-// create background (if doesn't exist)
-event_user(1)
+// score
+score_alpha = -1
+score_rotation = 0
+score_wave = 0
+
+// create background surface
+var layer_id = layer_get_id("Background_Color")
+background_id = layer_background_get_id(layer_id)
+event_user(0)
 
 // initial waiting
 area_delay_push(180)

@@ -5,7 +5,7 @@
     "name": "oStageShapeParent",
     "eventList": [
         {
-            "id": "3c5892bd-fbd2-4e31-9d9e-c84b34a93ef5",
+            "id": "91a61712-696f-4843-b36b-d0b9fa5266ef",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,23 +15,23 @@
             "m_owner": "e995417c-7c29-41ee-a87a-61c7da81c6ca"
         },
         {
-            "id": "91a61712-696f-4843-b36b-d0b9fa5266ef",
+            "id": "da3d456b-c644-4f89-9732-2432f06f527f",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 12,
-            "eventtype": 7,
+            "enumb": 2,
+            "eventtype": 3,
             "m_owner": "e995417c-7c29-41ee-a87a-61c7da81c6ca"
         },
         {
-            "id": "5bd96e63-eb9a-406a-ba83-3b6da25b28a0",
+            "id": "1276de43-b9fd-41b1-b022-bc31f5d305ca",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
-            "eventtype": 12,
+            "eventtype": 0,
             "m_owner": "e995417c-7c29-41ee-a87a-61c7da81c6ca"
         }
     ],

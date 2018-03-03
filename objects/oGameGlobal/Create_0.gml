@@ -9,6 +9,8 @@ player_isfirst = true
 instance_create_layer(0, 0, "Backend", global.area_list[0] )
 global.stage = 1
 
+global.vscore = 0
+
 // achievements
 event_user(1)
 

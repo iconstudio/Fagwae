@@ -487,14 +487,6 @@
             }
         },
         {
-            "Key": "3cbea320-2f5b-4e48-9bfb-7c15c264f829",
-            "Value": {
-                "id": "e0281d07-eda9-41e9-a757-067c7fc21d67",
-                "resourcePath": "objects\\oBackShape\\oBackShape.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "3d033a42-3b22-4256-bcba-bf09272dea17",
             "Value": {
                 "id": "d15bc282-d49a-4e68-86ac-c85f2c13054c",
@@ -884,14 +876,6 @@
                 "id": "03f32933-0aa8-406f-98c0-de1c62e7bf46",
                 "resourcePath": "objects\\oFlashString\\oFlashString.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "6d9ef6f9-7bfd-49b6-92ee-7c59652b2c91",
-            "Value": {
-                "id": "f1ae6e0e-c6d8-4ec6-9829-35a2b8392a63",
-                "resourcePath": "scripts\\background_create\\background_create.yy",
-                "resourceType": "GMScript"
             }
         },
         {
@@ -1319,6 +1303,14 @@
             }
         },
         {
+            "Key": "9440285b-296d-4efb-a712-0124a569e0dc",
+            "Value": {
+                "id": "8eee1ab0-e608-47e3-be51-454ee3b6888e",
+                "resourcePath": "objects\\oStageEntrance\\oStageEntrance.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "94f21c2a-780a-42cd-a50c-6254e2bc9f04",
             "Value": {
                 "id": "d61a11ca-dc6f-4fb7-b254-3f3029dbd636",
@@ -1506,7 +1498,7 @@
             "Key": "a5710de3-17ea-4dae-8e70-16fe2dea7222",
             "Value": {
                 "id": "7372c8a1-85b6-4ed5-bad3-7084a18c29c4",
-                "resourcePath": "sprites\\sAreaEntrance\\sAreaEntrance.yy",
+                "resourcePath": "sprites\\sStageEntrance\\sStageEntrance.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1828,14 +1820,6 @@
                 "id": "19ee0ce6-53fa-448d-a8f4-3872c9799beb",
                 "resourcePath": "views\\c3229bfe-c35f-4d5e-a8e6-ea7767d34606.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "c3983ae9-392b-4f77-b682-b6d8594a3f1f",
-            "Value": {
-                "id": "a73504ab-e1b6-4b68-8f2c-79f391d698a9",
-                "resourcePath": "objects\\oBackParent\\oBackParent.yy",
-                "resourceType": "GMObject"
             }
         },
         {
@@ -2505,7 +2489,6 @@
         "4762c6ed-e4a5-4f4f-9f2b-b6e11d405b40",
         "4475868e-851f-4cdf-a8fb-ce4c5cfed972",
         "4da2b5a2-ecb7-4f21-bac0-d26a882c4f13",
-        "6d9ef6f9-7bfd-49b6-92ee-7c59652b2c91",
         "ba47441b-5eab-4fa9-a4ee-7671c12e007b",
         "94fc85b5-c66d-4f2e-ac30-8cc1fa33ae58",
         "94f21c2a-780a-42cd-a50c-6254e2bc9f04",

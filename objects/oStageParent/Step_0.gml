@@ -1,20 +1,42 @@
-/// @description Create pushes
+/// @description Updating Background and Creating pushes
 
-entrance_x++
-if entrance_y < screen_height + 40 // on gui
-	entrance_y += entrance_vspeed
+if !available
+	exit
 
 if back_mode == 0 {
-	if back_alpha < 1
-		back_alpha += 0.08
+	if image_alpha < 1
+		image_alpha += 0.08
 	else
-		back_alpha = 1
+		image_alpha = 1
 } else {
-	if back_alpha > 0
-		back_alpha -= 0.08
+	if image_alpha > 0
+		image_alpha -= 0.08
 	else
 		instance_destroy()
 }
+
+if instance_exists(oPlayer) and back_mode == 0 {
+	if score_alpha < 1
+		score_alpha += 0.01
+	else
+		score_alpha = 1
+} else {
+	if score_alpha > 0
+		score_alpha -= 0.01
+	else
+		score_alpha = 0
+}
+
+if brightness < 1
+	brightness += 0.014
+else
+	brightness = 1
+
+var ascore = (score - global.vscore) / 3
+global.vscore += ascore
+
+score_wave -= min(score_wave + max(0, ascore) / 10, 7) / 7
+score_rotation = (score_rotation + 5) mod 360
 
 if prohibit_count > 0 {
 	for (var i = 0; i < prohibit_count; ++i) {

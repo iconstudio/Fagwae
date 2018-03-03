@@ -1,8 +1,6 @@
 /// @description Initializing stage
 
 event_inherited()
-
-entrance_caption = "STAGE 1"
 /*
 if !global.status_tutorial
 	area_message_push(60, "ARROW KEY TO MOVE", global.screen_gui_cx, global.screen_gui_cy)

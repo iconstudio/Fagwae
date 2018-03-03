@@ -28,7 +28,7 @@ var gsiz = gratio * screen_width * 0.5
 var gcol1 = make_color_hsv(gratio * 40, 240, 96)
 var gcol2 = make_color_hsv(gratio * 85, 240, 96)
 
-var gdx = (screen_width - gsiz) / 5
+var gdx = dx * 0.5
 draw_sprite_part_ext(sGauge, 0, gsiz, gaugetexy, dx - gsiz, 12, gdx + gsiz, 880, 1, 1, gcol1, draw_get_alpha())
 draw_sprite_part_ext(sGauge, 0, gsiz, gaugetexy + 4, dx - gsiz, 12, gdx + gsiz, 880, 1, 1, gcol1, draw_get_alpha())
 
