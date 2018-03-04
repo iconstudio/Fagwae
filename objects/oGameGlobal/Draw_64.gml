@@ -19,28 +19,27 @@ if global.extreme
 else
 	draw_text_transformed(dx, dy, "NORMAL / " + string(global.stage), 1, 1, 0)
 
-if !instance_exists(global.gauge_target)
-	exit
+if instance_exists(global.gauge_target) {
+	draw_set_alpha(global.gauge_alpha)
+	var gratio = global.gauge_hp / global.gauge_hp_max
+	var gsiz = gratio * screen_width * 0.5
+	var gcol1 = make_color_hsv(gratio * 40, 240, 96)
+	var gcol2 = make_color_hsv(gratio * 85, 240, 96)
 
-draw_set_alpha(global.gauge_alpha)
-var gratio = global.gauge_hp / global.gauge_hp_max
-var gsiz = gratio * screen_width * 0.5
-var gcol1 = make_color_hsv(gratio * 40, 240, 96)
-var gcol2 = make_color_hsv(gratio * 85, 240, 96)
+	var gdx = dx * 0.5
+	draw_sprite_part_ext(sGauge, 0, gsiz, gaugetexy, dx - gsiz, 12, gdx + gsiz, 880, 1, 1, gcol1, draw_get_alpha())
+	draw_sprite_part_ext(sGauge, 0, gsiz, gaugetexy + 4, dx - gsiz, 12, gdx + gsiz, 880, 1, 1, gcol1, draw_get_alpha())
 
-var gdx = dx * 0.5
-draw_sprite_part_ext(sGauge, 0, gsiz, gaugetexy, dx - gsiz, 12, gdx + gsiz, 880, 1, 1, gcol1, draw_get_alpha())
-draw_sprite_part_ext(sGauge, 0, gsiz, gaugetexy + 4, dx - gsiz, 12, gdx + gsiz, 880, 1, 1, gcol1, draw_get_alpha())
+	if gsiz != 0 {
+		draw_sprite_part_ext(sGauge, 0, 0, gaugetexy, gsiz, 12, gdx, 880, 1, 1, gcol2, draw_get_alpha())
+		draw_sprite_part_ext(sGauge, 0, 0, gaugetexy + 4, gsiz, 12, gdx, 880, 1, 1, gcol2, draw_get_alpha() * 0.5)
+	}
 
-if gsiz != 0 {
-	draw_sprite_part_ext(sGauge, 0, 0, gaugetexy, gsiz, 12, gdx, 880, 1, 1, gcol2, draw_get_alpha())
-	draw_sprite_part_ext(sGauge, 0, 0, gaugetexy + 4, gsiz, 12, gdx, 880, 1, 1, gcol2, draw_get_alpha() * 0.5)
+	draw_set_halign(1)
+	draw_set_valign(1)
+	draw_text_transformed(dx, 886, global.gauge_caption, 1, 1, 0)
+	draw_set_alpha(1)
 }
-
-draw_set_halign(1)
-draw_set_valign(1)
-draw_text_transformed(dx, 886, global.gauge_caption, 1, 1, 0)
-draw_set_alpha(1)
 
 if shadow_alpha > 0
 	draw_sprite_ext(sScreenShadow, 0, 0, 0, 1, 1, 0, $ffffff, shadow_alpha * 2)
@@ -48,7 +47,7 @@ if shadow_alpha > 0
 if fade_alpha > 0 {
 	draw_set_alpha(fade_alpha * 0.5)
 	draw_set_color(0)
-	draw_rectangle(0, 0, view_width, view_height, 0)
+	draw_rectangle(0, 0, screen_width, screen_height, 0)
 
 	if global.screenlock {
 		draw_set_alpha(fade_alpha * 3)

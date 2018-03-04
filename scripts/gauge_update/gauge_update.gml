@@ -4,7 +4,7 @@
 
 with (argument0) {
 	if !instance_exists(parent) {
-		global.gauge_count = hp_max
+		global.gauge_count = min(120, hp_max)
 		global.gauge_target = id
 
 		global.gauge_caption = name

@@ -2,6 +2,8 @@
 
 // General Screen
 event_user(0)
+
+capture = noone
 global.screenlock = false
 
 // Shake

@@ -58,14 +58,13 @@ game_set_speed(60, gamespeed_fps)
 randomize()
 
 // game
-global.paused = false
 global.extreme = false
 global.stage = 0 // 0: None, 1 ~ 9: Game, 10: Complete a mode
 
 global.enemy_dictionary = ds_map_create()
 
 global.area_list = array_create(6, noone)
-global.area_list[0] = oStageShape1
+global.area_list[0] = oStageShape2
 global.area_list[1] = oStageShape2
 global.area_list[2] = oStageShape2
 global.area_list[3] = oStageShape2
@@ -74,63 +73,17 @@ global.area_list[5] = oStageShape2
 
 #macro area_vspeed 0.5625 * 4
 
-#macro enemy_octagon_1		"eoctagon1" // shots 5 (blue octagon mk.1)
-#macro enemy_octagon_2		"eoctagon2" // shots 3, 3 times (blue octagon mk.2)
-#macro enemy_octagon_3		"eoctagon3" // Going up while shots 3, 3 times (blue octagon mk.3)
-#macro enemy_octagon_4		"eoctagon4" // shots 1, 3 times (blue octagon mk.4)
-#macro enemy_hexagon_1		"ehexagon1" // shots 1 for each 3 arm_number, 1 times (purple hexagon mk.1)
-#macro enemy_hexagon_2		"ehexagon2" // Falling while shots 1 for each 3 arm_number, 1 times (purple hexagon mk.2)
-#macro enemy_hexagon_3		"ehexagon3" // shots 3 for each 3 arm_number, 2 times, and change (purple hexagon mk.3)
-#macro enemy_spread_1			"espread1" // shots 4, 16 times, and change (green octagon mk.1)
-#macro enemy_spread_2			"espread2" // shots 4, 3 times (green octagon mk.2)
-#macro enemy_rectangle_1	"erect1" // shots 1, 4 times (coral rectangle mk.1)
-#macro enemy_rectangle_2	"erect2" // (coral rectangle mk.2)
-#macro enemy_circle_1			"ecircle1" // shots 12 around (gray circle mk.1)
-#macro enemy_circle_2			"ecircle2" // Jumping while shots 3 or shots 12 around (gray circle mk.2)
-#macro enemy_circle_3			"ecircle3" // shots 12 around to player (gray circle mk.3)
-
-#macro enemy_square_1			"fsquare1" // square
-#macro enemy_square_2			"fsquare2" // square with a turret
-#macro enemy_line_1				"fline1" // falls
-#macro enemy_joint_1			"fjoint1" // falls
-#macro enemy_joint_2			"fjoint2" // falls
-
-#macro enemy_arm_hexagon_1 "ahexagon1"
-#macro enemy_arm_spread_1 "aspread1"
-#macro enemy_arm_rectangle_1 "arect1"
-#macro enemy_arm_rectangle_2 "arect2"
-#macro enemy_arm_turret_1 "aturret1" // static, slow
-#macro enemy_arm_turret_2 "aturret2" // dynamic, slow
-#macro enemy_arm_turret_3 "aturret3" // dynamic, fast
-#macro enemy_arm_turret_4 "aturret4" // boss 1
-#macro enemy_arm_turret_5 "aturret4" // boss 2
-
-#macro enemy_boss_1 "eboss1"
-#macro enemy_boss_1A "eboss1a"
-#macro enemy_boss_1B "eboss1b"
-#macro enemy_boss_1C "eboss1c"
-#macro enemy_boss_2 "eboss2"
-#macro enemy_boss_2A "eboss2a"
-#macro enemy_boss_2B "eboss2b"
-#macro enemy_boss_2C "eboss2c"
-#macro enemy_boss_3 "eboss3"
-#macro enemy_boss_4 "eboss4"
-#macro enemy_boss_5 "eboss5"
-#macro enemy_boss_6 "eboss6"
+event_user(0)
 
 enemy_init_shape()
-
-// frames
-enemy_register(enemy_square_1, oFrameSquare, "STEEL FRAME", sFrameSquare, sFrameSquare, 
-30, 250, 2, 0, 0, 0, 0)
-
-enemy_register(enemy_square_2, oFrameTurretSquare, "STEEL FRAME", sFrameSquare, sFrameSquare, 
-33, 400, 2, 0, 0, 0, 0)
-
-enemy_register(enemy_joint_1, oFrameJoint, "STEEL FRAME", sFrameJoint, sFrameJoint, 
-20, 300, 2, 0, 0, 0, 0)
-
+enemy_init_frame()
 enemy_init_arm()
+
+enemy_register(enemy_rapid_1, oRapid, "RAPID PULSER", sRapidNormal, sRapidExtreme, 
+4, 500, 1, 0, 0, 0, 0)
+
+enemy_register(enemy_rapid_2, oConfuser, "RAPID PULSER", sRapidNormal, sRapidExtreme, 
+10, 600, 1, 0, 0, 0, 0)
 
 // constants for triggers of the area
 #macro areapush_object 0

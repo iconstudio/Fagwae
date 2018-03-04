@@ -1,19 +1,23 @@
 /// @description Drawing screen
 
 if !surface_exists(surf)
- event_user(0)
+	event_user(0)
 
-//if !global.screenlock {
- surface_set_target(surf)
- draw_surface_ext(application_surface, 0, 0, 1, 1, 0, $ffffff, 1)
- surface_reset_target()
-//}
+if !global.screenlock {
+	event_user(4)
+} else {
+	if sprite_exists(capture) {
+		surface_set_target(surf)
+		draw_sprite(capture, 0, 0, 0)
+		surface_reset_target()
+	}
+}
 
 gpu_set_blendmode_ext(bm_one, bm_zero)
 draw_surface_ext(surf, 0, 0, 1, 1, 0, $ffffff, 1)
 gpu_set_blendmode(bm_normal)
 
-if global.screenshake {
+if global.screenshake > 0 {
 	speed = global.screenshake
 	direction = (direction + random(80) + 140) mod 360
 	camera_set_view_pos(view_camera, hspeed, vspeed)
