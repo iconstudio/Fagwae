@@ -6,7 +6,7 @@ camera_projection_identity()
 // player
 player_counter = 60
 player_isfirst = true
-instance_create_layer(0, 0, "Backend", global.area_list[0] )
+instance_create_layer(0, 0, "Backend", global.area_list[0])
 global.stage = 1
 
 global.vscore = 0
@@ -22,10 +22,7 @@ shadow_alpha = 0
 global.screenshadowy = 0
 
 // fade
-fade_current = 0
-fade_target = 0
 fade_alpha = 0
-fade_easer = ease_straight
 
 // drawing hp bar
 global.gauge_count = 0

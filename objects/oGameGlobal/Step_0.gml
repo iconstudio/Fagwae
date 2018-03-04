@@ -1,26 +1,27 @@
 /// @description Update
 
-if fade_current < fade_target {
-	fade_alpha = script_execute(fade_easer, fade_current)
-	fade_current += 0.01
-} else if fade_current > fade_target {
-	fade_alpha = fade_current
-	fade_current -= 0.1
+if global.screenlock {
+	if fade_alpha < 1
+		fade_alpha += 0.1
+	else
+		fade_alpha = 1
 } else {
-	fade_current = fade_target
-	fade_alpha = fade_current
+	if fade_alpha > 0
+		fade_alpha -= 0.1
+	else
+		fade_alpha = 0
 }
 
 event_user(2)
 
-if !window_has_focus() and !global.screenlock and !global.paused
+if !window_has_focus() and !global.screenlock
 	game_pause()
-
-if global.screenlock or global.paused
-	exit
 
 if io_check_pressed_start() or io_check_pressed_select()
 	event_perform(ev_keypress, ord("P"))
+
+if global.screenlock
+	exit
 
 if global.screenshadowy > 0 {
 	shadow_alpha += (1 - shadow_alpha) * 0.333

@@ -1,4 +1,4 @@
-/// @description Create a surface
+/// @description Creating a surface
 
 surf = surface_create(view_width, view_height)
 global.surface_tex = surface_get_texture(surf)

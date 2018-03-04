@@ -4,6 +4,9 @@
 alarm[1] = 60
 available = false
 
+randomize()
+
+// fade others
 with oStageParent {
 	if id != other.id {
 		depth -= 1
