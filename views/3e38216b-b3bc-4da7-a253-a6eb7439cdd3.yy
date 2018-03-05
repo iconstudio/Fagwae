@@ -27,7 +27,8 @@
         "ba76b566-802f-4e67-9fbe-886e4d93041a",
         "1b15eb0b-066c-4f91-ae03-a46acfb6d50e",
         "50b1fbce-a576-4a1c-b6a9-d4557871b692",
-        "7c430564-63cf-4a0d-ab4c-24f19ac932ad"
+        "7c430564-63cf-4a0d-ab4c-24f19ac932ad",
+        "c085cc95-ab8b-475d-9b90-e1cd1f48279b"
     ],
     "filterType": "GMObject",
     "folderName": "Shapes",

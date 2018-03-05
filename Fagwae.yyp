@@ -1839,6 +1839,14 @@
             }
         },
         {
+            "Key": "c085cc95-ab8b-475d-9b90-e1cd1f48279b",
+            "Value": {
+                "id": "1b9c8c6e-8abd-42dc-a295-6b23f7c771a4",
+                "resourcePath": "objects\\oBoss2Core\\oBoss2Core.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c2bb1fda-0b81-48d6-8c12-d0f4431f5a5f",
             "Value": {
                 "id": "313d5c17-859e-4a06-b0dd-8a368e68dfe9",
