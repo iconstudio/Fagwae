@@ -21,7 +21,7 @@ if enable {
 if homing {
 	gravity = 0
 } else {
-	gravity = 0.35
+	gravity = 0.3
 	if vspeed > 4
 		vspeed = 4
 }

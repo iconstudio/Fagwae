@@ -44,10 +44,17 @@ enemy_register(enemy_circle_2, oCircleJumper, "CIRCLE", sCircleNormal, sCircleEx
 
 // boses
 enemy_register(enemy_boss_1, oBoss1Core, "SUPER HEXAGON", sBoss1A, sBoss1A, 
-1100, 5400, 1, 0, 6, $B77599, $B77599)
+900, 5400, 1, 0, 6, $B77599, $B77599)
 enemy_register(enemy_boss_1A, oBoss1A, "SUPER HEXAGON", sBoss1A, sBoss1A, 
-160, 600, 1, 0, 6, 0, 0)
+120, 540, 1, 0, 6, 0, 0)
 enemy_register(enemy_boss_1B, oBoss1B, "SUPER HEXAGON", sBoss1B, sBoss1B, 
-140, 600, 1, 0, 6, 0, 0)
+100, 540, 1, 0, 6, 0, 0)
 enemy_register(enemy_boss_1C, oBoss1C, "SUPER HEXAGON", sBoss1C, sBoss1C, 
-100, 600, 1, 0, 6, 0, 0)
+80, 540, 1, 0, 6, 0, 0)
+
+enemy_register(enemy_boss_2, oBoss2Core, "SUPER CIRCLE", sBoss2A, sBoss2A, 
+1000, 6000, 3, 0, 72, $3B3B3B, $3B3B3B)
+enemy_register(enemy_boss_2B, oBoss2B, "SHIELD", sBoss2B, sBoss2B, 
+300, 600, 1, 0, 6, $3B3B3B, $3B3B3B)
+enemy_register(enemy_boss_2C, oBoss2C, "ANGULAR", sBoss2C, sBoss2C, 
+400, 600, 1, 0, 6, $3B3B3B, $3B3B3B)
