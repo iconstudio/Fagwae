@@ -10,6 +10,8 @@ for (var i = 0; i < arm_number; ++i) {
 
 bullet_clear()
 
+pattern = -1
+pattern_opened = true
 dead = false
 
 for (var i = 0; i < 7; ++i)

@@ -1,6 +1,10 @@
 /// @description Dying
 
 enemy_arm_explode()
+with glove_left
+	event_user(0)
+with glove_right
+	event_user(0)
 
 dead = true
 //show_polygon(x, y, 6, 160, polycol, polygon)
