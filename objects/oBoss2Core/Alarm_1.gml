@@ -20,4 +20,6 @@ if ++shot_count < 5 {
 
 	for (var i = 0; i < counter; ++i)
 		enemy_shot(x, y, shot_speed, shot_angular + i * 15)
+
+	shot_count = 0
 }

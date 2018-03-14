@@ -45,7 +45,7 @@ if global.extreme {
 	pattern01_list = [1, 2, 5, 1]
 }
 
-rotataion = 0
+rotation = 0
 
 shot_count = 0
-shot_speed = 6.5 + global.stage * 0.25
+shot_speed = 5.5 + global.stage * 0.25

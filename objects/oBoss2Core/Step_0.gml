@@ -10,11 +10,16 @@ if pattern == 0 {
 			pattern_opened = true
 		}
 	}
-
-	rotataion += 4
 } else if pattern == 1 {
 	if !pattern_opened { // only at first
 			alarm[1] = 20 - global.extreme * 10
+			pattern_opened = true
+			shot_count = 0
+		}
+} else if pattern == 2 { // loop begin
+	if !pattern_opened {
+		//show_error("Error when boss 2", true)
+			path_start(pathBoss2_1, 4, path_action_stop, false)
 			pattern_opened = true
 			shot_count = 0
 		}
