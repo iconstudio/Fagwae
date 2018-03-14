@@ -12,7 +12,7 @@ if y >= 170 {
 }
 
 if vspeed == 0 && hp > 0 {
-	x = screen_width * 0.5 + lengthdir_x(mdist * 4, angle * 3)
+	x = room_width * 0.5 + lengthdir_x(mdist * 4, angle * 3)
 	y = fixy + lengthdir_y(mdist, angle * 6)
 
 	if mdist < 32
