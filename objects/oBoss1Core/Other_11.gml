@@ -1,6 +1,6 @@
 /// @description Creation
 
-x = view_width * 0.5
+x = room_width * 0.5
 y = -80
 fixy = y
 

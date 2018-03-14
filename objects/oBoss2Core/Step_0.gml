@@ -1,27 +1,31 @@
 /// @description 
 
-if y >= 170 {
-	if vspeed >= 0.05 {
-		vspeed -= 0.04
-	} else {
-		if vspeed != 0 {
-			vspeed = 0
-			fixy = y
+if pattern == 0 {
+	if y > 400 { // next phase
+		pattern = 1
+		pattern_opened = false
+	} else { // 확산탄
+		if !pattern_opened { // only at first
+			alarm[0] = 10
+			pattern_opened = true
 		}
 	}
+} else if pattern == 1 {
+	if !pattern_opened { // only at first
+			alarm[1] = 20 - global.extreme * 10
+			pattern_opened = true
+			shot_count = 0
+		}
+} else if pattern == 2 { // loop begin
+	if !pattern_opened {
+		//show_error("Error when boss 2", true)
+			path_start(pathBoss2_1, 4, path_action_stop, false)
+			pattern_opened = true
+			shot_count = 0
+		}
 }
 
-if vspeed == 0 && hp > 0 {
-	x = screen_width * 0.5 + lengthdir_x(mdist * 4, angle * 3)
-	y = fixy + lengthdir_y(mdist, angle * 6)
-
-	if mdist < 32
-		mdist += 0.1
-} else {
-	y += 0.4
-}
-
-if !dead {
-	angle += 0.2
-	dangle += 2
-}
+with glove_left
+	pattern = other.pattern
+with glove_right
+	pattern = other.pattern

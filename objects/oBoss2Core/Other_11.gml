@@ -2,11 +2,10 @@
 
 /* 패턴: 1945 Strikers PLUS 의 6 탄 보스를 참고.
 	하나의 코어 (A)
-	두개의 가림막 (B)
-	3개의 팔 (C)
-	코어를 감싼 수많은 조각들 (사각형을 두름)
+	3개의 가림막 (B)
+	2개의 팔 (C)
 	
-	0. 처음에만, 등장하자마자 빠르게 전전히며 팔을 앞으로 휘저음.  (익스트림에선 확산탄 사격)
+	0. 처음에만 등장하자마자 빠르게 전진하며 팔을 앞으로 휘저음. (익스트림에선 확산탄 사격)
 	
 	1. 다시 뒤로 물러나며 조준탄 사격.
 	
@@ -28,20 +27,25 @@
 	9. 다시 중앙으로 이동 후에 패턴 2로 반복.
 */
 
-x = view_width * 0.5
+x = room_width * 0.5
 y = -120
-fixy = y
 
-vspeed = 8
+enemy_arm_init(enemy_boss_2B, 3, 30)
 
-mdist = 0
-dangle = random(360)
-angle = 0
+glove_left = enemy_create(enemy_boss_2C, x - 100, y + 100, LEFT, 0, id, "Boss_C")
+glove_right = enemy_create(enemy_boss_2C, x + 100, y + 100, RIGHT, 0, id, "Boss_C")
 
-arm_instances = []
-arm_number = 0
-arm_count = 0
-arm_width = point_distance(lengthdir_x(1, 0), lengthdir_y(1, 0), lengthdir_x(1, 120), lengthdir_y(1, 120))
-ccnt = 0
+path_start(pathBoss2_0, 7, path_action_stop, false)
+pattern = 0
+pattern_opened = false
 
-abool = 0
+if global.extreme {
+	pattern01_list = [1, 4, 5, 3]
+} else {
+	pattern01_list = [1, 2, 5, 1]
+}
+
+rotation = 0
+
+shot_count = 0
+shot_speed = 5.5 + global.stage * 0.25

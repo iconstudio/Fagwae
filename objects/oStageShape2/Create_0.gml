@@ -33,7 +33,7 @@ if global.extreme {
 } else {
 	area_enemy_push(60, enemy_spread_1, 0, 120, -48)
 }
-*/
+
 area_delay_push(90)
 
 area_enemy_push(30, enemy_line_2, 1, 345, -600)
@@ -45,7 +45,9 @@ area_enemy_push(60, enemy_line_2, 0, 508, -500)
 
 for (; i < 4; ++i)
 	area_enemy_push(40 + random(i) * 5, enemy_line_2, i & 1, min(max(20, 40 + (i * 219) mod 540), 520), -500)
-area_enemy_push(60, enemy_line_2, 0, 418, -600)
 
+area_script_push(0, script_await_dying, 0, 0, 0)
+area_enemy_push(120, enemy_line_2, 0, 418, -600)
+*/
 area_script_push(0, script_boss_apear, 0, 0, 0)
 area_enemy_push(0, enemy_boss_2, 0, 270, -128)

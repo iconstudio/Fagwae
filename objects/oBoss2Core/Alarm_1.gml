@@ -1,17 +1,25 @@
-/// @description Attacking
+/// @description Patern 1
 
-if abool { // straight
-	var scnt = round(10 - arm_count * 0.5) + global.extreme * 4
-	var ddir = 360 / scnt
-	for (var i = 0; i < scnt; ++i)
-		enemy_shot(x, y, 3 + global.stage / 6, angle * 19 + ddir * i, oEnemyBullet2)
-} else { // reverse
-	var scnt = round(10 - arm_count * 0.5) + global.extreme * 4
-	var ddir = 360 / scnt
-	for (var i = 0; i < scnt; ++i)
-		enemy_shot(x, y, 4 + global.stage * 0.2, -angle * 19 + ddir * i + 180)
+var pd = point_direction(x, y, global.px, global.py)
+
+if ++shot_count < 5 {
+	var counter = pattern01_list[shot_count - 1]
+	var shot_angular
+	if counter == 1
+		shot_angular = pd
+	else
+		shot_angular = pd - counter * 6.5
+
+	for (var i = 0; i < counter; ++i)
+		enemy_shot(x, y, shot_speed, shot_angular + i * 13)
+
+	alarm[1] = max(8, 20 - global.extreme * 10 - global.stage * 4)
+} else if global.extreme {
+	var counter = 8
+	var shot_angular = pd - counter * 7.5
+
+	for (var i = 0; i < counter; ++i)
+		enemy_shot(x, y, shot_speed, shot_angular + i * 15)
+
+	shot_count = 0
 }
-
-abool = !abool
-
-alarm[1] = max(1, 15 - global.stage * 0.2 - global.extreme * 2)

@@ -3,9 +3,9 @@
 var radir = random(360)
 var radis = random(instance_number(oEnemyParent) * 6 + 36)
 
-for (var i = 0; i < arm_count; ++i) {
+for (var i = 0; i < arm_number; ++i) {
 	if instance_exists(arm_instances[i]) {
-		if random(10) < 1 {
+		if random(10) < 5 {
 			with arm_instances[i]
 				event_user(0)
 			break
