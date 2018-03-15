@@ -41,12 +41,17 @@ pattern_await = 0
 
 if global.extreme {
 	pattern01_list = [1, 4, 5, 3]
+	pattern04_list = [3, 6, 5]
 } else {
 	pattern01_list = [1, 2, 5, 1]
+	pattern04_list = [1, 3, 2]
 }
 pattern02_count = 0
 pattern03_count = 0
+pattern04_count = 0
 pattern04_picked = choose(LEFT, RIGHT)
+pattern05_count = 0
+pattern05_tempo = 0
 
 rotation = 0
 

@@ -9,7 +9,7 @@ if dead or (shot_count == 0 and pattern != 2) {
 	exit
 }
 
-if hp < hp_max * 0.5
+if hp <= hp_max * 0.5
 	enemy_shot(x, y, shot_speed, pd + lengthdir_y(20, hp))
 if global.extreme
 	enemy_shot(x, y, shot_speed, pd)

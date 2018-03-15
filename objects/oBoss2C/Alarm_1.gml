@@ -3,7 +3,7 @@
 if dead or pattern != 2
 	exit
 
-if global.extreme {
+if global.extreme and shot_count == 4 {
 	var pd = point_direction(x, y, global.px, global.py)
 	enemy_shot(x, y, shot_speed + 1, pd)
 }
