@@ -6,10 +6,9 @@ if y >= 800
 var pd = point_direction(x, y, global.px, global.py)
 
 if shot_mode == 0 {
-	shot_count++
 	enemy_shot(x, y, shot_speed, pd)
 
-	if shot_count == 0 {
+	if shot_count++ == 0 {
 		alarm[0] = max(8, 16 - global.stage) + 6
 	} else if shot_count < 2 + global.extreme + floor(global.stage * 0.333) {
 		if global.extreme
