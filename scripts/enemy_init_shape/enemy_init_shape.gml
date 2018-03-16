@@ -26,7 +26,7 @@ enemy_register(enemy_spread_1, oOctagonSpreader, "SPREADING OCTAGON", sOctagonSp
 45, 2000, 1, 0, 8, $389450, $3F6629)
 
 enemy_register(enemy_spread_2, oOctagonArtillery, "SPREADING OCTAGON", sOctagonSpreaderNormal, sOctagonSpreaderExtreme, 
-70, 8000, 2, 0, 8, $389450, $3F6629)
+60, 8000, 2, 0, 8, $389450, $3F6629)
 
 // rectangles
 enemy_register(enemy_rectangle_1, oRectangleLauncher, "RECTANGLE", sRectangleNormal, sRectangleExtreme, 

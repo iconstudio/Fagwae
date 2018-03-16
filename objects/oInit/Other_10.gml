@@ -1,5 +1,15 @@
 /// @description Defining macros
 
+// constants for triggers of the area
+#macro areapush_object 0
+#macro areapush_enemy 1
+#macro areapush_message 2
+#macro areapush_script 3
+#macro areapush_global 4
+#macro areapush_delay 5
+#macro LEFT 0
+#macro RIGHT 1
+
 #macro enemy_octagon_1		"eoctagon1"		// shots 5 (blue octagon mk.1)
 #macro enemy_octagon_2		"eoctagon2"		// shots 3, 3 times (blue octagon mk.2)
 #macro enemy_octagon_3		"eoctagon3"		// goes up while shots 3, 3 times (blue octagon mk.3)
@@ -12,12 +22,14 @@
 #macro enemy_rectangle_2	"erect2"			// (coral rectangle mk.2)
 #macro enemy_circle_1			"ecircle1"		// shots 12 around (gray circle mk.1)
 #macro enemy_circle_2			"ecircle2"		// Jumping while shots 3 or shots 12 around (gray circle mk.2)
+
 #macro enemy_square_1			"fsquare1"		// square
 #macro enemy_square_2			"fsquare2"		// square with a turret
 #macro enemy_line_1				"fline1"			// falls while getting closer to player
 #macro enemy_line_2				"fline2"			// falls
 #macro enemy_joint_1			"fjoint1"			// falls
 #macro enemy_joint_2			"fjoint2"			// falls
+
 #macro enemy_rapid_1			"irapid1"			// shots 3 fast and tracks player
 #macro enemy_rapid_2			"irapid2"			// shots 3 fast, randomly path
 #macro enemy_rapid_3			"irapid3"			// shots 1 fast, launched by boss
