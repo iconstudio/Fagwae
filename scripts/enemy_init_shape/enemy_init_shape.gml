@@ -53,8 +53,8 @@ enemy_register(enemy_boss_1C, oBoss1C, "SUPER HEXAGON", sBoss1C, sBoss1C,
 80, 540, 1, 0, 6, 0, 0)
 
 enemy_register(enemy_boss_2, oBoss2Core, "SUPER CIRCLE", sBoss2A, sBoss2A, 
-1000, 6000, 3, 0, 72, $3B3B3B, $3B3B3B)
+900, 6000, 3, 0, 72, $3B3B3B, $3B3B3B)
 enemy_register(enemy_boss_2B, oBoss2B, "SHIELD", sBoss2B, sBoss2B, 
-300, 600, 1, 0, 6, $3B3B3B, $3B3B3B)
+300, 0, 0, 0, 0, $3B3B3B, $3B3B3B)
 enemy_register(enemy_boss_2C, oBoss2C, "ANGULAR", sBoss2C, sBoss2C, 
-400, 600, 1, 0, 6, $3B3B3B, $3B3B3B)
+400, 0, 1, 0, 4, $3B3B3B, $3B3B3B)
