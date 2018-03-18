@@ -9,7 +9,6 @@ randomize()
 // fade others
 with oStageParent {
 	if id != other.id {
-		depth -= 1
 		back_mode = 1 // the others would be gone
 	}
 }
@@ -17,6 +16,7 @@ with oStageParent {
 // flags
 flag_boss = false
 flag_stop = false
+flag_await_die = false
 
 // for stage title (each stage)
 alarm[2] = 1

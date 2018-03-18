@@ -70,6 +70,10 @@ if trigger_counter-- <= 0 {
 				prohibit_push[prohibit_count++] = instance_last
 			} else {
 				instance_last = enemy_create(data, cx, cy, dother)
+				if flag_await_die {
+					prohibit_push[prohibit_count++] = instance_last
+					flag_await_die = false
+				}
 			}
 			break
 

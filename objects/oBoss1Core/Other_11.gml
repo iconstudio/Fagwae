@@ -1,6 +1,6 @@
 /// @description Creation
 
-x = view_width * 0.5
+x = room_width * 0.5
 y = -80
 fixy = y
 
@@ -19,6 +19,3 @@ ccnt = 0
 abool = 0
 alarm[0] = 90
 alarm[1] = 140
-
-polygon = 6
-polycol = make_color_rgb(153, 117, 183)

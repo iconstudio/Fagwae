@@ -1,25 +1,84 @@
-/// @description Dying
+/// @description Pattern 3
 
-enemy_arm_explode()
+if dead or (shot_count < 10 and pattern != 3)
+	exit
 
-dead = true
-//show_polygon(x, y, 6, 160, polycol, polygon)
-enemy_explode(25, 256, 9, 9)
+if shot_count == 0
+	enemy_shot(x, y, shot_speed, point_direction(x, y, global.px, global.py))
 
-if global.extreme
-	instance_create_layer(x, y, "Player", oPlayerLife)
-with instance_create_layer(x, y, "Backend", global.area_list[++global.stage]){
-	back_color = oStageShape1.back_color
-	square_saturation = oStageShape1.square_saturation
+var i, lx, ly, lang
+if global.extreme {
+	for (i = 0; i < 2; ++i) {
+		lang = 130 + shot_count * 10
+		lx = x + lengthdir_x(20, lang)
+		ly = y + lengthdir_y(20, lang)
+		with enemy_shot(lx, ly, shot_speed, lang - 14)
+			motion_add(direction + 90, 1)
+		with enemy_shot(lx, ly, shot_speed, lang + 14)
+			motion_add(direction + 90, 1)
+	}
 
-	back_alpha = oStageShape1.back_alpha
-	background_param = oStageShape1.background_param
-	scroll = oStageShape1.scroll
-	rotation = oStageShape1.rotation
-	brightness = oStageShape1.brightness
-	score_alpha = oStageShape1.score_alpha
-	score_rotation = oStageShape1.score_rotation
-	score_wave = oStageShape1.score_wave
+	for (i = 0; i < 2; ++i) {
+		lang = 50 - shot_count * 10
+		lx = x + lengthdir_x(20, lang)
+		ly = y + lengthdir_y(20, lang)
+		with enemy_shot(lx, ly, shot_speed, lang - 14)
+			motion_add(direction - 90, 1)
+		with enemy_shot(lx, ly, shot_speed, lang + 14)
+			motion_add(direction - 90, 1)
+	}
+} else {
+
+	for (i = 0; i < 2; ++i) {
+		if hp > hp_max * 0.5
+			lang = 290 + shot_count * 10
+		else
+			lang = 276 + shot_count * 10
+		lx = x + lengthdir_x(20, lang)
+		ly = y + lengthdir_y(20, lang)
+		with enemy_shot(lx, ly, shot_speed, lang - 14)
+			motion_add(direction + 90, 1)
+		with enemy_shot(lx, ly, shot_speed, lang + 14)
+			motion_add(direction + 90, 1)
+	}
+
+	for (i = 0; i < 2; ++i) {
+		if hp > hp_max * 0.5
+			lang = 250 - shot_count * 10
+		else
+			lang = 264 - shot_count * 10
+		lx = x + lengthdir_x(20, lang)
+		ly = y + lengthdir_y(20, lang)
+	with enemy_shot(lx, ly, shot_speed, lang - 14)
+			motion_add(direction - 90, 1)
+		with enemy_shot(lx, ly, shot_speed, lang + 14)
+			motion_add(direction - 90, 1)
+	}
 }
 
-instance_destroy()
+if ++shot_count < 20 {
+	alarm[3] = 6 - global.extreme * 2
+} else if pattern == 3 {
+	shot_count = 0
+
+	var target_count = 2
+	if hp <= hp_max * 0.5
+		target_count = 1
+	if ++pattern03_count > target_count {
+		pattern = 4
+		pattern_opened = false
+		pattern03_count = 0
+		shot_count = 0
+
+		if global.extreme {
+			if global.px < x
+				pattern04_picked = LEFT
+			else
+				pattern04_picked = RIGHT
+		} else {
+			pattern04_picked = choose(LEFT, RIGHT)
+		}
+	} else {
+		alarm[3] = 20 - global.extreme * 8
+	}
+}

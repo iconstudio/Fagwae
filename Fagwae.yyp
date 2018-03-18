@@ -303,6 +303,14 @@
             }
         },
         {
+            "Key": "25ae6e73-edbc-427c-9252-c33bfe1de962",
+            "Value": {
+                "id": "ca644826-aa3c-4ee0-a606-a64446fabfbe",
+                "resourcePath": "paths\\pathBoss2_0\\pathBoss2_0.yy",
+                "resourceType": "GMPath"
+            }
+        },
+        {
             "Key": "263e0311-d862-46ea-b5b0-6bec81ec7cb6",
             "Value": {
                 "id": "2f40c9bf-0989-46f7-8671-6bc30e8e4a3b",
@@ -348,6 +356,14 @@
                 "id": "9ee6360f-775f-42dc-95a1-f0b360a07946",
                 "resourcePath": "objects\\oFrameLine2\\oFrameLine2.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "2dfcee75-92be-40e7-b171-386096719d62",
+            "Value": {
+                "id": "143c740e-c6fc-461e-809e-53633915063d",
+                "resourcePath": "scripts\\script_await_dying\\script_await_dying.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -751,6 +767,14 @@
             }
         },
         {
+            "Key": "551b4752-ca4b-4e46-aba0-eab0d7232456",
+            "Value": {
+                "id": "9feba7c5-83d1-46c5-9823-8a0d52df1df0",
+                "resourcePath": "paths\\pathBoss2_1\\pathBoss2_1.yy",
+                "resourceType": "GMPath"
+            }
+        },
+        {
             "Key": "5534e4aa-6134-4b5c-b314-890314c78163",
             "Value": {
                 "id": "6275aea4-05a6-4e52-8425-8367f968f8f8",
@@ -1012,6 +1036,14 @@
                 "id": "3e0b1013-f5c3-48e8-b897-b4005babde5c",
                 "resourcePath": "scripts\\char_check\\char_check.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "73f67e08-ce48-4f71-8ead-bdf113594758",
+            "Value": {
+                "id": "e003ae25-f68d-425d-b4ec-168359753ab2",
+                "resourcePath": "paths\\pathBoss2_2\\pathBoss2_2.yy",
+                "resourceType": "GMPath"
             }
         },
         {
@@ -2594,6 +2626,7 @@
         "9a421c59-3b9a-4823-8608-ac49d54bd849",
         "85ab0339-162f-4009-a77f-db4dc9b9485b",
         "ee964cc9-ae30-4a82-9c9d-2ca002662a28",
+        "2dfcee75-92be-40e7-b171-386096719d62",
         "92050eab-4524-4082-91b7-91464dde57e3",
         "a1c15792-658b-432a-9707-fd5567711059",
         "3a12875c-0641-4f7a-ac8d-e9cabfa99dbb",
