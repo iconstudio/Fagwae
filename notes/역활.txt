@@ -3,6 +3,5 @@
 - oBackParent: 모든 배경의 부모. 테마마다 하나 씩 존재한다. 
 
 - oAreaShapeParent: 'Shape' 테마 스테이지들의 부모 (한 스테이지 당 하나)
-- oBackShape: 'Shape' 테마의 배경의 부모. (유일)
 
 - oAreaShape1: 'Shape' 테마의 첫 번째 스테이지

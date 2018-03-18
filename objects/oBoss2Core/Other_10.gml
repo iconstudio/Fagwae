@@ -17,5 +17,6 @@ dead = false
 for (var i = 0; i < 7; ++i)
 	alarm[i] = -1
 
-alarm[9] = 40
+alarm[8] = 2
+alarm[9] = 60
 
