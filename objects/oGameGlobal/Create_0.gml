@@ -2,6 +2,12 @@
 
 camera_projection_identity()
 
+// bgm
+global.music_current = audio_sound_gain(musicMainMenu, 0, 2000)
+alarm[3] = 120
+
+global.music_before = noone
+
 // initiator
 // player
 player_counter = 60
@@ -35,8 +41,3 @@ global.gauge_hp_max = 0
 
 gaugetexy = 0
 gaugerots = 0
-
-// bgm
-audio_play_sound(musicStage1, 100, true)
-audio_sound_gain(musicMainMenu, 0, 2000)
-alarm[3] = 120

@@ -377,8 +377,8 @@
         },
         {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
-            "name": "Score",
-            "id": "431eebb4-a5b3-487d-8863-ce7ff4626b25",
+            "name": "Entrance",
+            "id": "2834b660-9762-462b-b8b9-e172eadb2b94",
             "depth": 1200,
             "grid_x": 32,
             "grid_y": 32,
@@ -403,8 +403,8 @@
         },
         {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
-            "name": "Entrance",
-            "id": "2834b660-9762-462b-b8b9-e172eadb2b94",
+            "name": "Score",
+            "id": "431eebb4-a5b3-487d-8863-ce7ff4626b25",
             "depth": 1300,
             "grid_x": 32,
             "grid_y": 32,

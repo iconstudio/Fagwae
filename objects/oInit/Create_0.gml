@@ -63,13 +63,7 @@ global.stage = 0 // 0: None, 1 ~ 9: Game, 10: Complete a mode
 
 global.enemy_dictionary = ds_map_create()
 
-global.area_list = array_create(6, noone)
-global.area_list[0] = oStageShape2
-global.area_list[1] = oStageShape2
-global.area_list[2] = oStageShape2
-global.area_list[3] = oStageShape2
-global.area_list[4] = oStageShape2
-global.area_list[5] = oStageShape2
+global.area_list = [oStageShape1, oStageShape2, oStageShape3]
 
 #macro area_vspeed 0.5625 * 4
 
@@ -84,16 +78,6 @@ enemy_register(enemy_rapid_1, oRapid, "RAPID PULSER", sRapidNormal, sRapidExtrem
 
 enemy_register(enemy_rapid_2, oConfuser, "RAPID PULSER", sRapidNormal, sRapidExtreme, 
 10, 600, 1, 0, 0, 0, 0)
-
-// constants for triggers of the area
-#macro areapush_object 0
-#macro areapush_enemy 1
-#macro areapush_message 2
-#macro areapush_script 3
-#macro areapush_global 4
-#macro areapush_delay 5
-#macro LEFT 0
-#macro RIGHT 1
 
 // gamepad input
 global.Gamepad = -1

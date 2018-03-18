@@ -13,6 +13,6 @@ for (var i = 0; i < arm_number; ++i) {
 	}
 }
 
-enemy_explode(10 + irandom(5), 0, 2 + irandom(2), 0, lengthdir_x(radis, radir), lengthdir_y(radis, radir))
+enemy_explode(5 + irandom(5), 8, 2 + irandom(3), 0, lengthdir_x(radis, radir), lengthdir_y(radis, radir))
 
-alarm[2] = 12 + random(3)
+alarm[8] = 12 + random(10)

@@ -26,7 +26,7 @@ enemy_register(enemy_spread_1, oOctagonSpreader, "SPREADING OCTAGON", sOctagonSp
 45, 2000, 1, 0, 8, $389450, $3F6629)
 
 enemy_register(enemy_spread_2, oOctagonArtillery, "SPREADING OCTAGON", sOctagonSpreaderNormal, sOctagonSpreaderExtreme, 
-70, 8000, 2, 0, 8, $389450, $3F6629)
+60, 8000, 2, 0, 8, $389450, $3F6629)
 
 // rectangles
 enemy_register(enemy_rectangle_1, oRectangleLauncher, "RECTANGLE", sRectangleNormal, sRectangleExtreme, 
@@ -44,7 +44,7 @@ enemy_register(enemy_circle_2, oCircleJumper, "CIRCLE", sCircleNormal, sCircleEx
 
 // boses
 enemy_register(enemy_boss_1, oBoss1Core, "SUPER HEXAGON", sBoss1A, sBoss1A, 
-900, 5400, 1, 0, 6, $B77599, $B77599)
+90, 5400, 1, 0, 6, $B77599, $B77599)
 enemy_register(enemy_boss_1A, oBoss1A, "SUPER HEXAGON", sBoss1A, sBoss1A, 
 120, 540, 1, 0, 6, 0, 0)
 enemy_register(enemy_boss_1B, oBoss1B, "SUPER HEXAGON", sBoss1B, sBoss1B, 
