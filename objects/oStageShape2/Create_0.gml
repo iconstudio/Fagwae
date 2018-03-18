@@ -54,5 +54,3 @@ area_enemy_push(120, enemy_line_2, 0, 318, -600)
 area_script_push(0, script_boss_apear, 0, 0, 0)
 area_enemy_push(0, enemy_boss_2, 0, 270, -128)
 
-area_delay_push(240)
-area_script_push(0, area_goto_next, 0, 0, 0)

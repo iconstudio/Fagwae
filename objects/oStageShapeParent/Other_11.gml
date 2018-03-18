@@ -1,8 +1,4 @@
-/// @description Drawing background colors
-
-draw_set_alpha(1)
-draw_set_color(back_color)
-draw_rectangle(-32, -32, 572, 992, false)
+/// @description Drawing
 
 var i, lx, ly
 for (i = dcnt1; i <= 3; ++i) {

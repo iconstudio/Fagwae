@@ -1,9 +1,9 @@
 /// @description area_goto_next()
 /// @function area_goto_next
 
-var area = id
-
-instance_destroy()
+var area = noone
+with oStageParent
+	area = id
 
 with instance_create_layer(x, y, "Backend", global.area_list[++global.stage]){
 	back_color = area.back_color
@@ -14,7 +14,7 @@ with instance_create_layer(x, y, "Backend", global.area_list[++global.stage]){
 	scroll = area.scroll
 	rotation = area.rotation
 	brightness = area.brightness
-	score_alpha = area.score_alpha
-	score_rotation = area.score_rotation
-	score_wave = area.score_wave
 }
+
+with area
+	instance_destroy()

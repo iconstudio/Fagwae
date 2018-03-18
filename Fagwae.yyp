@@ -74,7 +74,7 @@
             "Key": "07e1eafb-4efb-409f-b17f-a8e63c41f9e5",
             "Value": {
                 "id": "2dd7aa6f-3da7-4161-a072-d4115888f802",
-                "resourcePath": "objects\\oBackground\\oBackground.yy",
+                "resourcePath": "objects\\oScore\\oScore.yy",
                 "resourceType": "GMObject"
             }
         },

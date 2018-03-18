@@ -24,9 +24,12 @@ scroll = 0
 rotation = 0
 brightness = 0
 
+var layer_id = layer_get_id("Background_Color")
+background_id = layer_background_get_id(layer_id)
+
 // score
-if !instance_exists(oBackground)
-	instance_create_layer(0, 0, "Score", oBackground)
+if !instance_exists(oScore)
+	instance_create_layer(0, 0, "Score", oScore)
 
 // create backbuffer surface
 event_user(0)
