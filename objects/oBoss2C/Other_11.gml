@@ -5,6 +5,7 @@ fade_mode = 0
 image_xscale = 0
 image_yscale = 0
 
+// patterns
 pattern = 0
 pattern_before = 0
 pattern_opened = false
@@ -15,6 +16,7 @@ pattern04_ended = false
 pattern05_rotation = 0
 pattern05_position = 0
 
+// coordinates
 width = 80
 if type_create == LEFT
 	angular = 225
