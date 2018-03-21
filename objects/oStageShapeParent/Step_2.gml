@@ -2,9 +2,6 @@
 
 event_inherited()
 
-if !available
-	exit
-
 square_saturation += 0.1
 background_param += (0.1 * 192 - 5) / 192
 scroll += 0.75
