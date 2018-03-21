@@ -5,7 +5,7 @@ var area = noone
 with oStageParent
 	area = id
 
-with instance_create_layer(x, y, "Backend", global.area_list[++global.stage]){
+with instance_create_layer(0,  0, "Backend", global.area_list[++global.stage]){
 	back_color = area.back_color
 	square_saturation = area.square_saturation
 

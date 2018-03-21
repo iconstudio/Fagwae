@@ -10,8 +10,10 @@ else
 
 if prohibit_count > 0 {
 	for (var i = 0; i < prohibit_count; ++i) {
-		if instance_exists(prohibit_push[i])
+		if instance_exists(prohibit_push[i]) {
+			//show_debug_message(object_get_name(prohibit_push[i].object_index) + " is distracted.")
 			exit
+		}
 	}
 }
 
