@@ -4,12 +4,6 @@
     "mvc": "1.1",
     "name": "316e1a7b-587c-4cac-ab24-6f21faff352e",
     "children": [
-        "4da2b5a2-ecb7-4f21-bac0-d26a882c4f13",
-        "60e822a2-f4a4-4952-ac3e-997144460af8",
-        "bedcb28f-3141-4278-8d8e-b33b20e7ec73",
-        "ba47441b-5eab-4fa9-a4ee-7671c12e007b",
-        "94fc85b5-c66d-4f2e-ac30-8cc1fa33ae58",
-        "94f21c2a-780a-42cd-a50c-6254e2bc9f04",
         "f3395f44-1094-4c54-afdd-2b6f2100e643",
         "5313dabf-ae83-49ce-820a-681827c3bc2b",
         "271a397f-372c-40bd-a73f-0d79a32f7439",
@@ -24,8 +18,8 @@
         "a8ce7605-f771-4e26-9ea6-a9b63ed051d2",
         "9a421c59-3b9a-4823-8608-ac49d54bd849",
         "85ab0339-162f-4009-a77f-db4dc9b9485b",
-        "ee964cc9-ae30-4a82-9c9d-2ca002662a28",
-        "2dfcee75-92be-40e7-b171-386096719d62"
+        "2dfcee75-92be-40e7-b171-386096719d62",
+        "cdd5157e-c0f8-4065-8ba5-f3811a36d61e"
     ],
     "filterType": "GMScript",
     "folderName": "In-Game",

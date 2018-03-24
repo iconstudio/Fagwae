@@ -5,12 +5,6 @@ draw_set_alpha(1 - ipush)
 var dx = global.screen_gui_cx
 var dy = screen_height - 8 + ipush * 16
 
-if global.player_fever_laser > 0 {
-	var division = global.player_fever_laser * 0.10
-	draw_set_color(make_color_hsv(30, (1 - division) * 255, 64 + division * 127 + lengthdir_y(64, gaugerots)))
-	draw_rectangle(10, dy - 2, 26, dy - 2 - division * 20, 0)
-}
-
 draw_set_color($ffffff)
 draw_set_halign(1)
 draw_set_valign(1)
@@ -58,3 +52,17 @@ if fade_alpha > 0 {
 	}
 }
 draw_set_alpha(1)
+
+if global.player_fever_laser > 0 {
+	gpu_set_blendmode_ext(bm_inv_dest_color,bm_inv_src_color)
+	var division = min(1, global.player_fever_laser * 0.01)
+	var dxf = screen_width - 40
+	var dyf = screen_height - 10
+	
+	draw_set_color(make_color_hsv(0, 0, 128 + division * 127))
+	draw_rectangle(dxf, dyf, dxf + 30, dyf - division * 200, 0)
+
+	gpu_set_blendmode(bm_normal)
+}
+
+draw_set_color($ffffff)

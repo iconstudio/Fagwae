@@ -2,7 +2,7 @@
     "id": "cbfdbca5-db77-4d86-b670-516cdf313b77",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oBackFlash",
+    "name": "oShapeBackFlash",
     "eventList": [
         {
             "id": "7a4efd24-bc59-4e1d-a931-beae6a7cdb1f",
@@ -12,6 +12,26 @@
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 3,
+            "m_owner": "cbfdbca5-db77-4d86-b670-516cdf313b77"
+        },
+        {
+            "id": "ae486223-f251-41c4-aa53-b9124e68c091",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "cbfdbca5-db77-4d86-b670-516cdf313b77"
+        },
+        {
+            "id": "2f8a01ba-4a31-4a05-9b71-7c9f867edf3a",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 7,
             "m_owner": "cbfdbca5-db77-4d86-b670-516cdf313b77"
         }
     ],

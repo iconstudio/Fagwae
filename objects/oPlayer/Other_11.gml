@@ -1,4 +1,4 @@
-/// @description 
+/// @description Getting damage
 
 if !global.playeralive or instance_exists(oGameOver) or instance_exists(oContinue)
 	exit
@@ -52,6 +52,10 @@ if hp > 0 {
 		vspeed = -random(7) - 6
 	}
 
+
+	global.score_combo = 0
+	global.player_fever_laser = 0
+	global.player_fever_shield = 0
 	global.dead_local++
 	global.status_dead++
 	global.playeralive = false

@@ -78,6 +78,14 @@ if ++shot_count < 20 {
 		} else {
 			pattern04_picked = choose(LEFT, RIGHT)
 		}
+		with glove_left {
+			pattern = 4
+			pattern_opened = false
+		}
+		with glove_right {
+			pattern = 4
+			pattern_opened = false
+		}
 	} else {
 		alarm[3] = 20 - global.extreme * 8
 	}

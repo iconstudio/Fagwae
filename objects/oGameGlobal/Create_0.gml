@@ -3,7 +3,8 @@
 camera_projection_identity()
 
 // bgm
-global.music_current = audio_sound_gain(musicMainMenu, 0, 2000)
+global.music_current = musicMainMenu
+audio_sound_gain(musicMainMenu, 0, 2000)
 alarm[3] = 120
 
 global.music_before = noone

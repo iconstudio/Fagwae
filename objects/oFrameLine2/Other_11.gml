@@ -8,6 +8,6 @@ image_speed = 0
 image_index = irandom(instance_number(object_index))
 
 vspeed = 1
-gravity = 0.01
+gravity = 0.05
 gravity_direction = 270
 

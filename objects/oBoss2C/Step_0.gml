@@ -55,7 +55,7 @@ if instance_exists(parent) and !dead {
 		vspeed_target = 8
 
 		if type_create == parent.pattern04_picked { // go foward
-			ty = parent.y + y_fix + 100
+			ty = parent.y + y_fix + 180
 
 			if !pattern_opened {
 				alarm[3] = 38 - global.extreme * 8

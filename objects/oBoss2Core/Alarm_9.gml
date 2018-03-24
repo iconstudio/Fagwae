@@ -14,4 +14,3 @@ if global.extreme
 	instance_create_layer(x, y, "Player", oPlayerLife)
 
 instance_destroy()
-area_goto_next()

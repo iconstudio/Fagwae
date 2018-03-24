@@ -35,4 +35,4 @@ if !instance_exists(oScore)
 event_user(0)
 
 // initial waiting
-area_delay_push(90)
+area_delay_push(240)

@@ -27,7 +27,7 @@ repeat argument[2] {
 	}
 }
 
-if	!dead
+if !dead
 	exit
 
 repeat argument[3] + global.extreme * 2 {
