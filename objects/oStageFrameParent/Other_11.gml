@@ -1,3 +1,3 @@
-/// @description Drawing background colors
+/// @description Drawing background
 
 
