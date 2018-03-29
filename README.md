@@ -68,16 +68,15 @@ Fagwae
 1. `Square` 사각대
 2. `Turret Square` 사각 포대
 3. `Line` 철골
-4. `Board` 장형 사각 포대
+4. `Board` 긴 사각 포대
 5. `Mutation` 도형 변형
 6. `Joint` 관절 로봇
    1. `Octopod` 문어
    2. `Orb` 구체
    3. `Crawl` 기기
    4.  `Footless` 무족
-7. `Train` 열차
-   1. 선수
-   2. `Bomber` 후미
+7. `Bomber` 폭격기
+8. `BulletBox` 탄알 상자
 8. `Pieces`세계의 조각
    1. 화면 밖에서 진입
    2. 화면 안에서 생성

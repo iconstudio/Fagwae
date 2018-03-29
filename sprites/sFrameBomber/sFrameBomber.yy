@@ -2,7 +2,7 @@
     "id": "b025bbc0-7584-496e-8378-c7f9f06d5fc9",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "sFrameTrainBomber",
+    "name": "sFrameBomber",
     "For3D": false,
     "HTile": true,
     "VTile": true,

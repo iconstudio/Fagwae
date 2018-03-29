@@ -802,7 +802,7 @@
             "Key": "54bfebb2-9cb5-469d-acf4-698a1892da6a",
             "Value": {
                 "id": "2fa49310-2fec-4047-84d0-e9e72fc58a6c",
-                "resourcePath": "objects\\oFrameJoint\\oFrameJoint.yy",
+                "resourcePath": "objects\\oFramePiece\\oFramePiece.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -892,6 +892,14 @@
                 "id": "946d7272-c136-4a46-a703-be1dfbb9ff06",
                 "resourcePath": "scripts\\io_check_pressed_right\\io_check_pressed_right.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "5bcc2d40-c719-4dfc-8d06-f5d5eacf30a8",
+            "Value": {
+                "id": "72d66afe-f425-4d1f-974a-bcc940129e56",
+                "resourcePath": "objects\\oFrameBomber\\oFrameBomber.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1631,6 +1639,14 @@
             }
         },
         {
+            "Key": "a41b7143-3580-43a3-a98f-9126f8a0433d",
+            "Value": {
+                "id": "cb0fe54c-5136-4dcd-b4ea-13ae0ce20189",
+                "resourcePath": "objects\\oFrameJointOctopod\\oFrameJointOctopod.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a4aad50d-b21a-4b25-be1a-a53c026f9cb3",
             "Value": {
                 "id": "9b89cefe-d13c-4b1b-90a1-2c6ef86d5f51",
@@ -1762,7 +1778,7 @@
             "Key": "b025bbc0-7584-496e-8378-c7f9f06d5fc9",
             "Value": {
                 "id": "878f6fec-f5fc-413f-9861-105b3ff604b6",
-                "resourcePath": "sprites\\sFrameTrainBomber\\sFrameTrainBomber.yy",
+                "resourcePath": "sprites\\sFrameBomber\\sFrameBomber.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2524,14 +2540,6 @@
                 "id": "f3b14032-4699-4f2d-ba43-4700b0c60558",
                 "resourcePath": "scripts\\trophy_check0\\trophy_check0.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "f5efbcad-9239-4364-bdb1-d991ecdb6b64",
-            "Value": {
-                "id": "03c490ed-4f0c-4644-a9bf-d6161c23e3ae",
-                "resourcePath": "sprites\\sFrameTrain\\sFrameTrain.yy",
-                "resourceType": "GMSprite"
             }
         },
         {

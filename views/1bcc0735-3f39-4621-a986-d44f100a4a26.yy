@@ -12,8 +12,10 @@
         "f0a66efe-8036-4938-af95-c47891dd7f38",
         "4010ad11-9997-4ecb-a5ec-e398bb54a9aa",
         "2b0754ed-5406-401d-9daf-65d51b65b4a1",
-        "54bfebb2-9cb5-469d-acf4-698a1892da6a",
-        "c8eb62fa-f2b9-4cb7-83e8-a40b4ee700c0"
+        "a41b7143-3580-43a3-a98f-9126f8a0433d",
+        "5bcc2d40-c719-4dfc-8d06-f5d5eacf30a8",
+        "c8eb62fa-f2b9-4cb7-83e8-a40b4ee700c0",
+        "54bfebb2-9cb5-469d-acf4-698a1892da6a"
     ],
     "filterType": "GMObject",
     "folderName": "Frames",
