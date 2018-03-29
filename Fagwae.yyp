@@ -2015,6 +2015,14 @@
             }
         },
         {
+            "Key": "c8eb62fa-f2b9-4cb7-83e8-a40b4ee700c0",
+            "Value": {
+                "id": "973d4a14-5f48-4f48-b30c-809caa92358a",
+                "resourcePath": "objects\\oFrameBulletBox\\oFrameBulletBox.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ca82e430-fcc3-43e8-b2ea-80d084c2699d",
             "Value": {
                 "id": "cf228daa-d507-4ee5-aa81-a3a7fe8156d1",
