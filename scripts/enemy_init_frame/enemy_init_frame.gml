@@ -13,7 +13,7 @@ enemy_register(enemy_line_1, oFrameLine1, "STEEL FRAME", sFrameLine, sFrameLine,
 enemy_register(enemy_line_2, oFrameLine2, "STEEL FRAME", sFrameLine, sFrameLine, 
 60, 650, 2, 0, 0, 0, 0)
 
-enemy_register(enemy_joint_1, oFrameJoint, "STEEL FRAME", sFrameJoint, sFrameJoint, 
+enemy_register(enemy_joint_1, oFramePiece, "STEEL FRAME", sFrameJoint, sFrameJoint, 
 20, 300, 2, 0, 0, 0, 0)
 
 // bosses

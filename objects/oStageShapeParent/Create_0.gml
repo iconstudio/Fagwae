@@ -5,6 +5,7 @@ event_inherited()
 // color
 back_color = 0
 square_saturation = 0
+param_speed = (0.1 * 192 - 5) / 192
 
 // back decorataions
 deco_min = -10

@@ -26,6 +26,8 @@ if os_type == os_android or os_type == os_ios {
 	window_set_size(window_width, window_height)		// game window
 	display_set_gui_size(gui_width, gui_height)			// gui in the game window
 	surface_resize(application_surface, global.__view_width, global.__view_height) // application surface is static
+} else {
+	window_center()
 }
 
 global.__ttw = display_get_gui_width()		// Adjusted

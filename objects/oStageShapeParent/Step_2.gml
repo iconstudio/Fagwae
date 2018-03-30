@@ -3,7 +3,7 @@
 event_inherited()
 
 square_saturation += 0.1
-background_param += (0.1 * 192 - 5) / 192
+background_param += param_speed
 scroll += 0.75
 if scroll > 144 {
 	scroll -= 144

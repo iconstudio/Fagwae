@@ -4,17 +4,17 @@ event_inherited()
 
 // color
 back_color = 0
+param_speed = (0.1 * 200 - 10) / 200
 
-target_hue = 0
-target_saturation = 128
-target_value = 98
+current_saturation = 192
+current_value = 98
 
-target_hue = 210
-target_saturation = 40
-target_value = 31
+target_saturation = 60
+target_value = 21
 
 // back decorataions
 deco_count = 0
+deco_height = 300
 
 // bgm
 music_update(musicStageFrame)
