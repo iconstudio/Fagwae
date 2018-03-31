@@ -16,5 +16,5 @@ with oStageParent {
 	draw_set_valign(1)
 	draw_set_color(make_color_hsv(background_param - 25, 190, 200))
 	for (var i = other.x mod __swid - __swid; i < 576; i += __swid)
-		draw_text_transformed(i, other.y + 2, __str, 2, 2, 0)
+		draw_text_transformed(i, other.y, __str, 2, 2, 0)
 }
