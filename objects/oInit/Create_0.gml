@@ -26,6 +26,9 @@ if os_type == os_android or os_type == os_ios {
 	window_set_size(window_width, window_height)		// game window
 	display_set_gui_size(gui_width, gui_height)			// gui in the game window
 	surface_resize(application_surface, global.__view_width, global.__view_height) // application surface is static
+} else if os_browser == browser_not_a_browser {
+	window_center()
+	window_set_position(window_get_x(), 48)
 }
 
 global.__ttw = display_get_gui_width()		// Adjusted
@@ -48,9 +51,10 @@ globalvar matrix_identical;
 matrix_identical = matrix_build_identity()
 
 // ui / ux / drawing
-global.font = font_add_sprite(sFont, 33, 1, 1)
-global.fontborder = font_add_sprite(sFontBorder, 33, 1, 1)
-draw_set_font(global.font)
+rotation = 0
+draw_set_color($ffffff)
+draw_set_halign(1)
+draw_set_valign(1)
 gpu_set_fog(false, $ffffff, 32, 32000)
 
 // general
