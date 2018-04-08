@@ -5,7 +5,7 @@ event_inherited()
 area_enemy_push(60, enemy_octagon_3, 0, 200, 1000)
 area_enemy_push(60, enemy_octagon_3, 0, 300, 1000)
 area_enemy_push(90, enemy_octagon_3, 0, 340, 1000)
-area_enemy_push(130, enemy_rectangle_2, global.px > room_Width * 0.5 ? LEFT : RIGHT, 0, 0)
+area_enemy_push(130, enemy_rectangle_2, global.px > room_width * 0.5 ? LEFT : RIGHT, 0, 0)
 area_enemy_push(60, enemy_octagon_3, 0, 300, 1000)
 area_enemy_push(180, enemy_octagon_1, 0, 132, -48)
 

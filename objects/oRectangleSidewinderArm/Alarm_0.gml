@@ -1,4 +1,4 @@
-/// @description 
+/// @description Shooting
 
 if global.extreme {
 	enemy_shot(x, y, speed * 0.25 + 1, direction - 45)

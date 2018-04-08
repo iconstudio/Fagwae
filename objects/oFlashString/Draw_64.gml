@@ -1,4 +1,4 @@
-/// @description 
+/// @description Drawing
 
 draw_set_halign(1)
 if type_create == 1 // red

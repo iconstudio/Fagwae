@@ -495,6 +495,14 @@
             }
         },
         {
+            "Key": "37b782ed-366b-4383-b846-46a8388598f3",
+            "Value": {
+                "id": "a0e78a06-1d44-4511-9922-1541dd5674e5",
+                "resourcePath": "objects\\oFrameBoard\\oFrameBoard.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "381a5919-5ad9-4d3f-8540-5406e07a64bb",
             "Value": {
                 "id": "d0ec665c-65c5-4358-9223-30fca720f163",
@@ -1575,6 +1583,14 @@
             }
         },
         {
+            "Key": "9de52943-e6c9-4f7c-94c5-61c5817da2a4",
+            "Value": {
+                "id": "80fd5516-de95-4259-bd27-7624a96e39ab",
+                "resourcePath": "objects\\oFrameMutationFalling\\oFrameMutationFalling.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "9ea1c9c8-711a-43ee-81af-24569fe370c4",
             "Value": {
                 "id": "2a34f900-6eb1-4821-9565-03a96cf98152",
@@ -1882,7 +1898,7 @@
             "Key": "ba2a6777-e86d-4ace-8eb8-1a59d045d46c",
             "Value": {
                 "id": "46d9c7f4-ca69-4954-878b-fe0d8cbe9367",
-                "resourcePath": "sprites\\sFrameOctagon\\sFrameOctagon.yy",
+                "resourcePath": "sprites\\sFrameMutationOctagon\\sFrameMutationOctagon.yy",
                 "resourceType": "GMSprite"
             }
         },

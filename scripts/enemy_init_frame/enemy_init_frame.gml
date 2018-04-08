@@ -16,13 +16,13 @@ enemy_register(enemy_line_2, oFrameLine2, "STEEL FRAME", sFrameLine, sFrameLine,
 enemy_register(enemy_board_1, noone, "BOARD", noone, noone, 
 121, 700, 2, 0, 0, 0, 0)
 
-enemy_register(enemy_joint_1, oFramePiece, "STEEL FRAME", sFrameJoint, sFrameJoint, 
+enemy_register(enemy_piece_1, oFramePiece, "STEEL FRAME", sFrameJoint, sFrameJoint, 
 20, 300, 1, 0, 0, 0, 0)
 
-enemy_register(enemy_joint_2, oFrameJoint, "SKELETON", sFrameJoint, sFrameJoint, 
+enemy_register(enemy_joint_1, oFrameJoint, "SKELETON", sFrameJoint, sFrameJoint, 
 10000, 300, 1, 0, 0, 0, 0)
 
-enemy_register(enemy_joint_3, noone, "SKELETON", noone, noone, 
+enemy_register(enemy_joint_2, noone, "SKELETON", noone, noone, 
 50, 300, 1, 0, 0, 0, 0)
 
 enemy_register(enemy_mutation_1, noone, "STEEL OCTAGON", sFrameOctagon, sFrameOctagon, 

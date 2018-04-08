@@ -31,8 +31,6 @@ with instance_create_layer(argument[1], argument[2], __layer, oDummy) {
 
 	if argument_count >= 5
 		image_angle = argument[4]
-	if argument_count >= 6
-		parent = argument[5]
 
 	instance_change(attributes[0], true)
 
@@ -45,6 +43,8 @@ with instance_create_layer(argument[1], argument[2], __layer, oDummy) {
 		sprite_index = sprite_extreme
 	else
 		sprite_index = sprite_normal
+	if argument_count >= 6
+		parent = argument[5]
 
 	//show_debug_message("Object: " + object_get_name(attributes[0]) + ", Name: " + name + ", Type of creation: " + string(type_create))
 	//show_debug_message("Score: " + string(score_dead) + ", Loot: " + string(score_loot))

@@ -1,4 +1,4 @@
-/// @description 
+/// @description Deleting other
 
 with object_index {
 	if id != other.id {
@@ -15,7 +15,6 @@ if type_create == 0 or type_create == 3 {
 	// It doesn't need.
 }
 
-draw_set_font(global.font)
 sw = string_width(ncaption) * (rscale) * 0.5
 if x < sw
 	x = sw

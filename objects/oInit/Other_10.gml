@@ -31,11 +31,11 @@
 #macro enemy_mutation_1		"fmut1"				// mutation of octagon (shooting)
 #macro enemy_mutation_2		"fmut2"				// mutation of octagon (falling)
 
-#macro enemy_abomination_1"fabomin1"		// octopod
-#macro enemy_abomination_2"fabomin2"		// orb
-#macro enemy_abomination_3"fabomin3"		// crawler
-#macro enemy_joint_1			"fjoint1"			// linking parts (invincible)
-#macro enemy_joint_2			"fjoint2"			// linking parts
+#macro enemy_abomination_1 "fabomin1"		// octopod
+#macro enemy_abomination_2 "fabomin2"		// orb
+#macro enemy_abomination_3 "fabomin3"		// crawler
+#macro enemy_joint_1			 "fjoint1"		// linking parts (invincible)
+#macro enemy_joint_2			 "fjoint2"		// linking parts
 
 #macro enemy_piece_1			"fpiece1"			// falls
 #macro enemy_piece_2			"fpiece2"			// falls

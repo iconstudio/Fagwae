@@ -2,5 +2,7 @@
 
 event_inherited()
 
-if speed > 5
-	speed = 5
+with turret {
+	x = other.x
+	y = other.y
+}

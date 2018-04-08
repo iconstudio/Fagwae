@@ -64,10 +64,13 @@ randomize()
 // game
 global.extreme = false
 global.stage = 0 // 0: None, 1 ~ 9: Game, 10: Complete a mode
+global.playeralive = true
+global.px = -1
+global.py = -1
 
 global.enemy_dictionary = ds_map_create()
 
-global.area_list = [oStageShape2, oStageShape3, oStageShape3]
+global.area_list = [oStageShape3, oStageShape3, oStageShape3]
 
 #macro area_vspeed 0.5625 * 4
 
