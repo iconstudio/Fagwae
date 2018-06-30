@@ -1,4 +1,4 @@
-/// @description 
+/// @description Updating text
 
 rotation = (rotation + 37) mod 91800
 
