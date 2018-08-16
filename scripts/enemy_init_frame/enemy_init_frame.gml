@@ -20,7 +20,10 @@ enemy_register(enemy_joint_1, oFramePiece, "STEEL FRAME", sFrameJoint, sFrameJoi
 20, 300, 1, 0, 0, 0, 0)
 
 enemy_register(enemy_joint_2, oFrameJoint, "SKELETON", sFrameJoint, sFrameJoint, 
-10000, 300, 1, 0, 0, 0, 0)
+20, 300, 1, 0, 0, 0, 0)
+
+enemy_register(enemy_joint_3, oFrameJoint, "SKELETON", sFrameJoint, sFrameJoint, 
+10, 300, 1, 0, 0, 0, 0)
 
 enemy_register(enemy_mutation_1, noone, "STEEL OCTAGON", sFrameOctagon, sFrameOctagon, 
 17, 300, 1, 0, 0, 0, 0)

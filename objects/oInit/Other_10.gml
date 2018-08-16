@@ -36,6 +36,9 @@
 #macro enemy_abomination_3 "fabomin3"		// crawler
 #macro enemy_joint_1			"fjoint1"			// linking parts (invincible)
 #macro enemy_joint_2			"fjoint2"			// linking parts
+#macro enemy_joint_3			"fjoint3"			// linking parts
+#macro enemy_joint_s1			"fjoins1"			// linking parts
+#macro enemy_joint_s2			"fjoins2"			// linking parts
 
 #macro enemy_piece_1			"fpiece1"			// falls
 #macro enemy_piece_2			"fpiece2"			// falls
