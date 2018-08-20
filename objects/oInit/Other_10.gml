@@ -10,6 +10,8 @@
 #macro LEFT 0
 #macro RIGHT 1
 
+/// shapes
+// normal sizes
 #macro enemy_octagon_1		"eoctagon1"		// shots 5 (blue octagon mk.1)
 #macro enemy_octagon_2		"eoctagon2"		// shots 3, 3 times (blue octagon mk.2)
 #macro enemy_octagon_3		"eoctagon3"		// goes up while shots 3, 3 times (blue octagon mk.3)
@@ -23,6 +25,8 @@
 #macro enemy_circle_1			"ecircle1"		// shots 12 around (gray circle mk.1)
 #macro enemy_circle_2			"ecircle2"		// Jumping while shots 3 or shots 12 around (gray circle mk.2)
 
+/// frames
+// singles
 #macro enemy_square_1			"fsquare1"		// square
 #macro enemy_square_2			"fsquare2"		// square with a turret
 #macro enemy_line_1				"fline1"			// falls while getting closer to player
@@ -30,26 +34,36 @@
 #macro enemy_board_1			"fboard1"			// line of cannons
 #macro enemy_mutation_1		"fmut1"				// mutation of octagon (shooting)
 #macro enemy_mutation_2		"fmut2"				// mutation of octagon (falling)
+#macro enemy_piece_1			"fpiece1"			// falls
+#macro enemy_piece_2			"fpiece2"			// falls
+#macro enemy_piece_3			"fpiec31"			// falls
+#macro enemy_box_1				"fbox1"				// Bullet box (trap)
 
-#macro enemy_abomination_1 "fabomin1"		// octopod
-#macro enemy_abomination_2 "fabomin2"		// orb
-#macro enemy_abomination_3 "fabomin3"		// crawler
+// joints
 #macro enemy_joint_1			"fjoint1"			// linking parts (invincible)
 #macro enemy_joint_2			"fjoint2"			// linking parts
 #macro enemy_joint_3			"fjoint3"			// linking parts
 #macro enemy_joint_s1			"fjoins1"			// linking parts
 #macro enemy_joint_s2			"fjoins2"			// linking parts
 
-#macro enemy_piece_1			"fpiece1"			// falls
-#macro enemy_piece_2			"fpiece2"			// falls
-#macro enemy_piece_3			"fpiec31"			// falls
-#macro enemy_box_1				"fbox1"				// Bullet box (trap)
+// small multiples
+#macro enemy_triangle_1		"ftriangle1"		// triangle (falling)
+#macro enemy_triangle_2		"ftriangle2"		// falls and explodes when die
+#macro enemy_triangle_3		"ftriangle3"		// falls slowly
+#macro enemy_triangle_4		"ftriangle4"		// falls with bullets
 
+// large multiples
+#macro enemy_abomination_1 "fabomin1"		// octopod
+#macro enemy_abomination_2 "fabomin2"		// orb
+#macro enemy_abomination_3 "fabomin3"		// crawler
+
+/// indeterminates
 #macro enemy_rapid_1			"irapid1"			// shots 3 fast and tracks player
 #macro enemy_rapid_2			"irapid2"			// shots 3 fast, randomly path
 #macro enemy_rapid_3			"irapid3"			// shots 1 fast, launched by boss
 #macro enemy_emitter_1		"iemit1"			// launches 4 arms and reloads
 
+// arm
 #macro enemy_arm_hexagon_1 "ahexagon1"
 #macro enemy_arm_spread_1 "aspread1"
 #macro enemy_arm_rectangle_1 "arect1"

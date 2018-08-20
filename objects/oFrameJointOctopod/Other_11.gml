@@ -1,11 +1,12 @@
 /// @description Creation
 
 gravity_direction = 270
-gravity = 0.2
+gravity = 0.05
 
 pattern = 0
 pattern_count = 0
 
+rotation_step = choose(-1, 1, (x < room_width * 0.65 ? 1 : -1))
 arm_wiggle = random(30)
 arm_number = 6
 arm_width = 20

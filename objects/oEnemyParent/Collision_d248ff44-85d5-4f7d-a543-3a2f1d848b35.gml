@@ -1,6 +1,6 @@
 /// @description Getting damage
 
-if other.pow <= 0 or dead
+if other.pow <= 0 or dead or untargetable
 	exit
 
 if !invincible {
@@ -11,12 +11,12 @@ if !invincible {
 			event_user(15)
 		}
 	}
-}
 
-if global.extreme
-	score += ceil(score_loot * 1.1)
-else
-	score += score_loot
+	if global.extreme
+		score += ceil(score_loot * 1.1)
+	else
+		score += score_loot
+}
 
 event_user(15)
 

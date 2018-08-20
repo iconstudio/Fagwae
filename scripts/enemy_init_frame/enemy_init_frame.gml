@@ -16,6 +16,9 @@ enemy_register(enemy_line_2, oFrameLine2, "STEEL FRAME", sFrameLine, sFrameLine,
 enemy_register(enemy_board_1, noone, "BOARD", noone, noone, 
 121, 700, 2, 0, 0, 0, 0)
 
+enemy_register(enemy_box_1, oFrameBulletBox, "BOX", sFrameBulletBox, sFrameBulletBox, 
+60, 400, 2, 0, 0, 0, 0)
+
 enemy_register(enemy_joint_1, oFramePiece, "STEEL FRAME", sFrameJoint, sFrameJoint, 
 20, 300, 1, 0, 0, 0, 0)
 
@@ -40,7 +43,5 @@ enemy_register(enemy_abomination_2, noone, "ABOMINATION", sFrameCore, sFrameCore
 enemy_register(enemy_abomination_3, noone, "ABOMINATION", sFrameCore, sFrameCore, 
 80, 700, 2, 0, 0, 0, 0)
 
-enemy_register(enemy_box_1, oFrameBulletBox, "BOX", sFrameBulletBox, sFrameBulletBox, 
-60, 400, 2, 0, 0, 0, 0)
 
 // bosses

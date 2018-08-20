@@ -1175,6 +1175,14 @@
             }
         },
         {
+            "Key": "7b281cc0-58cb-4c70-86b6-18fc61fac62b",
+            "Value": {
+                "id": "2142c049-c4be-4459-aabb-ead271a8e366",
+                "resourcePath": "sounds\\musicBoss3\\musicBoss3.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "7b963358-322c-41ff-8625-b78edc4a7fa1",
             "Value": {
                 "id": "fb77b518-6cb1-45ea-ad9d-410fc390d598",
@@ -1396,6 +1404,14 @@
                 "id": "bda7f6a1-ba95-4088-9b97-8789e66ef59a",
                 "resourcePath": "objects\\oParticleFlameBlue\\oParticleFlameBlue.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "8f5a18c7-b9f4-4f4a-a7ad-2f78554e0741",
+            "Value": {
+                "id": "b92fa8ea-7dc2-4355-9ba2-44c237beab89",
+                "resourcePath": "sounds\\musicBoss2\\musicBoss2.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -1807,6 +1823,14 @@
             }
         },
         {
+            "Key": "b3ff77c5-5114-4aa5-8050-23869895a1e9",
+            "Value": {
+                "id": "05442ec8-c70d-4aee-8cb0-7cf23285ac8a",
+                "resourcePath": "sounds\\musicStage4\\musicStage4.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "b5677b92-49d6-4238-a609-1686d0b8299c",
             "Value": {
                 "id": "7c1a41d3-ae4b-4e6c-8c97-4e85d7b71aae",
@@ -1842,7 +1866,7 @@
             "Key": "b799a83d-8243-4728-ae50-977f79941fd3",
             "Value": {
                 "id": "c10f4db9-2d53-43dd-9c88-54a09cf5cac3",
-                "resourcePath": "sounds\\musicLastStage\\musicLastStage.yy",
+                "resourcePath": "sounds\\musicStage6\\musicStage6.yy",
                 "resourceType": "GMSound"
             }
         },
@@ -2383,6 +2407,14 @@
             }
         },
         {
+            "Key": "e83236f7-a18a-49e2-871c-7ef21219d11b",
+            "Value": {
+                "id": "12cc2b66-0a4d-43ad-879f-c5d8c5c6a519",
+                "resourcePath": "objects\\oFrameJointMod\\oFrameJointMod.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "e8a94337-29e7-4583-9322-5e611a25d83d",
             "Value": {
                 "id": "330567c4-6a70-4bf0-9096-96f9e312970b",
@@ -2522,7 +2554,7 @@
             "Key": "f344871c-234e-4504-89db-fd848fd63e50",
             "Value": {
                 "id": "0ae3736d-ad56-4a59-97c9-93050b654a98",
-                "resourcePath": "sounds\\musicStageFrame\\musicStageFrame.yy",
+                "resourcePath": "sounds\\musicStage3\\musicStage3.yy",
                 "resourceType": "GMSound"
             }
         },
@@ -2599,6 +2631,14 @@
             }
         },
         {
+            "Key": "f960daaa-3a8b-438e-a0df-08e13f41adc6",
+            "Value": {
+                "id": "2c76636f-6252-43b8-a89f-b4a8cbf42d7b",
+                "resourcePath": "scripts\\string_split\\string_split.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f9a3acb8-7e9c-48b0-82d1-a4f0f611a469",
             "Value": {
                 "id": "ee120096-8ade-40ee-b156-38c6cd4cea13",
@@ -2619,6 +2659,14 @@
             "Value": {
                 "id": "e9381fa1-76fd-40df-a17b-6d43cf96a8eb",
                 "resourcePath": "sounds\\musicStage2\\musicStage2.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "fa45dcba-c2e1-4071-b290-3dedd82834e1",
+            "Value": {
+                "id": "81c9373e-539d-4536-b7a7-71d38e525f94",
+                "resourcePath": "sounds\\musicBoss1\\musicBoss1.yy",
                 "resourceType": "GMSound"
             }
         },
@@ -2784,7 +2832,8 @@
         "d855cfab-cadd-45c2-ad62-8d343f493ed6",
         "92050eab-4524-4082-91b7-91464dde57e3",
         "a1c15792-658b-432a-9707-fd5567711059",
-        "3a12875c-0641-4f7a-ac8d-e9cabfa99dbb"
+        "3a12875c-0641-4f7a-ac8d-e9cabfa99dbb",
+        "f960daaa-3a8b-438e-a0df-08e13f41adc6"
     ],
     "tutorial": ""
 }
