@@ -6,7 +6,9 @@
 #macro areapush_message 2
 #macro areapush_script 3
 #macro areapush_global 4
-#macro areapush_delay 5
+#macro areapush_music 5
+#macro areapush_userevent 6
+#macro areapush_delay 7
 #macro LEFT 0
 #macro RIGHT 1
 
@@ -36,13 +38,12 @@
 #macro enemy_mutation_2		"fmut2"				// mutation of octagon (falling)
 #macro enemy_piece_1			"fpiece1"			// falls
 #macro enemy_piece_2			"fpiece2"			// falls
-#macro enemy_piece_3			"fpiec31"			// falls
 #macro enemy_box_1				"fbox1"				// Bullet box (trap)
 
 // joints
-#macro enemy_joint_1			"fjoint1"			// linking parts (invincible)
+#macro enemy_joint_1			"fjoint1"			// linking parts
 #macro enemy_joint_2			"fjoint2"			// linking parts
-#macro enemy_joint_3			"fjoint3"			// linking parts
+#macro enemy_joint_3			"fjoint3"			// linking parts (invincible)
 #macro enemy_joint_s1			"fjoins1"			// linking parts
 #macro enemy_joint_s2			"fjoins2"			// linking parts
 

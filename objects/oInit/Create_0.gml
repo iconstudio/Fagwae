@@ -64,7 +64,8 @@ randomize()
 // game
 global.extreme = false
 global.stage = 0 // 0: None, 1 ~ 9: Game, 10: Complete a mode
-
+global.px = 0
+global.py = 0
 global.enemy_dictionary = ds_map_create()
 
 global.area_list = [oStageShape3, oStageShape3, oStageShape3]

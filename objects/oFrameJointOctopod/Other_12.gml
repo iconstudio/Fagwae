@@ -2,6 +2,11 @@
 
 event_inherited()
 
+if y < global.py - 16
+	gravity_direction = min(max(240, gravity_direction + get_rotation_next(gravity_direction, point_direction(x, y, global.px, global.py), 2)), 300)
+if vspeed > 2
+	vspeed = 2
+
 arm_wiggle += 5
 
 var _speed = speed, _direction = direction

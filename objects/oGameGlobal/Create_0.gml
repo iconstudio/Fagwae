@@ -8,13 +8,11 @@ global.music_current = musicMainMenu
 music_update(musicMainMenu)
 alarm[3] = 120
 
-
-
 // initiator
 // player
 player_counter = 60
 player_isfirst = true
-instance_create_layer(0, 0, "Backend", global.area_list[0])
+instance_create_layer(0, 0, "Backend", oStageShape3)
 global.stage = 1
 
 global.vscore = 0

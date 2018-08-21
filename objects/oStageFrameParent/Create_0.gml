@@ -17,4 +17,4 @@ deco_count = 0
 deco_height = 300
 
 // bgm
-music_update(musicStageFrame)
+music_update(musicStage3)
