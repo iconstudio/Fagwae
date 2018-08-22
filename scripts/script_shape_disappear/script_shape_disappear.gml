@@ -1,5 +1,5 @@
 /// @description script_shape_disappear()
 /// @function script_shape_disappear
 
-with oStageShapeParent
+with oStageShape
 	deco_mode = 1

@@ -68,8 +68,6 @@ global.px = 0
 global.py = 0
 global.enemy_dictionary = ds_map_create()
 
-global.area_list = [oStageShape3, oStageShape3, oStageShape3]
-
 #macro area_vspeed 0.5625 * 4
 
 event_user(0)

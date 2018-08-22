@@ -1,7 +1,7 @@
 /// @description Initialization
 
 // initiator
-alarm[1] = 60
+alarm[11] = seconds(1)
 available = false
 
 randomize()
@@ -10,9 +10,6 @@ randomize()
 flag_boss = false
 flag_stop = false
 flag_await_die = false
-
-// for stage title (each stage)
-alarm[2] = 1
 
 // background
 back_surface = -1
@@ -33,6 +30,3 @@ if !instance_exists(oScore)
 
 // create backbuffer surface
 event_user(0)
-
-// initial waiting
-area_delay_push(240)

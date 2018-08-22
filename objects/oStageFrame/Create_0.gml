@@ -16,5 +16,7 @@ target_value = 21
 deco_count = 0
 deco_height = 300
 
-// bgm
-music_update(musicStage3)
+// Initializing stage
+area_music_push(0, musicStage3)
+
+area_enemy_push(60, enemy_abomination_1, 0, 270, 100)

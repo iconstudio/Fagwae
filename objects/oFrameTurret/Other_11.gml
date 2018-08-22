@@ -1,5 +1,7 @@
 /// @description Creation
 
+untargetable = true
+
 if global.extreme // rotating
 	shot_mode = 1
 else

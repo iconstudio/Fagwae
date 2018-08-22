@@ -35,7 +35,9 @@ with instance_create_layer(argument[1], argument[2], __layer, oDummy) {
 		parent = argument[5]
 
 	instance_change(attributes[0], true)
-
+	
+	if argument_count >= 6
+		parent = argument[5]
 	name = attributes[1]
 	hp = attributes[4]
 	hp_max = attributes[4]

@@ -60,6 +60,14 @@ if trigger_counter-- <= 0 {
 		case areapush_global:
 			instance_last = instance_create_layer(cx, cy, "Instances", data)
 			break
+
+		case areapush_music:
+			music_update(data)
+			break
+
+		case areapush_userevent:
+			event_user(data)
+			break
 			
 		case areapush_delay:
 			break

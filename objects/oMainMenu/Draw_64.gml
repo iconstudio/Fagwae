@@ -3,7 +3,7 @@
 draw_set_valign(0)
 draw_set_halign(0)
 
-camera_projection_set(-230, 0, -230, 0, 0, 0, 0, -1, 0, 45, 4 * 0.333, 1, 32000)
+camera_projection_set(-230, 0, -230, 0, 0, 0, 0, -1, 0, 39, 1.332, 1, 32000)
 draw_set_color($ffffff)
 
 var aalpha
@@ -12,11 +12,12 @@ if menurot > 0
 else
 	aalpha = 1
 
+// -38
 draw_set_alpha(aalpha * (120 - rpush[0]) / 120 * get_ralpha(rflash[0]))
-menu_text(rpush[0] + 22, -38, "FAGWAE", 6, menurot + 85)
+menu_text(rpush[0] + 22, -50, "FAGWAE", 6, menurot + 85)
 draw_set_alpha(aalpha * (120 - rpush[1]) / 120 * get_ralpha(rflash[1]))
-menu_text(8 + rpush[1], 8, "2018", 3, menurot + 85)
-menu_text(20 + rpush[1], 25, "ICONSTUDIO", 3, menurot + 85)
+menu_text(8 + rpush[1], -4, "2018", 3, menurot + 85)
+menu_text(20 + rpush[1], 13, "ICONSTUDIO", 3, menurot + 85)
 
 aalpha = max((120 - rpush[2]) / 120 * get_ralpha(rflash[2]), 0)
 if aalpha <= 0
@@ -24,7 +25,7 @@ if aalpha <= 0
 
 var i, j, sw, ldy, dy, dalpha
 for (j = 0; j <= maxdepth; ++j) {
-	dy = menupos[j] - 10
+	dy = menupos[j] - 22
 	dalpha = 1 - abs(menurot / 90 - j)
 
 	for (i = 0; i < menucnt[j]; ++i) {
