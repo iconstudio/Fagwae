@@ -55,6 +55,7 @@ if global.extreme {
 			motion_add(direction - 90, 1)
 	}
 }
+audio_play_sound(soundShotEnemy, 0, false)
 
 if ++shot_count < 20 {
 	alarm[3] = 6 - global.extreme * 2

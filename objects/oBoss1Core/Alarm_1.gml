@@ -11,6 +11,7 @@ if abool { // straight
 	for (var i = 0; i < scnt; ++i)
 		enemy_shot(x, y, 4 + global.stage * 0.2, -angle * 19 + ddir * i + 180)
 }
+audio_play_sound(soundShotEnemy, 0, false)
 
 abool = !abool
 

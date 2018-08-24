@@ -1,4 +1,4 @@
-/// @description 
+/// @description Attacking
 
 if y >= 800
 	exit
@@ -10,7 +10,7 @@ if shot_mode == 0 {
 
 	if shot_count++ == 0 {
 		alarm[0] = max(8, 16 - global.stage) + 6
-	} else if shot_count < 2 + global.extreme + floor(global.stage * 0.333) {
+	} else if shot_count < ceil(global.stage * 0.333) - global.extreme {
 		if global.extreme
 			alarm[0] = max(2, 8 - global.stage * 0.5) + 10
 		else
@@ -40,3 +40,4 @@ if shot_mode == 0 {
 		alarm[0] = max(20, 60 - global.stage * 4)
 	}
 }
+audio_play_sound(soundShotEnemy, 0, false)

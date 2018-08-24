@@ -19,5 +19,6 @@ if global.extreme {
 		enemy_shot(x, y, shot_speed, i * 60 + 35)
 	}
 }
+audio_play_sound(soundShotEnemy, 0, false)
 
 alarm[3] = 50

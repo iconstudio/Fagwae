@@ -607,6 +607,14 @@
             }
         },
         {
+            "Key": "41535597-dc11-4f36-9fc3-6bce8e5eb7dc",
+            "Value": {
+                "id": "b97c0e4d-4ea2-4bda-94fa-2060189efd7b",
+                "resourcePath": "scripts\\script_stage_clear\\script_stage_clear.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "417c8284-8f94-463c-a5cf-b8be1ed7b9fe",
             "Value": {
                 "id": "c6e1d7c4-34e2-4396-83f1-4cad5686f9b8",
@@ -1207,14 +1215,6 @@
             }
         },
         {
-            "Key": "7b281cc0-58cb-4c70-86b6-18fc61fac62b",
-            "Value": {
-                "id": "2142c049-c4be-4459-aabb-ead271a8e366",
-                "resourcePath": "sounds\\musicBoss3\\musicBoss3.yy",
-                "resourceType": "GMSound"
-            }
-        },
-        {
             "Key": "7b963358-322c-41ff-8625-b78edc4a7fa1",
             "Value": {
                 "id": "fb77b518-6cb1-45ea-ad9d-410fc390d598",
@@ -1444,14 +1444,6 @@
                 "id": "bda7f6a1-ba95-4088-9b97-8789e66ef59a",
                 "resourcePath": "objects\\oParticleFlameBlue\\oParticleFlameBlue.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "8f5a18c7-b9f4-4f4a-a7ad-2f78554e0741",
-            "Value": {
-                "id": "b92fa8ea-7dc2-4355-9ba2-44c237beab89",
-                "resourcePath": "sounds\\musicBoss2\\musicBoss2.yy",
-                "resourceType": "GMSound"
             }
         },
         {
@@ -2754,7 +2746,7 @@
             "Key": "fa45dcba-c2e1-4071-b290-3dedd82834e1",
             "Value": {
                 "id": "81c9373e-539d-4536-b7a7-71d38e525f94",
-                "resourcePath": "sounds\\musicBoss1\\musicBoss1.yy",
+                "resourcePath": "sounds\\musicBoss\\musicBoss.yy",
                 "resourceType": "GMSound"
             }
         },
@@ -2920,6 +2912,7 @@
         "a8ce7605-f771-4e26-9ea6-a9b63ed051d2",
         "9a421c59-3b9a-4823-8608-ac49d54bd849",
         "85ab0339-162f-4009-a77f-db4dc9b9485b",
+        "41535597-dc11-4f36-9fc3-6bce8e5eb7dc",
         "2dfcee75-92be-40e7-b171-386096719d62",
         "cdd5157e-c0f8-4065-8ba5-f3811a36d61e",
         "7470aa4b-a705-4e78-8bf6-fbac0448654c",

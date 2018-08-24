@@ -88,7 +88,7 @@ if attack_delay > 0 {
 		let.image_index = attack_frame
 		let.speed = 26
 
-		audio_play_sound(soundShotPlayer, 20, false)
+		audio_play_sound(soundShotPlayer, 5, false)
 	}
 
 	attack_count -= 1

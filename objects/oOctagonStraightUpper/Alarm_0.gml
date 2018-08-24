@@ -1,4 +1,4 @@
-/// @description 
+/// @description Attacking
 
 if y >= 900
 	exit
@@ -41,3 +41,4 @@ if shot_mode == 0 {
 		alarm[0] = max(20, 60 - global.stage * 4)
 	}
 }
+audio_play_sound(soundShotEnemy, 0, false)

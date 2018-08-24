@@ -1,4 +1,4 @@
-/// @description 
+/// @description Attacking 13
 
 if moving_mode == 0 {
 	enemy_shot(x, y, shot_speed, point_direction(x, y, global.px, global.py))
@@ -18,5 +18,6 @@ if moving_mode == 0 {
 
 	alarm[0] = max(40, 100 - global.stage * 10 - global.extreme * 30)
 }
+audio_play_sound(soundShotEnemy, 0, false)
 
 speed = 20 // jump

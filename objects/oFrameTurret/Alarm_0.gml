@@ -11,3 +11,5 @@ if instance_exists(parent) {
   inst.hspeed += parent.hspeed
   inst.vspeed += parent.vspeed
 }
+if !audio_is_playing(soundShotEnemy)
+	audio_play_sound(soundShotEnemy, 0, false)

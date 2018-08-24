@@ -33,6 +33,7 @@ if shot_count++ == 0 {
 		enemy_shot(x, y, shot_speed, 270, oEnemyBullet2)
 	}
 }
+audio_play_sound(soundShotEnemy, 0, false)
 
 if shot_count > 4
 	shot_count = 0

@@ -6,6 +6,7 @@ if dead or (shot_count == 0 and pattern != 2) {
 	enemy_shot(x, y, shot_speed, pd - 10)
 	enemy_shot(x, y, shot_speed, pd)
 	enemy_shot(x, y, shot_speed, pd + 10)
+	audio_play_sound(soundShotEnemy, 0, false)
 	exit
 }
 
@@ -15,6 +16,7 @@ if global.extreme
 	enemy_shot(x, y, shot_speed, pd)
 else
 	enemy_shot(x, y, shot_speed * 0.75, pd)
+audio_play_sound(soundShotEnemy, 0, false)
 
 if ++shot_count < 2 + round((1 - hp / hp_max) * 2) {
 	if global.extreme

@@ -2,6 +2,8 @@
 
 event_inherited()
 
+available = true
+
 // color
 back_color = 0
 param_speed = (0.1 * 200 - 10) / 200

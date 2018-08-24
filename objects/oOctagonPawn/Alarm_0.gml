@@ -1,9 +1,10 @@
-/// @description 
+/// @description Attacking
 
 if y >= 800 or shot_mode != 0
 	exit
 
 enemy_shot(x, y, shot_speed, point_direction(x, y, global.px, global.py))
+audio_play_sound(soundShotEnemy, 0, false)
 
 if shot_count++ == 0 {
 	alarm[0] = max(8, 16 - global.stage) + 6

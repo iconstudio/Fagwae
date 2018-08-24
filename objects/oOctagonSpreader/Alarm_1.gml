@@ -1,4 +1,4 @@
-/// @description 
+/// @description Shooting 4
 
 if y < 700 {
 	var sspd = 3 + global.stage / 8
@@ -7,5 +7,7 @@ if y < 700 {
 	enemy_shot(x, y, sspd * 1.16, pd - 10)
 	enemy_shot(x, y, sspd * 1.16, pd + 10)
 	enemy_shot(x, y, sspd, pd + 30)
+	audio_play_sound(soundShotEnemy, 0, false)
+
 	alarm[1] = max(1,35 - global.stage * 2)
 }
