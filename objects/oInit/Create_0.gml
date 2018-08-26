@@ -5,13 +5,16 @@
 global.profilefile = "profile.dat"
 global.network = true
 
+// flags
+global.flag_is_mobile = (os_type == os_android or os_type == os_ios)
+
 // screen
 var width_default = 540, height_default = 960 // 9 : 16
 
 global.__view_width = width_default				// Original Size
 global.__view_height = height_default			// Original Size 
 
-if os_type == os_android or os_type == os_ios {
+if global.flag_is_mobile {
 	window_set_fullscreen(true)
 	
 	var window_width = window_get_width()		// Full size
@@ -51,11 +54,15 @@ globalvar matrix_identical;
 matrix_identical = matrix_build_identity()
 
 // ui / ux / drawing
-rotation = 0
+draw_set_font(fontRetro)
 draw_set_color($ffffff)
 draw_set_halign(1)
 draw_set_valign(1)
 gpu_set_fog(false, $ffffff, 32, 32000)
+
+// local drawing
+dmode = 0
+dalpha = 0
 
 // general
 game_set_speed(60, gamespeed_fps)

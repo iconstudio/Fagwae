@@ -10,7 +10,7 @@
     "option_windows_copyright_info": "(c) 2018 Iconstudio",
     "option_windows_description_info": "Fagwae",
     "option_windows_display_cursor": false,
-    "option_windows_display_name": "Fagwae",
+    "option_windows_display_name": "Fagwae Beta",
     "option_windows_enable_steam": true,
     "option_windows_executable_name": "${project_name}",
     "option_windows_icon": "${options_dir}\\windows\\icons\\icon.ico",

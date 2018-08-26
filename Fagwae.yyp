@@ -191,6 +191,14 @@
             }
         },
         {
+            "Key": "15a9781a-2c64-4979-9856-aaf9e4c885bc",
+            "Value": {
+                "id": "bb05f7dd-3b7a-4b8a-b2c0-1f478488df09",
+                "resourcePath": "objects\\oIntro\\oIntro.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "160f4dc0-6100-46d1-bbad-56612afcbaf2",
             "Value": {
                 "id": "cb266fe3-e876-4393-af5a-1b5850fa854c",
@@ -1847,6 +1855,14 @@
             }
         },
         {
+            "Key": "afa47022-6f8b-407d-bcad-4681343aa4b4",
+            "Value": {
+                "id": "89ff38e7-8810-45c8-9b53-76095a9c8df1",
+                "resourcePath": "shaders\\shader0\\shader0.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "b03c1cb5-5c28-4dca-95cf-a0b398722e7e",
             "Value": {
                 "id": "aa5887c3-8c3d-4481-9e90-af91f417cdb1",
@@ -2108,14 +2124,6 @@
                 "id": "c3371c65-d6a6-4e92-8709-8fd524abcded",
                 "resourcePath": "objects\\oGameOver\\oGameOver.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "c636f0c2-95c2-499d-8dd8-6d9f285e62c4",
-            "Value": {
-                "id": "659c9e83-b1fa-491b-a461-c756288a8ac6",
-                "resourcePath": "sprites\\sLoading\\sLoading.yy",
-                "resourceType": "GMSprite"
             }
         },
         {
@@ -2484,6 +2492,14 @@
                 "id": "8c4c60c7-3f4b-4b2f-a48a-930c5438a96d",
                 "resourcePath": "scripts\\trophy_check3\\trophy_check3.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "e7c611bd-6e37-4ae3-9fbf-5497ff1413dc",
+            "Value": {
+                "id": "3ef9d5da-1ee5-400d-a54f-bd30b320bbe3",
+                "resourcePath": "sprites\\sTrademark\\sTrademark.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2901,7 +2917,6 @@
         "f3395f44-1094-4c54-afdd-2b6f2100e643",
         "5313dabf-ae83-49ce-820a-681827c3bc2b",
         "271a397f-372c-40bd-a73f-0d79a32f7439",
-        "d0a92550-e0bd-424b-88a9-720c87294374",
         "57ae2d5b-7eb1-49d8-b349-e10e378ff69f",
         "d606151b-12c0-42e3-93e1-6635842923a4",
         "7a41cd66-6631-425a-ac56-b454236eb536",
@@ -2910,6 +2925,7 @@
         "b256a706-70b4-4f9c-b479-ff1ca01212a4",
         "6315f5e1-7c68-47be-8b99-b68d5a9f527b",
         "a8ce7605-f771-4e26-9ea6-a9b63ed051d2",
+        "d0a92550-e0bd-424b-88a9-720c87294374",
         "9a421c59-3b9a-4823-8608-ac49d54bd849",
         "85ab0339-162f-4009-a77f-db4dc9b9485b",
         "41535597-dc11-4f36-9fc3-6bce8e5eb7dc",

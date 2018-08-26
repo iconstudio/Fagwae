@@ -1,10 +1,8 @@
 /// @description 
 
 image_angle += type_create * 0.5
-if radius > 0
-	radius -= 2 + global.extreme
-else if radius < 0
-	radius += 2 + global.extreme
+if radius > decrease
+	radius -= decrease
 else
 	radius = 0
 

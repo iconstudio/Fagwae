@@ -93,6 +93,7 @@ area_enemy_push(0, enemy_boss_1, 0, 270, -128)
 area_script_push(0, script_stage_clear, 0, 0, 0)
 
 // ================================================
+
 script_stage2_ready()
 
 area_enemy_push(seconds(0.7), enemy_octagon_4, 0, 185, -48)
@@ -105,16 +106,20 @@ area_enemy_push(seconds(0.7), enemy_octagon_4, 0, 265, -48)
 area_enemy_push(seconds(0.7), enemy_octagon_4, 0, 195, -48) // -70
 area_enemy_push(seconds(0.7), enemy_octagon_4, 0, 125, -48) // -70
 
-for (var i = 0; i < 10; ++i) {
+for (var i = 0; i < 8; ++i) {
 	area_enemy_push(0, enemy_line_1, 1, 580, 480)
-	area_enemy_push(random(seconds(0.1)) * (1 - global.extreme), enemy_line_1, -1, -40, 480)
+	area_enemy_push(0, enemy_line_1, -1, -40, 480)
 
 	if global.extreme
-		area_delay_push(seconds(0.6))
-	else
 		area_delay_push(seconds(0.9))
+	else
+		area_delay_push(seconds(1))
 }
-area_delay_push(seconds(2.6))
+
+area_enemy_push(0, enemy_line_1, 1, 580, 480)
+area_script_push(0, script_await_dying, 0, 0, 0)
+area_enemy_push(0, enemy_line_1, -1, -40, 480)
+area_delay_push(seconds(3.6))
 area_enemy_push(0, enemy_octagon_4, 0, 127, -48)		// 127
 area_enemy_push(140, enemy_octagon_4, 0, 412, -48)	// w - 127 - 1
 
@@ -133,20 +138,20 @@ if global.extreme {
 	area_enemy_push(seconds(2), enemy_spread_1, 0, 120, -48)
 }
 
-area_delay_push(seconds(2))
+area_delay_push(seconds(0.5))
 
 k = 0
-area_enemy_push(seconds(0.9), enemy_line_2, 1, 345, -400)
-area_enemy_push(seconds(0.1), enemy_line_2, 0, 30, -400)
+area_enemy_push(seconds(0.9), enemy_line_2, 1, 345, -500)
+area_enemy_push(seconds(0.1), enemy_line_2, 0, 30, -500)
 for (; k < 4; ++k)
-	area_enemy_push(seconds(0.1 + 0.1 * (random(j) * 7) mod 4), enemy_line_2, j & 1, min(max(20, 40 + (j * 219) mod 540), 520), -400 + random(20))
-area_enemy_push(seconds(0.1), enemy_line_2, 0, 508, -400 + random(20))
+	area_enemy_push(seconds(0.1 * (random(k) * 7) mod 4), enemy_line_2, k & 1, min(max(20, 40 + (k * 219) mod 540), 520), -500 + random(20))
+area_enemy_push(seconds(0.1), enemy_line_2, 0, 508, -500 + random(20))
 k = 0
 for (; k < 4; ++k)
-	area_enemy_push(seconds(0.1 + 0.1 * (random(j) * 5) mod 3), enemy_line_2, j & 1, min(max(20, 40 + (j * 219) mod 540), 520), -400 + random(20))
+	area_enemy_push(seconds(0.05 + 0.1 * (random(k) * 5) mod 3), enemy_line_2, k & 1, min(max(20, 40 + (k * 219) mod 540), 520), -500 + random(20))
 
 area_script_push(0, script_await_dying, 0, 0, 0)
-area_enemy_push(seconds(1), enemy_line_2, 0, 318, -400)
+area_enemy_push(seconds(0.1), enemy_line_2, 0, 318, -500)
 
 area_script_push(seconds(0.2), script_boss_apear, 0, 0, 0)
 area_music_push(seconds(0.5), musicBoss)

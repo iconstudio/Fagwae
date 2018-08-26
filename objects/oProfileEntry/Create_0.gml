@@ -8,7 +8,7 @@ if keyboard_check(vk_shift)
 if profile_load(global.profilefile) {
 	instance_destroy()
 	profile_volumes()
-	room_goto_next()
+	instance_create_layer(0, 0, "UI", oIntro)
 	exit
 } else {
 	show_debug_message("Cannot load profile.")

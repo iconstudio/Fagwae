@@ -31,7 +31,7 @@ if instance_exists(global.gauge_target) {
 
 	draw_set_halign(1)
 	draw_set_valign(1)
-	draw_text_transformed(dx, 886, global.gauge_caption, 1, 1, 0)
+	draw_text_transformed(dx, 887, global.gauge_caption, 1, 1, 0)
 	draw_set_alpha(1)
 }
 
