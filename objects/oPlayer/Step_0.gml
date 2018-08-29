@@ -43,6 +43,7 @@ if keyboard_check(vk_down) or io_check_down() {
 if keyboard_check(vk_shift) or io_check_triggerL() or io_check_buttonL() {
 	movespd = moveospd / 1.5
 	slow = true
+	ta = 0
 } else {
 	movespd = moveospd
 	slow = false

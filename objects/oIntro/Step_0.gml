@@ -1,4 +1,4 @@
-/// @description 
+/// @description Updating
 
 if dmode == 0 {
 	if dalpha < 1 {
@@ -8,7 +8,11 @@ if dmode == 0 {
 	}
 	exit
 } else {
-	if dalpha > -1 {
-		
+	if dalpha > -2 {
+		dalpha += (-4 - dalpha) * 0.00333
+	} else {
+		instance_destroy()
+		room_goto_next()
+		exit
 	}
 }

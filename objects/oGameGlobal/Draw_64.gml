@@ -3,15 +3,15 @@
 draw_set_alpha(1 - ipush)
 
 var dx = global.screen_gui_cx
-var dy = screen_height - 8 + ipush * 16
+var dy = screen_height - 16 + ipush * 32
 
 draw_set_color($ffffff)
 draw_set_halign(1)
 draw_set_valign(1)
 if global.extreme
-	draw_text_transformed(dx, dy, "EXTREME / " + string(global.stage), 1, 1, 0)
+	draw_text_transformed(dx, dy, "EXTREME / " + string(global.stage), 2, 2, 0)
 else
-	draw_text_transformed(dx, dy, "NORMAL / " + string(global.stage), 1, 1, 0)
+	draw_text_transformed(dx, dy, "NORMAL / " + string(global.stage), 2, 2, 0)
 
 if instance_exists(global.gauge_target) {
 	draw_set_alpha(global.gauge_alpha)

@@ -1,6 +1,6 @@
 /// @description Creation
 
-enemy_arm_init(enemy_arm_rectangle_2, 4, 23)
+enemy_arm_init(enemy_arm_rectangle_2, 4, 31)
 
 y = 120
 x_target = x

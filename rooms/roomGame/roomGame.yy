@@ -273,8 +273,8 @@
         },
         {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
-            "name": "Instances",
-            "id": "2ffb23e8-cee9-404c-b75b-c1316f08ae47",
+            "name": "Instances_Arms",
+            "id": "5528c035-2606-4047-a1d9-c4cbb7917e12",
             "depth": 800,
             "grid_x": 32,
             "grid_y": 32,
@@ -299,8 +299,8 @@
         },
         {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
-            "name": "Instances_Arms",
-            "id": "5528c035-2606-4047-a1d9-c4cbb7917e12",
+            "name": "Instances",
+            "id": "2ffb23e8-cee9-404c-b75b-c1316f08ae47",
             "depth": 900,
             "grid_x": 32,
             "grid_y": 32,

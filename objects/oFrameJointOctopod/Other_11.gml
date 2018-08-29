@@ -37,3 +37,6 @@ for (var i = 0; i < arm_number; ++i) {
 		}
 	}
 }
+
+if global.extreme
+	alarm[0] = seconds(0.4)
