@@ -559,6 +559,14 @@
             }
         },
         {
+            "Key": "396eee21-ec13-493e-b809-72968f69bfe0",
+            "Value": {
+                "id": "e9fded8e-ae64-45ba-a226-30928d5eab80",
+                "resourcePath": "rooms\\roomIntro\\roomIntro.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "3a12875c-0641-4f7a-ac8d-e9cabfa99dbb",
             "Value": {
                 "id": "7e6e0be9-2f9e-463f-86ea-cf2dd31034c6",
@@ -772,6 +780,14 @@
                 "id": "94004270-51ba-4ed5-ad4a-6d9ec87f6375",
                 "resourcePath": "sprites\\sGauge\\sGauge.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "52a48d58-5eb6-42e9-8990-4189610ced0c",
+            "Value": {
+                "id": "ae543608-c2a5-4273-ab71-c335e72f889a",
+                "resourcePath": "objects\\oMainMenu\\oMainMenu.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -2706,7 +2722,7 @@
             "Key": "f6e74f11-0848-4a79-abc4-61665f70ea3a",
             "Value": {
                 "id": "99140eb2-553a-4a82-a90b-0e11bc4b57d6",
-                "resourcePath": "objects\\oMainMenu\\oMainMenu.yy",
+                "resourcePath": "objects\\oMainMenuOld\\oMainMenuOld.yy",
                 "resourceType": "GMObject"
             }
         },

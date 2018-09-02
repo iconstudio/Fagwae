@@ -4,9 +4,7 @@ if dmode {
 	if dalpha > -1 {
 		dalpha -= 0.01
 	} else {
-		instance_destroy()
-		profile_volumes()
-		instance_create_layer(0, 0, "UI", oIntro)
+		alarm[1] = 1
 	}
 	exit
 }

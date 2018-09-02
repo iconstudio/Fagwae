@@ -3,4 +3,8 @@
 dmode = 0
 dalpha = 0
 
-alarm[0] = seconds(2)
+timed = second(2)
+lean = 0
+progress = 0
+logo = [sIconLarge, sTrademark]
+rpush = 1

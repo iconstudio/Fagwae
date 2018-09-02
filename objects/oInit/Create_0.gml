@@ -6,6 +6,7 @@ global.profilefile = "profile.dat"
 global.network = true
 
 // flags
+global.flag_is_pc = (os_type == os_windows or os_type == os_macosx or os_type == os_linux or os_type == os_win8native)
 global.flag_is_mobile = (os_type == os_android or os_type == os_ios)
 
 // screen
@@ -18,7 +19,7 @@ if global.flag_is_mobile {
 	window_set_fullscreen(true)
 	
 	var window_width = window_get_width()		// Full size
-	var window_height = window_get_width()	// Full size
+	var window_height = window_get_height()	// Full size
 
 	var gui_width, gui_height
 	if window_width > window_height {				// Landscape (Does not support)
@@ -63,10 +64,6 @@ gpu_set_fog(false, $ffffff, 32, 32000)
 // local drawing
 dmode = 0
 dalpha = 0
-
-// general
-game_set_speed(60, gamespeed_fps)
-randomize()
 
 // game
 global.extreme = false
@@ -124,6 +121,11 @@ if gamepad_is_supported() {
 		}
 	}
 }
+
+// general
+game_set_speed(60, gamespeed_fps)
+randomize()
+instance_create_layer(0, 0, "Screen", oGlobal)
 
 // audio
 switch os_browser {
