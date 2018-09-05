@@ -1,0 +1,140 @@
+GML 스크립트 변환중: ${project_dir}\scripts\zui_create\zui_create.gml
+변환된 설명 /// @description zui_create(x,y,object,[depth])/// @param x
+/// @param y
+/// @param object
+/// @param [depth]
+
+GML 스크립트 변환중: ${project_dir}\scripts\zui_destroy\zui_destroy.gml
+변환된 설명 /// @description zui_destroy()
+
+GML 스크립트 변환중: ${project_dir}\scripts\zui_add_child\zui_add_child.gml
+변환된 설명 /// @description zui_add_child(id) */// @param id
+
+GML 스크립트 변환중: ${project_dir}\scripts\zui_remove_child\zui_remove_child.gml
+변환된 설명 /// @description zui_remove_child(id) */// @param id
+
+GML 스크립트 변환중: ${project_dir}\scripts\zui_set_size\zui_set_size.gml
+변환된 설명 /// @description zui_set_size(width,height)/// @param width
+/// @param height
+
+GML 스크립트 변환중: ${project_dir}\scripts\zui_set_width\zui_set_width.gml
+변환된 설명 /// @description zui_set_width(width)/// @param width
+
+GML 스크립트 변환중: ${project_dir}\scripts\zui_set_height\zui_set_height.gml
+변환된 설명 /// @description zui_set_height(height)/// @param height
+
+GML 스크립트 변환중: ${project_dir}\scripts\zui_set_position\zui_set_position.gml
+변환된 설명 /// @description zui_set_position(x,y)/// @param x
+/// @param y
+
+GML 스크립트 변환중: ${project_dir}\scripts\zui_set_anchor\zui_set_anchor.gml
+변환된 설명 /// @description zui_set_anchor(anchorx,anchory)/// @param anchorx
+/// @param anchory
+
+GML 스크립트 변환중: ${project_dir}\scripts\zui_set_scale\zui_set_scale.gml
+변환된 설명 /// @description zui_set_scale(scalex,scaley)/// @param scalex
+/// @param scaley
+
+GML 스크립트 변환중: ${project_dir}\scripts\zui_set_visible\zui_set_visible.gml
+변환된 설명 /// @description zui_set_visible(visible)/// @param visible
+
+GML 스크립트 변환중: ${project_dir}\scripts\zui_set_enabled\zui_set_enabled.gml
+변환된 설명 /// @description zui_set_enabled(visible)/// @param visible
+
+GML 스크립트 변환중: ${project_dir}\scripts\zui_set_depth\zui_set_depth.gml
+변환된 설명 /// @description zui_set_enabled(visible)/// @param visible
+
+GML 스크립트 변환중: ${project_dir}\scripts\zui_get_x\zui_get_x.gml
+변환된 설명 /// @description zui_get_x()
+
+GML 스크립트 변환중: ${project_dir}\scripts\zui_get_y\zui_get_y.gml
+변환된 설명 /// @description zui_get_y()
+
+GML 스크립트 변환중: ${project_dir}\scripts\zui_get_mouse_x\zui_get_mouse_x.gml
+변환된 설명 /// @description zui_get_mouse_x()
+
+GML 스크립트 변환중: ${project_dir}\scripts\zui_get_mouse_y\zui_get_mouse_y.gml
+변환된 설명 /// @description zui_get_mouse_y()
+
+GML 스크립트 변환중: ${project_dir}\scripts\zui_get_width\zui_get_width.gml
+변환된 설명 /// @description zui_get_width()
+
+GML 스크립트 변환중: ${project_dir}\scripts\zui_get_height\zui_get_height.gml
+변환된 설명 /// @description zui_get_height()
+
+GML 스크립트 변환중: ${project_dir}\scripts\zui_get_hover\zui_get_hover.gml
+변환된 설명 /// @description zui_get_hover()
+
+GML 스크립트 변환중: ${project_dir}\scripts\zui_get_parent\zui_get_parent.gml
+변환된 설명 /// @description zui_get_parent()
+
+GML 스크립트 변환중: ${project_dir}\scripts\zui_get_visible\zui_get_visible.gml
+변환된 설명 /// @description zui_get_visible()
+
+GML 스크립트 변환중: ${project_dir}\scripts\zui_get_visible_in_hierarchy\zui_get_visible_in_hierarchy.gml
+변환된 설명 /// @description zui_get_visible_in_hierarchy()
+
+GML 스크립트 변환중: ${project_dir}\scripts\zui_get_enabled\zui_get_enabled.gml
+변환된 설명 /// @description zui_get_enabled()
+
+GML 스크립트 변환중: ${project_dir}\scripts\zui_get_enabled_in_hierarchy\zui_get_enabled_in_hierarchy.gml
+변환된 설명 /// @description zui_get_enabled_in_hierarchy()
+
+GML 스크립트 변환중: ${project_dir}\scripts\zui_draw\zui_draw.gml
+변환된 설명 /// @description zui_draw() *
+
+GML 스크립트 변환중: ${project_dir}\scripts\zui_update\zui_update.gml
+변환된 설명 /// @description zui_update() *
+
+GML 스크립트 변환중: ${project_dir}\scripts\zui_update_begin\zui_update_begin.gml
+변환된 설명 /// @description zui_update_begin() *
+
+GML 스크립트 변환중: ${project_dir}\scripts\zui_x_child_compare\zui_x_child_compare.gml
+변환된 설명 /// @description zui_x_child_compare(id0,id1) */// @param id0
+/// @param id1
+
+GML 스크립트 변환중: ${project_dir}\scripts\zui_x_child_swap\zui_x_child_swap.gml
+변환된 설명 /// @description zui_x_child_swap(id0, id1) */// @param id0
+/// @param  id1
+
+GML 스크립트 변환중: ${project_dir}\scripts\zui_x_node_init\zui_x_node_init.gml
+변환된 설명 /// @description zui_x_node_init() *
+
+GML 스크립트 변환중: ${project_dir}\scripts\zui_shared_qsort\zui_shared_qsort.gml
+변환된 설명 /// @description zui_shared_qsort(left, right, compare, swap)/// @param left
+/// @param  right
+/// @param  compare
+/// @param  swap
+
+GML 스크립트 변환중: ${project_dir}\scripts\ui_draw_sprite_panel\ui_draw_sprite_panel.gml
+변환된 설명 /// @description ui_draw_sprite_panel(sprite,subimg,border,x,y,width,height)/// @param sprite
+/// @param subimg
+/// @param border
+/// @param x
+/// @param y
+/// @param width
+/// @param height
+
+GML 스크립트 변환중: ${project_dir}\scripts\ui_lerp_filter\ui_lerp_filter.gml
+변환된 설명 /// @description ui_lerp_filter(value,start,end)/// @param value
+/// @param start
+/// @param end
+
+GML 스크립트 변환중: ${project_dir}\scripts\ui_show_popup\ui_show_popup.gml
+변환된 설명 /// @description ui_show_popup(caption)/// @param caption
+
+GML 스크립트 변환중: ${project_dir}\scripts\test_callback_button\test_callback_button.gml
+변환된 설명 /// @description test_callback_button(id)/// @param id
+
+GML 스크립트 변환중: ${project_dir}\scripts\test_callback_slider\test_callback_slider.gml
+변환된 설명 /// @description test_callback_slider(id,value)/// @param id
+/// @param value
+
+호환성 스크립트 'd3d/d3d_transform_add_scaling.gml' 추가
+호환성 스크립트 'd3d/d3d_transform_add_translation.gml' 추가
+호환성 스크립트 'd3d/d3d_transform_set_translation.gml' 추가
+호환성 스크립트 'instance/instance_create.gml' 추가
+호환성 스크립트 'object/object_get_depth.gml' 추가
+호환성 스크립트 'd3d/__init_d3d.gml' 추가
+호환성 스크립트 '__init_global.gml' 추가
+호환성 스크립트 '__global_object_depths.gml' 추가

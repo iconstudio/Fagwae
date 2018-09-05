@@ -1,0 +1,5 @@
+호환성 스크립트 'd3d/d3d_transform_set_identity.gml' 추가
+호환성 스크립트 'd3d/d3d_transform_stack_pop.gml' 추가
+호환성 스크립트 'd3d/d3d_transform_stack_push.gml' 추가
+호환성 스크립트 'd3d/__init_d3d.gml' 추가
+호환성 스크립트 '__init_global.gml' 추가

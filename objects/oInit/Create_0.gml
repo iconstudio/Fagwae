@@ -15,7 +15,7 @@ var width_default = 540, height_default = 960 // 9 : 16
 global.__view_width = width_default				// Original Size
 global.__view_height = height_default			// Original Size 
 
-if global.flag_is_mobile {
+if global.flag_is_mobile or window_get_fullscreen() {
 	window_set_fullscreen(true)
 	
 	var window_width = window_get_width()		// Full size
@@ -47,6 +47,7 @@ global.screen_gui_cy = global.__tth * 0.5
 // However GUI fits into 'aspected' screen	(Interface)
 #macro screen_width global.__ttw
 #macro screen_height global.__tth
+application_surface_enable(true)
 application_surface_draw_enable(false)
 gpu_set_blendenable(true)
 draw_set_circle_precision(60)
@@ -60,6 +61,8 @@ draw_set_color($ffffff)
 draw_set_halign(1)
 draw_set_valign(1)
 gpu_set_fog(false, $ffffff, 32, 32000)
+
+zui_main()
 
 // local drawing
 dmode = 0

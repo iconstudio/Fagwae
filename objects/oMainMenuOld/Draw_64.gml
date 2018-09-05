@@ -14,10 +14,10 @@ else
 
 // -38
 draw_set_alpha(aalpha * (120 - rpush[0]) / 120 * get_ralpha(rflash[0]))
-menu_text(rpush[0] + 22, -50, "FAGWAE", 6, menurot + 85)
+menu_text(rpush[0] + 22, -51, "FAGWAE", 6, menurot + 90)
 draw_set_alpha(aalpha * (120 - rpush[1]) / 120 * get_ralpha(rflash[1]))
-menu_text(8 + rpush[1], -4, "2018", 3, menurot + 85)
-menu_text(20 + rpush[1], 13, "ICONSTUDIO", 3, menurot + 85)
+//menu_text(8 + rpush[1], -4, "2018", 3, menurot + 90)
+//menu_text(20 + rpush[1], 13, "ICONSTUDIO", 3, menurot + 90)
 
 aalpha = max((120 - rpush[2]) / 120 * get_ralpha(rflash[2]), 0)
 if aalpha <= 0

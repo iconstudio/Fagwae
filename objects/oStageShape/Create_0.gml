@@ -105,7 +105,7 @@ area_enemy_push(seconds(3.1), enemy_octagon_1, 0, 481, -48)
 area_enemy_push(seconds(0.7), enemy_octagon_4, 0, 265, -48)
 area_enemy_push(seconds(0.7), enemy_octagon_4, 0, 195, -48) // -70
 area_enemy_push(seconds(0.7), enemy_octagon_4, 0, 125, -48) // -70
-
+/*
 for (var i = 0; i < 8; ++i) {
 	area_enemy_push(0, enemy_line_1, 1, 580, 480)
 	area_enemy_push(0, enemy_line_1, -1, -40, 480)
@@ -119,7 +119,8 @@ for (var i = 0; i < 8; ++i) {
 area_enemy_push(0, enemy_line_1, 1, 580, 480)
 area_script_push(0, script_await_dying, 0, 0, 0)
 area_enemy_push(0, enemy_line_1, -1, -40, 480)
-area_delay_push(seconds(3.6))
+*/
+area_delay_push(seconds(1.6))
 area_enemy_push(0, enemy_octagon_4, 0, 127, -48)		// 127
 area_enemy_push(140, enemy_octagon_4, 0, 412, -48)	// w - 127 - 1
 

@@ -4,7 +4,7 @@
     "mvc": "1.0",
     "name": "fontNormal",
     "AntiAlias": 1,
-    "TTFName": "",
+    "TTFName": "${project_dir}\\fonts\\fontNormal\\윤고딕_0.ttf",
     "bold": false,
     "charset": 0,
     "first": 0,
@@ -1452,7 +1452,7 @@
         }
     ],
     "image": null,
-    "includeTTF": false,
+    "includeTTF": true,
     "italic": false,
     "kerningPairs": [
         {
