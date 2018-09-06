@@ -1,5 +1,9 @@
 /// @description 
 
+room_goto_next()
+
+// *skip
+
 dmode = 0
 dalpha = 0
 dtime = 0
