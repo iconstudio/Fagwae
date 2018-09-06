@@ -8,9 +8,7 @@
 /// @param height size { real }
 
 if argument4 = 0 || argument5 = 0
- return 0
-
-surface_reset_target()
+	return 0
 
 surface_set_target(ui_shared_surface())
 shader_set(shaderBlur)
@@ -24,8 +22,7 @@ draw_transform_stack_pop()
 shader_reset()
 surface_reset_target()
 
-surface_set_target(application_surface)
 shader_set(shaderBlur)
 shader_set_uniform_f(global.shaBlur_texelSize, 0, texture_get_texel_height(global.surface_tex))
-draw_surface_part_ext(ui_shared_surface(), argument2, argument3, argument4, argument5, argument0, argument1, 1 / __sx, 1 / __sy, $cccccc, draw_get_alpha())
+draw_surface_part_ext(ui_shared_surface(), argument2, argument3, argument4, argument5, argument0, argument1, 1, 1, $cccccc, draw_get_alpha())
 shader_reset()

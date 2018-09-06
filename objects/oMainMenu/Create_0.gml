@@ -1,1 +1,15 @@
-/// @description 
+/// @description Setting up main menu
+
+ui_show_popup("팝업", "내용 테스트")
+
+menu_selected = 0
+if global.flag_is_pc {
+	menu_count = 4
+	menu_content = ["START", "STATISTICS", "ACHIEVEMENT", "EXIT"]
+} else {
+	menu_count = 3
+	menu_content = ["START", "STATISTICS", "ACHIEVEMENT"]
+}
+
+dmode = 0
+

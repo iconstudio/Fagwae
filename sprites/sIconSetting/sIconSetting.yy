@@ -7,11 +7,11 @@
     "HTile": false,
     "VTile": false,
     "bbox_bottom": 254,
-    "bbox_left": 2,
+    "bbox_left": 0,
     "bbox_right": 255,
-    "bbox_top": 2,
+    "bbox_top": 0,
     "bboxmode": 0,
-    "colkind": 1,
+    "colkind": 0,
     "coltolerance": 0,
     "edgeFiltering": false,
     "frames": [
@@ -38,23 +38,23 @@
             ]
         },
         {
-            "id": "5b134461-d28e-471b-ac59-447e5ec993e0",
+            "id": "5159066e-d757-479a-96eb-aa9203048f1d",
             "modelName": "GMSpriteFrame",
             "mvc": "1.0",
             "SpriteId": "24c5402d-5095-47e9-a43c-ab99a8c358bf",
             "compositeImage": {
-                "id": "87c1f4f8-fe72-49f8-91c3-bb3e0401a4dd",
+                "id": "cb3c4a30-f5d5-47a0-be09-291216d818c4",
                 "modelName": "GMSpriteImage",
                 "mvc": "1.0",
-                "FrameId": "5b134461-d28e-471b-ac59-447e5ec993e0",
+                "FrameId": "5159066e-d757-479a-96eb-aa9203048f1d",
                 "LayerId": "00000000-0000-0000-0000-000000000000"
             },
             "images": [
                 {
-                    "id": "b24c8d8e-d7d0-4255-9d34-1b423879d547",
+                    "id": "ba4be7f1-b8cc-4273-9466-f09e6b1cabe1",
                     "modelName": "GMSpriteImage",
                     "mvc": "1.0",
-                    "FrameId": "5b134461-d28e-471b-ac59-447e5ec993e0",
+                    "FrameId": "5159066e-d757-479a-96eb-aa9203048f1d",
                     "LayerId": "13e7e383-9c52-4180-9274-e1d432b3ef07"
                 }
             ]
@@ -76,17 +76,17 @@
             "visible": true
         }
     ],
-    "origin": 4,
+    "origin": 0,
     "originLocked": false,
     "playbackSpeed": 15,
     "playbackSpeedType": 0,
     "premultiplyAlpha": false,
-    "sepmasks": false,
+    "sepmasks": true,
     "swatchColours": null,
     "swfPrecision": 2.525,
     "textureGroupId": "292c65be-d274-45be-a256-bd528398fbb0",
     "type": 0,
     "width": 256,
-    "xorig": 128,
-    "yorig": 128
+    "xorig": 0,
+    "yorig": 0
 }

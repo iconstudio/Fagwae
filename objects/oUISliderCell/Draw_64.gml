@@ -1,3 +1,7 @@
+if !instance_exists(ui_parent) {
+	instance_destroy()
+	exit
+}
 
 if pressed
 	image_index = 2

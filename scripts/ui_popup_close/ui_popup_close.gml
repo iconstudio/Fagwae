@@ -4,3 +4,4 @@ with ui_parent {
 
 	instance_destroy()
 }
+instance_destroy()

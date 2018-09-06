@@ -3,3 +3,4 @@
 /// @param anchory
 
 ui_anchor = [argument0, argument1]
+event_user(0)

@@ -2,3 +2,4 @@
 /// @param width real
 
 ui_width = argument0
+event_user(0)

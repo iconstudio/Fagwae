@@ -1,3 +1,7 @@
+if !instance_exists(ui_parent) {
+	instance_destroy()
+	exit
+}
 
 draw_sprite_ext(sprite_index, 0, x, y, image_xscale, 1, 0, $ffffff, 1)
 

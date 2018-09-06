@@ -2,5 +2,6 @@
 /// @param x position
 /// @param y position
 
-x = argument0
-y = argument1
+ui_x = argument0
+ui_y = argument1
+event_user(0)

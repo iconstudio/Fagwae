@@ -1,3 +1,7 @@
+if !instance_exists(ui_parent) {
+	instance_destroy()
+	exit
+}
 
 var mouseOn = false
 if global.ui_top == id {

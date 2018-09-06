@@ -2,3 +2,4 @@
 /// @param height real
 
 ui_height = argument0
+event_user(0)

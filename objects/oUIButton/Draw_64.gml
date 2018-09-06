@@ -1,3 +1,8 @@
+if !instance_exists(ui_parent) {
+	instance_destroy()
+	exit
+}
+
 if global.ui_top == id {
 	if pressed
 		image_index = 2
@@ -7,14 +12,17 @@ if global.ui_top == id {
 	image_index = 0
 }
 
-var dx = x - ui_width * ui_anchor[0] - 6
-var dy = y - ui_height * ui_anchor[1] - 6
+var sx = floor(ui_parent.x + ui_x)
+var sy = floor(ui_parent.y + ui_y)
+
 draw_set_alpha(image_alpha)
-ui_draw_sprite_panel(sprite_index, image_index, 8, dx, dy, ui_width + 12, ui_height + 12)
+var dx = sx - floor(ui_width * ui_anchor[0])
+var dy = sy - floor(ui_height * ui_anchor[1])
+ui_draw_sprite_panel(sButton, image_index, 12, dx - 10, dy - 10, ui_width + 20, ui_height + 20)
 
 draw_set_font(fontNormal)
 draw_set_halign(1)
 draw_set_valign(1)
 draw_set_color(0)
-draw_text(x, y, caption)
+draw_text(sx, sy, caption)
 draw_set_font(fontRetro)
