@@ -1,6 +1,6 @@
-with (zui_get_parent()) {
- with (black)
-  zui_destroy();
+with ui_parent {
+	with black
+		instance_destroy()
 
- zui_destroy();
+	instance_destroy()
 }

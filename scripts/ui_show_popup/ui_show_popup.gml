@@ -1,25 +1,25 @@
 /// @description ui_show_popup(caption)
 /// @param caption
-with (objZUIMain) {
- var _black = zui_create(0, 0, oUIBlack, -1000);
+with oGlobal {
+ var _black = ui_create(0, 0, oUIBlack, "ZUI_Below")
 
- with (zui_create(__width * 0.5, __height * 0.5, oUIWindow, -1001)) {
-  zui_set_size(256, 112);
+ with ui_create(__width * 0.5, __height * 0.5, oUIWindow, "ZUI") {
+  ui_width = 256
+	ui_height = 112
+  black = _black
   
-  black = _black;
-  
-  with (zui_create(0, 0, objUIWindowCaption)) {
-   caption = "Popup";
+  with ui_create(0, 0, oUIWindowCaption, "ZUI_Above") {
+   caption = "Popup"
   }
   
-  with (zui_create(zui_get_width() * 0.5, zui_get_height() * 0.5 - 8, objUILabel)) {
-   caption = argument0;
+  with ui_create(zui_get_width() * 0.5, zui_get_height() * 0.5 - 8, oUILabel, "ZUI_Above") {
+   caption = argument0
   }
   
-  with (zui_create(zui_get_width() * 0.5, zui_get_height() - 24, objUIButton)) {
-   zui_set_size(96, 28);
-   caption = "OK";
-   callback = ui_popup_close;
+  with ui_create(zui_get_width() * 0.5, zui_get_height() - 24, oUIButton, "ZUI_Above") {
+   zui_set_size(96, 28)
+   caption = "OK"
+   callback = ui_popup_close
   }
  }
 }

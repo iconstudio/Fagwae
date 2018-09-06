@@ -2,16 +2,18 @@
 
 if dmode == 0 {
 	if lean == 0 {
-		if dalpha < timed {
-			dalpha += 1 / timed
+		if dtime++ < timed {
+			dalpha += (1 - dalpha) * 0.2
 			
 			if mouse_check_button(mb_left) or keyboard_check_pressed(vk_enter)
 				or io_check_pressed_padY() or io_check_pressed_padA()
 				or io_check_pressed_padX() or io_check_pressed_padB() {
-				dalpha = timed
+				dalpha = 1
+				dtime = timed
 			}
 		} else {
-			dalpha = timed
+			dalpha = 1
+			dtime = timed
 			lean = 1
 		}
 	} else { // lean == 1
@@ -19,6 +21,7 @@ if dmode == 0 {
 			dalpha -= dalpha * 0.1
 		} else {
 			dalpha = 0
+			dtime = 0
 			dmode = 1 /*
 			if progress == 0 {
 				progress = 1

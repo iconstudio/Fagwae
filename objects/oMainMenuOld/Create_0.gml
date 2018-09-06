@@ -1,5 +1,21 @@
 /// @description Initialize main menu
 
+with oGlobal {
+	with ui_create(ui_width * 0.5, ui_height * 0.5, oUIWindow, "ZUI") {
+		ui_set_size(256, 320)
+
+		with ui_create(0, 0, oUIWindowCaption, "ZUI_Above") {
+			caption = "Popup"
+		}
+		
+		with ui_create(ui_width * 0.5, ui_height - 32, oUIButton, "ZUI_Above") {
+			ui_set_size(96, 32)
+			caption = "OK"
+			callback = ui_popup_close
+		}
+	}
+}
+
 menu_camera = camera_create_view(0, 0, 450, 800, 0, noone, 0, 0, -1, -1)
 camera_apply(menu_camera)
 event_user(0)

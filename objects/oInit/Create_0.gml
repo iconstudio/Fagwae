@@ -25,7 +25,7 @@ if global.flag_is_mobile or window_get_fullscreen() {
 	if window_width > window_height {				// Landscape (Does not support)
 	} else {																// Portrait (Support via option) or Square
 		gui_height = floor(window_height / 16) * 16
-		gui_width = gui_height * 9 / 16
+		gui_width = floor(gui_height * 9 / 16)
 	}
 	window_set_size(window_width, window_height)		// game window
 	display_set_gui_size(gui_width, gui_height)			// gui in the game window
@@ -37,6 +37,7 @@ if global.flag_is_mobile or window_get_fullscreen() {
 
 global.__ttw = display_get_gui_width()		// Adjusted
 global.__tth = display_get_gui_height()		// Adjusted
+global.__tts = global.__ttw / width_default
 
 global.screen_gui_cx = global.__ttw * 0.5
 global.screen_gui_cy = global.__tth * 0.5
@@ -47,22 +48,29 @@ global.screen_gui_cy = global.__tth * 0.5
 // However GUI fits into 'aspected' screen	(Interface)
 #macro screen_width global.__ttw
 #macro screen_height global.__tth
+#macro screen_scale global.__tts
+#macro screen_iscale floor(global.__tts)
 application_surface_enable(true)
 application_surface_draw_enable(false)
 gpu_set_blendenable(true)
+gpu_set_texfilter(false)
 draw_set_circle_precision(60)
 
 globalvar matrix_identical;
 matrix_identical = matrix_build_identity()
 
-// ui / ux / drawing
+// UI / drawing
 draw_set_font(fontRetro)
 draw_set_color($ffffff)
 draw_set_halign(1)
 draw_set_valign(1)
 gpu_set_fog(false, $ffffff, 32, 32000)
 
-zui_main()
+// UX
+global.__devicemx = 0
+global.__devicemy = 0
+#macro mouse_gui_x global.__devicemx
+#macro mouse_gui_y global.__devicemy
 
 // local drawing
 dmode = 0
@@ -124,6 +132,7 @@ if gamepad_is_supported() {
 		}
 	}
 }
+
 
 // general
 game_set_speed(60, gamespeed_fps)

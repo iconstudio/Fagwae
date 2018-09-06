@@ -1,0 +1,2 @@
+if pressed
+	pressed = false
