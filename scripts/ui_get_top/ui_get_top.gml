@@ -9,7 +9,7 @@ var count = instance_position_list(argument0, argument1, argument2, global.ui_li
 var top = noone
 
 for (var i = 0; i < count; ++i) {
-	var current = instances[| i]
+	var current = global.ui_listbox[| i]
 
 	if top = noone || top.depth > current.depth || top > current
 		top = current
