@@ -1,8 +1,8 @@
 {
-    "id": "f71bcc59-a73f-4f8c-8439-b903c4ddbb5d",
+    "id": "21c65d2a-f6c7-45e6-a04f-1b5988eb066b",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "ui_set_anchor",
+    "name": "ui_take_center",
     "IsCompatibility": false,
     "IsDnD": false
 }

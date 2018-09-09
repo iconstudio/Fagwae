@@ -1,0 +1,1 @@
+호환성 스크립트 'draw/draw_enable_alphablend.gml' 추가

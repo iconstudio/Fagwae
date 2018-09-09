@@ -4,8 +4,8 @@
     "mvc": "1.12",
     "name": "sButton",
     "For3D": true,
-    "HTile": true,
-    "VTile": true,
+    "HTile": false,
+    "VTile": false,
     "bbox_bottom": 55,
     "bbox_left": 8,
     "bbox_right": 55,
@@ -13,7 +13,7 @@
     "bboxmode": 0,
     "colkind": 1,
     "coltolerance": 32,
-    "edgeFiltering": true,
+    "edgeFiltering": false,
     "frames": [
         {
             "id": "9e223677-caee-4d4e-a510-102de8ba1f25",
@@ -98,10 +98,10 @@
             "visible": true
         }
     ],
-    "origin": 0,
-    "originLocked": false,
+    "origin": 9,
+    "originLocked": true,
     "playbackSpeed": 1,
-    "playbackSpeedType": 1,
+    "playbackSpeedType": 0,
     "premultiplyAlpha": false,
     "sepmasks": false,
     "swatchColours": null,
@@ -109,6 +109,6 @@
     "textureGroupId": "1225f6b0-ac20-43bd-a82e-be73fa0b6f4f",
     "type": 0,
     "width": 64,
-    "xorig": 0,
-    "yorig": 0
+    "xorig": 12,
+    "yorig": 12
 }

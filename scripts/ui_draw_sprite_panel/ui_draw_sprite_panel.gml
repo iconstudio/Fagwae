@@ -22,21 +22,27 @@ draw_primitive_begin_texture(pr_trianglestrip, sprite_get_texture(argument0, arg
 draw_vertex_texture(x1, y1, 0, 0)
 draw_vertex_texture(x1, y2, 0, bordersize)
 draw_vertex_texture(x2, y1, bordersize, 0)
+
 draw_vertex_texture(x2, y2, bordersize, bordersize)
 draw_vertex_texture(x3, y1, 1 - bordersize, 0)
 draw_vertex_texture(x3, y2, 1 - bordersize, bordersize)
+
 draw_vertex_texture(x4, y1, 1, 0)
 draw_vertex_texture(x4, y2, 1, bordersize)
 draw_vertex_texture(x4, y3, 1, 1 - bordersize)
+//
 draw_vertex_texture(x3, y2, 1 - bordersize, bordersize)
 draw_vertex_texture(x3, y3, 1 - bordersize, 1 - bordersize)
 draw_vertex_texture(x2, y2, bordersize, bordersize)
 draw_vertex_texture(x2, y3, bordersize, 1 - bordersize)
+
 draw_vertex_texture(x1, y2, 0, bordersize)
 draw_vertex_texture(x1, y3, 0, 1 - bordersize)
+
 draw_vertex_texture(x1, y4, 0, 1)
 draw_vertex_texture(x2, y3, bordersize, 1 - bordersize)
 draw_vertex_texture(x2, y4, bordersize, 1)
+
 draw_vertex_texture(x3, y3, 1 - bordersize, 1 - bordersize)
 draw_vertex_texture(x3, y4, 1 - bordersize, 1)
 draw_vertex_texture(x4, y3, 1, 1 - bordersize)

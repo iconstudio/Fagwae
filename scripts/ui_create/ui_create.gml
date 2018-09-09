@@ -13,8 +13,6 @@ else
 
 with newid {
 	ui_node_init()
-	ui_x = argument[0]
-	ui_y = argument[1]
 	x = other.x + argument[0]
 	y = other.y + argument[1]
 	ui_parent = other.id

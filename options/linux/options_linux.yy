@@ -5,7 +5,7 @@
     "name": "Linux",
     "option_linux_allow_fullscreen": false,
     "option_linux_display_cursor": true,
-    "option_linux_display_name": "Fagwae",
+    "option_linux_display_name": "Fagwae 2 Alpha",
     "option_linux_display_splash": false,
     "option_linux_enable_steam": true,
     "option_linux_homepage": "iconer.playgm.co.kr",
@@ -19,9 +19,9 @@
     "option_linux_splash_screen": "${options_dir}\\linux\\splash\\splash.png",
     "option_linux_start_fullscreen": false,
     "option_linux_sync": false,
-    "option_linux_texture_page": "2048x2048",
+    "option_linux_texture_page": "4096x4096",
     "option_linux_version": {
-        "build": 0,
+        "build": 3,
         "major": 1,
         "minor": 0,
         "revision": 0

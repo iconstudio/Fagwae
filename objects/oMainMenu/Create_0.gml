@@ -1,7 +1,5 @@
 /// @description Setting up main menu
 
-ui_show_popup("팝업", "내용 테스트")
-
 menu_selected = 0
 if global.flag_is_pc {
 	menu_count = 4

@@ -20,8 +20,9 @@ if argument_count > 2 {
 with oGlobal {
 	var _black = ui_create(0, 0, oUIBlack, "ZUI_Below")
 
-	with ui_create(ui_get_width() * 0.5, ui_get_height() * 0.5, oUIWindow, "ZUI") {
+	with ui_create(0, 0, oUIWindow, "ZUI") {
 		ui_set_size(_width, _height)
+		ui_take_center()
 		black = _black
 
 		with ui_create(0, 0, oUIWindowCaption, "ZUI_Above") {
@@ -32,8 +33,10 @@ with oGlobal {
 			caption = argument[1]
 		}
 
-		with ui_create(ui_get_width() * 0.5, ui_get_height() - 26, oUIButton, "ZUI_Above") {
+		with ui_create(0, 0, oUIButton, "ZUI_Above") {
 			ui_set_size(96, 32)
+			ui_take_center()
+			ui_y = ui_get_height(ui_parent) - 26
 			caption = "확인"
 			callback = ui_popup_close
 		}

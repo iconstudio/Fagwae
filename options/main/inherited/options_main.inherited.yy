@@ -45,7 +45,7 @@
                     "mvc": "1.0",
                     "groupName": "Entity_Shapes",
                     "targets": 29263750006690030,
-                    "autocrop": false,
+                    "autocrop": true,
                     "border": 2,
                     "groupParent": "00000000-0000-0000-0000-000000000000",
                     "mipsToGenerate": 0,
@@ -60,7 +60,7 @@
                     "mvc": "1.0",
                     "groupName": "Effect",
                     "targets": 29263750006690030,
-                    "autocrop": false,
+                    "autocrop": true,
                     "border": 2,
                     "groupParent": "00000000-0000-0000-0000-000000000000",
                     "mipsToGenerate": 0,
@@ -75,7 +75,7 @@
                     "mvc": "1.0",
                     "groupName": "Other",
                     "targets": 29263750006690030,
-                    "autocrop": false,
+                    "autocrop": true,
                     "border": 2,
                     "groupParent": "00000000-0000-0000-0000-000000000000",
                     "mipsToGenerate": 0,
@@ -90,7 +90,7 @@
                     "mvc": "1.0",
                     "groupName": "Entity_Frames",
                     "targets": 29263750006690030,
-                    "autocrop": false,
+                    "autocrop": true,
                     "border": 2,
                     "groupParent": "00000000-0000-0000-0000-000000000000",
                     "mipsToGenerate": 0,
@@ -105,7 +105,7 @@
                     "mvc": "1.0",
                     "groupName": "Entity_Indeterminate",
                     "targets": 29263750006690030,
-                    "autocrop": false,
+                    "autocrop": true,
                     "border": 2,
                     "groupParent": "00000000-0000-0000-0000-000000000000",
                     "mipsToGenerate": 0,
@@ -120,7 +120,7 @@
                     "mvc": "1.0",
                     "groupName": "Entity_Player",
                     "targets": 29263750006690030,
-                    "autocrop": false,
+                    "autocrop": true,
                     "border": 2,
                     "groupParent": "00000000-0000-0000-0000-000000000000",
                     "mipsToGenerate": 0,
@@ -135,7 +135,37 @@
                     "mvc": "1.0",
                     "groupName": "Entity_General",
                     "targets": 29263750006690030,
+                    "autocrop": true,
+                    "border": 2,
+                    "groupParent": "00000000-0000-0000-0000-000000000000",
+                    "mipsToGenerate": 0,
+                    "scaled": false
+                }
+            },
+            {
+                "Key": 10,
+                "Value": {
+                    "id": "fcd115d0-1e93-4474-9eb4-6aa140a39543",
+                    "modelName": "GMTextureGroup",
+                    "mvc": "1.0",
+                    "groupName": "UI_ingame",
+                    "targets": 461609314234257646,
                     "autocrop": false,
+                    "border": 4,
+                    "groupParent": "00000000-0000-0000-0000-000000000000",
+                    "mipsToGenerate": 0,
+                    "scaled": false
+                }
+            },
+            {
+                "Key": 11,
+                "Value": {
+                    "id": "12a5d153-d17d-43f2-bc75-a19492e83f96",
+                    "modelName": "GMTextureGroup",
+                    "mvc": "1.0",
+                    "groupName": "Font_Normal",
+                    "targets": 307888753923444942,
+                    "autocrop": true,
                     "border": 2,
                     "groupParent": "00000000-0000-0000-0000-000000000000",
                     "mipsToGenerate": 0,
@@ -154,7 +184,8 @@
 }←1225f6b0-ac20-43bd-a82e-be73fa0b6f4f|{
     "targets": 461609314234257646,
     "scaled": false,
-    "autocrop": false
+    "autocrop": true,
+    "border": 6
 }←7fa50043-cea6-4cd0-9521-a8ba8c6ea9f0|{
     "audioGroups": {
         "Additions": [

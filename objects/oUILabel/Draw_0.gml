@@ -1,7 +1,7 @@
 
 draw_set_alpha(1)
 draw_set_color(0)
-draw_set_font(fontNormal)
+draw_set_font(font)
 draw_set_halign(halign)
 draw_set_valign(valign)
 draw_text(floor(x), floor(y), caption)

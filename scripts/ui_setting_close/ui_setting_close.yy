@@ -1,8 +1,8 @@
 {
-    "id": "8bda8868-6669-407e-bed4-5ea4d9e11a75",
+    "id": "3dac52f5-8fa4-442d-a381-61b62cf36ca9",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "ui_set_position",
+    "name": "ui_setting_close",
     "IsCompatibility": false,
     "IsDnD": false
 }

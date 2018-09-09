@@ -23,7 +23,6 @@ global.shared_surface = -1
 //ui_shared_surface()
 
 ui_node_init()
-ui_anchor = [0, 0]
 ui_width = screen_width
 ui_height = screen_height
 ui_create(0, 0, oUISettingButton, "UI")
