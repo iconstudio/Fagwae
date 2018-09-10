@@ -15,7 +15,7 @@ if pressed and dmode == 0 {
 				black = _black
 
 				with ui_create(0, 0, oUIWindowCaption, "ZUI_Above") {
-					caption = "설정"
+					caption = "테스트"
 				}
 
 				with ui_create(0, 40, oUILabel, "ZUI_Above") {
@@ -37,7 +37,7 @@ if pressed and dmode == 0 {
 				with ui_create(0, 0, oUIButton, "ZUI_Above") {
 					ui_set_size(96, 32)
 					ui_take_center()
-					y = ui_parent.y + ui_get_height(ui_parent) - 26
+					y = ui_parent.y + ui_get_height(ui_parent) - 40
 					caption = "확인"
 					callback = ui_setting_close
 				}

@@ -2,6 +2,11 @@
 
 // General Screen
 event_user(0)
+fxaa_on = true
+fxaa_strength = 4
+shaderFXAA_texel = shader_get_uniform(shaderFXAA, "u_texel")
+shaderFXAA_level = shader_get_uniform(shaderFXAA, "u_strength")
+shaderHQ_tex = shader_get_uniform(shaderHQ, "rubyTextureSize")
 
 capture = noone
 global.screenlock = false

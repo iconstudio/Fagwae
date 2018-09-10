@@ -847,6 +847,14 @@
             }
         },
         {
+            "Key": "439a6c9b-6814-4c9c-9d22-954adbd154b6",
+            "Value": {
+                "id": "61536cb9-c4b2-41e4-b3bd-0d9ad4da3418",
+                "resourcePath": "shaders\\shaderHQ\\shaderHQ.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "4461f6e7-9ffa-4356-989a-0a3d2d8332a7",
             "Value": {
                 "id": "73cda788-4244-4c6e-bb8f-f4721c8b8849",
@@ -1410,7 +1418,7 @@
             "Key": "70919fa4-9c1c-4ea7-a4ea-84d8adcb2546",
             "Value": {
                 "id": "64ecccf4-40b7-4869-bc5c-fb6a934f8517",
-                "resourcePath": "shaders\\sha_fxaa\\sha_fxaa.yy",
+                "resourcePath": "shaders\\shaderFXAA\\shaderFXAA.yy",
                 "resourceType": "GMShader"
             }
         },
@@ -3372,14 +3380,6 @@
                 "id": "0768a517-3cbb-434f-81db-b8cddd1d0e85",
                 "resourcePath": "scripts\\ui_draw_sprite_panel\\ui_draw_sprite_panel.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "f5b93655-fc25-4092-b19d-ce435fd92422",
-            "Value": {
-                "id": "3e580bb0-2f72-4b02-8b26-a8677c0f4cb1",
-                "resourcePath": "objects\\postprocess\\postprocess.yy",
-                "resourceType": "GMObject"
             }
         },
         {
