@@ -18,8 +18,9 @@ if pressed and dmode == 0 {
 					caption = "테스트"
 				}
 
-				with ui_create(0, 40, oUILabel, "ZUI_Above") {
-					caption = "3423423 5sdfsdfsdfs테스트 테스트 문자 테스트합니다."
+				with ui_create(0, 80, oUILabel, "ZUI_Above") {
+					ui_take_center()
+					ui_label_set_caption("3423423 5sdfsdfsdfs테스트 테스트 문자 테스트합니다.")
 				}
 				
 				with ui_create(10, 40, oUIButton, "ZUI_Above") {

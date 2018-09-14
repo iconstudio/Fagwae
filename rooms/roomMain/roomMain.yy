@@ -7,8 +7,7 @@
     "inheritCreationOrder": false,
     "inheritLayers": false,
     "instanceCreationOrderIDs": [
-        "5fd6397c-596d-4e0d-8d08-9aef610d0bbf",
-        "f504a8ce-6072-44d7-ae32-ef5879058953"
+        "5fd6397c-596d-4e0d-8d08-9aef610d0bbf"
     ],
     "IsDnD": false,
     "layers": [
@@ -182,8 +181,7 @@
             "inheritSubLayers": false,
             "inheritVisibility": false,
             "instances": [
-{"name": "inst_1BCBEF76","id": "5fd6397c-596d-4e0d-8d08-9aef610d0bbf","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_1BCBEF76","objId": "52a48d58-5eb6-42e9-8990-4189610ced0c","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 0,"y": 0},
-{"name": "inst_63C814EE","id": "f504a8ce-6072-44d7-ae32-ef5879058953","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_63C814EE","objId": "f6e74f11-0848-4a79-abc4-61665f70ea3a","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 0,"y": 64}
+{"name": "inst_1BCBEF76","id": "5fd6397c-596d-4e0d-8d08-9aef610d0bbf","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_1BCBEF76","objId": "52a48d58-5eb6-42e9-8990-4189610ced0c","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 0,"y": 0}
             ],
             "layers": [
 

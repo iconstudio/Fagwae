@@ -6,7 +6,7 @@ global.setting_sfx = 10
 global.setting_effect = true
 global.setting_blur = true
 
-global.status_name = "Fagwae"
+global.status_name = "FAGWAE"
 global.status_id = string(date_current_datetime())
 global.status_dead = 0
 global.status_tutorial = false

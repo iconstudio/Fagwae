@@ -35,6 +35,8 @@ if dmode == 0 {
 	if rpush > 0.01 {
 		rpush -= rpush * 0.1
 	} else {
+		with oGlobal
+			ui_create(0, 0, oUISettingButton, "UI")
 		room_goto_next()
 		exit
 	}

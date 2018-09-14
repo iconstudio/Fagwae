@@ -1,6 +1,7 @@
 /// @description Initialize Basic Data, Back-End
 
 // external
+profile_clear()
 #macro file_header $ad
 global.profilefile = "profile.dat"
 global.network = true
@@ -58,6 +59,7 @@ application_surface_enable(true)
 application_surface_draw_enable(false)
 gpu_set_blendenable(true)
 gpu_set_texfilter(false)
+gpu_set_cullmode(cull_noculling)
 draw_set_circle_precision(60)
 
 globalvar matrix_identical;
@@ -85,12 +87,11 @@ global.extreme = false
 global.stage = 0 // 0: None, 1 ~ 9: Game, 10: Complete a mode
 global.px = 0
 global.py = 0
-global.enemy_dictionary = ds_map_create()
 
 #macro area_vspeed 0.5625 * 4
 
 event_user(0)
-
+global.enemy_dictionary = ds_map_create()
 enemy_init_shape()
 enemy_init_frame()
 enemy_init_arm()
@@ -104,9 +105,7 @@ enemy_register(enemy_rapid_2, oConfuser, "RAPID PULSER", sRapidNormal, sRapidExt
 // gamepad input
 global.Gamepad = -1
 global.GamepadType = 0
-global.GamepadSprite = array_create(3, sIconControllerXbox)
-global.GamepadSprite[1] = sIconControllerPlayStation
-global.GamepadSprite[2] = sIconControllerOther
+global.GamepadSprite = [sIconControllerXbox, sIconControllerPlayStation, sIconControllerOther]
 
 #macro gamepad_type_xbox 0
 #macro gamepad_type_playstation 1

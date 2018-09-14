@@ -1,10 +1,8 @@
 /// @description 
 
-room_goto_next()
-
 // *skip
 
-dmode = 0
+dmode = 1
 dalpha = 0
 dtime = 0
 
@@ -14,4 +12,4 @@ progress = 0
 
 logo = [sTrademark, sTrademark]
 //logo = [sIconLarge, sTrademark]
-rpush = 1
+rpush = 0

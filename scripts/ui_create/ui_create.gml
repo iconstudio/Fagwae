@@ -7,9 +7,9 @@
 
 var newid
 if argument_count >= 4
-	newid = instance_create_layer(0, 0, argument[3], oUIDummy)
+	newid = instance_create_layer(-10000, -10000, argument[3], oUIDummy)
 else
-	newid = instance_create_layer(0, 0, "ZUI", oUIDummy)
+	newid = instance_create_layer(-10000, -10000, "ZUI", oUIDummy)
 
 with newid {
 	ui_node_init()
