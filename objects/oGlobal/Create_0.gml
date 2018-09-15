@@ -2,7 +2,10 @@
 
 // General Screen
 event_user(0)
-fxaa_on = true
+if !shader_is_compiled(shaderFXAA) or !shaders_are_supported()
+	fxaa_on = false
+else
+	fxaa_on = true
 fxaa_strength = 7
 shaderFXAA_texel = shader_get_uniform(shaderFXAA, "u_texel")
 shaderFXAA_level = shader_get_uniform(shaderFXAA, "u_strength")

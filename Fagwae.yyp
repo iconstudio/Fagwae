@@ -1319,14 +1319,6 @@
             }
         },
         {
-            "Key": "6783e08c-e7e5-41c7-9aa1-02a33fd32088",
-            "Value": {
-                "id": "ae669441-179b-4721-8392-3721bd388358",
-                "resourcePath": "scripts\\@draw_enable_alphablend\\draw_enable_alphablend.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "68cbb0c7-7361-4ac3-89d2-0b3fe7a6191e",
             "Value": {
                 "id": "b5616515-fb05-4155-8186-35a2a36f60bb",
@@ -1508,6 +1500,14 @@
                 "id": "0d45aea4-492e-44f4-90d0-58835ddb900f",
                 "resourcePath": "objects\\oProfileEntry\\oProfileEntry.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "76d4fe82-084c-4564-9345-eb3d64b6ea87",
+            "Value": {
+                "id": "14f715fc-49ca-4f48-8bcc-9d100cf48d96",
+                "resourcePath": "sprites\\sTitle\\sTitle.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2148,14 +2148,6 @@
                 "id": "ce3eeb2e-f1d6-4bc9-ae3e-806f4afebe65",
                 "resourcePath": "scripts\\draw_shape_doughnut\\draw_shape_doughnut.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "a249d507-3a49-43f8-be82-9417c3aff983",
-            "Value": {
-                "id": "8a2e8121-4e30-4205-8a80-dbbce0da2dc2",
-                "resourcePath": "views\\a249d507-3a49-43f8-be82-9417c3aff983.yy",
-                "resourceType": "GMFolder"
             }
         },
         {
@@ -2860,6 +2852,14 @@
                 "id": "b865ad8c-0ff9-4165-8c1c-396951f6a78a",
                 "resourcePath": "objects\\oUIBlack\\oUIBlack.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "d5de092b-e678-4982-bfde-259456a1cbf5",
+            "Value": {
+                "id": "12375fee-29b8-49cb-a2df-b0d1814d1388",
+                "resourcePath": "scripts\\ease_in_cubic\\ease_in_cubic.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -3668,6 +3668,7 @@
         "94f21c2a-780a-42cd-a50c-6254e2bc9f04",
         "7ec6e645-ba4d-4af9-8301-4d737628b678",
         "d855cfab-cadd-45c2-ad62-8d343f493ed6",
+        "d5de092b-e678-4982-bfde-259456a1cbf5",
         "e10c8525-65c7-48b5-80cb-48b5a299b5f1",
         "ca82e430-fcc3-43e8-b2ea-80d084c2699d",
         "d7966746-461e-46c7-bd99-4c89cb86c8fe",
@@ -3696,8 +3697,7 @@
         "6e9586d4-caa5-4470-a935-bfd2a7784207",
         "f960daaa-3a8b-438e-a0df-08e13f41adc6",
         "92050eab-4524-4082-91b7-91464dde57e3",
-        "3a12875c-0641-4f7a-ac8d-e9cabfa99dbb",
-        "6783e08c-e7e5-41c7-9aa1-02a33fd32088"
+        "3a12875c-0641-4f7a-ac8d-e9cabfa99dbb"
     ],
     "tutorial": ""
 }

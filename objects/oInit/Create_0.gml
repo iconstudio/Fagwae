@@ -57,26 +57,32 @@ global.screen_gui_cy = global.__tth * 0.5
 #macro screen_iscale floor(global.__tts)
 application_surface_enable(true)
 application_surface_draw_enable(false)
-gpu_set_blendenable(true)
-gpu_set_texfilter(false)
-gpu_set_cullmode(cull_noculling)
-draw_set_circle_precision(60)
 
 globalvar matrix_identical;
 matrix_identical = matrix_build_identity()
 
-// UI / drawing
+// UI
 draw_set_font(fontRetro)
 draw_set_color($ffffff)
 draw_set_halign(1)
 draw_set_valign(1)
+
+// Drawing
 gpu_set_fog(false, $ffffff, 32, 32000)
+gpu_set_blendenable(true)
+gpu_set_texfilter(false)
+gpu_set_cullmode(cull_noculling)
+draw_set_circle_precision(60)
+if !shaders_are_supported() {
+	show_debug_message("Shader is not supported.")
+}
 
 // UX
 global.__devicemx = 0
 global.__devicemy = 0
 #macro mouse_gui_x global.__devicemx
 #macro mouse_gui_y global.__devicemy
+global.main_intro = false
 
 // local drawing
 dmode = 0

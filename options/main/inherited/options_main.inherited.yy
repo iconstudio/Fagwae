@@ -171,6 +171,21 @@
                     "mipsToGenerate": 0,
                     "scaled": false
                 }
+            },
+            {
+                "Key": 12,
+                "Value": {
+                    "id": "46f8f009-150b-4f00-865f-d1289ae4db7b",
+                    "modelName": "GMTextureGroup",
+                    "mvc": "1.0",
+                    "groupName": "Intro",
+                    "targets": 461609314234257646,
+                    "autocrop": false,
+                    "border": 2,
+                    "groupParent": "00000000-0000-0000-0000-000000000000",
+                    "mipsToGenerate": 0,
+                    "scaled": false
+                }
             }
         ],
         "Checksum": "ࢺ懜璙ᓆ锯翋꤯맫",

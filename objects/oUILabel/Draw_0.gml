@@ -1,3 +1,7 @@
+if !instance_exists(ui_parent) {
+	instance_destroy()
+	exit
+}
 
 draw_set_alpha(1)
 draw_set_color(0)
