@@ -6,12 +6,39 @@ image_xscale = ui_get_width()
 image_yscale = ui_get_height()
 
 menu_selected = 0
+menu_before = 0
 if global.flag_is_pc {
 	menu_count = 4
 	menu_content = ["START", "STATISTICS", "ACHIEVEMENT", "EXIT"]
 } else {
 	menu_count = 3
 	menu_content = ["START", "STATISTICS", "ACHIEVEMENT"]
+}
+var menu_width
+menu_lbutton_x = array_create(menu_count)
+menu_rbutton_x = array_create(menu_count)
+for (var k = 0; k < menu_count; ++k) {
+	menu_width = string_length(menu_content[k]) * 20
+	menu_lbutton_x[k] = view_width * 0.5 - ceil(menu_width * 0.5) - 20
+	menu_rbutton_x[k] = view_width * 0.5 + ceil(menu_width * 0.5) + 20
+}
+menu_current_lbx = menu_lbutton_x[0]
+menu_current_rbx = menu_rbutton_x[0]
+menu_buttony = view_height * 0.8
+
+// intro
+intro = false
+intro_frame = 0
+intro_push = [0, 0, 0]
+intro_projscale = 2
+intro_mode = 0
+intro_clear = true
+have_intro = false
+if !global.main_intro {
+	global.main_intro = true
+	intro = true
+	intro_clear = false
+	have_intro = true
 }
 
 // title
@@ -33,21 +60,6 @@ MODE_ACHIEVEMENTS = 4
 MODE_EXIT = 5
 MODE_RESET = 6
 
-intro = false
-intro_frame = 0
-intro_push = [0, 0, 0]
-intro_projscale = 2
-intro_mode = 0
-intro_clear = true
-have_intro = false
-
-if !global.main_intro {
-	global.main_intro = true
-	intro = true
-	intro_clear = false
-	have_intro = true
-}
-
 background_color = 0
 
 global.extreme = false
@@ -56,4 +68,3 @@ global.stage = 0
 audio_stop_all()
 global.music_before = noone
 global.music_current = noone
-music_update(musicMainMenu)

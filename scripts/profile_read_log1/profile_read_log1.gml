@@ -1,5 +1,5 @@
-/// @description profile_load_log1(data)
-/// @function profile_load_log1
+/// @function profile_read_log1(data)
+/// @description 프로필 중 도전과제를 읽어옵니다.
 /// @param data { buffer }
 
 var count = buffer_read(argument0, buffer_u16)

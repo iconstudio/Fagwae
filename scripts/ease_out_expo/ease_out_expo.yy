@@ -1,8 +1,8 @@
 {
-    "id": "8b596d90-63ea-4add-833c-a7ded9a2def2",
+    "id": "f0ae9c12-8cba-46a5-97e8-d8d13eaa4e67",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "profile_load_begin",
+    "name": "ease_out_expo",
     "IsCompatibility": false,
     "IsDnD": false
 }

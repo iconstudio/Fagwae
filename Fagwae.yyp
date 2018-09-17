@@ -258,7 +258,7 @@
             "Key": "168eb891-d369-451a-8790-2fb044754cca",
             "Value": {
                 "id": "ea159c2a-1e12-41e8-8701-d9d053e40ed9",
-                "resourcePath": "scripts\\profile_load_status\\profile_load_status.yy",
+                "resourcePath": "scripts\\profile_read_status\\profile_read_status.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -538,7 +538,7 @@
             "Key": "2dfdb99f-80a8-41f8-b683-04567ea1b7ca",
             "Value": {
                 "id": "d18c04c5-e5d0-4e76-8efc-eae314b55e32",
-                "resourcePath": "scripts\\profile_load_log1\\profile_load_log1.yy",
+                "resourcePath": "scripts\\profile_read_log1\\profile_read_log1.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -794,7 +794,7 @@
             "Key": "3e344786-1d40-4378-9965-8b716f0684d4",
             "Value": {
                 "id": "e1f230f5-80af-4cde-9260-3dc4ca663393",
-                "resourcePath": "scripts\\profile_load_log0\\profile_load_log0.yy",
+                "resourcePath": "scripts\\profile_read_log0\\profile_read_log0.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1802,7 +1802,7 @@
             "Key": "8b596d90-63ea-4add-833c-a7ded9a2def2",
             "Value": {
                 "id": "60b936b1-4712-472e-a481-13678228ebca",
-                "resourcePath": "scripts\\profile_load_begin\\profile_load_begin.yy",
+                "resourcePath": "scripts\\profile_read\\profile_read.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3210,7 +3210,7 @@
             "Key": "ea6bf7c6-c4ac-47c2-a2a1-2be0a30bc9b8",
             "Value": {
                 "id": "46fea24e-d64a-4dbf-a8d4-8375f97a2b02",
-                "resourcePath": "scripts\\profile_load_option\\profile_load_option.yy",
+                "resourcePath": "scripts\\profile_read_option\\profile_read_option.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3276,6 +3276,14 @@
                 "id": "2fde6b1d-fd23-4284-a4a7-c183f2332780",
                 "resourcePath": "objects\\oFrameTurret\\oFrameTurret.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "f0ae9c12-8cba-46a5-97e8-d8d13eaa4e67",
+            "Value": {
+                "id": "dd546d75-b5a3-4f60-9502-e2f527eba389",
+                "resourcePath": "scripts\\ease_out_expo\\ease_out_expo.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -3669,6 +3677,7 @@
         "7ec6e645-ba4d-4af9-8301-4d737628b678",
         "d855cfab-cadd-45c2-ad62-8d343f493ed6",
         "d5de092b-e678-4982-bfde-259456a1cbf5",
+        "f0ae9c12-8cba-46a5-97e8-d8d13eaa4e67",
         "e10c8525-65c7-48b5-80cb-48b5a299b5f1",
         "ca82e430-fcc3-43e8-b2ea-80d084c2699d",
         "d7966746-461e-46c7-bd99-4c89cb86c8fe",

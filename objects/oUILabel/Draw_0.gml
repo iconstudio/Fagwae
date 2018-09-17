@@ -3,8 +3,8 @@ if !instance_exists(ui_parent) {
 	exit
 }
 
-draw_set_alpha(1)
-draw_set_color(0)
+draw_set_alpha(image_alpha)
+draw_set_color(image_blend)
 draw_set_font(font)
 draw_set_halign(halign)
 draw_set_valign(valign)

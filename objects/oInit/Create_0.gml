@@ -1,10 +1,32 @@
 /// @description Initialize Basic Data, Back-End
 
 // external
-profile_clear()
 #macro file_header $ad
 global.profilefile = "profile.dat"
 global.network = true
+
+global.achievement_count = 0 // 도전과제 갯수
+global.achievement = [] // 도전과제에서 저장되는 정보 (불린 아님)
+global.achievement_cleared = [] // 도전과제 달성 여부
+global.achievement_caption = [] // 제목
+global.achievement_description = [] // 설명
+global.achievement_updater = [] // 도전과제 검사 스크립트
+global.achievement_getter = [] // 도전과제를 지금 달성할 수 있는가
+
+// easy
+achievement_add("SHIELD GRINDER", "DIE 15 TIMES\nIN ANY MODE", trophy_check0)
+achievement_add("FIRST BLOOD", "GET 100000 POINTS", trophy_check1)
+achievement_add("HOW TO FAGWAE", "COMPLETE NORMAL MODE", trophy_check2)
+achievement_add("BASIC", "DON'T DIE\nIN NORMAL MODE", trophy_check3)
+
+// hard
+achievement_add("GETTING OVER IT", "GET 500000 POINTS", trophy_check4)
+achievement_add("GOD MODE", "DON'T DIE\nIN EXTREME MODE", trophy_check5)
+achievement_add("GLORIUS MAN", "COMPLETE EXTREME MODE", trophy_check6)
+achievement_add("JUNK DEALER", "DESTROY ALL STEAL FRAMES\nIN ANY MODE", trophy_check7)
+
+// other
+achievement_add("MARATHON", "PLAY FROM FIRST\n TO LAST AREA", trophy_check8)
 
 // flags
 global.flag_is_pc = (os_type == os_windows or os_type == os_macosx or os_type == os_linux or os_type == os_win8native)

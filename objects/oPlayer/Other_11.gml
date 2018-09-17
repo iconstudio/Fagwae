@@ -57,7 +57,7 @@ if hp > 0 {
 	global.player_fever_laser = 0
 	global.player_fever_shield = 0
 	global.dead_local++
-	global.status_dead++
+	global.log_deads++
 	global.playeralive = false
 
 	screen_shake(14)

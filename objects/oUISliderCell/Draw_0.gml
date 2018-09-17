@@ -10,4 +10,4 @@ else if global.ui_top == id
 else
 	image_index = 0
 
-draw_sprite_ext(sSliderCell, image_index, 4, 12, 1, 1, 0, $ffffff, 1)
+draw_sprite_ext(sSliderCell, image_index, x + 4, y + 12, 1, 1, 0, $ffffff, 1)

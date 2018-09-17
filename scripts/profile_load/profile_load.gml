@@ -1,5 +1,5 @@
-/// @description profile_load(file)
-/// @function profile_load
+/// @function profile_load(file)
+/// @description 프로필을 불러옵니다.
 /// @param file { string }
 
 if !file_exists(argument0) {
@@ -13,7 +13,7 @@ if !buffer_exists(buffer) {
 	return false
 }
 
-var result = profile_load_begin(buffer)
+var result = profile_read(buffer)
 
 buffer_delete(buffer)
 

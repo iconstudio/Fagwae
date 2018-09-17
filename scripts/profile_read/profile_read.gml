@@ -1,5 +1,5 @@
-/// @description profile_load_begin(data)
-/// @function profile_load_begin
+/// @function profile_read(data)
+/// @description 버퍼에서 프로필을 읽습니다.
 /// @param data { buffer }
 
 var size = buffer_get_size(argument0)
@@ -18,9 +18,9 @@ if buffer_read(argument0, buffer_string) != GM_version {
 	return false
 }
 
-profile_load_option(argument0)
-profile_load_status(argument0)
-profile_load_log0(argument0)	
-profile_load_log1(argument0)	
+profile_read_option(argument0)
+profile_read_status(argument0)
+profile_read_log0(argument0)	
+profile_read_log1(argument0)	
 
 return true
