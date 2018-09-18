@@ -112,9 +112,10 @@ dalpha = 0
 
 // game
 global.extreme = false
-global.stage = 0 // 0: None, 1 ~ 9: Game, 10: Complete a mode
+global.stage = 0
 global.px = 0
 global.py = 0
+global.pause_counter = 0
 
 #macro area_vspeed 0.5625 * 4
 

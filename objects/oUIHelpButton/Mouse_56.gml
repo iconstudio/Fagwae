@@ -31,6 +31,7 @@ if pressed {
 					button_prev = button_instruction
 					button_next = button_copyright
 					callback = script_callback_about
+					script_callback_about()
 				}
 
 				with button_copyright {
@@ -39,7 +40,7 @@ if pressed {
 					caption = "크레딧"
 					button_prev = button_about
 					button_next = button_instruction
-					callback = -1
+					callback = script_callback_credit
 				}
 
 				with button_instruction {
@@ -48,7 +49,7 @@ if pressed {
 					caption = "설명"
 					button_prev = button_copyright
 					button_next = button_about
-					callback = -1
+					callback = script_callback_about
 				}
 
 				with ui_create(0, 0, oUIButton, "ZUI_Above") {

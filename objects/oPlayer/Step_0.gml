@@ -20,22 +20,23 @@ if !global.playeralive or instance_exists(oGameOver) {
 var ta = 2
 mx = 0
 my = 0
+var pad_available = gamepad_index != -1
 
-if keyboard_check(vk_left) or io_check_left() {
+if keyboard_check(vk_left) or (pad_available and gamepad_button_check(gamepad_index, gp_padl)) {
 	mx -= 1
 	ta += 6
 }
 
-if keyboard_check(vk_right) or io_check_right() {
+if keyboard_check(vk_right) or (pad_available and gamepad_button_check(gamepad_index, gp_padr)) {
 	mx += 1
 	ta += 6
 }
 
-if keyboard_check(vk_up) or io_check_up() {
+if keyboard_check(vk_up) or (pad_available and gamepad_button_check(gamepad_index, gp_padu)) {
 	my -= 1
 }
 
-if keyboard_check(vk_down) or io_check_down() {
+if keyboard_check(vk_down) or (pad_available and gamepad_button_check(gamepad_index, gp_padd)) {
 	my += 1
 }
 
@@ -49,19 +50,33 @@ if keyboard_check(vk_shift) or io_check_triggerL() or io_check_buttonL() {
 	slow = false
 }
 
-var mhs = mx * 2
-var mvs = my * 2
+var analogue = false
+if pad_available {
+	var ahor = gamepad_axis_value(gamepad_index, gp_axislh)
+	var aver = gamepad_axis_value(gamepad_index, gp_axislv)
+	show_debug_message(ahor)
+	if round(ahor) != 0 or round(aver) != 0 {
+		analogue = true
 
-if mx != 0 and my != 0 {
-	mhs *= movesqr
-	mvs *= movesqr
+		if ahor != 0 and ta != 0
+			ta += 6
+		direction = point_direction(0, 0, ahor, aver)
+		speed += point_distance(0, 0, ahor, aver)
+	}
 }
-
+if analogue {
+	
+} else {
+	var mhs = mx * 2
+	var mvs = my * 2
+	if mx != 0 and my != 0 {
+		mhs *= movesqr
+		mvs *= movesqr
+	}
+	hspeed += mhs
+	vspeed += mvs
+}
 cangle += (ta - cangle) * 0.25
-
-hspeed += mhs
-vspeed += mvs
-
 angle_player = -hspeed * 2
 
 if speed > movespd
@@ -92,7 +107,7 @@ if attack_delay > 0 {
 		audio_play_sound(soundShotPlayer, 5, false)
 	}
 
-	attack_count -= 1
-	attack_frame = (attack_frame + 1) mod 4
+	attack_count--
+	attack_frame = (++attack_frame) mod 4
 	attack_delay = 3
 }

@@ -2567,6 +2567,14 @@
             }
         },
         {
+            "Key": "b8d23082-bc6d-45cb-bba9-8332ce87868b",
+            "Value": {
+                "id": "31feaf7e-3f5a-4591-8da3-d1f9d054aa88",
+                "resourcePath": "scripts\\script_callback_open_blog\\script_callback_open_blog.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b902530e-518e-4600-b292-c716128dea5c",
             "Value": {
                 "id": "8e604e71-9a8f-4128-8ba2-9e6cd59dea11",
@@ -2772,6 +2780,14 @@
                 "id": "973d4a14-5f48-4f48-b30c-809caa92358a",
                 "resourcePath": "objects\\oFrameBulletBox\\oFrameBulletBox.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "c95f366e-f2ac-400b-8932-b8f8a5e02564",
+            "Value": {
+                "id": "5e72ec4e-a09c-4dba-bb31-f076ac82bf8d",
+                "resourcePath": "scripts\\script_callback_credit\\script_callback_credit.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -3682,6 +3698,8 @@
         "3dac52f5-8fa4-442d-a381-61b62cf36ca9",
         "59c00b4a-1a32-4308-88f6-3d45ef267514",
         "5085f109-6aad-4d5e-b87a-f6d84c5ebc7e",
+        "b8d23082-bc6d-45cb-bba9-8332ce87868b",
+        "c95f366e-f2ac-400b-8932-b8f8a5e02564",
         "bda6b3a5-5bc6-49e3-a9a3-e1bf51b84c10",
         "6eb13949-7127-4f9d-a4ac-2e873fc19cd9",
         "c263fc32-5ccf-41dc-a4ac-878fcb9541b4",

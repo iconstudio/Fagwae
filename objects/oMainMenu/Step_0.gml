@@ -125,20 +125,20 @@ var pkstart = keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_ente
 if true/*global.flag_is_mobile*/ {
 	if device_mouse_check_button_pressed(0, mb_left) {
 		var my = device_mouse_y(0)
-		if my > menu_buttony - 30 and my < menu_buttony + 30 {
+		if my > menu_buttony - 50 and my < menu_buttony + 90 {
 			var mx = device_mouse_x(0)
-			if 50 < mx and mx < max(view_width * 0.5 - 150, menu_lbutton_x[menu_selected] + 20) {
+			if 10 < mx and mx < max(view_width * 0.5 - 110, menu_lbutton_x[menu_selected] + 20) {
 				pkleft = true
-			} else if min(view_width * 0.5 + 150, menu_rbutton_x[menu_selected] - 20) < mx and mx < view_width - 50 {
+			} else if min(view_width * 0.5 + 110, menu_rbutton_x[menu_selected] - 20) < mx and mx < view_width - 10 {
 				pkright = true
 			}
 		}
 	}
 	if device_mouse_check_button_released(0, mb_left) {
 		var my = device_mouse_y(0)
-		if my > menu_buttony - 30 and my < menu_buttony + 30 {
+		if my > menu_buttony - 50 and my < menu_buttony + 90 {
 			var mx = device_mouse_x(0)
-			if view_width * 0.5 - 40 < mx and mx < view_width * 0.5 + 40
+			if view_width * 0.5 - 70 < mx and mx < view_width * 0.5 + 70
 				pkstart = true
 		}
 	}

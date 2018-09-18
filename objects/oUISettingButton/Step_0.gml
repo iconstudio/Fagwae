@@ -1,6 +1,7 @@
-if !instance_exists(oUIWindow) and !instance_exists(pane_instance) and !io_check_buttonR() and !io_check_triggerR() and (io_check_pressed_start() or io_check_pressed_select() or io_check_buttonL() or io_check_triggerL()) {
+if !instance_exists(oUIWindow) and !instance_exists(pane_instance) and !io_check_buttonR() and !io_check_triggerR() and (io_check_pressed_start() or io_check_pressed_select() or (room!= roomGame and (io_check_buttonL() or io_check_triggerL()))) {
 	if image_alpha > 0.7 and dmode == 0 {
-		oMainMenu.frame = 0
+		if instance_exists(oMainMenu)
+			oMainMenu.frame = 0
 		pressed = true
 		event_perform(ev_mouse, ev_global_left_release)
 	}
