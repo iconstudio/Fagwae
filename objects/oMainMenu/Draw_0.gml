@@ -4,6 +4,8 @@ var pushzero = 1 - push[0]
 draw_set_alpha(pushzero * get_ralpha(flash[0]))
 with oUISettingButton
 	image_alpha = draw_get_alpha()
+with oUIHelpButton
+	image_alpha = draw_get_alpha()
 
 if !intro_clear
 	draw_set_alpha(1)

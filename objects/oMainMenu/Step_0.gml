@@ -113,16 +113,16 @@ if menu_scroll < 0.97
 else
 	menu_scroll = 1
 
-if frame < reversing_time or push[2] > 0.2 or instance_exists(oUIBlack)
+if frame < reversing_time or push[2] > 0.2 or instance_exists(oUIBlack) or instance_exists(oUIWindow)
 	exit
 
 var ckleft = io_check_left() or keyboard_check(vk_left) or keyboard_check(ord("A"))
 var ckright = io_check_right() or keyboard_check(vk_right) or keyboard_check(ord("D"))
 var pkleft = io_check_pressed_left() or keyboard_check_pressed(vk_left) or keyboard_check_pressed(ord("A"))
 var pkright = io_check_pressed_right() or keyboard_check_pressed(vk_right) or keyboard_check_pressed(ord("D"))
+var pkstart = keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_enter) or io_check_pressed_padA()
 
-var pkstart = keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_enter) or io_check_pressed_padY() or io_check_pressed_padA() or io_check_pressed_padX() or io_check_pressed_padB()
-if global.flag_is_mobile {
+if true/*global.flag_is_mobile*/ {
 	if device_mouse_check_button_pressed(0, mb_left) {
 		var my = device_mouse_y(0)
 		if my > menu_buttony - 30 and my < menu_buttony + 30 {
@@ -144,7 +144,7 @@ if global.flag_is_mobile {
 	}
 }
 
-if pkstart {
+if pkstart and !keyboard_check_pressed(vk_backspace) {
 	switch menu_selected {
 		case 0:
 			draw_mode = MODE_GAME
@@ -166,21 +166,21 @@ if pkstart {
 
 if !pkstart {
 	if menu_auto == 0 { // continuosly
-		if ckleft xor ckright {
-			menu_auto = seconds(0.2)
+		if pkleft xor pkright {
+			menu_auto = seconds(0.9)
+
+			menu_before = menu_selected
+			menu_push = (pkright - pkleft)
+			menu_selected += menu_push
+			event_user(1)
+		} else if ckleft xor ckright {
+			menu_auto = seconds(0.5)
 
 			menu_before = menu_selected
 			menu_push = (ckright - ckleft)
 			menu_selected += menu_push
 			event_user(1)
 		}
-	} else if (pkleft xor pkright) { // only one time
-		menu_auto = seconds(0.8)
-
-		menu_before = menu_selected
-		menu_push = (pkright - pkleft)
-		menu_selected += menu_push
-		event_user(1)
 	}
 }
 

@@ -3,10 +3,10 @@
 if pressed and dmode == 0 {
 	pressed = false
 
-	if instance_exists(oMainMenu) and (oMainMenu.dmode != 0 or oMainMenu.intro)
+	if instance_exists(oMainMenu) and (oMainMenu.draw_mode != 0 or oMainMenu.intro)
 		exit
 
-	if global.ui_top == id {
+	if true /*global.ui_top == id*/ {
 		with oGlobal {
 			other.pane_instance = ui_create(0, 0, oUIWindow, "ZUI")
 			other.pane_instance.callback_parent = other.id

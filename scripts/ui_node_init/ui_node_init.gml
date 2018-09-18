@@ -7,3 +7,6 @@ ui_hover = 0
 ui_pressed = 0
 ui_enable = true
 ui_parent = noone
+close = false
+closable = false
+animate = 1
