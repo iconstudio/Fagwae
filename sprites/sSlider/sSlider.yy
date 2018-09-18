@@ -4,7 +4,7 @@
     "mvc": "1.12",
     "name": "sSlider",
     "For3D": false,
-    "HTile": false,
+    "HTile": true,
     "VTile": false,
     "bbox_bottom": 7,
     "bbox_left": 0,
@@ -98,7 +98,7 @@
             "visible": true
         }
     ],
-    "origin": 0,
+    "origin": 9,
     "originLocked": false,
     "playbackSpeed": 1,
     "playbackSpeedType": 1,
@@ -110,5 +110,5 @@
     "type": 0,
     "width": 46,
     "xorig": 0,
-    "yorig": 0
+    "yorig": 3
 }

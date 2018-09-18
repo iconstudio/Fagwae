@@ -4,6 +4,7 @@ ui_node_init()
 ui_set_size(ui_get_width(oGlobal), ui_get_height(oGlobal))
 image_xscale = ui_get_width()
 image_yscale = ui_get_height()
+instance_create_layer(0, 0, "UI", oUIHelpButton)
 
 menu_selected = 0
 menu_before = 0

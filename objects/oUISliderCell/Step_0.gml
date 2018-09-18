@@ -3,9 +3,7 @@ if !instance_exists(ui_parent) {
 	exit
 }
 
-if pressed {
-	with ui_parent {
-		var percent = ui_lerp_filter(max(0, mouse_x - x), 8, (ui_width - 8))
-		value = clamp(round(minimum + (maximum - minimum) * percent), minimum, maximum)
-	}
+if pressed and mouse_prevx != mouse_x {
+	x = clamp(mouse_x, ui_parent.x, ui_parent.x + ui_parent.ui_width)
+	mouse_prevx = mouse_x
 }

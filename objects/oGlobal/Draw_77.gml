@@ -12,21 +12,15 @@ if !global.screenlock {
 		surface_reset_target()
 	}
 }
+if fxaa_on
+	shader_reset()
 
-shader_set(shaderFXAA)
 gpu_set_blendenable(false)
-if fxaa_on {
-	shader_set(shaderFXAA)
-	shader_set_uniform_f(shaderFXAA_texel, global.surface_w, global.surface_h)
-	shader_set_uniform_f(shaderFXAA_level, fxaa_strength)
-}
 //shader_set_uniform_f(shaderHQ_tex, view_width, view_height)
 gpu_set_blendmode_ext(bm_one, bm_zero)
 draw_surface_ext(surf, 0, 0, 1, 1, 0, $ffffff, 1)
 gpu_set_blendmode(bm_normal)
 gpu_set_blendenable(true)
-if fxaa_on
-	shader_reset()
 
 if global.screenshake > 0 {
 	speed = global.screenshake
