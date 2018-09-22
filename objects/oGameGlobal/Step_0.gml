@@ -1,5 +1,38 @@
 /// @description Update
 
+event_user(2)
+
+if !window_has_focus() and !global.screenlock
+	game_pause()
+
+if io_check_pressed_start()
+	event_perform(ev_keypress, ord("P"))
+
+if global.pause_counter > 0 and !global.screenlock {
+	with oGlobal {
+		if sprite_exists(capture)
+			sprite_delete(capture)
+
+		capture = sprite_create_from_surface(application_surface, 0, 0, view_width, view_height, false, false, 0, 0)
+	}
+
+	global.screenlock = true
+	instance_deactivate_all(true)
+	instance_activate_object(oIgnore)
+	instance_activate_object(oUIComponent)
+} else if global.pause_counter <= 0 and global.screenlock {
+	global.pause_counter = 0
+	global.screenlock = false
+	instance_activate_all()
+
+	with oGlobal {
+		surface_set_target(surf)
+		draw_sprite(capture, 0, 0, 0)
+		draw_surface_ext(application_surface, 0, 0, 1, 1, 0, $ffffff, 1)
+		surface_reset_target()
+	}
+}
+
 if global.screenlock {
 	if fade_alpha < 1
 		fade_alpha += 0.1
@@ -11,14 +44,6 @@ if global.screenlock {
 	else
 		fade_alpha = 0
 }
-
-event_user(2)
-
-if !window_has_focus() and !global.screenlock
-	game_pause()
-
-if io_check_pressed_start() or io_check_pressed_select()
-	event_perform(ev_keypress, ord("P"))
 
 if global.screenlock
 	exit

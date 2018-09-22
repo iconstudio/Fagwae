@@ -3,6 +3,8 @@
 gravity_direction = 270
 gravity = 0.05
 
+shot_speed = 4.5 + global.stage * 0.25
+shot_count = 0
 pattern = 0
 pattern_count = 0
 

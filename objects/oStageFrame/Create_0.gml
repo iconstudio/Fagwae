@@ -1,6 +1,7 @@
 /// @description Initialization
 
 event_inherited()
+next = oStageShape
 
 available = true
 
@@ -21,4 +22,4 @@ deco_height = 300
 // Initializing stage
 area_music_push(0, musicStage3)
 
-area_enemy_push(60, enemy_abomination_1, 0, 270, 100)
+area_enemy_push(60, enemy_octopod_1, 0, 270, 100)

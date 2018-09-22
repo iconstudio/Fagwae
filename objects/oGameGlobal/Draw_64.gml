@@ -39,16 +39,16 @@ if shadow_alpha > 0
 	draw_sprite_ext(sScreenShadow, 0, 0, 0, 1, 1, 0, $ffffff, shadow_alpha * 2)
 
 if fade_alpha > 0 {
-	draw_set_alpha(fade_alpha * 0.5)
-	draw_set_color(0)
-	draw_rectangle(0, 0, screen_width, screen_height, 0)
+	//draw_set_alpha(fade_alpha * 0.5)
+	//draw_set_color(0)
+	//draw_rectangle(0, 0, screen_width, screen_height, 0)
 
 	if global.screenlock {
 		draw_set_alpha(fade_alpha * 3)
 		draw_set_color($ffffff)
 		draw_set_halign(1)
 		draw_set_valign(1)
-		draw_text_transformed(global.screen_gui_cx, global.screen_gui_cy - 20, "PAUSED", 3, 3, 0)
+		draw_text_transformed(global.screen_gui_cx, 30 - (1 - ease_out_expo(fade_alpha)) * 100, "PAUSED", 3, 3, 0)
 	}
 }
 draw_set_alpha(1)

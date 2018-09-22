@@ -29,16 +29,15 @@
 
 /// frames
 // singles
-#macro enemy_square_1			"fsquare1"		// square
-#macro enemy_square_2			"fsquare2"		// square with a turret
+#macro enemy_triangle_1		"ftriangle1"	// falls
+#macro enemy_triangle_2		"ftriangle2"	// falls from side
+#macro enemy_triangle_3		"ftriangle3"	// falls slowly
+#macro enemy_triangle_4		"ftriangle4"	// falls with bullets
 #macro enemy_line_1				"fline1"			// falls while getting closer to player
 #macro enemy_line_2				"fline2"			// falls
 #macro enemy_board_1			"fboard1"			// line of cannons
 #macro enemy_mutation_1		"fmut1"				// mutation of octagon (shooting)
-#macro enemy_mutation_2		"fmut2"				// mutation of octagon (falling)
 #macro enemy_piece_1			"fpiece1"			// falls
-#macro enemy_piece_2			"fpiece2"			// falls
-#macro enemy_box_1				"fbox1"				// Bullet box (trap)
 
 // joints
 #macro enemy_joint_1			"fjoint1"			// linking parts
@@ -48,15 +47,22 @@
 #macro enemy_joint_s2			"fjoins2"			// linking parts
 
 // small multiples
-#macro enemy_triangle_1		"ftriangle1"		// triangle (falling)
-#macro enemy_triangle_2		"ftriangle2"		// falls and explodes when die
-#macro enemy_triangle_3		"ftriangle3"		// falls slowly
-#macro enemy_triangle_4		"ftriangle4"		// falls with bullets
+#macro enemy_square_1			"fsquare1"		// square
+#macro enemy_square_2			"fsquare2"		// square with a turret
+#macro enemy_square_3			"fsquare3"		// square which randomly rotated
+#macro enemy_square_4			"fsquare4"		// square which randomly rotated with a turret
+#macro enemy_square_5			"fsquare5"		// square with a dual turret
+#macro enemy_square_6			"fsquare6"		// square with a hammer
+#macro enemy_square_7			"fsquare7"		// square with a faster hammer
 
 // large multiples
-#macro enemy_abomination_1 "fabomin1"		// octopod
-#macro enemy_abomination_2 "fabomin2"		// orb
-#macro enemy_abomination_3 "fabomin3"		// crawler
+#macro enemy_octopod_1		"foctopod1"		// falls while shots 1, more than or equal to 3 times
+#macro enemy_octopod_2		"foctopod2"		// falls while shots, multiple times
+#macro enemy_octopod_3		"foctopod3"		// swims random points in the screen, then charges
+#macro enemy_crab_1				"fcrab1"			// falls while shots 3
+#macro enemy_crab_2				"fcrab2"			// appear from side, shots 1, and go ahead
+#macro enemy_crawler_1		"fcrawler1"		// crawler
+#macro enemy_crawler_2		"fcrawler2"		// crawler with a turret
 
 /// indeterminates
 #macro enemy_rapid_1			"irapid1"			// shots 3 fast and tracks player
@@ -64,7 +70,7 @@
 #macro enemy_rapid_3			"irapid3"			// shots 1 fast, launched by boss
 #macro enemy_emitter_1		"iemit1"			// launches 4 arms and reloads
 
-// arm
+/// arms
 #macro enemy_arm_hexagon_1 "ahexagon1"
 #macro enemy_arm_spread_1 "aspread1"
 #macro enemy_arm_rectangle_1 "arect1"

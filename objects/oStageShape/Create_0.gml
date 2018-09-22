@@ -1,6 +1,7 @@
 /// @description Initialization
 
 event_inherited()
+next = oStageFrame
 
 // back
 back_color = 0
@@ -60,7 +61,7 @@ var cframe_speed = 0.5
 var cframe_count = 0
 var cframe_turret = 0
 var cframe_factor = 1
-var cframe_ny = 0
+var cframe_nx = 0
 
 for (var j = 0; j < 14; ++j) { // 14 rows
 	cframe_factor = sign(cframe_speed)
@@ -71,12 +72,12 @@ for (var j = 0; j < 14; ++j) { // 14 rows
 		}
 
 		cframe_turret += 0.9
-		cframe_ny = (i - cframe_factor) * 128
+		cframe_nx = (i - cframe_factor) * 128
 		if (cframe_turret > 2) { // creating a square with turret
-			area_enemy_push(0, enemy_square_2, cframe_speed, cframe_ny, -48)
+			area_enemy_push(0, enemy_square_2, cframe_speed, cframe_nx, -48)
 			cframe_turret -= 2
 		} else { // creating a empty square
-			area_enemy_push(0, enemy_square_1, cframe_speed, cframe_ny, -48)
+			area_enemy_push(0, enemy_square_1, cframe_speed, cframe_nx, -48)
 		}
 	}
 	area_delay_push(128)

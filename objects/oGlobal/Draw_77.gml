@@ -15,13 +15,6 @@ if !global.screenlock {
 if fxaa_on
 	shader_reset()
 
-gpu_set_blendenable(false)
-//shader_set_uniform_f(shaderHQ_tex, view_width, view_height)
-gpu_set_blendmode_ext(bm_one, bm_zero)
-draw_surface_ext(surf, 0, 0, 1, 1, 0, $ffffff, 1)
-gpu_set_blendmode(bm_normal)
-gpu_set_blendenable(true)
-
 if global.screenshake > 0 {
 	speed = global.screenshake
 	direction = (direction + random(80) + 140) mod 360
@@ -31,9 +24,30 @@ if global.screenshake > 0 {
 	yo = yn
 	xn = hspeed
 	yn = vspeed
+	gpu_set_blendmode(bm_add)
 	for (var i = 1; i <= shakelevel; ++i)
 		draw_surface_ext(surf, xo + (xn - xo) / shakelevel * i, yo + (yn - yo) / shakelevel * i, 1, 1, 0, $ffffff, 1 / shakelevel)
+	gpu_set_blendmode(bm_normal)
+
 	global.screenshake -= global.screenshake * 0.1
 } else {
 	camera_set_view_pos(view_camera, 0, 0)
+
+	xo = 0
+	yo = 0
+	draw_surface_ext(surf, 0, 0, 1, 1, 0, $ffffff, 1)
+}
+
+if global.screenlock and ds_priority_size(global.ui_listbox) > 0 {
+	ds_priority_copy(global.ui_listbox, ui_listbox_copy)
+
+	var ui_instance
+	while !ds_priority_empty(ui_listbox_copy) {
+		ui_instance = ds_priority_delete_max(ui_listbox_copy)
+		if instance_exists(ui_instance) {
+			show_debug_message("drawing: " + object_get_name(ui_instance.object_index))
+			with ui_instance
+				event_perform(ev_draw, 0)
+		}
+	}
 }

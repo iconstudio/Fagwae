@@ -14,8 +14,7 @@
         "ba2a6777-e86d-4ace-8eb8-1a59d045d46c",
         "36afba0a-6310-49a9-80d5-a3b626f03771",
         "315e3492-9927-4a0f-b6bc-14ef4007de06",
-        "64ff2a07-79e7-44c4-abcc-3d879d529f13",
-        "364e4f42-c3e1-4f25-842b-9369481c1952"
+        "64ff2a07-79e7-44c4-abcc-3d879d529f13"
     ],
     "filterType": "GMSprite",
     "folderName": "Frames",

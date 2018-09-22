@@ -4,12 +4,12 @@
 /// @param y position
 /// @param object id
 
-ds_list_clear(global.ui_listbox)
-var count = instance_position_list(argument0, argument1, argument2, global.ui_listbox, false)
+ds_list_clear(ui_listchecker)
+var count = instance_position_list(argument0, argument1, argument2, ui_listchecker, false)
 var top = noone
 
 for (var i = 0; i < count; ++i) {
-	var current = global.ui_listbox[| i]
+	var current = ui_listchecker[| i]
 
 	if top = noone || top.depth > current.depth || top > current
 		top = current

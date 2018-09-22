@@ -7,6 +7,8 @@ if pressed and dmode == 0 {
 		exit
 
 	if true /*global.ui_top == id*/ {
+		if !global.screenlock
+			game_pause()
 		with oGlobal {
 			other.pane_instance = ui_create(0, 0, oUIWindow, "ZUI")
 			other.pane_instance.callback_parent = other.id
@@ -66,7 +68,7 @@ if pressed and dmode == 0 {
 					ui_take_center()
 					y = ui_parent.y + ui_get_height(ui_parent) - 40
 					caption = "확인"
-					callback = ui_setting_close
+					callback = script_callback_close_setting
 				}
 			}
 		} // #with oGlobal

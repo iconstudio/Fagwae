@@ -319,6 +319,14 @@
             }
         },
         {
+            "Key": "1c6f693d-4366-4ba9-9ec4-f73382379c68",
+            "Value": {
+                "id": "82122d0c-d7db-4d78-a522-13d9f42d208d",
+                "resourcePath": "objects\\oFrameTurretSquareRotated\\oFrameTurretSquareRotated.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1d0eb6e8-0950-410e-a993-a09a8a4a85ad",
             "Value": {
                 "id": "a69a5b97-176f-4121-a4be-11dc4d79da49",
@@ -671,14 +679,6 @@
             }
         },
         {
-            "Key": "364e4f42-c3e1-4f25-842b-9369481c1952",
-            "Value": {
-                "id": "569f62fe-d78a-4658-8750-b5c7388b9501",
-                "resourcePath": "sprites\\sFrameBulletBox\\sFrameBulletBox.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "36afba0a-6310-49a9-80d5-a3b626f03771",
             "Value": {
                 "id": "3327a769-a818-4cc9-93eb-c3d2ec3e63dd",
@@ -810,7 +810,7 @@
             "Key": "3dac52f5-8fa4-442d-a381-61b62cf36ca9",
             "Value": {
                 "id": "974801d1-8015-4ee7-89cd-8f1e6b667ab1",
-                "resourcePath": "scripts\\ui_setting_close\\ui_setting_close.yy",
+                "resourcePath": "scripts\\script_callback_close_setting\\script_callback_close_setting.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2775,14 +2775,6 @@
             }
         },
         {
-            "Key": "c8eb62fa-f2b9-4cb7-83e8-a40b4ee700c0",
-            "Value": {
-                "id": "973d4a14-5f48-4f48-b30c-809caa92358a",
-                "resourcePath": "objects\\oFrameBulletBox\\oFrameBulletBox.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "c95f366e-f2ac-400b-8932-b8f8a5e02564",
             "Value": {
                 "id": "5e72ec4e-a09c-4dba-bb31-f076ac82bf8d",
@@ -3316,6 +3308,14 @@
                 "id": "46fea24e-d64a-4dbf-a8d4-8375f97a2b02",
                 "resourcePath": "scripts\\profile_read_option\\profile_read_option.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "eba7e2cd-356a-4e56-be29-8fb46ab324da",
+            "Value": {
+                "id": "104bbf31-1022-4a6f-8ad7-7e0d1537b27e",
+                "resourcePath": "objects\\oFrameSquareRotated\\oFrameSquareRotated.yy",
+                "resourceType": "GMObject"
             }
         },
         {

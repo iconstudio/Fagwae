@@ -17,3 +17,6 @@ with oUIButtonPane {
 			instance_destroy(contents[i])
 		}
 }
+
+if instance_exists(oMainMenu)
+	oMainMenu.frame = 0

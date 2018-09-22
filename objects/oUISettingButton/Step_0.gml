@@ -1,4 +1,4 @@
-if !instance_exists(oUIWindow) and !instance_exists(pane_instance) and !io_check_buttonR() and !io_check_triggerR() and (io_check_pressed_start() or io_check_pressed_select() or (room!= roomGame and (io_check_buttonL() or io_check_triggerL()))) {
+if !instance_exists(oUIWindow) and !instance_exists(pane_instance) and !io_check_buttonR() and !io_check_triggerR() and (io_check_pressed_select() or (room!= roomGame and (io_check_buttonL() or io_check_triggerL()))) {
 	if image_alpha > 0.7 and dmode == 0 {
 		if instance_exists(oMainMenu)
 			oMainMenu.frame = 0
@@ -15,5 +15,6 @@ if !instance_exists(oUIWindow) and !instance_exists(pane_instance) and !io_check
 		}
 		dmode = 0
 		pane_instance = noone
+		game_resume()
 	}
 }
