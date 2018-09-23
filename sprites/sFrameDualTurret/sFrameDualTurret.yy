@@ -2,7 +2,7 @@
     "id": "ef45b398-e5af-4878-959d-4586e91265a3",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "sFrameTurretDouble",
+    "name": "sFrameDualTurret",
     "For3D": false,
     "HTile": false,
     "VTile": false,

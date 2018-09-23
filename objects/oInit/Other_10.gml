@@ -31,8 +31,6 @@
 // singles
 #macro enemy_triangle_1		"ftriangle1"	// falls
 #macro enemy_triangle_2		"ftriangle2"	// falls from side
-#macro enemy_triangle_3		"ftriangle3"	// falls slowly
-#macro enemy_triangle_4		"ftriangle4"	// falls with bullets
 #macro enemy_line_1				"fline1"			// falls while getting closer to player
 #macro enemy_line_2				"fline2"			// falls
 #macro enemy_board_1			"fboard1"			// line of cannons
@@ -52,8 +50,7 @@
 #macro enemy_square_3			"fsquare3"		// square which randomly rotated
 #macro enemy_square_4			"fsquare4"		// square which randomly rotated with a turret
 #macro enemy_square_5			"fsquare5"		// square with a dual turret
-#macro enemy_square_6			"fsquare6"		// square with a hammer
-#macro enemy_square_7			"fsquare7"		// square with a faster hammer
+#macro enemy_square_h			"fsquareh"		// square with a hammer
 
 // large multiples
 #macro enemy_octopod_1		"foctopod1"		// falls while shots 1, more than or equal to 3 times
@@ -75,11 +72,15 @@
 #macro enemy_arm_spread_1 "aspread1"
 #macro enemy_arm_rectangle_1 "arect1"
 #macro enemy_arm_rectangle_2 "arect2"
-#macro enemy_arm_turret_1 "aturret1" // static -> dynamic in extreme, slow
-#macro enemy_arm_turret_2 "aturret2" // dynamic, slow
-#macro enemy_arm_turret_3 "aturret3" // dynamic, fast
-#macro enemy_arm_turret_4 "aturret4" // boss 1
-#macro enemy_arm_turret_5 "aturret4" // boss 2
+#macro enemy_arm_turret_1 "aturret1"		// static -> dynamic in extreme, slow
+#macro enemy_arm_turret_2 "aturret2"		// dynamic, slow
+#macro enemy_arm_turret_3 "aturret3"		// dynamic, fast
+#macro enemy_arm_turret_4 "aturret4"		// boss 1
+#macro enemy_arm_turret_5 "aturret4"		// boss 2
+#macro enemy_arm_turret_d "aturretd"		// dual
+#macro enemy_arm_hammer		"ahammer"			// body
+#macro enemy_arm_handle		"ahandle"			// handle
+#macro enemy_arm_hammerhead	"ahhead"		// head
 
 #macro enemy_boss_1 "eboss1"
 #macro enemy_boss_1A "eboss1a"

@@ -1,8 +1,8 @@
-/// @description 
+/// @description Attacking
 
 alarm[0] = max(4, 17 - global.stage * 0.333)
 
-if y >= screen_height - 200 || x < 8 || x > screen_height - 8 or y < 10
+if y >= screen_height - 200 or x < 8 or x > screen_height - 8 or y < 10
 	exit
 
 var inst = enemy_shot(x + lengthdir_x(22, shot_direction), y + lengthdir_y(22, shot_direction), 3, shot_direction)

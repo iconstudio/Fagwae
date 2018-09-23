@@ -27,3 +27,15 @@ enemy_register(enemy_arm_turret_4, oFrameTurret, "TURRET", sFrameTurretHead, sFr
 
 enemy_register(enemy_arm_turret_5, oFrameTurret, "TURRET", sFrameTurretHead, sFrameTurretHead, 
 4000, 4000, 0, 0, 0, 0, 0)
+
+enemy_register(enemy_arm_turret_d, oFrameDualTurret, "TURRET", sFrameTurretHead, sFrameTurretHead, 
+4000, 4000, 0, 0, 0, 0, 0)
+
+enemy_register(enemy_arm_hammer, oFrameHammer, "HAMMER", sFrameTurretHead, sFrameTurretHead, 
+4000, 4000, 0, 0, 0, 0, 0)
+
+enemy_register(enemy_arm_handle, oFrameHammerHandle, "HANDLE", sFrameHammerHandle, sFrameHammerHandle, 
+4000, 4000, 0, 2.8, 0, 0, 0)
+
+enemy_register(enemy_arm_hammerhead, oFrameHammerHandle, "HEAD", sFrameHammerHandle, sFrameHammerHandle, 
+4000, 4000, 0, 0, 0, 0, 0)

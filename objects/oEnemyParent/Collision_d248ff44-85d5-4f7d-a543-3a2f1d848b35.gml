@@ -5,10 +5,16 @@ if other.pow <= 0 or dead or untargetable
 
 if !invincible {
 	hurt = other.pow
-	if instance_exists(parent) {
-		with parent {
-			hurt = other.hurt * 0.333
-			event_user(15)
+	var target = parent, targetprev
+	while instance_exists(target) {
+		targetprev = target
+		target = target.parent
+		if !instance_exists(target) and instance_exists(targetprev) {
+			with targetprev {
+				hurt = other.hurt * 0.333
+				event_user(15)
+			}
+			break
 		}
 	}
 

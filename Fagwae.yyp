@@ -359,6 +359,14 @@
             }
         },
         {
+            "Key": "1dc0d14a-e6c3-45ea-b73f-ebea9695d034",
+            "Value": {
+                "id": "91e6043f-30a7-4afa-9a75-7d01ceff1559",
+                "resourcePath": "objects\\oFrameTriangleSide\\oFrameTriangleSide.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1e117d73-c4b7-4912-8d13-3677ad4b6357",
             "Value": {
                 "id": "fda08b62-5c51-484c-90e8-a04aa2b90bba",
@@ -535,6 +543,14 @@
             }
         },
         {
+            "Key": "2b263c09-4b2b-4d24-ab5c-c6b2b3f02ed4",
+            "Value": {
+                "id": "b1424c38-f511-4c46-9f5e-ea461ee0702e",
+                "resourcePath": "objects\\oFrameTriangle\\oFrameTriangle.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2c670903-9cf0-45f5-ba74-858f31265ad6",
             "Value": {
                 "id": "63d40584-37ab-42e9-863f-c3ad373c1d00",
@@ -652,6 +668,14 @@
                 "id": "aa922138-238c-401a-b49d-2d02054e8be3",
                 "resourcePath": "scripts\\io_check_pressed_up\\io_check_pressed_up.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "33ea713f-fb38-4793-aca0-1227b65ac2de",
+            "Value": {
+                "id": "669f9095-5b2e-4403-8fce-646fd635cdec",
+                "resourcePath": "objects\\oFrameHammer\\oFrameHammer.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -860,6 +884,14 @@
                 "id": "e8fb873e-5f5a-4850-b826-c78b21179382",
                 "resourcePath": "scripts\\profile_save_option\\profile_save_option.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "4253a02c-3666-4fe7-8f2b-11ded5c874f5",
+            "Value": {
+                "id": "58a53623-bc88-4474-ad4d-543b0cbb4cb9",
+                "resourcePath": "objects\\oFrameDualTurret\\oFrameDualTurret.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1420,6 +1452,14 @@
                 "id": "ce53be50-f2a8-4920-bd0a-c5f4fe35f82c",
                 "resourcePath": "scripts\\seconds\\seconds.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "6de84183-6934-4ba2-87a5-fe1cc00284b9",
+            "Value": {
+                "id": "9e402afd-84d4-4a6f-9b2b-e926f02dcb1a",
+                "resourcePath": "sprites\\sFrameHammerHandle\\sFrameHammerHandle.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2250,7 +2290,7 @@
             "Key": "a41b7143-3580-43a3-a98f-9126f8a0433d",
             "Value": {
                 "id": "cb0fe54c-5136-4dcd-b4ea-13ae0ce20189",
-                "resourcePath": "objects\\oFrameJointOctopod\\oFrameJointOctopod.yy",
+                "resourcePath": "objects\\oFrameOctopod\\oFrameOctopod.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -2287,6 +2327,14 @@
             }
         },
         {
+            "Key": "a5978dd4-b391-445d-bf19-49b2d63ef1c2",
+            "Value": {
+                "id": "79ebafb2-7e3a-48b8-bf29-70466c09c1d3",
+                "resourcePath": "objects\\oFrameHammerHandle\\oFrameHammerHandle.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a715b1b1-b955-4851-9d54-fa6254a74a14",
             "Value": {
                 "id": "814cabdb-7eaf-4bd8-b78e-9ebd5f8d7558",
@@ -2308,6 +2356,14 @@
                 "id": "d05b8c2f-5219-4c8e-9b0a-a1ebc4a30de9",
                 "resourcePath": "options\\linux\\options_linux.yy",
                 "resourceType": "GMLinuxOptions"
+            }
+        },
+        {
+            "Key": "a95703b6-8fa4-4bd1-8621-91d4611c7fad",
+            "Value": {
+                "id": "5b8d30d5-1022-42dd-88ec-1928ba3f9e16",
+                "resourcePath": "objects\\oFramelDualTurretSquare\\oFramelDualTurretSquare.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -2380,6 +2436,14 @@
                 "id": "7266b1e6-7e40-4ed4-93ee-f3d293147a4a",
                 "resourcePath": "objects\\oUIButton\\oUIButton.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "ad7377fe-5e48-4ae6-9efc-77b82d53e581",
+            "Value": {
+                "id": "8ee89248-14f5-44a3-95ce-356b349fc7ec",
+                "resourcePath": "sprites\\sFrameTriangle\\sFrameTriangle.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -3039,6 +3103,14 @@
             }
         },
         {
+            "Key": "d9673bb0-4c11-4ed9-9b94-e4a3655e0f93",
+            "Value": {
+                "id": "b3a80334-c19e-485f-a2b4-482bd36e9e46",
+                "resourcePath": "objects\\oFrameHammerSquare\\oFrameHammerSquare.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "da1a3294-c4d0-425a-bbeb-1fb07a39e96b",
             "Value": {
                 "id": "10ad5ba5-fbd6-4138-9027-bbc8acc53742",
@@ -3362,7 +3434,7 @@
             "Key": "ef45b398-e5af-4878-959d-4586e91265a3",
             "Value": {
                 "id": "dfe2f24a-88f6-418c-abd3-5d1eefb4ffd2",
-                "resourcePath": "sprites\\sFrameTurretDouble\\sFrameTurretDouble.yy",
+                "resourcePath": "sprites\\sFrameDualTurret\\sFrameDualTurret.yy",
                 "resourceType": "GMSprite"
             }
         },
