@@ -1,5 +1,3 @@
-/// @description 
-
 vspeed = 0.75
 
 gravity = 0.2

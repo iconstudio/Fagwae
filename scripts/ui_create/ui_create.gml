@@ -20,5 +20,4 @@ with newid {
 	instance_change(argument[2], true)
 }
 
-ds_priority_add(global.ui_listbox, newid, newid.depth)
 return newid

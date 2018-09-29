@@ -7,6 +7,7 @@ with instance_create_layer(0,  0, "Backend", next){
 	if other.object_index == oStageShape {
 		back_color = other.back_color
 		square_saturation = other.square_saturation
+		back_count = other.back_count
 	}
 	// from frame to the indeterminates
 	else if other.object_index == oStageFrame {

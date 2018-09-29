@@ -167,14 +167,14 @@ if pkstart and !keyboard_check_pressed(vk_backspace) {
 if !pkstart {
 	if menu_auto == 0 { // continuosly
 		if pkleft xor pkright {
-			menu_auto = seconds(0.9)
+			menu_auto = seconds(0.6)
 
 			menu_before = menu_selected
 			menu_push = (pkright - pkleft)
 			menu_selected += menu_push
 			event_user(1)
 		} else if ckleft xor ckright {
-			menu_auto = seconds(0.5)
+			menu_auto = seconds(0.3)
 
 			menu_before = menu_selected
 			menu_push = (ckright - ckleft)

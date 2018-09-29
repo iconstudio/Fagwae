@@ -23,4 +23,10 @@ if background_param > 0
 	back_color = make_color_hsv(color_parse(background_param - 10), 192, 98 * brightness)
 else
 	back_color = 0
-layer_background_blend(background_id, back_color)
+if ++back_count > 4 {
+	with instance_create_layer(0, 0, "Background", oBackgroundFader)
+		image_blend = other.back_color
+	back_count = 0
+}
+
+//layer_background_blend(background_id, back_color)

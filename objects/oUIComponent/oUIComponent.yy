@@ -4,16 +4,7 @@
     "mvc": "1.0",
     "name": "oUIComponent",
     "eventList": [
-        {
-            "id": "76a47a08-2c0e-4b8a-b44b-d920ec946a46",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 12,
-            "m_owner": "78dde1d4-2ef6-4500-aa32-2b4f2736a127"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

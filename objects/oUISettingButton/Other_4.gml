@@ -1,7 +1,6 @@
 /// @description Resetting
 
 dmode = 0
-hidden = false
 pressed = false
 
 image_index = 1

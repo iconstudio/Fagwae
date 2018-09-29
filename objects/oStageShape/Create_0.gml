@@ -3,11 +3,12 @@
 event_inherited()
 next = oStageFrame
 
-// back
+// background
 back_color = 0
 square_saturation = 0
 param_speed = (0.1 * 192 - 5) / 192
 back_speed = 10
+back_count = 0
 
 // back decorataions
 deco_min = -10
@@ -15,6 +16,7 @@ deco_min_opt = -5
 deco_count = 3
 deco_mode = 0
 deco_fail = false
+
 global.extreme = true
 // Initializing stage
 global.__st2_line = 0
@@ -24,19 +26,20 @@ if global.extreme
 	octo_type = enemy_octagon_2
 
 script_stage1_ready()
-area_enemy_push(seconds(0.7), enemy_octagon_4, 0, 255, -48)
-area_enemy_push(seconds(0.7), enemy_octagon_4, 0, 195, -48) // -60
-area_enemy_push(seconds(1.2 + 0.3 * global.extreme), octo_type, 0, 135, -48) // -60
+area_enemy_push(seconds(0.7), enemy_octagon_4, 0, 245, -48)
+/*
+area_enemy_push(seconds(0.7), enemy_octagon_4, 0, 245, -48)
+area_enemy_push(seconds(1.2 + 0.3 * global.extreme), octo_type, 0, 205, -48) // -40
 
-var cox = 304 + random(100)
+var cox = 284 + random(100)
 area_enemy_push(seconds(0.7), enemy_octagon_4, 0, cox, -38)
-area_enemy_push(seconds(0.7), enemy_octagon_4, 0, cox + 30, -38) // +30
-area_enemy_push(seconds(0.7), enemy_octagon_4, 0, cox + 30, -38) // +0
-area_enemy_push(seconds(1), octo_type, 0, cox * 0.5, -64) // * 0.5
+area_enemy_push(seconds(0.7), enemy_octagon_4, 0, cox, -38)
+area_enemy_push(seconds(0.7), enemy_octagon_4, 0, cox, -38)
+area_enemy_push(seconds(1), octo_type, 0, cox - 50, -64) // * 0.5
 area_enemy_push(seconds(1.6), enemy_octagon_2, 0, 140 + random(30), -48)
 
-area_enemy_push(seconds(0.5), enemy_octagon_4, 0, 260 + random(30), -64)
-area_enemy_push(seconds(1), enemy_octagon_4, 0, 260 + random(30), -64)
+area_enemy_push(seconds(0.5), enemy_octagon_4, 0, 260 + random(10), -64)
+area_enemy_push(seconds(1), enemy_octagon_4, 0, 260 + random(10), -64)
 
 area_enemy_push(seconds(1.3), enemy_hexagon_1, 0, 400, -48)
 area_enemy_push(seconds(1), enemy_hexagon_1, 0, 290, -48)
@@ -106,32 +109,35 @@ area_enemy_push(seconds(3.1), enemy_octagon_1, 0, 481, -48)
 area_enemy_push(seconds(0.7), enemy_octagon_4, 0, 265, -48)
 area_enemy_push(seconds(0.7), enemy_octagon_4, 0, 195, -48) // -70
 area_enemy_push(seconds(0.7), enemy_octagon_4, 0, 125, -48) // -70
-/*
-for (var i = 0; i < 8; ++i) {
-	area_enemy_push(0, enemy_line_1, 1, 580, 480)
-	area_enemy_push(0, enemy_line_1, -1, -40, 480)
 
-	if global.extreme
-		area_delay_push(seconds(0.9))
-	else
-		area_delay_push(seconds(1))
-}
+//for (var i = 0; i < 8; ++i) {
+//	area_enemy_push(0, enemy_line_1, 1, 580, 480)
+//	area_enemy_push(0, enemy_line_1, -1, -40, 480)
 
-area_enemy_push(0, enemy_line_1, 1, 580, 480)
-area_script_push(0, script_await_dying, 0, 0, 0)
-area_enemy_push(0, enemy_line_1, -1, -40, 480)
-*/
+//	if global.extreme
+//		area_delay_push(seconds(0.9))
+//	else
+//		area_delay_push(seconds(1))
+//}
+
+//area_enemy_push(0, enemy_line_1, 1, 580, 480)
+//area_script_push(0, script_await_dying, 0, 0, 0)
+//area_enemy_push(0, enemy_line_1, -1, -40, 480)
+
 area_delay_push(seconds(1.6))
 area_enemy_push(0, enemy_octagon_4, 0, 127, -48)		// 127
 area_enemy_push(140, enemy_octagon_4, 0, 412, -48)	// w - 127 - 1
 
 area_enemy_push(seconds(3.5), enemy_spread_2, LEFT, 0, 0)
-area_enemy_push(seconds(1.4), enemy_octagon_4, 0, 400, -48)
-area_enemy_push(seconds(1.2), enemy_octagon_2, 0, 330, -48) // -70
-area_enemy_push(seconds(2), enemy_octagon_4, 0, 260, -48)		// -70
+area_enemy_push(seconds(1.4), enemy_octagon_4, 0, 330, -48)
+area_enemy_push(seconds(1.2), enemy_octagon_2, 0, 330, -48)
+area_enemy_push(seconds(2), enemy_octagon_4, 0, 330, -48)
 area_script_push(seconds(1), script_await_dying, 0, 0, 0)
 
-area_enemy_push(seconds(3), enemy_rectangle_1, 0, 409, -48)
+if global.extreme
+	area_enemy_push(seconds(3), enemy_rectangle_2, choose(LEFT, RIGHT), 0, 200)
+else
+	area_enemy_push(seconds(3), enemy_rectangle_1, 0, 409, -48)
 if global.extreme {
 	area_enemy_push(seconds(2.9), enemy_spread_2, RIGHT, 0, 0)
 	area_enemy_push(seconds(1.5), enemy_octagon_4, 0, 240, -48)
@@ -159,7 +165,7 @@ area_script_push(seconds(0.2), script_boss_apear, 0, 0, 0)
 area_music_push(seconds(0.5), musicBoss)
 area_enemy_push(0, enemy_boss_2, 0, 270, -128)
 area_script_push(0, script_stage_clear, 0, 0, 0)
-
+//*/
 area_delay_push(120)
 area_script_push(220, script_shape_disappear, 0, 0, 0)
 area_script_push(0, area_goto_next, 0, 0, 0)

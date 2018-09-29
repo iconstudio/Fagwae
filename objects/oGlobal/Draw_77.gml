@@ -37,7 +37,7 @@ if global.screenshake > 0 {
 	yo = 0
 	draw_surface_ext(surf, 0, 0, 1, 1, 0, $ffffff, 1)
 }
-
+/* 
 if global.screenlock and ds_priority_size(global.ui_listbox) > 0 {
 	ds_priority_copy(global.ui_listbox, ui_listbox_copy)
 

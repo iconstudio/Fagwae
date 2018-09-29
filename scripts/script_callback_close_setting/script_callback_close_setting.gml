@@ -10,7 +10,7 @@ with ui_parent { // oUIWindow
 	instance_destroy()
 }
 instance_destroy() // oUIButton
-game_resume()
+//game_resume()
 
 if instance_exists(oMainMenu)
 	oMainMenu.frame = 0

@@ -7,8 +7,8 @@ if pressed and dmode == 0 {
 		exit
 
 	if true /*global.ui_top == id*/ {
-		if !global.screenlock
-			game_pause()
+		//if !global.screenlock
+		//	game_pause()
 		with oGlobal {
 			other.pane_instance = ui_create(0, 0, oUIWindow, "ZUI")
 			other.pane_instance.callback_parent = other.id

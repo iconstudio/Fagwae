@@ -1,4 +1,4 @@
-/// @description Shooting 311
+/// @description Shooting 3-1-1
 
 if shot_count == 0 {
 	shot_dir = point_direction(x, y, global.px, global.py)

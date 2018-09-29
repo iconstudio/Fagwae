@@ -21,8 +21,8 @@ scroll = 0
 rotation = 0
 brightness = 0
 
-var layer_id = layer_get_id("Background_Color")
-background_id = layer_background_get_id(layer_id)
+background_layer_id = layer_get_id("Background_Color")
+background_id = layer_background_get_id(background_layer_id)
 
 // score
 if !instance_exists(oScore)

@@ -1,9 +1,9 @@
 /// @description Gamepad recognize
 
-var type = ds_map_find_value(async_load, "event_type")
+var type = async_load[? "event_type"]
 
 if type == "gamepad discovered" {
-	var index = ds_map_find_value(async_load, "pad_index")
+	var index = async_load[? "pad_index"]
 	
 	if index >= 0 and gamepad_index != index {
 		 gamepad_index = index
@@ -26,7 +26,7 @@ if type == "gamepad discovered" {
 		 show_debug_message("gamepad plug in")
 	}
 } else if type == "gamepad lost" {
-	var index = ds_map_find_value(async_load, "pad_index")
+	var index = async_load[? "pad_index"]
 	
 	if index == gamepad_index {
 		gamepad_index = -1

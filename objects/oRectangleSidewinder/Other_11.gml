@@ -2,7 +2,6 @@
 
 enemy_arm_init(enemy_arm_rectangle_2, 4, 31)
 
-y = 120
 x_target = x
 x_begin = x
 var xborder = 120
