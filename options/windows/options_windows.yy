@@ -11,7 +11,7 @@
     "option_windows_description_info": "Fagwae 2",
     "option_windows_display_cursor": true,
     "option_windows_display_name": "Fagwae 2 Alpha",
-    "option_windows_enable_steam": true,
+    "option_windows_enable_steam": false,
     "option_windows_executable_name": "${project_name}",
     "option_windows_icon": "${options_dir}\\windows\\icons\\icon.ico",
     "option_windows_installer_finished": "${options_dir}\\windows\\installer\\finished.bmp",

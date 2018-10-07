@@ -17,7 +17,6 @@ deco_count = 3
 deco_mode = 0
 deco_fail = false
 
-global.extreme = true
 // Initializing stage
 global.__st2_line = 0
 
