@@ -34,7 +34,6 @@
 #macro enemy_line_1				"fline1"			// falls while getting closer to player
 #macro enemy_line_2				"fline2"			// falls
 #macro enemy_board_1			"fboard1"			// line of cannons
-#macro enemy_mutation_1		"fmut1"				// mutation of octagon (shooting)
 #macro enemy_piece_1			"fpiece1"			// falls
 
 // joints

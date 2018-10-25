@@ -1,6 +1,12 @@
 /// @description Getting damage
 
-if other.pow <= 0 or dead or untargetable
+if other.pow <= 0 or dead
+	exit
+
+with other
+	event_user(0)
+
+if untargetable
 	exit
 
 if !invincible {
@@ -29,6 +35,3 @@ event_user(15)
 gauge_update(id)
 
 audio_play_sound(soundHitPlayer, 20, false)
-
-with other
-	event_user(0)

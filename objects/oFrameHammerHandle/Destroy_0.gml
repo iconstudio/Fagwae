@@ -1,2 +1,2 @@
-with turret
+with head
 	instance_destroy()

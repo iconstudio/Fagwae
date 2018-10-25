@@ -143,6 +143,14 @@
             }
         },
         {
+            "Key": "0c063d31-918a-4109-9cf5-cdb6d5900335",
+            "Value": {
+                "id": "3cf1fe5b-6822-4895-9a2f-0c0986ef758e",
+                "resourcePath": "sprites\\sFrameCrabBody\\sFrameCrabBody.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0c628135-9879-488a-b6fa-7576252100d7",
             "Value": {
                 "id": "453128a4-0ca5-4dcd-aeee-a20e3a460fdc",
@@ -3324,6 +3332,14 @@
                 "id": "0c9a6c50-b008-4bf8-8682-263de678357c",
                 "resourcePath": "views\\f2c4cb3d-bb73-4e6b-b3db-ad23289e61dd.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f2f94032-909d-407e-9870-6d495304c628",
+            "Value": {
+                "id": "1fdfb9b6-fd71-4ec9-93d1-174f8cee0e46",
+                "resourcePath": "objects\\oFrameHammerHead\\oFrameHammerHead.yy",
+                "resourceType": "GMObject"
             }
         },
         {

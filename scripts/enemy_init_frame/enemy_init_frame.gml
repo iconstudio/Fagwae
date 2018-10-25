@@ -16,9 +16,6 @@ enemy_register(enemy_line_2, oFrameLine2, "STEEL FRAME", sFrameLine, sFrameLine,
 enemy_register(enemy_board_1, noone, "BOARD", noone, noone, 
 121, 700, 2, 0, 0, 0, 0)
 
-enemy_register(enemy_mutation_1, noone, "STEEL OCTAGON", sFrameOctagon, sFrameOctagon, 
-17, 300, 1, 0, 0, 0, 0)
-
 enemy_register(enemy_piece_1, oFramePiece, "STEEL FRAME", sFrameJoint, sFrameJoint, 
 20, 300, 1, 0, 0, 0, 0)
 
@@ -44,19 +41,19 @@ enemy_register(enemy_square_4, oFrameTurretSquareRotated, "STEEL FRAME", sFrameS
 33, 400, 2, 0, 0, 0, 0)
 
 enemy_register(enemy_square_5, oFrameDualTurret, "STEEL FRAME", sFrameSquare, sFrameSquare, 
-38, 500, 4, 0, 0, 0, 0)
+38, 500, 2, 0, 0, 0, 0)
 
 enemy_register(enemy_square_h, oFrameHammerSquare, "STEEL FRAME", sFrameSquare, sFrameSquare, 
-38, 500, 4, 0, 0, 0, 0)
+38, 500, 2, 0, 0, 0, 0)
 
 enemy_register(enemy_octopod_1, oFrameOctopod, "ABOMINATION", sFrameCore, sFrameCore, 
-90, 700, 2, 0, 0, 0, 0)
+80, 700, 4, 0, 0, 0, 0)
 
 enemy_register(enemy_crab_1, noone, "ABOMINATION", sFrameCore, sFrameCore, 
-90, 700, 2, 0, 0, 0, 0)
+60, 600, 3, 0, 0, 0, 0)
 
 enemy_register(enemy_crawler_1, noone, "ABOMINATION", sFrameCore, sFrameCore, 
-80, 700, 2, 0, 0, 0, 0)
+120, 2000, 4, 0, 0, 0, 0)
 
 
 // bosses

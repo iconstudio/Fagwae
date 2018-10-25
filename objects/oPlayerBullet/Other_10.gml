@@ -1,7 +1,3 @@
-/// @description 
-
-pow = 0
-
 var inst
 repeat 1 + irandom(1) {
 	with instance_create_layer(x, y, "Effect", oParticleFlameBlue) {
