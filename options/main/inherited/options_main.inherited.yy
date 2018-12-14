@@ -3,7 +3,8 @@
     "option_gameguid": "e1cf5b2a-df6d-462e-a2db-bf3bc412fbdb",
     "option_spine_licence": false,
     "option_lastchanged": "21 August 2018 13:37:41",
-    "option_mips_for_3d_textures": true
+    "option_mips_for_3d_textures": true,
+    "option_game_speed": 30
 }←be5f1418-b31b-48af-a023-f04cdf6e5121|{
     "textureGroups": {
         "Additions": [

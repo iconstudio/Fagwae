@@ -5,7 +5,8 @@
     "name": "4341852e-d27a-42cd-be23-4962fe3901e6",
     "children": [
         "b9970846-3a22-4d64-8cb8-351360b8e826",
-        "417c8284-8f94-463c-a5cf-b8be1ed7b9fe"
+        "417c8284-8f94-463c-a5cf-b8be1ed7b9fe",
+        "cdd27141-acc6-420a-90b3-f87f86176dbb"
     ],
     "filterType": "GMScript",
     "folderName": "Screen",

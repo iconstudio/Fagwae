@@ -1,5 +1,3 @@
-/// @description 
-
 if y < room_height - 20 {
 	if shot_mode == -1 {
 		shot_mode = 0

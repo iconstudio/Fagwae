@@ -967,6 +967,14 @@
             }
         },
         {
+            "Key": "4c5b6264-7ee0-4aa3-a955-7966f9bfe75a",
+            "Value": {
+                "id": "8dc5c09a-37be-4cb8-aec8-dc1e15488fa8",
+                "resourcePath": "objects\\oGamepad\\oGamepad.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "4ceb5305-7f2d-4c5a-b71a-0cac4586b244",
             "Value": {
                 "id": "d7510eac-899f-49b0-91d3-f3835d261be1",
@@ -1068,6 +1076,14 @@
                 "id": "db569d6b-1c3f-4f9b-a1bf-f895453b327d",
                 "resourcePath": "scripts\\enemy_init_frame\\enemy_init_frame.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "53371e65-3c06-4bc0-8d30-3f02eeddd395",
+            "Value": {
+                "id": "430296f3-aa4b-4821-93cf-40d3096c82ed",
+                "resourcePath": "objects\\oFrameCrab\\oFrameCrab.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1207,6 +1223,14 @@
             }
         },
         {
+            "Key": "5a0a8c30-a258-4d67-b133-14130d6ca68d",
+            "Value": {
+                "id": "b868e62b-d320-4c64-b62e-51939df90438",
+                "resourcePath": "scripts\\enemy_play_shot\\enemy_play_shot.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "5a2ee538-f449-4ebc-a634-bc14618b5b6b",
             "Value": {
                 "id": "b4c44c8c-4b91-4495-8b40-6ee8e4207d02",
@@ -1252,6 +1276,14 @@
                 "id": "4ed70000-0670-44f1-a5f8-46bb643f6e8b",
                 "resourcePath": "views\\5f5547bd-5133-4658-b09a-35853160fab0.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "5fb039e2-3461-4d49-ad14-170a2cd274ad",
+            "Value": {
+                "id": "f27fa335-fca2-4b40-b9b0-8001a54d97c0",
+                "resourcePath": "paths\\pathJakoFormationLeft\\pathJakoFormationLeft.yy",
+                "resourceType": "GMPath"
             }
         },
         {
@@ -1612,6 +1644,14 @@
                 "id": "d84e4d6d-8e13-4273-bade-4c126fbd7039",
                 "resourcePath": "fonts\\fontRetro\\fontRetro.yy",
                 "resourceType": "GMFont"
+            }
+        },
+        {
+            "Key": "7c22456f-84bf-42a5-a506-17eed8aed77b",
+            "Value": {
+                "id": "d2dc8686-8903-4b22-91e9-d9ba0f7fe3bb",
+                "resourcePath": "objects\\oOctagonJako\\oOctagonJako.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -2239,6 +2279,14 @@
             }
         },
         {
+            "Key": "a8a1b1b3-616d-4231-965b-0c9477a0c8bf",
+            "Value": {
+                "id": "3deaf53d-6e03-4483-84dd-dca70d26b6be",
+                "resourcePath": "paths\\pathJakoFormationRight\\pathJakoFormationRight.yy",
+                "resourceType": "GMPath"
+            }
+        },
+        {
             "Key": "a8ce7605-f771-4e26-9ea6-a9b63ed051d2",
             "Value": {
                 "id": "2c837233-f277-410d-b356-ff28095b03b2",
@@ -2759,6 +2807,14 @@
             }
         },
         {
+            "Key": "cdd27141-acc6-420a-90b3-f87f86176dbb",
+            "Value": {
+                "id": "aa7f3dbe-d556-4f6d-94a8-f46edb72259b",
+                "resourcePath": "scripts\\gamepad_viberate\\gamepad_viberate.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "cdd5157e-c0f8-4065-8ba5-f3811a36d61e",
             "Value": {
                 "id": "0aa1f4d1-09fc-4c76-94dc-ff0b86787168",
@@ -2820,6 +2876,14 @@
                 "id": "80bbe070-e1f8-4b7f-9417-97a0db8ca46a",
                 "resourcePath": "rooms\\roomInit\\roomInit.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "d2961af9-cda6-4972-bbcb-19c8dad4d6a6",
+            "Value": {
+                "id": "6678ba6c-c1d8-4755-9c2c-1a3d3d2eb5c8",
+                "resourcePath": "shaders\\shaderCRT\\shaderCRT.yy",
+                "resourceType": "GMShader"
             }
         },
         {
@@ -3595,6 +3659,7 @@
         "4674ada6-b263-4217-b691-6fbf3039d579",
         "b9970846-3a22-4d64-8cb8-351360b8e826",
         "417c8284-8f94-463c-a5cf-b8be1ed7b9fe",
+        "cdd27141-acc6-420a-90b3-f87f86176dbb",
         "991f70c1-f5b0-47d4-b992-6abaa76a896f",
         "cd9710d1-c2c0-40c1-9333-df0dd26ac5e5",
         "807cd3bc-9470-475e-8b47-1bf1bc114e8c",
@@ -3688,6 +3753,7 @@
         "271a397f-372c-40bd-a73f-0d79a32f7439",
         "57ae2d5b-7eb1-49d8-b349-e10e378ff69f",
         "d606151b-12c0-42e3-93e1-6635842923a4",
+        "5a0a8c30-a258-4d67-b133-14130d6ca68d",
         "7a41cd66-6631-425a-ac56-b454236eb536",
         "a059ac42-693c-4ca9-b393-61fb564a1360",
         "21319fe0-0cba-4224-a1b3-18b657ba19fe",

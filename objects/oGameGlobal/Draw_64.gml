@@ -1,5 +1,3 @@
-/// @description 
-
 draw_set_alpha(1 - ipush)
 
 var dx = global.screen_gui_cx

@@ -1,3 +1,1 @@
-/// @description 
-
 estat = 0

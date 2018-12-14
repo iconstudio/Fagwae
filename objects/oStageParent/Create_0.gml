@@ -10,6 +10,7 @@ randomize()
 flag_boss = false
 flag_stop = false
 flag_await_die = false
+flag_supply = true
 
 // background
 back_surface = -1

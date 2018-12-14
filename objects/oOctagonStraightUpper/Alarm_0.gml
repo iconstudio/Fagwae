@@ -1,5 +1,4 @@
 /// @description Attacking
-
 if y >= 900
 	exit
 

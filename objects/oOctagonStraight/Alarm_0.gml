@@ -9,16 +9,13 @@ if shot_mode == 0 {
 	enemy_shot(x, y, shot_speed, pd)
 
 	if shot_count++ == 0 {
-		alarm[0] = max(8, 16 - global.stage) + 6
+		alarm[0] = shot_period
 	} else if shot_count < ceil(global.stage * 0.333) - global.extreme {
-		if global.extreme
-			alarm[0] = max(2, 8 - global.stage * 0.5) + 10
-		else
-			alarm[0] = max(3, 10 - global.stage * 0.5) + 10
+		alarm[0] = shot_period_continue
 	} else {
 		shot_count = 0
 		shot_mode = 1
-		alarm[0] = 80 - global.stage * 2
+		alarm[0] = shot_period_reset1
 	}
 } else {
 	if shot_count++ == 0 {
@@ -26,18 +23,17 @@ if shot_mode == 0 {
 			enemy_shot(x, y, shot_speed + 2, pd - 20)
 			enemy_shot(x, y, shot_speed + 2, pd)
 			enemy_shot(x, y, shot_speed + 2, pd + 20)
-			alarm[0] = max(8, 20 - global.stage * 4)
 		} else {
 			enemy_shot(x, y, shot_speed + 2, pd)
-			alarm[0] = max(12, 20 - global.stage * 3)
 		}
+		alarm[0] = shot_period_multi
 	} else {
 		enemy_shot(x, y, shot_speed + 2, pd - 14)
 		enemy_shot(x, y, shot_speed + 2, pd + 14)
 
 		shot_count = 0
 		shot_mode = 0
-		alarm[0] = max(20, 60 - global.stage * 4)
+		alarm[0] = shot_period_reset2
 	}
 }
 audio_play_sound(soundShotEnemy, 0, false)

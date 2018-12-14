@@ -35,7 +35,7 @@ enemy_register(enemy_arm_hammer, oFrameHammer, "HAMMER", sFrameTurretHead, sFram
 4000, 0, 0, 0, 0, 0, 0)
 
 enemy_register(enemy_arm_handle, oFrameHammerHandle, "HANDLE", sFrameHammerHandle, sFrameHammerHandle, 
-17, 500, 0, 2.8, 0, 0, 0)
+17, 500, 1, 2.8, 0, 0, 0)
 
 enemy_register(enemy_arm_hammerhead, oFrameHammerHead, "HEAD", sFrameJoint, sFrameJoint, 
-4000, 0, 0, 0, 0, 0, 0)
+4000, 100, 1, 0, 0, 0, 0)

@@ -25,7 +25,6 @@ for (var i = 0; i < arm_number; ++i) {
 	arm_instances[i] = enemy_create(argument[0], x, y, 0, arm_angle[i], id, "Instances_Arms")
 
 	with arm_instances[i] {
-		parent = other.id
 		if script_exists(arm_scriptinit)
 			script_execute(arm_scriptinit, i)
 	}

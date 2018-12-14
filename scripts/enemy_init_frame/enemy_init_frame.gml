@@ -23,7 +23,7 @@ enemy_register(enemy_joint_1, oFrameJoint, "SKELETON", sFrameJoint, sFrameJoint,
 20, 250, 1, 0, 0, 0, 0)
 
 enemy_register(enemy_joint_2, oFrameJoint, "SKELETON", sFrameJoint, sFrameJoint, 
-20, 250, 1, 0, 0, 0, 0)
+19, 240, 1, 0, 0, 0, 0)
 
 enemy_register(enemy_joint_3, oFrameJointMod, "SKELETON", sFrameJoint, sFrameJoint, 
 10, 150, 1, 0, 0, 0, 0)
@@ -46,11 +46,17 @@ enemy_register(enemy_square_5, oFrameDualTurret, "STEEL FRAME", sFrameSquare, sF
 enemy_register(enemy_square_h, oFrameHammerSquare, "STEEL FRAME", sFrameSquare, sFrameSquare, 
 38, 500, 2, 0, 0, 0, 0)
 
-enemy_register(enemy_octopod_1, oFrameOctopod, "ABOMINATION", sFrameCore, sFrameCore, 
-80, 700, 4, 0, 0, 0, 0)
-
 enemy_register(enemy_crab_1, noone, "ABOMINATION", sFrameCore, sFrameCore, 
 60, 600, 3, 0, 0, 0, 0)
+
+enemy_register(enemy_crab_2, noone, "ABOMINATION", sFrameCore, sFrameCore, 
+60, 600, 3, 0, 0, 0, 0)
+
+enemy_register(enemy_crab_3, noone, "ABOMINATION", sFrameCore, sFrameCore, 
+60, 600, 3, 0, 0, 0, 0)
+
+enemy_register(enemy_octopod_1, oFrameOctopod, "ABOMINATION", sFrameCore, sFrameCore, 
+80, 700, 4, 0, 0, 0, 0)
 
 enemy_register(enemy_crawler_1, noone, "ABOMINATION", sFrameCore, sFrameCore, 
 120, 2000, 4, 0, 0, 0, 0)

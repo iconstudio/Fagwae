@@ -52,11 +52,12 @@
 #macro enemy_square_h			"fsquareh"		// square with a hammer
 
 // large multiples
+#macro enemy_crab_1				"fcrab1"			// appear from side, shots 1 or 2 as 2 times, and go ahead (remain longer)
+#macro enemy_crab_2				"fcrab2"			// appear from side, shots 1 or 2 as 2 times, and go ahead
+#macro enemy_crab_3				"fcrab3"			// falls while shots 3
 #macro enemy_octopod_1		"foctopod1"		// falls while shots 1, more than or equal to 3 times
 #macro enemy_octopod_2		"foctopod2"		// falls while shots, multiple times
 #macro enemy_octopod_3		"foctopod3"		// swims random points in the screen, then charges
-#macro enemy_crab_1				"fcrab1"			// falls while shots 3
-#macro enemy_crab_2				"fcrab2"			// appear from side, shots 1, and go ahead
 #macro enemy_crawler_1		"fcrawler1"		// crawler
 #macro enemy_crawler_2		"fcrawler2"		// crawler with a turret
 
