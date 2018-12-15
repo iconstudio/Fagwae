@@ -14,6 +14,9 @@ enemy_register(enemy_octagon_3, oOctagonStraightUpper, "OCTAGON", sOctagonNormal
 enemy_register(enemy_octagon_4, oOctagonPawn, "OCTAGON", sOctagonNormal, sOctagonExtreme, 
 10, 400, 1, 0, 8, $AE673C, $3C3CAE)
 
+enemy_register(enemy_octagon_5, oOctagonJako, "OCTAGON", sOctagonNormal, sOctagonExtreme, 
+16, 200, 1, 0, 8, $AE673C, $3C3CAE)
+
 // hexagons
 enemy_register(enemy_hexagon_1, oHexagonSpatial, "HEXAGON", sHexagonNormal, sHexagonExtreme, 
 30, 1200, 1, 2, 6, $B77599, $7C1A7F)

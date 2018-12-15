@@ -18,6 +18,7 @@
 #macro enemy_octagon_2		"eoctagon2"		// shots 3, 3 times (blue octagon mk.2)
 #macro enemy_octagon_3		"eoctagon3"		// goes up while shots 3, 3 times (blue octagon mk.3)
 #macro enemy_octagon_4		"eoctagon4"		// shots 1, 3 times (blue octagon mk.4)
+#macro enemy_octagon_5		"eoctagon5"		// jako (blue octagon mk.5)
 #macro enemy_hexagon_1		"ehexagon1"		// shots 1 for each 3 arm_number, 1 times (purple hexagon mk.1)
 #macro enemy_hexagon_2		"ehexagon2"		// falls while shots 1 for each 3 arm_number, 1 times (purple hexagon mk.2)
 #macro enemy_spread_1			"espread1"		// shots 4, 16 times, and change (green octagon mk.1)

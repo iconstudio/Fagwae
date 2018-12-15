@@ -4,6 +4,7 @@
 #macro file_header $ae
 global.profilefile = "profile.dat"
 global.network = true
+profile_clear()
 
 global.achievement_count = 0 // 도전과제 갯수
 global.achievement = [] // 도전과제에서 저장되는 정보 (불린 아님)

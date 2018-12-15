@@ -3,9 +3,6 @@
 if !surface_exists(surf)
 	event_user(0)
 
-surface_set_target(surf)
-surface_reset_target()
-
 if !global.screenlock {
 	event_user(4)
 } else {

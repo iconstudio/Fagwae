@@ -295,6 +295,14 @@
             }
         },
         {
+            "Key": "1a3ac065-4b9d-43a3-9eb3-ac55e82a60c5",
+            "Value": {
+                "id": "e5083578-cf88-44e4-ac61-a89a367d92f1",
+                "resourcePath": "sprites\\sFrameHammerHead\\sFrameHammerHead.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1b15eb0b-066c-4f91-ae03-a46acfb6d50e",
             "Value": {
                 "id": "59571083-e4ce-4600-b0e4-d6b3cbd47cb7",

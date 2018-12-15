@@ -9,19 +9,19 @@ if shot_count mod 2 == 0 and shot_mode < 2 {
 	enemy_shot(x, y, shot_speed, dir)
 	enemy_shot(x, y, shot_speed, dir + 15)
 	enemy_shot(x, y, shot_speed, dir + 30)
-	audio_play_sound(soundShotEnemy, 0, false)
+	enemy_play_shot()
 } else if shot_mode < 2 {
 	enemy_shot(x, y, shot_speed, dir - 30)
 	enemy_shot(x, y, shot_speed, dir - 15)
 	enemy_shot(x, y, shot_speed, dir)
 	enemy_shot(x, y, shot_speed, dir + 15)
-	audio_play_sound(soundShotEnemy, 0, false)
+	enemy_play_shot()
 }
 
 if shot_mode >= 2 {
 	enemy_shot(x, y, shot_speed, dir - 7.5)
 	enemy_shot(x, y, shot_speed, dir + 7.5)
-	audio_play_sound(soundShotEnemy, 0, false)
+	enemy_play_shot()
 
 	shot_count = 0
 	shot_mode = 0

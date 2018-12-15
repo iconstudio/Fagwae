@@ -10,7 +10,7 @@ if shot_count == 0 {
 	enemy_shot(x, y, shot_speed, pd - shot_count * 12)
 	enemy_shot(x, y, shot_speed, pd + shot_count * 12)
 }
-audio_play_sound(soundShotEnemy, 0, false)
+enemy_play_shot()
 
 if ++shot_count < 4 {
 	if global.extreme

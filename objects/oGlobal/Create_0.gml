@@ -5,41 +5,16 @@ event_user(0)
 
 if !shaders_are_supported() {
 	fxaa_on = false
-	distort = false
+	distort_on = false
 } else {
 	fxaa_on = false
-	distort = shader_is_compiled(shaderCRT)
+	distort_on = shader_is_compiled(shaderCRT)
 }
 
 fxaa_strength = 7
 shaderFXAA_texel = shader_get_uniform(shaderFXAA, "u_texel")
 shaderFXAA_level = shader_get_uniform(shaderFXAA, "u_strength")
 shaderHQ_tex = shader_get_uniform(shaderHQ, "rubyTextureSize")
-//shader_set_uniform_f(shaderHQ_tex, view_width, view_height)
-
-swd = 15 // interpolations
-shd = 15
-exw = 32 / swd // extra space
-exh = 32 / shd
-emw = 144 / swd // curve
-emh = 160 / shd
-tx = []
-ty = []
-px = []
-py = []
-for (var j = 0; j <= shd; ++j) {
-	for (var i = 0; i <= swd; ++i) {
-		tx[i, j] = surfw / swd * i
-		ty[i, j] = surfh / shd * j
-		px[i, j] = 432 / swd * i + 24
-		py[i, j] = 600 / shd * j + 20
-		pds[i, j] = point_distance(px[i, j], py[i, j], room_width * 0.5, room_height * 0.5)
-		if pds[i, j] != 0 {
-			px[i, j] += lengthdir_x((i - swd * 0.5) * exw, (j - shd * 0.5) * emw)
-			py[i, j] += lengthdir_y((shd * 0.5 - j) * exh, 90 + (i - swd * 0.5) * emh)
-		}
-	}
-}
 
 crt_surface_width  = surface_get_width(application_surface)
 crt_surface_height = surface_get_width(application_surface)

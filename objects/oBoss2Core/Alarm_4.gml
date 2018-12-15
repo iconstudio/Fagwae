@@ -11,7 +11,7 @@ if ++shot_count < 4 {
 
 	for (var i = 0; i < counter; ++i)
 		enemy_shot(x, y, shot_speed, shot_angular + i * 9)
-	audio_play_sound(soundShotEnemy, 0, false)
+	enemy_play_shot()
 
 	alarm[4] = 6 - global.extreme * 2
 } else if pattern == 4 {

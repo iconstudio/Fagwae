@@ -3,7 +3,7 @@ if y >= 800 or shot_mode != 0
 	exit
 
 enemy_shot(x, y, shot_speed, point_direction(x, y, global.px, global.py))
-audio_play_sound(soundShotEnemy, 0, false)
+enemy_play_shot()
 
 if shot_count++ == 0 {
 	alarm[0] = shot_period

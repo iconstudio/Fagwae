@@ -19,4 +19,4 @@ if ++shot_count < 5 {
 
 	shot_count = 0
 }
-audio_play_sound(soundShotEnemy, 0, false)
+enemy_play_shot()

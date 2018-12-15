@@ -18,6 +18,6 @@ if moving_mode == 0 {
 
 	alarm[0] = max(40, 100 - global.stage * 10 - global.extreme * 30)
 }
-audio_play_sound(soundShotEnemy, 0, false)
+enemy_play_shot()
 
 speed = 20 // jump

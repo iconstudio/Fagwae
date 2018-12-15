@@ -12,4 +12,4 @@ if instance_exists(parent) {
   inst.vspeed += parent.vspeed
 }
 if !audio_is_playing(soundShotEnemy)
-	audio_play_sound(soundShotEnemy, 0, false)
+	enemy_play_shot()

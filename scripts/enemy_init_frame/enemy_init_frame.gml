@@ -2,10 +2,10 @@
 /// @function enemy_init_frame
 
 enemy_register(enemy_triangle_1, oFrameTriangle, "STEEL FRAME", sFrameTriangle, sFrameTriangle, 
-6, 200, 1, 1, 3, 0, 0)
+3, 100, 1, 1, 3, 0, 0)
 
 enemy_register(enemy_triangle_2, oFrameTriangleSide, "STEEL FRAME", sFrameTriangle, sFrameTriangle, 
-6, 200, 1, 1, 3, 0, 0)
+3, 150, 1, 1, 3, 0, 0)
 
 enemy_register(enemy_line_1, oFrameLine1, "STEEL FRAME", sFrameLine, sFrameLine, 
 70, 650, 2, 0, 0, 0, 0)

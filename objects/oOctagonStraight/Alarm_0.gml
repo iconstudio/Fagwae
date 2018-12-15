@@ -36,4 +36,4 @@ if shot_mode == 0 {
 		alarm[0] = shot_period_reset2
 	}
 }
-audio_play_sound(soundShotEnemy, 0, false)
+enemy_play_shot()

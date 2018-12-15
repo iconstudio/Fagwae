@@ -37,7 +37,7 @@ for (i = 0; i < max(2, 5 - shot_count); ++i) {
 	enemy_shot(lx, ly, shot_speed * 0.85, lang)
 	enemy_shot(lx, ly, shot_speed * 0.85, lang)
 }
-audio_play_sound(soundShotEnemy, 0, false)
+enemy_play_shot()
 
 if ++shot_count < 4 + global.extreme + (parent.hp <= parent.hp_max * 0.333) {
 	alarm[4] = 10 - global.extreme

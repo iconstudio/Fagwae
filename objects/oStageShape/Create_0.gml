@@ -20,13 +20,16 @@ deco_fail = false
 // Initializing stage
 global.__st2_line = 0
 
+var jako_delay = seconds(0.7)
 var octo_type = enemy_octagon_4
 if global.extreme
 	octo_type = enemy_octagon_2
 
 script_stage1_ready()
 area_enemy_push(seconds(0.7), enemy_octagon_4, 0, 245, -48)
-/*
+
+area_enemy_push(seconds(0.7), enemy_octagon_4, 0, 245, -48)
+//*
 area_enemy_push(seconds(0.7), enemy_octagon_4, 0, 245, -48)
 area_enemy_push(seconds(1.2 + 0.3 * global.extreme), octo_type, 0, 205, -48) // -40
 
