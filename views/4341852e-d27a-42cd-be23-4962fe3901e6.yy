@@ -9,7 +9,7 @@
         "cdd27141-acc6-420a-90b3-f87f86176dbb"
     ],
     "filterType": "GMScript",
-    "folderName": "Screen",
+    "folderName": "UX",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

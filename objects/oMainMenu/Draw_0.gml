@@ -11,15 +11,15 @@ if !intro_clear
 	draw_set_alpha(1)
 if intro {
 	if intro_mode == 0 {
-		var idx = view_width * 0.5 + 700 - 1000 * ease_in_cubic(intro_push[0])
+		var idx = room_width * 0.5 + 700 - 1000 * ease_in_cubic(intro_push[0])
 		draw_sprite_ext(sTitle, 1, idx, title_pos_proj, intro_projscale, intro_projscale, 0, $ffffff, 1)
 	} else if intro_mode == 1 {
-		draw_sprite_ext(sTitle, 1, view_width * 0.5 - 300 + 300 * intro_push[1], title_pos_proj, intro_projscale, intro_projscale, 0, $ffffff, 1)
+		draw_sprite_ext(sTitle, 1, room_width * 0.5 - 300 + 300 * intro_push[1], title_pos_proj, intro_projscale, intro_projscale, 0, $ffffff, 1)
 	} else if intro_mode == 2 {
-		draw_sprite_ext(sTitle, 1, view_width * 0.5, title_pos_proj, 1, 1, 0, $ffffff, 1)
+		draw_sprite_ext(sTitle, 1, room_width * 0.5, title_pos_proj, 1, 1, 0, $ffffff, 1)
 	}
 } else {
-	draw_sprite_ext(sTitle, 1, view_width * 0.5, title_pos_proj, 1, 1, 0, $ffffff, draw_get_alpha())
+	draw_sprite_ext(sTitle, 1, room_width * 0.5, title_pos_proj, 1, 1, 0, $ffffff, draw_get_alpha())
 }
 // This is not white.
 if !intro {
@@ -56,12 +56,12 @@ draw_set_halign(1)
 draw_set_valign(1)
 
 var captionratio = ease_out_expo(menu_scroll)
-var captionx = view_width * 0.5 + (1 - captionratio) * 200 * menu_push
-var beforex = view_width * 0.5 - captionratio * 200 * menu_push
+var captionx = room_width * 0.5 + (1 - captionratio) * 200 * menu_push
+var beforex = room_width * 0.5 - captionratio * 200 * menu_push
 draw_set_alpha(aalpha * (1 - captionratio) * 2)
 draw_text_transformed(beforex, menu_buttony - 3, menu_content[menu_before], 2, 2, 0)
 draw_set_alpha(aalpha * captionratio)
 draw_text_transformed(captionx, menu_buttony - 3, menu_content[menu_selected], 2, 2, 0)
 
 draw_set_alpha((1 - push[1]) * get_ralpha(flash[1]))
-draw_text_transformed(view_width * 0.5, (1 - push[1]) * 16, global.status_name, 2, 2, 0)
+draw_text_transformed(room_width * 0.5, (1 - push[1]) * 16, global.status_name, 2, 2, 0)

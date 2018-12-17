@@ -9,8 +9,8 @@ if type_create == LEFT {
 	x_target = 160
 	x = -100
 } else if type_create == RIGHT {
-	x_target = view_width - 160
-	x = view_width + 100
+	x_target = room_width - 160
+	x = room_width + 100
 }
 xstart = x
 y_target = 100

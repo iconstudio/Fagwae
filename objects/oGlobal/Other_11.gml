@@ -1,5 +1,4 @@
 /// @description notification dequeue
-
 if instance_exists(callto) {
 	var lpos = ds_list_find_index(notification_list, callto)
 	if lpos != -1 {

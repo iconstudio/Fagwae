@@ -1,7 +1,4 @@
 /// @description Creation
-
-enemy_arm_init(enemy_arm_rectangle_2, 4, 31)
-
 arm_instances = array_create(8)
 arm_angle = array_create(8)
 arm_number = 0
@@ -61,8 +58,6 @@ with arm_instances[arm_number++] { // 7: behind left
 mover = path_add()
 path_set_closed(mover, false)
 path_set_precision(mover, 8)
-path_add_point(mover, x, y, 100)
-
 x_target = x
 x_border = 96
 if type_create == RIGHT {
@@ -72,15 +67,17 @@ if type_create == RIGHT {
 	x_target = x_border
 	x = -100
 }
-moving_mode = 2
-moving_count = 0
+path_add_point(mover, x, y, 100)
+path_add_point(mover, (x_target + x) * 0.5, y - 30, 70)
+path_add_point(mover, x_target, y - 100, 30)
+path_add_point(mover, x_target, y - 200, 50)
+path_add_point(mover, x_target, max(0, y - 400), 80)
+path_add_point(mover, x_target, -64, 100)
+path_start(mover, 4, path_action_stop, true)
 
-shot_dir = 0
+shot_dir = point_direction(x, y, global.px, global.py)
 shot_speed = 3 + global.stage * 0.333
 shot_count = 0
 shot_mode = 0
 
 image_angle = 90
-
-if y <= 10
-	instance_destroy()

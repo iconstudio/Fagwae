@@ -1,5 +1,3 @@
-/// @description 
-
 if dmode == 0 {
 	if dalpha < 1 {
 		dalpha += 0.04

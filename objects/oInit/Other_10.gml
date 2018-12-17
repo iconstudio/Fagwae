@@ -1,5 +1,4 @@
 /// @description Defining macros
-
 // constants for triggers of the area
 #macro areapush_object 0
 #macro areapush_enemy 1

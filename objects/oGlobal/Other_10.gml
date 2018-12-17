@@ -1,6 +1,5 @@
 /// @description Creating a surface
-
-surf = surface_create(view_width, view_height)
+surf = surface_create(room_width, room_height)
 global.surface_tex = surface_get_texture(surf)
 global.surface_w = texture_get_width(global.surface_tex)
 global.surface_h = texture_get_height(global.surface_tex)

@@ -1,5 +1,4 @@
 /// @description Initialze Screen, Front-End
-
 // General Screen
 event_user(0)
 
@@ -7,7 +6,7 @@ if !shaders_are_supported() {
 	fxaa_on = false
 	distort_on = false
 } else {
-	fxaa_on = false
+	fxaa_on = shader_is_compiled(shaderFXAA)
 	distort_on = shader_is_compiled(shaderCRT)
 }
 
@@ -17,7 +16,7 @@ shaderFXAA_level = shader_get_uniform(shaderFXAA, "u_strength")
 shaderHQ_tex = shader_get_uniform(shaderHQ, "rubyTextureSize")
 
 crt_surface_width  = surface_get_width(application_surface)
-crt_surface_height = surface_get_width(application_surface)
+crt_surface_height = surface_get_height(application_surface)
 crt_texture = surface_get_texture(application_surface)
 crt_texture_width = texture_get_width(crt_texture)
 crt_texture_height = texture_get_height(crt_texture)
@@ -45,8 +44,10 @@ xo = 0
 yo = 0
 xn = 0
 yn = 0
-shakelevel = 4
-global.screenshake = 0
+shake_level = 4
+shake_meter = 0
+shake_time = 0
+shake_period = seconds(1)
 
 // UI
 global.ui_top = noone

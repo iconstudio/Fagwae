@@ -1,5 +1,4 @@
 /// @description Show notification
-
 if ds_list_size(notification_list) > 0 {
 	//var _notific = ds_list_find_value(notification_list, 0) // array
 	ds_list_delete(notification_list, 0)

@@ -7,10 +7,10 @@ x_begin = x
 var xborder = 120
 if type_create == RIGHT {
 	x_target = xborder
-	x = view_width + 100
-	x_begin = view_width - xborder
+	x = room_width + 100
+	x_begin = room_width - xborder
 } else if type_create == LEFT {
-	x_target = view_width - xborder
+	x_target = room_width - xborder
 	x = -100
 	x_begin = xborder
 }

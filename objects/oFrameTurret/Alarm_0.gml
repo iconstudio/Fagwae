@@ -1,6 +1,6 @@
 /// @description Attacking
 
-alarm[0] = max(4, 17 - global.stage * 0.333)
+alarm[0] = shot_period
 
 if y >= screen_height - 200 or x < 8 or x > screen_height - 8 or y < 10
 	exit

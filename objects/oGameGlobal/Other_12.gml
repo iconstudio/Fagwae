@@ -1,5 +1,4 @@
 /// @description Check achievement
-
 var abefore, aresult
 for (var i = 0; i < global.achievement_count - 1; ++i) {
 	abefore = global.achievement_cleared[i]

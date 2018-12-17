@@ -21,12 +21,12 @@ menu_lbutton_x = array_create(menu_count)
 menu_rbutton_x = array_create(menu_count)
 for (var k = 0; k < menu_count; ++k) {
 	menu_width = string_length(menu_content[k]) * 20
-	menu_lbutton_x[k] = view_width * 0.5 - ceil(menu_width * 0.5) - 20
-	menu_rbutton_x[k] = view_width * 0.5 + ceil(menu_width * 0.5) + 20
+	menu_lbutton_x[k] = room_width * 0.5 - ceil(menu_width * 0.5) - 20
+	menu_rbutton_x[k] = room_width * 0.5 + ceil(menu_width * 0.5) + 20
 }
 menu_current_lbx = menu_lbutton_x[0]
 menu_current_rbx = menu_rbutton_x[0]
-menu_buttony = view_height * 0.8
+menu_buttony = room_height * 0.8
 
 // intro
 intro = false
@@ -45,13 +45,13 @@ if !global.main_intro {
 
 // title
 title_texture_proj = sprite_get_texture(sTitle, 0)
-title_pos_proj = view_height * 0.5 - 70
-title_pos_tleft = view_width * 0.5 - 197
-title_pos_tright = view_width * 0.5 + 198
-title_pos_bleft = view_width * 0.5 - 230
-title_pos_bright = view_width * 0.5 + 230
-title_pos_top = view_height * 0.5 - 32
-title_pos_bottom = view_height * 0.5 + 72
+title_pos_proj = room_height * 0.5 - 70
+title_pos_tleft = room_width * 0.5 - 197
+title_pos_tright = room_width * 0.5 + 198
+title_pos_bleft = room_width * 0.5 - 230
+title_pos_bright = room_width * 0.5 + 230
+title_pos_top = room_height * 0.5 - 32
+title_pos_bottom = room_height * 0.5 + 72
 
 reversing_time = seconds(0.5)
 event_user(0)

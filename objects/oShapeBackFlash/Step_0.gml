@@ -1,8 +1,6 @@
-/// @description 
-
 if type_create == 0 {
-	if image_alpha > 0
-		image_alpha -= 0.01
+	if disappear_time++ < disappear_period
+		image_alpha = 1 - disappear_time / disappear_period
 	else
 		instance_destroy()
 }

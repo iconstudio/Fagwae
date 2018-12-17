@@ -71,7 +71,7 @@ if abs(global.py - y) < 4 + global.extreme { // same line
 if type_create == LEFT {
 	x = -20
 } else if type_create == RIGHT {
-	x = view_width + 20
+	x = room_width + 20
 	rotation_step *= -1
 	hspeed *= -1
 }

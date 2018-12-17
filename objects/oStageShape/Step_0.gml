@@ -1,12 +1,10 @@
-/// @description Destroying decorations
+/// @description Starting destroying decorations
+event_inherited()
 
 if deco_mode == 1 {
 	if !deco_fail {
-		alarm[4] = 5
-		alarm[5] = 50
+		alarm[5] = deco_fail_period * 2
 
 		deco_fail = true
 	}
 }
-
-event_inherited()

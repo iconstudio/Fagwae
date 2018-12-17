@@ -127,9 +127,9 @@ if true/*global.flag_is_mobile*/ {
 		var my = device_mouse_y(0)
 		if my > menu_buttony - 50 and my < menu_buttony + 90 {
 			var mx = device_mouse_x(0)
-			if 10 < mx and mx < max(view_width * 0.5 - 110, menu_lbutton_x[menu_selected] + 20) {
+			if 10 < mx and mx < max(room_width * 0.5 - 110, menu_lbutton_x[menu_selected] + 20) {
 				pkleft = true
-			} else if min(view_width * 0.5 + 110, menu_rbutton_x[menu_selected] - 20) < mx and mx < view_width - 10 {
+			} else if min(room_width * 0.5 + 110, menu_rbutton_x[menu_selected] - 20) < mx and mx < room_width - 10 {
 				pkright = true
 			}
 		}
@@ -138,7 +138,7 @@ if true/*global.flag_is_mobile*/ {
 		var my = device_mouse_y(0)
 		if my > menu_buttony - 50 and my < menu_buttony + 90 {
 			var mx = device_mouse_x(0)
-			if view_width * 0.5 - 70 < mx and mx < view_width * 0.5 + 70
+			if room_width * 0.5 - 70 < mx and mx < room_width * 0.5 + 70
 				pkstart = true
 		}
 	}

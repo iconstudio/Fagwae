@@ -1,5 +1,4 @@
 /// @description Drawing a wave
-
 draw_set_alpha(1)
 draw_set_color($ffffff)
 for (var i = 0; i < fdet; ++i) {

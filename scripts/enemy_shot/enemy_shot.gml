@@ -6,7 +6,7 @@
 /// @param direction { real }
 /// @param [type] { object }
 
-if !global.playeralive or y < -sprite_yoffset or y > view_height + sprite_height
+if !global.playeralive or y < -sprite_yoffset or y > room_height + sprite_height
 	return noone
 
 var type = oEnemyBullet

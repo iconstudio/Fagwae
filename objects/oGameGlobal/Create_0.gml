@@ -1,5 +1,4 @@
 /// @description Initialization
-
 camera_projection_identity()
 
 // bgm
@@ -7,12 +6,12 @@ alarm[3] = 120
 
 // initiator
 // player
-player_counter = 60
+player_counter = seconds(1)
 player_isfirst = true
-instance_create_layer(0, 0, "Backend", oStageShape)
-global.stage = 1
-
 global.vscore = 0
+
+global.stage = 1
+instance_create_layer(0, 0, "Backend", oStageShape)
 
 // achievements
 event_user(1)

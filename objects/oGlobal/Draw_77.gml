@@ -1,42 +1,56 @@
 /// @description Drawing screen
-
 if !surface_exists(surf)
 	event_user(0)
 
-if !global.screenlock {
-	event_user(4)
-} else {
+if global.screenlock {
 	if sprite_exists(capture) {
-		surface_set_target(surf)
 		draw_sprite(capture, 0, 0, 0)
-		surface_reset_target()
+	}
+} else {
+	surface_set_target(surf)
+	gpu_set_blendenable(false)
+	gpu_set_blendmode_ext(bm_one, bm_zero)
+	draw_surface_ext(application_surface, 0, 0, 1, 1, 0, $ffffff, 1)
+	gpu_set_blendmode(bm_normal)
+	gpu_set_blendenable(true)
+	surface_reset_target()
+
+	if shake_time > 0 {
+		speed = shake_meter * (shake_time-- / shake_period)
+		direction = (direction + random(80) + 140) mod 360
+		camera_set_view_pos(view_camera, hspeed, vspeed)
+		xo = xn
+		yo = yn
+		xn = hspeed
+		yn = vspeed
+
+		if fxaa_on {
+			shader_set(shaderFXAA)
+			shader_set_uniform_f(shaderFXAA_texel, texture_get_texel_width(global.surface_tex), texture_get_texel_height(global.surface_tex))
+			shader_set_uniform_f(shaderFXAA_level, fxaa_strength)
+		}
+		gpu_set_blendmode(bm_add)
+		for (var i = 1; i <= shake_level; ++i)
+			draw_surface_ext(surf, xo + (xn - xo) / shake_level * i, yo + (yn - yo) / shake_level * i, 1, 1, 0, $ffffff, 1 / shake_level)
+		gpu_set_blendmode(bm_normal)
+		if fxaa_on
+			shader_reset()
+	} else {
+		camera_set_view_pos(view_camera, 0, 0)
+		xo = 0
+		yo = 0
+
+		if fxaa_on {
+			shader_set(shaderFXAA)
+			shader_set_uniform_f(shaderFXAA_texel, texture_get_texel_width(global.surface_tex), texture_get_texel_height(global.surface_tex))
+			shader_set_uniform_f(shaderFXAA_level, fxaa_strength)
+		}
+		draw_surface_ext(surf, 0, 0, 1, 1, 0, $ffffff, 1)
+		if fxaa_on
+			shader_reset()
 	}
 }
-if fxaa_on
-	shader_reset()
 
-if global.screenshake > 0 {
-	speed = global.screenshake
-	direction = (direction + random(80) + 140) mod 360
-	camera_set_view_pos(view_camera, hspeed, vspeed)
-
-	xo = xn
-	yo = yn
-	xn = hspeed
-	yn = vspeed
-	gpu_set_blendmode(bm_add)
-	for (var i = 1; i <= shakelevel; ++i)
-		draw_surface_ext(surf, xo + (xn - xo) / shakelevel * i, yo + (yn - yo) / shakelevel * i, 1, 1, 0, $ffffff, 1 / shakelevel)
-	gpu_set_blendmode(bm_normal)
-
-	global.screenshake -= global.screenshake * 0.1
-} else {
-	camera_set_view_pos(view_camera, 0, 0)
-
-	xo = 0
-	yo = 0
-	draw_surface_ext(surf, 0, 0, 1, 1, 0, $ffffff, 1)
-}
 /* 
 if global.screenlock and ds_priority_size(global.ui_listbox) > 0 {
 	ds_priority_copy(global.ui_listbox, ui_listbox_copy)

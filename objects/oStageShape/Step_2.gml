@@ -1,13 +1,4 @@
 /// @description Updating Background
-
-with oStageEntrance
-	vspeed = other.back_speed
-
-if back_speed > 3
-	back_speed -= 0.25
-else
-	back_speed = 3
-
 event_inherited()
 
 square_saturation += 0.1
@@ -23,10 +14,9 @@ if background_param > 0
 	back_color = make_color_hsv(color_parse(background_param - 10), 192, 98 * brightness)
 else
 	back_color = 0
-if ++back_count > 4 {
+if ++back_count > 7 {
 	with instance_create_layer(0, 0, "Background", oBackgroundFader)
 		image_blend = other.back_color
 	back_count = 0
 }
-
-//layer_background_blend(background_id, back_color)
+layer_background_blend(background_id, back_color)

@@ -1,7 +1,6 @@
 /// @description Update
-
 event_inherited()
 
-image_angle = direction //+ 30
+image_angle = direction
 
-enemy_arm_fix(pangle)
+enemy_arm_fix()

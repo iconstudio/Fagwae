@@ -1,6 +1,5 @@
 /// @description area_goto_next()
 /// @function area_goto_next
-
 global.stage++
 with instance_create_layer(0,  0, "Backend", next){
 	// from shape to the frame
@@ -17,8 +16,6 @@ with instance_create_layer(0,  0, "Backend", next){
 	else {
 		
 	}
-
-	back_alpha = other.back_alpha
 	background_param = other.background_param
 	scroll = other.scroll
 	rotation = other.rotation

@@ -1,7 +1,5 @@
-/// @description 
-
 x++
-
+y = ystart + (show_time++ / show_period) * (room_height + 50)
 with oStageParent {
 	var __acol, __str, __swid
 	__acol = make_color_hsv(background_param - 25, 144, 128)

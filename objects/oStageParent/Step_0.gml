@@ -1,8 +1,4 @@
 /// @description Updating Background and Creating pushes
-
-if !available
-	exit
-
 if brightness < 1
 	brightness += 0.014
 else
