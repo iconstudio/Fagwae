@@ -6,7 +6,7 @@ if !shaders_are_supported() {
 	fxaa_on = false
 	distort_on = false
 } else {
-	fxaa_on = shader_is_compiled(shaderFXAA)
+	fxaa_on = false//shader_is_compiled(shaderFXAA)
 	distort_on = shader_is_compiled(shaderCRT)
 }
 

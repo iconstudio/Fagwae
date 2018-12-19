@@ -47,7 +47,6 @@ for (var i = 0; i < 3; ++i) {
 	if frame > i * 15 + 12 and push[i] != 0 {
 		if push[i] != 0
 			push[i] -= push[i] * 0.125
-		title_push = 1 - push[0]
 
 		if push[i] < 0.1 {
 			if flash[i]++ > 15

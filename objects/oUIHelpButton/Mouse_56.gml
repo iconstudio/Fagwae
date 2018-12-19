@@ -1,5 +1,4 @@
 /// @description Creating a setting panel
-
 if pressed {
 	pressed = false
 

@@ -7,7 +7,7 @@
     "option_windows_borderless": false,
     "option_windows_company_info": "Iconstudio",
     "option_windows_copy_exe_to_dest": false,
-    "option_windows_copyright_info": "(c) 2018 Iconstudio",
+    "option_windows_copyright_info": "(c) 2019 Iconstudio",
     "option_windows_description_info": "Fagwae 2",
     "option_windows_display_cursor": true,
     "option_windows_display_name": "Fagwae 2 Alpha",
@@ -29,8 +29,8 @@
     "option_windows_texture_page": "4096x4096",
     "option_windows_use_splash": false,
     "option_windows_version": {
-        "build": 3,
-        "major": 1,
+        "build": 5,
+        "major": 2,
         "minor": 0,
         "revision": 0
     },

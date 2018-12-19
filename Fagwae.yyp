@@ -119,6 +119,14 @@
             }
         },
         {
+            "Key": "09876297-9322-4827-af7d-7d10e2d17363",
+            "Value": {
+                "id": "f33527c2-c3ec-46cb-ae14-2839481167e6",
+                "resourcePath": "views\\09876297-9322-4827-af7d-7d10e2d17363.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "09dfd7aa-eca1-4c88-aa0a-cf2430a5c5a5",
             "Value": {
                 "id": "806b8966-67a9-40a1-9e78-bf0584d47b78",
@@ -234,7 +242,7 @@
             "Key": "15a9781a-2c64-4979-9856-aaf9e4c885bc",
             "Value": {
                 "id": "bb05f7dd-3b7a-4b8a-b2c0-1f478488df09",
-                "resourcePath": "objects\\oIntro\\oIntro.yy",
+                "resourcePath": "objects\\_oIntro\\_oIntro.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -3546,7 +3554,7 @@
             "Key": "f6e74f11-0848-4a79-abc4-61665f70ea3a",
             "Value": {
                 "id": "99140eb2-553a-4a82-a90b-0e11bc4b57d6",
-                "resourcePath": "objects\\oMainMenuOld\\oMainMenuOld.yy",
+                "resourcePath": "objects\\_oMainMenu\\_oMainMenu.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -3813,7 +3821,6 @@
         "5ea9006d-c718-4343-b7d5-ac6e9689374f",
         "a4c60548-e6ce-4a69-a06d-bac19c587919",
         "5f1fba81-4cf6-4ec3-9e79-2c142896271c",
-        "07fac307-b314-4ba0-9ed9-a3929f817964",
         "e10c8525-65c7-48b5-80cb-48b5a299b5f1",
         "ca82e430-fcc3-43e8-b2ea-80d084c2699d",
         "d7966746-461e-46c7-bd99-4c89cb86c8fe",
@@ -3842,7 +3849,8 @@
         "6e9586d4-caa5-4470-a935-bfd2a7784207",
         "f960daaa-3a8b-438e-a0df-08e13f41adc6",
         "92050eab-4524-4082-91b7-91464dde57e3",
-        "3a12875c-0641-4f7a-ac8d-e9cabfa99dbb"
+        "3a12875c-0641-4f7a-ac8d-e9cabfa99dbb",
+        "07fac307-b314-4ba0-9ed9-a3929f817964"
     ],
     "tutorial": ""
 }

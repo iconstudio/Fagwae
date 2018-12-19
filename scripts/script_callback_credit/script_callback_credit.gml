@@ -3,7 +3,7 @@ contents[content_number] = ui_create(0, 0, oUILabel, "ZUI_Above")
 with contents[content_number++] {
 	x = round(ui_hierachy.x + 20)
 	y = round(ui_hierachy.y + ui_hierachy.ui_height * 0.5)
-	ui_label_set_caption("Copyright 2018 Iconer\n")
+	ui_label_set_caption("원작 게임 / Easing 스크립트 - Zinik\nBetter Scaling - Mytino\nCRT Shder - xygthop3\nFXAA Shader - Pyramid Beyond")
 	halign = 0
 	closable = true
 	animate = 0

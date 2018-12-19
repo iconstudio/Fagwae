@@ -139,10 +139,14 @@ area_enemy_push(seconds(1.2), enemy_octagon_2, 0, 330, -48)
 area_enemy_push(seconds(2), enemy_octagon_4, 0, 330, -48)
 area_script_push(seconds(1), script_await_dying, 0, 0, 0)
 
-if global.extreme
-	area_enemy_push(seconds(3), enemy_rectangle_2, choose(LEFT, RIGHT), 0, 200)
-else
+if global.extreme {
+	area_enemy_push(seconds(3), enemy_rectangle_2, choose(LEFT, RIGHT), 0, 200 + random(20)
+	area_enemy_push(seconds(3), enemy_rectangle_2, choose(LEFT, RIGHT), 0, 300 + random(20))
+	area_enemy_push(seconds(3), enemy_rectangle_2, choose(LEFT, RIGHT), 0, 400 + random(20))
+} else {
+	area_enemy_push(seconds(2), enemy_rectangle_1, 0, 112, -48)
 	area_enemy_push(seconds(3), enemy_rectangle_1, 0, 409, -48)
+}
 if global.extreme {
 	area_enemy_push(seconds(2.9), enemy_spread_2, RIGHT, 0, 0)
 	area_enemy_push(seconds(1.5), enemy_octagon_4, 0, 240, -48)

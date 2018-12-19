@@ -5,7 +5,7 @@ with contents[content_number++] {
 	x = round(ui_hierachy.x + ui_hierachy.ui_width * 0.5)
 	y = round(ui_hierachy.y + ui_hierachy.ui_height * 0.5)
 	//valign = 0
-	ui_label_set_caption("Fagwae 2\n" + GM_version + "© 2018 Iconer\n" + date_time_string(GM_build_date))
+	ui_label_set_caption("Fagwae " + GM_version + "© 2019 Iconer\n" + date_time_string(GM_build_date))
 	closable = true
 	animate = 0
 }

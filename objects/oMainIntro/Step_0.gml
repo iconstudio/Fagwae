@@ -1,39 +1,28 @@
 if intro_mode == 0 {
-	if intro_push[0] < 1 {
-		intro_push[0] += 0.03
-	} else {
-		intro_push[0] = 1
+	if slide_time < slide_period
+		slide_time++
+	else
 		intro_mode = 1
-	}
 } else if intro_mode == 1 {
-	if intro_frame++ > 5 {
-		if intro_push[1] != 1
-			intro_push[1] += (1 - intro_push[1]) * 0.142857
-
-		if intro_frame > seconds(0.5) and intro_push[1] > 0.6 {
-			if title_push != 1
-				title_push += (1 - title_push) * 0.1666
-
-			if intro_projscale > 1.04 {
-				intro_projscale += (1 - intro_projscale) * 0.333
-			} else {
-				intro_frame = 0
-				intro_projscale = 1
+	if slide_wait_time < slide_wait_period {
+		slide_wait_time++
+	} else {
+		if zoom_before_time < zoom_before_period {
+			zoom_before_time++
+		} else {
+			if zoom_time < zoom_period
+				zoom_time++
+			intro_subsize = 2 - zoom_time / zoom_period
+			if intro_subsize == 1
 				intro_mode = 2
-				music_update(musicMainMenu)
-			}
-		}
-		if intro_push[1] > 0.988 {
-			title_push = 1
-			intro_push[1] = 1
 		}
 	}
 } else if intro_mode == 2 {
-	if intro_push[2] < 1 {
-		intro_push[2] += 0.1
+	if centering_time < centering_period {
+		centering_time++
 	} else {
-		intro_frame = 0
 		title_push = 1
 		instance_destroy()
+		room_goto_next()
 	}
 }
