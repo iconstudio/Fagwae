@@ -1,5 +1,3 @@
-/// @description 
-
 for (var i = 0; i < global.achievement_count; ++i) {
 	var aclph = 0.5 + global.achievement_cleared[i] * 0.5
 	if selected == i {
@@ -39,7 +37,7 @@ if draw_mode == 0 {
 	exit
 }
 
-if io_check_pressed_left() or io_check_pressed_up() {
+if (io_check_pressed_left() or io_check_pressed_up()) and current_time mod 1000 == 0 {
 	if selected > 0
 		selected -= 1
 	else

@@ -1,5 +1,4 @@
 /// @description Initialization
-
 menu_camera = camera_create_view(0, 0, 450, 800, 0, noone, 0, 0, -1, -1)
 
 if global.achievement_count <= 0

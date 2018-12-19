@@ -3,7 +3,7 @@
 if pressed {
 	pressed = false
 
-	if oMainMenu.draw_mode != 0 or oMainMenu.intro or dmode != 0
+	if oMainMenu.draw_mode > 0 or dmode != 0
 		exit
 
 	var button_parent = id, button_about, button_copyright, button_instruction

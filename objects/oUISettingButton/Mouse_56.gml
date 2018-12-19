@@ -3,7 +3,7 @@
 if pressed and dmode == 0 {
 	pressed = false
 
-	if instance_exists(oMainMenu) and (oMainMenu.draw_mode != 0 or oMainMenu.intro)
+	if instance_exists(oMainMenu) and oMainMenu.draw_mode > 0
 		exit
 
 	if true /*global.ui_top == id*/ {

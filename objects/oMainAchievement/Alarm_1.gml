@@ -1,4 +1,3 @@
 /// @description Goto Main menu
-
-with (oMainMenuOld)
+with (oMainMenu)
 	event_user(0)

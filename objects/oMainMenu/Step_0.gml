@@ -1,6 +1,6 @@
 if draw_mode > 0 {
 	frame = 0
-	if reversing++ > reversing_time {
+	if reversing_time++ > reversing_period {
 		switch draw_mode {
 			case MODE_STATISTICS:
 				instance_create_layer(0, 0, layer, oMainHighscore)
@@ -24,7 +24,7 @@ if draw_mode > 0 {
 		}
 	}
 
-	if reversing > reversing_time * 2 {
+	if reversing_time > reversing_period * 2 {
 		if draw_mode == MODE_GAME {
 			instance_destroy()
 			room_goto_next()
@@ -35,63 +35,19 @@ if draw_mode > 0 {
 
 	title_push = 1 - push[0]
 	for (var i = 0; i < 3; ++i) {
-		push[i] = min(1, push[i] + reversing * 0.0162)
+		push[i] = min(1, push[i] + reversing_time * 0.0162)
 	}
 	exit
 }
 
-if intro {
-	if intro_mode == 0 {
-		if intro_push[0] < 1 {
-			intro_push[0] += 0.03
-		} else {
-			intro_push[0] = 1
-			intro_mode = 1
-		}
-	} else if intro_mode == 1 {
-		if intro_frame++ > 5 {
-			if intro_push[1] != 1
-				intro_push[1] += (1 - intro_push[1]) * 0.142857
-
-			if intro_frame > seconds(0.5) and intro_push[1] > 0.6 {
-				if title_push != 1
-					title_push += (1 - title_push) * 0.1666
-
-				if intro_projscale > 1.04 {
-					intro_projscale += (1 - intro_projscale) * 0.333
-				} else {
-					intro_frame = 0
-					intro_projscale = 1
-					intro_mode = 2
-					music_update(musicMainMenu)
-				}
-			}
-			if intro_push[1] > 0.988 {
-				title_push = 1
-				intro_push[1] = 1
-			}
-		}
-	} else if intro_mode == 2 {
-		if intro_push[2] < 1 {
-			intro_push[2] += 0.1
-		} else {
-			intro = false
-			intro_frame = 0
-			title_push = 1
-		}
-	}
-	exit
-} else {
-	if !audio_is_playing(musicMainMenu)
-		music_update(musicMainMenu)
-}
+if !audio_is_playing(musicMainMenu)
+	music_update(musicMainMenu)
 
 for (var i = 0; i < 3; ++i) {
 	if frame > i * 15 + 12 and push[i] != 0 {
 		if push[i] != 0
 			push[i] -= push[i] * 0.125
-		if intro_mode == 0
-			title_push = 1 - push[0]
+		title_push = 1 - push[0]
 
 		if push[i] < 0.1 {
 			if flash[i]++ > 15
@@ -99,8 +55,6 @@ for (var i = 0; i < 3; ++i) {
 		}
 	}
 }
-if push[2] == 0 and !intro_clear
-	intro_clear = true
 frame++
 
 if menu_current_lbx != menu_lbutton_x[menu_selected]
@@ -113,7 +67,7 @@ if menu_scroll < 0.97
 else
 	menu_scroll = 1
 
-if frame < reversing_time or push[2] > 0.2 or instance_exists(oUIBlack) or instance_exists(oUIWindow)
+if frame < reversing_period or push[2] > 0.2 or instance_exists(oUIBlack) or instance_exists(oUIWindow)
 	exit
 
 var ckleft = io_check_left() or keyboard_check(vk_left) or keyboard_check(ord("A"))
