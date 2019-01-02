@@ -1,5 +1,4 @@
 /// @description Getting damage
-
 if !global.playeralive or instance_exists(oGameOver) or instance_exists(oContinue)
 	exit
 
@@ -52,7 +51,6 @@ if hp > 0 {
 		vspeed = -random(7) - 6
 	}
 
-
 	global.score_combo = 0
 	global.player_fever_laser = 0
 	global.player_fever_shield = 0
@@ -66,7 +64,11 @@ if hp > 0 {
 
 	with oPlayerShield
 		instance_destroy()
-	with oGameGlobal
-		alarm[1] = 120
+	if global.extreme {
+		instance_create_layer(0, 0, "Screen", oGameOver)
+	} else {
+		with oGameGlobal
+			alarm[1] = seconds(2)
+	}
 	instance_destroy()
 }

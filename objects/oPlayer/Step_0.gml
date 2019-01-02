@@ -20,7 +20,7 @@ if !global.playeralive or instance_exists(oGameOver) {
 var ta = 2
 mx = 0
 my = 0
-var pad_available = gamepad_index != -1
+var pad_available = (gamepad_index != -1)
 
 if keyboard_check(vk_left) or (pad_available and gamepad_button_check(gamepad_index, gp_padl)) {
 	mx -= 1
@@ -54,7 +54,7 @@ var analogue = false
 if pad_available {
 	var ahor = gamepad_axis_value(gamepad_index, gp_axislh)
 	var aver = gamepad_axis_value(gamepad_index, gp_axislv)
-	show_debug_message(ahor)
+	//show_debug_message(ahor)
 	if round(ahor) != 0 or round(aver) != 0 {
 		analogue = true
 
@@ -109,5 +109,5 @@ if attack_delay > 0 {
 
 	attack_count--
 	attack_frame = (++attack_frame) mod 4
-	attack_delay = 3
+	attack_delay = shot_period
 }

@@ -2,15 +2,13 @@
 camera_projection_identity()
 
 // bgm
-alarm[3] = 120
+alarm[3] = seconds(1.5)
 
 // initiator
 // player
-player_counter = seconds(1)
+player_appear_time = seconds(1)
 player_isfirst = true
-global.vscore = 0
 
-global.stage = 1
 instance_create_layer(0, 0, "Backend", oStageShape)
 
 // achievements
@@ -19,21 +17,27 @@ event_user(1)
 // achievements update
 event_user(2)
 
-// screen effecf
+// ui
+ui_alpha = 0
+ui_appear_time = 0
+ui_appear_period = seconds(0.93)
+pause_alpha = 0
 shadow_alpha = 0
-global.screenshadowy = 0
-
-// fade
-fade_alpha = 0
+shadow_time = 0
+shadow_period = seconds(1)
 
 // drawing hp bar
-global.gauge_count = 0
-global.gauge_target = noone
-global.gauge_alpha = 0
+gauge_target = noone
+gauge_target_name = ""
+gauge_target_ratio = 0
+gauge_time = 0
+gauge_period = seconds(2)
+gauge_alpha = 0
+gauge_show_time = 0
+gauge_show_period = seconds(1.26)
 
-global.gauge_caption = ""
-global.gauge_hp = 0
-global.gauge_hp_max = 0
-
-gaugetexy = 0
-gaugerots = 0
+gauge_texloop_y = 0
+gauge_texloop_y_max = 8
+gauge_texloop_time = 0
+gauge_texloop_period = seconds(2 - global.stage * 0.1)
+gauge_rots = 0

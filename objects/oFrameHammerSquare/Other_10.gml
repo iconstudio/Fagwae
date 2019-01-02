@@ -1,5 +1,4 @@
 /// @description Dying
-
 with turret {
   hp = 0
   parent = noone

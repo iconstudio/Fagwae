@@ -1,18 +1,15 @@
 /// @description Collide with other bullets
-
 if other.parent == id {
 	exit
-} else if other.parent != noone {
-	var parent_hiearach = other.parent, parent_previous = other.parent
+} else if instance_exists(other.parent) {
+	var parent_hiearach = other.parent
 	while true {
-		parent_previous = parent_hiearach
-		parent_hiearach = parent_hiearach.parent
-		if parent_hiearach == noone {
+		if !instance_exists(parent_hiearach)
 			break
-		}
+		else if parent_hiearach == id
+			exit
+		parent_hiearach = parent_hiearach.parent
 	}
-	if parent_previous == id
-		exit
 }
 
 with other {

@@ -21,8 +21,8 @@
         "cdd5157e-c0f8-4065-8ba5-f3811a36d61e",
         "7470aa4b-a705-4e78-8bf6-fbac0448654c",
         "160f4dc0-6100-46d1-bbad-56612afcbaf2",
-        "eb58f935-5bca-4f69-b0da-6973bff7f340",
-        "4ceb5305-7f2d-4c5a-b71a-0cac4586b244"
+        "4ceb5305-7f2d-4c5a-b71a-0cac4586b244",
+        "eb58f935-5bca-4f69-b0da-6973bff7f340"
     ],
     "filterType": "GMScript",
     "folderName": "Stage",

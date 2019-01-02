@@ -4,7 +4,6 @@
 /// @param y { real }
 /// @param caption { string }
 /// @param type { integer }
-
 with instance_create_layer(argument0, argument1, "UI", oFlashString) {
 	ncaption = argument2
 	type_create = argument3

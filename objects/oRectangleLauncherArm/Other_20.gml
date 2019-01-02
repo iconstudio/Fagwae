@@ -1,5 +1,4 @@
 /// @description Launching
-
 direction = image_angle
 speed = 0.5
 gravity_direction = image_angle

@@ -21,8 +21,8 @@ if global.screenlock {
 		camera_set_view_pos(view_camera, hspeed, vspeed)
 		xo = xn
 		yo = yn
-		xn = hspeed
-		yn = vspeed
+		xn = hspeed * 0.7
+		yn = vspeed * 0.7
 
 		if fxaa_on {
 			shader_set(shaderFXAA)

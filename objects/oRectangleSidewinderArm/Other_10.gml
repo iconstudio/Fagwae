@@ -1,5 +1,4 @@
 /// @description Dying
-
-enemy_explode(3, 48, 2, 2)
+enemy_explode(3, 24, 2, 2)
 
 instance_destroy()

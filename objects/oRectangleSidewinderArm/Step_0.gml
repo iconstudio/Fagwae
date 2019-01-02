@@ -1,7 +1,5 @@
-/// @description 
-
 if homing {
-	home_angle += get_rotation_next(home_angle, point_direction(x, y, global.px, global.py), 3)
+	home_angle += get_rotation_next(home_angle, point_direction(x, y, global.px, global.py), 1)
 
 	if global.extreme
 		direction = home_angle

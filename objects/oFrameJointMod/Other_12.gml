@@ -1,5 +1,4 @@
-/// @description Update
-
+/// @description Updating
 event_inherited()
 
 if !instance_exists(parent) {

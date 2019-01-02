@@ -1,5 +1,4 @@
 /// @description Drawing Score
-
 if score_alpha > 0 {
 	var _param = 0, _brite = 1
 	with oStageParent {
@@ -11,10 +10,10 @@ if score_alpha > 0 {
 	draw_set_halign(0)
 	draw_set_valign(1)
 	draw_set_color(make_color_hsv(color_parse(_param - 25), 172, 210 * _brite))
-	var sstr = string(round(global.vscore))
+	var sstr = string(round(vscore))
 	var slen = string_length(sstr)
-	var sx = (screen_width - string_width(sstr) * 6.5) * 0.5
-	var sy = screen_height * 0.5
+	var sx = (view_width - string_width(sstr) * 6.5) * 0.5
+	var sy = view_height * 0.5
 	var tx = 0
 
 	for (var i = 1; i <= slen; ++i) {
@@ -26,4 +25,3 @@ if score_alpha > 0 {
 
 	draw_set_alpha(1)
 }
-

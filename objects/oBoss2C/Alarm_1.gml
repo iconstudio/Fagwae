@@ -1,5 +1,4 @@
 /// @description Pattern 2
-
 if dead or pattern != 2
 	exit
 

@@ -1,5 +1,4 @@
 /// @description Pattern 4
-
 if dead or pattern != 4 {
 	pattern04_ended = false
 	exit

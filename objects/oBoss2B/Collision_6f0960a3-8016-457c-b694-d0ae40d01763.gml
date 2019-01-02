@@ -1,5 +1,4 @@
 /// @description Reflecting
-
 if other.pow <= 0 or dead
 	exit
 

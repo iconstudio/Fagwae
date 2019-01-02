@@ -1,5 +1,3 @@
-/// @description 
-
 draw_set_color($ffffff)
 draw_set_halign(1)
 draw_set_valign(1)

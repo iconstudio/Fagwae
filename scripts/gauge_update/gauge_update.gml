@@ -1,18 +1,14 @@
 /// @description gauge_update(id)
 /// @function gauge_update
 /// @param id { instance }
-
-with (argument0) {
+with argument0 {
 	if !instance_exists(parent) {
-		global.gauge_count = min(120, hp_max)
-		global.gauge_target = id
-
-		global.gauge_caption = name
-		global.gauge_hp = hp
-		global.gauge_hp_max = hp_max
+		with oGameGlobal {
+			gauge_target = other.id
+			gauge_time = min(gauge_period, other.hp_max)
+			gauge_show_time = gauge_show_period
+		}
 	} else {
 		gauge_update(parent)
 	}
 }
-
-global.gauge_alpha = 1

@@ -1,8 +1,9 @@
 /// @description Initialization
-
 event_inherited()
 
 // stat
+shot_damage = 3
+shot_period = seconds(0.05)
 hp_max = 2
 shield = instance_create_layer(x, y, "Player_Shield", oPlayerShield)
 shield.parent = id

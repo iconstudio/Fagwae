@@ -1,5 +1,4 @@
 /// @description Shooting side
-
 if global.extreme {
 	enemy_shot(x, y, speed * 0.25 + 1, direction - 45)
 	enemy_shot(x, y, speed * 0.25 + 1, direction - 15)
@@ -11,4 +10,4 @@ if global.extreme {
 }
 enemy_play_shot()
 
-alarm[0] = delay
+alarm[0] = shot_period

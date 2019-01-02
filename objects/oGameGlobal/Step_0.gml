@@ -25,56 +25,61 @@ if global.pause_counter > 0 and !global.screenlock {
 }
 
 if global.screenlock {
-	if fade_alpha < 1
-		fade_alpha += 0.1
+	if pause_alpha < 1
+		pause_alpha += 0.1
 	else
-		fade_alpha = 1
+		pause_alpha = 1
 	exit
 } else {
-	if fade_alpha > 0
-		fade_alpha -= 0.1
+	if pause_alpha > 0
+		pause_alpha -= 0.1
 	else
-		fade_alpha = 0
+		pause_alpha = 0
 }
 
-if global.screenshadowy > 0 {
-	shadow_alpha += (1 - shadow_alpha) * 0.333
-	global.screenshadowy -= global.screenshadowy * 0.5
-} else if shadow_alpha != 0 {
-	shadow_alpha -= shadow_alpha * 0.25
-}
-
-if player_counter > 0 {
-	player_counter--
+if shadow_time > 0 {
+	shadow_alpha = ease_out_quintic(shadow_time / shadow_period)
+	shadow_time--
 } else {
-	if player_counter == 0 {
-		player_counter = -1
+	shadow_alpha = 0
+}
+
+if player_appear_time > 0 {
+	player_appear_time--
+} else {
+	if player_appear_time == 0 {
+		player_appear_time = -1
 		event_user(0)
 	}
 }
 
-if instance_exists(oPlayerParent) {
-	ipush -= ipush / 7
+if !instance_exists(oPlayerParent) {
+	if ui_appear_time > 0
+		ui_appear_time--
 } else {
-	if ipush < 1
-		ipush += 0.004 + ipush * 0.1
+	if ui_appear_time < ui_appear_period
+		ui_appear_time++
 	else
-		ipush = 1
+		ui_appear_time = ui_appear_period
 }
+if ui_appear_time > 0
+	ui_alpha = ease_out_elastic(ui_appear_time / ui_appear_period)
+else
+	ui_alpha = 1
 
-gaugetexy += 0.5
-if gaugetexy >= 8
-	gaugetexy -= 8
-if global.gauge_count > 0
-	global.gauge_count--
-else if global.gauge_alpha != 0
-	global.gauge_alpha -= global.gauge_alpha / 6
-
-if global.gauge_alpha < 0.01 {
-	global.gauge_alpha = 0
-	global.gauge_target = noone
+if gauge_time > 0 {
+	gauge_time--
+	gauge_alpha = 1
+} else {
+	if gauge_show_time > 0
+		gauge_alpha = ease_out_expo(gauge_show_time-- / gauge_show_period)
+	else
+		gauge_alpha = 0
 }
-gaugerots = (gaugerots + 3) mod 360
+gauge_texloop_y = gauge_texloop_time / gauge_texloop_period * gauge_texloop_y_max
+if ++gauge_texloop_time > gauge_texloop_period
+	gauge_texloop_time = 0
+gauge_rots = (gauge_rots + 3) mod 360
 
 global.player_fever_laser = max(0, min(100, global.player_fever_laser))
 global.player_fever_shield = max(0, min(100, global.player_fever_shield))

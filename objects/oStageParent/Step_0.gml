@@ -4,6 +4,9 @@ if brightness < 1
 else
 	brightness = 1
 
+if !global.playeralive
+	exit
+
 if prohibit_count > 0 {
 	for (var i = 0; i < prohibit_count; ++i) {
 		if instance_exists(prohibit_push[i]) {

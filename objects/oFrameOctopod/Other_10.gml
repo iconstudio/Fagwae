@@ -1,9 +1,8 @@
 /// @description Dying
-
 for (var i = 0; i < arm_number; ++i) {
 	if instance_exists(arm_instances[i]) {
 		with arm_instances[i] {
-			enemy_explode(2 * image_xscale + 1, 10 * image_xscale + 4, 2 + irandom(4) * image_xscale, 0)
+			enemy_explode(1, 6 * image_xscale + 2, 1 + irandom(4) * image_xscale, 1)
 			
 			hspeed = random(4) - 2
 			vspeed = -random(4) - 5
@@ -17,7 +16,7 @@ for (var i = 0; i < arm_number; ++i) {
 		var arm_second = arm_instances[i].arm_instance
 		if instance_exists(arm_second) {
 			with arm_second {
-				enemy_explode(2 * image_xscale + 1, 10 * image_xscale + 4, 2 + irandom(2) * image_xscale, 0)
+				enemy_explode(1, 4 * image_xscale + 2, irandom(2) * image_xscale, 0)
 
 				hspeed = random(4) - 2
 				vspeed = -random(4) - 5

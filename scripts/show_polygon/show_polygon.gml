@@ -6,7 +6,6 @@
 /// @param size { real }
 /// @param color { real }
 /// @param rotated { boolean }
-
 if argument3 <= 0 or argument4 <= 0
 	exit
 
