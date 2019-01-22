@@ -24,13 +24,16 @@ deco_height = 300
 // Initializing stage
 script_stage3_ready()
 
+/*
 for (var j = 0; j < 7; ++j) {
 	for (var i = 0; i < 8; ++i)
 		area_enemy_push(0, enemy_triangle_1, 0, 266 + i * 10 + random(20), -15 - random(10))
 	area_delay_push(random_range(seconds(0.01), seconds(0.1)))
 }
 area_delay_push(seconds(1))
-area_enemy_push(seconds(2), enemy_square_h, 0, 270, 100)
-area_enemy_push(seconds(2), enemy_square_h, 0, 270, 100)
-area_enemy_push(seconds(2), enemy_square_h, 0, 270, 100)
-area_enemy_push(seconds(2), enemy_octopod_1, 0, 270, 100)
+*/
+
+area_enemy_push(seconds(2), enemy_crab_1, LEFT, 0, 500)
+area_enemy_push(seconds(2), enemy_crab_1, RIGHT, 0, 500)
+area_enemy_push(seconds(2), enemy_crab_1, LEFT, 0, 500)
+//area_enemy_push(seconds(2), enemy_octopod_1, 0, 270, 100)

@@ -46,14 +46,14 @@ enemy_register(enemy_square_5, oFrameDualTurret, "STEEL FRAME", sFrameSquare, sF
 enemy_register(enemy_square_h, oFrameHammerSquare, "STEEL FRAME", sFrameSquare, sFrameSquare, 
 38, 500, 2, 0, 0, 0, 0)
 
-enemy_register(enemy_crab_1, noone, "ABOMINATION", sFrameCore, sFrameCore, 
-60, 600, 3, 0, 0, 0, 0)
+enemy_register(enemy_crab_1, oFrameCrab, "ABOMINATION", sFrameCrabBody, sFrameCrabBody, 
+50, 700, 3, 0, 0, 0, 0)
 
-enemy_register(enemy_crab_2, noone, "ABOMINATION", sFrameCore, sFrameCore, 
-60, 600, 3, 0, 0, 0, 0)
+enemy_register(enemy_crab_2, oFrameCrab, "ABOMINATION", sFrameCrabBody, sFrameCrabBody, 
+60, 760, 3, 0, 0, 0, 0)
 
-enemy_register(enemy_crab_3, noone, "ABOMINATION", sFrameCore, sFrameCore, 
-60, 600, 3, 0, 0, 0, 0)
+enemy_register(enemy_crab_3, oFrameCrab, "ABOMINATION", sFrameCrabBody, sFrameCrabBody, 
+60, 710, 3, 0, 0, 0, 0)
 
 enemy_register(enemy_octopod_1, oFrameOctopod, "ABOMINATION", sFrameCore, sFrameCore, 
 80, 700, 4, 0, 0, 0, 0)

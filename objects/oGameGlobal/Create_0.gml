@@ -9,7 +9,8 @@ alarm[3] = seconds(1.5)
 player_appear_time = seconds(1)
 player_isfirst = true
 
-instance_create_layer(0, 0, "Backend", oStageShape)
+area_begin = oStageShape
+instance_create_layer(0, 0, "Backend", area_begin)
 
 // achievements
 event_user(1)

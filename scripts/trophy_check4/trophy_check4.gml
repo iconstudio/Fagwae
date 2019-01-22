@@ -8,7 +8,7 @@ if global.achievement_cleared[argument0]
 if !global.achievement_getter[argument0]
 	return false
 
-if score >= 500000 {
+if global.playerscore >= 500000 {
 	return true
 }
 

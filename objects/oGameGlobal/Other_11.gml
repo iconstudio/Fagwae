@@ -4,7 +4,7 @@ global.framekill_local = 0
 for (var i = 0; i < 8; ++i)
 	global.achievement_getter[i] = false
 
-score = 0
+global.playerscore = 0
 global.playeralive = false
 global.score_combo = 0
 

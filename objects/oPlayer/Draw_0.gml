@@ -1,8 +1,19 @@
 /// @description Drawing player
-
 var dx = round(x)
 var dy = round(y)
 var dcol, i
+
+if !surface_exists(out_surf)
+	event_user(2)
+
+draw_transform_set_translation(out_x + 1, out_y + 1, 0)
+surface_set_target(out_surf)
+draw_clear_alpha(background_color, 0)
+draw_sprite_ext(sprite_index, 2, 0, 0, 1, 1, angle_player, $ffffff, 1)
+draw_sprite_ext(sPlayerArm, 2, out_ax, 3 + out_ay, 1, 1, angle_arm + angle_player - cangle, $ffffff, 1)
+draw_sprite_ext(sPlayerArm, 2, -out_ax, 3 - out_ay, 1, 1, angle_arm + angle_player + cangle, $ffffff, 1)
+surface_reset_target()
+draw_transform_set_identity()
 
 if hp > 0 {
 	dcol = make_color_hsv(hp * 25 - 15, 216, 255)

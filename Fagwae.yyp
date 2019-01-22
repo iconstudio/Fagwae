@@ -1879,6 +1879,14 @@
             }
         },
         {
+            "Key": "875f9ea0-d0f8-461b-9680-ed445f08587d",
+            "Value": {
+                "id": "dde3f771-36d9-4944-a27b-07d06468b1fd",
+                "resourcePath": "objects\\oBacrkgoundDebris\\oBacrkgoundDebris.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "87ce0760-701d-4483-879b-8e47ccd845b4",
             "Value": {
                 "id": "4df98d25-8c3a-47f3-93b0-ea9d8d137fb4",
@@ -2743,6 +2751,14 @@
             }
         },
         {
+            "Key": "c163fbda-da1d-4e36-97c5-60e624aac3df",
+            "Value": {
+                "id": "dd190846-886e-4901-9547-6dab0c7d8393",
+                "resourcePath": "scripts\\score_add\\score_add.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "c263fc32-5ccf-41dc-a4ac-878fcb9541b4",
             "Value": {
                 "id": "67bc9f01-e475-49f9-b39e-70a2654e693b",
@@ -2924,6 +2940,14 @@
                 "id": "cde561dd-1cb5-43ea-8060-e8c13c564329",
                 "resourcePath": "sounds\\musicStage1\\musicStage1.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "d0ef3150-ea84-4a87-88a8-8413357b539b",
+            "Value": {
+                "id": "b74c169e-11d4-4787-81a3-ff2cee14b000",
+                "resourcePath": "views\\d0ef3150-ea84-4a87-88a8-8413357b539b.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -3785,6 +3809,7 @@
         "0e37f3cc-5ef3-474a-9748-73604cae136b",
         "1fa8c9c6-bc1f-43d2-8fcc-606c4ed98d1e",
         "a4e60a2d-c053-4fc4-9b05-4d9adb994e29",
+        "c163fbda-da1d-4e36-97c5-60e624aac3df",
         "b9970846-3a22-4d64-8cb8-351360b8e826",
         "417c8284-8f94-463c-a5cf-b8be1ed7b9fe",
         "cdd27141-acc6-420a-90b3-f87f86176dbb",

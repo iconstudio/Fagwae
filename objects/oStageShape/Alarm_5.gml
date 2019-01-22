@@ -20,6 +20,7 @@ if deco_count > deco_min {
 			with instance_create_layer(x, y, "Effect", oParticleFlameGenerator) {
 				direction = random(360)
 				speed = 4 + random(8)
+				motion_add(90, 1 + random(1))
 			}
 		}
 	}

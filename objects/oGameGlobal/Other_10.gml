@@ -2,7 +2,7 @@
 if global.playeralive
 	exit
 
-score = 0
+global.playerscore = 0
 global.playeralive = true
 global.px = room_width * 0.5
 global.py = room_height - 100

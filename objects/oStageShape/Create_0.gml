@@ -20,10 +20,9 @@ deco_count = 3
 deco_mode = 0
 deco_fail = false
 deco_fail_complete = false
-deco_shake_period = seconds(0.1)
-deco_fail_period = seconds(0.5)
+deco_shake_period = seconds(0.4)
+deco_fail_period = seconds(1)
 
-global.extreme = true
 // Initializing stage
 global.__st2_line = 0
 var jako_delay = seconds(0.7)
@@ -32,7 +31,6 @@ if global.extreme
 	octo_type = enemy_octagon_4
 
 script_stage1_ready()
-/*
 area_enemy_push(jako_delay, enemy_octagon_5, pathJakoFormationLeft, 90, -48)
 area_enemy_push(jako_delay, enemy_octagon_5, pathJakoFormationLeft, 120, -48)
 area_enemy_push(jako_delay, enemy_octagon_5, pathJakoFormationLeft, 150, -48)
@@ -75,7 +73,7 @@ var cframe_nx = 0
 for (var j = 0; j < 14; ++j) { // 14 rows
 	cframe_factor = sign(cframe_speed)
 	for (var i = 0; i < 6; ++i) { // 6 columns
-		if ++cframe_count > 2 { // includes 0, 1 2
+		if ++cframe_count > 2 { // includes 1, 2
 			cframe_count = 0
 			continue
 		}
@@ -94,7 +92,6 @@ for (var j = 0; j < 14; ++j) { // 14 rows
 	cframe_speed = -cframe_speed
 	cframe_count--
 }
-
 area_delay_push(seconds(6))
 
 area_script_push(seconds(0.2), script_boss_apear, 0, 0, 0)
@@ -173,8 +170,8 @@ area_script_push(seconds(0.2), script_boss_apear, 0, 0, 0)
 area_music_push(seconds(0.5), musicBoss)
 area_enemy_push(0, enemy_boss_2, 0, 270, -128)
 area_script_push(0, script_stage_clear, 0, 0, 0)
-//*/
+
 area_delay_push(seconds(2))
-area_script_push(seconds(1), script_shape_disappear, 0, 0, 0)
-area_delay_push(seconds(3))
+area_script_push(0, script_shape_disappear, 0, 0, 0)
+area_delay_push(seconds(6))
 area_script_push(0, area_goto_next, 0, 0, 0)

@@ -6,14 +6,14 @@ if score_alpha > 0 {
 		_brite = brightness
 	}
 
-	draw_set_alpha(max(score_alpha, 0))
+	draw_set_alpha(score_show_time / score_show_period)
 	draw_set_halign(0)
 	draw_set_valign(1)
 	draw_set_color(make_color_hsv(color_parse(_param - 25), 172, 210 * _brite))
-	var sstr = string(round(vscore))
+	var sstr = string(round(score_virtual))
 	var slen = string_length(sstr)
-	var sx = (view_width - string_width(sstr) * 6.5) * 0.5
-	var sy = view_height * 0.5
+	var sx = (room_width - string_width(sstr) * 6.5) * 0.5
+	var sy = room_height * 0.5
 	var tx = 0
 
 	for (var i = 1; i <= slen; ++i) {

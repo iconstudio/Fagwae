@@ -1,5 +1,4 @@
 /// @description Update
-
 if invincible > 0 {
 	if !instance_exists(oPlayerShield) { 
 		shield = instance_create_layer(x, y, "Player_Shield", oPlayerShield)

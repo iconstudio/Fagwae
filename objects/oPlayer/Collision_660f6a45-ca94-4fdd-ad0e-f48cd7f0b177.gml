@@ -5,7 +5,7 @@ if hp < hp_max {
 	show_flashstring(x, y, string(hp), 3)
 } else {
 	var ascore = 3000 + global.extreme * 3000
-	score += ascore
+	global.playerscore += ascore
 
 	show_flashstring(x, y, "+" + string(ascore), 2)
 }

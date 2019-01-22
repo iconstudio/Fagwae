@@ -1,5 +1,3 @@
-/// @description 
-
 if blockable {
 	if x < bleft {
 		x = bleft

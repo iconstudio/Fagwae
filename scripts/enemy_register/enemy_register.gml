@@ -1,4 +1,4 @@
-/// @description enemy_register(type, object, name, sprite_normal, sprite_extreme, hp, score, score_loot, rotation, polygon_number, color_normal, color_extreme)
+/// @description enemy_register(type, object, name, sprite_normal, sprite_extreme, hp, global.playerscore, score_loot, rotation, polygon_number, color_normal, color_extreme)
 /// @function enemy_register
 /// @param type { string }
 /// @param object { object }

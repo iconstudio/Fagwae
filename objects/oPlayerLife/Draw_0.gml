@@ -1,5 +1,4 @@
 /// @description Draw borderlines and sprite
-
 if !surface_exists(bsurf)
 	event_user(0)
 

@@ -25,9 +25,9 @@ if !invincible {
 	}
 
 	if global.extreme
-		score += ceil(score_loot * 1.1)
+		global.playerscore += ceil(score_loot * 1.1)
 	else
-		score += score_loot
+		global.playerscore += score_loot
 }
 
 event_user(15)

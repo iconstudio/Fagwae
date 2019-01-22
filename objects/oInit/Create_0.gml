@@ -104,6 +104,7 @@ dmode = 0
 dalpha = 0
 
 // game
+global.playerscore = 0
 global.extreme = false
 global.stage = 0
 global.px = 0

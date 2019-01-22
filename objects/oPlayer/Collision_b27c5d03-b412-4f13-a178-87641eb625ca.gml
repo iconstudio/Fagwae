@@ -1,6 +1,6 @@
 /// @description Getting a score
 
-score += 100
+global.playerscore += 100
 if ++global.score_combo mod 10 == 0 {
 	show_flashstring(x, y, "+" + string(floor(global.score_combo * 0.1)), 3)
 } else {

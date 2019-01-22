@@ -1,5 +1,3 @@
-/// @description 
-
 if surface_exists(bsurf)
 	surface_free(bsurf)
 
