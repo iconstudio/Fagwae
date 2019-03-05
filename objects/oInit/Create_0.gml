@@ -1,6 +1,6 @@
 /// @description Initialize Basic Data, Back-End
 // external
-#macro file_header $ae
+#macro file_header $ad
 global.profilefile = "profile.dat"
 global.network = true
 profile_clear()
@@ -98,6 +98,9 @@ global.__devicemy = 0
 #macro mouse_gui_x global.__devicemx
 #macro mouse_gui_y global.__devicemy
 global.main_intro = false
+device_mouse_dbclick_enable(false)
+if global.flag_is_mobile
+	keyboard_set_map(vk_backspace, vk_escape)
 
 // local drawing
 dmode = 0
@@ -110,18 +113,14 @@ global.stage = 0
 global.px = 0
 global.py = 0
 global.pause_counter = 0
-
 #macro area_vspeed 0.5625 * 4
-
 event_user(0)
 global.enemy_dictionary = ds_map_create()
 enemy_init_shape()
 enemy_init_frame()
 enemy_init_arm()
-
 enemy_register(enemy_rapid_1, oRapid, "RAPID PULSER", sRapidNormal, sRapidExtreme, 
 4, 500, 1, 0, 0, 0, 0)
-
 enemy_register(enemy_rapid_2, oConfuser, "RAPID PULSER", sRapidNormal, sRapidExtreme, 
 10, 600, 1, 0, 0, 0, 0)
 
@@ -151,10 +150,11 @@ switch os_browser {
 		audio_channel_num(16)
 		break
 }
-audio_group_load(audiogroup_game)
 
 audio_loaded = false
-if !audio_group_is_loaded(audiogroup_game)
+if audio_group_is_loaded(audiogroup_game) {
   audio_loaded = true
-else
+	alarm[0] = 1
+} else {
   audio_group_load(audiogroup_game)
+}

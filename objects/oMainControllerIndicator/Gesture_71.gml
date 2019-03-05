@@ -1,0 +1,1 @@
+event_perform(ev_gesture, ev_global_gesture_tap)

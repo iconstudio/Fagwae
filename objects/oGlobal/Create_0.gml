@@ -49,16 +49,6 @@ shake_meter = 0
 shake_time = 0
 shake_period = seconds(1)
 
-// UI
-global.ui_top = noone
-ui_listchecker = ds_list_create()
-ui_listbox_copy = ds_priority_create()
-global.ui_listbox = ds_priority_create()
-
-ui_node_init()
-ui_width = screen_width
-ui_height = screen_height
-
 // Push Notification
 callto = noone
 construct = array_create(3)
