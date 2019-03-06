@@ -9,20 +9,19 @@ instance_create_layer(room_width * 0.5, room_height * 0.8, "UI", oMainStartButto
 main_option_create(sIconOptionMusic, global.setting_music > 0, option_cstartx, 8, script_callback_toggle_music, script_callback_shortcut_music, io_check_pressed_down)
 main_option_create(sIconOptionSFX, global.setting_sfx > 0, option_cstartx + option_gab, 8, script_callback_toggle_sfx, script_callback_shortcut_sfx, io_check_pressed_right)
 main_option_create(sIconOptionGraphic, global.setting_effect > 0, option_cstartx + option_gab * 2, 8, script_callback_toggle_effect, script_callback_shortcut_effect, io_check_pressed_left)
-main_option_create(sIconOptionProfile, 0, room_width - option_cstartx - option_gab + 16, 8, -1, script_callback_shortcut_profile, io_check_pressed_up)
+main_option_create(sIconOptionProfile, 0, room_width - option_cstartx - option_gab + 16, 8, script_callback_profile, script_callback_shortcut_profile, io_check_pressed_up)
 main_option_create(sIconOptionHelp, 0, option_cstartx, room_height - option_gab + 8, -1, script_callback_shortcut_help, io_check_pressed_select)
 instance_create_layer(room_width - option_cstartx - option_gab + 16, room_height - option_gab + 8, "UI", oMainControllerIndicator)
 
 reversing_time = 0
-reversing_period = seconds(0.5)
+reversing_period = seconds(1)
 
 push = array_create(3, 1)
 flash = array_create(3, 0)
-menu_auto = seconds(0.5)
 MODE_FADEOUT = 1
 MODE_GAME = 2
-MODE_STATISTICS = 3
-MODE_ACHIEVEMENTS = 4
+MODE_HELP = 3
+MODE_PROFILE = 4
 MODE_EXIT = 5
 MODE_RESET = 6
 
@@ -45,4 +44,4 @@ title_pos_bleft = room_width * 0.5 - 230
 title_pos_bright = room_width * 0.5 + 230
 title_pos_top = room_height * 0.5 - 32
 title_pos_bottom = room_height * 0.5 + 72
-background_color = 0
+background_color = $0
