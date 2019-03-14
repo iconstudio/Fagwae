@@ -1,4 +1,4 @@
-/// @description Processing 
+/// @description Processing
 
 hp -= hurt
 if hp > 0 {

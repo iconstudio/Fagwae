@@ -7,4 +7,4 @@ else
 	shot_period = seconds(1.5)
 alarm[0] = seconds(2)
 
-invincible = true
+invincible = INVINCIBLE_PARENTAL

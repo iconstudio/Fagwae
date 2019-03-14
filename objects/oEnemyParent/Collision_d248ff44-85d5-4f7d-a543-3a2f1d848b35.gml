@@ -9,13 +9,13 @@ with other
 if untargetable
 	exit
 
-if !invincible {
-	hurt = other.pow
-	var target = parent, targetprev
-	while instance_exists(target) {
-		targetprev = target
-		target = target.parent
-		if !instance_exists(target) and instance_exists(targetprev) {
+hurt = other.pow
+if invincible < INVINCIBLE_HARD {
+	var hierachy = parent, targetprev
+	while instance_exists(hierachy) {
+		targetprev = hierachy
+		hierachy = hierachy.parent
+		if !instance_exists(hierachy) and instance_exists(targetprev) {
 			with targetprev {
 				hurt = other.hurt * 0.333
 				event_user(15)
@@ -23,15 +23,17 @@ if !invincible {
 			break
 		}
 	}
+}
 
+if invincible < INVINCIBLE_FULL {
 	if global.extreme
 		global.playerscore += ceil(score_loot * 1.1)
 	else
 		global.playerscore += score_loot
 }
+if invincible > 0
+	hurt = 0
 
 event_user(15)
-
 gauge_update(id)
-
 audio_play_sound(soundHitPlayer, 20, false)

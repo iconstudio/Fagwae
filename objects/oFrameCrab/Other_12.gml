@@ -1,7 +1,7 @@
 /// @description Update
 event_inherited()
 
-var _speed = speed, _direction = direction
+motion_planning_process()
 for (var i = 0; i < arm_number; ++i) {
 	if instance_exists(arm_instances[i]) {
 		speed = arm_distance[i]
@@ -12,6 +12,4 @@ for (var i = 0; i < arm_number; ++i) {
 	}
 }
 
-speed = _speed
-direction = _direction
-image_angle = direction
+speed = 0

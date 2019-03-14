@@ -17,7 +17,6 @@ if global.pause_counter > 0 and !global.screenlock {
 	global.screenlock = true
 	instance_deactivate_all(true)
 	instance_activate_object(oIgnore)
-	instance_activate_object(oUIComponent)
 } else if global.pause_counter <= 0 and global.screenlock {
 	global.pause_counter = 0
 	global.screenlock = false

@@ -14,16 +14,18 @@ if argument_count >= 5 {
 		ay = argument[5]
 }
 
-if global.setting_effect && argument[0] > 0
-	screen_shake(argument[0])
+if global.setting_effect {
+	if argument[0] > 0
+		screen_shake(argument[0])
 
-if global.setting_effect && argument[1] > 0
-	screen_wave(x, y, argument[1])
+	if argument[1] > 0
+		screen_wave(x, y, argument[1])
 
-repeat argument[2] {
-	with instance_create_layer(x + ax, y + ay, "Effect", oParticleFlameGenerator) {
-		direction = random(360)
-		speed = 8 + random(8)
+	repeat argument[2] {
+		with instance_create_layer(x + ax, y + ay, "Effect", oParticleFlameGenerator) {
+			direction = random(360)
+			speed = 8 + random(8)
+		}
 	}
 }
 

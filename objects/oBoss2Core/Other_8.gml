@@ -1,5 +1,3 @@
-/// @description 
-
 if path_last == pathBoss2_0 { // pattern 0, 1
 	pattern = 2
 	pattern_opened = false

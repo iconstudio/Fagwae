@@ -29,7 +29,7 @@
         "5224dcfc-dbe3-4554-8016-cf34aceaa449"
     ],
     "filterType": "GMSprite",
-    "folderName": "UI",
+    "folderName": "System",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

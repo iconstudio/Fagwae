@@ -1,6 +1,4 @@
 /// @description Initialization
-camera_projection_identity()
-
 // bgm
 alarm[3] = seconds(1.5)
 
@@ -9,7 +7,7 @@ alarm[3] = seconds(1.5)
 player_appear_time = seconds(1)
 player_isfirst = true
 
-area_begin = oStageShape
+area_begin = oStageFrame
 instance_create_layer(0, 0, "Backend", area_begin)
 
 // achievements

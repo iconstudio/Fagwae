@@ -6,7 +6,7 @@
 /// @param direction { real }
 /// @param [type] { object }
 
-if !global.playeralive or y < -sprite_yoffset or y > room_height + sprite_height
+if !global.playeralive or y < -sprite_height or y > room_height + sprite_yoffset
 	return noone
 
 var type = oEnemyBullet
@@ -29,6 +29,7 @@ with instance_create_layer(argument[0], argument[1], "Bullet", type) {
 			image_index = other.image_index
 		}
 	}
+	parent = other.id
 
 	return id
 }

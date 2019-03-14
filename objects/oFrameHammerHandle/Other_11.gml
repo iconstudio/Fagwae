@@ -6,4 +6,4 @@ head.depth -= 1
 head.parent = id
 
 rotation_step *= type_create
-invincible = true
+invincible = INVINCIBLE_PARENTAL
