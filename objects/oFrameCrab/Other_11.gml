@@ -69,7 +69,7 @@ x_target = [x, x]
 x_border = 140
 if type_create == RIGHT {
 	x_target[0] = room_width - x_border
-	x_target[1] = room_width - x_border + random_range(-20, 20)
+	x_target[1] = room_width - x_border + random_range(-2, 2) * 10
 	x = room_width + x_border
 } else if type_create == LEFT {
 	x_target[0] = x_border
@@ -80,9 +80,9 @@ image_angle = 90
 
 motion_planning_init(enemy_callback_crab_roomout)
 motion_planning_add(x, y, 0)
-motion_planning_add(x_target[0], y - 30, seconds(1.5))
+motion_planning_add(x_target[0], y - 30, seconds(0.8))
 motion_planning_add(x_target[0], y - 30, seconds(4))
-motion_planning_add(x_target[1], max(0, y - 100), seconds(1.2))
+motion_planning_add(x_target[1], max(0, y - 100), seconds(1))
 motion_planning_add(x_target[1], -64, seconds(4))
 
 shot_direction = point_direction(x, y, global.px, global.py)
