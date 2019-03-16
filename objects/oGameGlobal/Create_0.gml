@@ -7,7 +7,9 @@ alarm[3] = seconds(1.5)
 player_appear_time = seconds(1)
 player_isfirst = true
 
-area_begin = oStageFrame
+global.extreme = true
+global.stage = 1
+area_begin = oStageShape
 instance_create_layer(0, 0, "Backend", area_begin)
 
 // achievements

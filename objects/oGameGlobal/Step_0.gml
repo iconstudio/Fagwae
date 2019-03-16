@@ -62,7 +62,7 @@ if !instance_exists(oPlayerParent) {
 		ui_appear_time = ui_appear_period
 }
 if ui_appear_time > 0
-	ui_alpha = ease_out_elastic(ui_appear_time / ui_appear_period)
+	ui_alpha = ease_in_out_back(ui_appear_time / ui_appear_period)
 else
 	ui_alpha = 1
 

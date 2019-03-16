@@ -1,7 +1,5 @@
-/// @description 
-
-brightness = 108
-if pow != 0 {
-	pow = 0;
-	alarm[1] = 2
+brightness_time = 0
+/*if pow != 0 {
+	pow = 0
+	alarm[1] = 1
 }

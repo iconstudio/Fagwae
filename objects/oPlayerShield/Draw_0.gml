@@ -1,5 +1,3 @@
-/// @description 
-
 var draw_size = 23
 with parent
 	draw_size = min(23, invincible * 0.5)

@@ -1,6 +1,7 @@
 /// @description Creation
 fade_mode = 0
 
+invincible = INVINCIBLE_PARENTAL
 image_xscale = 0
 image_yscale = 0
 

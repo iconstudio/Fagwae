@@ -9,4 +9,4 @@ if global.extreme {
 }
 enemy_play_shot()
 
-alarm[0] = max(14, 23 - global.stage / 2)
+alarm[0] = max(14, 23 - global.stage * 0.5)

@@ -1,5 +1,4 @@
 /// @description Creation
-
 image_xscale = 15
 image_angle = 90
 

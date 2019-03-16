@@ -1,4 +1,2 @@
-/// @description 
-
-progress += 1
-alarm[0] = 2
+++progress
+alarm[0] = progress_period

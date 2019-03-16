@@ -6,5 +6,5 @@ with bar {
 	image_angle = direction
 	gravity_direction = 270
 	gravity = 0.1
-	invincible = false
+	invincible = INVINCIBLE_NONE
 }

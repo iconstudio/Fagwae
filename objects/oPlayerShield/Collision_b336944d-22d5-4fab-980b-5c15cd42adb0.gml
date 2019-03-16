@@ -1,3 +1,2 @@
 /// @description Give damage to collide enemy
-
-brightness = 108
+brightness_time = 0

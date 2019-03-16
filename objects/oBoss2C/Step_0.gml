@@ -1,5 +1,3 @@
-/// @description 
-
 if pattern_before != pattern {
 	pattern_before = pattern
 	pattern_opened = false

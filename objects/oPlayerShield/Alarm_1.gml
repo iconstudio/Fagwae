@@ -1,3 +1,1 @@
-/// @description 
-
-pow = 2
+pow = 3

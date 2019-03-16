@@ -1,5 +1,3 @@
-/// @description 
-
 draw_self()
 
 if damaged > 0 {

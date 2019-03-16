@@ -12,6 +12,7 @@ if planning_time++ >= planning_period {
 		planning_x = plan[0]
 		planning_y = plan[1]
 		planning_period = plan[2]
+		planning_easer = plan[3]
 		planning_time = 0
 		return 2
 	} else if script_exists(planning_terminator) {
@@ -22,7 +23,7 @@ if planning_time++ >= planning_period {
 }
 
 direction = point_direction(x, y, planning_x, planning_y)
-var ratio = planning_time / planning_period
+var ratio = script_execute(planning_easer, planning_time / planning_period)
 x = lerp(planning_x_begin, planning_x, ratio)
 y = lerp(planning_y_begin, planning_y, ratio)
 

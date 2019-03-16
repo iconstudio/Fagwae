@@ -1,6 +1,4 @@
 /// @description Updating Background
-event_inherited()
-
 square_saturation += 0.1
 background_param += param_speed
 scroll += back_speed

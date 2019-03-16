@@ -1,5 +1,4 @@
 /// @description Processing
-
 hp -= hurt
 if hp > 0 {
 	damaged = 1

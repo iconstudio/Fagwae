@@ -6,3 +6,7 @@ if homing {
 	gravity_direction = home_angle
 	image_angle = direction
 }
+
+if homing_time++ >= homing_period {
+	homing = false
+}

@@ -1,5 +1,4 @@
 /// @description Creation
-
 image_angle = type_create * 45 + 225 + random_range(-30, 30)
 
 image_xscale = 15

@@ -1,11 +1,11 @@
 /// @description Initialization
-
 image_speed = 0
 
 sound_dead = noone
 
 parent = noone
 hurt = 0 // for dying
+hurt_upper_ratio = 1 / 3
 damaged = 0 // for drawing
 
 untargetable = false // cannot be hit

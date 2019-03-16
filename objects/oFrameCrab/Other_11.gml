@@ -73,17 +73,21 @@ if type_create == RIGHT {
 	x = room_width + x_border
 } else if type_create == LEFT {
 	x_target[0] = x_border
-	x_target[1] = x_border + random_range(-20, 20)
+	x_target[1] = x_border + random_range(-2, 2) * 10
 	x = -x_border
 }
 image_angle = 90
 
+var shot_timing = seconds(1.8)
 motion_planning_init(enemy_callback_crab_roomout)
 motion_planning_add(x, y, 0)
-motion_planning_add(x_target[0], y - 30, seconds(0.8))
-motion_planning_add(x_target[0], y - 30, seconds(4))
-motion_planning_add(x_target[1], max(0, y - 100), seconds(1))
-motion_planning_add(x_target[1], -64, seconds(4))
+var y_target = y - 30
+motion_planning_add(x_target[0], y_target, shot_timing, ease_out_cubic)
+//motion_planning_add(x_target[0], y_target, seconds(4))
+repeat 8
+	motion_planning_add(x_target[0] + random_range(-10, 10), y_target + random_range(-6, 6), seconds(0.5), ease_in_out_expo)
+motion_planning_add(x_target[1], max(0, y - 100), seconds(1), ease_out_quartic)
+motion_planning_add(x_target[1], -64, seconds(2), ease_in_cubic)
 
 shot_direction = point_direction(x, y, global.px, global.py)
 shot_speed = 5 + global.stage * 0.25
@@ -91,6 +95,9 @@ shot_count = 0
 shot_progress = 0
 shot_period_multi = seconds(0.14 - global.extreme * 0.08)
 shot_period = seconds(2 - global.extreme * 0.5)
-alarm[0] = seconds(1.5)
+if global.extreme
+	alarm[0] = shot_timing * 0.7
+else
+	alarm[0] = shot_timing
 
 image_angle = 90

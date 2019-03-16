@@ -4,7 +4,7 @@ var sspd
 if global.extreme
 	sspd = 1.2 + shot_count * 0.25 + global.stage * 0.125
 else
-	sspd = 2 + shot_count * 0.5 + global.stage / 6
+	sspd = 2 + shot_count * 0.5 + global.stage * 0.167
 enemy_shot(x, y, sspd, point_direction(x, y, global.px, global.py) + lengthdir_x(28, (shot_count + pangle) * 12.7))
 enemy_shot(x, y, sspd, point_direction(x, y, global.px, global.py) + lengthdir_y(28, (shot_count + pangle) * 21.9))
 enemy_play_shot()

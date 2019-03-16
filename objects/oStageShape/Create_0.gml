@@ -1,6 +1,5 @@
 /// @description Initialization
 event_inherited()
-global.stage = 1
 next = oStageFrame
 
 // background
@@ -137,9 +136,9 @@ area_enemy_push(seconds(2), enemy_octagon_4, 0, 330, -48)
 area_script_push(seconds(1), script_await_dying, 0, 0, 0)
 
 if global.extreme {
+	area_enemy_push(0, enemy_rectangle_2, choose(LEFT, RIGHT), 0, 600 + random(20))
+	area_enemy_push(0, enemy_rectangle_2, choose(LEFT, RIGHT), 0, 500 + random(20))
 	area_enemy_push(0, enemy_rectangle_2, choose(LEFT, RIGHT), 0, 400 + random(20))
-	area_enemy_push(0, enemy_rectangle_2, choose(LEFT, RIGHT), 0, 300 + random(20))
-	area_enemy_push(0, enemy_rectangle_2, choose(LEFT, RIGHT), 0, 200 + random(20))
 	area_script_push(seconds(3), script_await_dying, 0, 0, 0)
 } else {
 	area_enemy_push(seconds(2), enemy_rectangle_1, 0, 112, -48)

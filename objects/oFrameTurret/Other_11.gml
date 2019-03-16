@@ -1,5 +1,4 @@
 /// @description Creation
-
 untargetable = true
 
 if global.extreme // rotating

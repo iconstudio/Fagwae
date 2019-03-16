@@ -1,5 +1,4 @@
 /// @description Drawing body and rifle
-
 draw_self()
 draw_sprite_ext(sFrameTurret, 0, round(x), round(y), image_xscale, image_yscale, shot_direction, $ffffff, image_alpha)
 

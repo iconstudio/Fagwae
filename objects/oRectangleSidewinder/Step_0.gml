@@ -13,7 +13,7 @@ if moving_mode == 0 {
 	pangle += 2
 } else if moving_mode == 1 { // await
 	if hspeed != 0
-		hspeed -= hspeed / 8
+		hspeed -= hspeed * 0.125
 
 	if moving_count++ > 60 {
 		moving_mode = 2
@@ -33,7 +33,7 @@ if moving_mode == 0 {
 	pangle += 2
 } else if moving_mode == 3 { // await
 	if hspeed != 0
-		hspeed -= hspeed / 8
+		hspeed -= hspeed * 0.125
 
 	if moving_count++ > 60 {
 		moving_mode = 0

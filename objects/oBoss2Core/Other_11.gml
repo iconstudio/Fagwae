@@ -1,5 +1,4 @@
 /// @description Creation
-
 /* 패턴: 1945 Strikers PLUS 의 6 탄 보스를 참고.
 	하나의 코어 (A)
 	3개의 가림막 (B)

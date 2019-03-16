@@ -11,4 +11,5 @@ planning_x = x
 planning_y = y
 planning_time = 0
 planning_period = 0
+planning_easer = ease_linear
 planning_terminator = argument0
