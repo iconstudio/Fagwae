@@ -1,14 +1,9 @@
-/// @description trophy_check7(index)
+/// @description trophy_check7()
 /// @function trophy_check7
-/// @param index { integer }
-
-if global.achievement_cleared[argument0]
+if global.achievement_cleared[7]
 	return true
 
-if !global.achievement_getter[argument0]
-	return false
-
-if global.framekill_local >= 30 {
+if !global.extreme and global.stage == 4 {
 	return true
 }
 

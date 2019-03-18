@@ -1,39 +1,35 @@
-/// @description Drawing trophy board
-
+/// @description Drawing achievement board
 draw_set_color($ffffff)
-draw_set_halign(1)
+draw_set_halign(0)
 draw_set_valign(0)
-draw_set_alpha(1 - rpush[0])
-
-camera_projection_identity()
-draw_text_transformed(global.screen_gui_cx, 110 - 80 * rpush[0], "ACHIEVEMENTS", 2, 2, 0)
-
-var aalpha
+var alpha_base = (appear_time / appear_period) * (ease_in_expo(1 - disappear_time / disappear_period)), aalpha, dy = content_draw_y_start - scroll + 1, cy
 for (var i = 0; i < global.achievement_count; ++i) {
+	cy = i * item_height
+	if scroll > cy + item_height - 1 {
+		dy += item_height
+		continue
+	} else if cy > scroll + content_height {
+		break
+	}
+
 	if global.achievement_cleared[i]
 		aalpha = 1
 	else
 		aalpha = 0.5
+	aalpha *= item_time[i] / item_period
 
-	menu_projection(300, 20, 360, 0, 0, 0, 0, -1, 0, 42, 1.3, 1, 32000)
-	draw_transform_set_rotation_y(20 - angle[i])
-	draw_transform_add_translation(archx[i] + scroll, -50 - 60 * rpush[0] + lengthdir_y(4, rots), 80)
-	draw_sprite_ext(sAchievement, i, 0, 0, 2, 2, 0, $ffffff, (1 - rpush[0]) * aalpha + (selected == i) * 0.5)
-	camera_projection_identity()
-
-	if draw_mode == 0
-		draw_set_alpha(alpha[i])
-	else if alpha[i] < 1 - rpush[0]
-		draw_set_alpha(1 - rpush[0])
-
-	if selected == i {
-		camera_projection_identity()
-		draw_transform_set_translation(global.screen_gui_cx + scroll - selected * scroll_gab, 130 - 50 * rpush[0], 0)
-		draw_text_transformed(0, 0, global.achievement_caption[i], 3, 3, 0)
-		draw_set_alpha(1 - rpush[1])
-		draw_text_transformed(0, global.screen_gui_cy * 1.5 + 300 * rpush[1], global.achievement_description[i], 2, 2, 0)
-	}
-	draw_transform_set_identity()
+	draw_set_alpha(aalpha * alpha_base)
+	draw_text_transformed(content_draw_x_start, dy, global.achievement_caption[i], 2, 2, 0)
+	draw_set_alpha(aalpha * alpha_base * 1.2)
+	draw_text_transformed(content_draw_x_start, dy + 30, global.achievement_description[i], 1.75, 1.75, 0)
+	dy += item_height
 }
-
 draw_set_alpha(1)
+draw_set_color($0)
+draw_rectangle(0, 0, screen_width, content_draw_y_start, false)
+draw_rectangle(0, content_draw_y_end, screen_width, screen_height, false)
+
+draw_set_color($ffffff)
+draw_set_halign(1)
+draw_set_alpha(alpha_base * 2)
+draw_text_transformed(screen_width * 0.5, 20 * alpha_base, "ACHIEVEMENTS", 2, 2, 0)

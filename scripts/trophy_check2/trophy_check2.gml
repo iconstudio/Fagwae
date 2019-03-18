@@ -1,14 +1,9 @@
-/// @description trophy_check2(index)
+/// @description trophy_check2()
 /// @function trophy_check2
-/// @param index { integer }
-
-if global.achievement_cleared[argument0]
+if global.achievement_cleared[2]
 	return true
 
-if !global.achievement_getter[argument0]
-	return false
-
-if !global.extreme and global.stage == 10 {
+if global.log_deads >= 10 {
 	return true
 }
 

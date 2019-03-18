@@ -26,6 +26,6 @@ pangle = random(360)
 event_user(2)
 
 fleeaway = false
-fleeaway_time = 1200
+fleeaway_time = seconds(15)
 
 alarm[2] = fleeaway_time

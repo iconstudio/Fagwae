@@ -1,14 +1,9 @@
-/// @description trophy_check3(index)
+/// @description trophy_check3()
 /// @function trophy_check3
-/// @param index { integer }
-
-if global.achievement_cleared[argument0]
+if global.achievement_cleared[3]
 	return true
 
-if !global.achievement_getter[argument0]
-	return false
-
-if !global.extreme and global.stage == 10 and global.dead_local == 0 {
+if global.log_kills >= 50 {
 	return true
 }
 

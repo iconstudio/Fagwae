@@ -1,7 +1,6 @@
-/// @function profile_read(data)
-/// @description 버퍼에서 프로필을 읽습니다.
+/// @description profile_read(data)
+/// @function profile_read
 /// @param data { buffer }
-
 var size = buffer_get_size(argument0)
 if size < 12 {
 	show_debug_message("The file is too small.")

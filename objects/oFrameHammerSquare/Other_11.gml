@@ -1,5 +1,4 @@
 /// @description Creation
-
 turret = enemy_create(enemy_arm_hammer, x, y, choose(-1, 1), 0, id, "Instances_Arms")
 turret.parent = id
 

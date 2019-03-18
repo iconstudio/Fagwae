@@ -10,12 +10,12 @@ if untargetable
 
 hurt = other.pow
 if invincible < INVINCIBLE_HARD {
-	var hierachy = parent, targetprev
+	var hierachy = parent, hierachy_previous
 	while instance_exists(hierachy) {
-		targetprev = hierachy
+		hierachy_previous = hierachy
 		hierachy = hierachy.parent
-		if !instance_exists(hierachy) and instance_exists(targetprev) {
-			with targetprev {
+		if !instance_exists(hierachy) and instance_exists(hierachy_previous) {
+			with hierachy_previous {
 				hurt = other.hurt * other.hurt_upper_ratio
 				event_user(15)
 			}
@@ -30,7 +30,7 @@ if invincible < INVINCIBLE_FULL {
 	else
 		global.playerscore += score_loot
 }
-if invincible > 0
+if invincible > INVINCIBLE_NONE
 	hurt = 0
 
 if invincible < INVINCIBLE_HARD

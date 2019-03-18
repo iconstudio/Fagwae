@@ -1,14 +1,9 @@
-/// @description trophy_check1(index)
+/// @description trophy_check1()
 /// @function trophy_check1
-/// @param index { integer }
-
-if global.achievement_cleared[argument0]
+if global.achievement_cleared[1]
 	return true
 
-if !global.achievement_getter[argument0]
-	return false
-
-if global.playerscore >= 100000 {
+if global.log_deads >= 1 {
 	return true
 }
 

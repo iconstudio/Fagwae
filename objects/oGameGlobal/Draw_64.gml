@@ -1,13 +1,13 @@
-var dx = global.screen_gui_cx
+var dx = screen_width * 0.5
 var dy = screen_height + 200 - ui_alpha * 218
 draw_set_alpha(ui_alpha)
 draw_set_color($ffffff)
 draw_set_halign(1)
 draw_set_valign(1)
 if global.extreme
-	draw_text_transformed(dx, dy, "EXTREME / " + string(global.stage), 2, 2, 0)
+	draw_text_transformed(dx, dy, "EXTREME / " + string(global.stage + 1), 2, 2, 0)
 else
-	draw_text_transformed(dx, dy, "NORMAL / " + string(global.stage), 2, 2, 0)
+	draw_text_transformed(dx, dy, "NORMAL / " + string(global.stage + 1), 2, 2, 0)
 
 if instance_exists(gauge_target) {
 	gauge_target_name = gauge_target.name
@@ -47,7 +47,7 @@ if pause_alpha > 0 {
 		draw_set_color($ffffff)
 		draw_set_halign(1)
 		draw_set_valign(1)
-		draw_text_transformed(global.screen_gui_cx, 30 - (1 - ease_out_expo(pause_alpha)) * 100, "PAUSED", 3, 3, 0)
+		draw_text_transformed(screen_width * 0.5, 30 - (1 - ease_out_expo(pause_alpha)) * 100, "PAUSED", 3, 3, 0)
 	}
 }
 

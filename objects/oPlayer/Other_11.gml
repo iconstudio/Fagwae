@@ -19,7 +19,6 @@ if hp > 0 {
 	bullet_clear()
 	invincible = 210
 } else {
-	//highscore_update()
 	screen_wave(x, y, 216)
 	hp = 0
 
@@ -54,21 +53,17 @@ if hp > 0 {
 	global.score_combo = 0
 	global.player_fever_laser = 0
 	global.player_fever_shield = 0
-	global.dead_local++
-	global.log_deads++
+	game_session_increase_dead()
 	global.playeralive = false
 
 	screen_shake(14)
 	bullet_clear()
-	profile_save(global.profilefile)
 
 	with oPlayerShield
 		instance_destroy()
-	if global.extreme {
+	if global.extreme
 		instance_create_layer(0, 0, "Screen", oGameOver)
-	} else {
-		with oGameGlobal
-			alarm[1] = seconds(2)
-	}
+	else
+		instance_create_layer(0, 0, "Screen", oContinue)
 	instance_destroy()
 }

@@ -1,10 +1,9 @@
 /// @description Continue
-if draw_mode > 0
+if popup_time[1] < popup_period[1]
 	exit
 
 game_resume()
-draw_mode = 1
-frame = 0
+mode = 1
 
 if selected == 1 {
 	instance_create_layer(0, 0, "Screen", oGameOver)

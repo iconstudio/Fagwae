@@ -1,14 +1,9 @@
-/// @description trophy_check8(index)
+/// @description trophy_check8()
 /// @function trophy_check8
-/// @param index { integer }
-
-if global.achievement_cleared[argument0]
+if global.achievement_cleared[8]
 	return true
 
-if !global.achievement_getter[argument0]
-	return false
-
-if global.stage == 10 { // The availablity to get achievement is depends on achievement_getter
+if !global.extreme and global.stage == 6 {
 	return true
 }
 

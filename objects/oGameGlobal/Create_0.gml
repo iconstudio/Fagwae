@@ -6,10 +6,11 @@ alarm[3] = seconds(1.5)
 // player
 player_appear_time = seconds(1)
 player_isfirst = true
+session = game_session_create()
 
-global.extreme = true
-global.stage = 1
-area_begin = oStageShape
+global.extreme = false
+global.stage = 0
+area_begin = oStageFrame
 instance_create_layer(0, 0, "Backend", area_begin)
 
 // achievements

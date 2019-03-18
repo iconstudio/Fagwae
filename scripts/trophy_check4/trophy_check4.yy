@@ -1,5 +1,5 @@
 {
-    "id": "82b1a747-3843-469f-b6f4-0617731ed1e2",
+    "id": "d6192639-5328-4dc4-99a1-760b8bd2f034",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "trophy_check4",

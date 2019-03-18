@@ -1,6 +1,10 @@
 if await_time < await_period {
 	await_time++
 } else if fadeout_time < fadeout_period {
+	if fadeout_time == 0 {
+		with oEnemyParent
+			event_user(14)
+	}
 	fadeout_time++
 } else if popup_time < popup_period {
 	popup_time++

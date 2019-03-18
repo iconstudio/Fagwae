@@ -1,5 +1,4 @@
 /// @description Dying
-
 with turret {
   hp = 0
   parent = noone
@@ -8,5 +7,4 @@ with turret {
 
 enemy_explode(7, 72, 4 + irandom(2), 0)
 
-global.framekill_local++
 instance_destroy()

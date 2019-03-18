@@ -1,18 +1,21 @@
 /// @description Update
-if draw_mode > 0 {
-	frame++
-	for (var i = 0; i < 3; ++i) {
-		if frame > i * 20 + 12 and rpush[i] != 0
-			rpush[i] -= rpush[i] * 0.125
-	}
-
-	if rpush[2] < 0.001
-		instance_destroy()
-	exit
+if await_time < await_period {
+	await_time++
+} else if appear_time < appear_period {
+	appear_time++
+} else {
+	if popup_time[0] < popup_period[0]
+		popup_time[0]++
+	if popup_time[1] < popup_period[1]
+		popup_time[1]++
 }
 
-frame++
-for (var i = 0; i < 3; ++i) {
-	if frame > i * 20 + 12 and rpush[i] != 1
-		rpush[i] += (1 - rpush[i]) * 0.2
+if mode == 0 {
+	
+} else {
+	if disappear_time < disappear_period {
+		disappear_time++
+	} else {
+		instance_destroy()
+	}
 }

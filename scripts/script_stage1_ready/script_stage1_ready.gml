@@ -9,7 +9,7 @@ area_delay_push(seconds(1))
 
 if !global.status_tutorial {
 	area_delay_push(seconds(2))
-	area_message_push(seconds(1.85), "ARROW KEY TO MOVE", global.screen_gui_cx, global.screen_gui_cy)
-	area_message_push(seconds(1.85), "Z KEY TO ATTACK", global.screen_gui_cx, global.screen_gui_cy)
+	area_message_push(seconds(1.85), "ARROW KEY TO MOVE", screen_width * 0.5, screen_height * 0.5)
+	area_message_push(seconds(1.85), "Z KEY TO ATTACK", screen_width * 0.5, screen_height * 0.5)
 }
 global.status_tutorial = true

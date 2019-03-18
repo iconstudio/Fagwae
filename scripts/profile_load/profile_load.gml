@@ -1,7 +1,6 @@
-/// @function profile_load(file)
-/// @description 프로필을 불러옵니다.
+/// @description profile_load(file)
+/// @function profile_load
 /// @param file { string }
-
 if !file_exists(argument0) {
 	show_debug_message("Cannot find buffer file.")
 	return false
