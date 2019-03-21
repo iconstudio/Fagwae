@@ -1,4 +1,5 @@
 /// @description Creation
+name = "SUPER HEXAGON"
 
 fade_mode = 0
 

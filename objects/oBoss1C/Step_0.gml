@@ -1,5 +1,3 @@
-/// @description 
-
 if fade_mode == 0 {
 	damaged = 1
 

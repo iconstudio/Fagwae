@@ -1,4 +1,5 @@
 /// @description Creation
+name = "RECTANGLE"
 
 enemy_arm_init(enemy_arm_rectangle_2, 4, 31)
 

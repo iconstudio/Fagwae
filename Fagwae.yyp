@@ -1319,6 +1319,14 @@
             }
         },
         {
+            "Key": "6380f13c-06da-4f54-8e5d-a71755937d54",
+            "Value": {
+                "id": "72bfe1d1-b66d-4b16-a439-c6eccc446ffd",
+                "resourcePath": "scripts\\enemy_init_indeterminate\\enemy_init_indeterminate.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "63ce191a-10c9-4dca-be4e-eb7610636c5b",
             "Value": {
                 "id": "d59c1b11-8498-4ee5-979a-863dab7e0031",
@@ -1460,14 +1468,6 @@
                 "id": "db92102e-47db-4c5b-b83d-b05f23488462",
                 "resourcePath": "sprites\\sIconControllerXbox\\sIconControllerXbox.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "701c265b-b3a6-486a-8ebe-afc2ebcf4160",
-            "Value": {
-                "id": "caef7ba0-bf21-4194-91d6-bfdf84f1ed1e",
-                "resourcePath": "objects\\oCircleJumper\\oCircleJumper.yy",
-                "resourceType": "GMObject"
             }
         },
         {
@@ -1863,6 +1863,14 @@
             }
         },
         {
+            "Key": "8c711e62-152d-493f-aeed-4aab4c274640",
+            "Value": {
+                "id": "96ac1b69-5a93-467a-b01a-b7be8e6d92d6",
+                "resourcePath": "objects\\oFrameCrawlerTerminal\\oFrameCrawlerTerminal.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "8cb43c75-8026-46b9-b14a-97e3cb3d5cda",
             "Value": {
                 "id": "42941077-9c92-4eb7-ab0c-63ac84421136",
@@ -2015,11 +2023,11 @@
             }
         },
         {
-            "Key": "96113b22-e919-439a-a478-f6729665b38a",
+            "Key": "9501ee18-f4c3-4eb9-a4e5-b11b510e504d",
             "Value": {
-                "id": "9c0fc97c-66fe-4155-962b-10eab5d43f2d",
-                "resourcePath": "objects\\oCircleSplitter\\oCircleSplitter.yy",
-                "resourceType": "GMObject"
+                "id": "bd9c38d6-67e3-4406-8afd-1304b6866f04",
+                "resourcePath": "scripts\\enemy_register\\enemy_register.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2866,7 +2874,7 @@
             "Key": "d0a92550-e0bd-424b-88a9-720c87294374",
             "Value": {
                 "id": "76f85608-2630-467a-bc88-b7b3c52b3ad3",
-                "resourcePath": "scripts\\enemy_register\\enemy_register.yy",
+                "resourcePath": "scripts\\enemy_register_general\\enemy_register_general.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3713,9 +3721,11 @@
         "3d033a42-3b22-4256-bcba-bf09272dea17",
         "e684d360-8d28-47f5-a529-ba46d8b06e33",
         "d0a92550-e0bd-424b-88a9-720c87294374",
+        "9501ee18-f4c3-4eb9-a4e5-b11b510e504d",
         "f3395f44-1094-4c54-afdd-2b6f2100e643",
         "5313dabf-ae83-49ce-820a-681827c3bc2b",
         "271a397f-372c-40bd-a73f-0d79a32f7439",
+        "6380f13c-06da-4f54-8e5d-a71755937d54",
         "57ae2d5b-7eb1-49d8-b349-e10e378ff69f",
         "d606151b-12c0-42e3-93e1-6635842923a4",
         "5a0a8c30-a258-4d67-b133-14130d6ca68d",

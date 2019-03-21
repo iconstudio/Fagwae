@@ -127,10 +127,7 @@ global.enemy_dictionary = ds_map_create()
 enemy_init_shape()
 enemy_init_frame()
 enemy_init_arm()
-enemy_register(enemy_rapid_1, oRapid, "RAPID PULSER", sRapidNormal, sRapidExtreme, 
-4, 500, 1, 0, 0, 0, 0)
-enemy_register(enemy_rapid_2, oConfuser, "RAPID PULSER", sRapidNormal, sRapidExtreme, 
-10, 600, 1, 0, 0, 0, 0)
+enemy_init_indeterminate()
 
 // general
 game_set_speed(60, gamespeed_fps)

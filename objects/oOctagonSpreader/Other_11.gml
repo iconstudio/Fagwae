@@ -1,8 +1,9 @@
 /// @description Creation
-
-vspeed = 10
+name = "SPREADING OCTAGON"
 
 enemy_arm_init(enemy_arm_spread_1, 5, 20)
+
+vspeed = 10
 
 shot_mode = 0
 shot_count = 0

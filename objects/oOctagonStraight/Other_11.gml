@@ -1,4 +1,5 @@
 /// @description Creation
+name = "OCTAGON"
 
 vspeed = 3
 

@@ -1,65 +1,43 @@
 /// @description enemy_init_frame()
 /// @function enemy_init_frame
+enemy_register(enemy_triangle_1, oFrameTriangle, sFrameTriangle, 3, 100, 1, 1)
 
-enemy_register(enemy_triangle_1, oFrameTriangle, "STEEL FRAME", sFrameTriangle, sFrameTriangle, 
-3, 100, 1, 1, 3, 0, 0)
+enemy_register(enemy_triangle_2, oFrameTriangleSide, sFrameTriangle, 3, 150, 1, 1)
 
-enemy_register(enemy_triangle_2, oFrameTriangleSide, "STEEL FRAME", sFrameTriangle, sFrameTriangle, 
-3, 150, 1, 1, 3, 0, 0)
+enemy_register(enemy_line_1, oFrameLine1, sFrameLine, 70, 650, 2, 0)
 
-enemy_register(enemy_line_1, oFrameLine1, "STEEL FRAME", sFrameLine, sFrameLine, 
-70, 650, 2, 0, 0, 0, 0)
+enemy_register(enemy_line_2, oFrameLine2, sFrameLine, 50, 650, 2, 0)
 
-enemy_register(enemy_line_2, oFrameLine2, "STEEL FRAME", sFrameLine, sFrameLine, 
-50, 650, 2, 0, 0, 0, 0)
+enemy_register(enemy_board_1, noone, noone, 121, 700, 2, 0)
 
-enemy_register(enemy_board_1, noone, "BOARD", noone, noone, 
-121, 700, 2, 0, 0, 0, 0)
+enemy_register(enemy_piece_1, oFramePiece, sFrameJoint, 20, 300, 1, 0)
 
-enemy_register(enemy_piece_1, oFramePiece, "STEEL FRAME", sFrameJoint, sFrameJoint, 
-20, 300, 1, 0, 0, 0, 0)
+enemy_register(enemy_joint_1, oFrameJoint, sFrameJoint, 20, 250, 1, 0)
 
-enemy_register(enemy_joint_1, oFrameJoint, "SKELETON", sFrameJoint, sFrameJoint, 
-20, 250, 1, 0, 0, 0, 0)
+enemy_register(enemy_joint_2, oFrameJoint, sFrameJoint, 19, 240, 1, 0)
 
-enemy_register(enemy_joint_2, oFrameJoint, "SKELETON", sFrameJoint, sFrameJoint, 
-19, 240, 1, 0, 0, 0, 0)
+enemy_register(enemy_joint_3, oFrameJointMod, sFrameJoint, 10, 150, 1, 0)
 
-enemy_register(enemy_joint_3, oFrameJointMod, "SKELETON", sFrameJoint, sFrameJoint, 
-10, 150, 1, 0, 0, 0, 0)
+enemy_register(enemy_square_1, oFrameSquare, sFrameSquare, 30, 250, 2, 0)
 
-enemy_register(enemy_square_1, oFrameSquare, "STEEL FRAME", sFrameSquare, sFrameSquare, 
-30, 250, 2, 0, 0, 0, 0)
+enemy_register(enemy_square_2, oFrameTurretSquare, sFrameSquare, 33, 400, 2, 0)
 
-enemy_register(enemy_square_2, oFrameTurretSquare, "STEEL FRAME", sFrameSquare, sFrameSquare, 
-33, 400, 2, 0, 0, 0, 0)
+enemy_register(enemy_square_3, oFrameSquareRotated, sFrameSquare, 30, 250, 2, 0)
 
-enemy_register(enemy_square_3, oFrameSquareRotated, "STEEL FRAME", sFrameSquare, sFrameSquare, 
-30, 250, 2, 0, 0, 0, 0)
+enemy_register(enemy_square_4, oFrameTurretSquareRotated, sFrameSquare, 33, 400, 2, 0)
 
-enemy_register(enemy_square_4, oFrameTurretSquareRotated, "STEEL FRAME", sFrameSquare, sFrameSquare, 
-33, 400, 2, 0, 0, 0, 0)
+enemy_register(enemy_square_5, oFrameDualTurret, sFrameSquare, 38, 500, 2, 0)
 
-enemy_register(enemy_square_5, oFrameDualTurret, "STEEL FRAME", sFrameSquare, sFrameSquare, 
-38, 500, 2, 0, 0, 0, 0)
+enemy_register(enemy_square_h, oFrameHammerSquare, sFrameSquare, 38, 500, 2, 0)
 
-enemy_register(enemy_square_h, oFrameHammerSquare, "STEEL FRAME", sFrameSquare, sFrameSquare, 
-38, 500, 2, 0, 0, 0, 0)
+enemy_register(enemy_crab_1, oFrameCrab, sFrameCrabBody, 50, 700, 3, 0)
 
-enemy_register(enemy_crab_1, oFrameCrab, "ABOMINATION", sFrameCrabBody, sFrameCrabBody, 
-50, 700, 3, 0, 0, 0, 0)
+enemy_register(enemy_crab_2, oFrameCrab, sFrameCrabBody, 60, 760, 3, 0)
 
-enemy_register(enemy_crab_2, oFrameCrab, "ABOMINATION", sFrameCrabBody, sFrameCrabBody, 
-60, 760, 3, 0, 0, 0, 0)
+enemy_register(enemy_crab_3, oFrameCrab, sFrameCrabBody, 60, 710, 3, 0)
 
-enemy_register(enemy_crab_3, oFrameCrab, "ABOMINATION", sFrameCrabBody, sFrameCrabBody, 
-60, 710, 3, 0, 0, 0, 0)
+enemy_register(enemy_octopod_1, oFrameOctopod, sFrameCore, 80, 700, 4, 0)
 
-enemy_register(enemy_octopod_1, oFrameOctopod, "ABOMINATION", sFrameCore, sFrameCore, 
-80, 700, 4, 0, 0, 0, 0)
-
-enemy_register(enemy_crawler_1, noone, "ABOMINATION", sFrameCore, sFrameCore, 
-120, 2000, 4, 0, 0, 0, 0)
-
+enemy_register(enemy_crawler_1, oFrameCrawler, sFrameCrawlerBody, 120, 2000, 4, 0)
 
 // bosses

@@ -3,6 +3,7 @@ image_speed = 0
 
 sound_dead = noone
 
+name = ""
 parent = noone
 hurt = 0 // for dying
 hurt_upper_ratio = 1 / 3

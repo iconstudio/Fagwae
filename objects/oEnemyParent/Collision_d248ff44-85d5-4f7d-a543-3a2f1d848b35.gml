@@ -8,8 +8,15 @@ with other
 if untargetable
 	exit
 
+var hierachy = gauge_update(id)
 hurt = other.pow
-if invincible < INVINCIBLE_HARD {
+if invincible < INVINCIBLE_HARD and hierachy != id {
+	with hierachy {
+		hurt = other.hurt * other.hurt_upper_ratio
+		event_user(15)
+	}
+}
+/*if invincible < INVINCIBLE_HARD {
 	var hierachy = parent, hierachy_previous
 	while instance_exists(hierachy) {
 		hierachy_previous = hierachy
@@ -22,7 +29,7 @@ if invincible < INVINCIBLE_HARD {
 			break
 		}
 	}
-}
+}*/
 
 if invincible < INVINCIBLE_FULL {
 	if global.extreme
@@ -36,5 +43,4 @@ if invincible > INVINCIBLE_NONE
 if invincible < INVINCIBLE_HARD
 	event_user(15)
 
-gauge_update(id)
 audio_play_sound(soundHitPlayer, 20, false)

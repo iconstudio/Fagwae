@@ -1,4 +1,6 @@
 /// @description Creation
+name = "ARM"
+
 homing = false
 home_angle = 0
 homing_time = 0

@@ -8,6 +8,7 @@ with argument0 {
 			gauge_time = min(gauge_period, other.hp_max)
 			gauge_show_time = gauge_show_period
 		}
+		return id
 	} else {
 		gauge_update(parent)
 	}

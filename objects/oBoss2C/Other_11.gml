@@ -1,4 +1,6 @@
 /// @description Creation
+name = "ARM"
+
 fade_mode = 0
 
 invincible = INVINCIBLE_PARENTAL

@@ -1,11 +1,7 @@
-/// @description 
-
-if y < 500 {
+/// @description Attacking
+if y < room_height * 0.6 {
 	enemy_shot(x + lengthdir_x(22, image_angle), y + lengthdir_y(22, image_angle), 3, image_angle)
 	enemy_play_shot()
 
-	if global.extreme
-		alarm[0] = max(1, 8 - global.stage * 0.333)
-	else
-		alarm[0] = max(1, 18 - global.stage * 1.8)
+	alarm[0] = shot_period
 }

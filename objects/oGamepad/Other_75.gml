@@ -1,5 +1,4 @@
 /// @description Gamepad recognize
-
 var type = async_load[? "event_type"]
 
 if type == "gamepad discovered" {

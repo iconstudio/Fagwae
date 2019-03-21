@@ -1,5 +1,5 @@
 {
-    "id": "d0a92550-e0bd-424b-88a9-720c87294374",
+    "id": "9501ee18-f4c3-4eb9-a4e5-b11b510e504d",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "enemy_register",

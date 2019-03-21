@@ -1,4 +1,5 @@
 /// @description Creation
+name = "HAMMER"
 
 shot_speed = 2.5 + global.stage * 0.25
 if global.extreme

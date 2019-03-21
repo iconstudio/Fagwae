@@ -1,4 +1,5 @@
 /// @description Creation
+name = "OCTAGON"
 
 if path_exists(type_create) {
 	path_start(type_create, 3, path_action_stop, false)

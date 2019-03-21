@@ -7,7 +7,6 @@
 /// @param [image_angle] { real }
 /// @param [parent] { instance }
 /// @param [layer] { layer }
-
 var attributes = ds_map_find_value(global.enemy_dictionary, argument[0])
 if !is_array(attributes)
 	show_error("Error when getting enemy attributes", true)
@@ -16,18 +15,19 @@ var __layer = "Instances"
 if argument_count >= 7
 	__layer = argument[6]
 
+var sprites = attributes[2]
 with instance_create_layer(argument[1], argument[2], __layer, oDummy) {
-	sprite_normal = attributes[2]
-	sprite_extreme = attributes[3]
-	rotation_step = attributes[7]
+	sprite_normal = sprites[0]
+	sprite_extreme = sprites[1]
+	rotation_step = attributes[6]
 	if argument_count >= 4
 		type_create = argument[3]
 
-	polygon = attributes[8]
+	polygon = attributes[7]
 	if global.extreme
-		polygon_color = attributes[10]
-	else
 		polygon_color = attributes[9]
+	else
+		polygon_color = attributes[98]
 
 	if argument_count >= 5
 		image_angle = argument[4]
@@ -38,11 +38,10 @@ with instance_create_layer(argument[1], argument[2], __layer, oDummy) {
 	
 	if argument_count >= 6
 		parent = argument[5]
-	name = attributes[1]
-	hp = attributes[4]
-	hp_max = attributes[4]
-	score_dead = attributes[5]
-	score_loot = attributes[6]
+	hp = attributes[3]
+	hp_max = attributes[3]
+	score_dead = attributes[4]
+	score_loot = attributes[5]
 	if global.extreme
 		sprite_index = sprite_extreme
 	else

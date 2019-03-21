@@ -24,8 +24,6 @@
 #macro enemy_spread_2			"espread2"		// shots 4, 3 times (green octagon mk.2)
 #macro enemy_rectangle_1		"erect1"			// shots 1, 4 times (coral rectangle mk.1)
 #macro enemy_rectangle_2		"erect2"			// (coral rectangle mk.2)
-#macro enemy_circle_1			"ecircle1"		// shots 12 around (gray circle mk.1)
-#macro enemy_circle_2			"ecircle2"		// Jumping while shots 3 or shots 12 around (gray circle mk.2)
 
 /// frames
 // singles

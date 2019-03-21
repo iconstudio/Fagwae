@@ -1,4 +1,5 @@
 /// @description Creation
+name = "SUPER HEXAGON"
 
 x = room_width * 0.5
 y = -80
@@ -17,5 +18,5 @@ arm_width = point_distance(lengthdir_x(1, 0), lengthdir_y(1, 0), lengthdir_x(1, 
 ccnt = 0
 
 abool = 0
-alarm[0] = 90
-alarm[1] = 140
+alarm[0] = seconds(1.5)
+alarm[1] = seconds(2.5)
