@@ -1,5 +1,4 @@
 /// @description Initialization
-
 event_inherited()
 next = oStageShape
 
@@ -33,7 +32,7 @@ for (var j = 0; j < 7; ++j) {
 area_delay_push(seconds(1))
 */
 
-area_enemy_push(seconds(2), enemy_crab_1, LEFT, 0, 500)
-area_enemy_push(seconds(2), enemy_crab_1, RIGHT, 0, 500)
-area_enemy_push(seconds(2), enemy_crab_1, LEFT, 0, 500)
+area_enemy_push(seconds(2), enemy_crawler_1, 0, 270, 300)
+//area_enemy_push(seconds(2), enemy_crab_1, RIGHT, 0, 500)
+//area_enemy_push(seconds(2), enemy_crab_1, LEFT, 0, 500)
 //area_enemy_push(seconds(2), enemy_octopod_1, 0, 270, 100)

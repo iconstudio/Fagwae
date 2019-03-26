@@ -5,7 +5,7 @@ if path_exists(type_create) {
 	path_start(type_create, 3, path_action_stop, false)
 } else {
 	hspeed = 0
-	vspeed = 3
+	vspeed = area_vspeed
 
 	if global.extreme
 		alarm[0] = seconds(random(3))

@@ -1,8 +1,9 @@
 /// @description Processing
 hp -= hurt
-if hp > 0 {
+if !dead
 	damaged = 1
-} else if !dead {
+
+if hp <= 0 and !dead {
 	dead = true
 	event_user(0)
 

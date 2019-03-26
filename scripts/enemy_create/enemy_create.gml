@@ -15,19 +15,19 @@ var __layer = "Instances"
 if argument_count >= 7
 	__layer = argument[6]
 
-var sprites = attributes[2]
+var sprites = attributes[1]
 with instance_create_layer(argument[1], argument[2], __layer, oDummy) {
 	sprite_normal = sprites[0]
 	sprite_extreme = sprites[1]
-	rotation_step = attributes[6]
+	rotation_step = attributes[5]
 	if argument_count >= 4
 		type_create = argument[3]
 
-	polygon = attributes[7]
+	polygon = attributes[6]
 	if global.extreme
-		polygon_color = attributes[9]
+		polygon_color = attributes[8]
 	else
-		polygon_color = attributes[98]
+		polygon_color = attributes[7]
 
 	if argument_count >= 5
 		image_angle = argument[4]
@@ -38,10 +38,10 @@ with instance_create_layer(argument[1], argument[2], __layer, oDummy) {
 	
 	if argument_count >= 6
 		parent = argument[5]
-	hp = attributes[3]
-	hp_max = attributes[3]
-	score_dead = attributes[4]
-	score_loot = attributes[5]
+	hp = attributes[2]
+	hp_max = attributes[2]
+	score_dead = attributes[3]
+	score_loot = attributes[4]
 	if global.extreme
 		sprite_index = sprite_extreme
 	else

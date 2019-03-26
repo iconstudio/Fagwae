@@ -8,7 +8,7 @@ player_appear_time = seconds(1)
 player_isfirst = true
 session = game_session_create()
 
-global.extreme = false
+global.extreme = true
 global.stage = 0
 area_begin = oStageFrame
 instance_create_layer(0, 0, "Backend", area_begin)
@@ -22,7 +22,7 @@ event_user(2)
 // ui
 ui_alpha = 0
 ui_appear_time = 0
-ui_appear_period = seconds(0.93)
+ui_appear_period = seconds(0.94)
 pause_alpha = 0
 shadow_alpha = 0
 shadow_time = 0

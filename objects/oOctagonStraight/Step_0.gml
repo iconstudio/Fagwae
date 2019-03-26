@@ -4,8 +4,8 @@ if y > 10 {
 		alarm[0] = shot_period_reset1
 	}
 } else if y > 0 {
-	if vspeed > 1
+	if vspeed > area_vspeed
 		vspeed -= 0.09
 	else
-		vspeed = 1
+		vspeed = area_vspeed
 }

@@ -19,4 +19,4 @@ if !is_array(argument2) {
 	}
 }
 
-return enemy_register_general(argument0, argument1, sprites, argument3, argument4, argument5, argument6, 0, 0, 0)
+return enemy_register_general(argument0, argument1, sprites, argument3, argument4, argument5, argument6, undefined, undefined, undefined)

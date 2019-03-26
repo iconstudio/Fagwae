@@ -2,9 +2,6 @@
 if other.pow <= 0 or dead
 	exit
 
-with other
-	event_user(0)
-
 if untargetable
 	exit
 
@@ -13,6 +10,8 @@ hurt = other.pow
 if invincible < INVINCIBLE_HARD and hierachy != id {
 	with hierachy {
 		hurt = other.hurt * other.hurt_upper_ratio
+		//if invincible < INVINCIBLE_HARD
+		//	damaged = 1
 		event_user(15)
 	}
 }
@@ -42,5 +41,8 @@ if invincible > INVINCIBLE_NONE
 
 if invincible < INVINCIBLE_HARD
 	event_user(15)
+
+with other
+	event_user(0)
 
 audio_play_sound(soundHitPlayer, 20, false)

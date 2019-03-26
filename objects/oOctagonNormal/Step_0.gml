@@ -1,1 +1,1 @@
-vspeed += (1 - vspeed) / 9
+vspeed += (area_vspeed - vspeed) / 9

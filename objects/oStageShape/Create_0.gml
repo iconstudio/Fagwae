@@ -18,7 +18,6 @@ deco_min_opt = -5
 deco_count = 3
 deco_mode = 0
 deco_fail = false
-deco_fail_complete = false
 deco_shake_period = seconds(0.4)
 deco_fail_period = seconds(1)
 
@@ -132,15 +131,15 @@ area_enemy_push(140, enemy_octagon_4, 0, 412, -48)	// w - 127 - 1
 area_enemy_push(seconds(3.5), enemy_spread_2, LEFT, 0, 0)
 area_enemy_push(seconds(1.4), enemy_octagon_4, 0, 330, -48)
 area_enemy_push(seconds(1.2), enemy_octagon_2, 0, 330, -48)
-area_enemy_push(seconds(2), enemy_octagon_4, 0, 330, -48)
 area_script_push(seconds(1), script_await_dying, 0, 0, 0)
+area_enemy_push(seconds(2), enemy_octagon_4, 0, 330, -48)
 
 if global.extreme {
 	var firstrect = choose(LEFT, RIGHT)
-	area_enemy_push(0, enemy_rectangle_2, firstrect, 0, 600 + random(20))
-	area_enemy_push(0, enemy_rectangle_2, !firstrect, 0, 500 + random(20))
 	area_enemy_push(0, enemy_rectangle_2, firstrect, 0, 400 + random(20))
-	area_script_push(seconds(3), script_await_dying, 0, 0, 0)
+	area_enemy_push(0, enemy_rectangle_2, !firstrect, 0, 300 + random(20))
+	area_script_push(0, script_await_dying, 0, 0, 0)
+	area_enemy_push(seconds(3), enemy_rectangle_2, firstrect, 0, 200 + random(20))
 } else {
 	area_enemy_push(seconds(2), enemy_rectangle_1, 0, 112, -48)
 	area_enemy_push(seconds(3), enemy_rectangle_1, 0, 409, -48)
@@ -148,11 +147,11 @@ if global.extreme {
 if global.extreme {
 	area_enemy_push(seconds(2.9), enemy_spread_2, RIGHT, 0, 0)
 	area_enemy_push(seconds(1.5), enemy_octagon_4, 0, 240, -48)
-	area_enemy_push(seconds(1.5), enemy_octagon_4, 0, 190, -48)
+	area_enemy_push(seconds(3), enemy_octagon_4, 0, 190, -48)
 } else {
 	area_enemy_push(seconds(2), enemy_spread_1, 0, 120, -48)
 }
-area_delay_push(seconds(0.5))
+area_delay_push(seconds(1))
 
 k = 0
 area_enemy_push(seconds(0.9), enemy_line_2, 1, 345, -500)

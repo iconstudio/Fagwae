@@ -19,5 +19,6 @@ if argument_count >= 10 {
 }
 */
 
+//					0object		1sprites	2hp			3score_die	4score_loot 5rotation 6polygons		
 var data = [argument1, argument2, argument3, argument4, argument5, argument6, argument7, argument8, argument9]
 return ds_map_add(global.enemy_dictionary, argument0, data)

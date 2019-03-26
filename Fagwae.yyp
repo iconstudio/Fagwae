@@ -167,6 +167,14 @@
             }
         },
         {
+            "Key": "0b766d79-1ecd-44be-a8ca-c89d7a302570",
+            "Value": {
+                "id": "202f15dd-76a2-4aca-9704-1a325a2a6c4b",
+                "resourcePath": "scripts\\ease_out_circ\\ease_out_circ.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "0bb77d7c-60e0-4768-b3cb-f50af1e42daa",
             "Value": {
                 "id": "01b96ec4-224e-43e6-b588-ace151953cdc",
@@ -2719,6 +2727,14 @@
             }
         },
         {
+            "Key": "c15884e4-5332-4416-878f-49dbd32b2adc",
+            "Value": {
+                "id": "3e1a58ad-09b4-4fbc-ab25-ce708701b54f",
+                "resourcePath": "paths\\path5\\path5.yy",
+                "resourceType": "GMPath"
+            }
+        },
+        {
             "Key": "c163fbda-da1d-4e36-97c5-60e624aac3df",
             "Value": {
                 "id": "dd190846-886e-4901-9547-6dab0c7d8393",
@@ -3746,6 +3762,7 @@
         "e730d69a-aa30-4a03-9c1b-99643e2131aa",
         "d5de092b-e678-4982-bfde-259456a1cbf5",
         "a636f090-b9f4-45b8-9822-81e6f2058104",
+        "0b766d79-1ecd-44be-a8ca-c89d7a302570",
         "83bbc2da-9100-4ea4-8a4f-d41d018cf48b",
         "6e46b1ad-485e-4ce3-869c-41936e5b671b",
         "f0ae9c12-8cba-46a5-97e8-d8d13eaa4e67",

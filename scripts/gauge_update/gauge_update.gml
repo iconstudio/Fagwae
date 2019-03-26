@@ -10,6 +10,6 @@ with argument0 {
 		}
 		return id
 	} else {
-		gauge_update(parent)
+		return gauge_update(parent)
 	}
 }

@@ -93,7 +93,7 @@ var y_target = y - 30
 motion_planning_add(x_target[0], y_target, shot_timing, ease_out_cubic)
 //motion_planning_add(x_target[0], y_target, seconds(4))
 repeat 8
-	motion_planning_add(x_target[0] + random_range(-10, 10), y_target + random_range(-6, 6), seconds(0.5), ease_in_out_expo)
+	motion_planning_add(x_target[0] + random_range(-17, 17), y_target + random_range(-6, 6), seconds(0.5), ease_in_out_expo)
 motion_planning_add(x_target[1], max(0, y - 100), seconds(1), ease_out_quartic)
 motion_planning_add(x_target[1], -64, seconds(2), ease_in_cubic)
 

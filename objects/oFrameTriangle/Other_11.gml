@@ -1,6 +1,5 @@
 /// @description Creation
-
-vspeed_max = 5 - global.extreme
+vspeed_max = area_vspeed / (1 + global.extreme)
 gravity = 0.6
 gravity_direction = 270
 

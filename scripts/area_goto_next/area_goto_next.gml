@@ -1,6 +1,5 @@
 /// @description area_goto_next()
 /// @function area_goto_next
-global.stage++
 with instance_create_layer(0,  0, "Backend", next){
 	// from shape to the frame
 	if other.object_index == oStageShape {

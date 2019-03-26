@@ -80,5 +80,5 @@ if ++gauge_texloop_time > gauge_texloop_period
 	gauge_texloop_time = 0
 gauge_rots = (gauge_rots + 3) mod 360
 
-global.player_fever_laser = max(0, min(100, global.player_fever_laser))
-global.player_fever_shield = max(0, min(100, global.player_fever_shield))
+global.player_fever_laser = clamp(global.player_fever_laser, 0, 100)
+global.player_fever_shield = clamp(global.player_fever_shield, 0, 100)

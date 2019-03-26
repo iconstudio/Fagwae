@@ -1,11 +1,6 @@
 /// @description Update
 event_inherited()
 
-if y < global.py - 16
-	gravity_direction = min(max(240, gravity_direction + get_rotation_next(gravity_direction, point_direction(x, y, global.px, global.py), 2)), 300)
-if vspeed > 2
-	vspeed = 2
-
 arm_wiggle += 5
 
 var _speed = speed, _direction = direction
@@ -31,6 +26,14 @@ for (var i = 0; i < arm_number; ++i) {
 		}
 	}
 }
+speed = 0
 
-speed = _speed
-direction = _direction
+path_position = planning_time / planning_period
+if path_position != path_positionprevious {
+	var _xp = path_get_x(planning_path, path_positionprevious), _yp = path_get_y(planning_path, path_positionprevious)
+	var _xn = path_get_x(planning_path, path_position), _yn = path_get_y(planning_path, path_position)
+	image_angle = point_direction(_xp, _yp, _xn, _yn)
+}
+
+if planning_time < planning_period
+	planning_time++

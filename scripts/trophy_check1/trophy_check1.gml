@@ -3,7 +3,7 @@
 if global.achievement_cleared[1]
 	return true
 
-if global.log_deads >= 1 {
+if game_session_get_dead() >= 1 {
 	return true
 }
 

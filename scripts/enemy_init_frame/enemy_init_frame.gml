@@ -8,7 +8,7 @@ enemy_register(enemy_line_1, oFrameLine1, sFrameLine, 70, 650, 2, 0)
 
 enemy_register(enemy_line_2, oFrameLine2, sFrameLine, 50, 650, 2, 0)
 
-enemy_register(enemy_board_1, noone, noone, 121, 700, 2, 0)
+enemy_register(enemy_board_1, noone, sFrameBoard, 121, 700, 2, 0)
 
 enemy_register(enemy_piece_1, oFramePiece, sFrameJoint, 20, 300, 1, 0)
 

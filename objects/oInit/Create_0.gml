@@ -72,7 +72,7 @@ global.__tth = display_get_gui_height()		// Adjusted
 // View is 'entire' screen									(Game)
 #macro view_width global.__view_width
 #macro view_height global.__view_height
-// However GUI fits into 'aspected' screen	(Interface)
+// However the GUI fits into 'aspected' screen	(Interface)
 #macro screen_width global.__ttw
 #macro screen_height global.__tth
 #macro screen_scale global.__tts					// Real size
@@ -121,7 +121,6 @@ global.stage = 0
 global.px = 0
 global.py = 0
 global.pause_counter = 0
-#macro area_vspeed 0.5625 * 4
 event_user(0)
 global.enemy_dictionary = ds_map_create()
 enemy_init_shape()
@@ -133,6 +132,8 @@ enemy_init_indeterminate()
 game_set_speed(60, gamespeed_fps)
 randomize()
 instance_create_layer(0, 0, "Screen", oGlobal)
+global.__ttv = room_height / seconds(10)
+#macro area_vspeed global.__ttv
 
 // gamepad
 instance_create_layer(0, 0, "Screen", oGamepad)
