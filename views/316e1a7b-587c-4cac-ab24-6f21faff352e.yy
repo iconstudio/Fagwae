@@ -22,7 +22,7 @@
         "a8ce7605-f771-4e26-9ea6-a9b63ed051d2"
     ],
     "filterType": "GMScript",
-    "folderName": "In-Game",
+    "folderName": "Enemy",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

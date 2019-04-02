@@ -1,14 +1,16 @@
 {
     "id": "7bfe5385-9a06-409a-a8f4-52daf79a178a",
     "modelName": "GMFont",
-    "mvc": "1.0",
+    "mvc": "1.1",
     "name": "fontRetro",
     "AntiAlias": 1,
     "TTFName": "${project_dir}\\fonts\\fontRetro\\Retro.ttf",
+    "ascenderOffset": 0,
     "bold": false,
     "charset": 0,
     "first": 0,
     "fontName": "Retro",
+    "glyphOperations": 0,
     "glyphs": [
         {
             "Key": 32,
@@ -1526,13 +1528,16 @@
             }
         }
     ],
-    "image": null,
+    "hinting": 0,
     "includeTTF": true,
+    "interpreter": 0,
     "italic": false,
     "kerningPairs": [
         
     ],
     "last": 0,
+    "maintainGms1Font": false,
+    "pointRounding": 0,
     "ranges": [
         {
             "x": 32,

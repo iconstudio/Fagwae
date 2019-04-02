@@ -1847,6 +1847,14 @@
             }
         },
         {
+            "Key": "89d7f9ac-6468-463e-b58b-366005c43544",
+            "Value": {
+                "id": "4eb958f6-63bb-4f6b-917e-4859220db76e",
+                "resourcePath": "scripts\\find_hierachy\\find_hierachy.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "8ae37fc7-3cbe-42f4-b03c-adcc31f1d831",
             "Value": {
                 "id": "e92d0f49-8f23-40c3-a017-1f88f49de6c4",
@@ -3055,6 +3063,14 @@
             }
         },
         {
+            "Key": "da70d857-dd58-4fce-989c-5e9711588faa",
+            "Value": {
+                "id": "36487081-1b6e-4fe4-9d45-885c69d335f8",
+                "resourcePath": "sprites\\sFrameCrawlerTurret\\sFrameCrawlerTurret.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "da929dc7-be38-497f-b162-05229af38c01",
             "Value": {
                 "id": "a0b816e2-c0cd-46d4-9244-6857400939a8",
@@ -3753,6 +3769,7 @@
         "6315f5e1-7c68-47be-8b99-b68d5a9f527b",
         "a8ce7605-f771-4e26-9ea6-a9b63ed051d2",
         "4da2b5a2-ecb7-4f21-bac0-d26a882c4f13",
+        "89d7f9ac-6468-463e-b58b-366005c43544",
         "bedcb28f-3141-4278-8d8e-b33b20e7ec73",
         "ba47441b-5eab-4fa9-a4ee-7671c12e007b",
         "94fc85b5-c66d-4f2e-ac30-8cc1fa33ae58",

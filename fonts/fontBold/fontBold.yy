@@ -1,7 +1,7 @@
 {
     "id": "80da412b-39d5-4c93-ba44-24ec05efc669",
     "modelName": "GMFont",
-    "mvc": "1.0",
+    "mvc": "1.1",
     "name": "fontBold",
     "AntiAlias": 1,
     "TTFName": "${project_dir}\\fonts\\fontBold\\NanumGothicBold_1.ttf",
@@ -10,6 +10,7 @@
     "charset": 0,
     "first": 0,
     "fontName": "D2Coding ligature",
+    "glyphOperations": 0,
     "glyphs": [
         {
             "Key": 32,
@@ -2742,13 +2743,16 @@
             }
         }
     ],
-    "image": null,
+    "hinting": 0,
     "includeTTF": true,
+    "interpreter": 0,
     "italic": false,
     "kerningPairs": [
         
     ],
     "last": 0,
+    "maintainGms1Font": false,
+    "pointRounding": 0,
     "ranges": [
         {
             "x": 32,

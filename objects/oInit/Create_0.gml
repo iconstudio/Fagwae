@@ -133,7 +133,7 @@ game_set_speed(60, gamespeed_fps)
 randomize()
 instance_create_layer(0, 0, "Screen", oGlobal)
 global.__ttv = room_height / seconds(10)
-#macro area_vspeed global.__ttv
+#macro area_vspeed global.__ttv * 0.5
 
 // gamepad
 instance_create_layer(0, 0, "Screen", oGamepad)
