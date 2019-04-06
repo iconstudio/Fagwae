@@ -1,5 +1,4 @@
 /// @description Update
-
 arm_count = 0
 for (var i = 0; i < arm_number; ++i) {
 	with arm_instances[i] {

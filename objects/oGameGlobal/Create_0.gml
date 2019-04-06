@@ -10,7 +10,7 @@ session = game_session_create()
 
 global.extreme = true
 global.stage = 0
-area_begin = oStageFrame
+area_begin = oStageShape
 instance_create_layer(0, 0, "Backend", area_begin)
 
 // achievements

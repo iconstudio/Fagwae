@@ -4,4 +4,4 @@ turret.parent = id
 
 image_angle = random(360)
 hspeed = type_create
-vspeed = 1
+vspeed = area_vspeed * 0.75

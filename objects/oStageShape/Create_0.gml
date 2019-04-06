@@ -50,7 +50,7 @@ area_enemy_push(seconds(1), enemy_hexagon_1, 0, 290, -48)
 var k = 0
 for (; k < 7; ++k)
 	area_enemy_push(seconds(1.5), enemy_hexagon_2, 0, (k * 194) mod 540, -48)
-area_enemy_push(seconds(1.8), enemy_hexagon_1, 0, (++k * 194) mod 540, -48)
+area_enemy_push(seconds(3.2), enemy_hexagon_1, 0, (++k * 194) mod 540, -48)
 
 if global.extreme {
 	area_enemy_push(jako_delay, enemy_octagon_5, pathJakoFormationLeft, 170, -48)
@@ -108,7 +108,7 @@ area_enemy_push(jako_delay, enemy_octagon_4, 0, 185, -48)
 area_enemy_push(jako_delay, enemy_octagon_4, 0, 255, -48) // +70
 area_enemy_push(jako_delay, enemy_octagon_4, 0, 325, -48) // +70
 area_enemy_push(jako_delay, enemy_octagon_4, 0, 395, -48)
-area_enemy_push(seconds(3.2), enemy_octagon_1, 0, 480, -48)
+area_enemy_push(seconds(3.4), enemy_octagon_1, 0, 480, -48)
 
 area_enemy_push(jako_delay * 0.5, enemy_octagon_4, 0, 265, -48)
 area_enemy_push(jako_delay, enemy_octagon_5, pathJakoFormationLeft, 195, -48) // -70
@@ -136,8 +136,8 @@ area_enemy_push(seconds(2), enemy_octagon_4, 0, 330, -48)
 
 if global.extreme {
 	var firstrect = choose(LEFT, RIGHT)
-	area_enemy_push(0, enemy_rectangle_2, firstrect, 0, 400 + random(20))
-	area_enemy_push(0, enemy_rectangle_2, !firstrect, 0, 300 + random(20))
+	area_enemy_push(seconds(0.2), enemy_rectangle_2, firstrect, 0, 400 + random(20))
+	area_enemy_push(seconds(0.2), enemy_rectangle_2, !firstrect, 0, 300 + random(20))
 	area_script_push(0, script_await_dying, 0, 0, 0)
 	area_enemy_push(seconds(3), enemy_rectangle_2, firstrect, 0, 200 + random(20))
 } else {
@@ -158,7 +158,7 @@ area_enemy_push(seconds(0.9), enemy_line_2, 1, 345, -500)
 area_enemy_push(seconds(0.1), enemy_line_2, 0, 30, -500)
 for (; k < 4; ++k)
 	area_enemy_push(seconds(0.2 * (random(k) * 7) mod 4), enemy_line_2, k & 1, min(max(20, 40 + (k * 219) mod 540), 520), -500 + random(20))
-area_enemy_push(seconds(0.2), enemy_line_2, 0, 508, -500 + random(20))
+area_enemy_push(seconds(0.1), enemy_line_2, 0, 508, -500 + random(20))
 k = 0
 for (; k < 4; ++k)
 	area_enemy_push(seconds(0.15 + 0.1 * (random(k) * 5) mod 3), enemy_line_2, k & 1, min(max(20, 40 + (k * 219) mod 540), 520), -500 + random(20))

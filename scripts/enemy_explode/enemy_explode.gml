@@ -6,7 +6,6 @@
 /// @param score_count { integer }
 /// @param [ax] { real }
 /// @param [ay] { real }
-
 var ax = 0, ay = 0
 if argument_count >= 5 {
 	ax = argument[4]
@@ -19,7 +18,7 @@ if global.setting_effect {
 		screen_shake(argument[0])
 
 	if argument[1] > 0
-		screen_wave(x, y, argument[1])
+		screen_wave(x + ax, y + ay, argument[1])
 
 	repeat argument[2] {
 		with instance_create_layer(x + ax, y + ay, "Effect", oParticleFlameGenerator) {
@@ -45,4 +44,3 @@ if audio_exists(sound_dead)
 	audio_play_sound(sound_dead, 10, false)
 
 show_flashstring(x, y - 12, "+" + number_format(argument[0]), 1)
-

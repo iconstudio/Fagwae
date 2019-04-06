@@ -8,5 +8,5 @@ if global.extreme
 	enemy_shot(x, y, path_speed * 0.5 + shot_speed, pd + random_range(-10, 10), oEnemyBullet2)
 enemy_play_shot()
 
-if ++shot_count < 12 + global.extreme * 4
+if ++shot_count < 10 + global.extreme * 4
 	alarm[0] = 6 - global.extreme * 4

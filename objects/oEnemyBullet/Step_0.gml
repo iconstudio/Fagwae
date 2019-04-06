@@ -1,5 +1,3 @@
-/// @description 
-
 image_angle += 4
 
 if infect

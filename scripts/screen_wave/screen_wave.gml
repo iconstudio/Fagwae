@@ -3,5 +3,7 @@
 /// @param x { real }
 /// @param y { real }
 /// @param size { real }
-with instance_create_layer(argument0, argument1, "Screen", oWave)
-	tsiz = argument2
+with instance_create_layer(argument0, argument1, "Screen", oWave) {
+	size_target = argument2
+	event_user(1)
+}

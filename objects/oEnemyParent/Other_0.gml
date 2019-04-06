@@ -1,3 +1,3 @@
 /// @description Removing
-if !instance_exists(parent) and (y > screen_height + 48 or y < -300 or x < -120 or x > screen_width + 120)
+if !instance_exists(parent) and (bbox_top > room_height or bbox_right < 0 or bbox_left > room_width)
 	instance_destroy()

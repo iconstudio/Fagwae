@@ -1,5 +1,3 @@
-/// @description 
-
 parent = noone
 dead = false
 

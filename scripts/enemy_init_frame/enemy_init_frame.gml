@@ -8,13 +8,13 @@ enemy_register(enemy_line_1, oFrameLine1, sFrameLine, 70, 650, 2, 0)
 
 enemy_register(enemy_line_2, oFrameLine2, sFrameLine, 50, 650, 2, 0)
 
-enemy_register(enemy_board_1, noone, sFrameBoard, 121, 700, 2, 0)
+enemy_register(enemy_board_1, oFrameBoard, sFrameBoard, 121, 700, 2, 0)
 
-enemy_register(enemy_piece_1, oFramePiece, sFrameJoint, 20, 300, 1, 0)
+enemy_register(enemy_piece_1, oFramePiece, sFrameJoint, 18, 300, 1, 0)
 
-enemy_register(enemy_joint_1, oFrameJoint, sFrameJoint, 20, 250, 1, 0)
+enemy_register(enemy_joint_1, oFrameJoint, sFrameJoint, 18, 250, 1, 0)
 
-enemy_register(enemy_joint_2, oFrameJoint, sFrameJoint, 19, 240, 1, 0)
+enemy_register(enemy_joint_2, oFrameJoint, sFrameJoint, 17, 240, 1, 0)
 
 enemy_register(enemy_joint_3, oFrameJointMod, sFrameJoint, 10, 150, 1, 0)
 
@@ -29,6 +29,9 @@ enemy_register(enemy_square_4, oFrameTurretSquareRotated, sFrameSquare, 33, 400,
 enemy_register(enemy_square_5, oFrameDualTurret, sFrameSquare, 38, 500, 2, 0)
 
 enemy_register(enemy_square_h, oFrameHammerSquare, sFrameSquare, 38, 500, 2, 0)
+
+enemy_register(enemy_scout_j1, oFrameScout, sFrameSquare, 20, 300, 2, 0)
+
 
 enemy_register(enemy_crab_1, oFrameCrab, sFrameCrabBody, 50, 700, 3, 0)
 

@@ -1,5 +1,4 @@
 /// @description Creating arms
-
 arm_instances[arm_number] = enemy_create(enemy_boss_1C, x, -200, 0, 0, id, "Boss_C")
 arm_instances[arm_number].angle = ccnt * 60 + 210
 arm_instances[arm_number].org = 240

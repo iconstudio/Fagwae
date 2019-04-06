@@ -62,7 +62,7 @@ switch mode {
 					mode = MODE_SPREAD
 				} else if ((global.extreme and y < room_height * 0.35)
 				or (!global.extreme and y < room_height * 0.4))
-				and y < room_height * 0.7 {
+				and y < room_height * 0.6 {
 					mode = MODE_ATTACK
 				} else { // it will move one more time
 					move_startx = x

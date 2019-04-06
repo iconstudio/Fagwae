@@ -1,11 +1,9 @@
-/// @description 
-
 event_inherited()
-
-y += 120
-
 image_xscale = 2
 image_yscale = 2
 image_alpha = 0.5
 
-alarm[0] = 60
+create_distance = 300
+create_time = 0
+create_period = seconds(1.5)
+y += create_distance

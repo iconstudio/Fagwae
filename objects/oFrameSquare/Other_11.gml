@@ -1,3 +1,3 @@
 /// @description Creation
 hspeed = type_create
-vspeed = 1
+vspeed = area_vspeed * 0.75

@@ -3,4 +3,4 @@ turret = enemy_create(enemy_arm_hammer, x, y, choose(-1, 1), 0, id, "Instances_A
 turret.parent = id
 
 hspeed = type_create
-vspeed = 1
+vspeed = area_vspeed * 0.75

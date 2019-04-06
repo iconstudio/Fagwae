@@ -1,9 +1,9 @@
 /// @description Launching
-home_angle = image_angle
-direction = home_angle
+homing_angle = image_angle
+direction = homing_angle
 speed = 0.5
-gravity_direction = home_angle
-gravity = 0.4
+gravity_direction = homing_angle
+gravity = 0.2
 
 homing = true
 parent = noone
