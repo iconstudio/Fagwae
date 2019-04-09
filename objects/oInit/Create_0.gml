@@ -132,8 +132,11 @@ enemy_init_indeterminate()
 game_set_speed(60, gamespeed_fps)
 randomize()
 instance_create_layer(0, 0, "Screen", oGlobal)
-global.__ttv = room_height / seconds(12)
-#macro area_vspeed global.__ttv
+global.game_velocity = [room_height / seconds(11), room_height / seconds(10) // 1
+, room_height / seconds(9.5), room_height / seconds(8) // 3
+, room_height / seconds(7), room_height / seconds(6.5) // 5
+, room_height / seconds(5), room_height / seconds(3.5)] // 7
+#macro area_vspeed global.game_velocity[0]
 
 // gamepad
 instance_create_layer(0, 0, "Screen", oGamepad)

@@ -29,6 +29,7 @@ if global.extreme
 	octo_type = enemy_octagon_4
 
 script_stage1_ready()
+area_enemy_push(seconds(3), enemy_spread_1, 0, 350, -48)
 area_enemy_push(jako_delay, enemy_octagon_5, pathJakoFormationLeft, 90, -48)
 area_enemy_push(jako_delay, enemy_octagon_5, pathJakoFormationLeft, 120, -48)
 area_enemy_push(jako_delay, enemy_octagon_5, pathJakoFormationLeft, 150, -48)

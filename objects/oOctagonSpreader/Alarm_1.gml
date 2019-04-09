@@ -1,5 +1,4 @@
 /// @description Shooting 4
-
 if y < 700 {
 	var sspd = 3 + global.stage * 0.125
 	var pd = point_direction(x, y, global.px, global.py)

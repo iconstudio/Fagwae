@@ -3727,6 +3727,14 @@
             }
         },
         {
+            "Key": "fed7e034-8bfe-4f4d-b003-b975c760cfcb",
+            "Value": {
+                "id": "2431dfdb-42c3-443e-adc8-0d300869403f",
+                "resourcePath": "objects\\oFrameScoutShort\\oFrameScoutShort.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "fefdc8ba-b2b0-4cec-895f-6a0b34853589",
             "Value": {
                 "id": "7754511c-eded-4699-b440-50855459d162",

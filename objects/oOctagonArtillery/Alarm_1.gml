@@ -1,5 +1,3 @@
-/// @description 
-
 var dir = point_direction(x, y, global.px, global.py)
 enemy_shot(x, y, shot_speed, dir)
 if global.extreme {
