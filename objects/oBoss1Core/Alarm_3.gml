@@ -1,5 +1,4 @@
 /// @description Dying
-
 enemy_arm_explode()
 
 dead = true

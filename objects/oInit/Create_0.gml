@@ -127,16 +127,21 @@ enemy_init_shape()
 enemy_init_frame()
 enemy_init_arm()
 enemy_init_indeterminate()
+global.__cheat_invincible = false
+global.__cheat_powerful = false
+global.__cheat_inf_bombs = false
 
 // general
-game_set_speed(60, gamespeed_fps)
+game_set_speed(100, gamespeed_fps)
 randomize()
-instance_create_layer(0, 0, "Screen", oGlobal)
 global.game_velocity = [room_height / seconds(11), room_height / seconds(10) // 1
 , room_height / seconds(9.5), room_height / seconds(8) // 3
 , room_height / seconds(7), room_height / seconds(6.5) // 5
 , room_height / seconds(5), room_height / seconds(3.5)] // 7
 #macro area_vspeed global.game_velocity[0]
+#macro player_hspeed room_width / seconds(3.8)
+#macro player_vspeed room_height / seconds(5.5)
+instance_create_layer(0, 0, "Screen", oGlobal)
 
 // gamepad
 instance_create_layer(0, 0, "Screen", oGamepad)

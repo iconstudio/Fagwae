@@ -1,5 +1,4 @@
 /// @description Enter the name of profile
-
 if dmode {
 	if dalpha > -1 {
 		dalpha -= 0.01

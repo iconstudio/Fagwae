@@ -1,7 +1,6 @@
 /// @description Creation
 name = "OCTAGON"
-
-vspeed = 3
+vspeed = player_vspeed * 0.75
 y_target = y + room_height * 0.5
 
 shot_mode = -1

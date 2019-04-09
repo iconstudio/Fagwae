@@ -1,8 +1,6 @@
 /// @description Enter
-
 kstring = ""
 
-lastkey = -1
 dmode = 0
 dalpha = 1
 

@@ -1,8 +1,7 @@
 /// @description Updating Background and Creating pushes
-if brightness < 1
-	brightness += 0.014
-else
-	brightness = 1
+brightness = brightness_time / brightness_period
+if brightness_time < brightness_period
+	brightness_time++
 
 if !global.playeralive
 	exit

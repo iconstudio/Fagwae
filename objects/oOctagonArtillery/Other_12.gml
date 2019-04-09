@@ -14,7 +14,6 @@ if moving_mode == -1 { // at first
 		}
 	}
 } else if moving_mode == 0 {
-	paddition = 0
 } else if moving_mode == 4 {
 	if abs(x - xstart) < 4 {
 		instance_destroy()
@@ -29,7 +28,7 @@ if moving_mode == -1 { // at first
 
 enemy_arm_fix(shot_rotation)
 shot_rotation = rotate_begin + rotate_time / rotate_period * 360
-if rotating {
+if moving_mode > 0 {
 	if rotate_time < rotate_period
 		rotate_time++
 	else

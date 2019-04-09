@@ -21,7 +21,7 @@ appear_period = seconds(2)
 moving_mode = -1 // 0: none, 1: go faster, 2: rotate, 3: slow down, 4: retreat
 
 shot_mode = 0
-shot_speed = 5 + global.stage * 0.333
+shot_speed = room_height / seconds(4)
 shot_count = 0
 
 rotating = false

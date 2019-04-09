@@ -8,8 +8,8 @@ enemy_shot(x, y, shot_speed, shot_dir)
 enemy_play_shot()
 
 if ++shot_count < 3 {
-	alarm[0] = max(1, 10 - global.stage * 0.25)
+	alarm[0] = shot_period
 } else {
 	shot_count = 0
-	alarm[0] = max(20, 55 - global.stage * 3 - global.extreme * 10)
+	alarm[0] = shot_period_continue
 }

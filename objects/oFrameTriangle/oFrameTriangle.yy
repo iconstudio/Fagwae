@@ -5,32 +5,12 @@
     "name": "oFrameTriangle",
     "eventList": [
         {
-            "id": "c463caea-a219-4662-bf8d-5ed87c389fc3",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 8,
-            "m_owner": "2b263c09-4b2b-4d24-ab5c-c6b2b3f02ed4"
-        },
-        {
             "id": "4db84105-4225-4788-8cf2-08975176111f",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 11,
-            "eventtype": 7,
-            "m_owner": "2b263c09-4b2b-4d24-ab5c-c6b2b3f02ed4"
-        },
-        {
-            "id": "2cc43c26-4685-48b9-943e-8a3f9d8d8e68",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 12,
             "eventtype": 7,
             "m_owner": "2b263c09-4b2b-4d24-ab5c-c6b2b3f02ed4"
         }

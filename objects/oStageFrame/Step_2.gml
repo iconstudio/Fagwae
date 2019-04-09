@@ -1,5 +1,3 @@
-/// @description 
-
 event_inherited()
 
 background_param += param_speed

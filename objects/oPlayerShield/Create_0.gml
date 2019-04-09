@@ -3,7 +3,6 @@ parent = noone
 progress = 0
 progress_period = seconds(0.05)
 alarm[0] = progress_period
-collide_list = ds_list_create()
 collide_time = 0
 collide_period = seconds(0.1)
 // DPS = 30, 3 damage per collide_period

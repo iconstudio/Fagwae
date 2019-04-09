@@ -1439,14 +1439,6 @@
             }
         },
         {
-            "Key": "673c9b64-44b2-46f3-a38e-2135f3d5edbf",
-            "Value": {
-                "id": "45f75b52-b377-4103-9438-3b4e6b9dc419",
-                "resourcePath": "scripts\\menu_outta\\menu_outta.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "6a91fb6a-e04e-4392-8cd8-bc6c5db0d752",
             "Value": {
                 "id": "5827b3da-502f-4d14-82e9-18f317dac765",
@@ -2495,14 +2487,6 @@
             }
         },
         {
-            "Key": "ac2fd7fa-d2ad-4e7f-9635-1f13b24da491",
-            "Value": {
-                "id": "03eeb302-b72e-4ce7-8aba-ebf1fce65fd0",
-                "resourcePath": "scripts\\key_press\\key_press.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "ad7377fe-5e48-4ae6-9efc-77b82d53e581",
             "Value": {
                 "id": "8ee89248-14f5-44a3-95ce-356b349fc7ec",
@@ -3247,14 +3231,6 @@
             }
         },
         {
-            "Key": "e252e354-e775-4fea-9bca-f65ab0db3924",
-            "Value": {
-                "id": "ade811a8-54f9-44d4-8bde-d5bbbf7c292f",
-                "resourcePath": "scripts\\key_release\\key_release.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "e2fe8492-f457-4644-a1f9-3128279d3d66",
             "Value": {
                 "id": "7e974cd5-cbdd-44c7-ae34-83be1d30d132",
@@ -3769,10 +3745,7 @@
     ],
     "script_order": [
         "a386477c-ceef-494b-8863-34f467b8dded",
-        "673c9b64-44b2-46f3-a38e-2135f3d5edbf",
         "77048ee1-cbfa-4b9e-a3b1-451d034b5c45",
-        "ac2fd7fa-d2ad-4e7f-9635-1f13b24da491",
-        "e252e354-e775-4fea-9bca-f65ab0db3924",
         "73b53c8a-85b8-48d6-9e80-e10c657478b3",
         "991f70c1-f5b0-47d4-b992-6abaa76a896f",
         "cd9710d1-c2c0-40c1-9333-df0dd26ac5e5",

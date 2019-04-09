@@ -23,7 +23,7 @@ arm_instances[arm_number].org = 0
 arm_instances[arm_number].dist = 70
 arm_number++
 
-event_user(2)
+event_user(3)
 
 if ++ccnt < 6
-	alarm[0] = 6
+	alarm[0] = arm_creation_period

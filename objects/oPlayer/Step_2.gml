@@ -14,5 +14,5 @@ global.px = x
 global.py = y
 
 out_rotation -= 17
-if (out_rotation < 0)
- out_rotation += 360
+if out_rotation < 0
+	out_rotation += 360

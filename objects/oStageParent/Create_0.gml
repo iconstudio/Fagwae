@@ -12,6 +12,8 @@ background_param = 0
 scroll = 0
 rotation = 0
 brightness = 0
+brightness_time = 0
+brightness_period = seconds(1.1)
 
 background_layer_id = layer_get_id("Background_Color")
 background_id = layer_background_get_id(background_layer_id)

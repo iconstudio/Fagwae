@@ -1,2 +1,2 @@
-if script_exists(callback) and !disable
+if !disable
 	script_execute(callback)

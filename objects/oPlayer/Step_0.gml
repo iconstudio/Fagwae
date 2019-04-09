@@ -1,6 +1,6 @@
 /// @description Update
 if invincible > 0 {
-	if !instance_exists(oPlayerShield) { 
+	if !instance_exists(shield) { 
 		shield = instance_create_layer(x, y, "Player_Shield", oPlayerShield)
 		shield.parent = id
 	}
@@ -16,73 +16,60 @@ if !global.playeralive or instance_exists(oGameOver) {
 	exit
 }
 
-var ta = 2
-mx = 0
-my = 0
-var pad_available = (gamepad_index != -1)
-
-if keyboard_check(vk_left) or (pad_available and gamepad_button_check(gamepad_index, gp_padl)) {
-	mx -= 1
-	ta += 6
+// movements
+var mx = 0, my = 0, speed_standard
+var check_left = keyboard_check(vk_left) or io_check_left()
+var check_right = keyboard_check(vk_right) or io_check_right()
+mx = check_right - check_left
+if check_right and check_left {
+	angle_arm_left = 6
+	angle_arm_right = 6
+} else if check_right and !check_left {
+	angle_arm_left = 0
+	angle_arm_right = 6
+} else if !check_right and check_left {
+	angle_arm_left = 6
+	angle_arm_right = 0
+} else {
+	angle_arm_left = 2
+	angle_arm_right = 2
 }
 
-if keyboard_check(vk_right) or (pad_available and gamepad_button_check(gamepad_index, gp_padr)) {
-	mx += 1
-	ta += 6
-}
-
-if keyboard_check(vk_up) or (pad_available and gamepad_button_check(gamepad_index, gp_padu)) {
-	my -= 1
-}
-
-if keyboard_check(vk_down) or (pad_available and gamepad_button_check(gamepad_index, gp_padd)) {
-	my += 1
-}
+var check_up = keyboard_check(vk_up) or io_check_up()
+var check_down = keyboard_check(vk_down) or io_check_down()
+my = check_down - check_up
 
 // move slowly
 if keyboard_check(vk_shift) or io_check_triggerL() or io_check_buttonL() {
-	movespd = moveospd / 1.5
+	speed_standard = 0.666
+	angle_arm_left = 0
+	angle_arm_right = 0
 	slow = true
-	ta = 0
 } else {
-	movespd = moveospd
+	speed_standard = 1
 	slow = false
 }
 
-var analogue = false
-if pad_available {
-	var ahor = gamepad_axis_value(gamepad_index, gp_axislh)
-	var aver = gamepad_axis_value(gamepad_index, gp_axislv)
-	//show_debug_message(ahor)
-	if round(ahor) != 0 or round(aver) != 0 {
-		analogue = true
-
-		if ahor != 0 and ta != 0
-			ta += 6
-		direction = point_direction(0, 0, ahor, aver)
-		speed += point_distance(0, 0, ahor, aver)
-	}
-}
-if analogue {
-	
-} else {
+if mx != 0 or my != 0 {
 	var mhs = mx * 2
 	var mvs = my * 2
 	if mx != 0 and my != 0 {
-		mhs *= movesqr
-		mvs *= movesqr
+		mhs *= speed_sqrt
+		mvs *= speed_sqrt
 	}
+
 	hspeed += mhs
 	vspeed += mvs
+	friction = 0
+} else {
+	friction = 0.6
 }
-cangle += (ta - cangle) * 0.25
 angle_player = -hspeed * 2
-
-if speed > movespd
-	speed = movespd
+hspeed = clamp(hspeed, -hspeed_max, hspeed_max)
+vspeed = clamp(vspeed, -vspeed_max, vspeed_max)
+speed *= speed_standard
 
 attack_check = (bomb_mode == 0) and (keyboard_check(ord("Z")) or io_check_triggerR() or io_check_buttonR() or io_check_padA())
-
 if attack_check
 	attack_count = 3
 
@@ -90,18 +77,18 @@ if attack_delay > 0 {
 	attack_delay--
 } else {
 	if attack_count > 0 {
-		var let, sangle = 90 + angle_arm + angle_player + random(1) - 0.5
-		let = instance_create_layer(x + out_ax + lengthdir_x(40, sangle - cangle), y + 3 + out_ay + lengthdir_y(40, sangle - cangle), "Bullet_Player", oPlayerBullet)
-		let.direction = sangle - cangle
+		var let, sangle = 90 + angle_player + random(1) - 0.5
+		let = instance_create_layer(x + out_ax + lengthdir_x(40, sangle - angle_arm_right), y + 3 + out_ay + lengthdir_y(40, sangle - angle_arm_right), "Bullet_Player", oPlayerBullet)
+		let.direction = sangle - angle_arm_right
 		let.image_angle = let.direction - 90
 		let.image_index = attack_frame
-		let.speed = 26
+		let.speed = shot_speed
 
-		let = instance_create_layer(x - out_ax + lengthdir_x(40, sangle + cangle), y + 3 - out_ay + lengthdir_y(40, sangle + cangle), "Bullet_Player", oPlayerBullet)
-		let.direction = sangle + cangle
+		let = instance_create_layer(x - out_ax + lengthdir_x(40, sangle + angle_arm_left), y + 3 - out_ay + lengthdir_y(40, sangle + angle_arm_left), "Bullet_Player", oPlayerBullet)
+		let.direction = sangle + angle_arm_left
 		let.image_angle = let.direction - 90
 		let.image_index = attack_frame
-		let.speed = 26
+		let.speed = shot_speed
 
 		audio_play_sound(soundShotPlayer, 5, false)
 	}

@@ -1,11 +1,12 @@
 /// @description Creation
 name = "OCTAGON"
 
+velocity = player_vspeed * 0.75
 if path_exists(type_create) {
-	path_start(type_create, 3, path_action_stop, false)
+	path_start(type_create, velocity, path_action_stop, false)
 } else {
 	hspeed = 0
-	vspeed = area_vspeed
+	vspeed = velocity
 
 	if global.extreme
 		alarm[0] = seconds(random(3))
@@ -14,7 +15,7 @@ if path_exists(type_create) {
 }
 
 shot_mode = -1
-shot_speed = 2.5 + global.stage * 0.25
+shot_speed = room_width / seconds(3.1)
 shot_count = 0
 if global.extreme {
 	shot_period1 = seconds(random(2) + 0.1)

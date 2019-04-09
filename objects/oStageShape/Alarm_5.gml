@@ -14,12 +14,13 @@ if deco_count > deco_min {
 	var ly = lengthdir_y(1, rotation + deco_count * 42)
 	with instance_create_layer(room_width * 0.5 + lx * 204, room_height * 0.5 + deco_count * 144 + scroll, layer, oShapeBackFlash) {
 		image_angle = ly * 56
+		vspeed = other.back_speed
 
 		screen_wave(x, y, 30 + random(10))
 		repeat 2 + irandom(2) {
 			with instance_create_layer(x, y, "Effect", oParticleFlameGenerator) {
 				direction = random(360)
-				speed = 4 + random(8)
+				speed = 4 + random(4)
 				motion_add(90, 1 + random(1))
 			}
 		}

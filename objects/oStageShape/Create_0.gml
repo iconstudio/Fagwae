@@ -6,10 +6,12 @@ next = oStageFrame
 back_color = 0
 square_saturation = 0
 param_speed = (0.1 * 192 - 5) / 192
-back_speed = 10
-back_speed_target = 10
+back_speed_begin = room_height / seconds(3)
+back_speed_target = room_height / seconds(7)
+back_speed = back_speed_begin
+back_speed_gap = back_speed_target - back_speed_begin
 back_time = 0
-back_period = seconds(2)
+back_period = seconds(4)
 
 // back decorataions
 back_count = 0
@@ -18,7 +20,6 @@ deco_min_opt = -5
 deco_count = 3
 deco_mode = 0
 deco_fail = false
-deco_shake_period = seconds(0.4)
 deco_fail_period = seconds(1)
 
 // Initializing stage
@@ -29,7 +30,6 @@ if global.extreme
 	octo_type = enemy_octagon_4
 
 script_stage1_ready()
-area_enemy_push(seconds(3), enemy_spread_1, 0, 350, -48)
 area_enemy_push(jako_delay, enemy_octagon_5, pathJakoFormationLeft, 90, -48)
 area_enemy_push(jako_delay, enemy_octagon_5, pathJakoFormationLeft, 120, -48)
 area_enemy_push(jako_delay, enemy_octagon_5, pathJakoFormationLeft, 150, -48)

@@ -38,14 +38,14 @@ if hp > 0 {
 
 	with instance_create_layer(x + out_ax, y + 3 + out_ay, "Player", oPlayerPiece) {
 		sprite_index = sPlayerArm
-		image_angle = other.angle_player + other.angle_arm - other.cangle
+		image_angle = other.angle_player - other.angle_arm_right
 		hspeed = -random(4) - 2
 		vspeed = -random(7) - 6
 	}
 
 	with instance_create_layer(x - out_ax, y + 3 + out_ay, "Player", oPlayerPiece) {
 		sprite_index = sPlayerArm
-		image_angle = other.angle_player + other.angle_arm + other.cangle
+		image_angle = other.angle_player + other.angle_arm_left
 		hspeed = random(4) + 2
 		vspeed = -random(7) - 6
 	}

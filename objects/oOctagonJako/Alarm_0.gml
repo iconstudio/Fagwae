@@ -1,5 +1,4 @@
 /// @description Attacking
-
 var pd = point_direction(x, y, global.px, global.py)
 enemy_play_shot()
 

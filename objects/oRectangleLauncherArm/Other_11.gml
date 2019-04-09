@@ -2,6 +2,6 @@
 name = "ARM"
 
 if global.extreme
-	shot_period = seconds(max(0.06, 0.2 - global.stage * 0.5))
+	shot_period = seconds(max(0.04, 0.1 - global.stage * 0.05))
 else
-	shot_period = seconds(max(0.1, 0.5 - global.stage * 0.15))
+	shot_period = seconds(max(0.08, 0.2 - global.stage * 0.07))

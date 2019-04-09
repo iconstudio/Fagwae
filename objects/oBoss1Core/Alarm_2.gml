@@ -1,5 +1,4 @@
 /// @description Exploding
-
 var radir = random(360)
 var radis = random(instance_number(oEnemyParent) * 6 + 36)
 
@@ -15,4 +14,4 @@ for (var i = 0; i < arm_count; ++i) {
 
 enemy_explode(10 + irandom(5), 0, 2 + irandom(2), 0, lengthdir_x(radis, radir), lengthdir_y(radis, radir))
 
-alarm[2] = 12 + random(3)
+alarm[2] = seconds(0.18 + random(0.05))

@@ -1,9 +1,8 @@
 /// @description Creation
 name = "OCTAGON"
-
 vspeed = 12
 
-shot_speed = 4.5 + global.stage * 0.25
+shot_speed = room_width / seconds(3.1)
 shot_count = 0
 if global.extreme
 	shot_period = seconds(max(0.05, 0.12 - global.stage * 0.04))

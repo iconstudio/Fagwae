@@ -1,8 +1,7 @@
 /// @description Attacking
+alarm[0] = shot_period
 if y >= screen_height - 200 or y < 10
 	exit
-
-alarm[0] = shot_period
 
 var ax =  + lengthdir_x(22, shot_direction)
 var ay =  + lengthdir_y(22, shot_direction)
