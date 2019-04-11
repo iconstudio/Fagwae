@@ -1,5 +1,4 @@
 /// @description Pattern 0
-
 var pd = point_direction(x, y, global.px, global.py)
 enemy_shot(x, y, path_speed * 0.5 + shot_speed, pd + lengthdir_x(20, shot_count * 46))
 enemy_shot(x, y, path_speed * 0.5 + shot_speed, pd + lengthdir_y(20, shot_count * 46))
@@ -9,4 +8,4 @@ if global.extreme
 enemy_play_shot()
 
 if ++shot_count < 10 + global.extreme * 4
-	alarm[0] = 6 - global.extreme * 4
+	alarm[0] = seconds(0.22 - global.extreme * 0.5)

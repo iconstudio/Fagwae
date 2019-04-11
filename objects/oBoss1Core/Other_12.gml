@@ -9,8 +9,8 @@ if appearing {
 		alarm[1] = seconds(1)
 	}
 } else if hp > 0 {
-	x = room_width * 0.5 + lengthdir_x(move_distance * 4, move_angle * 3)
-	y = fixy + lengthdir_y(move_distance, move_angle * 6)
+	x = room_width * 0.5 + lengthdir_x(move_distance * 4, move_angle)
+	y = fixy + lengthdir_y(move_distance, move_angle * 2)
 
 	move_distance = move_distance_value * move_distance_time / move_distance_period
 	if move_distance_time < move_distance_period

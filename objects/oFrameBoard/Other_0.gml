@@ -1,3 +1,3 @@
 /// @description Specilalization of Destroying
-if y > room_height + 90
+if bbox_top > room_height
 	instance_destroy()

@@ -6,6 +6,6 @@ if global.extreme // rotating
 else
 	shot_mode = 0
 shot_direction = type_create
-shot_speed = player_hspeed * 0.333
-shot_period = seconds(max(0.075, 0.25 - global.stage * 0.07))
+shot_speed = player_hspeed * 0.79
+shot_period = seconds(0.4 - global.extreme * 0.1)
 alarm[0] = seconds(1)

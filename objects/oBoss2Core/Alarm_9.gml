@@ -1,5 +1,4 @@
 /// @description Dying
-
 enemy_arm_explode()
 with glove_left
 	event_user(0)

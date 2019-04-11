@@ -1,5 +1,4 @@
 /// @description Exploding
-
 var radir = random(360)
 var radis = random(20)
 

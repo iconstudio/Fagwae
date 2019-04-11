@@ -1,3 +1,3 @@
 /// @description Retreating
-moving_mode = 4
+moving_mode = 2
 rotating = false

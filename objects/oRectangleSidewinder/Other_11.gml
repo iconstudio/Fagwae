@@ -1,7 +1,7 @@
 /// @description Creation
 name = "RECTANGLE"
 
-enemy_arm_init(enemy_arm_rectangle_2, 4, 31, noone, 0, "Instances_Arms_Below")
+enemy_arm_init(enemy_arm_rectangle_2, 4, 26, noone, 0, "Instances_Arms_Below")
 
 x_target = x
 x_begin = x

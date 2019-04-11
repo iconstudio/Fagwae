@@ -15,6 +15,13 @@ if prohibit_count > 0 {
 	}
 }
 
+if flag_await_clear {
+	if !instance_exists(oEnemyParent)
+		flag_await_clear = false
+	else
+		exit
+}
+
 if trigger_counter-- <= 0 {
 	if trigger_size - trigger_pos > 0 {
 		trigger_datalast = trigger_push[trigger_pos++]

@@ -6,6 +6,7 @@ flag_boss = false
 flag_stop = false
 flag_await_die = false
 flag_supply = true
+flag_await_clear = false
 
 // background
 background_param = 0

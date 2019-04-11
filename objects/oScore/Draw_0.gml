@@ -1,12 +1,13 @@
 /// @description Drawing Score
-if score_alpha > 0 {
+if score_show_time > 0 {
 	var _param = 0, _brite = 1
 	with oStageParent {
 		_param = background_param
 		_brite = brightness
 	}
 
-	draw_set_alpha(score_show_time / score_show_period)
+	var salpha = score_show_time / score_show_period
+	draw_set_alpha(salpha)
 	draw_set_halign(0)
 	draw_set_valign(1)
 	draw_set_color(make_color_hsv(color_parse(_param - 25), 172, 210 * _brite))

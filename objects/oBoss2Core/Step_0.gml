@@ -6,13 +6,13 @@ if pattern == 0 {
 		pattern_opened = false
 	} else { // 확산탄
 		if !pattern_opened { // only at first
-			alarm[0] = 10
+			alarm[0] = seconds(0.17)
 			pattern_opened = true
 		}
 	}
 } else if pattern == 1 {
 	if !pattern_opened { // only at first
-			alarm[1] = 20 - global.extreme * 10
+			alarm[1] = seconds(0.43 - global.extreme * 0.17)
 			pattern_opened = true
 			shot_count = 0
 		}
@@ -33,9 +33,9 @@ if pattern == 0 {
 	else if y > ty
 		y -= 2
 
-	if !pattern_opened and pattern_await++ > 70 - global.extreme * 30 {
+	if !pattern_opened and pattern_await++ > pattern02_await {
 		path_last = pathBoss2_1
-		path_start(pathBoss2_1, 2, path_action_continue, false)
+		path_start(pathBoss2_1, pattern02_speed, path_action_continue, false)
 
 		alarm[2] = 50 - global.extreme * 40
 		pattern_opened = true
@@ -59,8 +59,8 @@ if pattern == 0 {
 	else if y > ty
 		y -= 2
 
-	if !pattern_opened and pattern_await++ > 30 {
-		alarm[3] = 30
+	if !pattern_opened and pattern_await++ > seconds(0.5) {
+		alarm[3] = seconds(0.5)
 		pattern_opened = true
 		pattern_await = 0
 		shot_count = 0
@@ -69,16 +69,16 @@ if pattern == 0 {
 	x = room_width * 0.5
 	y = 180
 
-	if !pattern_opened and pattern_await++ > 30 {
-		alarm[4] = 30
+	if !pattern_opened and pattern_await++ > seconds(0.5) {
+		alarm[4] = seconds(0.5)
 		pattern_opened = true
 		pattern_await = 0
 	}
 	
 	pattern04_count++
 } else if pattern == 5 {
-	if !pattern_opened and pattern_await++ > 30 {
-		alarm[5] = 60
+	if !pattern_opened and pattern_await++ > seconds(0.5) {
+		alarm[5] = seconds(1)
 		pattern_opened = true
 		pattern_await = 0
 	}

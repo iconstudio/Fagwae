@@ -1,33 +1,35 @@
-/// @description Shooting 424
-if moving_mode == 4
+/// @description Shooting 4-2-4
+if moving_mode == 2
 	exit
 
-var dir = point_direction(x, y, global.px, global.py)
 if shot_mode < 2 {
+	if shot_count == 0
+		shot_direction = point_direction(x, y, global.px, global.py)
 	if shot_count mod 2 == 0 {
-		enemy_shot(x, y, shot_speed, dir - 15)
-		enemy_shot(x, y, shot_speed, dir)
-		enemy_shot(x, y, shot_speed, dir + 15)
-		enemy_shot(x, y, shot_speed, dir + 30)
+		enemy_shot(x, y, shot_speed, shot_direction - 22)
+		enemy_shot(x, y, shot_speed, shot_direction)
+		enemy_shot(x, y, shot_speed, shot_direction + 22)
+		enemy_shot(x, y, shot_speed, shot_direction + 44)
 		enemy_play_shot()
 	} else {
-		enemy_shot(x, y, shot_speed, dir - 30)
-		enemy_shot(x, y, shot_speed, dir - 15)
-		enemy_shot(x, y, shot_speed, dir)
-		enemy_shot(x, y, shot_speed, dir + 15)
+		enemy_shot(x, y, shot_speed, shot_direction - 44)
+		enemy_shot(x, y, shot_speed, shot_direction - 22)
+		enemy_shot(x, y, shot_speed, shot_direction)
+		enemy_shot(x, y, shot_speed, shot_direction + 22)
 		enemy_play_shot()
 	}
 	if ++shot_count < 3 + global.extreme {
-		alarm[0] = max(7, 11.5 - global.stage * 0.5 - global.extreme * 2)
+		alarm[0] = shot_period1
 	} else {
 		shot_count = 0
 		shot_mode++
 
-		alarm[0] = max(25, 42 - global.stage * 3 - global.extreme * 5)
+		alarm[0] = shot_period1_continue
 	}
 } else {
-	enemy_shot(x, y, shot_speed, dir - 7.5)
-	enemy_shot(x, y, shot_speed, dir + 7.5)
+	shot_direction = point_direction(x, y, global.px, global.py)
+	enemy_shot(x, y, shot_speed, shot_direction - 11)
+	enemy_shot(x, y, shot_speed, shot_direction + 11)
 	enemy_play_shot()
 
 	shot_count = 0

@@ -1,4 +1,5 @@
 /// @description Setting up main menu
+window_set_cursor(cr_default)
 draw_mode = 0
 frame = 0
 

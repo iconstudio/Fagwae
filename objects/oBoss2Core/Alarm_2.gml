@@ -20,13 +20,13 @@ enemy_play_shot()
 
 if ++shot_count < 2 + round((1 - hp / hp_max) * 2) {
 	if global.extreme
-		alarm[2] = 4
+		alarm[2] = seconds(0.1)
 	else
-		alarm[2] = 9
+		alarm[2] = seconds(0.26)
 } else if pattern == 2 {
 	shot_count = 0
 	if global.extreme
-		alarm[2] = 60
+		alarm[2] = seconds(1)
 	else
-		alarm[2] = 90
+		alarm[2] = seconds(1.5)
 }

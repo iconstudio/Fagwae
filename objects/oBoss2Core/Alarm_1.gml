@@ -1,5 +1,4 @@
 /// @description Pattern 1
-
 var pd = point_direction(x, y, global.px, global.py)
 
 if ++shot_count < 5 {
@@ -9,7 +8,7 @@ if ++shot_count < 5 {
 	for (var i = 0; i < counter; ++i)
 		enemy_shot(x, y, shot_speed, shot_angular + i * 13)
 
-	alarm[1] = 20 - global.extreme * 12
+	alarm[1] = seconds(0.5 - global.extreme * 0.17)
 } else if global.extreme {
 	var counter = 8
 	var shot_angular = pd - counter * 7.5

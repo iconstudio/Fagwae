@@ -3,14 +3,12 @@ event_inherited()
 
 if homing {
 	if homing_time < homing_period {
-		homing_angle += get_rotation_next(homing_angle, point_direction(x, y, global.px, global.py), 3)
+		direction += get_rotation_next(direction, point_direction(x, y, global.px, global.py), 1)
 
-		if global.extreme
-			direction = homing_angle
-		gravity_direction = homing_angle
 		image_angle = direction
 		homing_time++
 	}
+	speed = velocity_value * velocity_time / velocity_period
+	if velocity_time < velocity_period
+		velocity_time++
 }
-if speed > 3
-	speed = 3

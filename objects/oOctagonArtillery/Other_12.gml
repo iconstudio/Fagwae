@@ -1,10 +1,9 @@
 /// @description Update
 event_inherited()
 
-if moving_mode == -1 { // at first
+if moving_mode == 0 { // at first
 	var appear_ratio = appear_time / appear_period
 	x = xstart + appear_ratio * appear_distance_x
-	y = ystart + appear_ratio * appear_distance_y
 	if appear_time < appear_period {
 		appear_time++
 		if appear_time == appear_period {
@@ -13,22 +12,17 @@ if moving_mode == -1 { // at first
 			rotating = true
 		}
 	}
-} else if moving_mode == 0 {
-} else if moving_mode == 4 {
-	if abs(x - xstart) < 4 {
+} else if moving_mode == 2 {
+	x = xstart + ease_out_quad(1 - disappear_time / disappear_period) * appear_distance_x
+	if disappear_time < disappear_period
+		disappear_time++
+	else
 		instance_destroy()
-	} else if x > xstart { // left
-		if hspeed != -3
-			hspeed += (-3 - hspeed) / 8
-	} else if x < xstart { // right
-		if hspeed != 3
-			hspeed += (3 - hspeed) / 8
-	}
 }
 
 enemy_arm_fix(shot_rotation)
 shot_rotation = rotate_begin + rotate_time / rotate_period * 360
-if moving_mode > 0 {
+if rotating {
 	if rotate_time < rotate_period
 		rotate_time++
 	else

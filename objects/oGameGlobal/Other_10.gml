@@ -9,6 +9,6 @@ global.py = room_height - 100
 
 var player = instance_create_layer(global.px, global.py, "Player", oPlayerInit)
 if player_isfirst {
-	player.invincible = 780
+	player.invincible = seconds(6)
 	player_isfirst = false
 }

@@ -5,6 +5,7 @@ image_yscale *= 1.2
 
 enemy_arm_init(enemy_arm_spread_1, 6, 34, script_enemy_arm_init_0)
 
+y = 180
 x_target = x
 if type_create == LEFT {
 	x_target = 160
@@ -15,25 +16,24 @@ if type_create == LEFT {
 }
 xstart = x
 appear_distance_x = x_target - x
-appear_distance_y = max(0, 100 - ystart)
 appear_time = 0
 appear_period = seconds(2)
-moving_mode = -1 // 0: none, 1: go faster, 2: rotate, 3: slow down, 4: retreat
+moving_mode = 0 // 0: none, 1: attack, 2: retreat
 
 shot_mode = 0
 shot_speed = room_height / seconds(4)
+shot_direction = 0
 shot_count = 0
-
+shot_period1 = seconds(max(0.12, 0.3 - global.stage * 0.06 - global.extreme * 0.1))
+shot_period1_continue = seconds(max(0.64 - global.extreme * 0.2, 0.9 - global.stage * 0.16))
+shot_period1_continue = seconds(max(0.64 - global.extreme * 0.2, 0.9 - global.stage * 0.16))
 rotating = false
 rotation = 0
 rotate_begin = random(360)
 rotate_time = 0
 rotate_period = seconds(7)
 
-fleeaway = false
-fleeaway_await_time = 0
 fleeaway_await_period = seconds(10)
-fleeaway_time = 0
-fleeaway_period = seconds(4)
-
+disappear_time = 0
+disappear_period = seconds(3.2)
 alarm[2] = fleeaway_await_period

@@ -46,6 +46,8 @@ if global.extreme {
 	pattern04_list = [1, 3, 2]
 }
 pattern02_count = 0
+pattern02_await = seconds(1.2 - global.extreme * 0.6)
+pattern02_speed = player_hspeed * 0.8
 pattern03_count = 0
 pattern04_count = 0
 pattern04_picked = choose(LEFT, RIGHT)
@@ -55,4 +57,4 @@ pattern05_tempo = 0
 rotation = 0
 
 shot_count = 0
-shot_speed = 6
+shot_speed = room_width / seconds(3.8)

@@ -27,6 +27,7 @@ if draw_mode > 0 {
 	if reversing_time > reversing_period {
 		if draw_mode == MODE_GAME {
 			instance_destroy()
+			window_set_cursor(cr_none)
 			room_goto_next()
 		} else if draw_mode == MODE_EXIT {
 			game_end()

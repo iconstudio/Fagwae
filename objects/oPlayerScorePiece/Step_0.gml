@@ -1,9 +1,21 @@
 /// @description Tracking player of going down
-
-if y > room_height + 10
+if bbox_top > room_height + 10
 	instance_destroy()
 
-image_angle++
+image_angle += 0.5 * angle_dir
+if !homing {
+	if stop_time > 0 {
+		speed = ease_in_cubic(stop_time / stop_period) * velocity_begin
+		stop_time--
+	} else {
+		enable = true
+
+		vspeed = velocity_time / velocity_period * velocity_value
+		if velocity_time < velocity_period
+			velocity_time++
+	}
+}
+
 if enable {
 	if homing {
 		if !global.playeralive {
@@ -11,17 +23,12 @@ if enable {
 			exit
 		}
 		direction = point_direction(x, y, global.px, global.py)
-		speed = 16
+		speed = homing_velocity
 	} else if global.playeralive {
-		if point_distance(x, y, global.px, global.py) <= 144
+		if point_distance(x, y, global.px, global.py) <= 144 {
 			homing = true
+		}
 	}
 }
 
-if homing {
-	gravity = 0
-} else {
-	gravity = 0.3
-	if vspeed > 4
-		vspeed = 4
-}
+

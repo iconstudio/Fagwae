@@ -22,11 +22,8 @@ if score_gap != 0
 else
 	score_wave -= min(score_wave, 7) / 7
 
-if score_rotate_time < score_rotate_period {
-	score_rotation = score_rotate_time++ / score_rotate_period * 360
-} else {
-	score_rotation = 0
+score_rotation = score_rotate_time / score_rotate_period * 360
+if score_rotate_time < score_rotate_period
+	score_rotate_time++
+else
 	score_rotate_time = 0
-}
-
-//score_rotation = (score_rotation + 5) mod 360

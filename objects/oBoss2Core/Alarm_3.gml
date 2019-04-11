@@ -1,5 +1,4 @@
 /// @description Pattern 3
-
 if dead or (shot_count < 10 and pattern != 3)
 	exit
 
@@ -28,7 +27,6 @@ if global.extreme {
 			motion_add(direction - 90, 1)
 	}
 } else {
-
 	for (i = 0; i < 2; ++i) {
 		if hp > hp_max * 0.5
 			lang = 290 + shot_count * 10
@@ -37,9 +35,9 @@ if global.extreme {
 		lx = x + lengthdir_x(20, lang)
 		ly = y + lengthdir_y(20, lang)
 		with enemy_shot(lx, ly, shot_speed, lang - 14)
-			motion_add(direction + 90, 1)
+			motion_add(direction + 90, 0.6)
 		with enemy_shot(lx, ly, shot_speed, lang + 14)
-			motion_add(direction + 90, 1)
+			motion_add(direction + 90, 0.6)
 	}
 
 	for (i = 0; i < 2; ++i) {
@@ -50,15 +48,15 @@ if global.extreme {
 		lx = x + lengthdir_x(20, lang)
 		ly = y + lengthdir_y(20, lang)
 	with enemy_shot(lx, ly, shot_speed, lang - 14)
-			motion_add(direction - 90, 1)
+			motion_add(direction - 90, 0.6)
 		with enemy_shot(lx, ly, shot_speed, lang + 14)
-			motion_add(direction - 90, 1)
+			motion_add(direction - 90, 0.6)
 	}
 }
 enemy_play_shot()
 
 if ++shot_count < 20 {
-	alarm[3] = 6 - global.extreme * 2
+	alarm[3] = seconds(0.15 - global.extreme * 0.05)
 } else if pattern == 3 {
 	shot_count = 0
 
@@ -88,6 +86,6 @@ if ++shot_count < 20 {
 			pattern_opened = false
 		}
 	} else {
-		alarm[3] = 20 - global.extreme * 8
+		alarm[3] = seconds(0.45 - global.extreme * 0.13)
 	}
 }

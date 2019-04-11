@@ -51,23 +51,24 @@ if keyboard_check(vk_shift) or io_check_triggerL() or io_check_buttonL() {
 }
 
 if mx != 0 or my != 0 {
-	var mhs = mx * 2
-	var mvs = my * 2
+	var mhs = mx * hspeed_max
+	var mvs = my * vspeed_max
 	if mx != 0 and my != 0 {
 		mhs *= speed_sqrt
 		mvs *= speed_sqrt
 	}
 
-	hspeed += mhs
-	vspeed += mvs
-	friction = 0
+	hspeed = mhs
+	vspeed = mvs
 } else {
-	friction = 0.6
+	speed = 0
+}
+if speed != 0 {
+	hspeed = clamp(hspeed, -hspeed_max, hspeed_max)
+	vspeed = clamp(vspeed, -vspeed_max, vspeed_max)
+	speed *= speed_standard
 }
 angle_player = -hspeed * 2
-hspeed = clamp(hspeed, -hspeed_max, hspeed_max)
-vspeed = clamp(vspeed, -vspeed_max, vspeed_max)
-speed *= speed_standard
 
 attack_check = (bomb_mode == 0) and (keyboard_check(ord("Z")) or io_check_triggerR() or io_check_buttonR() or io_check_padA())
 if attack_check

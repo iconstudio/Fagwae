@@ -2,7 +2,7 @@
 if shot_count == 0
 	shot_dir = point_direction(x, y, global.px, global.py)
 
-if y > global.py + 64 {
+if y < global.py + 64 {
 	enemy_shot(x, y, shot_speed, shot_dir)
 	enemy_play_shot()
 }

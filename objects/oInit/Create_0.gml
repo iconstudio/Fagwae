@@ -139,7 +139,7 @@ global.game_velocity = [room_height / seconds(11), room_height / seconds(10) // 
 , room_height / seconds(7), room_height / seconds(6.5) // 5
 , room_height / seconds(5), room_height / seconds(3.5)] // 7
 #macro area_vspeed global.game_velocity[0]
-#macro player_hspeed room_width / seconds(3.8)
+#macro player_hspeed room_width / seconds(3.5)
 #macro player_vspeed room_height / seconds(5.5)
 instance_create_layer(0, 0, "Screen", oGlobal)
 

@@ -20,16 +20,16 @@ if shot_mode == 0 {
 } else {
 	if shot_count++ == 0 {
 		if global.extreme {
-			enemy_shot(x, y, shot_speed + 2, pd - 20)
-			enemy_shot(x, y, shot_speed + 2, pd)
-			enemy_shot(x, y, shot_speed + 2, pd + 20)
+			enemy_shot(x, y, shot_speed, pd - 10)
+			enemy_shot(x, y, shot_speed, pd)
+			enemy_shot(x, y, shot_speed, pd + 10)
 		} else {
-			enemy_shot(x, y, shot_speed + 2, pd)
+			enemy_shot(x, y, shot_speed, pd)
 		}
 		alarm[0] = shot_period_multi
 	} else {
-		enemy_shot(x, y, shot_speed + 2, pd - 14)
-		enemy_shot(x, y, shot_speed + 2, pd + 14)
+		enemy_shot(x, y, shot_speed, pd - 8)
+		enemy_shot(x, y, shot_speed, pd + 8)
 
 		shot_count = 0
 		shot_mode = 0
