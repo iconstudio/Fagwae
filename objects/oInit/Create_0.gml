@@ -134,13 +134,16 @@ global.__cheat_inf_bombs = false
 // general
 game_set_speed(100, gamespeed_fps)
 randomize()
-global.game_velocity = [room_height / seconds(11), room_height / seconds(10) // 1
-, room_height / seconds(9.5), room_height / seconds(8) // 3
-, room_height / seconds(7), room_height / seconds(6.5) // 5
-, room_height / seconds(5), room_height / seconds(3.5)] // 7
-#macro area_vspeed global.game_velocity[0]
-#macro player_hspeed room_width / seconds(3.5)
-#macro player_vspeed room_height / seconds(5.5)
+
+#macro area_vspeed room_height / seconds(11)
+#macro player_hspeed room_width / seconds(3.4)
+#macro player_vspeed room_height / seconds(5.4)
+#macro enemy_bullet_speed_slowest room_width / seconds(5)
+#macro enemy_bullet_speed_slower room_width / seconds(3.7)
+#macro enemy_bullet_speed_slow room_width / seconds(3.4)
+#macro enemy_bullet_speed_medium room_width / seconds(3.1)
+#macro enemy_bullet_speed_fast room_width / seconds(2.8)
+#macro enemy_bullet_speed_faster room_width / seconds(2.6)
 instance_create_layer(0, 0, "Screen", oGlobal)
 
 // gamepad

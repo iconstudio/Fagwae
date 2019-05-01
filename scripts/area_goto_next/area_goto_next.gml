@@ -19,5 +19,4 @@ with instance_create_layer(0,  0, "Backend", next){
 	rotation = other.rotation
 	brightness = other.brightness
 }
-
 instance_destroy()

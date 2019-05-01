@@ -33,7 +33,7 @@ x = room_width * 0.5
 y = -120
 
 path_last = pathBoss2_0
-path_start(pathBoss2_0, 7, path_action_stop, false)
+path_start(pathBoss2_0, room_height / seconds(2.5), path_action_stop, false)
 pattern = 0
 pattern_opened = false
 pattern_await = 0
@@ -55,6 +55,8 @@ pattern05_count = 0
 pattern05_tempo = 0
 
 rotation = 0
+hspeed_value = room_width / seconds(3) // 1.414
+vspeed_value = room_height / seconds(4) // 5
 
 shot_count = 0
-shot_speed = room_width / seconds(3.8)
+shot_speed = enemy_bullet_speed_medium

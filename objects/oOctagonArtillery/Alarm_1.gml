@@ -7,9 +7,9 @@ if shot_count == 1 and global.extreme {
 }
 
 if ++shot_count < 3 {
-	alarm[1] = max(6, 10 - global.stage * 0.333 - global.extreme * 2)
+	alarm[1] = shot_period2
 } else {
 	shot_count = 0
 
-	alarm[0] = seconds(1.7)
+	alarm[0] = seconds(1.9)
 }

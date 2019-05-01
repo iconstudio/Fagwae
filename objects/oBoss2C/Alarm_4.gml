@@ -1,5 +1,4 @@
 /// @description Pattern 5
-
 if dead or (shot_count == 0 and pattern != 5) {
 	pattern05_position = 0
 	exit
@@ -40,8 +39,8 @@ for (i = 0; i < max(2, 5 - shot_count); ++i) {
 enemy_play_shot()
 
 if ++shot_count < 4 + global.extreme + (parent.hp <= parent.hp_max * 0.333) {
-	alarm[4] = 10 - global.extreme
+	alarm[4] = seconds(0.18 - global.extreme * 0.08)
 } else if pattern == 5 {
 	shot_count = 0
-	alarm[4] = 80 - global.extreme * 30
+	alarm[4] = seconds(1.6 - global.extreme * 0.5)
 }

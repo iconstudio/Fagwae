@@ -2,14 +2,8 @@
 name = "OCTAGON"
 vspeed = 6
 
-shot_speed = room_width / seconds(3.1)
+shot_speed = enemy_bullet_speed_medium
 shot_count = 0
-if global.extreme
-	shot_period = seconds(max(0.05, 0.12 - global.stage * 0.04))
-else
-	shot_period = seconds(max(0.1, 0.2 - global.stage * 0.05))
-if global.extreme
-	shot_period_reset = seconds(max(1, 0.466 - global.stage * 0.2) + 0.14)
-else
-	shot_period_reset = seconds(max(2.1, 1.4 - global.stage * 0.37) + 0.14)
-alarm[0] = seconds(2)
+shot_period = global.extreme ? seconds(max(0.05, 0.12 - global.stage * 0.04)) : seconds(max(0.1, 0.2 - global.stage * 0.05))
+shot_period_reset = global.extreme ? seconds(max(0.6, 1.4 - global.stage * 0.2) + 0.2) : seconds(max(1, 1.2 - global.stage * 0.4) + 0.3)
+alarm[0] = seconds(0.7)

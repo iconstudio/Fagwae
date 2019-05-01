@@ -5,6 +5,7 @@ if pattern_before != pattern {
 	shot_count = 0
 }
 
+/*
 if fade_mode == 0 {
 	damaged = 1
 
@@ -14,14 +15,13 @@ if fade_mode == 0 {
 } else if fade_mode == 1 {
 	image_xscale += (1.4 - image_xscale) * 0.333
 }
-
-image_yscale = image_xscale
+image_yscale = image_xscale*/
 
 if instance_exists(parent) and !dead {
 	var tx = parent.x + x_fix
 	var ty = parent.y + y_fix
-	hspeed_target = 1.414
-	vspeed_target = 5
+	hspeed_target = hspeed_target_begin
+	vspeed_target = vspeed_target_begin
 
 	if pattern == 0 {
 	} else if pattern == 1 {
@@ -29,11 +29,11 @@ if instance_exists(parent) and !dead {
 
 		if !pattern_opened {
 			if global.extreme
-				alarm[0] = 20
+				alarm[0] = seconds(0.333)
 			pattern_opened = true
 		}
 	} else if pattern == 2 {
-		hspeed_target = 1.61
+		hspeed_target = hspeed_target_pattern02
 		ty = parent.y + y_fix + 20
 
 		if !pattern_opened {
@@ -41,26 +41,26 @@ if instance_exists(parent) and !dead {
 			pattern_opened = true
 		}
 	} else if pattern == 3 {
-		vspeed_target = 2
+		vspeed_target = vspeed_target_pattern03
 		tx = parent.x + x_fix * 0.5
 		ty = parent.y + y_fix + 50
 
 		if parent.hp <= parent.hp_max * 0.5 and !pattern_opened {
-			alarm[2] = 30
+			alarm[2] = seconds(0.5)
 			pattern_opened = true
 		}
 	} else if pattern == 4 {
-		vspeed_target = 8
+		vspeed_target = vspeed_target_pattern04
 
 		if type_create == parent.pattern04_picked { // go foward
 			ty = parent.y + y_fix + 180
 
 			if !pattern_opened {
-				alarm[3] = 38 - global.extreme * 8
+				alarm[3] = seconds(0.55 - global.extreme * 0.05)
 				pattern_opened = true
 			}
 
-			if pattern04_progress++ > 120 {
+			if pattern04_progress++ > seconds(2) {
 				if !pattern04_ended {
 					if global.extreme {
 						for (var i = 0; i < 6; ++i) {
@@ -87,19 +87,20 @@ if instance_exists(parent) and !dead {
 			ty = parent.y + lengthdir_y(width, 315 + pattern05_rotation)
 		}
 
-		pattern05_position += 2
+		pattern05_position += 1.2 // 2 * 0.6
 		if pattern05_rotation < 110
-			pattern05_rotation += 4
+			pattern05_rotation += 1.2 // 2 * 0.6
 		else
 			pattern05_rotation = 110
 
 		if !pattern_opened {
-			alarm[4] = 40 - global.extreme * 5
+			alarm[4] = seconds(0.7 - global.extreme * 0.08)
 			pattern_opened = true
 			shot_count = 0
 		}
 	}
 
+	//
 	if abs(tx - x) < hspeed_target + 1
 		x = tx
 	else if x < tx

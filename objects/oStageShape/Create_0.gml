@@ -14,6 +14,7 @@ back_period = seconds(4)
 
 // back decorataions
 back_count = 0
+deco_hue = 0
 deco_min = -10
 deco_min_opt = -5
 deco_count = 3
@@ -21,12 +22,11 @@ deco_mode = 0
 deco_fail = false
 deco_fail_period = seconds(1)
 
+global.extreme = true
 // Initializing stage
 global.__st2_line = 0
 var jako_delay = seconds(0.7)
-var octo_type = enemy_octagon_2
-if global.extreme
-	octo_type = enemy_octagon_4
+var octo_type = global.extreme ? enemy_octagon_4 :enemy_octagon_2
 
 script_stage1_ready()
 area_enemy_push(jako_delay, enemy_octagon_5, pathJakoFormationLeft, 90, -48)
@@ -35,7 +35,7 @@ area_enemy_push(jako_delay, enemy_octagon_5, pathJakoFormationLeft, 150, -48)
 area_enemy_push(seconds(1), enemy_octagon_4, pathJakoFormationLeft, 180, -48)
 area_enemy_push(jako_delay, enemy_octagon_5, pathJakoFormationRight, 420, -48)
 area_enemy_push(jako_delay * 2, octo_type, 0, 390, -48)
-/*
+//*
 var cox = 384 + random(100)
 area_enemy_push(jako_delay, enemy_octagon_5, pathJakoFormationRight, cox, -48)
 area_enemy_push(jako_delay, enemy_octagon_5, pathJakoFormationRight, cox, -48)
@@ -93,7 +93,7 @@ for (var j = 0; j < 14; ++j) { // 14 rows
 	cframe_speed = -cframe_speed
 	cframe_count--
 }
-*/
+//*/
 
 area_delay_push(seconds(8))
 area_script_push(seconds(0.2), script_boss_apear, 0, 0, 0)
@@ -122,26 +122,24 @@ area_enemy_push(jako_delay, enemy_octagon_5, pathJakoFormationLeft, 125, -48) //
 //	area_enemy_push(0, enemy_line_1, 1, 580, 480)
 //	area_enemy_push(0, enemy_line_1, -1, -40, 480)
 
-//	if global.extreme
-//		area_delay_push(seconds(0.9))
-//	else
-//		area_delay_push(seconds(1))
+//	area_delay_push(global.extreme ? seconds(0.9) : area_delay_push(seconds(1))
 //}
 
 area_enemy_push(0, enemy_octagon_4, 0, 127, -48)		// 127
 area_enemy_push(seconds(1), enemy_octagon_4, 0, 412, -48)	// w - 127 - 1
 
-area_enemy_push(seconds(3), enemy_spread_2, LEFT, 0, 0)
-area_enemy_push(seconds(1.2), enemy_octagon_4, 0, 330, -48)
-area_enemy_push(seconds(1.2), enemy_octagon_4, 0, 330, -48)
+area_enemy_push(seconds(3.6), enemy_spread_2, LEFT, 0, 0)
+area_enemy_push(seconds(1.8), enemy_octagon_4, 0, 330, -48)
+area_enemy_push(seconds(1.8), enemy_octagon_4, 0, 330, -48)
 area_enemy_push(0, enemy_octagon_4, 0, 330, -48)
-area_script_push(seconds(3), script_await_clearing, 0, 0, 0)
+area_script_push(0, script_await_clearing, 0, 0, 0)
+area_delay_push(seconds(3))
 
 var firstrect = choose(LEFT, RIGHT)
 area_enemy_push(seconds(0.4), enemy_rectangle_2, firstrect, 0, 400 + random(20))
 area_enemy_push(seconds(0.4), enemy_rectangle_2, !firstrect, 0, 300 + random(20))
 area_enemy_push(0, enemy_rectangle_2, firstrect, 0, 200 + random(20))
-area_script_push(seconds(3), script_await_clearing, 0, 0, 0)
+area_script_push(seconds(2), script_await_clearing, 0, 0, 0)
 
 if global.extreme {
 	area_enemy_push(seconds(2.9), enemy_spread_2, RIGHT, 0, 0)
@@ -165,6 +163,7 @@ for (; k < 4; ++k)
 	area_enemy_push(seconds(0.11 + 0.1 * (random(k) * 5) mod 3), enemy_line_2, k & 1, min(max(20, 40 + (k * 219) mod 540), 520), -500 + random(20))
 area_script_push(0, script_await_dying, 0, 0, 0)
 area_enemy_push(seconds(0.1), enemy_line_2, 0, 318, -500)
+area_delay_push(seconds(2))
 
 area_script_push(seconds(0.2), script_boss_apear, 0, 0, 0)
 area_music_push(seconds(0.5), musicBoss)
@@ -173,5 +172,5 @@ area_script_push(0, script_stage_clear, 0, 0, 0)
 
 area_delay_push(seconds(2))
 area_script_push(0, script_shape_disappear, 0, 0, 0)
-area_delay_push(seconds(6))
+area_delay_push(seconds(10))
 area_script_push(0, area_goto_next, 0, 0, 0)

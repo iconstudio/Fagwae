@@ -14,7 +14,7 @@ if global.extreme
 	shot_speed = player_hspeed
 else
 	shot_speed = player_hspeed * 0.8
-shot_speed_multi = room_width / seconds(3.1)
+shot_speed_multi = enemy_bullet_speed_medium
 shot_period = max(1, seconds(0.1 - global.stage * 0.02 - global.extreme * 0.03))
 shot_period_continue = max(1, seconds(0.78 - global.stage * 0.04 - global.extreme * 0.03))
 shot_period_multi = seconds(max(0.2, 0.65 - global.stage * 0.1 - global.extreme * 0.3))

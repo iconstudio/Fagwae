@@ -1,5 +1,4 @@
 /// @description Pattern 2
-
 var pd = point_direction(x, y, global.px, global.py)
 
 if dead or (shot_count == 0 and pattern != 2) {
@@ -20,9 +19,9 @@ enemy_play_shot()
 
 if ++shot_count < 2 + round((1 - hp / hp_max) * 2) {
 	if global.extreme
-		alarm[2] = seconds(0.1)
+		alarm[2] = seconds(0.16)
 	else
-		alarm[2] = seconds(0.26)
+		alarm[2] = seconds(0.3)
 } else if pattern == 2 {
 	shot_count = 0
 	if global.extreme

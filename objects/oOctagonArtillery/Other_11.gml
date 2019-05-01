@@ -19,6 +19,7 @@ appear_distance_x = x_target - x
 appear_time = 0
 appear_period = seconds(2)
 moving_mode = 0 // 0: none, 1: attack, 2: retreat
+rotation = 0
 
 shot_mode = 0
 shot_speed = room_height / seconds(4)
@@ -26,7 +27,7 @@ shot_direction = 0
 shot_count = 0
 shot_period1 = seconds(max(0.12, 0.3 - global.stage * 0.06 - global.extreme * 0.1))
 shot_period1_continue = seconds(max(0.64 - global.extreme * 0.2, 0.9 - global.stage * 0.16))
-shot_period1_continue = seconds(max(0.64 - global.extreme * 0.2, 0.9 - global.stage * 0.16))
+shot_period2 = seconds(max(0.13, 0.3 - global.stage * 0.09 - global.extreme * 0.1))
 rotating = false
 rotation = 0
 rotate_begin = random(360)

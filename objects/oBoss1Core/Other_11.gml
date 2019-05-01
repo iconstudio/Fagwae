@@ -31,6 +31,6 @@ arm_angle_period = seconds(3.4)
 
 abool = 0
 shot_speed = player_hspeed
-shot_speed_green = room_width / seconds(5)
+shot_speed_green = enemy_bullet_speed_slowest
 shot_period = seconds(0.6 - global.extreme * 0.27)
 alarm[0] = appear_period + 1

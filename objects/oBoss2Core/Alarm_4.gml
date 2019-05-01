@@ -13,9 +13,9 @@ if ++shot_count < 4 {
 
 	alarm[4] = seconds(0.15 - global.extreme * 0.05)
 } else if pattern == 4 {
-	if pattern04_count > 120 {
+	if pattern04_count > seconds(2) {
 		path_last = pathBoss2_2
-		path_start(pathBoss2_2, 1, path_action_continue, false)
+		path_start(pathBoss2_2, 0.6, path_action_continue, false)
 
 		pattern = 5
 		pattern_opened = false

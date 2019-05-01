@@ -39,4 +39,4 @@ if shot_count > 4
 
 pattern02_shoot = 5 - pattern02_shoot
 
-alarm[1] = 9 - global.extreme
+alarm[1] = seconds(0.29 - global.extreme * 0.04)

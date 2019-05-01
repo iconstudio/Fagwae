@@ -4,6 +4,7 @@ scroll += back_speed
 if scroll > 144 {
 	scroll -= 144
 	rotation -= 42
+	deco_hue -= 6
 }
 back_speed = back_speed_begin + back_speed_gap * back_time / back_period
 if back_time < back_period

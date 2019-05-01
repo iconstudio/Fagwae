@@ -20,4 +20,4 @@ if global.extreme {
 }
 enemy_play_shot()
 
-alarm[3] = 50
+alarm[3] = seconds(0.94)

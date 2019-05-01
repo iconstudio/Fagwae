@@ -11,4 +11,4 @@ if type_create == LEFT {
 }
 enemy_play_shot()
 
-alarm[2] = 20 - global.extreme * 8
+alarm[2] = seconds(0.34 - global.extreme * 0.07)

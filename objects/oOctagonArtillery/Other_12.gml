@@ -20,8 +20,8 @@ if moving_mode == 0 { // at first
 		instance_destroy()
 }
 
-enemy_arm_fix(shot_rotation)
-shot_rotation = rotate_begin + rotate_time / rotate_period * 360
+enemy_arm_fix(rotation)
+rotation = rotate_begin + rotate_time / rotate_period * 360
 if rotating {
 	if rotate_time < rotate_period
 		rotate_time++

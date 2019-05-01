@@ -8,4 +8,4 @@ if global.extreme
 enemy_play_shot()
 
 if ++shot_count < 10 + global.extreme * 4
-	alarm[0] = seconds(0.22 - global.extreme * 0.5)
+	alarm[0] = seconds(0.1)

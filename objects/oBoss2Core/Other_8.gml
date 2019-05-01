@@ -45,5 +45,4 @@ if path_last == pathBoss2_0 { // pattern 0, 1
 		}
 	}
 }
-
-show_debug_message(path_get_name(path_last) + " ended now.")
+//show_debug_message(path_get_name(path_last) + " ended now.")

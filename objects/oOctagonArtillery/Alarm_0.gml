@@ -35,5 +35,5 @@ if shot_mode < 2 {
 	shot_count = 0
 	shot_mode = 0
 
-	alarm[1] = 5
+	alarm[1] = seconds(0.2)
 } 

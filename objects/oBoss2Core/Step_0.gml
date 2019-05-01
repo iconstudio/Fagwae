@@ -1,5 +1,3 @@
-/// @description 
-
 if pattern == 0 {
 	if y > 400 { // next phase
 		pattern = 1
@@ -19,25 +17,25 @@ if pattern == 0 {
 } else if pattern == 2 { // loop begin
 	var tx = room_width * 0.5
 	var ty = 180
-	if abs(tx - x) < 4
+	if abs(tx - x) < hspeed_value
 		x = tx
 	else if x < tx
-		x += 3
+		x += hspeed_value
 	else if x > tx
-		x -= 3
+		x -= hspeed_value
 
-	if abs(ty - y) < 3
+	if abs(ty - y) < vspeed_value
 		y = ty
 	else if y < ty
-		y += 2
+		y += vspeed_value
 	else if y > ty
-		y -= 2
+		y -= vspeed_value
 
 	if !pattern_opened and pattern_await++ > pattern02_await {
 		path_last = pathBoss2_1
 		path_start(pathBoss2_1, pattern02_speed, path_action_continue, false)
 
-		alarm[2] = 50 - global.extreme * 40
+		alarm[2] = seconds(1)
 		pattern_opened = true
 		pattern_await = 0
 		shot_count = 0
@@ -45,22 +43,22 @@ if pattern == 0 {
 } else if pattern == 3 {
 	var tx = room_width * 0.5
 	var ty = 180
-	if abs(tx - x) < 2
+	if abs(tx - x) < hspeed_value
 		x = tx
 	else if x < tx
-		x += 1.414
+		x += hspeed_value
 	else if x > tx
-		x -= 1.414
+		x -= hspeed_value
 
-	if abs(ty - y) < 3
+	if abs(ty - y) < vspeed_value
 		y = ty
 	else if y < ty
-		y += 2
+		y += vspeed_value
 	else if y > ty
-		y -= 2
+		y -= vspeed_value
 
 	if !pattern_opened and pattern_await++ > seconds(0.5) {
-		alarm[3] = seconds(0.5)
+		alarm[3] = seconds(0.8)
 		pattern_opened = true
 		pattern_await = 0
 		shot_count = 0
@@ -70,7 +68,7 @@ if pattern == 0 {
 	y = 180
 
 	if !pattern_opened and pattern_await++ > seconds(0.5) {
-		alarm[4] = seconds(0.5)
+		alarm[4] = seconds(0.8)
 		pattern_opened = true
 		pattern_await = 0
 	}

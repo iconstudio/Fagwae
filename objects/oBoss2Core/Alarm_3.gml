@@ -56,7 +56,7 @@ if global.extreme {
 enemy_play_shot()
 
 if ++shot_count < 20 {
-	alarm[3] = seconds(0.15 - global.extreme * 0.05)
+	alarm[3] = seconds(0.13 - global.extreme * 0.02)
 } else if pattern == 3 {
 	shot_count = 0
 

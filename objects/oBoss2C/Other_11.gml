@@ -1,11 +1,9 @@
 /// @description Creation
 name = "ARM"
-
-fade_mode = 0
-
 invincible = INVINCIBLE_PARENTAL
-image_xscale = 0
-image_yscale = 0
+fade_mode = 0
+image_xscale = 1.4
+image_yscale = 1.4
 
 // patterns
 pattern = 0
@@ -28,7 +26,12 @@ else if type_create == RIGHT
 x_fix = lengthdir_x(width, angular)
 y_fix = lengthdir_y(width, angular)
 
-hspeed_target = 1.414
-vspeed_target = 2
-shot_speed = 3
+hspeed_target_begin = room_width / seconds(3) // 1.414
+vspeed_target_begin = room_height / seconds(3) // 5
+hspeed_target_pattern02 = room_width / seconds(2.8) // 1.61
+vspeed_target_pattern03 = room_height / seconds(3.2) // 2
+vspeed_target_pattern04 = vspeed_target_begin * 2 // 8
+hspeed_target = hspeed_target_begin
+vspeed_target = vspeed_target_begin
+shot_speed = enemy_bullet_speed_fast
 shot_count = 0
