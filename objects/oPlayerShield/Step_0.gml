@@ -9,7 +9,7 @@ if brightness_time < brightness_period {
 }
 
 if collide_time == 0
-	pow = 3
+	pow = pow_default
 else
 	pow = 0
 

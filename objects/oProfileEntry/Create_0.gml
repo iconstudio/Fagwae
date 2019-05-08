@@ -4,10 +4,15 @@ kstring = ""
 dmode = 0
 dalpha = 1
 
-global._debugsett_ = 0;
+if global.flag_is_pc and keyboard_check_direct(vk_shift) {
+	global.__cheat_invincible = true
+	global.__cheat_powerful = true
+	global.__cheat_inf_bombs = true
+}
 
-if keyboard_check_direct(vk_shift)
-	global._debugsett_ = true
+if global.flag_is_mobile {
+	keyboard_virtual_show(kbv_type_phone_name, kbv_returnkey_go, kbv_autocapitalize_none, false)
+}
 
 if profile_load(global.profilefile) {
 	dalpha = 0

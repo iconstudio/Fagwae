@@ -1,1 +1,1 @@
-pow = 3
+pow = pow_default

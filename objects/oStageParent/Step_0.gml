@@ -15,6 +15,13 @@ if prohibit_count > 0 {
 	}
 }
 
+if flag_stop {
+	trigger_size = 0
+	trigger_pos = 0
+	trigger_counter = 0
+	exit
+}
+
 if flag_await_clear {
 	if !instance_exists(oEnemyParent)
 		flag_await_clear = false
@@ -35,12 +42,12 @@ if trigger_counter-- <= 0 {
 		show_debug_message("Other: " + string(dother) + ", x: " + string(cx) + ", y: " + string(cy))
 		
 		switch type {
-		case areapush_object:
+		case trigger.object:
 			instance_last = instance_create_layer(cx, cy, "Instances", data)
 			instance_last.type_create = dother
 			break
 
-		case areapush_enemy:
+		case trigger.enemy:
 			if flag_boss {
 				instance_last = enemy_create(data, cx, cy, dother, 0, noone, "Boss")
 				flag_boss = false
@@ -54,27 +61,27 @@ if trigger_counter-- <= 0 {
 			}
 			break
 
-		case areapush_message:
+		case trigger.message:
 			show_flashstring(cx, cy, data, 0)
 			break
 
-		case areapush_script:
+		case trigger.script:
 			script_execute(data, dother, cx, cy)
 			break
 
-		case areapush_global:
+		case trigger.global:
 			instance_last = instance_create_layer(cx, cy, "Instances", data)
 			break
 
-		case areapush_music:
-			music_update(data)
-			break
-
-		case areapush_userevent:
+		case trigger.userevent:
 			event_user(data)
 			break
+
+		case trigger.music:
+			music_update(data)
+			break
 			
-		case areapush_delay:
+		case trigger.delay:
 			break
 		}
 

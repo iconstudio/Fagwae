@@ -13,6 +13,6 @@ if y >= roomborder_bottom
 global.px = x
 global.py = y
 
-out_rotation -= 17
+out_rotation -= 7
 if out_rotation < 0
 	out_rotation += 360

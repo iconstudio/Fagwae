@@ -3,4 +3,4 @@
 /// @param time_delay { real }
 /// @param number { integer }
 
-area_trigger_push(areapush_userevent, argument0, argument1)
+area_trigger_push(trigger.userevent, argument0, argument1)

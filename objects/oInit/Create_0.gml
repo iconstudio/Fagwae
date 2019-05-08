@@ -101,14 +101,9 @@ if !shaders_are_supported() {
 event_user(1)
 
 // UX
-global.__devicemx = 0
-global.__devicemy = 0
-#macro mouse_gui_x global.__devicemx
-#macro mouse_gui_y global.__devicemy
-global.main_intro = false
 device_mouse_dbclick_enable(false)
-if global.flag_is_mobile
-	keyboard_set_map(vk_backspace, vk_escape)
+//if global.flag_is_mobile
+keyboard_set_map(vk_backspace, vk_escape)
 
 // local drawing
 dmode = 0

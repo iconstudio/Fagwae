@@ -16,7 +16,7 @@ if dmode == 0 {
 	} else {
 		instance_destroy()
 		if global.flag_is_mobile {
-			instance_create_layer(0, 0, "UI", oIntro)
+			instance_create_layer(0, 0, "UI", oMainIntro)
 			exit
 		}
 		instance_create_layer(0, 0, "UI", oProfileEntry)

@@ -3,7 +3,6 @@ event_inherited()
 
 arm_wiggle += 5
 
-var _speed = speed, _direction = direction
 for (var i = 0; i < arm_number; ++i) {
 	speed = arm_width
 	if instance_exists(arm_instances[i]) {

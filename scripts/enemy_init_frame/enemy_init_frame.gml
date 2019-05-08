@@ -12,15 +12,12 @@ enemy_register(enemy_piece_1, oFramePiece, sFrameJoint, 18, 300, 1, 0)
 
 enemy_register(enemy_joint_1, oFrameJoint, sFrameJoint, 18, 250, 1, 0)
 enemy_register(enemy_joint_2, oFrameJoint, sFrameJoint, 17, 240, 1, 0)
-
 enemy_register(enemy_joint_3, oFrameJointMod, sFrameJoint, 10, 150, 1, 0)
 
 enemy_register(enemy_square_1, oFrameSquare, sFrameSquare, 30, 250, 2, 0)
 enemy_register(enemy_square_2, oFrameTurretSquare, sFrameSquare, 33, 400, 2, 0)
 enemy_register(enemy_square_3, oFrameSquareRotated, sFrameSquare, 30, 250, 2, 0)
-
 enemy_register(enemy_square_4, oFrameTurretSquareRotated, sFrameSquare, 33, 400, 2, 0)
-
 enemy_register(enemy_square_5, oFrameDualTurret, sFrameSquare, 38, 500, 2, 0)
 
 enemy_register(enemy_square_h, oFrameHammerSquare, sFrameSquare, 38, 500, 2, 0)
@@ -34,9 +31,7 @@ enemy_register(enemy_scout_c2, oFrameScoutShort, sFrameSquare, 20, 700, 2, 0)
 enemy_register(enemy_scout_j3, oFrameScout, sFrameSquare, 14, 300, 2, 0)
 
 enemy_register(enemy_crab_1, oFrameCrab, sFrameCrabBody, 50, 700, 3, 0)
-
 enemy_register(enemy_crab_2, oFrameCrab, sFrameCrabBody, 60, 760, 3, 0)
-
 enemy_register(enemy_crab_3, oFrameCrab, sFrameCrabBody, 60, 710, 3, 0)
 
 enemy_register(enemy_octopod_1, oFrameOctopod, sFrameCore, 80, 700, 4, 0)

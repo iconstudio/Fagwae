@@ -3,4 +3,4 @@
 /// @param time_delay { real }
 /// @param music { audio }
 
-area_trigger_push(areapush_music, argument0, argument1)
+area_trigger_push(trigger.music, argument0, argument1)

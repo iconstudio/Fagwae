@@ -1,5 +1,5 @@
 /// @description Getting damage
-if !global.playeralive or instance_exists(oGameOver) or instance_exists(oContinue)
+if !global.playeralive or instance_exists(oGameOver) or instance_exists(oContinue) or global.__cheat_invincible
 	exit
 
 // damaged!

@@ -1,3 +1,4 @@
+/// @description Update
 if y > 10 {
 	if shot_mode == -1 {
 		shot_mode = 0

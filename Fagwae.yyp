@@ -559,6 +559,14 @@
             }
         },
         {
+            "Key": "2dbfd2a7-996b-4cd7-ac8c-06d4c32510e5",
+            "Value": {
+                "id": "87768c54-e33f-4354-b333-ff9123d4264d",
+                "resourcePath": "objects\\oFrameSquareJakoCaptain\\oFrameSquareJakoCaptain.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2dfcee75-92be-40e7-b171-386096719d62",
             "Value": {
                 "id": "143c740e-c6fc-461e-809e-53633915063d",
@@ -1028,6 +1036,14 @@
                 "id": "470aa1d1-b72f-496f-b8d7-8d8b1deec115",
                 "resourcePath": "objects\\oMainAchievement\\oMainAchievement.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "50a69411-ebe6-4ed7-9787-8a7ebeb636dd",
+            "Value": {
+                "id": "196c7d60-7b61-4690-b17f-9bf8bd5ecdfe",
+                "resourcePath": "sprites\\sFrameCrawlerFoot\\sFrameCrawlerFoot.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1527,6 +1543,14 @@
             }
         },
         {
+            "Key": "6fa1d8f8-8833-45c8-9ea4-93bdd98287df",
+            "Value": {
+                "id": "44295007-a29e-48d0-99ee-f2dffb187045",
+                "resourcePath": "objects\\oFrameSquareJako\\oFrameSquareJako.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "6fea89b2-b804-4a1c-9062-2e78b275e183",
             "Value": {
                 "id": "db92102e-47db-4c5b-b83d-b05f23488462",
@@ -1879,6 +1903,14 @@
             }
         },
         {
+            "Key": "87adc2e6-df37-4944-8067-73b56baf7fdb",
+            "Value": {
+                "id": "38d2b7cd-7c58-454c-8b7a-5ca6044ac3d1",
+                "resourcePath": "objects\\oFrameCrawlerFoot\\oFrameCrawlerFoot.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "87ce0760-701d-4483-879b-8e47ccd845b4",
             "Value": {
                 "id": "4df98d25-8c3a-47f3-93b0-ea9d8d137fb4",
@@ -2004,6 +2036,14 @@
                 "id": "0c2a3f52-c0dd-488a-b1f0-aae1d222797f",
                 "resourcePath": "scripts\\trophy_check0\\trophy_check0.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "91170078-e811-4581-b5d3-2197ff19c400",
+            "Value": {
+                "id": "8481823c-ad3e-4be6-8743-f0a93417c0fe",
+                "resourcePath": "sprites\\sFrameSquareJako\\sFrameSquareJako.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

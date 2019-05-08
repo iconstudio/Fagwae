@@ -6,7 +6,12 @@ alarm[0] = progress_period
 collide_time = 0
 collide_period = seconds(0.1)
 // DPS = 30, 3 damage per collide_period
-pow = 3
+
+if global.__cheat_powerful
+	pow_default = 7
+else
+	pow_default = 3
+pow = pow_default
 
 fadein_time = 0
 fadein_period = seconds(0.3)

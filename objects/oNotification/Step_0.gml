@@ -1,25 +1,17 @@
 /// @description Update
-
 if begin_y != y
-	y += (begin_y - y) * 0.2
+	y += (begin_y - y) * 0.1
 
-var _sec = 60
-if dmode == 0 {
-	if time_current < _sec {
-		rpush = time_current / _sec
-	} else {
-		rpush = 1
-	}
-	
-	if time_current > _sec * 4 {
-		dmode = 1
+if draw_mode == 0 {
+	alpha = fadein_time / fadein_limit
+	if fadein_time++ >= fadein_period {
+		draw_mode = 1
 		time_current = 0
 	}
 } else {
-	if time_current < _sec {
-		rpush =  1 - time_current / _sec
-	} else {
-		rpush = 0
+	alpha = 1 - ease_out_expo(fadeout_time / fadeout_period)
+	if fadeout_time++ >= fadeout_period {
+		alpha = 0
 		
 		with callback {
 			callto = other.id
@@ -28,5 +20,3 @@ if dmode == 0 {
 		instance_destroy()
 	}
 }
-
-time_current += 1

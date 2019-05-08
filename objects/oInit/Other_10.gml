@@ -1,13 +1,11 @@
 /// @description Defining macros
 // constants for triggers of the area
-#macro areapush_object 0
-#macro areapush_enemy 1
-#macro areapush_message 2
-#macro areapush_script 3
-#macro areapush_global 4
-#macro areapush_music 5
-#macro areapush_userevent 6
-#macro areapush_delay 7
+enum trigger {
+	object, enemy,
+	message, script, global, userevent,
+	music,
+	delay
+}
 #macro LEFT 0
 #macro RIGHT 1
 
@@ -40,6 +38,8 @@
 #macro enemy_joint_3				"fjoint3"			// linking parts (invincible)
 #macro enemy_joint_s1			"fjoins1"			// linking parts
 #macro enemy_joint_s2			"fjoins2"			// linking parts
+//#macro enemy_crawler_leg		"fcrlleg"			// a leg of the crawler
+//#macro enemy_crawler_foot	"fcrlfut"			// a foot of the crawler
 
 // small multiples
 #macro enemy_square_1			"fsquare1"		// square
@@ -61,8 +61,8 @@
 #macro enemy_octopod_1			"foctopod1"		// falls while shots 1, more than or equal to 3 times
 #macro enemy_octopod_2			"foctopod2"		// falls while shots, multiple times
 #macro enemy_octopod_3			"foctopod3"		// swims random points in the screen, then charges
-#macro enemy_crawler_1			"fcrawler1"		// small crawler
-#macro enemy_crawler_2			"fcrawler2"		// crawler
+#macro enemy_crawler_1			"fcrawler1"		// crawler
+#macro enemy_crawler_2			"fcrawler2"		// faster crawler
 
 /// indeterminates
 #macro enemy_rapid_1				"irapid1"			// shots 3 fast and tracks player

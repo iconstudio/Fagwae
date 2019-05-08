@@ -2,4 +2,4 @@
 /// @function area_delay_push
 /// @param time_delay { real }
 
-area_trigger_push(areapush_delay, argument0)
+area_trigger_push(trigger.delay, argument0)

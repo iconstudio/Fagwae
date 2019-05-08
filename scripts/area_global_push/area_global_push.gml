@@ -5,4 +5,4 @@
 /// @param cx { real }
 /// @param cy { real }
 
-area_trigger_push(areapush_global, argument0, argument1, 0, argument2, argument3)
+area_trigger_push(trigger.global, argument0, argument1, 0, argument2, argument3)
