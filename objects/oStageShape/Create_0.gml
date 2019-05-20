@@ -24,9 +24,9 @@ deco_fail_period = seconds(1)
 
 global.extreme = true
 // Initializing stage
-global.__st2_line = 0
+line_image_index = 0
 var jako_delay = seconds(0.7)
-var octo_type = global.extreme ? enemy_octagon_4 :enemy_octagon_2
+var octo_type = global.extreme ? enemy_octagon_4 : enemy_octagon_2
 
 script_stage1_ready()
 area_enemy_push(jako_delay, enemy_octagon_5, pathJakoFormationLeft, 90, -48)
@@ -173,4 +173,3 @@ area_script_push(0, script_stage_clear, 0, 0, 0)
 area_delay_push(seconds(2))
 area_script_push(0, script_shape_disappear, 0, 0, 0)
 area_delay_push(seconds(10))
-area_script_push(0, area_goto_next, 0, 0, 0)

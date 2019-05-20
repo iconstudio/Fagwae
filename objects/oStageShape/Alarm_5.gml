@@ -29,4 +29,6 @@ if deco_count > deco_min {
 	screen_shake(irandom(min(deco_count, 2) + 3) + 5)
 	audio_play_sound(soundDeadFrame, 30, false)
 	deco_count--
+} else {
+	area_goto_next()
 }
