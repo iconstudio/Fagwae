@@ -1,8 +1,8 @@
 {
-    "id": "07fac307-b314-4ba0-9ed9-a3929f817964",
+    "id": "92a84154-dac2-4afc-81f2-2fb51a845221",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "script149",
+    "name": "enemy_callback_disappear",
     "IsCompatibility": false,
     "IsDnD": false
 }

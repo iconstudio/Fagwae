@@ -2,7 +2,7 @@
     "id": "a95703b6-8fa4-4bd1-8621-91d4611c7fad",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oFramelDualTurretSquare",
+    "name": "oFrameDualTurretSquare",
     "eventList": [
         {
             "id": "1c87f9a1-62b2-4e58-a738-b8be70cb55be",

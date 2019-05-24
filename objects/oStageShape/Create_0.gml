@@ -27,6 +27,7 @@ line_image_index = 0
 var jako_delay = seconds(0.7)
 var octo_type = global.extreme ? enemy_octagon_4 : enemy_octagon_2
 
+#region STAGE 1
 script_stage1_ready()
 area_enemy_push(jako_delay, enemy_octagon_5, pathJakoFormationLeft, 90, -48)
 area_enemy_push(jako_delay, enemy_octagon_5, pathJakoFormationLeft, 120, -48)
@@ -34,7 +35,7 @@ area_enemy_push(jako_delay, enemy_octagon_5, pathJakoFormationLeft, 150, -48)
 area_enemy_push(seconds(1), enemy_octagon_4, pathJakoFormationLeft, 180, -48)
 area_enemy_push(jako_delay, enemy_octagon_5, pathJakoFormationRight, 420, -48)
 area_enemy_push(jako_delay * 2, octo_type, 0, 390, -48)
-//*
+
 var cox = 384 + random(100)
 area_enemy_push(jako_delay, enemy_octagon_5, pathJakoFormationRight, cox, -48)
 area_enemy_push(jako_delay, enemy_octagon_5, pathJakoFormationRight, cox, -48)
@@ -80,7 +81,7 @@ for (var j = 0; j < 14; ++j) { // 14 rows
 
 		cframe_turret += 0.9
 		cframe_nx = (i - cframe_factor) * 128
-		if (cframe_turret > 2) { // creating a square with turret
+		if cframe_turret > 2 { // creating a square with turret
 			area_enemy_push(0, enemy_square_2, cframe_speed, cframe_nx, -48)
 			cframe_turret -= 2
 		} else { // creating a empty square
@@ -92,15 +93,17 @@ for (var j = 0; j < 14; ++j) { // 14 rows
 	cframe_speed = -cframe_speed
 	cframe_count--
 }
-//*/
 
 area_delay_push(seconds(8))
 area_script_push(seconds(0.2), script_boss_apear, 0, 0, 0)
 area_music_push(seconds(0.5), musicBoss)
 area_enemy_push(0, enemy_boss_1, 0, 270, -128)
 area_script_push(0, script_stage_clear, 0, 0, 0)
+#endregion
 
 // ================================================
+
+#region STAGE 2
 script_stage2_ready()
 area_enemy_push(jako_delay, enemy_octagon_5, pathJakoFormationRight, 450, -48)
 area_enemy_push(jako_delay, enemy_octagon_5, pathJakoFormationRight, 420, -48)
@@ -172,3 +175,4 @@ area_script_push(0, script_stage_clear, 0, 0, 0)
 area_delay_push(seconds(2))
 area_script_push(0, script_shape_disappear, 0, 0, 0)
 area_delay_push(seconds(10))
+#endregion

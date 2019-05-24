@@ -1,6 +1,6 @@
-/// @description motion_planning_init(terminate)
+/// @description motion_planning_init([terminater])
 /// @function motion_planning_init
-/// @param terminate { script }
+/// @param [terminater] { script }
 // [[x0, y0, second0], [x1, y1, second1], ...]
 planning_list = []
 planning_number = 0
@@ -12,4 +12,4 @@ planning_y = y
 planning_time = 0
 planning_period = 0
 planning_easer = ease_linear
-planning_terminator = argument0
+planning_terminator = argument_count > 0 ? argument[0] : noone

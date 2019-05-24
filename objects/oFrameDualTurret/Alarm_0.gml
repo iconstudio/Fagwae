@@ -14,7 +14,7 @@ if instance_exists(parent) {
   inst.vspeed += parent.vspeed
 }
 cx = x + lengthdir_x(9, shot_direction + 90) + ax
-cy = y + lengthdir_y(9, shot_direction + 90) + lay
+cy = y + lengthdir_y(9, shot_direction + 90) + ay
 inst = enemy_shot(cx, cy, shot_speed, shot_direction)
 inst.parent = parent
 if instance_exists(parent) {

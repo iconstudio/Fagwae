@@ -1,5 +1,4 @@
 /// @description Update
-
 event_inherited()
 
 with bar {

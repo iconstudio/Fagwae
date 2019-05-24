@@ -1,4 +1,4 @@
-/// @description Processing
+/// @description Exploding
 hp -= hurt
 if !dead
 	damaged = 1

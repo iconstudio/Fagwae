@@ -4,7 +4,7 @@
 if argument_count == 1 and argument[0]
 	return 0
 
-if planning_time++ >= planning_period {
+if planning_period <= planning_time++ {
 	if planning_progress < planning_number {
 		var plan = planning_list[planning_progress++]
 		planning_x_begin = x

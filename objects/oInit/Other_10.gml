@@ -47,14 +47,17 @@ enum trigger {
 #macro enemy_square_3			"fsquare3"		// square which randomly rotated
 #macro enemy_square_4			"fsquare4"		// square which randomly rotated with a turret
 #macro enemy_square_5			"fsquare5"		// square with a dual turret
+#macro enemy_square_6			"fsquare6"		// square for pile
 #macro enemy_square_h			"fsquareh"		// square with a hammer
 #macro enemy_scout_j1			"fscout1"			// follows a path
 #macro enemy_scout_c1			"fscoutcaptain1" // captain scout follows a path while shots 1
 #macro enemy_scout_j2			"fscout2"			// follows a path while shots 1-1
 #macro enemy_scout_c2			"fscoutcaptain2" // same but 1-1-1
-#macro enemy_scout_j3			"fscout3"			// falls a little then shots 1 then falls faster
+#macro enemy_scout_j3			"fscout3"			// falls a little then falls faster
+#macro enemy_scout_j4			"fscout4"			// falls a little then shots 1 then falls faster
 
 // large multiples
+#macro enemy_piles_1				"fpiles1"			// a bunch of turrets
 #macro enemy_crab_1				"fcrab1"			// appear from side, shots 1-1-1, 3 times, and go ahead (remain longer)
 #macro enemy_crab_2				"fcrab2"			// appear from side, shots 1-1-1, 3 times, and go ahead
 #macro enemy_crab_3				"fcrab3"			// falls while shots 3
@@ -79,7 +82,8 @@ enum trigger {
 #macro enemy_arm_turret_2		"aturret2"		// dynamic, slow
 #macro enemy_arm_turret_3		"aturret3"		// dynamic, fast
 #macro enemy_arm_turret_4		"aturret4"		// boss 1
-#macro enemy_arm_turret_5		"aturret4"		// boss 2
+#macro enemy_arm_turret_5		"aturret5"		// boss 2
+#macro enemy_arm_turret_6		"aturret6"		// always homing turret
 #macro enemy_arm_turret_d		"aturretd"		// dual
 #macro enemy_arm_hammer			"ahammer"			// body
 #macro enemy_arm_handle			"ahandle"			// handle
