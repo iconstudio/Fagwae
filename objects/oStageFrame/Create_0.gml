@@ -20,8 +20,33 @@ target_value = 21
 deco_count = 0
 deco_height = 300
 
+var jako_delay = seconds(0.8)
+var jako_left_first = global.px > room_width * 0.5
+var jako_path_list = [pathScoutNormalRight, pathScoutNormalLeft, pathScoutNormalRight, pathScoutNormalLeft, pathScoutRoamARight, pathScoutRoamALeft]
+var jako_intro_path_selected = jako_path_list[jako_left_first]
+var jako_fence_path_selected = jako_path_list[3 - jako_left_first]
+var jako_roams_path_selected = jako_path_list[5 - jako_left_first]
+var jako_shooter = global.extreme ? enemy_scout_j2 : enemy_scout_j1
+
 // Initializing stage
 script_stage3_ready()
+area_enemy_push(jako_delay, enemy_scout_c1, jako_intro_path_selected, 0, 0)
+area_enemy_push(jako_delay, enemy_scout_j1, jako_intro_path_selected, 0, 0)
+area_enemy_push(jako_delay, enemy_scout_j1, jako_intro_path_selected, 0, 0)
+area_enemy_push(jako_delay, enemy_scout_j1, jako_intro_path_selected, 0, 0)
+area_enemy_push(seconds(4), jako_shooter, jako_intro_path_selected, 0, 0)
+
+area_enemy_push(jako_delay, enemy_scout_c1, jako_fence_path_selected, 0, 0)
+area_enemy_push(jako_delay, enemy_scout_j1, jako_fence_path_selected, 0, 0)
+area_enemy_push(jako_delay, enemy_scout_j1, jako_fence_path_selected, 0, 0)
+area_enemy_push(jako_delay, enemy_scout_j1, jako_fence_path_selected, 0, 0)
+area_enemy_push(seconds(4), jako_shooter, jako_fence_path_selected, 0, 0)
+
+area_enemy_push(jako_delay, enemy_scout_c1, jako_roams_path_selected, 0, 0)
+area_enemy_push(jako_delay, enemy_scout_j1, jako_roams_path_selected, 0, 0)
+area_enemy_push(jako_delay, jako_shooter, jako_roams_path_selected, 0, 0)
+area_enemy_push(jako_delay, jako_shooter, jako_roams_path_selected, 0, 0)
+area_enemy_push(seconds(4), enemy_scout_j2, jako_roams_path_selected, 0, 0)
 
 /*
 for (var j = 0; j < 7; ++j) {

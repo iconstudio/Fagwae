@@ -22,7 +22,6 @@ deco_mode = 0
 deco_fail = false
 deco_fail_period = seconds(1)
 
-global.extreme = true
 // Initializing stage
 line_image_index = 0
 var jako_delay = seconds(0.7)
@@ -156,11 +155,11 @@ k = 0
 area_enemy_push(seconds(0.9), enemy_line_2, 1, 345, -500)
 area_enemy_push(seconds(0.1), enemy_line_2, 0, 30, -500)
 for (; k < 4; ++k)
-	area_enemy_push(seconds(0.13 * (random(k) * 7) mod 4), enemy_line_2, k & 1, min(max(20, 40 + (k * 219) mod 540), 520), -500 + random(20))
+	area_enemy_push(seconds(0.11 * (random(k) * 7) mod 4), enemy_line_2, k & 1, min(max(20, 40 + (k * 219) mod 540), 520), -500 + random(20))
 area_enemy_push(seconds(0.05), enemy_line_2, 0, 508, -500 + random(20))
 k = 0
 for (; k < 4; ++k)
-	area_enemy_push(seconds(0.11 + 0.1 * (random(k) * 5) mod 3), enemy_line_2, k & 1, min(max(20, 40 + (k * 219) mod 540), 520), -500 + random(20))
+	area_enemy_push(seconds(0.06 + 0.1 * (random(k) * 5) mod 3 + 0.03), enemy_line_2, k & 1, min(max(20, 40 + (k * 219) mod 540), 520), -500 + random(20))
 area_script_push(0, script_await_dying, 0, 0, 0)
 area_enemy_push(seconds(0.1), enemy_line_2, 0, 318, -500)
 area_delay_push(seconds(2))

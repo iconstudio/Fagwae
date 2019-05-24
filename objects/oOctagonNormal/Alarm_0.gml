@@ -1,5 +1,4 @@
 /// @description Attacking
-
 if shot_count < 4 {
 	alarm[0] = shot_period
 } else {

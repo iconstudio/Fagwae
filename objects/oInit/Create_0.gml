@@ -42,19 +42,19 @@ global.flag_is_pc = (os_type == os_windows or os_type == os_macosx or os_type ==
 global.flag_is_mobile = (os_type == os_android or os_type == os_ios)
 
 // screen
-var width_default = 540, height_default = 960 // 9 : 16
-global.__view_width = width_default				// Original Size
-global.__view_height = height_default			// Original Size
-global.__tts = 1													// Original Size
+var width_default = 540, height_default = 960		// 9 : 16
+global.__view_width = width_default								// Original Size
+global.__view_height = height_default							// Original Size
+global.__tts = 1																	// Original Size
 if global.flag_is_mobile or window_get_fullscreen() {
 	window_set_fullscreen(true)
-	var window_width = window_get_width()		// Full size
-	var window_height = window_get_height()	// Full size
+	var window_width = window_get_width()					// Full size
+	var window_height = window_get_height()				// Full size
 	var gui_width, gui_height
-	if window_width > window_height {				// Landscape (Does not support)
+	if window_width > window_height {							// Landscape (Does not support)
 		gui_height = floor(window_height / 16) * 16
 		gui_width = floor(gui_height * 9 / 16)
-	} else {																// Portrait (Support via option) or Square
+	} else {																				// Portrait (Support via option) or Square
 		gui_height = floor(window_height / 16) * 16
 		gui_width = floor(gui_height * 9 / 16)
 	}
@@ -66,16 +66,16 @@ if global.flag_is_mobile or window_get_fullscreen() {
 	window_center()
 	window_set_position(window_get_x(), 48)
 }
-global.__ttw = display_get_gui_width()		// Adjusted
-global.__tth = display_get_gui_height()		// Adjusted
+global.__ttw = display_get_gui_width()						// Adjusted
+global.__tth = display_get_gui_height()						// Adjusted
 
-// View is 'entire' screen									(Game)
+// View is 'entire' screen											(Game)
 #macro view_width global.__view_width
 #macro view_height global.__view_height
-// However the GUI fits into 'aspected' screen	(Interface)
+// However GUI fits into 'aspected' screen		(Interface)
 #macro screen_width global.__ttw
 #macro screen_height global.__tth
-#macro screen_scale global.__tts					// Real size
+#macro screen_scale global.__tts									// Real size
 #macro screen_iscale floor(global.__tts)
 application_surface_enable(true)
 application_surface_draw_enable(false)

@@ -2,7 +2,7 @@
     "id": "ba2a6777-e86d-4ace-8eb8-1a59d045d46c",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "sFrameOctagon",
+    "name": "sFrameScout",
     "For3D": false,
     "HTile": false,
     "VTile": false,

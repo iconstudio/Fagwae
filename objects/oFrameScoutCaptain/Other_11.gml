@@ -11,3 +11,6 @@ rotation = random(360)
 rotate_begin = rotation
 rotate_time = 0
 rotate_period = seconds(2.7)
+
+shot_speed = enemy_bullet_speed_slower
+alarm[0] = seconds(3.2 - global.extreme * 1.2)

@@ -1,3 +1,3 @@
 /// @description Creation
-velocity = room_width / seconds(8)
-path_start(type_create, velocity, path_action_stop, true)
+velocity = room_width / seconds(3)
+path_start(type_create, velocity, path_action_stop, false)

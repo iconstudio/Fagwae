@@ -50,9 +50,9 @@ enum trigger {
 #macro enemy_square_h			"fsquareh"		// square with a hammer
 #macro enemy_scout_j1			"fscout1"			// follows a path
 #macro enemy_scout_c1			"fscoutcaptain1" // captain scout follows a path while shots 1
-#macro enemy_scout_j2			"fscout2"			// goes fowards a little, shots 1-1 and falls
-#macro enemy_scout_c2			"fscoutcaptain2" // same
-#macro enemy_scout_j3			"fscout3"			// falls
+#macro enemy_scout_j2			"fscout2"			// follows a path while shots 1-1
+#macro enemy_scout_c2			"fscoutcaptain2" // same but 1-1-1
+#macro enemy_scout_j3			"fscout3"			// falls a little then shots 1 then falls faster
 
 // large multiples
 #macro enemy_crab_1				"fcrab1"			// appear from side, shots 1-1-1, 3 times, and go ahead (remain longer)

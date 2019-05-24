@@ -1,6 +1,5 @@
 /// @description Attacking
 var pd = point_direction(x, y, global.px, global.py)
-enemy_play_shot()
 
 if shot_mode == 0 {
 	enemy_shot(x, y, shot_speed, pd)
@@ -18,3 +17,4 @@ if shot_mode == 0 {
 		alarm[0] = shot_period_continue
 	}
 }
+enemy_play_shot()

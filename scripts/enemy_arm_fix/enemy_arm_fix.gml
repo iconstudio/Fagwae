@@ -3,7 +3,7 @@
 /// @param [angle_plus] { real }
 
 var _pangle = 0
-if argument_count == 1 {
+if 0 < argument_count {
 	_pangle = argument[0]
 }
 

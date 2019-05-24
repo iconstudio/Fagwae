@@ -1,5 +1,5 @@
 /// @description Creation
-shot_speed = 4.5 + global.stage * 0.25
+shot_speed = enemy_bullet_speed_faster
 shot_count = 0
 pattern = 0
 pattern_count = 0

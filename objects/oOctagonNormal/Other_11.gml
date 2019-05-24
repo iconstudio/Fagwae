@@ -1,5 +1,6 @@
 /// @description Creation
 name = "OCTAGON"
+
 vspeed = 6
 
 shot_speed = enemy_bullet_speed_medium

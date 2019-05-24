@@ -1,6 +1,6 @@
 /// @description Creation
 
-shot_speed = 4.5 + global.stage * 0.25
+shot_speed = enemy_bullet_speed_fast
 alarm[0] = 30
 
 confuse_path = path_add()

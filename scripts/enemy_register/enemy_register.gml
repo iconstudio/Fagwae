@@ -9,7 +9,7 @@
 /// @param rotation { real }
 var sprites = argument2
 if !is_array(argument2) {
-	if argument2 == -1 {
+	if !sprite_exists(argument2) {
 		var orgsprite = object_get_sprite(argument1)
 		sprites = [orgsprite, orgsprite]
 	} else if sprite_exists(argument2) {
