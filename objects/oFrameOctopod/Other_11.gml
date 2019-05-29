@@ -8,15 +8,16 @@ rotation_step = choose(-1, 1, (x < room_width * 0.65 ? 1 : -1))
 
 arm_wiggle = random(30)
 arm_number = 6
-arm_width = 20
 arm_startangle = random(60)
-arm_instances = array_create(arm_number, noone)
-arm_angle = array_create(arm_number, 0)
-for (var i = 0; i < arm_number; ++i) {
-	arm_angle[i] = (arm_startangle + 360 / arm_number * i) mod 360
-	arm_instances[i] = enemy_create(enemy_joint_2, x, y, 0, arm_angle[i], id, "Instances_Arms")
+arm_properties = array_create(arm_number, 0)
 
-	with arm_instances[i] {
+var arm_angle_one, arm
+for (var i = 0; i < arm_number; ++i) {
+	arm_angle_one = (arm_startangle + 360 / arm_number * i) mod 360
+	arm_properties[i] = [enemy_create(enemy_joint_2, x, y, 0, arm_angle_one, id, "Instances_Arms"), 20, arm_angle_one]
+
+	arm = arm_properties[i]
+	with arm[0] {
 		parent = other.id
 
 		image_xscale = 0.6
@@ -24,7 +25,7 @@ for (var i = 0; i < arm_number; ++i) {
 		arm_number = 1
 		arm_width = 30
 		arm_angle = other.arm_angle
-		arm_instance = enemy_create(enemy_joint_3, x, y, 0, arm_angle[i], id, "Instances_Arms")
+		arm_instance = enemy_create(enemy_joint_3, x, y, 0, arm_angle_one, id, "Instances_Arms")
 		
 		with arm_instance {
 			parent = other.id
@@ -54,7 +55,7 @@ repeat planning_count {
 	_yp = _yn
 }
 path_add_point(planning_path, x, -130, 100)
-path_start(planning_path, 100, path_action_stop, true)
+path_start(planning_path, 1, path_action_stop, true)
 
 if global.extreme
 	alarm[0] = seconds(0.4)

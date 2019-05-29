@@ -9,3 +9,6 @@ with head {
 
 with parent
 	damaged = other.damaged
+
+if vspeed > velocity_max
+	vspeed = velocity_max

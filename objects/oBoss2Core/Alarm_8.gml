@@ -3,9 +3,11 @@ var radir = random(360)
 var radis = random(20)
 
 for (var i = 0; i < arm_number; ++i) {
-	if instance_exists(arm_instances[i]) {
+	arm = arm_properties[i]
+
+	if instance_exists(arm[0]) {
 		if random(10) < 5 {
-			with arm_instances[i]
+			with arm[0]
 				event_user(0)
 			break
 		}

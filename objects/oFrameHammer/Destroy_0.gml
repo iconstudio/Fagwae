@@ -5,6 +5,6 @@ with bar {
 		speed *= 0.5
 	image_angle = direction
 	gravity_direction = 270
-	gravity = 0.05
+	gravity = 0.07
 	invincible = INVINCIBLE_NONE
 }

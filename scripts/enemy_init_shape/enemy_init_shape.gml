@@ -32,6 +32,6 @@ enemy_register_general(enemy_boss_1A, oBoss1A, [sBoss1A, sBoss1A], 120, 540, 1, 
 enemy_register_general(enemy_boss_1B, oBoss1B, [sBoss1B, sBoss1B], 100, 540, 1, 0, 6, 0, 0)
 enemy_register_general(enemy_boss_1C, oBoss1C, [sBoss1C, sBoss1C], 80, 540, 1, 0, 6, 0, 0)
 
-enemy_register_general(enemy_boss_2, oBoss2Core, [sBoss2A, sBoss2A], 1000, 6000, 3, 0, 72, $3B3B3B, $3B3B3B)
+enemy_register_general(enemy_boss_2, oBoss2Core, [sBoss2A, sBoss2A], 1000, 6000, 1, 0, 72, $3B3B3B, $3B3B3B)
 enemy_register_general(enemy_boss_2B, oBoss2B, [sBoss2B, sBoss2B], 10000, 600, 1, 0, 6, $3B3B3B, $3B3B3B)
 enemy_register_general(enemy_boss_2C, oBoss2C, [sBoss2C, sBoss2C], 3000, 600, 1, 0, 6, $3B3B3B, $3B3B3B)

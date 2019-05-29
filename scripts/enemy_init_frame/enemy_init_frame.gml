@@ -43,3 +43,6 @@ enemy_register(enemy_octopod_1, oFrameOctopod, sFrameCore, 80, 700, 2, 0)
 enemy_register(enemy_crawler_1, oFrameCrawler, noone, 100, 2000, 2, 0)
 
 // bosses
+enemy_register(enemy_boss_3, oBoss3Core, noone, 1200, 6600, 2, 0)
+
+enemy_register(enemy_boss_4, oBoss3Core, noone, 1200, 7200, 2, 0)

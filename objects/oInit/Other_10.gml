@@ -90,17 +90,22 @@ enum trigger {
 #macro enemy_arm_hammerhead	"ahhead"			// head
 #macro enemy_arm_crawler_terminal		"acrawlh"			// head and tail
 #macro enemy_arm_crawler_leg	"acrawll"			// legs
-#macro enemy_arm_crawler_foor	"acrawlf"		// foot
+#macro enemy_arm_crawler_foot	"acrawlf"		// foot
 
 #macro enemy_boss_1 "eboss1"
 #macro enemy_boss_1A "eboss1a"
 #macro enemy_boss_1B "eboss1b"
 #macro enemy_boss_1C "eboss1c"
 #macro enemy_boss_2 "eboss2"
-#macro enemy_boss_2A "eboss2a"
 #macro enemy_boss_2B "eboss2b"
 #macro enemy_boss_2C "eboss2c"
-#macro enemy_boss_3 "eboss3"
+#macro enemy_boss_3 "eboss3body"
+#macro enemy_boss_3_turret "eboss3head"
+#macro enemy_boss_3_sholuder "eboss3sholuder"
+#macro enemy_boss_3_arm "eboss3arm"
+#macro enemy_boss_3_pincher "eboss3pincher"
+#macro enemy_boss_3_plate "eboss3armour"
+#macro enemy_boss_3_propellerarm "eboss3propellerarm"
 #macro enemy_boss_4 "eboss4"
 #macro enemy_boss_5 "eboss5"
 #macro enemy_boss_6 "eboss6"

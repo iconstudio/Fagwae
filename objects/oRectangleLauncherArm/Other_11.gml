@@ -4,6 +4,7 @@ velocity_value = player_vspeed * 1.1
 velocity_time = 0
 velocity_period = seconds(2 - global.extreme * 0.4)
 
+shot_speed = enemy_bullet_speed_slow + 1
 if global.extreme
 	shot_period = seconds(max(0.04, 0.1 - global.stage * 0.05))
 else

@@ -5,5 +5,4 @@
 /// @param type_create { all }
 /// @param cx { real }
 /// @param cy { real }
-
 area_trigger_push(trigger.enemy, argument0, argument1, argument2, argument3, argument4)

@@ -2,7 +2,6 @@
 // external
 #macro file_header $af
 global.profilefile = "profile.dat"
-global.network = true
 profile_clear()
 
 //os_get_language()
@@ -45,7 +44,6 @@ global.flag_is_mobile = (os_type == os_android or os_type == os_ios)
 var width_default = 540, height_default = 960		// 9 : 16
 global.__view_width = width_default								// Original Size
 global.__view_height = height_default							// Original Size
-global.__tts = 1																	// Original Size
 if global.flag_is_mobile or window_get_fullscreen() {
 	window_set_fullscreen(true)
 	var window_width = window_get_width()					// Full size
@@ -61,7 +59,6 @@ if global.flag_is_mobile or window_get_fullscreen() {
 	window_set_size(window_width, window_height)		// game window
 	display_set_gui_size(gui_width, gui_height)			// gui in the game window
 	surface_resize(application_surface, global.__view_width, global.__view_height) // application surface is static
-	global.__tts = window_width / width_default
 } else if os_browser == browser_not_a_browser {
 	window_center()
 	window_set_position(window_get_x(), 48)
@@ -69,14 +66,9 @@ if global.flag_is_mobile or window_get_fullscreen() {
 global.__ttw = display_get_gui_width()						// Adjusted
 global.__tth = display_get_gui_height()						// Adjusted
 
-// View is 'entire' screen											(Game)
-#macro view_width global.__view_width
-#macro view_height global.__view_height
-// However GUI fits into 'aspected' screen		(Interface)
+// GUI fits into 'aspected' screen		(Interface)
 #macro screen_width global.__ttw
 #macro screen_height global.__tth
-#macro screen_scale global.__tts									// Real size
-#macro screen_iscale floor(global.__tts)
 application_surface_enable(true)
 application_surface_draw_enable(false)
 

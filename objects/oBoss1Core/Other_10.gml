@@ -1,8 +1,10 @@
 /// @description Dying
 for (var i = 0; i < arm_number; ++i) {
-	if instance_exists(arm_instances[i]) {
-		with arm_instances[i]
-			dead = true
+	arm = arm_properties[i]
+
+	with arm[0] {
+		dead = true
+		untargetable = true
 	}
 }
 
@@ -12,5 +14,5 @@ dead = false
 
 alarm[1] = -1
 alarm[2] = 1
-alarm[3] = 150
+alarm[3] = seconds(2.5)
 

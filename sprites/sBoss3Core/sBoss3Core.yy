@@ -2,16 +2,16 @@
     "id": "91170078-e811-4581-b5d3-2197ff19c400",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "sFrameSquareJako",
+    "name": "sBoss3Core",
     "For3D": false,
-    "HTile": true,
-    "VTile": true,
-    "bbox_bottom": 55,
+    "HTile": false,
+    "VTile": false,
+    "bbox_bottom": 107,
     "bbox_left": 0,
-    "bbox_right": 55,
+    "bbox_right": 140,
     "bbox_top": 0,
     "bboxmode": 0,
-    "colkind": 5,
+    "colkind": 1,
     "coltolerance": 0,
     "edgeFiltering": true,
     "frames": [
@@ -62,7 +62,7 @@
     ],
     "gridX": 0,
     "gridY": 0,
-    "height": 56,
+    "height": 108,
     "layers": [
         {
             "id": "25396244-9793-4981-bebe-8d81565bf377",
@@ -86,7 +86,7 @@
     "swfPrecision": 2.525,
     "textureGroupId": "6d1e69ef-6b62-4229-b979-c0d7fbe8aa55",
     "type": 0,
-    "width": 56,
-    "xorig": 28,
-    "yorig": 28
+    "width": 141,
+    "xorig": 70,
+    "yorig": 54
 }

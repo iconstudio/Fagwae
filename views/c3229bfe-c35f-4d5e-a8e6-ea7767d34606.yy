@@ -10,7 +10,6 @@
         "bea06a14-437b-4c06-94a7-12ba81bbb9e8",
         "315e3492-9927-4a0f-b6bc-14ef4007de06",
         "64ff2a07-79e7-44c4-abcc-3d879d529f13",
-        "91170078-e811-4581-b5d3-2197ff19c400",
         "be7437dc-51be-4006-95e1-c1682cf262d9",
         "53eac6a8-78ed-49de-974f-ea2ab1828321",
         "9ea1c9c8-711a-43ee-81af-24569fe370c4",
@@ -24,7 +23,9 @@
         "da70d857-dd58-4fce-989c-5e9711588faa",
         "b65bd878-fd7a-497b-a8e7-c2aeae2c85ae",
         "50a69411-ebe6-4ed7-9787-8a7ebeb636dd",
-        "36afba0a-6310-49a9-80d5-a3b626f03771"
+        "36afba0a-6310-49a9-80d5-a3b626f03771",
+        "91170078-e811-4581-b5d3-2197ff19c400",
+        "e27819c7-965e-4a41-9dce-1725ddd1efa7"
     ],
     "filterType": "GMSprite",
     "folderName": "Frames",

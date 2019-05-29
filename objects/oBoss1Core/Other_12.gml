@@ -25,11 +25,11 @@ if appearing {
 }
 
 if !dead { // It is not dead until actually explodes
-	arm_angle = arm_angle_begin + arm_angle_time / arm_angle_period * 360
-	if arm_angle_time < arm_angle_period
-		arm_angle_time++
+	arm_rotation = arm_startangle + arm_rotation_time / arm_rotation_period * 360
+	if arm_rotation_time < arm_rotation_period
+		arm_rotation_time++
 	else
-		arm_angle_time = 0
+		arm_rotation_time = 0
 }
 
 event_user(3)

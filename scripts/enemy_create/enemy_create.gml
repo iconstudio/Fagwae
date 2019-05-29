@@ -23,7 +23,7 @@ with instance_create_layer(argument[1], argument[2], __layer, oDummy) {
 	if argument_count >= 4
 		type_create = argument[3]
 
-	polygon = attributes[6]
+	polygons = attributes[6]
 	if global.extreme
 		polygon_color = attributes[8]
 	else

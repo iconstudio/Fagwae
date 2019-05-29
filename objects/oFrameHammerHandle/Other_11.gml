@@ -6,5 +6,7 @@ head.image_angle = image_angle + 90
 head.depth -= 1
 head.parent = id
 
+velocity_max = player_vspeed * 1.5
+
 rotation_step *= type_create
 invincible = INVINCIBLE_PARENTAL

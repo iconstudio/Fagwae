@@ -162,7 +162,7 @@ for (; k < 4; ++k)
 area_enemy_push(seconds(0.05), enemy_line_2, 0, 508, -500 + random(20))
 k = 0
 for (; k < 4; ++k)
-	area_enemy_push(seconds(0.06 + 0.1 * (random(k) * 5) mod 3 + 0.03), enemy_line_2, k & 1, min(max(20, 40 + (k * 219) mod 540), 520), -500 + random(20))
+	area_enemy_push(seconds(0.08 + 0.1 * (random(k) * 5) mod 3 ), enemy_line_2, k & 1, min(max(20, 40 + (k * 219) mod 540), 520), -500 + random(20))
 area_script_push(0, script_await_dying, 0, 0, 0)
 area_enemy_push(seconds(0.1), enemy_line_2, 0, 318, -500)
 area_delay_push(seconds(2))

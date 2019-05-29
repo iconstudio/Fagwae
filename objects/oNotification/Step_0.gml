@@ -4,10 +4,8 @@ if begin_y != y
 
 if draw_mode == 0 {
 	alpha = fadein_time / fadein_limit
-	if fadein_time++ >= fadein_period {
+	if fadein_time++ >= fadein_period
 		draw_mode = 1
-		time_current = 0
-	}
 } else {
 	alpha = 1 - ease_out_expo(fadeout_time / fadeout_period)
 	if fadeout_time++ >= fadeout_period {

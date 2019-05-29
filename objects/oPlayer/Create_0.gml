@@ -4,7 +4,7 @@ event_inherited()
 // stat
 hp = 2
 pow = 50
-shot_damage = 3
+//shot_damage = 3
 shot_speed = 15
 shot_period = seconds(0.07)
 hp_max = 2

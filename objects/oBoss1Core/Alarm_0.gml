@@ -1,29 +1,29 @@
 /// @description Creating arms
-arm_instances[arm_number] = enemy_create(enemy_boss_1C, x, -200, 0, 0, id, "Boss_C")
-arm_instances[arm_number].angle = ccnt * 60 + 210
-arm_instances[arm_number].org = 240
-if ccnt & 1
-	arm_instances[arm_number].dist = 50 * arm_width
+var arm = enemy_create(enemy_boss_1C, x, -200, 0, 0, id, "Boss_C")
+arm.angle = arm_creation_count * 60 + 210
+arm.org = 240
+if arm_creation_count & 1
+	arm.dist = 50 * arm_width
 else
-	arm_instances[arm_number].dist = 50
-arm_number++
+	arm.dist = 50
+arm_properties[arm_number++] = [arm, 0, 0]
 
-arm_instances[arm_number] = enemy_create(enemy_boss_1B, x, -200, 0, 0, id, "Boss_B")
-arm_instances[arm_number].angle = ccnt * 60 + 30
-arm_instances[arm_number].org = 120
-if ccnt & 1
-	arm_instances[arm_number].dist = 50 * arm_width
+arm = enemy_create(enemy_boss_1B, x, -200, 0, 0, id, "Boss_B")
+arm.angle = arm_creation_count * 60 + 30
+arm.org = 120
+if arm_creation_count & 1
+	arm.dist = 50 * arm_width
 else
-	arm_instances[arm_number].dist = 50
-arm_number++
+	arm.dist = 50
+arm_properties[arm_number++] = [arm, 0, 0]
 
-arm_instances[arm_number] = enemy_create(enemy_boss_1A, x, -200, 0, 0, id, "Boss_A")
-arm_instances[arm_number].angle = ccnt * 60
-arm_instances[arm_number].org = 0
-arm_instances[arm_number].dist = 70
-arm_number++
+arm = enemy_create(enemy_boss_1A, x, -200, 0, 0, id, "Boss_A")
+arm.angle = arm_creation_count * 60
+arm.org = 0
+arm.dist = 70
+arm_properties[arm_number++] = [arm, 0, 0]
 
-event_user(3)
+//event_user(3)
 
-if ++ccnt < 6
+if ++arm_creation_count < 6
 	alarm[0] = arm_creation_period

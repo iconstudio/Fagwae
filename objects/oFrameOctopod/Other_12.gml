@@ -4,24 +4,26 @@ event_inherited()
 arm_wiggle += 5
 
 for (var i = 0; i < arm_number; ++i) {
-	speed = arm_width
-	if instance_exists(arm_instances[i]) {
-		direction = arm_angle[i] + image_angle + lengthdir_x(20, arm_wiggle)
-		arm_instances[i].x = x + hspeed
-		arm_instances[i].y = y + vspeed
-		arm_instances[i].image_angle += (direction - arm_instances[i].image_angle) * 0.6
+	arm = arm_properties[i]
+
+	if instance_exists(arm[0]) {
+		speed = arm[1]
+		direction = arm[2] + image_angle + lengthdir_x(20, arm_wiggle)
+		arm[0].x = x + hspeed
+		arm[0].y = y + vspeed
+		arm[0].image_angle += (direction - arm[0].image_angle) * 0.6
 		
-		var arm_second = arm_instances[i].arm_instance
+		var arm_second = arm[0].arm_instance
 		if instance_exists(arm_second) {
-			arm_instances[i].speed = arm_instances[i].arm_width
-			arm_instances[i].direction = arm_instances[i].image_angle
-			var __speed = arm_instances[i].speed, __direction = arm_instances[i].image_angle
-			arm_second.x = arm_instances[i].x + arm_instances[i].hspeed
-			arm_second.y = arm_instances[i].y + arm_instances[i].vspeed
-			arm_second.image_angle += (arm_instances[i].image_angle + lengthdir_x(15, arm_wiggle) - arm_second.image_angle) * 0.2
+			arm[0].speed = arm[0].arm_width
+			arm[0].direction = arm[0].image_angle
+			var __speed = arm[0].speed, __direction = arm[0].image_angle
+			arm_second.x = arm[0].x + arm[0].hspeed
+			arm_second.y = arm[0].y + arm[0].vspeed
+			arm_second.image_angle += (arm[0].image_angle + lengthdir_x(15, arm_wiggle) - arm_second.image_angle) * 0.2
 			
-			arm_instances[i].speed = __speed
-			arm_instances[i].direction = __direction
+			arm[0].speed = __speed
+			arm[0].direction = __direction
 		}
 	}
 }

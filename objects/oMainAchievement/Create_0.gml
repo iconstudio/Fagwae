@@ -19,7 +19,7 @@ item_show_gap_period = seconds(0.03)
 
 content_height = item_height * global.achievement_count
 content_draw_x_start = 80
-content_draw_x_end = screen_width - 90
+//content_draw_x_end = screen_width - 90
 content_draw_y_start = 100
 content_draw_y_end = screen_height - 90
 viewer_height = screen_height - 190 // screen_height - (100 + 90)
