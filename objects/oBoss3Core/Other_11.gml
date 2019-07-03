@@ -37,7 +37,17 @@
 	9. 중앙에서 약간 흔들리는 원호를 그리며 공전. 패턴 1 혹은 2로 되돌아감.
 */
 name = ""
-enemy_arm_init(enemy_joint_2, 4, 19, enemy_callback_scout_arm_adjust)
+arm_number = 0
+arm_startangle = 0
+arm_properties = 0
+//enemy_arm_add(
+
+x = room_width * 0.5
+y = -120
+
+pattern = 0
+pattern_opened = false
+pattern_await_time = 0
 
 velocity = room_width / seconds(2.3)
 

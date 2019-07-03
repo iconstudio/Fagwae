@@ -10,3 +10,4 @@ for (var i = 0; i < arm_number; ++i) {
 	}
 }
 vspeed = velocity
+hspeed = 0

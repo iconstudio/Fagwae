@@ -15,4 +15,4 @@ rotate_time = 0
 rotate_period = seconds(1.3)
 
 shot_speed = enemy_bullet_speed_faster
-alarm[0] = seconds(2.3)
+alarm[0] = seconds(1.4)

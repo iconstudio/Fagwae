@@ -1,5 +1,5 @@
 /// @description Reflecting
-if other.pow <= 0 or dead
+if dead
 	exit
 
 if irandom(3) == 0 {

@@ -10,26 +10,26 @@ enemy_register(enemy_arm_rectangle_1, oRectangleLauncherArm, [sRectangleArmNorma
 enemy_register(enemy_arm_rectangle_2, oRectangleSidewinderArm, [sRectangleArmNormal, sRectangleArmExtreme], 
 19, 400, 1, 0)
 
-enemy_register(enemy_arm_turret_1, oFrameTurret, noone, 4000, 0, 0, 0)
+enemy_register(enemy_arm_turret_1, oFrameTurret, noone, 9999, 0, 0, 0)
 
-enemy_register(enemy_arm_turret_2, oFrameTurret, noone, 4000, 0, 0, 0)
+enemy_register(enemy_arm_turret_2, oFrameTurret, noone, 9999, 0, 0, 0)
 
-enemy_register(enemy_arm_turret_3, oFrameTurret, noone, 4000, 0, 0, 0)
+enemy_register(enemy_arm_turret_3, oFrameTurret, noone, 9999, 0, 0, 0)
 
-enemy_register(enemy_arm_turret_4, oFrameTurret, noone, 4000, 0, 0, 0)
+enemy_register(enemy_arm_turret_4, oFrameTurret, noone, 9999, 0, 0, 0)
 
-enemy_register(enemy_arm_turret_5, oFrameTurret, noone, 4000, 0, 0, 0)
+enemy_register(enemy_arm_turret_5, oFrameTurret, noone, 9999, 0, 0, 0)
 
-enemy_register(enemy_arm_turret_6, oFrameTurretHoming, noone, 4000, 0, 0, 0)
+enemy_register(enemy_arm_turret_6, oFrameTurretHoming, noone, 9999, 0, 0, 0)
 
-enemy_register(enemy_arm_turret_d, oFrameDualTurret, noone, 4000, 0, 0, 0)
+enemy_register(enemy_arm_turret_d, oFrameDualTurret, noone, 9999, 0, 0, 0)
 
-enemy_register(enemy_arm_hammer, oFrameHammer, noone, 4000, 0, 0, 0)
+enemy_register(enemy_arm_hammer, oFrameHammer, noone, 9999, 0, 0, 0)
 
 enemy_register(enemy_arm_handle, oFrameHammerHandle, noone, 13, 500, 1, 2.8)
 
-enemy_register(enemy_arm_hammerhead, oFrameHammerHead, noone, 4000, 100, 1, 0)
+enemy_register(enemy_arm_hammerhead, oFrameHammerHead, noone, 9999, 100, 1, 0)
 
-enemy_register(enemy_arm_crawler_terminal, oFrameCrawlerTerminal, noone, 4000, 500, 1, 0)
+enemy_register(enemy_arm_crawler_terminal, oFrameCrawlerTerminal, noone, 9999, 500, 1, 0)
 
-enemy_register(enemy_arm_crawler_leg, oFrameJoint, noone, 4000, 500, 1, 0)
+enemy_register(enemy_arm_crawler_leg, oFrameJoint, noone, 9999, 500, 1, 0)

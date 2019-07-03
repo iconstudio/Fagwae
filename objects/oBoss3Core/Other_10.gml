@@ -1,5 +1,18 @@
 /// @description Dying
-enemy_arm_explode()
-enemy_explode(3, 42, 2 + irandom(1), 2)
+for (var i = 0; i < arm_number; ++i) {
+	arm = arm_properties[i]
 
-instance_destroy()
+	if instance_exists(arm[0])
+		arm[0].dead = true
+}
+
+bullet_clear()
+
+pattern = -1
+pattern_opened = true
+dead = true
+
+for (var i = 0; i < 7; ++i)
+	alarm[i] = -1
+
+alarm[9] = seconds(1)

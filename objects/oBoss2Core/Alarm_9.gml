@@ -5,7 +5,6 @@ with glove_left
 with glove_right
 	event_user(0)
 
-dead = true
 //show_polygon(x, y, 6, 160, polycol, polygon)
 enemy_explode(30, 256, 9, 9)
 

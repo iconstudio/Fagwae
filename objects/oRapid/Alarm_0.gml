@@ -1,5 +1,4 @@
 /// @description Attacking rapidly
-
 if y >= 700
 	exit
 

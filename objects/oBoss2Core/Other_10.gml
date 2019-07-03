@@ -10,7 +10,7 @@ bullet_clear()
 
 pattern = -1
 pattern_opened = true
-dead = false
+dead = true
 
 for (var i = 0; i < 7; ++i)
 	alarm[i] = -1

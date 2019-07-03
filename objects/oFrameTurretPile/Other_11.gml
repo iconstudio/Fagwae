@@ -29,7 +29,7 @@ for (var i = 0; i < arm_number; ++i) {
 
 	with arm[0] {
 		speed = 0
-		//parent = other.id
+		parent = other.id
 
 		hurt_upper_ratio = 0.9
 		invincible = INVINCIBLE_PARENTAL

@@ -23,10 +23,10 @@ if argument_count >= 4 {
 var arm_angle_one, arm
 for (var i = 0; i < arm_number; ++i) {
 	arm_angle_one = (arm_startangle + 360 / arm_number * i) mod 360
-	arm_properties[i] = [enemy_create(argument[0], x, y, 0, arm_angle_one, id, arm_layer), argument[2], arm_angle_one]
+	arm = enemy_create(argument[0], x, y, 0, arm_angle_one, id, arm_layer)
+	arm_properties[i] = [arm, argument[2], arm_angle_one]
 
-	arm = arm_properties[i]
-	with arm[0] {
+	with arm {
 		if script_exists(arm_script)
 			script_execute(arm_script, i)
 	}
