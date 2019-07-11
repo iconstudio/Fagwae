@@ -6,16 +6,15 @@
 /// @param [other] { all }
 /// @param [x] { real }
 /// @param [y] { real }
-
 var data = undefined, dother = undefined, cx = undefined, cy = undefined
 
-if argument_count > 2 {
+if 2 < argument_count {
 	data = argument[2]
-	if argument_count > 3 {
+	if 3 < argument_count {
 		dother = argument[3]
-		if argument_count > 4 {
+		if 4 < argument_count {
 			cx = argument[4]
-			if argument_count > 5
+			if 5 < argument_count
 				cy = argument[5]
 		}
 	}

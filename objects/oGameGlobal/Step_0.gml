@@ -30,20 +30,20 @@ if global.screenlock {
 		pause_alpha = 1
 	exit
 } else {
-	if pause_alpha > 0
+	if 0 < pause_alpha
 		pause_alpha -= 0.1
 	else
 		pause_alpha = 0
 }
 
-if shadow_time > 0 {
+if 0 < shadow_time {
 	shadow_alpha = ease_out_quintic(shadow_time / shadow_period)
 	shadow_time--
 } else {
 	shadow_alpha = 0
 }
 
-if player_appear_time > 0 {
+if 0 < player_appear_time {
 	player_appear_time--
 } else {
 	if player_appear_time == 0 {
@@ -53,7 +53,7 @@ if player_appear_time > 0 {
 }
 
 if !instance_exists(oPlayerParent) {
-	if ui_appear_time > 0
+	if 0 < ui_appear_time
 		ui_appear_time--
 } else {
 	if ui_appear_time < ui_appear_period
@@ -61,16 +61,17 @@ if !instance_exists(oPlayerParent) {
 	else
 		ui_appear_time = ui_appear_period
 }
-if ui_appear_time > 0
+
+if 0 < ui_appear_time
 	ui_alpha = ease_in_out_back(ui_appear_time / ui_appear_period)
 else
 	ui_alpha = 0
 
-if gauge_time > 0 {
+if 0 < gauge_time {
 	gauge_time--
 	gauge_alpha = 1
 } else {
-	if gauge_show_time > 0
+	if 0 < gauge_show_time
 		gauge_alpha = ease_out_expo(gauge_show_time-- / gauge_show_period)
 	else
 		gauge_alpha = 0

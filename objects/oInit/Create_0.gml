@@ -1,4 +1,4 @@
-/// @description Initialize Basic Data, Back-End
+/// @description Initializing Basic Data, Back-End
 // external
 #macro file_header $af
 global.profilefile = "profile.dat"

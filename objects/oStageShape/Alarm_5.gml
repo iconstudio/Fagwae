@@ -2,7 +2,7 @@
 if deco_count > deco_min {
 	if deco_count == 3
 		alarm[5] = deco_fail_period
-	else if deco_count > 0
+	else if 0 < deco_count
 		alarm[5] = deco_fail_period * 0.5
 	else
 		alarm[5] = deco_fail_period * 0.333

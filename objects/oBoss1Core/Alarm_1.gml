@@ -1,6 +1,6 @@
 /// @description Attacking
 if abool { // straight
-	var scnt = round(10 - arm_count * 0.5) + global.extreme * 4
+	var scnt = max(1, round(8 - arm_count * 0.5)) + global.extreme * 3
 	var ddir = 360 / scnt
 	for (var i = 0; i < scnt; ++i)
 		enemy_shot(x, y, shot_speed_green, move_angle * 19 + ddir * i, oEnemyBullet2)

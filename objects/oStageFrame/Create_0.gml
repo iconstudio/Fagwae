@@ -2,8 +2,6 @@
 event_inherited()
 next = oStageShape
 
-available = true
-
 // background
 back_color = 0
 param_speed = (0.1 * 200 - 10) / 200
@@ -22,7 +20,7 @@ deco_height = 300
 
 // Initializing stage
 var jako_delay = seconds(0.4)
-var jako_left_first = global.px > room_width * 0.5
+var jako_left_first = room_width * 0.5 < global.px
 var jako_path_list = [pathScoutNormalRight, pathScoutNormalLeft, pathScoutNormalRight, pathScoutNormalLeft, pathScoutRoamARight, pathScoutRoamALeft, pathScoutRoamBRight, pathScoutRoamBLeft]
 var jako_intro_path_selected = jako_path_list[jako_left_first]
 var jako_intro_path_selected_inverted = jako_path_list[1 - jako_left_first]
@@ -34,7 +32,7 @@ var jako_shooter = global.extreme ? enemy_scout_j2 : enemy_scout_j1
 
 #region STAGE 1
 script_stage3_ready()
-//*
+/*
 area_enemy_push(jako_delay, enemy_scout_c1, jako_intro_path_selected, 0, 0)
 area_enemy_push(jako_delay, enemy_scout_j1, jako_intro_path_selected, 0, 0)
 area_enemy_push(jako_delay, enemy_scout_j1, jako_intro_path_selected, 0, 0)
@@ -111,7 +109,7 @@ area_enemy_push(0, enemy_square_1, square_hspeed, 130, -56)
 area_enemy_push(0, enemy_square_h, square_hspeed, square_captain_x1, -56)
 area_enemy_push(0, enemy_square_1, square_hspeed, 410, -56)
 area_enemy_push(seconds(8), enemy_square_1, square_hspeed, 540, -56)
-//*/
+//
 var piles_supporter = global.extreme ? enemy_scout_j4 : enemy_scout_j2
 var piles_positions = [60, room_width - 60, 150, -150]
 var piles_choice = choose(0, 1)
@@ -146,7 +144,7 @@ area_enemy_push(0, enemy_scout_j2, jako_pushs_path_selected_inverted, 0, 0)
 area_enemy_push(jako_delay, enemy_scout_j2, jako_pushs_path_selected, 0, 0)
 area_enemy_push(0, enemy_scout_j2, jako_pushs_path_selected_inverted, 0, 0)
 area_enemy_push(seconds(6), enemy_scout_j2, jako_pushs_path_selected, 0, 0)
-
+*/
 area_script_push(seconds(0.2), script_boss_apear, 0, 0, 0)
 area_music_push(seconds(0.5), musicBoss)
 area_enemy_push(0, enemy_boss_3, 0, 270, -128)

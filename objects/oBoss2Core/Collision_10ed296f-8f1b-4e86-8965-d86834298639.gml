@@ -1,5 +1,5 @@
 /// @description Getting damage
-if hp > 0 {
+if 0 < hp {
 	event_inherited()
 } else {
 	with glove_left

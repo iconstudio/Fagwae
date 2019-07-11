@@ -1,6 +1,4 @@
-/// @description 
-
-if invincible > 0 or other.dead
+if 0 < invincible or other.dead
 	exit
 
 event_user(1) // get damaged

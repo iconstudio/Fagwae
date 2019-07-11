@@ -12,4 +12,4 @@ planning_y = y
 planning_time = 0
 planning_period = 0
 planning_easer = ease_linear
-planning_terminator = argument_count > 0 ? argument[0] : noone
+planning_terminator = 0 < argument_count ? argument[0] : noone

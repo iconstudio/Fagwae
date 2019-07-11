@@ -1,9 +1,10 @@
 /// @description Update
-if invincible > 0 {
+if 0 < invincible {
 	if !instance_exists(shield) { 
 		shield = instance_create_layer(x, y, "Player_Shield", oPlayerShield)
 		shield.parent = id
 	}
+
 	invincible--
 } else if shield != noone {
 	with shield
@@ -74,10 +75,10 @@ attack_check = (bomb_mode == 0) and (keyboard_check(ord("Z")) or io_check_trigge
 if attack_check
 	attack_count = 3
 
-if attack_delay > 0 {
+if 0 < attack_delay {
 	attack_delay--
 } else {
-	if attack_count > 0 {
+	if 0 < attack_count {
 		var let, sangle = 90 + angle_player + random(1) - 0.5
 		let = instance_create_layer(x + out_ax + lengthdir_x(40, sangle - angle_arm_right), y + 3 + out_ay + lengthdir_y(40, sangle - angle_arm_right), "Bullet_Player", oPlayerBullet)
 		let.direction = sangle - angle_arm_right

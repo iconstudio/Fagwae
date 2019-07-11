@@ -1,4 +1,4 @@
 /// @description get_ralpha(value)
 /// @function get_ralpha
 /// @param value { real }
-return ((argument0 mod 5) < 3) | (argument0 > 15)
+return ((argument0 mod 5) < 3) | (15 < argument0)

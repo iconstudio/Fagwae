@@ -12,7 +12,7 @@ if !is_array(attributes)
 	show_error("Error when getting enemy attributes", true)
 
 var __layer = "Instances"
-if argument_count >= 7
+if 6 < argument_count
 	__layer = argument[6]
 
 var sprites = attributes[1]
@@ -20,7 +20,7 @@ with instance_create_layer(argument[1], argument[2], __layer, oDummy) {
 	sprite_normal = sprites[0]
 	sprite_extreme = sprites[1]
 	rotation_step = attributes[5]
-	if argument_count >= 4
+	if 3 < argument_count
 		type_create = argument[3]
 
 	polygons = attributes[6]
@@ -29,14 +29,14 @@ with instance_create_layer(argument[1], argument[2], __layer, oDummy) {
 	else
 		polygon_color = attributes[7]
 
-	if argument_count >= 5
+	if 4 < argument_count
 		image_angle = argument[4]
-	if argument_count >= 6
+	if 5 < argument_count
 		parent = argument[5]
 
 	instance_change(attributes[0], true)
 	
-	if argument_count >= 6
+	if 5 < argument_count
 		parent = argument[5]
 	hp = attributes[2]
 	hp_max = attributes[2]

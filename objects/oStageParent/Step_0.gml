@@ -6,7 +6,7 @@ if brightness_time < brightness_period
 if !global.playeralive
 	exit
 
-if prohibit_count > 0 {
+if 0 < prohibit_count {
 	for (var i = 0; i < prohibit_count; ++i) {
 		if instance_exists(prohibit_push[i]) {
 			//show_debug_message(object_get_name(prohibit_push[i].object_index) + " is distracted.")
@@ -30,7 +30,7 @@ if flag_await_clear {
 }
 
 if trigger_counter-- <= 0 {
-	if trigger_size - trigger_pos > 0 {
+	if 0 < trigger_size - trigger_pos {
 		trigger_datalast = trigger_push[trigger_pos++]
 		var type = trigger_datalast[0]
 		var time = trigger_datalast[1]

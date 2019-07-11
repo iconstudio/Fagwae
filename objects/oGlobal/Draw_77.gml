@@ -15,7 +15,7 @@ if global.screenlock {
 	//gpu_set_blendenable(true)
 	surface_reset_target()
 
-	if shake_time > 0 {
+	if 0 < shake_time {
 		speed = shake_meter * (shake_time-- / shake_period)
 		direction = (direction + random(80) + 140) mod 360
 		camera_set_view_pos(view_camera, hspeed, vspeed)
@@ -48,20 +48,5 @@ if global.screenlock {
 		draw_surface_ext(surf, 0, 0, 1, 1, 0, $ffffff, 1)
 		if fxaa_on
 			shader_reset()
-	}
-}
-
-/* 
-if global.screenlock and ds_priority_size(global.ui_listbox) > 0 {
-	ds_priority_copy(global.ui_listbox, ui_listbox_copy)
-
-	var ui_instance
-	while !ds_priority_empty(ui_listbox_copy) {
-		ui_instance = ds_priority_delete_max(ui_listbox_copy)
-		if instance_exists(ui_instance) {
-			show_debug_message("drawing: " + object_get_name(ui_instance.object_index))
-			with ui_instance
-				event_perform(ev_draw, 0)
-		}
 	}
 }

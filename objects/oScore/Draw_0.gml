@@ -1,5 +1,5 @@
 /// @description Drawing Score
-if score_show_time > 0 {
+if 0 < score_show_time {
 	var _param = 0, _brite = 1
 	with oStageParent {
 		_param = background_param

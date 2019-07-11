@@ -103,6 +103,14 @@
             }
         },
         {
+            "Key": "076335cc-bb25-4376-b1b0-e1c80f640af8",
+            "Value": {
+                "id": "02ccfe82-2694-41f4-b13c-20950b699a07",
+                "resourcePath": "objects\\oBoss3Shoulder\\oBoss3Shoulder.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "07e1eafb-4efb-409f-b17f-a8e63c41f9e5",
             "Value": {
                 "id": "2dd7aa6f-3da7-4161-a072-d4115888f802",
@@ -235,6 +243,14 @@
             "Value": {
                 "id": "9ea2a21b-63b0-49b6-88b1-306918fb2542",
                 "resourcePath": "objects\\oStageFrame\\oStageFrame.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "10346bcb-447a-4766-88ab-8ba8fa5c94de",
+            "Value": {
+                "id": "d2cb6b16-441c-45c3-984b-0e7de040f7d4",
+                "resourcePath": "objects\\oBoss3Turret\\oBoss3Turret.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -868,6 +884,14 @@
                 "id": "999c1ccb-3964-452b-946a-07538192a9ec",
                 "resourcePath": "objects\\oFrameLine1\\oFrameLine1.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "414e79fa-7775-4e9d-90bf-b58ea7b2ce53",
+            "Value": {
+                "id": "8f2b6c2d-33e9-4bf9-b617-7bdf6776c1dc",
+                "resourcePath": "scripts\\enemy_arm_add_coord\\enemy_arm_add_coord.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2171,6 +2195,14 @@
             "Value": {
                 "id": "8eee1ab0-e608-47e3-be51-454ee3b6888e",
                 "resourcePath": "objects\\oStageEntrance\\oStageEntrance.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "9459024b-33ff-43a9-984f-08bd8a04dfcd",
+            "Value": {
+                "id": "9e49a8b2-fa39-4324-9c83-26925487e65b",
+                "resourcePath": "objects\\oBoss3Arm\\oBoss3Arm.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -3986,6 +4018,7 @@
         "7a41cd66-6631-425a-ac56-b454236eb536",
         "a059ac42-693c-4ca9-b393-61fb564a1360",
         "5b231d42-1db3-46ff-a178-027e388d26c7",
+        "414e79fa-7775-4e9d-90bf-b58ea7b2ce53",
         "21319fe0-0cba-4224-a1b3-18b657ba19fe",
         "b256a706-70b4-4f9c-b479-ff1ca01212a4",
         "6315f5e1-7c68-47be-8b99-b68d5a9f527b",

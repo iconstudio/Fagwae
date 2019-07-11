@@ -2,7 +2,7 @@ if instance_exists(oPlayer) {
 	if score_show_time < score_show_period
 		score_show_time++
 } else {
-	if score_show_time > 0
+	if 0 < score_show_time
 		score_show_time--
 	else
 		score_show_time = 0

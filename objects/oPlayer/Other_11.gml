@@ -3,11 +3,12 @@ if !global.playeralive or instance_exists(oGameOver) or instance_exists(oContinu
 	exit
 
 // damaged!
-if hp > 0 {
+if 0 < hp {
 	screen_wave(x, y, 96)
 	hp--
+
 	if global.score_combo != 0 {
-		if global.score_combo > 10
+		if 10 < global.score_combo
 			mscr = floor(global.score_combo * 0.5)
 		else
 			mscr = global.score_combo

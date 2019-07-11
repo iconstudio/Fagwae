@@ -1,6 +1,4 @@
 /// @description Update
-event_inherited()
-
 if homing {
 	if homing_time < homing_period {
 		direction += get_rotation_next(direction, point_direction(x, y, global.px, global.py), 1)

@@ -3,7 +3,7 @@
 /// @param value { real }
 with oGlobal {
 	shake_meter = max(argument0, shake_meter)
-	if shake_meter > 12
+	if 12 < shake_meter
 		shake_period = seconds(log2(shake_meter - 12) / shake_meter + 0.06)
 	else
 		shake_period = seconds(0.05)

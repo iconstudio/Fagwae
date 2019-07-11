@@ -14,7 +14,7 @@ if instance_exists(gauge_target) {
 	gauge_target_ratio = gauge_target.hp / gauge_target.hp_max
 }
 
-if gauge_alpha > 0 {
+if 0 < gauge_alpha {
 	draw_set_alpha(gauge_alpha * ui_alpha)
 	var gsiz = gauge_target_ratio * screen_width * 0.5 // ratio of the halfed screen
 	var gcol1 = make_color_hsv(gauge_target_ratio * 40, 240, 96)
@@ -35,10 +35,10 @@ if gauge_alpha > 0 {
 	draw_set_alpha(1)
 }
 
-if shadow_alpha > 0
+if 0 < shadow_alpha
 	draw_sprite_ext(sScreenShadow, 0, 0, 0, 1, 1, 0, $ffffff, shadow_alpha * 2)
 
-if pause_alpha > 0 {
+if 0 < pause_alpha {
 	//draw_set_alpha(pause_alpha * 0.5)
 	//draw_set_color(0)
 	//draw_rectangle(0, 0, screen_width, screen_height, 0)

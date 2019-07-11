@@ -1,6 +1,4 @@
-/// @description 
-
-if invincible > 0
+if 0 < invincible
 	exit
 
 event_user(1)

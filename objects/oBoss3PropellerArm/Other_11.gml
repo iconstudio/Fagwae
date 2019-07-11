@@ -1,6 +1,7 @@
 /// @description Creation
-image_xscale = 0.55
+image_xscale = 1.3
 image_yscale = 0.5
+length = (sprite_width - 20) * image_xscale - 4
 
 enemy_arm_init(enemy_joint_2, 3, 0, enemy_callback_propeller_adjust)
 

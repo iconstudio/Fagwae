@@ -6,10 +6,8 @@ if other.parent == id {
 	var parent_hiearach = parent
 	while true {
 		if !instance_exists(parent_hiearach) {
-			show_debug_message("NOPE!")
 			break
 		} else if other.parent == parent_hiearach {
-			show_debug_message("PROFIT!")
 			exit
 		}
 		parent_hiearach = parent_hiearach.parent

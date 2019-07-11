@@ -4,9 +4,8 @@
 /// @param y position
 /// @param object id
 /// @param [list] list
-
 var instances
-if argument_count > 3 {
+if 3 < argument_count {
 	instances = argument[3]
 	ds_list_clear(instances)
 } else {

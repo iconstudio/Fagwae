@@ -6,7 +6,7 @@ if dmode == 0 {
 	}
 	exit
 } else { // dmode == 1
-	if dalpha > -2 {
+	if -2 < dalpha {
 		if mouse_check_button(mb_left) or keyboard_check_pressed(vk_anykey)
 		or io_check_pressed_padAny() {
 			dalpha = -2

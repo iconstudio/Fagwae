@@ -1,5 +1,5 @@
 if instance_exists(oMainMenu) {
-	if oMainMenu.frame >= oMainMenu.reversing_period and oMainMenu.push[2] <= 0.01 {
+	if oMainMenu.reversing_period <= oMainMenu.frame and oMainMenu.push[2] <= 0.01 {
 		if gamepad_index != -1 and script_execute(shortcut_gamepad) {
 			event_perform(ev_mouse, ev_left_release)
 		} else if script_execute(shortcut) {
@@ -22,6 +22,6 @@ if collision_point(mouse_x, mouse_y, id, false, false) {
 	if highlight_time < highlight_period
 		highlight_time++
 } else {
-	if highlight_time > 0
+	if 0 < highlight_time
 		highlight_time--
 }

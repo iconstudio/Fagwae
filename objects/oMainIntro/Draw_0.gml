@@ -14,7 +14,7 @@ if intro_mode == 0 {
 	draw_sprite_ext(sTitle, 1, room_width * 0.5, title_yposition, 1, 1, 0, $ffffff, 1)
 }
 
-if intro_mode > 0 {
+if 0 < intro_mode {
 	draw_primitive_begin_texture(pr_trianglestrip, title_texture)
 	draw_set_alpha(power(push_third, 5))
 	var iax = 100 * ease_out_expo(1 - push_second)

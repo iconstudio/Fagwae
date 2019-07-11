@@ -1,7 +1,7 @@
 /// @description Creation
 /* 패턴: 1945 Strikers PLUS의 도시 보스를 참고.
 	하나의 포탑 (Turret)
-	세개의 방어구 (Plate)
+	네개의 방어구 (Plate)
 	두개의 어깨 (Shoulder)
 	두개의 팔 (Arm)
 	네개의 집게 (Pincher)
@@ -36,22 +36,94 @@
 
 	9. 중앙에서 약간 흔들리는 원호를 그리며 공전. 패턴 1 혹은 2로 되돌아감.
 */
-name = ""
+name = "Thruster"
+layer = layer_get_id("Boss_A")
+
 arm_number = 0
 arm_startangle = 0
 arm_properties = 0
-//enemy_arm_add(
+
+// head
+with enemy_arm_add_coord(enemy_boss_3_turret, x, y, noone, "Boss_Above")
+	arm_angle_fixed = 0
+
+var plate_coord = 32.75
+var plate_angle = point_direction(0, 0, 29.375, 5.4)
+// 2 front plates
+with enemy_arm_add_coord(enemy_boss_3_plate, x - plate_coord, y + 58, noone, "Boss_C")
+	arm_angle_fixed = 0
+with enemy_arm_add_coord(enemy_boss_3_plate, x + plate_coord, y + 58, noone, "Boss_C")
+	arm_angle_fixed = 0
+
+// 2 back plates
+with enemy_arm_add_coord(enemy_boss_3_backplate, x - plate_coord, y - 56, noone, "Boss_C") {
+	image_yscale = 0.3
+
+	arm_angle_fixed = 180 - plate_angle
+	image_angle = arm_angle_fixed
+}
+with enemy_arm_add_coord(enemy_boss_3_backplate, x + plate_coord, y - 56, noone, "Boss_C") {
+	image_yscale = 0.3
+
+	arm_angle_fixed = plate_angle
+	image_angle = arm_angle_fixed
+}
+
+// 2 shoulders
+var shoulder_hypo_length = 64 * sqrt(2)
+var shoulder_y = y - 54 + shoulder_hypo_length * 0.5
+with enemy_arm_add_coord(enemy_boss_3_sholuder, x - 70, shoulder_y, noone, "Boss_B") {
+	arm_angle_fixed = 315
+	image_angle = arm_angle_fixed
+}
+with enemy_arm_add_coord(enemy_boss_3_sholuder, x + 70, shoulder_y, noone, "Boss_B") {
+	arm_angle_fixed = 225
+	image_angle = arm_angle_fixed
+}
+
+// 2 arms
+var arm_hypo_length = 32 * sqrt(2)
+var arm_y = shoulder_y + arm_hypo_length * 0.5
+arm_left = enemy_arm_add_coord(enemy_boss_3_arm, x - 70 - arm_hypo_length * 0.5, arm_y, noone, "Boss_B")
+with arm_left {
+	arm_angle_fixed = 270
+	image_angle = arm_angle_fixed
+}
+arm_right = enemy_arm_add_coord(enemy_boss_3_arm, x + 70 + arm_hypo_length * 0.5, arm_y, noone, "Boss_B")
+with arm_left {
+	arm_angle_fixed = 270
+	image_angle = arm_angle_fixed
+}
+
+// 2 propellers
+with enemy_arm_add_coord(enemy_boss_3_propellerarm, x - 62, y - 46, noone, "Boss_C") {
+	arm_angle_fixed = 127
+	image_angle = arm_angle_fixed
+}
+with enemy_arm_add_coord(enemy_boss_3_propellerarm, x + 62, y - 46, noone, "Boss_C") {
+	arm_angle_fixed = 53
+	image_angle = arm_angle_fixed
+}
 
 x = room_width * 0.5
 y = -120
 
 pattern = 0
 pattern_opened = false
-pattern_await_time = 0
+
+pattern00_time = 0 // time to finish a step
+pattern00_period = seconds(0.4)
+pattern00_await_time = 0 // between a step and a step
+pattern00_await_period = seconds(0.6)
+pattern00_distance = 40
+pattern00_y_begin = y
+//pattern00_y_target = y + pattern00_distance
+pattern00_y_destination = 270
 
 velocity = room_width / seconds(2.3)
 
-rotation = random(360)
-rotate_begin = rotation
+rotation = 0
+rotation_begin = rotation
+rotation_target = rotation
 rotate_time = 0
-rotate_period = seconds(1.3)
+rotate_period = seconds(0.5)

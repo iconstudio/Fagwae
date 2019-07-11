@@ -10,11 +10,11 @@
 with instance_create_layer(argument[2], argument[3], "UI", oMainOptionButton) {
 	sprite_index = argument[0]
 	image_index = argument[1]
-	if argument_count > 4 {
+	if 4 < argument_count {
 		callback = argument[4]
-		if argument_count > 5 {
+		if 5 < argument_count {
 			shortcut = argument[5]
-			if argument_count > 6
+			if 6 < argument_count
 				shortcut_gamepad = argument[6]
 		}
 	}

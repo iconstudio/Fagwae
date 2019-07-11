@@ -7,17 +7,17 @@
 /// @param [ax] { real }
 /// @param [ay] { real }
 var ax = 0, ay = 0
-if argument_count >= 5 {
+if 4 < argument_count {
 	ax = argument[4]
-	if argument_count >= 6
+	if 5 < argument_count
 		ay = argument[5]
 }
 
 if global.setting_effect {
-	if argument[0] > 0
+	if 0 < argument[0]
 		screen_shake(argument[0])
 
-	if argument[1] > 0
+	if 0 < argument[1]
 		screen_wave(x + ax, y + ay, argument[1])
 
 	repeat argument[2] {
