@@ -4,7 +4,7 @@ if y >= 900
 
 var pd = point_direction(x, y, global.px, global.py)
 
-if shot_mode == 0 {
+if shot_phase == 0 {
 	shot_count++
 	enemy_shot(x, y, shot_speed, pd)
 
@@ -17,7 +17,7 @@ if shot_mode == 0 {
 			alarm[0] = max(3, 10 - global.stage * 0.5) + 10
 	} else {
 		shot_count = 0
-		shot_mode = 1
+		shot_phase = 1
 		alarm[0] = 80 - global.stage * 2
 	}
 } else {
@@ -36,7 +36,7 @@ if shot_mode == 0 {
 		enemy_shot(x, y, shot_speed + 2, pd + 14)
 
 		shot_count = 0
-		shot_mode = 0
+		shot_phase = 0
 		alarm[0] = max(20, 60 - global.stage * 4)
 	}
 }

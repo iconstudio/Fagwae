@@ -815,6 +815,14 @@
             }
         },
         {
+            "Key": "3a24eadb-fe27-484c-8386-9574c349573a",
+            "Value": {
+                "id": "18a2eb1a-4d39-413a-a9ce-72fbe303345b",
+                "resourcePath": "objects\\oBoss3Spike\\oBoss3Spike.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "3b7f2ce5-fc4c-4ffa-9e68-2e188d1fb029",
             "Value": {
                 "id": "7e476730-5f83-417d-b1be-c019a519ef23",
@@ -3095,6 +3103,14 @@
             }
         },
         {
+            "Key": "d0587665-cea6-4f43-829d-a3f33ad8f580",
+            "Value": {
+                "id": "3380b1cf-02aa-43c2-8d78-54e08140f9ce",
+                "resourcePath": "objects\\oBoss3Pincher\\oBoss3Pincher.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d09ec7af-2a09-4443-b7ea-3ae068afd63d",
             "Value": {
                 "id": "e3ffd796-83b0-4b35-bf03-05e7acc716e4",
@@ -3764,6 +3780,14 @@
                 "id": "f3b14032-4699-4f2d-ba43-4700b0c60558",
                 "resourcePath": "scripts\\trophy_check1\\trophy_check1.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "f5a850dd-cd91-4c9d-9853-18af58b3c0fa",
+            "Value": {
+                "id": "a2577985-5416-4850-b09a-3e588c5167ef",
+                "resourcePath": "sprites\\sBoss3Pincher\\sBoss3Pincher.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

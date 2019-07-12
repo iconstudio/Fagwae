@@ -43,15 +43,16 @@ enemy_register(enemy_octopod_1, oFrameOctopod, sFrameCore, 80, 700, 2, 0)
 enemy_register(enemy_crawler_1, oFrameCrawler, noone, 100, 2000, 2, 0)
 
 // bosses
-enemy_register(enemy_boss_3, oBoss3Core, noone, 1200, 6600, 2, 0)
+enemy_register(enemy_boss_3, oBoss3Core, noone, 1500, 6600, 2, 0)
 enemy_register(enemy_boss_3_turret, oBoss3Turret, noone, 9999, 0, 2, 0)
 enemy_register(enemy_boss_3_plate, oBoss3Plate, noone, 9999, 0, 2, 0)
 enemy_register(enemy_boss_3_backplate, oBoss3Plate, noone, 9999, 0, 2, 0)
 enemy_register(enemy_boss_3_sholuder, oBoss3Shoulder, noone, 9999, 0, 2, 0)
 enemy_register(enemy_boss_3_arm, oBoss3Arm, noone, 9999, 0, 2, 0)
-enemy_register(enemy_boss_3_pincher, noone, noone, 9999, 0, 2, 0)
+enemy_register(enemy_boss_3_pincher, oBoss3Pincher, noone, 9999, 0, 2, 0)
 enemy_register(enemy_boss_3_finger, noone, noone, 9999, 0, 2, 0)
 enemy_register(enemy_boss_3_vent, noone, noone, 9999, 0, 2, 0)
 enemy_register(enemy_boss_3_propellerarm, oBoss3PropellerArm, noone, 9999, 0, 2, 0)
+enemy_register(enemy_boss_3_spike, oBoss3Spike, noone, 9999, 0, 2, 0)
 
 enemy_register(enemy_boss_4, oBoss3Core, noone, 1200, 7200, 2, 0)

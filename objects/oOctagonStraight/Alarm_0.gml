@@ -5,7 +5,7 @@ if y >= 800
 
 var pd = point_direction(x, y, global.px, global.py)
 
-if shot_mode == 0 {
+if shot_phase == 0 {
 	enemy_shot(x, y, shot_speed, pd)
 
 	if shot_count++ == 0 {
@@ -14,7 +14,7 @@ if shot_mode == 0 {
 		alarm[0] = shot_period_continue
 	} else {
 		shot_count = 0
-		shot_mode = 1
+		shot_phase = 1
 		alarm[0] = shot_period_reset1
 	}
 } else {
@@ -32,7 +32,7 @@ if shot_mode == 0 {
 		enemy_shot(x, y, shot_speed, pd + 8)
 
 		shot_count = 0
-		shot_mode = 0
+		shot_phase = 0
 		alarm[0] = shot_period_reset2
 	}
 }

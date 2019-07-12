@@ -8,7 +8,7 @@ accel_time = 0
 accel_period = seconds(1.7)
 enemy_arm_init(enemy_arm_spread_1, 5, 20)
 
-shot_mode = 0
+shot_phase = 0
 shot_count = 0
 if global.extreme
 	shot_speed = player_hspeed

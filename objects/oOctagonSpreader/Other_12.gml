@@ -1,5 +1,5 @@
 /// @description Update
-if shot_mode == 0 {
+if shot_phase == 0 {
 	y = ystart + appear_time / appear_period * appear_distance
 	if appear_time < appear_period {
 		appear_time++

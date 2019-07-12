@@ -2,7 +2,7 @@
 if moving_mode == 2
 	exit
 
-if shot_mode < 2 {
+if shot_phase < 2 {
 	if shot_count == 0
 		shot_direction = point_direction(x, y, global.px, global.py)
 	if shot_count mod 2 == 0 {
@@ -22,7 +22,7 @@ if shot_mode < 2 {
 		alarm[0] = shot_period1
 	} else {
 		shot_count = 0
-		shot_mode++
+		shot_phase++
 
 		alarm[0] = shot_period1_continue
 	}
@@ -33,7 +33,7 @@ if shot_mode < 2 {
 	enemy_play_shot()
 
 	shot_count = 0
-	shot_mode = 0
+	shot_phase = 0
 
 	alarm[1] = seconds(0.2)
 } 

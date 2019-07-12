@@ -21,7 +21,7 @@ appear_period = seconds(2)
 moving_mode = 0 // 0: none, 1: attack, 2: retreat
 rotation = 0
 
-shot_mode = 0
+shot_phase = 0
 shot_speed = enemy_bullet_speed_fast
 shot_direction = 0
 shot_count = 0

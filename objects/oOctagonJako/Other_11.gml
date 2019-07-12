@@ -10,7 +10,7 @@ if path_exists(type_create) {
 	alarm[0] = seconds(global.extreme ? random(3) : seconds(random(2) + 2)) 
 }
 
-shot_mode = -1
+shot_phase = -1
 shot_speed = enemy_bullet_speed_medium
 shot_count = 0
 if global.extreme {

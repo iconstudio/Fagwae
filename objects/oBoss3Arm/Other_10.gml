@@ -1,4 +1,5 @@
 /// @description Dying
-enemy_explode(3, 32, 2 + irandom(1), 1)
+enemy_arm_explode()
+enemy_explode(0, 0, 1, 1)
 
 instance_destroy()

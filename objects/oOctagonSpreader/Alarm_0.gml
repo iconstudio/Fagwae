@@ -9,5 +9,5 @@ if shot_count < 11 + global.stage * 0.5 + global.extreme * 10 {
 	alarm[0] = shot_period
 } else {
 	alarm[1] = shot_period_continue
-	shot_mode = 1
+	shot_phase = 1
 }

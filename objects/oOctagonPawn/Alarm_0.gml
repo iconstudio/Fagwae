@@ -1,5 +1,5 @@
 /// @description Attacking
-if y >= 800 or shot_mode != 0
+if y >= 800 or shot_phase != 0
 	exit
 
 enemy_shot(x, y, shot_speed, point_direction(x, y, global.px, global.py))

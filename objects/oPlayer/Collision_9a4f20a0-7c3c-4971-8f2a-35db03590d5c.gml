@@ -1,4 +1,4 @@
-if 0 < invincible or other.dead
+if 0 < invincible or other.dead or other.untargetable or other.INVINCIBLE_HARD < other.invincible
 	exit
 
 event_user(1) // get damaged

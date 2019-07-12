@@ -16,7 +16,7 @@ for (var i = 0; i < arm_number; ++i) {
 speed = speed_previous
 direction = direction_previous
 
-rotation = rotate_begin + rotate_time / rotate_period * 360
+rotation = rotate_begin + rotate_time / rotate_period * 360 * rotation_sign
 if rotate_time < rotate_period
 	rotate_time++
 else
