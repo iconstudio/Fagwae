@@ -128,9 +128,9 @@ randomize()
 #macro enemy_bullet_speed_slowest room_width / seconds(5)
 #macro enemy_bullet_speed_slower room_width / seconds(3.7)
 #macro enemy_bullet_speed_slow room_width / seconds(3.4)
-#macro enemy_bullet_speed_medium room_width / seconds(3.1)
-#macro enemy_bullet_speed_fast room_width / seconds(2.8)
-#macro enemy_bullet_speed_faster room_width / seconds(2.6)
+#macro enemy_bullet_speed_medium room_width / seconds(3)
+#macro enemy_bullet_speed_fast room_width / seconds(2.7)
+#macro enemy_bullet_speed_faster room_width / seconds(2.4)
 instance_create_layer(0, 0, "Screen", oGlobal)
 
 // gamepad

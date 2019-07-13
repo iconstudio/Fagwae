@@ -5,7 +5,6 @@
 /// @param speed { real }
 /// @param direction { real }
 /// @param [type] { object }
-
 if !global.playeralive or y < -sprite_height or y > room_height + sprite_yoffset
 	return noone
 
@@ -29,7 +28,7 @@ with instance_create_layer(argument[0], argument[1], "Bullet", type) {
 			image_index = other.image_index
 		}
 	}
-	parent = other.id
+	parent = find_hierachy(other.id)
 
 	return id
 }

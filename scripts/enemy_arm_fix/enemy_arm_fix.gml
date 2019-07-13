@@ -3,7 +3,7 @@
 /// @param [angle_plus] { real }
 var angle_addition = 0 < argument_count ? argument[0] : 0
 
-var speed_previous = speed, direction_previous = direction
+var arm, speed_previous = speed, direction_previous = direction
 for (var i = 0; i < arm_number; ++i) {
 	arm = arm_properties[i]
 

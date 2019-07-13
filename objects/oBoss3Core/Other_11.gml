@@ -30,14 +30,14 @@
 	6-2. 이미 한번 패턴 6을 거쳤다면 패턴 2로 되돌아감.
 
 	7. 팔이 천천히 앞으로 되돌아오며 양 옆에서 oFrameTriangleSide 여러기 등장.
-	익스트림에선 엄청 많이 나옴. 그리고 저격탄 사격. 체력이 낮아지면 무작위로 패턴 9 혹은 6으로 감.
+	익스트림에선 엄청 많이 나옴. 그리고 저격탄 사격.
 
-	8. 저격 산탄을 뿌리고 패턴 2로 되돌아감. 체력이 낮아지면 패턴 9로 감.
-
-	9. 중앙에서 약간 흔들리는 원호를 그리며 공전. 2로 되돌아감.
+	8. 저격 산탄을 뿌리고 패턴 2로 되돌아감.
 */
 name = "Thruster"
 layer = layer_get_id("Boss_A")
+x = room_width * 0.5
+y = -120
 
 #region arms
 arm_number = 0
@@ -45,16 +45,24 @@ arm_startangle = 0
 arm_properties = 0
 
 // head
-with enemy_arm_add_coord(enemy_boss_3_turret, x, y, noone, "Boss_Above")
-	arm_angle_fixed = 0
+enemy_arm_add_coord(enemy_boss_3_turret, x, y, noone, "Boss_Above")
+
+// 4 vents
+vent_backleft = enemy_arm_add_coord(enemy_boss_3_vent, x - 30, y - 34, noone, "Boss_Above")
+vent_frontleft = enemy_arm_add_coord(enemy_boss_3_vent, x - 41, y + 24, noone, "Boss_Above")
+vent_backright = enemy_arm_add_coord(enemy_boss_3_vent, x + 30, y - 34, noone, "Boss_Above")
+vent_frontright = enemy_arm_add_coord(enemy_boss_3_vent, x + 41, y + 24, noone, "Boss_Above")
+
+failsafe = false
+failsafe_ratio = 0
+failsafe_distance_front = 120
+failsafe_distance_back = global.extreme ? 0 : 90
 
 var plate_coord = 32.75
 var plate_angle = point_direction(0, 0, 29.375, 5.4)
 // 2 front plates
-with enemy_arm_add_coord(enemy_boss_3_plate, x - plate_coord, y + 58, noone, "Boss_C")
-	arm_angle_fixed = 0
-with enemy_arm_add_coord(enemy_boss_3_plate, x + plate_coord, y + 58, noone, "Boss_C")
-	arm_angle_fixed = 0
+enemy_arm_add_coord(enemy_boss_3_plate, x - plate_coord, y + 58, noone, "Boss_C")
+enemy_arm_add_coord(enemy_boss_3_plate, x + plate_coord, y + 58, noone, "Boss_C")
 
 // 2 back plates
 with enemy_arm_add_coord(enemy_boss_3_backplate, x - plate_coord, y - 56, noone, "Boss_C") {
@@ -87,32 +95,49 @@ var arm_hypo_length = 32 * sqrt(2)
 var arm_y = shoulder_y + arm_hypo_length * 0.5 - 7
 arm_left = enemy_arm_add_coord(enemy_boss_3_arm, x - 74 - arm_hypo_length * 0.5, arm_y, noone, "Boss_B")
 with arm_left {
+	type_create = LEFT
 	arm_angle_fixed = 270
 	image_angle = arm_angle_fixed
+
+	enemy_arm_init(enemy_boss_3_pincher, 1, 64)
+	with enemy_arm_add_coord(enemy_boss_3_spike, x + 20, y + 5, noone, "Boss_C") {
+		arm_angle_fixed = -83
+		image_angle = arm_angle_fixed
+
+		invincible = INVINCIBLE_NONE
+	}
 }
 arm_right = enemy_arm_add_coord(enemy_boss_3_arm, x + 74 + arm_hypo_length * 0.5, arm_y, noone, "Boss_B")
 with arm_right {
+	type_create = RIGHT
 	arm_angle_fixed = 270
 	image_angle = arm_angle_fixed
+
+	enemy_arm_init(enemy_boss_3_pincher, 1, 64)
+	with enemy_arm_add_coord(enemy_boss_3_spike, x + 20, y - 5, noone, "Boss_C") {
+		arm_angle_fixed = 83
+		image_angle = arm_angle_fixed
+
+		invincible = INVINCIBLE_NONE
+	}
 }
 
 // 2 propellers
-with enemy_arm_add_coord(enemy_boss_3_propellerarm, x - 62, y - 46, noone, "Boss_C") {
+propeller_left = enemy_arm_add_coord(enemy_boss_3_propellerarm, x - 62, y - 46, noone, "Boss_C")
+with propeller_left {
 	arm_angle_fixed = 124
 	image_angle = arm_angle_fixed
 	rotation_sign = -1
 }
-with enemy_arm_add_coord(enemy_boss_3_propellerarm, x + 62, y - 46, noone, "Boss_C") {
+propeller_right = enemy_arm_add_coord(enemy_boss_3_propellerarm, x + 62, y - 46, noone, "Boss_C")
+with propeller_right {
 	arm_angle_fixed = 56
 	image_angle = arm_angle_fixed
 }
 
-// 6 spikes
-with enemy_arm_add_coord(enemy_boss_3_spike, x - 110, y + 30, noone, "Boss_C") { // on the left arm
-	arm_angle_fixed = 183
-	image_angle = arm_angle_fixed
-}
-with enemy_arm_add_coord(enemy_boss_3_spike, x - 82, y - 20, noone, "Boss_C") { // on the left shoulder
+// 4 spikes
+spike_left = enemy_arm_add_coord(enemy_boss_3_spike, x - 82, y - 20, noone, "Boss_C")
+with spike_left { // on the left shoulder
 	sprite_index = sFrameJoint
 	arm_angle_fixed = 146
 	image_angle = arm_angle_fixed
@@ -124,11 +149,8 @@ with enemy_arm_add_coord(enemy_boss_3_spike, x - 40, y - 54, noone, "Boss_C") { 
 
 	image_xscale = 0.61
 }
-with enemy_arm_add_coord(enemy_boss_3_spike, x + 110, y + 30, noone, "Boss_C") { // on the right arm
-	arm_angle_fixed = 357
-	image_angle = arm_angle_fixed
-}
-with enemy_arm_add_coord(enemy_boss_3_spike, x + 82, y - 20, noone, "Boss_C") { // on the right shoulder
+spike_right = enemy_arm_add_coord(enemy_boss_3_spike, x + 82, y - 20, noone, "Boss_C")
+with spike_right { // on the right shoulder
 	sprite_index = sFrameJoint
 	arm_angle_fixed = 34
 	image_angle = arm_angle_fixed
@@ -142,11 +164,9 @@ with enemy_arm_add_coord(enemy_boss_3_spike, x + 40, y - 54, noone, "Boss_C") { 
 }
 #endregion
 
-x = room_width * 0.5
-y = -120
-
 pattern = 0
 pattern_opened = false
+pattern_hp_low = false
 
 pattern00_time = 0 // time to finish a step
 pattern00_period = seconds(0.4)
@@ -154,15 +174,64 @@ pattern00_await_time = 0 // between a step and a step
 pattern00_await_period = seconds(0.6)
 pattern00_distance = 40
 pattern00_y_begin = y
-//pattern00_y_target = y + pattern00_distance
-pattern00_y_destination = 270
+pattern00_y_destination = 290
 
 pattern01_pinching_time = 0
-pattern01_pinching_period = seconds(1.5)
-pattern00_await_time = 0 // between pinching and stretching
-pattern00_await_period = seconds(1)
+pattern01_pinching_period = seconds(1.8)
+pattern01_pinching_forward_distance = 210
+pattern01_pinching_backward_distance = 14
+pattern01_await_time = 0 // between pinching and stretching
+pattern01_await_period = seconds(1)
+pattern01_await_attack_time = 0 // before starting attack
+pattern01_await_attack_period = seconds(0.2)
+pattern01_await_shot_direction = 0
+pattern01_await_shot_count = 0 // for shot
+pattern01_await_shot_time = 0
+pattern01_await_shot_period = seconds(0.11)
+pattern01_await_shot_protect_count = 0 // for sideshot at extreme mode
+pattern01_await_shot_protect_time = 0
+pattern01_await_shot_protect_period = seconds(0.06)
+pattern01_await_shot_speed = enemy_bullet_speed_slow
 pattern01_stretching_time = 0
-pattern01_stretching_period = seconds(0.8)
+pattern01_stretching_period = seconds(1.3)
+pattern01_recover_time = 0
+pattern01_recover_period = seconds(0.6)
+pattern01_recover_x_begin = x
+pattern01_recover_x_target = x
+pattern01_recover_y_begin = y
+pattern01_recover_shot_speed = enemy_bullet_speed_medium
+
+pattern02_time = 0
+pattern02_period = seconds(4)
+pattern02_period_min = seconds(1)
+pattern02_period_max = pattern02_period
+pattern02_x_begin = x
+pattern02_x_target = x
+pattern02_y_begin = y
+pattern02_y_target = pattern00_y_destination - 74
+
+pattern03_time = 0
+pattern03_period = seconds(5)
+pattern03_scope_time = 0 // scoping arms to player
+pattern03_scope_period = seconds(1)
+pattern03_angle = 270
+pattern03_angle_begin = pattern03_angle
+pattern03_angle_target = pattern03_angle
+pattern03_angular_time = 0 // rotating to player
+pattern03_angular_period = seconds(0.4)
+pattern03_shot_time = 0
+pattern03_shot_period = seconds(0.1)
+
+pattern04_angle = 270
+pattern04_angle_begin = pattern03_angle
+pattern04_angular_time = 0 // rotating to player
+pattern04_angular_period = seconds(0.4)
+pattern04_x_begin = x
+pattern04_y_begin = y
+pattern04_x_target = x
+pattern04_y_target = y
+pattern04_time = 0
+pattern04_period = seconds(5)
 
 velocity = room_width / seconds(2.3)
 
