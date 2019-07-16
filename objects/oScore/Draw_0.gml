@@ -13,7 +13,7 @@ if 0 < score_show_time {
 	draw_set_color(make_color_hsv(color_parse(_param - 25), 172, 210 * _brite))
 	var sstr = string(round(score_virtual))
 	var slen = string_length(sstr)
-	var sx = (room_width - string_width(sstr) * 6.5) * 0.5
+	var sx = (room_width - string_width(sstr) * 6) * 0.5
 	var sy = room_height * 0.5
 	var tx = 0
 

@@ -9,6 +9,8 @@ hurt = 0 // for dying
 hurt_upper_ratio = 1 / 3
 damaged = 0 // for drawing
 
+arm_number = 0
+
 untargetable = false // cannot be hit
 INVINCIBLE_NONE = 0
 INVINCIBLE_PARENTAL = 1 // can be hit and send damage to its parent

@@ -42,12 +42,12 @@ if draw_mode > 0 {
 }
 
 for (var i = 0; i < 3; ++i) {
-	if frame > i * 15 + 12 and push[i] != 0 {
+	if menu_flash_semi_duration + menu_flash_duration * i < frame and push[i] != 0 {
 		if push[i] != 0
-			push[i] -= push[i] * 0.125
+			push[i] -= push[i] * 0.1
 
 		if push[i] < 0.1 {
-			if flash[i]++ > 15
+			if menu_flash_duration < ++flash[i]
 				push[i] = 0
 		}
 	}

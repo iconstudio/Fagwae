@@ -28,8 +28,8 @@ if global.log_highscore_1 > 0 {
 	var scorer = string(global.log_highscore_1)
 	if global.log_highscore_2 > 0
 		scorer += " / " + string(global.log_highscore_2)
-	draw_text_transformed(room_width * 0.5, room_height - (1 - push[1]) * 32, scorer, 2, 2, 0)
+	draw_text_transformed(room_width * 0.5, room_height - (1 - push[1]) * 16, scorer, 2, 2, 0)
 } else { // No score, beginner
-	draw_text_transformed(room_width * 0.5, room_height - (1 - push[1]) * 32, "NO RANK", 2, 2, 0)
+	draw_text_transformed(room_width * 0.5, room_height - (1 - push[1]) * 16, "NO RANK", 2, 2, 0)
 }
-draw_text_transformed(room_width * 0.5, room_height - (1 - push[1]) * 16, global.status_name, 2, 2, 0)
+//draw_text_transformed(room_width * 0.5, room_height - (1 - push[1]) * 16, global.status_name, 2, 2, 0)

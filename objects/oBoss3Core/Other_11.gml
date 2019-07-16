@@ -24,15 +24,10 @@
 
 	5. 다시 중앙으로 돌아오고 팔을 번갈아가며 빠르게 뻗으며 산탄 사격.
 
-	6-1. 팔을 뒤로 젖히고 뒤쪽에서 경로 할당없는 oFrameScout 여러기 등장.
-	잠시 후 몸체의 사격 구멍에서 다량의 저격탄과 확산탄 사격.
-	익스트림에선 양 팔에서 위아래로 산탄 사격. 또한 오래 지속함.
-	6-2. 이미 한번 패턴 6을 거쳤다면 패턴 2로 되돌아감.
+	6. 팔이 천천히 앞으로 되돌아오며 양 옆에서 oFrameTriangleSide 여러기 등장.
+	익스트림에선 엄청 많이 나옴. 그리고 산탄 사격.
 
-	7. 팔이 천천히 앞으로 되돌아오며 양 옆에서 oFrameTriangleSide 여러기 등장.
-	익스트림에선 엄청 많이 나옴. 그리고 저격탄 사격.
-
-	8. 저격 산탄을 뿌리고 패턴 2로 되돌아감.
+	7. 저격 산탄을 뿌리고 패턴 2로 되돌아감.
 */
 name = "Thruster"
 layer = layer_get_id("Boss_A")
@@ -55,7 +50,7 @@ vent_frontright = enemy_arm_add_coord(enemy_boss_3_vent, x + 41, y + 24, noone, 
 
 failsafe = false
 failsafe_ratio = 0
-failsafe_distance_front = 120
+failsafe_distance_front = 160
 failsafe_distance_back = global.extreme ? 0 : 90
 
 var plate_coord = 32.75
@@ -168,6 +163,7 @@ pattern = 0
 pattern_opened = false
 pattern_hp_low = false
 
+#region PATTERN 0~5
 pattern00_time = 0 // time to finish a step
 pattern00_period = seconds(0.4)
 pattern00_await_time = 0 // between a step and a step
@@ -211,32 +207,83 @@ pattern02_y_begin = y
 pattern02_y_target = pattern00_y_destination - 74
 
 pattern03_time = 0
-pattern03_period = seconds(5)
+pattern03_period = seconds(global.extreme ? 4 : 5)
 pattern03_scope_time = 0 // scoping arms to player
-pattern03_scope_period = seconds(1)
+pattern03_scope_period = seconds(0.4)
 pattern03_angle = 270
 pattern03_angle_begin = pattern03_angle
 pattern03_angle_target = pattern03_angle
-pattern03_angular_time = 0 // rotating to player
-pattern03_angular_period = seconds(0.4)
+pattern03_angular_time = seconds(3) // rotating to player
+pattern03_angular_period = pattern03_angular_time
 pattern03_shot_time = 0
 pattern03_shot_period = seconds(0.1)
 
 pattern04_angle = 270
 pattern04_angle_begin = pattern03_angle
-pattern04_angular_time = 0 // rotating to player
+pattern04_angular_time = 0 // rotating to origin
 pattern04_angular_period = seconds(0.4)
 pattern04_x_begin = x
 pattern04_y_begin = y
 pattern04_x_target = x
 pattern04_y_target = y
+pattern04_shot1_count = 0 // spreding steadily
+pattern04_shot1_time = 0
+pattern04_shot1_period = seconds(0.2)
+pattern04_shot1_speed = enemy_bullet_speed_slower
+pattern04_shot2_count = 0 // spreding rapidly
+pattern04_shot2_time = 0
+pattern04_shot2_period = seconds(global.extreme ? 0.22 : 0.32)
+pattern04_shot2_speed = enemy_bullet_speed_slow
+pattern04_move_time = 0
+pattern04_move_period = seconds(1)
 pattern04_time = 0
-pattern04_period = seconds(5)
+pattern04_period = seconds(global.extreme ? 5 : 4)
 
-velocity = room_width / seconds(2.3)
+pattern05_angle = 270
+pattern05_move_y_destination = pattern00_y_destination - 26
+pattern05_move_time = 0
+pattern05_move_period = seconds(1.1)
+pattern05_hook_count = 0
+pattern05_hook_count_max = global.extreme ? 2 : 3
+pattern05_hook_first = LEFT
+pattern05_hook_forward = noone
+pattern05_hook_backward = noone
+pattern05_hook_index = 0
+pattern05_hook_back_y_destination = pattern05_move_y_destination - 190
+pattern05_hook_back_time = -seconds(0.5)
+pattern05_hook_back_period = seconds(0.8)
+pattern05_hook_attack_time = 0
+pattern05_hook_attack_period = seconds(0.5)
+pattern05_hook_recover_time = 0
+pattern05_hook_recover_period = seconds(0.9)
+pattern05_return_time = 0
+pattern05_return_period = seconds(0.6)
+#endregion
 
-rotation = 0
-rotation_begin = rotation
-rotation_target = rotation
-rotate_time = 0
-rotate_period = seconds(0.5)
+pattern06_07_vent_time = 0
+pattern06_07_vent_period = seconds(14)
+pattern06_07_vent_shot_count = 0
+pattern06_07_vent_shot_time = 0
+pattern06_07_vent_shot_period = seconds(0.07)
+pattern06_07_vent_shot_speed = global.extreme ? enemy_bullet_speed_slower : enemy_bullet_speed_medium
+
+pattern06_arming_angle = 225
+pattern06_arming_sign = 1
+pattern06_arming_time = 0
+pattern06_arming_period = seconds(0.8)
+pattern06_arm_rotation = 0
+pattern06_arm_rotate_time = 0
+pattern06_arm_rotate_period = seconds(1)
+pattern06_summon_time = 0
+pattern06_summon_period = seconds(global.extreme ? 5 : 3)
+pattern06_summon_piece_time = 0
+//pattern06_summon_piece_period = seconds(global.extreme ? 0.6 : 0.7)
+
+pattern07_arming_time = 0
+pattern07_arming_period = seconds(2)
+pattern07_turret_time = 0
+pattern07_turret_period = seconds(3.5)
+
+dying_angle = random_range(-20, 20)
+dying_angle_time = 0
+dying_angle_period = seconds(1.6)

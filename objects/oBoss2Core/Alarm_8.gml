@@ -14,6 +14,6 @@ for (var i = 0; i < arm_number; ++i) {
 	}
 }
 
-enemy_explode(5 + random(5), 8, 2 + irandom(3), 0, lengthdir_x(radis, radir), lengthdir_y(radis, radir))
+enemy_explode(2 + random(5), 20 + random(8), 2 + irandom(2), 0, lengthdir_x(radis, radir), lengthdir_y(radis, radir))
 
-alarm[8] = seconds(0.3 + random(0.2))
+alarm[8] = seconds(0.2 + random(0.2))

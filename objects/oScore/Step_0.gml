@@ -1,11 +1,13 @@
-if instance_exists(oPlayer) {
-	if score_show_time < score_show_period
-		score_show_time++
-} else {
-	if 0 < score_show_time
-		score_show_time--
-	else
-		score_show_time = 0
+if global.pause_counter == 0 {
+	if instance_exists(oPlayer) {
+		if score_show_time < score_show_period
+			score_show_time++
+	} else {
+		if 0 < score_show_time
+			score_show_time--
+		else
+			score_show_time = 0
+	}
 }
 
 score_gap = (global.playerscore - score_virtual)

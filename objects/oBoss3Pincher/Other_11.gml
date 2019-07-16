@@ -23,8 +23,8 @@ pattern01_shot2_green_speed = enemy_bullet_speed_medium
 pattern01_shot3_speed = enemy_bullet_speed_slowest
 
 pattern02_shot_time = 0
-pattern02_shot_period = seconds(global.extreme ? 0.5 : 0.95)
-pattern02_shot_period_min = seconds(global.extreme ? 0.1 : 0.3)
+pattern02_shot_period = seconds(global.extreme ? 0.4 : 0.5)
+pattern02_shot_period_min = seconds(global.extreme ? 0.09 : 0.1)
 pattern02_shot_period_max = pattern02_shot_period
 pattern02_shot_speed = enemy_bullet_speed_slower
 pattern02_shot_speed_min = enemy_bullet_speed_fast
@@ -34,3 +34,17 @@ pattern03_shot_count = 0
 pattern03_shot_time = 0
 pattern03_shot_period = seconds(0.2)
 pattern03_shot_speed = enemy_bullet_speed_faster * 1.4
+pattern03_danger_shot_speed = enemy_bullet_speed_medium
+
+pattern05_hook_back_shot_time = 0
+pattern05_hook_back_shot_period = seconds(0.12)
+pattern05_hook_back_shot_speed = enemy_bullet_speed_medium
+pattern05_hook_attack_shot_time = 0
+pattern05_hook_attack_shot_period = seconds(0.07)
+pattern05_hook_attack_shot_speed = enemy_bullet_speed_fast
+pattern05_shot_speed = enemy_bullet_speed_fast
+pattern05_semi_shot_speed = enemy_bullet_speed_medium
+
+pattern06_shot_time = 0
+pattern06_shot_period = seconds(0.26)
+pattern06_shot_speed = enemy_bullet_speed_slower

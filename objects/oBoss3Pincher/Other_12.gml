@@ -122,6 +122,16 @@ if pattern == 0 and 40 < bbox_top {
 			var pattern03_shot_vent_right_x = x + lengthdir_x(12, image_angle - 90)
 			var pattern03_shot_vent_right_y = y + lengthdir_y(12, image_angle - 90)
 
+			if oBoss3Core.hp <= oBoss3Core.hp_max * 0.3 {
+				if global.extreme {
+					enemy_shot(x, y, pattern03_danger_shot_speed, image_angle - 90)
+					enemy_shot(x, y, pattern03_danger_shot_speed, image_angle + 90)
+				} else if pattern03_shot_count != 1 {
+					enemy_shot(x, y, pattern03_danger_shot_speed, image_angle - 112)
+					enemy_shot(x, y, pattern03_danger_shot_speed, image_angle + 112)
+				}
+			}
+
 			if parent.type_create == LEFT {
 				if pattern03_shot_count == 0 {
 					if global.extreme {
@@ -170,6 +180,91 @@ if pattern == 0 and 40 < bbox_top {
 			pattern03_shot_count = (pattern03_shot_count + 1) mod 3
 		}
 	}
+} else if pattern == 5 {
+	if 0 < oBoss3Core.pattern05_hook_back_time and oBoss3Core.pattern05_hook_back_time < oBoss3Core.pattern05_hook_back_period {
+		if pattern05_hook_back_shot_time < pattern05_hook_back_shot_period {
+			pattern05_hook_back_shot_time++
+		} else {
+			var hook_back_bullet_direction = point_direction(x, y, xprevious, yprevious)
+			with enemy_shot(x, y, pattern05_hook_back_shot_speed, 0)
+				motion_add(hook_back_bullet_direction, 0.8)
+			with enemy_shot(x, y, pattern05_hook_back_shot_speed, 180)
+				motion_add(hook_back_bullet_direction, 0.8)
+			if parent.type_create == LEFT {
+				with enemy_shot(x, y, pattern05_hook_back_shot_speed, 220, global.extreme ? oEnemyBullet2 : oEnemyBullet)
+					motion_add(hook_back_bullet_direction, 0.5)
+			} else {
+				with enemy_shot(x, y, pattern05_hook_back_shot_speed, 320, global.extreme ? oEnemyBullet2 : oEnemyBullet)
+					motion_add(hook_back_bullet_direction, 0.5)
+			}
+
+			pattern05_hook_back_shot_time = 0
+		}
+	} else if oBoss3Core.pattern05_hook_attack_time < oBoss3Core.pattern05_hook_attack_period {
+		if pattern05_hook_attack_shot_time < pattern05_hook_attack_shot_period {
+			pattern05_hook_attack_shot_time++
+		} else {
+			if parent.type_create == LEFT {
+				with enemy_shot(x, y, pattern05_hook_attack_shot_speed, oBoss3Core.pattern05_angle - 90)
+					motion_add(image_angle, 1)
+				with enemy_shot(x, y, pattern05_hook_attack_shot_speed, oBoss3Core.pattern05_angle - 40)
+					motion_add(315, 0.7)
+			} else {
+				with enemy_shot(x, y, pattern05_hook_attack_shot_speed, oBoss3Core.pattern05_angle + 90)
+					motion_add(image_angle, 1)
+				with enemy_shot(x, y, pattern05_hook_attack_shot_speed, oBoss3Core.pattern05_angle + 40)
+					motion_add(225, 0.7)
+			}
+
+			pattern05_hook_attack_shot_time = 0
+		}
+	} else if oBoss3Core.pattern05_hook_recover_time == 0 {
+		if global.extreme {
+			for (var i = 0; i < 6; ++i)
+				enemy_shot(x, y, pattern05_semi_shot_speed, i * 60)
+			if parent.type_create == LEFT
+			and ((oBoss3Core.pattern05_hook_first == LEFT and oBoss3Core.pattern05_hook_index == 0)
+			or (oBoss3Core.pattern05_hook_first == RIGHT and oBoss3Core.pattern05_hook_index == 1)) {
+				enemy_shot(x, y, pattern05_shot_speed, 235, oEnemyBullet2)
+				enemy_shot(x, y, pattern05_shot_speed, 250, oEnemyBullet2)
+				enemy_shot(x, y, pattern05_shot_speed, 260, oEnemyBullet2)
+				enemy_shot(x, y, pattern05_shot_speed, 270, oEnemyBullet2)
+				enemy_shot(x, y, pattern05_shot_speed, 285, oEnemyBullet2)
+			} else if parent.type_create == RIGHT
+			and ((oBoss3Core.pattern05_hook_first == RIGHT and oBoss3Core.pattern05_hook_index == 0)
+			or (oBoss3Core.pattern05_hook_first == LEFT and oBoss3Core.pattern05_hook_index == 1)) {
+				enemy_shot(x, y, pattern05_shot_speed, 305, oEnemyBullet2)
+				enemy_shot(x, y, pattern05_shot_speed, 290, oEnemyBullet2)
+				enemy_shot(x, y, pattern05_shot_speed, 280, oEnemyBullet2)
+				enemy_shot(x, y, pattern05_shot_speed, 270, oEnemyBullet2)
+				enemy_shot(x, y, pattern05_shot_speed, 255, oEnemyBullet2)
+			}
+		} else {
+			var spread_direction_begin = random(360)
+			for (var i = 0; i < 6; ++i) {
+				var spread_direction = spread_direction_begin + i * 60
+				enemy_shot(x, y, pattern05_semi_shot_speed, spread_direction - 5)
+				enemy_shot(x, y, pattern05_semi_shot_speed, spread_direction + 5)
+			}
+		}
+	}
+} else if pattern == 6 {
+	if oBoss3Core.pattern06_arming_period <= oBoss3Core.pattern06_arming_time {
+		if pattern06_shot_time < pattern06_shot_period {
+			pattern06_shot_time++
+		} else {
+			with enemy_shot(x, y, pattern06_shot_speed, 261)
+				motion_add(270, 0.5)
+			if global.extreme {
+				with enemy_shot(x, y, pattern06_shot_speed * 0.8, 270,oEnemyBullet2)
+					motion_add(270, 0.5)
+			}
+			with enemy_shot(x, y, pattern06_shot_speed, 279)
+				motion_add(270, 0.5)
+
+			pattern06_shot_time = 0
+		}
+	}
 }
 
 if parent.pattern != pattern {
@@ -181,6 +276,9 @@ if parent.pattern != pattern {
 	pattern01_shot2_time = 0
 	pattern02_shot_time = 0
 	pattern03_shot_time = 0
+	pattern05_hook_back_shot_time = 0
+	pattern05_hook_attack_shot_time = 0
+	pattern06_shot_time = 0
 }
 
 damaged = parent.damaged

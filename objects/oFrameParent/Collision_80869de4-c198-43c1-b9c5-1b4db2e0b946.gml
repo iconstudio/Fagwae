@@ -1,6 +1,5 @@
 /// @description Collide with other bullets
 if other.parent == id {
-	show_debug_message("HOW DARE!")
 	exit
 } else {
 	var parent_hiearach = parent
