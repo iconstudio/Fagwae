@@ -1,4 +1,5 @@
 /// @description Dying
+enemy_arm_explode()
 enemy_explode(32, 300, 10, 12)
 
 if global.extreme
