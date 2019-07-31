@@ -32,7 +32,7 @@ var jako_shooter = global.extreme ? enemy_scout_j2 : enemy_scout_j1
 
 #region STAGE 1
 script_stage3_ready()
-/*
+//*
 area_enemy_push(jako_delay, enemy_scout_c1, jako_intro_path_selected, 0, 0)
 area_enemy_push(jako_delay, enemy_scout_j1, jako_intro_path_selected, 0, 0)
 area_enemy_push(jako_delay, enemy_scout_j1, jako_intro_path_selected, 0, 0)
@@ -144,7 +144,7 @@ area_enemy_push(0, enemy_scout_j2, jako_pushs_path_selected_inverted, 0, 0)
 area_enemy_push(jako_delay, enemy_scout_j2, jako_pushs_path_selected, 0, 0)
 area_enemy_push(0, enemy_scout_j2, jako_pushs_path_selected_inverted, 0, 0)
 area_enemy_push(seconds(6), enemy_scout_j2, jako_pushs_path_selected, 0, 0)
-*/
+//*/
 area_script_push(seconds(0.2), script_boss_apear, 0, 0, 0)
 area_music_push(seconds(0.5), musicBoss)
 area_enemy_push(0, enemy_boss_3, 0, 270, -128)
