@@ -94,12 +94,7 @@ event_user(1)
 
 // UX
 device_mouse_dbclick_enable(false)
-//if global.flag_is_mobile
 keyboard_set_map(vk_backspace, vk_escape)
-
-// local drawing
-dmode = 0
-dalpha = 0
 
 // game
 global.playerscore = 0
@@ -162,3 +157,7 @@ if audio_group_is_loaded(audiogroup_game) {
 } else {
   audio_group_load(audiogroup_game)
 }
+
+// local drawing
+dmode = 0
+dalpha = 0

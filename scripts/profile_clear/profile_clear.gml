@@ -5,6 +5,7 @@ global.setting_music = 7
 global.setting_sfx = 10
 global.setting_effect = true
 global.setting_fxaa = true
+global.setting_autoshoot = false
 
 global.status_name = "FAGWAE"
 global.status_id = string(date_current_datetime())
