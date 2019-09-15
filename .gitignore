@@ -1,2 +1,21 @@
-/_work
-_work
+# Force include core files
+!sprites/*.yy
+!sprites/*.png
+!objects/*.yy
+!objects/*.gml
+!rooms/*.yy
+!rooms/*.gml
+!scripts/*.yy
+!scripts/*.gml
+!options/*.yy
+!options/*.bmp
+!options/*.ico
+!options/*.png
+
+# Shared objects
+*.dll
+
+# Builds
+*.exe
+*.apk
+*.zip
