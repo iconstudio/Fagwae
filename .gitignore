@@ -1,5 +1,7 @@
 # Force include core files
 !*.yy
+!*.gml
+!/*.yyp
 
 # Builds
 *.exe
