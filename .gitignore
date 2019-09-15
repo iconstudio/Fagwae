@@ -1,16 +1,12 @@
 # Force include core files
-!sprites/*.yy
-!sprites/*.png
-!objects/*.yy
-!objects/*.gml
-!rooms/*.yy
-!rooms/*.gml
-!scripts/*.yy
-!scripts/*.gml
-!options/*.yy
-!options/*.bmp
-!options/*.ico
-!options/*.png
+!/sprites/**/*.png
+!/objects/**/*.gml
+!/rooms/**/*.gml
+!/scripts/**/*.gml
+!/options/**/*.bmp
+!/options/**/*.ico
+!/options/**/*.png
+!*.yy
 
 # Shared objects
 *.dll
