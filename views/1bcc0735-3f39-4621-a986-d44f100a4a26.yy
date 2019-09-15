@@ -48,7 +48,8 @@
         "9459024b-33ff-43a9-984f-08bd8a04dfcd",
         "d0587665-cea6-4f43-829d-a3f33ad8f580",
         "45850edf-6036-4ef4-8f9f-fae1a2106aab",
-        "3a24eadb-fe27-484c-8386-9574c349573a"
+        "3a24eadb-fe27-484c-8386-9574c349573a",
+        "a4d7cdb9-0393-45d3-bf8e-8a03b4b947ab"
     ],
     "filterType": "GMObject",
     "folderName": "Frames",

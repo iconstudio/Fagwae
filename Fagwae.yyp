@@ -2543,6 +2543,14 @@
             }
         },
         {
+            "Key": "a4d7cdb9-0393-45d3-bf8e-8a03b4b947ab",
+            "Value": {
+                "id": "91416c97-c0f9-4871-9c73-1011c8e5d635",
+                "resourcePath": "objects\\oBoss4Vent\\oBoss4Vent.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a4e60a2d-c053-4fc4-9b05-4d9adb994e29",
             "Value": {
                 "id": "9a086d80-05ba-4f21-90b5-15ba0ee367f6",
