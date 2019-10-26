@@ -1,7 +1,7 @@
 {
     "id": "ede78ef8-bd91-4a00-a813-2063c0920d73",
     "modelName": "GMExtension",
-    "mvc": "1.0",
+    "mvc": "1.2",
     "name": "FXAA_Shader",
     "IncludedResources": [
         "Backgrounds\\bck_minecraft",
@@ -23,6 +23,7 @@
     "copyToTargets": -1,
     "date": "2018-49-10 12:09:43",
     "description": "",
+    "exportToGame": true,
     "extensionName": "",
     "files": [
         
@@ -37,14 +38,18 @@
     "iosThirdPartyFrameworkEntries": [
         
     ],
+    "iosdelegatename": null,
     "iosplistinject": "",
     "license": "Free to use, also for commercial games.",
     "maccompilerflags": "",
     "maclinkerflags": "",
     "macsourcedir": "",
+    "options": null,
+    "optionsFile": "options.json",
     "packageID": "com.pyramindbeyond.fxaa",
     "productID": "F79C97955FD1AF4686EB4EF4EF90F0DB",
     "sourcedir": "",
+    "supportedTargets": -1,
     "tvosProps": false,
     "tvosSystemFrameworkEntries": [
         
@@ -53,6 +58,7 @@
         
     ],
     "tvosclassname": "",
+    "tvosdelegatename": null,
     "tvosmaccompilerflags": "",
     "tvosmaclinkerflags": "",
     "tvosplistinject": "",
