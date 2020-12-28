@@ -1,7 +1,11 @@
 {
-    "id": "d2961af9-cda6-4972-bbcb-19c8dad4d6a6",
-    "modelName": "GMShader",
-    "mvc": "1.0",
-    "name": "shaderCRT",
-    "type": 1
+  "type": 1,
+  "parent": {
+    "name": "Shaders",
+    "path": "folders/Shaders.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "shaderCRT",
+  "tags": [],
+  "resourceType": "GMShader",
 }

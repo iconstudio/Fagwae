@@ -1,8 +1,12 @@
 {
-    "id": "417c8284-8f94-463c-a5cf-b8be1ed7b9fe",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "screen_wave",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Game Logics",
+    "path": "folders/Scripts/Game Logics.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "screen_wave",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -78,7 +78,7 @@ enum trigger {
 #macro enemy_arm_spread_1		"aspread1"
 #macro enemy_arm_rectangle_1 "arect1"
 #macro enemy_arm_rectangle_2 "arect2"
-#macro enemy_arm_turret_1		"aturret1"		// static -> dynamic in extreme, slow
+#macro enemy_arm_turret_1		"aturret1"		// is_static -> dynamic in extreme, slow
 #macro enemy_arm_turret_2		"aturret2"		// dynamic, slow
 #macro enemy_arm_turret_3		"aturret3"		// dynamic, fast
 #macro enemy_arm_turret_4		"aturret4"		// boss 1

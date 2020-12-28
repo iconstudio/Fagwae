@@ -1,8 +1,12 @@
 {
-    "id": "dc1f4872-b5a4-4dc3-9587-8a8000945561",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "io_check_buttonR",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "IO",
+    "path": "folders/Scripts/IO.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "io_check_buttonR",
+  "tags": [],
+  "resourceType": "GMScript",
 }

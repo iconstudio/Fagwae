@@ -1,8 +1,12 @@
 {
-    "id": "60c02dc3-a94b-4025-9edd-49b4618106ac",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "trophy_check8",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Achievements",
+    "path": "folders/Scripts/Achievements.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "trophy_check8",
+  "tags": [],
+  "resourceType": "GMScript",
 }

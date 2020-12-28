@@ -1,8 +1,12 @@
 {
-    "id": "3c6d69e4-0502-4c7b-9bc4-0892774d7a0c",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "script_callback_profile",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "UI Callbacks",
+    "path": "folders/Scripts/UI Callbacks.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "script_callback_profile",
+  "tags": [],
+  "resourceType": "GMScript",
 }

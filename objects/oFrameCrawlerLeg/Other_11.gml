@@ -1,2 +1,2 @@
 /// @description Creation
-static = false
+is_static = false

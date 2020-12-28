@@ -1,8 +1,12 @@
 {
-    "id": "9bce7c29-0d39-413e-ae98-e598654a8d11",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "io_check_triggerL",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "IO",
+    "path": "folders/Scripts/IO.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "io_check_triggerL",
+  "tags": [],
+  "resourceType": "GMScript",
 }

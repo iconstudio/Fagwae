@@ -2,4 +2,9 @@
 /// @description script_callback_effect(id, value)
 /// @param id
 /// @param value { boolean }
-global.setting_effect = argument[1]
+function script_callback_effect() {
+	global.setting_effect = argument[1]
+
+
+
+}

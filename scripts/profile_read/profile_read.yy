@@ -1,8 +1,12 @@
 {
-    "id": "8b596d90-63ea-4add-833c-a7ded9a2def2",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "profile_read",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "External",
+    "path": "folders/Scripts/External.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "profile_read",
+  "tags": [],
+  "resourceType": "GMScript",
 }

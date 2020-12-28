@@ -1,92 +1,82 @@
 {
-    "id": "0319a91f-05f2-47b2-ba1b-1077c0cb4564",
-    "modelName": "GMSprite",
-    "mvc": "1.12",
-    "name": "sIconOptionMusic",
-    "For3D": false,
-    "HTile": false,
-    "VTile": false,
-    "bbox_bottom": 255,
-    "bbox_left": 0,
-    "bbox_right": 255,
-    "bbox_top": 0,
-    "bboxmode": 1,
-    "colkind": 1,
-    "coltolerance": 0,
-    "edgeFiltering": false,
-    "frames": [
-        {
-            "id": "ccfdd343-578c-4f87-9858-69f616df7323",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "0319a91f-05f2-47b2-ba1b-1077c0cb4564",
-            "compositeImage": {
-                "id": "6f79032f-95f2-42ab-9df8-f89311f79c8d",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "ccfdd343-578c-4f87-9858-69f616df7323",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "cc3305f7-5a1c-40b3-97a9-98ec38116b1c",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "ccfdd343-578c-4f87-9858-69f616df7323",
-                    "LayerId": "b12af377-f906-4388-92b3-bc4bcf14d543"
-                }
-            ]
-        },
-        {
-            "id": "4bf64247-2ce9-4568-9de8-a262a1e9a29b",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "0319a91f-05f2-47b2-ba1b-1077c0cb4564",
-            "compositeImage": {
-                "id": "8c76661b-518c-4149-bbb0-e42ad0b73bb1",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "4bf64247-2ce9-4568-9de8-a262a1e9a29b",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "50b7719d-e3a4-4d29-b2ad-58a2dd7289a2",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "4bf64247-2ce9-4568-9de8-a262a1e9a29b",
-                    "LayerId": "b12af377-f906-4388-92b3-bc4bcf14d543"
-                }
-            ]
-        }
-    ],
-    "gridX": 0,
-    "gridY": 0,
-    "height": 256,
-    "layers": [
-        {
-            "id": "b12af377-f906-4388-92b3-bc4bcf14d543",
-            "modelName": "GMImageLayer",
-            "mvc": "1.0",
-            "SpriteId": "0319a91f-05f2-47b2-ba1b-1077c0cb4564",
-            "blendMode": 0,
-            "isLocked": false,
-            "name": "default",
-            "opacity": 100,
-            "visible": true
-        }
-    ],
-    "origin": 0,
-    "originLocked": false,
-    "playbackSpeed": 15,
+  "bboxMode": 1,
+  "collisionKind": 1,
+  "type": 0,
+  "origin": 0,
+  "preMultiplyAlpha": false,
+  "edgeFiltering": false,
+  "collisionTolerance": 0,
+  "swfPrecision": 2.525,
+  "bbox_left": 0,
+  "bbox_right": 255,
+  "bbox_top": 0,
+  "bbox_bottom": 255,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
+  "width": 256,
+  "height": 256,
+  "textureGroupId": {
+    "name": "UI",
+    "path": "texturegroups/UI",
+  },
+  "swatchColours": null,
+  "gridX": 0,
+  "gridY": 0,
+  "frames": [
+    {"compositeImage":{"FrameId":{"name":"ccfdd343-578c-4f87-9858-69f616df7323","path":"sprites/sIconOptionMusic/sIconOptionMusic.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"ccfdd343-578c-4f87-9858-69f616df7323","path":"sprites/sIconOptionMusic/sIconOptionMusic.yy",},"LayerId":{"name":"b12af377-f906-4388-92b3-bc4bcf14d543","path":"sprites/sIconOptionMusic/sIconOptionMusic.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sIconOptionMusic","path":"sprites/sIconOptionMusic/sIconOptionMusic.yy",},"resourceVersion":"1.0","name":"ccfdd343-578c-4f87-9858-69f616df7323","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"4bf64247-2ce9-4568-9de8-a262a1e9a29b","path":"sprites/sIconOptionMusic/sIconOptionMusic.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"4bf64247-2ce9-4568-9de8-a262a1e9a29b","path":"sprites/sIconOptionMusic/sIconOptionMusic.yy",},"LayerId":{"name":"b12af377-f906-4388-92b3-bc4bcf14d543","path":"sprites/sIconOptionMusic/sIconOptionMusic.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sIconOptionMusic","path":"sprites/sIconOptionMusic/sIconOptionMusic.yy",},"resourceVersion":"1.0","name":"4bf64247-2ce9-4568-9de8-a262a1e9a29b","tags":[],"resourceType":"GMSpriteFrame",},
+  ],
+  "sequence": {
+    "spriteId": {"name":"sIconOptionMusic","path":"sprites/sIconOptionMusic/sIconOptionMusic.yy",},
+    "timeUnits": 1,
+    "playback": 1,
+    "playbackSpeed": 15.0,
     "playbackSpeedType": 0,
-    "premultiplyAlpha": false,
-    "sepmasks": false,
-    "swatchColours": null,
-    "swfPrecision": 2.525,
-    "textureGroupId": "292c65be-d274-45be-a256-bd528398fbb0",
-    "type": 0,
-    "width": 256,
-    "xorig": 0,
-    "yorig": 0
+    "autoRecord": true,
+    "volume": 1.0,
+    "length": 2.0,
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
+    "tracks": [
+      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"6b51d04a-ea99-41ec-87b9-85647d7b5d96","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ccfdd343-578c-4f87-9858-69f616df7323","path":"sprites/sIconOptionMusic/sIconOptionMusic.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"0104c9dd-0145-49ba-b59a-36ab3bf6be3e","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4bf64247-2ce9-4568-9de8-a262a1e9a29b","path":"sprites/sIconOptionMusic/sIconOptionMusic.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
+    ],
+    "visibleRange": {"x":0.0,"y":0.0,},
+    "lockOrigin": false,
+    "showBackdrop": true,
+    "showBackdropImage": false,
+    "backdropImagePath": "",
+    "backdropImageOpacity": 0.5,
+    "backdropWidth": 1920,
+    "backdropHeight": 1080,
+    "backdropXOffset": 0.0,
+    "backdropYOffset": 0.0,
+    "xorigin": 0,
+    "yorigin": 0,
+    "eventToFunction": {},
+    "eventStubScript": null,
+    "parent": {"name":"sIconOptionMusic","path":"sprites/sIconOptionMusic/sIconOptionMusic.yy",},
+    "resourceVersion": "1.3",
+    "name": "",
+    "tags": [],
+    "resourceType": "GMSequence",
+  },
+  "layers": [
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b12af377-f906-4388-92b3-bc4bcf14d543","tags":[],"resourceType":"GMImageLayer",},
+  ],
+  "parent": {
+    "name": "System",
+    "path": "folders/Sprites/System.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "sIconOptionMusic",
+  "tags": [],
+  "resourceType": "GMSprite",
 }

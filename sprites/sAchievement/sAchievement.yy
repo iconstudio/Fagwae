@@ -1,246 +1,110 @@
 {
-    "id": "e1626af3-a0a2-4758-a4c2-67c4da322b18",
-    "modelName": "GMSprite",
-    "mvc": "1.12",
-    "name": "sAchievement",
-    "For3D": false,
-    "HTile": false,
-    "VTile": false,
-    "bbox_bottom": 47,
-    "bbox_left": 0,
-    "bbox_right": 47,
-    "bbox_top": 0,
-    "bboxmode": 0,
-    "colkind": 1,
-    "coltolerance": 0,
-    "edgeFiltering": false,
-    "frames": [
-        {
-            "id": "28358f72-545b-44f4-8a98-35403c71a9ad",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "e1626af3-a0a2-4758-a4c2-67c4da322b18",
-            "compositeImage": {
-                "id": "ed55b6c4-5760-441a-9f7a-2497ecf36cf0",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "28358f72-545b-44f4-8a98-35403c71a9ad",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "2d9118e1-b9ac-45ae-80b5-aced9ec03d2a",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "28358f72-545b-44f4-8a98-35403c71a9ad",
-                    "LayerId": "c79bcb9c-a3e9-46ad-afa8-69cb7694d1f3"
-                }
-            ]
-        },
-        {
-            "id": "5e4a1a2d-0686-43cf-9f68-35380bdace22",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "e1626af3-a0a2-4758-a4c2-67c4da322b18",
-            "compositeImage": {
-                "id": "5e08c8ab-1d2c-48e9-9db8-1df28f67d7a0",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "5e4a1a2d-0686-43cf-9f68-35380bdace22",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "f8e81ce4-5f39-4c70-99ca-2341602bffa2",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "5e4a1a2d-0686-43cf-9f68-35380bdace22",
-                    "LayerId": "c79bcb9c-a3e9-46ad-afa8-69cb7694d1f3"
-                }
-            ]
-        },
-        {
-            "id": "759f7674-a0e5-4f9d-89e9-0bca88f2f3db",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "e1626af3-a0a2-4758-a4c2-67c4da322b18",
-            "compositeImage": {
-                "id": "5a672521-9a41-4682-b5bb-de42b35b1fad",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "759f7674-a0e5-4f9d-89e9-0bca88f2f3db",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "55e1ea19-be68-4e15-830c-7e5f66315e07",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "759f7674-a0e5-4f9d-89e9-0bca88f2f3db",
-                    "LayerId": "c79bcb9c-a3e9-46ad-afa8-69cb7694d1f3"
-                }
-            ]
-        },
-        {
-            "id": "673be67c-b10d-49e8-9440-7fcf60724f5f",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "e1626af3-a0a2-4758-a4c2-67c4da322b18",
-            "compositeImage": {
-                "id": "7eba2e1d-3ca1-4199-9b84-1e0b952c55e9",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "673be67c-b10d-49e8-9440-7fcf60724f5f",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "9f4d2aa7-8b8d-4c70-888b-3c4f556a2cf0",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "673be67c-b10d-49e8-9440-7fcf60724f5f",
-                    "LayerId": "c79bcb9c-a3e9-46ad-afa8-69cb7694d1f3"
-                }
-            ]
-        },
-        {
-            "id": "2683c48d-dcd0-4a3b-9674-71683a63a24c",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "e1626af3-a0a2-4758-a4c2-67c4da322b18",
-            "compositeImage": {
-                "id": "21fcc7a9-637d-4086-a35a-07696024b77e",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "2683c48d-dcd0-4a3b-9674-71683a63a24c",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "15af9147-fbb1-4c88-809b-62535fb19679",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "2683c48d-dcd0-4a3b-9674-71683a63a24c",
-                    "LayerId": "c79bcb9c-a3e9-46ad-afa8-69cb7694d1f3"
-                }
-            ]
-        },
-        {
-            "id": "d2a48905-337b-41da-8b38-8b154b76834c",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "e1626af3-a0a2-4758-a4c2-67c4da322b18",
-            "compositeImage": {
-                "id": "98c2794e-92e2-4611-afef-2671944b47b8",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "d2a48905-337b-41da-8b38-8b154b76834c",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "b7ca7fb8-e0ab-44b1-bdac-c3cb729afb5a",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "d2a48905-337b-41da-8b38-8b154b76834c",
-                    "LayerId": "c79bcb9c-a3e9-46ad-afa8-69cb7694d1f3"
-                }
-            ]
-        },
-        {
-            "id": "99b7e969-e3c8-449e-8ef3-82ea0805630d",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "e1626af3-a0a2-4758-a4c2-67c4da322b18",
-            "compositeImage": {
-                "id": "f52e9508-ac70-400b-a7b7-e1976609be20",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "99b7e969-e3c8-449e-8ef3-82ea0805630d",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "419bee74-fc4c-4a34-8c36-cf2f00ee9446",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "99b7e969-e3c8-449e-8ef3-82ea0805630d",
-                    "LayerId": "c79bcb9c-a3e9-46ad-afa8-69cb7694d1f3"
-                }
-            ]
-        },
-        {
-            "id": "7ea24eb3-6269-4e69-91fc-b7ec0716a9d8",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "e1626af3-a0a2-4758-a4c2-67c4da322b18",
-            "compositeImage": {
-                "id": "d1fa9e08-e556-40ea-bbf8-1235921c54b7",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "7ea24eb3-6269-4e69-91fc-b7ec0716a9d8",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "24916bcc-95dd-458e-8ce8-6ccbbcdeee28",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "7ea24eb3-6269-4e69-91fc-b7ec0716a9d8",
-                    "LayerId": "c79bcb9c-a3e9-46ad-afa8-69cb7694d1f3"
-                }
-            ]
-        },
-        {
-            "id": "74351ac7-697b-4724-9f1a-09cd9d0e6a58",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "e1626af3-a0a2-4758-a4c2-67c4da322b18",
-            "compositeImage": {
-                "id": "96d651d6-9499-4b52-a85b-36835a148cb6",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "74351ac7-697b-4724-9f1a-09cd9d0e6a58",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "e60d2e41-315c-47d0-bbac-9337d121195f",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "74351ac7-697b-4724-9f1a-09cd9d0e6a58",
-                    "LayerId": "c79bcb9c-a3e9-46ad-afa8-69cb7694d1f3"
-                }
-            ]
-        }
-    ],
-    "gridX": 0,
-    "gridY": 0,
-    "height": 48,
-    "layers": [
-        {
-            "id": "c79bcb9c-a3e9-46ad-afa8-69cb7694d1f3",
-            "modelName": "GMImageLayer",
-            "mvc": "1.0",
-            "SpriteId": "e1626af3-a0a2-4758-a4c2-67c4da322b18",
-            "blendMode": 0,
-            "isLocked": false,
-            "name": "default",
-            "opacity": 100,
-            "visible": true
-        }
-    ],
-    "origin": 0,
-    "originLocked": true,
-    "playbackSpeed": 15,
+  "bboxMode": 0,
+  "collisionKind": 1,
+  "type": 0,
+  "origin": 0,
+  "preMultiplyAlpha": false,
+  "edgeFiltering": false,
+  "collisionTolerance": 0,
+  "swfPrecision": 2.525,
+  "bbox_left": 0,
+  "bbox_right": 47,
+  "bbox_top": 0,
+  "bbox_bottom": 47,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
+  "width": 48,
+  "height": 48,
+  "textureGroupId": {
+    "name": "UI",
+    "path": "texturegroups/UI",
+  },
+  "swatchColours": null,
+  "gridX": 0,
+  "gridY": 0,
+  "frames": [
+    {"compositeImage":{"FrameId":{"name":"28358f72-545b-44f4-8a98-35403c71a9ad","path":"sprites/sAchievement/sAchievement.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"28358f72-545b-44f4-8a98-35403c71a9ad","path":"sprites/sAchievement/sAchievement.yy",},"LayerId":{"name":"c79bcb9c-a3e9-46ad-afa8-69cb7694d1f3","path":"sprites/sAchievement/sAchievement.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sAchievement","path":"sprites/sAchievement/sAchievement.yy",},"resourceVersion":"1.0","name":"28358f72-545b-44f4-8a98-35403c71a9ad","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"5e4a1a2d-0686-43cf-9f68-35380bdace22","path":"sprites/sAchievement/sAchievement.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"5e4a1a2d-0686-43cf-9f68-35380bdace22","path":"sprites/sAchievement/sAchievement.yy",},"LayerId":{"name":"c79bcb9c-a3e9-46ad-afa8-69cb7694d1f3","path":"sprites/sAchievement/sAchievement.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sAchievement","path":"sprites/sAchievement/sAchievement.yy",},"resourceVersion":"1.0","name":"5e4a1a2d-0686-43cf-9f68-35380bdace22","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"759f7674-a0e5-4f9d-89e9-0bca88f2f3db","path":"sprites/sAchievement/sAchievement.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"759f7674-a0e5-4f9d-89e9-0bca88f2f3db","path":"sprites/sAchievement/sAchievement.yy",},"LayerId":{"name":"c79bcb9c-a3e9-46ad-afa8-69cb7694d1f3","path":"sprites/sAchievement/sAchievement.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sAchievement","path":"sprites/sAchievement/sAchievement.yy",},"resourceVersion":"1.0","name":"759f7674-a0e5-4f9d-89e9-0bca88f2f3db","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"673be67c-b10d-49e8-9440-7fcf60724f5f","path":"sprites/sAchievement/sAchievement.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"673be67c-b10d-49e8-9440-7fcf60724f5f","path":"sprites/sAchievement/sAchievement.yy",},"LayerId":{"name":"c79bcb9c-a3e9-46ad-afa8-69cb7694d1f3","path":"sprites/sAchievement/sAchievement.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sAchievement","path":"sprites/sAchievement/sAchievement.yy",},"resourceVersion":"1.0","name":"673be67c-b10d-49e8-9440-7fcf60724f5f","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"2683c48d-dcd0-4a3b-9674-71683a63a24c","path":"sprites/sAchievement/sAchievement.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"2683c48d-dcd0-4a3b-9674-71683a63a24c","path":"sprites/sAchievement/sAchievement.yy",},"LayerId":{"name":"c79bcb9c-a3e9-46ad-afa8-69cb7694d1f3","path":"sprites/sAchievement/sAchievement.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sAchievement","path":"sprites/sAchievement/sAchievement.yy",},"resourceVersion":"1.0","name":"2683c48d-dcd0-4a3b-9674-71683a63a24c","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"d2a48905-337b-41da-8b38-8b154b76834c","path":"sprites/sAchievement/sAchievement.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"d2a48905-337b-41da-8b38-8b154b76834c","path":"sprites/sAchievement/sAchievement.yy",},"LayerId":{"name":"c79bcb9c-a3e9-46ad-afa8-69cb7694d1f3","path":"sprites/sAchievement/sAchievement.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sAchievement","path":"sprites/sAchievement/sAchievement.yy",},"resourceVersion":"1.0","name":"d2a48905-337b-41da-8b38-8b154b76834c","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"99b7e969-e3c8-449e-8ef3-82ea0805630d","path":"sprites/sAchievement/sAchievement.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"99b7e969-e3c8-449e-8ef3-82ea0805630d","path":"sprites/sAchievement/sAchievement.yy",},"LayerId":{"name":"c79bcb9c-a3e9-46ad-afa8-69cb7694d1f3","path":"sprites/sAchievement/sAchievement.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sAchievement","path":"sprites/sAchievement/sAchievement.yy",},"resourceVersion":"1.0","name":"99b7e969-e3c8-449e-8ef3-82ea0805630d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"7ea24eb3-6269-4e69-91fc-b7ec0716a9d8","path":"sprites/sAchievement/sAchievement.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"7ea24eb3-6269-4e69-91fc-b7ec0716a9d8","path":"sprites/sAchievement/sAchievement.yy",},"LayerId":{"name":"c79bcb9c-a3e9-46ad-afa8-69cb7694d1f3","path":"sprites/sAchievement/sAchievement.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sAchievement","path":"sprites/sAchievement/sAchievement.yy",},"resourceVersion":"1.0","name":"7ea24eb3-6269-4e69-91fc-b7ec0716a9d8","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"74351ac7-697b-4724-9f1a-09cd9d0e6a58","path":"sprites/sAchievement/sAchievement.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"74351ac7-697b-4724-9f1a-09cd9d0e6a58","path":"sprites/sAchievement/sAchievement.yy",},"LayerId":{"name":"c79bcb9c-a3e9-46ad-afa8-69cb7694d1f3","path":"sprites/sAchievement/sAchievement.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sAchievement","path":"sprites/sAchievement/sAchievement.yy",},"resourceVersion":"1.0","name":"74351ac7-697b-4724-9f1a-09cd9d0e6a58","tags":[],"resourceType":"GMSpriteFrame",},
+  ],
+  "sequence": {
+    "spriteId": {"name":"sAchievement","path":"sprites/sAchievement/sAchievement.yy",},
+    "timeUnits": 1,
+    "playback": 1,
+    "playbackSpeed": 15.0,
     "playbackSpeedType": 0,
-    "premultiplyAlpha": false,
-    "sepmasks": false,
-    "swatchColours": null,
-    "swfPrecision": 2.525,
-    "textureGroupId": "292c65be-d274-45be-a256-bd528398fbb0",
-    "type": 0,
-    "width": 48,
-    "xorig": 0,
-    "yorig": 0
+    "autoRecord": true,
+    "volume": 1.0,
+    "length": 9.0,
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
+    "tracks": [
+      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"edf86032-502a-4cb2-8ae4-f746367f8ea9","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"28358f72-545b-44f4-8a98-35403c71a9ad","path":"sprites/sAchievement/sAchievement.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b3b02580-c08e-41e0-83c2-c82bc2b82e47","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5e4a1a2d-0686-43cf-9f68-35380bdace22","path":"sprites/sAchievement/sAchievement.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"f1b89728-14be-4a8d-aa15-266f2bfba875","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"759f7674-a0e5-4f9d-89e9-0bca88f2f3db","path":"sprites/sAchievement/sAchievement.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"92a227ee-2da6-4c6a-8206-0e18a29f7eb8","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"673be67c-b10d-49e8-9440-7fcf60724f5f","path":"sprites/sAchievement/sAchievement.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"467876ea-c9fe-44aa-b8a8-3c7cc8d6b0b2","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2683c48d-dcd0-4a3b-9674-71683a63a24c","path":"sprites/sAchievement/sAchievement.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"907e9e63-bad7-40fb-a886-f78589382b66","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d2a48905-337b-41da-8b38-8b154b76834c","path":"sprites/sAchievement/sAchievement.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"404ec891-f968-4860-8f0e-dba66a5b58d6","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"99b7e969-e3c8-449e-8ef3-82ea0805630d","path":"sprites/sAchievement/sAchievement.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"4adc78be-cd19-4ae2-8b58-42710af96bdc","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7ea24eb3-6269-4e69-91fc-b7ec0716a9d8","path":"sprites/sAchievement/sAchievement.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d730e5c2-ec6f-4413-99f1-10f6c5a24b1c","Key":8.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"74351ac7-697b-4724-9f1a-09cd9d0e6a58","path":"sprites/sAchievement/sAchievement.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
+    ],
+    "visibleRange": {"x":0.0,"y":0.0,},
+    "lockOrigin": true,
+    "showBackdrop": true,
+    "showBackdropImage": false,
+    "backdropImagePath": "",
+    "backdropImageOpacity": 0.5,
+    "backdropWidth": 1920,
+    "backdropHeight": 1080,
+    "backdropXOffset": 0.0,
+    "backdropYOffset": 0.0,
+    "xorigin": 0,
+    "yorigin": 0,
+    "eventToFunction": {},
+    "eventStubScript": null,
+    "parent": {"name":"sAchievement","path":"sprites/sAchievement/sAchievement.yy",},
+    "resourceVersion": "1.3",
+    "name": "",
+    "tags": [],
+    "resourceType": "GMSequence",
+  },
+  "layers": [
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c79bcb9c-a3e9-46ad-afa8-69cb7694d1f3","tags":[],"resourceType":"GMImageLayer",},
+  ],
+  "parent": {
+    "name": "System",
+    "path": "folders/Sprites/System.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "sAchievement",
+  "tags": [],
+  "resourceType": "GMSprite",
 }

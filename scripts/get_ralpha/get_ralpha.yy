@@ -1,8 +1,12 @@
 {
-    "id": "77048ee1-cbfa-4b9e-a3b1-451d034b5c45",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "get_ralpha",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Main Menu",
+    "path": "folders/Scripts/Main Menu.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "get_ralpha",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -1,8 +1,12 @@
 {
-    "id": "cdd5157e-c0f8-4065-8ba5-f3811a36d61e",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "script_shape_disappear",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Stage",
+    "path": "folders/Scripts/Game Logics/Stage.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "script_shape_disappear",
+  "tags": [],
+  "resourceType": "GMScript",
 }

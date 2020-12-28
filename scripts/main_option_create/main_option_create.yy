@@ -1,8 +1,12 @@
 {
-    "id": "a386477c-ceef-494b-8863-34f467b8dded",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "main_option_create",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Main Menu",
+    "path": "folders/Scripts/Main Menu.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "main_option_create",
+  "tags": [],
+  "resourceType": "GMScript",
 }

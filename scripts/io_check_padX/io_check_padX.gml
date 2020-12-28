@@ -1,4 +1,9 @@
 /// @description io_check_padA()
 /// @function io_check_padA
+function io_check_padX() {
 
-return gamepad_index != -1 and gamepad_button_check(gamepad_index, gp_face3)
+	return gamepad_index != -1 and gamepad_button_check(gamepad_index, gp_face3)
+
+
+
+}

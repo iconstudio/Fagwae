@@ -1,8 +1,12 @@
 {
-    "id": "b63de6e7-ba13-44aa-98ad-e814a839344d",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "script_callback_toggle_effect",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "UI Callbacks",
+    "path": "folders/Scripts/UI Callbacks.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "script_callback_toggle_effect",
+  "tags": [],
+  "resourceType": "GMScript",
 }

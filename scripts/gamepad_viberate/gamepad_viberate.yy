@@ -1,8 +1,12 @@
 {
-    "id": "cdd27141-acc6-420a-90b3-f87f86176dbb",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "gamepad_viberate",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Game Logics",
+    "path": "folders/Scripts/Game Logics.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "gamepad_viberate",
+  "tags": [],
+  "resourceType": "GMScript",
 }

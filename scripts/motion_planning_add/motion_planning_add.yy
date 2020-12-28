@@ -1,8 +1,12 @@
 {
-    "id": "12d91ff1-1249-4d91-9015-ad59b9d05b2a",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "motion_planning_add",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Game Logics",
+    "path": "folders/Scripts/Game Logics.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "motion_planning_add",
+  "tags": [],
+  "resourceType": "GMScript",
 }

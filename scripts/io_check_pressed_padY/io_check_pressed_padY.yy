@@ -1,8 +1,12 @@
 {
-    "id": "3cb8b8aa-2fb8-4d13-8574-6cccee59a9ff",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "io_check_pressed_padY",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "IO",
+    "path": "folders/Scripts/IO.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "io_check_pressed_padY",
+  "tags": [],
+  "resourceType": "GMScript",
 }

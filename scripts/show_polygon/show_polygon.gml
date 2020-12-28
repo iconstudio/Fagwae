@@ -6,21 +6,26 @@
 /// @param size { real }
 /// @param color { real }
 /// @param rotated { boolean }
-if argument3 <= 0 or argument4 <= 0
-	exit
-
-with instance_create_layer(argument0, argument1, "Effect", oParticleShape) {
-	vertex = argument2
-	tsize = argument3
-	image_blend = argument4
-
-	if !argument5
+function show_polygon(argument0, argument1, argument2, argument3, argument4, argument5) {
+	if argument3 <= 0 or argument4 <= 0
 		exit
 
-	if vertex == 8 {
-		image_angle = 22.5
-	} else {
-		if vertex != 6
-			image_angle = 180 / vertex
+	with instance_create_layer(argument0, argument1, "Effect", oParticleShape) {
+		vertex = argument2
+		tsize = argument3
+		image_blend = argument4
+
+		if !argument5
+			exit
+
+		if vertex == 8 {
+			image_angle = 22.5
+		} else {
+			if vertex != 6
+				image_angle = 180 / vertex
+		}
 	}
+
+
+
 }

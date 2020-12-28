@@ -1,8 +1,12 @@
 {
-    "id": "5bac3531-bf5b-4713-b4d2-8626c13a37da",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "io_check_pressed_right",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "IO",
+    "path": "folders/Scripts/IO.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "io_check_pressed_right",
+  "tags": [],
+  "resourceType": "GMScript",
 }

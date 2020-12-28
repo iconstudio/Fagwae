@@ -3,4 +3,9 @@
 /// @param current { real }
 /// @param target { real }
 /// @param addition { real }
-return clamp(-angle_difference(argument0, argument1), -argument2, argument2)
+function get_rotation_next(argument0, argument1, argument2) {
+	return clamp(-angle_difference(argument0, argument1), -argument2, argument2)
+
+
+
+}

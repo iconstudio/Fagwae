@@ -1,8 +1,12 @@
 {
-    "id": "1f63a8b7-c4fb-4670-b94e-54393580773d",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "area_event_push",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Stage",
+    "path": "folders/Scripts/Game Logics/Stage.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "area_event_push",
+  "tags": [],
+  "resourceType": "GMScript",
 }

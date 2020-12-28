@@ -2,4 +2,9 @@
 /// @description script_callback_fxaa(id, value)
 /// @param id
 /// @param value { boolean }
-global.setting_fxaa = argument[1]
+function script_callback_fxaa() {
+	global.setting_fxaa = argument[1]
+
+
+
+}

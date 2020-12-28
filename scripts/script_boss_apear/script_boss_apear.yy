@@ -1,8 +1,12 @@
 {
-    "id": "85ab0339-162f-4009-a77f-db4dc9b9485b",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "script_boss_apear",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Stage",
+    "path": "folders/Scripts/Game Logics/Stage.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "script_boss_apear",
+  "tags": [],
+  "resourceType": "GMScript",
 }

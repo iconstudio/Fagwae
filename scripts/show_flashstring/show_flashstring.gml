@@ -4,8 +4,13 @@
 /// @param y { real }
 /// @param caption { string }
 /// @param type { integer }
-with instance_create_layer(argument0, argument1, "UI", oFlashString) {
-	ncaption = argument2
-	type_create = argument3
-	event_user(0)
+function show_flashstring(argument0, argument1, argument2, argument3) {
+	with instance_create_layer(argument0, argument1, "UI", oFlashString) {
+		ncaption = argument2
+		type_create = argument3
+		event_user(0)
+	}
+
+
+
 }

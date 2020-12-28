@@ -1,8 +1,12 @@
 {
-    "id": "d606151b-12c0-42e3-93e1-6635842923a4",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "enemy_shot",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Enemy",
+    "path": "folders/Scripts/Game Logics/Enemy.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "enemy_shot",
+  "tags": [],
+  "resourceType": "GMScript",
 }

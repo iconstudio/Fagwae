@@ -1,8 +1,12 @@
 {
-    "id": "c163fbda-da1d-4e36-97c5-60e624aac3df",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "score_add",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Game Logics",
+    "path": "folders/Scripts/Game Logics.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "score_add",
+  "tags": [],
+  "resourceType": "GMScript",
 }

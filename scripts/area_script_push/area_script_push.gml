@@ -5,5 +5,10 @@
 /// @param data_other { all }
 /// @param data_cx { all }
 /// @param data_cy { all }
+function area_script_push(argument0, argument1, argument2, argument3, argument4) {
 
-area_trigger_push(trigger.script, argument0, argument1, argument2, argument3, argument4)
+	area_trigger_push(trigger.script, argument0, argument1, argument2, argument3, argument4)
+
+
+
+}

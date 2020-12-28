@@ -1,8 +1,12 @@
 {
-    "id": "4bbc97a1-b785-417a-bf13-747aacdafaf1",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "draw_transform_add_translation",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Drawing",
+    "path": "folders/Scripts/Drawing.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "draw_transform_add_translation",
+  "tags": [],
+  "resourceType": "GMScript",
 }

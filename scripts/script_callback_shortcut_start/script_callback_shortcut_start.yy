@@ -1,8 +1,12 @@
 {
-    "id": "2b6860e5-dbd8-4bee-8098-6f2c933e2480",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "script_callback_shortcut_start",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "UI Callbacks",
+    "path": "folders/Scripts/UI Callbacks.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "script_callback_shortcut_start",
+  "tags": [],
+  "resourceType": "GMScript",
 }

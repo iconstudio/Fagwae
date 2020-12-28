@@ -61,7 +61,7 @@ if global.flag_is_mobile or window_get_fullscreen() {
 	}
 	window_set_size(window_width, window_height)		// game window
 	display_set_gui_size(gui_width, gui_height)			// gui in the game window
-	surface_resize(application_surface, global.__view_width, global.__view_height) // application surface is static
+	surface_resize(application_surface, global.__view_width, global.__view_height) // application surface is is_static
 } else if os_browser == browser_not_a_browser {
 	display_set_sleep_margin(20)
 	window_center()
