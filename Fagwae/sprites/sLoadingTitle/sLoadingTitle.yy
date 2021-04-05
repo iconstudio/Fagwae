@@ -129,7 +129,7 @@
     "spriteId": {"name":"sLoadingTitle","path":"sprites/sLoadingTitle/sLoadingTitle.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 30.0,
+    "playbackSpeed": 0.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
