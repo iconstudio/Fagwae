@@ -4,7 +4,10 @@
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "oIgnore",
+    "path": "objects/oIgnore/oIgnore.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -24,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Initialization",
-    "path": "folders/Introduction/Initialization.yy",
+    "name": "System",
+    "path": "folders/System.yy",
   },
   "resourceVersion": "1.0",
   "name": "oInit",

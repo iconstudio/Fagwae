@@ -56,7 +56,7 @@
   },
   "viewSettings": {
     "inheritViewSettings": true,
-    "enableViews": false,
+    "enableViews": true,
     "clearViewBackground": true,
     "clearDisplayBuffer": true,
   },
@@ -68,8 +68,8 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Main",
-    "path": "folders/Main.yy",
+    "name": "Rooms",
+    "path": "folders/Rooms.yy",
   },
   "resourceVersion": "1.0",
   "name": "roomMain",

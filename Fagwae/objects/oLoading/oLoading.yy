@@ -26,7 +26,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Loading",
-    "path": "folders/Introduction/Loading.yy",
+    "path": "folders/System/Loading.yy",
   },
   "resourceVersion": "1.0",
   "name": "oLoading",
