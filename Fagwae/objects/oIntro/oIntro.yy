@@ -25,7 +25,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Intro",
-    "path": "folders/Intro.yy",
+    "path": "folders/Introduction/Intro.yy",
   },
   "resourceVersion": "1.0",
   "name": "oIntro",

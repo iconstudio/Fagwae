@@ -173,7 +173,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Loading",
-    "path": "folders/Loading.yy",
+    "path": "folders/Introduction/Loading.yy",
   },
   "resourceVersion": "1.0",
   "name": "sLoadingTitleFlips",
