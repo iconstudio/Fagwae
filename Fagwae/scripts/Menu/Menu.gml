@@ -1,28 +1,84 @@
 function Menu() {
-	__parent = null
-	__child_focus = null
-	__children = []
-	__callback = null
+	// Properties
+	self.__child_focus = null
+	self.__children = new Vector()
 
-	__opened = false
+	// Member Attributes
+	self.__opened = false
+	self.__transition = false
+	self.__trans_mode = MENU_MODES.OPEN
+	self.__trans_time = 0
+	self.__trans_period = 0.4
 
-	__x = 0
-	__y = 0
-	__w = 0
-	__h = 0
+	self.__x = 0
+	self.__y = 0
+	self.__w = 0
+	self.__h = 0
+
+	// Alias
+	self.focus_child = method(self, focus_child)
+	self.focus_index = method(self, focus_index)
+	self.focus = method(self, focus)
+	self.add_entry = method(self, add_entry)
+	self.add_text = method(self, add_text)
+	self.do_open = method(self, do_open)
+	self.set_callback = method(self, set_callback)
+	self.set_open = method(self, set_open)
+	self.get_focus = method(self, get_focus)
+
+	// Methods
+	self.do_update = function() {
+		if __transition {
+			if __trans_period <= __trans_time {
+				if __trans_mode == MENU_MODES.OPEN {
+					__opened = true
+				} else if __trans_mode == MENU_MODES.CLOSE {
+					__opened = false
+				}
+
+				__transition = false
+				__trans_time = 0
+			}
+
+			__trans_time++
+		}
+
+		var Len = __children.size()
+		if 0 < Len {
+			var i, Child
+			for (i = 0; i < Len; ++i) {
+				Child = __children.at(i)
+				if Child
+					with Child
+						do_update()
+			}
+		}
+	}
 }
 
 function MenuEntry() constructor {
 	Menu()
+
+	__parent = null
+	__callback = null
 }
 
 function MenuText(caption): MenuEntry() constructor {
-	self.caption = caption
+	self.__caption = caption
+
+	static toString = function() {
+		return __caption
+	}
 }
 
 function add_entry(object) {
-	array_push(__children, object)
-	object.__parent = self
+	__children.push_back(object)
+	if is_struct(self)
+		object.__parent = self
+	else
+		object.__parent = self.id
+	if __child_focus == null
+		__child_focus = object
 	return object
 }
 
@@ -46,7 +102,17 @@ function focus() {
 }
 
 function focus_index(index) {
-	focus_child(__children[index])
+	focus_child(__children.at(index))
+}
+
+///@function do_open()
+function do_open() {
+	__opened = flag
+}
+
+///@function set_transition_duration(time)
+function set_transition_duration(time) {
+	__trans_period = time
 }
 
 ///@function set_callback(function)
@@ -57,4 +123,8 @@ function set_callback(callable) {
 ///@function set_open(flag)
 function set_open(flag) {
 	__opened = flag
+}
+
+function get_focus() {
+	return __child_focus
 }

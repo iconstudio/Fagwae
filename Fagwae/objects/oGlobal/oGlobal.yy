@@ -38,11 +38,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Game",
-    "path": "folders/Game.yy",
+    "name": "System",
+    "path": "folders/System.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oGameGlobal",
+  "name": "oGlobal",
   "tags": [],
   "resourceType": "GMObject",
 }
