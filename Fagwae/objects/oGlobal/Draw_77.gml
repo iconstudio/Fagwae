@@ -2,34 +2,30 @@
 if !surface_exists(surf)
 	event_user(0)
 
-if global.screenlock {
-	if sprite_exists(capture) {
-		draw_sprite(capture, 0, 0, 0)
+surface_set_target(surf)
+gpu_set_blendenable(false)
+gpu_set_blendmode_ext(bm_one, bm_zero)
+draw_surface_ext(application_surface, 0, 0, 1, 1, 0, $ffffff, 1)
+gpu_set_blendmode(bm_normal)
+gpu_set_blendenable(true)
+surface_reset_target()
+
+if shake_time < shake_period {
+	var Shake_ratio = 1 - shake_time / shake_period
+	speed = shake_meter * random(Shake_ratio)
+	direction += random(80) + 140
+
+	var xo = shake_xn, yo = shake_yn
+	shake_xn = hspeed * 0.7
+	shake_yn = vspeed * 0.7
+
+	gpu_set_blendmode(bm_add)
+	for (var i = 1; i <= shake_level; ++i) {
+		draw_surface_ext(application_surface, xo + (shake_xn - xo) * shake_pico * i, yo + (shake_yn - yo) * shake_pico * i, 1, 1, 0, $ffffff, shake_pico)
 	}
-} else {
-	surface_set_target(surf)
-	gpu_set_blendenable(false)
-	gpu_set_blendmode_ext(bm_one, bm_zero)
-	draw_surface_ext(application_surface, 0, 0, 1, 1, 0, $ffffff, 1)
 	gpu_set_blendmode(bm_normal)
-	gpu_set_blendenable(true)
-	surface_reset_target()
 
-	if 0 < shake_time {
-		speed = shake_meter * (shake_time-- / shake_period)
-		direction = (direction + random(80) + 140) mod 360
-		xo = xn
-		yo = yn
-		xn = hspeed * 0.7
-		yn = vspeed * 0.7
-
-		gpu_set_blendmode(bm_add)
-		for (var i = 1; i <= shake_level; ++i)
-			draw_surface_ext(application_surface, xo + (xn - xo) / shake_level * i, yo + (yn - yo) / shake_level * i, 1, 1, 0, $ffffff, 1 / shake_level)
-		gpu_set_blendmode(bm_normal)
-	} else {
-		xo = 0
-		yo = 0
-		draw_surface_ext(application_surface, 0, 0, 1, 1, 0, $ffffff, 1)
-	}
+	shake_time += delta_time
+} else {
+	draw_surface_ext(application_surface, 0, 0, 1, 1, 0, $ffffff, 1)
 }

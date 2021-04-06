@@ -1,17 +1,11 @@
 /// @description Initialzation
-application_surface_draw_enable(false)
-
 event_user(0)
 
-capture = noone
-global.screenlock = false
-
 // Shake
-xo = 0
-yo = 0
-xn = 0
-yn = 0
+shake_xn = 0
+shake_yn = 0
 shake_level = 4
-shake_meter = 80
-shake_time = 100
-shake_period = seconds(1)
+shake_pico = 1 / shake_level
+shake_meter = 0
+shake_time = 0
+shake_period = 1 // 1 second

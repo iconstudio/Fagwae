@@ -5,6 +5,7 @@ function Menu() {
 
 	// Member Attributes
 	self.__opened = false
+	self.__openable = true
 	self.__transition = false
 	self.__trans_mode = MENU_MODES.OPEN
 	self.__trans_time = 0
@@ -19,12 +20,16 @@ function Menu() {
 	self.focus_child = method(self, focus_child)
 	self.focus_index = method(self, focus_index)
 	self.focus = method(self, focus)
+	self.get_focus = method(self, get_focus)
+
 	self.add_entry = method(self, add_entry)
 	self.add_text = method(self, add_text)
+
 	self.do_open = method(self, do_open)
-	self.set_callback = method(self, set_callback)
+	self.on_open = method(self, on_open)
+	self.off_open = method(self, off_open)
 	self.set_open = method(self, set_open)
-	self.get_focus = method(self, get_focus)
+	self.set_transition_duration = method(self, set_transition_duration)
 
 	// Methods
 	self.do_update = function() {
@@ -61,6 +66,8 @@ function MenuEntry() constructor {
 
 	__parent = null
 	__callback = null
+
+	self.set_callback = method(self, set_callback)
 }
 
 function MenuText(caption): MenuEntry() constructor {
@@ -107,7 +114,18 @@ function focus_index(index) {
 
 ///@function do_open()
 function do_open() {
-	__opened = flag
+	if __openable
+		__opened = true
+}
+
+///@function on_open()
+function on_open() {
+	__openable = true
+}
+
+///@function off_open()
+function off_open() {
+	__openable = false
 }
 
 ///@function set_transition_duration(time)
@@ -125,6 +143,7 @@ function set_open(flag) {
 	__opened = flag
 }
 
+///@function get_focus()
 function get_focus() {
 	return __child_focus
 }

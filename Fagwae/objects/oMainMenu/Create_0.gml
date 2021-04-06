@@ -1,21 +1,32 @@
 Menu()
 
 with add_text("Start") {
-	add_text("Shape Area")
-	add_text("Frame Area")
-	add_text("Disorted Area")
-	add_text("Bossfight")
+	add_text("Shape Area").off_open()
+	add_text("Frame Area").off_open()
+	add_text("Disorted Area").off_open()
+	add_text("Bossfight").off_open()
 
 	focus()
 }
 
 with add_text("Debug") {
 	with add_text("Invincible") {
+		add_text("On")
+		add_text("Off")
+
 		focus()
 	}
 	
-	add_text("Overpower")
-	add_text("Infinite bombs")
+	with add_text("Overpower") {
+		add_text("On")
+		add_text("Off")
+	}
+
+	with add_text("Infinite bombs") {
+		add_text("On")
+		add_text("Off")
+	}
+
 	add_text("Back")
 }
 

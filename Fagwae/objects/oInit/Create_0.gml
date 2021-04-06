@@ -22,6 +22,7 @@ if global.flag_is_mobile {
 
 // Drawing
 application_surface_enable(true)
+application_surface_draw_enable(false)
 surface_depth_disable(true)
 
 draw_set_color($ffffff)
@@ -36,8 +37,6 @@ if !shaders_are_supported() {
 
 // UX
 device_mouse_dbclick_enable(false)
-keyboard_set_map(vk_backspace, vk_escape)
-global.pause_stack = 0
 
 // UI
 #macro GUI_W 640

@@ -14,5 +14,4 @@ with global.main_depth {
 	}
 }
 
-if surface_exists(test_surface)
-	draw_surface(test_surface, 0, 0)
+//if surface_exists(test_surface) draw_surface(test_surface, 0, 0)
