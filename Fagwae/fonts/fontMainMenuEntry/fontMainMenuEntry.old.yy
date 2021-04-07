@@ -16,8 +16,8 @@
   "includeTTF": false,
   "TTFName": "",
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "texgrp_mainmenu",
+    "path": "texturegroups/texgrp_mainmenu",
   },
   "ascenderOffset": 1,
   "glyphs": {

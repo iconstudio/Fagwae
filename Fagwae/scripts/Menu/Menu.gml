@@ -11,21 +11,31 @@ function Menu() {
 	self.__trans_time = 0
 	self.__trans_period = 0.4
 
-	self.__x = 0
-	self.__y = 0
-	self.__w = 0
-	self.__h = 0
+	///@function do_update()
+	self.do_update = null
+	///@function do_draw()
+	self.do_draw = null
+
+	self.__x = null
+	self.__y = null
+	self.__w = null
+	self.__h = null
 
 	// Alias
-	self.add_entry = method(self, add_entry)
+	self.add_menu_item = method(self, add_menu_item)
 	self.add_text = method(self, add_text)
 
 	self.do_open = method(self, do_open)
-	self.do_close = method(self, do_open)
+	self.do_close = method(self, do_close)
 	self.on_open = method(self, on_open)
 	self.off_open = method(self, off_open)
 	self.set_open = method(self, set_open)
 	self.set_transition_duration = method(self, set_transition_duration)
+
+	///@function child_run(predicate)
+	self.child_run = function(predicate) {
+		__children.foreach_all(predicate)
+	}
 
 	///@function get_size()
 	self.get_size = function() {
@@ -33,7 +43,7 @@ function Menu() {
 	}
 
 	///@function focus_child(child)
-	self.focus_child = function (child) {
+	self.focus_child = function(child) {
 		__child_focus = child
 	}
 
@@ -57,8 +67,11 @@ function Menu() {
 		return __child_focus
 	}
 
-	// Methods
-	self.do_update = function() {
+	///@function do_update_logic()
+	self.do_update_logic = function() {
+		if do_update != null
+			do_update()
+
 		if __transition {
 			if __trans_period <= __trans_time {
 				if __trans_mode == MENU_MODES.OPEN {
@@ -71,19 +84,13 @@ function Menu() {
 				__trans_time = 0
 			}
 
-			__trans_time++
+			__trans_time += delta_time * 0.000001
 		}
 
-		var Len = __children.get_size()
-		if 0 < Len {
-			var i, Child
-			for (i = 0; i < Len; ++i) {
-				Child = __children.at(i)
-				if Child
-					with Child
-						do_update()
-			}
-		}
+		__children.foreach_all(function(Child) {
+			with Child
+				do_update_logic()
+		})
 	}
 }
 
@@ -102,16 +109,22 @@ function MenuEntry() constructor {
 	}
 }
 
-function MenuText(caption): MenuEntry() constructor {
+function MenuText(caption, x, y): MenuEntry() constructor {
 	self.__caption = caption
-	self.__h = 32
+	self.__x = x
+	self.__y = y
+	self.__h = 74
 
 	static toString = function() {
 		return __caption
 	}
+	
+	self.do_draw = function() {
+		draw_text(__x, __y, __caption)
+	}
 }
 
-function add_entry(object) {
+function add_menu_item(object) {
 	__children.push_back(object)
 	if is_struct(self)
 		object.__parent = self
@@ -122,8 +135,8 @@ function add_entry(object) {
 	return object
 }
 
-function add_text(caption) {
-	return add_entry(new MenuText(caption))
+function add_text(caption, x, y) {
+	return add_menu_item(new MenuText(caption, x, y))
 }
 
 ///@function do_open()

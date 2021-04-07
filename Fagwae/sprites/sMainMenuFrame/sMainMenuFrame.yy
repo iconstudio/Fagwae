@@ -17,8 +17,8 @@
   "width": 320,
   "height": 200,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "texgrp_mainmenu",
+    "path": "texturegroups/texgrp_mainmenu",
   },
   "swatchColours": null,
   "gridX": 0,

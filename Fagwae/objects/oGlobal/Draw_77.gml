@@ -25,7 +25,7 @@ if shake_time < shake_period {
 	}
 	gpu_set_blendmode(bm_normal)
 
-	shake_time += delta_time
+	shake_time += delta_time * 0.000001
 } else {
 	draw_surface_ext(application_surface, 0, 0, 1, 1, 0, $ffffff, 1)
 }

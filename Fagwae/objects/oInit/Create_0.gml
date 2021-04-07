@@ -52,6 +52,8 @@ enum MENU_MODES {
 global.px = 0
 global.py = 0
 
+global.area_names = ["Shape", "Frame", "Disorted"]
+
 global.__cheat_invincible = false
 global.__cheat_powerful = false
 global.__cheat_inf_bombs = false

@@ -1,5 +1,5 @@
 /// @description Update
-do_update()
+do_update_logic()
 
 global.key_confirm.foreach_all(function(Key) {
 	if keyboard_check_pressed(Key)
