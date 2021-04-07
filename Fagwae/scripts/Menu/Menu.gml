@@ -1,7 +1,7 @@
 function Menu() {
 	// Properties
 	self.__child_focus = null
-	self.__children = new Vector()
+	self.__children = new List()
 
 	// Member Attributes
 	self.__opened = false
@@ -17,19 +17,45 @@ function Menu() {
 	self.__h = 0
 
 	// Alias
-	self.focus_child = method(self, focus_child)
-	self.focus_index = method(self, focus_index)
-	self.focus = method(self, focus)
-	self.get_focus = method(self, get_focus)
-
 	self.add_entry = method(self, add_entry)
 	self.add_text = method(self, add_text)
 
 	self.do_open = method(self, do_open)
+	self.do_close = method(self, do_open)
 	self.on_open = method(self, on_open)
 	self.off_open = method(self, off_open)
 	self.set_open = method(self, set_open)
 	self.set_transition_duration = method(self, set_transition_duration)
+
+	///@function get_size()
+	self.get_size = function() {
+		return __children.get_size()
+	}
+
+	///@function focus_child(child)
+	self.focus_child = function (child) {
+		__child_focus = child
+	}
+
+	///@function focus([target])
+	self.focus = function() {
+		if argument_count == 0
+			if __parent != null
+				with __parent
+					focus_child(other)
+		else
+			focus_child(argument[0])
+	}
+
+	///@function focus_index(index)
+	self.focus_index = function(index) {
+		focus_child(__children.at(index))
+	}
+
+	///@function get_focus()
+	self.get_focus = function() {
+		return __child_focus
+	}
 
 	// Methods
 	self.do_update = function() {
@@ -48,7 +74,7 @@ function Menu() {
 			__trans_time++
 		}
 
-		var Len = __children.size()
+		var Len = __children.get_size()
 		if 0 < Len {
 			var i, Child
 			for (i = 0; i < Len; ++i) {
@@ -68,10 +94,17 @@ function MenuEntry() constructor {
 	__callback = null
 
 	self.set_callback = method(self, set_callback)
+
+	///@function execute()
+	self.execute = function() {
+		if __callback != null
+			__callback()
+	}
 }
 
 function MenuText(caption): MenuEntry() constructor {
 	self.__caption = caption
+	self.__h = 32
 
 	static toString = function() {
 		return __caption
@@ -93,29 +126,18 @@ function add_text(caption) {
 	return add_entry(new MenuText(caption))
 }
 
-///@function focus_child(child)
-function focus_child(child) {
-	__child_focus = child
-}
-
-///@function focus([target])
-function focus() {
-	if argument_count == 0
-		if __parent != null
-			with __parent
-				focus_child(other)
-	else
-		focus_child(argument[0])
-}
-
-function focus_index(index) {
-	focus_child(__children.at(index))
-}
-
 ///@function do_open()
 function do_open() {
-	if __openable
-		__opened = true
+	if __openable {
+		__trans_mode = MENU_MODES.OPEN
+		__transition = true
+	}
+}
+
+///@function do_close()
+function do_close() {
+	__trans_mode = MENU_MODES.CLOSE
+	__transition = true
 }
 
 ///@function on_open()
@@ -141,9 +163,4 @@ function set_callback(callable) {
 ///@function set_open(flag)
 function set_open(flag) {
 	__opened = flag
-}
-
-///@function get_focus()
-function get_focus() {
-	return __child_focus
 }

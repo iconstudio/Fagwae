@@ -1,7 +1,8 @@
 /// @description Go back
-global.main_depth_stack.pop()
+var Pos = global.main_depth_stack.get_size()
 
-if 0 < global.main_depth_stack.size() {
+global.main_depth_stack.pop_back()
+if 1 < Pos {
 	global.main_depth = global.main_depth_stack.back()
 } else {
 	global.main_depth = id

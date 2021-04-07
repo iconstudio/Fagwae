@@ -6,7 +6,7 @@
     "path": "folders/Scripts/Sequential.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Iterator",
+  "name": "List",
   "tags": [],
   "resourceType": "GMScript",
 }

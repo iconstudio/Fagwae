@@ -37,6 +37,7 @@ if !shaders_are_supported() {
 
 // UX
 device_mouse_dbclick_enable(false)
+event_user(1)
 
 // UI
 #macro GUI_W 640

@@ -13,10 +13,10 @@
 		new Stack()
 
 */
-function Stack()constructor {
+function Stack() constructor {
 #region public
-	///@function size()
-	static size = function() { return ds_stack_size(raw) }
+	///@function get_size()
+	static get_size = function() { return ds_stack_size(raw) }
 
 	///@function empty()
 	static empty = function() { return ds_stack_empty(raw) }
