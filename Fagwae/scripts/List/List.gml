@@ -201,6 +201,21 @@ function List() constructor {
 		}
 	}
 
+	///@function all_of(begin, end, predicate)
+	static all_of = function(First, Last, Pred) {
+		return is_undefined(find_if_not(First, Last, Pred))
+	}
+
+	///@function any_of(begin, end, predicate)
+	static any_of = function(First, Last, Pred) {
+		return !is_undefined(find_if(First, Last, Pred))
+	}
+
+	///@function none_of(begin, end, predicate)
+	static none_of = function(First, Last, Pred) {
+		return is_undefined(find_if(First, Last, Pred))
+	}
+
 	///@function foreach(begin, end, predicate)
 	static foreach = function(First, Last, Pred) {
 		First = _Check_iterator(First)
@@ -268,6 +283,20 @@ function List() constructor {
 
 		while First != Last {
 			if Pred(at(First))
+				return First
+			First++
+		}
+		return undefined
+	}
+
+	///@function find_if_not(begin, end, predicate)
+	static find_if_not = function(First, Last, Pred) {
+		First = _Check_iterator(First)
+		Last = _Check_iterator(Last)
+		_Check_range(First, Last)
+
+		while First != Last {
+			if !Pred(at(First))
 				return First
 			First++
 		}

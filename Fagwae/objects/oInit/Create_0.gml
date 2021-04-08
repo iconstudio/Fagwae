@@ -4,6 +4,11 @@
 #macro elif else if
 #macro this self
 #macro Delta delta_time * 0.000001
+#macro NONE 0
+#macro RIGHT 1
+#macro LEFT -1
+#macro UP -1
+#macro DOWN 1
 
 // external
 global.PROFILE = "profile.dat"
@@ -16,6 +21,7 @@ global.flag_is_mobile = (os_type == os_android or os_type == os_ios)
 if global.flag_is_mobile {
 	display_set_sleep_margin(5)
 	window_set_fullscreen(true)
+	keyboard_set_map(vk_backspace, vk_escape)
 } else if os_browser == browser_not_a_browser {
 	display_set_sleep_margin(20)
 } else {
@@ -41,6 +47,12 @@ if !shaders_are_supported() {
 device_mouse_dbclick_enable(false)
 event_user(1)
 
+keyboard_set_map(vk_numpad2, vk_up)
+keyboard_set_map(vk_numpad4, vk_left)
+keyboard_set_map(vk_numpad6, vk_right)
+keyboard_set_map(vk_numpad8, vk_down)
+keyboard_set_map(vk_numpad5, vk_enter)
+
 // UI
 #macro GUI_W 640
 #macro GUI_H 960
@@ -63,8 +75,6 @@ global.__cheat_inf_bombs = false
 // general
 game_set_speed(100, gamespeed_fps)
 randomize()
-
-instance_create_layer(0, 0, "system", oGlobal)
 
 // audio
 switch os_browser {
