@@ -1,19 +1,20 @@
 /// @description Declare the menu components
 Menu()
+set_open(true)
 
 function MainMenuProp(): MenuEntry() constructor {
-	self.sprite_index = null
-	self.__h = 74
+	this.sprite_index = null
+	this.__h = 74
 }
 
 with add_menu_item(new MainMenuProp()) {
-	self.sprite_index = sMainMenuFrameStart
-	self.__x = 441
-	self.__y = 492
-	self.__caption = "START"
-	self.__inumber = 25
+	this.sprite_index = sMainMenuFrameStart
+	this.__x = 441
+	this.__y = 492
+	this.__caption = "START"
+	this.__inumber = 25
 
-	self.shparts = function() constructor {
+	this.shparts = function() constructor {
 		x = 0
 		y = 0
 		dx = 0
@@ -27,18 +28,20 @@ with add_menu_item(new MainMenuProp()) {
 	var ffs = array_create(__inumber)
 	for (var i = 0; i < __inumber; ++i)
 		ffs[i] = new shparts()
-	self.part_coords = ffs
+	this.part_coords = ffs
 
-	self.do_update = function() {
+	this.do_update = function() {
 		if __transition {
-			
+			if __trans_mode == MENU_MODES.OPEN {
+				var dalpha = __trans_time /__trans_period
+			}
 		} else {
 			var i, ff, chx, chy, fdist, fdir
 			for (i = 0; i < __inumber; ++i) {
 				ff = part_coords[i]
 
 				with ff {
-					move_time += delta_time * 0.000001
+					move_time += Delta
 
 					if irandom_range(move_period_min, move_period_max) < move_time {
 						move_time = 0
@@ -64,11 +67,12 @@ with add_menu_item(new MainMenuProp()) {
 		}
 	}
 
-	self.do_draw = function() {
+	this.do_draw = function() {
 		var i, ff
+
 		for (i = 0; i < __inumber; ++i) {
 			ff = part_coords[i]
-			draw_sprite(sprite_index, i, __x + ff.x, __y + ff.y)
+			draw_sprite_ext(sprite_index, i, __x + ff.x, __y + ff.y, global.zoom_scale, global.zoom_scale, 0, $ffffff, 1)
 		}
 	}
 
@@ -77,39 +81,36 @@ with add_menu_item(new MainMenuProp()) {
 	focus()
 }
 
-/*
-with add_text("Debug") {
-	with add_text("Invincible") {
-		add_text("On")
-		add_text("Off")
+/*	-1: none
+	 0: unzoom
+	 1: zoom
+*/
+global.zoom_scale = 1
+zoom_mode = -1
+zoom_time = 0
+zoom_period = 0.9
+zoom_x = 0
+zoom_y = 0
+zoom_w = 0
+zoom_h = 0
 
-		focus()
-	}
+zoom_sx = 0
+zoom_sy = 0
+zoom_dx = 0
+zoom_dy = 0
+
+zoom_sw = 640
+zoom_sh = 960
+zoom_dw = 640
+zoom_dh = 960
+
+zoom_vx = 0
+zoom_vy = 0
+
+function zoom_on(dx, dy) {
 	
-	with add_text("Overpower") {
-		add_text("On")
-		add_text("Off")
-	}
-
-	with add_text("Infinite bombs") {
-		add_text("On")
-		add_text("Off")
-	}
-
-	add_text("Back")
-}
-with add_text("Setting") {
-	add_text("Back")
 }
 
-with add_text("Exit") {
-	add_text("Yes")
-	with add_text("No") {
-		focus()
-	}
-
-	set_callback(function() {
-		focus_index(1)
-	})
-}*/
-
+function unzoom() {
+	
+}

@@ -34,20 +34,20 @@ function Iterator(Parent) constructor {
 	}
 
 	/// @function set_index(index)
-	static set_index = function(Index) { _Index = Index; return self }
+	static set_index = function(Index) { _Index = Index; return this }
 
 	/// @function go_next()
 	static go_next = function() {
 		if _Index < _Size - 1
 			_Index++
-		return self
+		return this
 	}
 
 	/// @function go_previous()
 	static go_previous = function() {
 		if 0 < _Index
 			_Index--
-		return self
+		return this
 	}
 
 	_Container = weak_ref_create(Parent)
@@ -108,17 +108,17 @@ function List() constructor {
 	static back = function() { return (0 < _Size ? _Data[_Size - 1] : undefined) }
 
 	/// @function first()
-	static first = function() { return (new Iterator(self)) }
+	static first = function() { return (new Iterator(this)) }
 
 	/// @function last()
-	static last = function() { return (new Iterator(self).set_index(_Size)) }
+	static last = function() { return (new Iterator(this).set_index(_Size)) }
 
 	/// @function set_at(index, value)
 	static set_at = function(Index, Value) {
 		if Index < _Size {
 			_Data[Index] = Value
 		}
-		return self
+		return this
 	}
 
 	/// @function push_back(value)
@@ -130,7 +130,7 @@ function List() constructor {
 		} else {
 			_Element_add(Value)
 		}
-		return self
+		return this
 	}
 
 	/// @function erase_at(index)
@@ -177,7 +177,7 @@ function List() constructor {
 			array_delete(_Data, FirstIndex, Count)
 			//repeat Count array_push(_Data, undefined)
 			_Capacity -= Count
-			return (new Iterator(self).set_index(FirstIndex))
+			return (new Iterator(this).set_index(FirstIndex))
 		}
 	}
 
@@ -216,7 +216,7 @@ function List() constructor {
 
 	///@function foreach_all(predicate)
 	static foreach_all = function(Pred) {
-		return self.foreach(0, _Size, Pred)
+		return this.foreach(0, _Size, Pred)
 	}
 
 	/// @function sort(begin, end, [comparator=compare_less])
@@ -627,7 +627,7 @@ function SmartList(): List() constructor {
 					_Data[Index] = weak_ref_create(Value)
 			}
 		}
-		return self
+		return this
 	}
 
 	/// @function push_back(value)
@@ -639,7 +639,7 @@ function SmartList(): List() constructor {
 		} else {
 			_Element_add(Value)
 		}
-		return self
+		return this
 	}
 
 	/// @function erase_at(index)
@@ -688,7 +688,7 @@ function SmartList(): List() constructor {
 			array_delete(_Data, FirstIndex, Count)
 			//repeat Count array_push(_Data, undefined)
 			_Capacity -= Count
-			return (new Iterator(self).set_index(FirstIndex))
+			return (new Iterator(this).set_index(FirstIndex))
 		}
 	}
 
