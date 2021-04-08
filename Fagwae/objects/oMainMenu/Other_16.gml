@@ -1,9 +1,6 @@
 /// @description Go back
-var Pos = global.main_depth_stack.get_size()
-
-global.main_depth_stack.pop_back()
-if 1 < Pos {
-	global.main_depth = global.main_depth_stack.back()
-} else {
-	global.main_depth = id
+if global.main_depth != id {
+	var Prior = global.main_depth.__parent
+	Prior.select(null)
+	global.main_depth = Prior
 }
