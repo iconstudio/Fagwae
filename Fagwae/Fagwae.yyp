@@ -23,6 +23,7 @@
     {"id":{"name":"Menu","path":"scripts/Menu/Menu.yy",},"order":2,},
     {"id":{"name":"oLoadingText","path":"objects/oLoadingText/oLoadingText.yy",},"order":3,},
     {"id":{"name":"sMainMenuFrame","path":"sprites/sMainMenuFrame/sMainMenuFrame.yy",},"order":2,},
+    {"id":{"name":"sWood","path":"sprites/sWood/sWood.yy",},"order":5,},
     {"id":{"name":"roomLoading","path":"rooms/roomLoading/roomLoading.yy",},"order":1,},
     {"id":{"name":"oIgnore","path":"objects/oIgnore/oIgnore.yy",},"order":0,},
     {"id":{"name":"fontMainMenuEntry","path":"fonts/fontMainMenuEntry/fontMainMenuEntry.yy",},"order":0,},
