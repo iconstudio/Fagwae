@@ -2,6 +2,8 @@
 #macro print show_debug_message
 #macro null undefined
 #macro elif else if
+#macro this self
+#macro Delta delta_time * 0.000001
 
 // external
 global.PROFILE = "profile.dat"
