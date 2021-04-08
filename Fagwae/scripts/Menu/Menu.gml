@@ -1,74 +1,153 @@
 function Menu() {
 	// Properties
-	self.__child_focus = null
-	self.__children = new List()
+	this.__child_focus = null
+	this.__child_choice = null
+	this.__children = new List()
 
 	// Member Attributes
-	self.__opened = false
-	self.__openable = true
-	self.__transition = false
-	self.__trans_mode = MENU_MODES.OPEN
-	self.__trans_time = 0
-	self.__trans_period = 0.4
+	this.__opened = false
+	this.__openable = true
+	this.__transition = false
+	this.__trans_mode = MENU_MODES.OPEN
+	this.__trans_time = 0
+	this.__trans_period = 0.4
 
+	this.__callback = null
 	///@function do_update()
-	self.do_update = null
+	this.do_update = null
 	///@function do_draw()
-	self.do_draw = null
+	this.do_draw = null
 
-	self.__x = null
-	self.__y = null
-	self.__w = null
-	self.__h = null
+	this.__x = null
+	this.__y = null
+	this.__w = 0
+	this.__h = 0
 
 	// Alias
-	self.add_menu_item = method(self, add_menu_item)
-	self.add_text = method(self, add_text)
-
-	self.do_open = method(self, do_open)
-	self.do_close = method(self, do_close)
-	self.on_open = method(self, on_open)
-	self.off_open = method(self, off_open)
-	self.set_open = method(self, set_open)
-	self.set_transition_duration = method(self, set_transition_duration)
+	this.add_menu_item = method(this, add_menu_item)
+	this.add_text = method(this, add_text)
 
 	///@function child_run(predicate)
-	self.child_run = function(predicate) {
+	this.child_run = function(predicate) {
 		__children.foreach_all(predicate)
 	}
 
 	///@function get_size()
-	self.get_size = function() {
+	this.get_size = function() {
 		return __children.get_size()
 	}
 
+	///@function do_open()
+	this.do_open = function() {
+		if __openable {
+			__trans_mode = MENU_MODES.OPEN
+			__transition = true
+		}
+	}
+
+	///@function do_close()
+	this.do_close = function() {
+		__trans_mode = MENU_MODES.CLOSE
+		__transition = true
+	}
+
+	///@function execute()
+	this.execute = function() {
+		if __callback != null
+			__callback()
+	}
+
+	///@function on_open()
+	this.on_open = function() {
+		__openable = true
+	}
+
+	///@function off_open()
+	this.off_open = function() {
+		__openable = false
+	}
+
+	///@function set_transition_duration(time)
+	this.set_transition_duration = function(time) {
+		__trans_period = time
+	}
+
+	///@function set_callback(function)
+	this.set_callback = function(callable) {
+		__callback = callable
+	}
+
+	///@function set_open(flag)
+	this.set_open = function(flag) {
+		__opened = flag
+	}
+
 	///@function focus_child(child)
-	self.focus_child = function(child) {
+	this.focus_child = function(child) {
 		__child_focus = child
 	}
 
 	///@function focus([target])
-	self.focus = function() {
+	this.focus = function() {
 		if argument_count == 0
 			if __parent != null
-				with __parent
-					focus_child(other)
+				__parent.focus_child(self)
 		else
 			focus_child(argument[0])
 	}
 
 	///@function focus_index(index)
-	self.focus_index = function(index) {
+	this.focus_index = function(index) {
 		focus_child(__children.at(index))
 	}
 
 	///@function get_focus()
-	self.get_focus = function() {
+	this.get_focus = function() {
 		return __child_focus
 	}
 
+	///@function select(child)
+	this.select = function(child) {
+		if child == null {
+			if __child_choice != null {
+				__child_choice.do_close()
+			}
+			__child_choice = null
+
+			return this
+		} else {
+			child.execute()
+			if child.__openable and 0 < child.get_size() {
+				__child_choice = child
+				child.do_open()
+
+				return child
+			}
+
+			return this
+		}
+	}
+
+	///@function deselect()
+	this.deselect = function() {
+		if __parent != null
+			return __parent.select(null)
+		else
+			throw "No parent!"
+	}
+
+	///@function get_selection()
+	this.get_selection = function() {
+		return __child_choice
+	}
+
+	///@function select_index(index)
+	this.select_index = function(index) {
+		return select(__children.at(index))
+	}
+
 	///@function do_update_logic()
-	self.do_update_logic = function() {
+	this.do_update_logic = function() {
 		if do_update != null
 			do_update()
 
@@ -84,7 +163,7 @@ function Menu() {
 				__trans_time = 0
 			}
 
-			__trans_time += delta_time * 0.000001
+			__trans_time += Delta
 		}
 
 		__children.foreach_all(function(Child) {
@@ -98,38 +177,30 @@ function MenuEntry() constructor {
 	Menu()
 
 	__parent = null
-	__callback = null
 
-	self.set_callback = method(self, set_callback)
-
-	///@function execute()
-	self.execute = function() {
-		if __callback != null
-			__callback()
-	}
 }
 
 function MenuText(caption, x, y): MenuEntry() constructor {
-	self.__caption = caption
-	self.__x = x
-	self.__y = y
-	self.__h = 74
+	this.__caption = caption
+	this.__x = x
+	this.__y = y
+	this.__h = 74
 
 	static toString = function() {
 		return __caption
 	}
 	
-	self.do_draw = function() {
+	this.do_draw = function() {
 		draw_text(__x, __y, __caption)
 	}
 }
 
 function add_menu_item(object) {
 	__children.push_back(object)
-	if is_struct(self)
-		object.__parent = self
+	if is_struct(this)
+		object.__parent = this
 	else
-		object.__parent = self.id
+		object.__parent = this.id
 	if __child_focus == null
 		__child_focus = object
 	return object
@@ -137,43 +208,4 @@ function add_menu_item(object) {
 
 function add_text(caption, x, y) {
 	return add_menu_item(new MenuText(caption, x, y))
-}
-
-///@function do_open()
-function do_open() {
-	if __openable {
-		__trans_mode = MENU_MODES.OPEN
-		__transition = true
-	}
-}
-
-///@function do_close()
-function do_close() {
-	__trans_mode = MENU_MODES.CLOSE
-	__transition = true
-}
-
-///@function on_open()
-function on_open() {
-	__openable = true
-}
-
-///@function off_open()
-function off_open() {
-	__openable = false
-}
-
-///@function set_transition_duration(time)
-function set_transition_duration(time) {
-	__trans_period = time
-}
-
-///@function set_callback(function)
-function set_callback(callable) {
-	__callback = callable
-}
-
-///@function set_open(flag)
-function set_open(flag) {
-	__opened = flag
 }
