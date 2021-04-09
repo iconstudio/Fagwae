@@ -229,9 +229,36 @@ function List() constructor {
 		return Pred
 	}
 
+	///@function foreach_n(begin, count, predicate)
+	static foreach_n = function(First, Number, Pred) {
+		First = _Check_iterator(First)
+		for (var i = 0; i < Number; ++i)
+			Pred(at(First++))
+		return First
+	}
+
 	///@function foreach_all(predicate)
 	static foreach_all = function(Pred) {
 		return this.foreach(0, _Size, Pred)
+	}
+
+	///@function enumerate(begin, end, predicate)
+	static enumerate = function(First, Last, Pred) {
+		First = _Check_iterator(First)
+		Last = _Check_iterator(Last)
+		_Check_range(First, Last)
+
+		var i = 0
+		while First != Last {
+			Pred(i++, at(First))
+			First++
+		}
+		return Pred
+	}
+
+	///@function enumerate_all(predicate)
+	static enumerate_all = function(Pred) {
+		return this.enumerate(0, _Size, Pred)
 	}
 
 	/// @function sort(begin, end, [comparator=compare_less])
