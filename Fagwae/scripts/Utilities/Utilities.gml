@@ -99,10 +99,10 @@ ease = new (function() constructor {
 	function out_bounce(x) {
 		if (x < n1) {
 			return 7.5625 * power(x, 2);
-		} else if (t < n2) {
+		} else if (x < n2) {
 			x -= d1;
 			return 7.5625 * power(x, 2) + 0.75;
-		} else if (t < n3) {
+		} else if (x < n3) {
 			x -= d2;
 			return 7.5625 * power(x, 2) + 0.9375;
 		} else {
