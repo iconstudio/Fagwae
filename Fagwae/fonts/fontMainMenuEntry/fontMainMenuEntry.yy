@@ -127,8 +127,8 @@
   "canGenerateBitmap": true,
   "maintainGms1Font": false,
   "parent": {
-    "name": "Main Menu",
-    "path": "folders/System/Main Menu.yy",
+    "name": "Main Screen",
+    "path": "folders/System/Main Screen.yy",
   },
   "resourceVersion": "1.0",
   "name": "fontMainMenuEntry",
