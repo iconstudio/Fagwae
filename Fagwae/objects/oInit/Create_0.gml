@@ -1,6 +1,7 @@
 /// @description Initialize game
 #macro print show_debug_message
 #macro null undefined
+#macro is_null is_undefined
 #macro elif else if
 #macro this self
 #macro Delta delta_time * 0.000001
@@ -57,7 +58,7 @@ keyboard_set_map(vk_numpad5, vk_enter)
 #macro GUI_W 640
 #macro GUI_H 960
 
-enum MENU_MODES {
+enum MENU_TRANS {
 	OPEN = 0,
 	CLOSE = 1
 }
