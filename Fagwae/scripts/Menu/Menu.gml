@@ -1,22 +1,27 @@
 function Menu() {
+	this.caption = "Default menu item"
+
 	// Properties
 	this.child_focus = null
 	this.child_choice = null
 	this.__children = new List()
 
-	this.__callback = null
+	this.__callback_open = null
+	this.__callback_close = null
 
-	this.mode = MENU_STATES.NOTHING
+	this.mode_enter = null
+	this.mode_exit = null
+	this.mode = null
 	this.mode_ratio = 0
-
-	this.__openable = true
 	this.transitioning = false
-	this.tr_open_1_time = 0
-	this.tr_open_1_period = 1
-	this.tr_open_2_time = 0
-	this.tr_open_2_period = 1
-	this.tr_close_time = 0
-	this.tr_close_period = 1.7
+	this.focus_time = 0
+	this.focus_period = 1
+	this.unfocus_time = 0
+	this.unfocus_period = 1
+
+	this.toString = function() {
+		return caption
+	}
 
 	///@function child_run(predicate)
 	this.child_run = function(predicate) {
@@ -30,25 +35,14 @@ function Menu() {
 
 	///@function do_open()
 	this.do_open = function() {
-		if __callback != null
-			__callback()
-
-		if __openable {
-			parent.child_choice = self
-			mode = MENU_STATES.OPENING_1
-			transitioning = true
-		}
+		if !is_null(__callback_open)
+			return __callback_open()
 	}
 
 	///@function do_close()
 	this.do_close = function() {
-		mode = MENU_STATES.CLOSING
-		transitioning = true
-	}
-
-	///@function set_callback(function)
-	this.set_callback = function(callable) {
-		__callback = callable
+		if !is_null(__callback_close)
+			return __callback_close()
 	}
 
 	///@function focus_child(child)
@@ -69,43 +63,49 @@ function Menu() {
 
 
 function menu_state() constructor {
-	time = 0
-	period = 1
-	next = null
+	this.caption = ""
+	this.time = 0
+	this.period = 1
+	this.next = null
 
-	init = null
-	update = null
-	callback = null
-	draw = null
+	this.init = null
+	this.update = null
+	this.callback = null
+	this.draw = null
+
+	///@function toString()
+	static toString = function() {
+		return caption
+	}
 
 	///@function set_duration(time)
-	this.set_initializer = function(time) {
+	static set_duration = function(time) {
 		period = time
 	}
 
 	///@function set_next(state)
-	this.set_next = function(state) {
-		init = state
+	static set_next = function(state) {
+		next = state
 	}
 
 	///@function set_initializer(function)
-	this.set_initializer = function(callable) {
-		init = callable
+	static set_initializer = function(callable) {
+		init = method(other, callable)
 	}
 
 	///@function set_updater(function)
-	this.set_updater = function(callable) {
-		update = callable
+	static set_updater = function(callable) {
+		update = method(other, callable)
 	}
 
 	///@function set_drawer(function)
-	this.set_drawer = function(callable) {
-		draw = callable
+	static set_drawer = function(callable) {
+		draw = method(other, callable)
 	}
 
 	///@function set_callback(function)
-	this.set_callback = function(callable) {
-		callback = callable
+	static set_callback = function(callable) {
+		callback = method(other, callable)
 	}
 }
 
@@ -113,12 +113,14 @@ function menu_state() constructor {
 function menu_mode_change(mode) { print(mode)
 	var prior = this.mode
 	if prior != mode {
-		if prior != null and prior.callback != null
+		if !is_null(prior) and !is_null(prior.callback)
 			prior.callback()
+
 		this.mode = mode
-		if mode != null {
+
+		if !is_null(mode) {
 			mode.time = 0
-			if mode.init != null
+			if !is_null(mode.init)
 				mode.init()
 		}
 	}
@@ -126,10 +128,12 @@ function menu_mode_change(mode) { print(mode)
 
 
 function menu_mode_update() {
-	if mode != null {
+	if !is_null(mode) {
 		var phase_ratio = mode.time / mode.period
+		mode_ratio = phase_ratio
+
 		var predicate = mode.update
-		if predicate != null
+		if !is_null(predicate)
 			predicate(phase_ratio)
 
 		if phase_ratio < 1 {
@@ -138,11 +142,17 @@ function menu_mode_update() {
 			if mode.period < mode.time // limit to 1
 				mode.time = mode.period
 		} else {
-			if mode.next != null
+			if !is_null(mode.next)
 				menu_mode_change(mode.next)
 		}
+	}
+}
 
-		mode_ratio = phase_ratio
+
+function menu_mode_draw() {
+	if !is_null(mode) {
+		if !is_null(mode.draw)
+			mode.draw()
 	}
 }
 

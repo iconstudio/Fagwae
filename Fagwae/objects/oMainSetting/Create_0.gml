@@ -66,3 +66,8 @@ draw_complete = function() {
 }
 
 event_user(0)
+
+deglow_time = 0
+deglow_period = 4
+glow_time = 0
+glow_period = 1

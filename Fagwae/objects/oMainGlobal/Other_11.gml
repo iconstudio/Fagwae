@@ -1,7 +1,10 @@
 /// @description Execute a menu
 var child = child_focus
-if is_null(child) or child.transitioning
+if !is_null(child_choice) or is_null(child) or child.transitioning
 	exit
 
-child.do_open()
-menu_mode_change(MAIN_STATE_FADEOUT)
+if child_focus != child_choice {
+	child_choice = child
+	child.do_open()
+	menu_mode_change(MAIN_STATE_FADEOUT)
+}
