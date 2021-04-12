@@ -35,7 +35,6 @@
     {"id":{"name":"sMainStartFrame","path":"sprites/sMainStartFrame/sMainStartFrame.yy",},"order":7,},
     {"id":{"name":"oMainExit","path":"objects/oMainExit/oMainExit.yy",},"order":6,},
     {"id":{"name":"Menu","path":"scripts/Menu/Menu.yy",},"order":3,},
-    {"id":{"name":"oMainTrophy","path":"objects/oMainTrophy/oMainTrophy.yy",},"order":5,},
     {"id":{"name":"oLoadingText","path":"objects/oLoadingText/oLoadingText.yy",},"order":3,},
     {"id":{"name":"roomLoading","path":"rooms/roomLoading/roomLoading.yy",},"order":1,},
     {"id":{"name":"oIgnore","path":"objects/oIgnore/oIgnore.yy",},"order":2,},
@@ -44,7 +43,6 @@
     {"id":{"name":"sLoadingTitle","path":"sprites/sLoadingTitle/sLoadingTitle.yy",},"order":1,},
     {"id":{"name":"oMainMenu","path":"objects/oMainMenu/oMainMenu.yy",},"order":2,},
     {"id":{"name":"sLoadingTitleFlips","path":"sprites/sLoadingTitleFlips/sLoadingTitleFlips.yy",},"order":2,},
-    {"id":{"name":"oMainSetting","path":"objects/oMainSetting/oMainSetting.yy",},"order":4,},
     {"id":{"name":"roomInit","path":"rooms/roomInit/roomInit.yy",},"order":0,},
   ],
   "Options": [

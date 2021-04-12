@@ -1,7 +1,3 @@
-event_inherited()
-
-__children.push_back(0)
-
 caption = "Main item: Start"
 parts_number = 25
 
@@ -65,4 +61,6 @@ draw_complete = function() {
 	draw_sprite_ext(sMainStartFrame, 25, x, y, 1, 1, 0, $ffffff, 1)
 }
 
-event_user(0)
+event_inherited()
+
+__children.push_back(0)

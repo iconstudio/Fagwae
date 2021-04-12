@@ -50,10 +50,27 @@ check_menu_inputs = function() {
 }
 
 
+menu_fadeout = function() {
+	main_items.foreach_all(function(child) {
+		with child
+			menu_mode_change(sub_state_fadeout)
+	})
+}
+
+
+menu_fadein = function() {
+	main_items.foreach_all(function(child) {
+		with child
+			menu_mode_change(sub_state_fadein)
+	})
+}
+
+
 MAIN_STATE_NORMAL = new menu_state()
 MAIN_STATE_NORMAL.set_updater(function() {
 	check_menu_inputs()
 })
+
 
 MAIN_STATE_INTRO = new menu_state()
 MAIN_STATE_INTRO.set_next(MAIN_STATE_NORMAL)
@@ -63,6 +80,7 @@ MAIN_STATE_INTRO.set_updater(function() {
 			menu_mode_change(mode_enter)
 	})
 })
+
 
 MAIN_STATE_FADEOUT_DONE = new menu_state()
 MAIN_STATE_FADEOUT_DONE.set_duration(1.5)
@@ -74,18 +92,15 @@ MAIN_STATE_FADEOUT = new menu_state()
 MAIN_STATE_FADEOUT.set_duration(2.1)
 MAIN_STATE_FADEOUT.set_next(MAIN_STATE_FADEOUT_DONE)
 
+
 MAIN_STATE_FADEIN = new menu_state()
 MAIN_STATE_FADEIN.set_duration(1.2)
 MAIN_STATE_FADEIN.set_next(MAIN_STATE_NORMAL)
 
+
 MAIN_STATE_EXIT = new menu_state()
 MAIN_STATE_EXIT.set_duration(1.6)
-MAIN_STATE_EXIT.set_initializer(function() {
-	main_items.foreach_all(function(child) {
-		with child
-			menu_mode_change(mode_exit)
-	})
-})
+MAIN_STATE_EXIT.set_initializer(menu_fadeout)
 MAIN_STATE_EXIT.set_callback(function() {
 	game_end()
 })

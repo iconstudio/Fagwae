@@ -16,15 +16,7 @@ draw_transition = function() {
 	})
 }
 
-sub_state_normal = new menu_state() // do nothing
-sub_state_normal.caption = "main-sub-start-normal"
-sub_state_normal.set_initializer(function() {
-	transitioning = false
-})
 sub_state_normal.set_drawer(draw_complete)
-
-sub_state_exit = new menu_state()
-sub_state_exit.caption = "main-sub-start-exit"
 
 sub_state_close_2 = new menu_state()
 sub_state_close_2.caption = "main-sub-start-close"
@@ -200,7 +192,6 @@ sub_state_intro.set_drawer(function() {
 })
 
 mode_enter = sub_state_intro
-mode_exit = sub_state_exit
 __callback_open = sub_state_open_1
 __callback_close = sub_state_close_1
 

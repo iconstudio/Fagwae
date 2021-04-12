@@ -10,7 +10,6 @@ function Menu() {
 	this.__callback_close = null
 
 	this.mode_enter = null
-	this.mode_exit = null
 	this.mode = null
 	this.mode_ratio = 0
 	this.transitioning = false

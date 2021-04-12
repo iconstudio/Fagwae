@@ -10,9 +10,8 @@ gpu_set_blendmode(bm_normal)
 gpu_set_blendenable(true)
 surface_reset_target()
 
-if shake_time < shake_period {
-	var Shake_ratio = 1 - shake_time / shake_period
-	speed = shake_meter * random(Shake_ratio)
+if 0 < shake_time and 0 < shake_meter {
+	speed = random(shake_meter)
 	direction += random(80) + 140
 
 	var xo = shake_xn, yo = shake_yn
@@ -25,7 +24,7 @@ if shake_time < shake_period {
 	}
 	gpu_set_blendmode(bm_normal)
 
-	shake_time += Delta
+	shake_time -= Delta
 } else {
 	draw_surface_ext(application_surface, 0, 0, 1, 1, 0, $ffffff, 1)
 }

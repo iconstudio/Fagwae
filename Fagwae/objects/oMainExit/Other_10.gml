@@ -1,9 +1,4 @@
 /// @description Create menu status
-sub_state_normal = new menu_state() // do nothing
-sub_state_normal.caption = "main-sub-start-normal"
-sub_state_normal.set_initializer(function() {
-	transitioning = false
-})
 sub_state_normal.set_drawer(function() {
 	draw_set_color($821071)
 	draw_triangle(640 - normal_w, 960, 640, 960 - normal_h, 640, 960, false)
@@ -97,7 +92,6 @@ title_beta = 90 - title_angle
 make_back_color = make_color_hsv(206, 230, 128)
 
 mode_enter = sub_state_intro
-mode_exit = sub_state_exit
 __callback_open = sub_state_open_1
 __callback_close = sub_state_close_1
 
