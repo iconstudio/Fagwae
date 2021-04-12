@@ -35,14 +35,14 @@ function Menu() {
 
 	///@function do_open()
 	this.do_open = function() {
-		if !is_null(__callback_open)
-			return __callback_open()
+		if !is_null(__callback_open) and not transitioning
+			menu_mode_change(__callback_open)
 	}
 
 	///@function do_close()
 	this.do_close = function() {
-		if !is_null(__callback_close)
-			return __callback_close()
+		if !is_null(__callback_close) and not transitioning
+			menu_mode_change(__callback_close)
 	}
 
 	///@function focus_child(child)
@@ -109,25 +109,25 @@ function menu_state() constructor {
 	}
 }
 
-
-function menu_mode_change(mode) { print(mode)
+///@function menu_mode_change(mode)
+function menu_mode_change(newmode) { print(newmode)
 	var prior = this.mode
-	if prior != mode {
+	if prior != newmode {
 		if !is_null(prior) and !is_null(prior.callback)
 			prior.callback()
 
-		this.mode = mode
+		this.mode = newmode
 
-		if !is_null(mode) {
-			mode.time = 0
-			if !is_null(mode.init)
-				mode.init()
+		if !is_null(newmode) {
+			newmode.time = 0
+			if !is_null(newmode.init)
+				newmode.init()
 		}
 	}
 }
 
 
-function menu_mode_update() {
+function menu_mode_update(mode) {
 	if !is_null(mode) {
 		var phase_ratio = mode.time / mode.period
 		mode_ratio = phase_ratio

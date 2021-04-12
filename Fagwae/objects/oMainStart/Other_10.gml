@@ -146,8 +146,8 @@ sub_state_open_1.set_callback(function() {
 		part.flip_time = 0
 		part.image_alpha = 0
 	})
-	x = tr_open_x
-	y = tr_open_y
+	x = open_x
+	y = open_y
 })
 sub_state_open_1.set_drawer(draw_transition)
 
@@ -201,12 +201,8 @@ sub_state_intro.set_drawer(function() {
 
 mode_enter = sub_state_intro
 mode_exit = sub_state_exit
-__callback_open = function() {
-	menu_mode_change(sub_state_open_1)
-}
-__callback_close = function() {
-	menu_mode_change(sub_state_close_1)
-}
+__callback_open = sub_state_open_1
+__callback_close = sub_state_close_1
 
-tr_open_x = view_wport * 0.5
-tr_open_y = view_hport * 0.2
+open_x = view_wport * 0.5
+open_y = view_hport * 0.2

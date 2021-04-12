@@ -1,8 +1,10 @@
 /// @function iterator_destroy(iterator)
 function iterator_destroy(Target_iterator) { Target_iterator._Data = 0; delete Target_iterator }
 
+
 /// @function container_destroy(container)
 function container_destroy(Container) { Container._Data = 0; delete Container }
+
 
 /// @function Iterator(container)
 function Iterator(Parent) constructor {
@@ -63,6 +65,7 @@ function Iterator(Parent) constructor {
 	_Index = 0
 	_Serial_number = Parent._Serial_number
 }
+
 
 /// @function List
 function List() constructor {

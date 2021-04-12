@@ -1,2 +1,2 @@
 /// @description Update
-menu_mode_update()
+menu_mode_update(mode)
