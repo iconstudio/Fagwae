@@ -1,1 +1,0 @@
-/// @description Draw the cover
