@@ -55,13 +55,8 @@ keyboard_set_map(vk_numpad8, vk_down)
 keyboard_set_map(vk_numpad5, vk_enter)
 
 // UI
-#macro GUI_W 640
-#macro GUI_H 960
-
-enum MENU_TRANS {
-	OPEN = 0,
-	CLOSE = 1
-}
+#macro SCREEN_W 640
+#macro SCREEN_H 960
 
 // game
 global.px = 0

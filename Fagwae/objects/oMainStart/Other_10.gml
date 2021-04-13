@@ -10,7 +10,7 @@ draw_transition = function() {
 			draw_transform_add_rotation_x(xangle)
 			draw_transform_add_translation(dx + x, dy + y, 0)
 			draw_transform_add_translation(0, bbox_top, 0)
-			draw_sprite_ext(sMainStartFrame, image_index, 0, 0, 1, 1, 0, $ffffff, image_alpha)
+			draw_sprite_ext(sMainStart, image_index, 0, 0, 1, 1, 0, $ffffff, image_alpha)
 			draw_transform_set_identity()
 		}
 	})

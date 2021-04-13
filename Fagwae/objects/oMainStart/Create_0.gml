@@ -53,12 +53,12 @@ draw_parts = function() {
 	part_coords.foreach_all(function(part) {
 		var dx = other.x, dy = other.y
 		with part
-			draw_sprite_ext(sMainStartFrame, image_index, dx + x, dy + y, 1, 1, 0, $ffffff, image_alpha)
+			draw_sprite_ext(sMainStart, image_index, dx + x, dy + y, 1, 1, 0, $ffffff, image_alpha)
 	})
 }
 
 draw_complete = function() {
-	draw_sprite_ext(sMainStartFrame, 25, x, y, 1, 1, 0, $ffffff, 1)
+	draw_sprite_ext(sMainStart, 25, x, y, 1, 1, 0, $ffffff, 1)
 }
 
 event_inherited()
