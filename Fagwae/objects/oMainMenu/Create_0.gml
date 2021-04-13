@@ -9,11 +9,11 @@ sub_state_normal.set_initializer(function() {
 
 sub_state_fadeout = new menu_state()
 sub_state_fadeout.caption = "main-sub-general-fadeout"
-sub_state_fadeout.set_next(sub_state_normal)
+sub_state_fadeout.set_next(null)
 
 
 sub_state_fadein = new menu_state()
-sub_state_fadein.caption = "main-sub-general-fadeout"
+sub_state_fadein.caption = "main-sub-general-fadein"
 sub_state_fadein.set_next(sub_state_normal)
 
 
