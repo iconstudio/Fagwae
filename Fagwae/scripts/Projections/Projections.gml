@@ -106,14 +106,15 @@ function draw_transform_stack_pop() {
 
 /// @function draw_projection_identity()
 function draw_projection_identity() {
-	var ww = GUI_W
-	var hh = GUI_H
+	var ww = SCREEN_W
+	var hh = SCREEN_H
 	var mV = matrix_build_lookat(ww * 0.5, hh * 0.5, -hh, ww * 0.5, hh * 0.5, 0, 0, 1, 0)
 	var mP = matrix_build_projection_ortho(ww, hh, 1, 32000)
+	var cam = camera_get_active()
 
-	camera_set_view_mat(camera_get_active(), mV)
-	camera_set_proj_mat(camera_get_active(), mP)
-	camera_apply(camera_get_active())
+	camera_set_view_mat(cam, mV)
+	camera_set_proj_mat(cam, mP)
+	camera_apply(cam)
 }
 
 
