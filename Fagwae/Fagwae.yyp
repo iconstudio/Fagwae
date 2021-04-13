@@ -10,6 +10,7 @@
     {"id":{"name":"Making a cog","path":"notes/Making a cog/Making a cog.yy",},"order":7,},
     {"id":{"name":"MersenneTwister","path":"scripts/MersenneTwister/MersenneTwister.yy",},"order":5,},
     {"id":{"name":"Utilities","path":"scripts/Utilities/Utilities.yy",},"order":1,},
+    {"id":{"name":"seqMainExit","path":"sequences/seqMainExit/seqMainExit.yy",},"order":11,},
     {"id":{"name":"oPlayer_1","path":"objects/oPlayer_1/oPlayer_1.yy",},"order":0,},
     {"id":{"name":"sMainStartFrameIntro","path":"sprites/sMainStartFrameIntro/sMainStartFrameIntro.yy",},"order":6,},
     {"id":{"name":"roomMain","path":"rooms/roomMain/roomMain.yy",},"order":3,},
