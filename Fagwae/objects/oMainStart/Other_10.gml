@@ -16,7 +16,9 @@ draw_transition = function() {
 	})
 }
 
+
 sub_state_normal.set_drawer(draw_complete)
+
 
 sub_state_close_2 = new menu_state()
 sub_state_close_2.caption = "main-sub-start-close"
@@ -48,6 +50,7 @@ sub_state_close_2.set_callback(function() {
 	shuffle_parts()
 })
 sub_state_close_2.set_drawer(draw_transition)
+
 
 sub_state_close_1 = new menu_state()
 sub_state_close_1.caption = "main-sub-start-close"
@@ -81,6 +84,7 @@ sub_state_close_1.set_callback(function() {
 })
 sub_state_close_1.set_drawer(draw_transition)
 
+
 sub_state_open_2 = new menu_state()
 sub_state_open_2.caption = "main-sub-start-open-2"
 sub_state_open_2.set_duration(1.2)
@@ -112,6 +116,7 @@ sub_state_open_2.set_callback(function() {
 })
 sub_state_open_2.set_drawer(draw_transition)
 
+
 sub_state_open_1 = new menu_state()
 sub_state_open_1.caption = "main-sub-start-open-1"
 sub_state_open_1.set_duration(0.95)
@@ -142,6 +147,7 @@ sub_state_open_1.set_callback(function() {
 	y = open_y
 })
 sub_state_open_1.set_drawer(draw_transition)
+
 
 sub_state_intro = new menu_state()
 sub_state_intro.caption = "main-sub-start-intro"
@@ -190,6 +196,7 @@ sub_state_intro.set_drawer(function() {
 	// draw frags
 	draw_parts()
 })
+
 
 mode_enter = sub_state_intro
 __callback_open = sub_state_open_1

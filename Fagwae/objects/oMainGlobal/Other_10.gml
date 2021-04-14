@@ -88,6 +88,7 @@ MAIN_STATE_FADEOUT_DONE.set_updater(function() {
 	check_menu_inputs()
 })
 
+
 MAIN_STATE_FADEOUT = new menu_state()
 MAIN_STATE_FADEOUT.set_duration(2.1)
 MAIN_STATE_FADEOUT.set_next(MAIN_STATE_FADEOUT_DONE)
