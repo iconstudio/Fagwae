@@ -1,11 +1,32 @@
 /// @description Create menu status
-sub_state_normal.set_drawer(function() {
-	
+sub_state_normal.set_initializer(function() {
+	//var before = sq_element
+	//sq_element = layer_sequence_create(lyr_interface, 640, 960, seqMainExit)
+	//layer_sequence_play(sq_element)
+	//layer_background_destroy(before)
 })
 
 
 sub_state_exit = new menu_state()
 sub_state_exit.caption = "main-sub-start-exit"
+
+
+sub_state_fadeout.set_duration(0.9)
+sub_state_fadeout.set_initializer(function() {
+	var before = sq_element
+	sq_element = layer_sequence_create(lyr_interface, 640, 960, seqMainExitIntroFadeout)
+	layer_sequence_play(sq_element)
+	layer_background_destroy(before)
+})
+
+
+sub_state_fadein.set_duration(0.9)
+sub_state_fadein.set_initializer(function() {
+	var before = sq_element
+	sq_element = layer_sequence_create(lyr_interface, 640, 960, seqMainExitIntroFadein)
+	layer_sequence_play(sq_element)
+	layer_background_destroy(before)
+})
 
 
 sub_state_close_2 = new menu_state()

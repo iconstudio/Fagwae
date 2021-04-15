@@ -2,11 +2,11 @@
   "spriteId": null,
   "timeUnits": 1,
   "playback": 0,
-  "playbackSpeed": 150.0,
+  "playbackSpeed": 100.0,
   "playbackSpeedType": 0,
   "autoRecord": true,
   "volume": 1.0,
-  "length": 140.0,
+  "length": 90.0,
   "events": {
     "Keyframes": [],
     "resourceVersion": "1.0",
@@ -59,7 +59,29 @@
                       {"id":"d829d643-ed4e-403c-813c-af274c0b5c1f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"EmbeddedAnimCurve":null,"RealValue":21.0,"AnimCurveId":null,"resourceVersion":"1.0","resourceType":"RealKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<RealKeyframe>",},
                     ],"resourceVersion":"1.0","resourceType":"KeyframeStore<RealKeyframe>",},"trackColour":4294092104,"inheritsTrackColour":true,"builtinName":8,"traits":0,"interpolation":0,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","name":"rotation","tags":[],"resourceType":"GMRealTrack",},
                 {"keyframes":{"Keyframes":[
-                      {"id":"a52b2cd1-7860-4748-bad6-89205a03162f","Key":0.0,"Length":140.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"EmbeddedAnimCurve":null,"RealValue":0.0,"AnimCurveId":{"name":"amcMainExitIntro","path":"animcurves/amcMainExitIntro/amcMainExitIntro.yy",},"resourceVersion":"1.0","resourceType":"RealKeyframe",},"1":{"EmbeddedAnimCurve":null,"RealValue":0.0,"AnimCurveId":{"name":"amcMainExitIntro","path":"animcurves/amcMainExitIntro/amcMainExitIntro.yy",},"resourceVersion":"1.0","resourceType":"RealKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<RealKeyframe>",},
+                      {"id":"debcd765-108c-4605-bb8c-37356caea1d7","Key":0.0,"Length":140.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"EmbeddedAnimCurve":{"function":1,"channels":[
+                                {"colour":4290799884,"visible":true,"points":[
+                                    {"th0":-0.25,"th1":0.00383138657,"tv0":0.0,"tv1":0.0,"x":0.0,"y":28.5,},
+                                    {"th0":-0.310344815,"th1":0.25,"tv0":0.0,"tv1":0.0,"x":1.0,"y":28.513,},
+                                  ],"resourceVersion":"1.0","name":"xscale","tags":[],"resourceType":"GMAnimCurveChannel",},
+                                {"colour":4281083598,"visible":true,"points":[
+                                    {"th0":-0.1,"th1":0.1,"tv0":0.0,"tv1":0.0,"x":0.0,"y":13.74,},
+                                    {"th0":1.0,"th1":-1.0,"tv0":0.0,"tv1":0.0,"x":0.279939234,"y":14.7910128,},
+                                    {"th0":1.0,"th1":-1.0,"tv0":0.0,"tv1":0.0,"x":0.54180944,"y":25.56484,},
+                                    {"th0":-0.1,"th1":0.1,"tv0":0.0,"tv1":0.0,"x":1.0,"y":24.5945835,},
+                                  ],"resourceVersion":"1.0","name":"yscale","tags":[],"resourceType":"GMAnimCurveChannel",},
+                              ],"parent":{"name":"scale","path":"sequences/seqMainExitIntroFadeout/seqMainExitIntroFadeout.yy",},"resourceVersion":"1.2","name":null,"tags":[],"resourceType":"GMAnimCurve",},"RealValue":0.0,"AnimCurveId":null,"resourceVersion":"1.0","resourceType":"RealKeyframe",},"1":{"EmbeddedAnimCurve":{"function":1,"channels":[
+                                {"colour":4290799884,"visible":true,"points":[
+                                    {"th0":-0.25,"th1":0.00383138657,"tv0":0.0,"tv1":0.0,"x":0.0,"y":28.5,},
+                                    {"th0":-0.310344815,"th1":0.25,"tv0":0.0,"tv1":0.0,"x":1.0,"y":28.513,},
+                                  ],"resourceVersion":"1.0","name":"xscale","tags":[],"resourceType":"GMAnimCurveChannel",},
+                                {"colour":4281083598,"visible":true,"points":[
+                                    {"th0":-0.1,"th1":0.1,"tv0":0.0,"tv1":0.0,"x":0.0,"y":13.74,},
+                                    {"th0":1.0,"th1":-1.0,"tv0":0.0,"tv1":0.0,"x":0.279939234,"y":14.7910128,},
+                                    {"th0":1.0,"th1":-1.0,"tv0":0.0,"tv1":0.0,"x":0.54180944,"y":25.56484,},
+                                    {"th0":-0.1,"th1":0.1,"tv0":0.0,"tv1":0.0,"x":1.0,"y":24.5945835,},
+                                  ],"resourceVersion":"1.0","name":"yscale","tags":[],"resourceType":"GMAnimCurveChannel",},
+                              ],"parent":{"name":"scale","path":"sequences/seqMainExitIntroFadeout/seqMainExitIntroFadeout.yy",},"resourceVersion":"1.2","name":null,"tags":[],"resourceType":"GMAnimCurve",},"RealValue":0.0,"AnimCurveId":null,"resourceVersion":"1.0","resourceType":"RealKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<RealKeyframe>",},
                     ],"resourceVersion":"1.0","resourceType":"KeyframeStore<RealKeyframe>",},"trackColour":4294092104,"inheritsTrackColour":true,"builtinName":15,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","name":"scale","tags":[],"resourceType":"GMRealTrack",},
               ],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","name":"Cover","tags":[],"resourceType":"GMGraphicTrack",},
             {"keyframes":{"Keyframes":[
@@ -127,7 +149,7 @@
     "path": "folders/System/Main Screen.yy",
   },
   "resourceVersion": "1.3",
-  "name": "seqMainExitIntro",
+  "name": "seqMainExitIntroFadeout",
   "tags": [],
   "resourceType": "GMSequence",
 }

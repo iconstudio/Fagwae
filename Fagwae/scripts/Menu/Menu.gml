@@ -106,6 +106,12 @@ function menu_state() constructor {
 	static set_callback = function(callable) {
 		callback = method(other, callable)
 	}
+
+	///@function finish()
+	static finish = function() {
+		time = period
+		menu_mode_change(next)
+	}
 }
 
 ///@function menu_mode_change(mode)
@@ -119,6 +125,7 @@ function menu_mode_change(newmode) { print(newmode)
 
 		if !is_null(newmode) {
 			newmode.time = 0
+			mode_ratio = 0
 			if !is_null(newmode.init)
 				newmode.init()
 		}

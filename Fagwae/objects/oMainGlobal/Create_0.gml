@@ -17,7 +17,7 @@ main_items.push_back(main_exit)
 
 child_choice = null
 child_focus = main_start
-
+/*
 layer_script_begin(lyr_interface, function() {
 	if event_type == ev_draw {
 		if event_number == 0 { 
@@ -38,7 +38,7 @@ layer_script_end(lyr_interface, function() {
 		}
 	}
 })
-
+*/
 arrow_current = NONE
 arrow_hr_key_anchor = 0
 arrow_vt_key_anchor = 0
