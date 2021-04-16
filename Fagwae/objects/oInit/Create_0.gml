@@ -12,7 +12,10 @@
 #macro DOWN 1
 
 // external
+#macro PROFILE_COUNT_DEF 2
+#macro PROFILE_COUNT_PAID 4
 global.PROFILE = "profile.dat"
+global.profile_count = PROFILE_COUNT_DEF
 
 // flags
 global.flag_is_pc = (os_type == os_windows or os_type == os_macosx or os_type == os_linux or os_type == os_win8native)

@@ -2,9 +2,13 @@ function Menu() {
 	this.caption = "Default menu item"
 
 	// Properties
+	this.children = new List()
 	this.child_focus = null
 	this.child_choice = null
-	this.__children = new List()
+	this.child_first = null
+	this.child_last = null
+	this.next = null
+	this.before = null
 
 	this.__callback_open = null
 	this.__callback_close = null
@@ -22,14 +26,9 @@ function Menu() {
 		return caption
 	}
 
-	///@function child_run(predicate)
-	this.child_run = function(predicate) {
-		__children.foreach_all(predicate)
-	}
-
 	///@function get_size()
 	this.get_size = function() {
-		return __children.get_size()
+		return children.get_size()
 	}
 
 	///@function do_open()
@@ -51,7 +50,7 @@ function Menu() {
 
 	///@function focus_index(index)
 	this.focus_index = function(index) {
-		focus_child(__children.at(index))
+		focus_child(children.at(index))
 	}
 
 	///@function get_focus()
@@ -149,7 +148,7 @@ function menu_mode_update(mode) {
 				mode.time = mode.period
 		} else {
 			if !is_null(mode.next)
-				menu_mode_change(mode.next)
+				mode.finish()
 		}
 	}
 }
@@ -164,7 +163,7 @@ function menu_mode_draw() {
 
 
 function add_menu_item(object) {
-	__children.push_back(object)
+	children.push_back(object)
 	if is_struct(this)
 		object.parent = this
 	else

@@ -63,4 +63,4 @@ draw_complete = function() {
 
 event_inherited()
 
-__children.push_back(0)
+children.push_back(0)

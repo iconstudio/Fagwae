@@ -34,7 +34,9 @@ check_menu_inputs = function() {
 
 	// move the menu context
 	if arrow_current != NONE {
-	
+		if is_null(child_choice) {
+			
+		}
 	}
 
 	//io_r_left = global.key_left.check_released()
@@ -109,3 +111,12 @@ MAIN_STATE_EXIT.set_callback(function() {
 
 mode = null
 mode_ratio = 0
+
+
+lyr_interface = layer_get_id("interface")
+add_main_entry = function(mnobj, ox, oy) {
+	var Result = instance_create_layer(ox, oy, lyr_interface, mnobj)
+	Result.parent = id
+	main_items.push_back(Result)
+	return Result
+}

@@ -3,17 +3,11 @@ global.main_surface = -1
 
 event_user(0)
 
-lyr_interface = layer_get_id("interface")
 main_items = new List()
-main_start = instance_create_layer(441, 492, lyr_interface, oMainStart)
-main_start.parent = id
+main_start = add_main_entry(oMainStart, 441, 492)
 main_trophy = null
 main_setting = null
-main_exit = instance_create_layer(640, 960, lyr_interface, oMainExit)
-main_exit.parent = id
-
-main_items.push_back(main_start)
-main_items.push_back(main_exit)
+main_exit = add_main_entry(oMainExit, 640, 960)
 
 child_choice = null
 child_focus = main_start
