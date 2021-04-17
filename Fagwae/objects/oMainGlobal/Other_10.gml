@@ -33,9 +33,13 @@ check_menu_inputs = function() {
 	}
 
 	// move the menu context
-	if arrow_current != NONE {
+	if arrow_current != NONE and !is_null(child_focus) {
 		if is_null(child_choice) {
-			
+			if arrow_current == LEFT {
+				
+			} elif arrow_current == RIGHT {
+				
+			}
 		}
 	}
 
@@ -68,15 +72,15 @@ menu_fadein = function() {
 }
 
 
-MAIN_STATE_NORMAL = new menu_state()
-MAIN_STATE_NORMAL.set_updater(function() {
+main_state_idle = new menu_state()
+main_state_idle.set_updater(function() {
 	check_menu_inputs()
 })
 
 
-MAIN_STATE_INTRO = new menu_state()
-MAIN_STATE_INTRO.set_next(MAIN_STATE_NORMAL)
-MAIN_STATE_INTRO.set_updater(function() {
+main_state_intro = new menu_state()
+main_state_intro.set_next(main_state_idle)
+main_state_intro.set_updater(function() {
 	main_items.foreach_all(function(child) {
 		with child
 			menu_mode_change(mode_enter)
@@ -84,33 +88,27 @@ MAIN_STATE_INTRO.set_updater(function() {
 })
 
 
-MAIN_STATE_FADEOUT_DONE = new menu_state()
-MAIN_STATE_FADEOUT_DONE.set_duration(1.5)
-MAIN_STATE_FADEOUT_DONE.set_updater(function() {
+main_state_dimmed = new menu_state()
+main_state_dimmed.set_duration(1.5)
+main_state_dimmed.set_updater(function() {
 	check_menu_inputs()
 })
 
 
-MAIN_STATE_FADEOUT = new menu_state()
-MAIN_STATE_FADEOUT.set_duration(2.1)
-MAIN_STATE_FADEOUT.set_next(MAIN_STATE_FADEOUT_DONE)
+main_state_fadeout = new menu_state()
+main_state_fadeout.set_duration(2.1)
+main_state_fadeout.set_next(main_state_dimmed)
 
 
-MAIN_STATE_FADEIN = new menu_state()
-MAIN_STATE_FADEIN.set_duration(1.2)
-MAIN_STATE_FADEIN.set_next(MAIN_STATE_NORMAL)
+main_state_fadein = new menu_state()
+main_state_fadein.set_duration(1.2)
+main_state_fadein.set_next(main_state_idle)
 
 
-MAIN_STATE_EXIT = new menu_state()
-MAIN_STATE_EXIT.set_duration(1.6)
-MAIN_STATE_EXIT.set_initializer(menu_fadeout)
-MAIN_STATE_EXIT.set_callback(function() {
-	game_end()
-})
-
-
-mode = null
-mode_ratio = 0
+main_state_exit = new menu_state()
+main_state_exit.set_duration(1.6)
+main_state_exit.set_initializer(menu_fadeout)
+main_state_exit.set_callback(game_end)
 
 
 lyr_interface = layer_get_id("interface")

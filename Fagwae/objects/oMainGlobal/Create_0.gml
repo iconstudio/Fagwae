@@ -1,3 +1,6 @@
+Menu()
+
+caption = "Main Menu"
 global.main_menu = id
 global.main_surface = -1
 
@@ -9,8 +12,8 @@ main_trophy = null
 main_setting = null
 main_exit = add_main_entry(oMainExit, 640, 960)
 
-child_choice = null
 child_focus = main_start
+
 /*
 layer_script_begin(lyr_interface, function() {
 	if event_type == ev_draw {
@@ -42,12 +45,14 @@ io_r_right = false
 io_r_up = false
 io_r_down = false
 
+
 repetive = {
 	key: null,
 	time: 0,
 	duration_short: 0.13,
 	duration_long: 1
 }
+
 
 function key_repeat(key) {
 	if is_null(key) {
@@ -58,13 +63,14 @@ function key_repeat(key) {
 
 	if repetive.key != key {
 		repetive.key = key
-		repetive.time = duration_long
+		repetive.time = repetive.duration_long
 		return true
 	}
 	return false
 }
 
+
 draw_set_color($ffffff)
 draw_set_font(fontMainMenuEntry)
 
-menu_mode_change(MAIN_STATE_INTRO)
+menu_mode_change(main_state_intro)

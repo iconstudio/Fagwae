@@ -7,7 +7,7 @@ if is_null(cur.child_choice) {
 	menu_fadein()
 	child_choice = null
 	cur.do_close()
-	menu_mode_change(MAIN_STATE_FADEIN)
+	menu_mode_change(main_state_fadein)
 } else {
 	var subchild = null, picked = null
 }

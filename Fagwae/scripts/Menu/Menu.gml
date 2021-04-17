@@ -7,51 +7,34 @@ function Menu() {
 	this.child_choice = null
 	this.child_first = null
 	this.child_last = null
-	this.next = null
-	this.before = null
-
-	this.__callback_open = null
-	this.__callback_close = null
 
 	this.mode_enter = null
 	this.mode = null
 	this.mode_ratio = 0
-	this.transitioning = false
-	this.focus_time = 0
-	this.focus_period = 1
-	this.unfocus_time = 0
-	this.unfocus_period = 1
+
 
 	this.toString = function() {
 		return caption
 	}
+
 
 	///@function get_size()
 	this.get_size = function() {
 		return children.get_size()
 	}
 
-	///@function do_open()
-	this.do_open = function() {
-		if !is_null(__callback_open) and not transitioning
-			menu_mode_change(__callback_open)
-	}
-
-	///@function do_close()
-	this.do_close = function() {
-		if !is_null(__callback_close) and not transitioning
-			menu_mode_change(__callback_close)
-	}
 
 	///@function focus_child(child)
 	this.focus_child = function(child) {
 		child_focus = child
 	}
 
+
 	///@function focus_index(index)
 	this.focus_index = function(index) {
 		focus_child(children.at(index))
 	}
+
 
 	///@function get_focus()
 	this.get_focus = function() {
@@ -76,35 +59,42 @@ function menu_state() constructor {
 		return caption
 	}
 
+
 	///@function set_duration(time)
 	static set_duration = function(time) {
 		period = time
 	}
+
 
 	///@function set_next(state)
 	static set_next = function(state) {
 		next = state
 	}
 
+
 	///@function set_initializer(function)
 	static set_initializer = function(callable) {
 		init = method(other, callable)
 	}
+
 
 	///@function set_updater(function)
 	static set_updater = function(callable) {
 		update = method(other, callable)
 	}
 
+
 	///@function set_drawer(function)
 	static set_drawer = function(callable) {
 		draw = method(other, callable)
 	}
 
+
 	///@function set_callback(function)
 	static set_callback = function(callable) {
 		callback = method(other, callable)
 	}
+
 
 	///@function finish()
 	static finish = function() {
@@ -112,6 +102,7 @@ function menu_state() constructor {
 		menu_mode_change(next)
 	}
 }
+
 
 ///@function menu_mode_change(mode)
 function menu_mode_change(newmode) { print(newmode)
@@ -148,7 +139,7 @@ function menu_mode_update(mode) {
 				mode.time = mode.period
 		} else {
 			if !is_null(mode.next)
-				mode.finish()
+				menu_mode_change(mode.next)
 		}
 	}
 }
