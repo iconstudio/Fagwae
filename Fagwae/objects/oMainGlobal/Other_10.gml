@@ -35,10 +35,24 @@ check_menu_inputs = function() {
 	// move the menu context
 	if arrow_current != NONE and !is_null(child_focus) {
 		if is_null(child_choice) {
-			if arrow_current == LEFT {
-				
-			} elif arrow_current == RIGHT {
-				
+			var Go = null, Prior = get_focus()
+
+			if is_null(Prior) {
+				//
+			} else {
+				if arrow_current == LEFT {
+					Go = child_focus.before
+					if Go == child_first
+						repetive.stop()
+				} elif arrow_current == RIGHT {
+					Go = child_focus.next
+					if Go == child_last
+						repetive.stop()
+				}
+			}
+
+			if Go != null {
+				focus_child(Go)
 			}
 		}
 	}
@@ -57,7 +71,7 @@ check_menu_inputs = function() {
 
 
 menu_fadeout = function() {
-	main_items.foreach_all(function(child) {
+	menu_child_execute(function(child) {
 		with child
 			menu_mode_change(sub_state_fadeout)
 	})
@@ -65,7 +79,7 @@ menu_fadeout = function() {
 
 
 menu_fadein = function() {
-	main_items.foreach_all(function(child) {
+	menu_child_execute(function(child) {
 		with child
 			menu_mode_change(sub_state_fadein)
 	})
@@ -81,7 +95,7 @@ main_state_idle.set_updater(function() {
 main_state_intro = new menu_state()
 main_state_intro.set_next(main_state_idle)
 main_state_intro.set_updater(function() {
-	main_items.foreach_all(function(child) {
+	menu_child_execute(function(child) {
 		with child
 			menu_mode_change(mode_enter)
 	})
@@ -112,9 +126,7 @@ main_state_exit.set_callback(game_end)
 
 
 lyr_interface = layer_get_id("interface")
+
 add_main_entry = function(mnobj, ox, oy) {
-	var Result = instance_create_layer(ox, oy, lyr_interface, mnobj)
-	Result.parent = id
-	main_items.push_back(Result)
-	return Result
+	return menu_child_add(instance_create_layer(ox, oy, lyr_interface, mnobj))
 }

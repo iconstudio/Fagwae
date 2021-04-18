@@ -6,13 +6,12 @@ global.main_surface = -1
 
 event_user(0)
 
-main_items = new List()
 main_start = add_main_entry(oMainStart, 441, 492)
 main_trophy = null
 main_setting = null
 main_exit = add_main_entry(oMainExit, 640, 960)
 
-child_focus = main_start
+focus_child(main_start)
 
 /*
 layer_script_begin(lyr_interface, function() {
@@ -50,14 +49,18 @@ repetive = {
 	key: null,
 	time: 0,
 	duration_short: 0.13,
-	duration_long: 1
+	duration_long: 1,
+
+	stop: function() {
+		key = null
+		time = 0
+	}
 }
 
 
 function key_repeat(key) {
 	if is_null(key) {
-		repetive.key = null
-		repetive.time = 0
+		repetive.stop()
 		return false
 	}
 

@@ -18,6 +18,30 @@ function Menu() {
 	}
 
 
+	///@function menu_child_add(entity)
+	this.menu_child_add = function(entity) {
+		entity.parent = id
+		children.push_back(entity)
+
+		if is_null(child_first) {
+			child_first = entity
+			child_last = entity
+		} else {
+			child_first.before = entity
+			child_last.next = entity
+			child_last = entity
+		}
+		
+		return entity
+	}
+
+
+	///@function menu_child_execute(function)
+	this.menu_child_execute = function(callable) {
+		children.foreach_all(callable)
+	}
+
+
 	///@function get_size()
 	this.get_size = function() {
 		return children.get_size()
