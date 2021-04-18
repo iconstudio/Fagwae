@@ -1,7 +1,7 @@
 {
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "System",
+    "path": "folders/System.yy",
   },
   "resourceVersion": "1.1",
   "name": "Storyline",

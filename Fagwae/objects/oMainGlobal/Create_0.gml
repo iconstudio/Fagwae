@@ -6,35 +6,13 @@ global.main_surface = -1
 
 event_user(0)
 
-main_start = add_main_entry(oMainStart, 441, 492)
+main_start = null //add_main_entry(oMainStart, 441, 492)
 main_trophy = null
 main_setting = null
-main_exit = add_main_entry(oMainExit, 640, 960)
+main_exit = null//add_main_entry(oMainExit, 640, 960)
 
-focus_child(main_start)
+//focus_child(main_start)
 
-/*
-layer_script_begin(lyr_interface, function() {
-	if event_type == ev_draw {
-		if event_number == 0 { 
-			if !surface_exists(global.main_surface) {
-				global.main_surface = surface_create(SCREEN_W, SCREEN_H)
-			}
-
-			surface_set_target(global.main_surface)
-			draw_clear_alpha(0, 1)
-		}
-	}
-})
-
-layer_script_end(lyr_interface, function() {
-	if event_type == ev_draw {
-		if event_number == 0 { 
-			surface_reset_target()
-		}
-	}
-})
-*/
 arrow_current = NONE
 arrow_hr_key_anchor = 0
 arrow_vt_key_anchor = 0

@@ -17,8 +17,8 @@
   "width": 39,
   "height": 40,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "texgrp_game",
+    "path": "texturegroups/texgrp_game",
   },
   "swatchColours": null,
   "gridX": 0,
