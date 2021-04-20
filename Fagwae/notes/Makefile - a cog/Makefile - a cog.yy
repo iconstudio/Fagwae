@@ -1,10 +1,10 @@
 {
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "Notes",
+    "path": "folders/Notes.yy",
   },
   "resourceVersion": "1.1",
-  "name": "Making a cog",
+  "name": "Makefile - a cog",
   "tags": [],
   "resourceType": "GMNotes",
 }

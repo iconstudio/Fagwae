@@ -4,7 +4,8 @@
 #macro is_null is_undefined
 #macro elif else if
 #macro this self
-#macro Delta delta_time * 0.000001
+global.__delta = 0
+#macro Delta global.__delta
 #macro NONE 0
 #macro RIGHT 1
 #macro LEFT -1

@@ -16,3 +16,5 @@ global.io_p_up = global.key_up.check_pressed()
 global.io_p_down = global.key_down.check_pressed()
 global.io_p_confirm = global.key_confirm.check_pressed()
 global.io_p_back = global.key_back.check_pressed()
+
+global.__delta = delta_time * 0.000001

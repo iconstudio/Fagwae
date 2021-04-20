@@ -1,18 +1,28 @@
 /// @function seconds(time)
 function seconds(Time) {
-	return (Time) * 100
+	return Time * room_speed
 }
+
+
+/// @function realforce(speed)
+function realforce(Speed) {
+	return Speed / room_speed
+}
+
 
 /// @function duet
 function duet(condition, value_true, value_false) {
 	return condition ? value_true : value_false
 }
 
+
 /// @function compare_equal(a, b)
 function compare_equal(A, B) { return (A == B) }
 
+
 /// @function compare_less(a, b)
 function compare_less(A, B) { return (A < B) }
+
 
 /// @function string_split(string, seperator)
 function string_split(String, Seperator) {
@@ -32,6 +42,7 @@ function string_split(String, Seperator) {
 
 	return result
 }
+
 
 globalvar ease;
 ease = new (function() constructor {
@@ -113,6 +124,7 @@ ease = new (function() constructor {
 	function inout_bounce(x) { return (x < 0.5)? (0.5 - out_bounce(1 - 2 * x) * 0.5): (0.5 + out_bounce(2 * x - 1) * 0.5) }
 })()
 
+
 /// @returm Copy of the given struct/array, including a copy of any nested structs and arrays
 /// 
 /// This function is designed to copy simple tree-like structures that have been imported from 
@@ -120,10 +132,10 @@ ease = new (function() constructor {
 /// @param struct/array   The struct/array to be copied
 /// 
 /// @jujuadams 2021-02-14 : https://github.com/JujuAdams/SNAP
-function snap_deep_copy(_value)
-{
+function snap_deep_copy(_value) {
     return (new __snap_deep_copy(_value)).copy;
 }
+
 
 /// @function 
 function __snap_deep_copy(_value) constructor

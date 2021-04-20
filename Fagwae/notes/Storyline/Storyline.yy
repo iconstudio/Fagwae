@@ -1,7 +1,7 @@
 {
   "parent": {
-    "name": "System",
-    "path": "folders/System.yy",
+    "name": "Notes",
+    "path": "folders/Notes.yy",
   },
   "resourceVersion": "1.1",
   "name": "Storyline",

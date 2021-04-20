@@ -7,3 +7,5 @@ if ratio == 1 {
 } else {
 	camera_set_view_size(cam, SCREEN_W * ratio, SCREEN_H * ratio)
 }
+
+global.__delta = delta_time * 0.000001

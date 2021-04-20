@@ -4,7 +4,7 @@
     "path": "folders/Notes.yy",
   },
   "resourceVersion": "1.1",
-  "name": "TODO - 인앱 결제",
+  "name": "Makefile - player aura",
   "tags": [],
   "resourceType": "GMNotes",
 }

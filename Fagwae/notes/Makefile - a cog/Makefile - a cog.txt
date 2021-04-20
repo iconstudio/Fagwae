@@ -1,0 +1,13 @@
+
+test_surface = surface_create(640, 640)
+surface_set_target(test_surface)
+draw_clear(0)
+var vertex_num = 10
+var vertex_angle = 360 / vertex_num
+
+draw_set_color($ffffff)
+for (var i = 0; i < vertex_num; ++i) {
+	draw_sprite_ext(sPlayerAuraFan, 0, 320, 320, 1, 1, vertex_angle * i, $ffffff, 1)
+}
+surface_reset_target()
+surface_save(test_surface, "E:\\yoyof\\Programming\\Fagwae\\cog.png")
