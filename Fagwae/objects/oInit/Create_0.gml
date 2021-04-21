@@ -45,8 +45,19 @@ gpu_set_texfilter(false)
 gpu_set_cullmode(cull_noculling)
 draw_set_circle_precision(96)
 if !shaders_are_supported() {
-	show_debug_message("Shader is not supported.")
+	throw ("Shader is not supported.")
 }
+
+global.wave_uniform_time = shader_get_uniform(shaderShockwave, "time")
+global.wave_uniform_pos = shader_get_uniform(shaderShockwave, "mouse_pos")
+global.wave_uniform_resolution = shader_get_uniform(shaderShockwave, "resolution")
+
+// 파도 안에 비치는 상들의 흔들리는 정도
+global.wave_uniform_amplitude = shader_get_uniform(shaderShockwave, "shock_amplitude")
+// 파도 안에 비치는 상들의 왜곡도
+global.wave_uniform_refraction = shader_get_uniform(shaderShockwave, "shock_refraction")
+// 파도의 너비
+global.wave_uniform_size = shader_get_uniform(shaderShockwave, "shock_width")
 
 // UX
 device_mouse_dbclick_enable(false)

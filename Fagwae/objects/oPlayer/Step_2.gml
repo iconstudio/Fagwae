@@ -25,10 +25,12 @@ global.px = x
 global.py = y
 
 
-arm_left.x = x - arm_x
-arm_left.y = y + arm_y
-arm_right.x = x + arm_x
-arm_right.y = y + arm_y
+var out_ax = lengthdir_x(17, img_angle)
+var out_ay = lengthdir_y(17, img_angle)
+arm_left.x = x - out_ax
+arm_left.y = y + 3 + out_ay
+arm_right.x = x + out_ax
+arm_right.y = y + 3 - out_ay
 
 
 if !is_null(hp_aura_seq) {
