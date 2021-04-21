@@ -25,8 +25,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Game",
-    "path": "folders/Game.yy",
+    "name": "Effect",
+    "path": "folders/Game/Effect.yy",
   },
   "resourceVersion": "1.0",
   "name": "oWave",

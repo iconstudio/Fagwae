@@ -32,7 +32,7 @@ with arm_right {
 
 
 aura_layer = layer_get_id("player_effect_below")
-hp_aura_seq = null //layer_sequence_create(aura_layer, x, y, seqPlayerAura)
+hp_aura_seq = null//layer_sequence_create(aura_layer, x, y, seqPlayerAura)
 
 
 border_h_0 = 29
@@ -44,5 +44,3 @@ border_v_1 = room_height - 22
 global.px = x
 global.py = y
 
-
-alarm[0] = 60
