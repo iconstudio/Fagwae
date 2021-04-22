@@ -1,6 +1,6 @@
 {
   "resources": [
-    {"id":{"name":"sPlayerShield","path":"sprites/sPlayerShield/sPlayerShield.yy",},"order":9,},
+    {"id":{"name":"_sPlayerShield","path":"sprites/_sPlayerShield/_sPlayerShield.yy",},"order":9,},
     {"id":{"name":"ObjectChain","path":"scripts/ObjectChain/ObjectChain.yy",},"order":5,},
     {"id":{"name":"sPlayerMask","path":"sprites/sPlayerMask/sPlayerMask.yy",},"order":6,},
     {"id":{"name":"oPlayerShield","path":"objects/oPlayerShield/oPlayerShield.yy",},"order":4,},
@@ -17,7 +17,7 @@
     {"id":{"name":"oPlayerShieldMask","path":"sprites/oPlayerShieldMask/oPlayerShieldMask.yy",},"order":10,},
     {"id":{"name":"MersenneTwister","path":"scripts/MersenneTwister/MersenneTwister.yy",},"order":7,},
     {"id":{"name":"Utilities","path":"scripts/Utilities/Utilities.yy",},"order":2,},
-    {"id":{"name":"sPlayerAuraFan","path":"sprites/sPlayerAuraFan/sPlayerAuraFan.yy",},"order":12,},
+    {"id":{"name":"sPlayerAuraFan","path":"sprites/sPlayerAuraFan/sPlayerAuraFan.yy",},"order":11,},
     {"id":{"name":"seqMainExitIntro","path":"sequences/seqMainExitIntro/seqMainExitIntro.yy",},"order":8,},
     {"id":{"name":"amcMainExitIntro","path":"animcurves/amcMainExitIntro/amcMainExitIntro.yy",},"order":6,},
     {"id":{"name":"roomMain","path":"rooms/roomMain/roomMain.yy",},"order":3,},
@@ -64,7 +64,7 @@
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"order":7,},
     {"id":{"name":"oPlayerBullet","path":"objects/oPlayerBullet/oPlayerBullet.yy",},"order":3,},
     {"id":{"name":"sLoadingTitleFlips","path":"sprites/sLoadingTitleFlips/sLoadingTitleFlips.yy",},"order":3,},
-    {"id":{"name":"seqPlayerShield","path":"sequences/seqPlayerShield/seqPlayerShield.yy",},"order":11,},
+    {"id":{"name":"seqPlayerShield","path":"sequences/seqPlayerShield/seqPlayerShield.yy",},"order":12,},
     {"id":{"name":"roomInit","path":"rooms/roomInit/roomInit.yy",},"order":0,},
   ],
   "Options": [
