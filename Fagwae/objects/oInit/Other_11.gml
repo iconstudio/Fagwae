@@ -25,6 +25,7 @@ global.io_up = false
 global.io_down = false
 global.io_confirm = false
 global.io_back = false
+global.io_crawl = false
 
 
 global.io_p_left = false
@@ -35,5 +36,3 @@ global.io_p_confirm = false
 global.io_p_back = false
 global.io_p_attack = false
 global.io_p_bomb = false
-global.io_p_crawl = false
-

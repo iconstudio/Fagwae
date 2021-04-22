@@ -4,11 +4,12 @@ stun_duration = 0
 
 move_h_fric = realforce(39)
 move_v_fric = realforce(50)
-move_h_speed = realforce(196)
-move_v_speed = realforce(172)
+move_h_speed = realforce(226)
+move_v_speed = realforce(198)
 
 move_h_count = 0
 move_v_count = 0
+move_tick_threshold = (0.03)
 move_h_velocity = 0
 move_v_velocity = 0
 move_h_anchor = NONE

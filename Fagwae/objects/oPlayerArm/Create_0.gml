@@ -1,2 +1,2 @@
 angle_dest = 0
-angle_increment = realforce(80)
+angle_increment = realforce(160)

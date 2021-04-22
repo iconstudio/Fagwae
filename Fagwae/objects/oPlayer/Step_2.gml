@@ -27,9 +27,9 @@ global.py = y
 
 var out_ax = lengthdir_x(17, img_angle)
 var out_ay = lengthdir_y(17, img_angle)
-arm_left.x = x - out_ax
+arm_left.x = x - 2 - out_ax
 arm_left.y = y + 3 + out_ay
-arm_right.x = x + out_ax
+arm_right.x = x + 2 + out_ax
 arm_right.y = y + 3 - out_ay
 
 

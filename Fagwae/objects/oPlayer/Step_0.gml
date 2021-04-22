@@ -1,5 +1,4 @@
 /// @description Movements
-
 if 0 < stun_duration {
 	stun_duration -= Delta // Because of good experience for player
 	exit
@@ -46,9 +45,12 @@ if move_h_anchor != NONE {
 		move_h_velocity = 0
 	} else {
 		move_h_velocity = move_h_anchor * move_h_speed
+
+		if global.io_crawl
+			move_h_velocity *= 0.4
 	}
 
-	move_h_count++
+	move_h_count += Delta
 } else { // friction
 	if move_h_velocity != 0 {
 		if 0 < move_h_velocity {
@@ -56,7 +58,7 @@ if move_h_anchor != NONE {
 				move_h_velocity -= move_h_fric
 			else
 				move_h_velocity = 0
-		} else {
+		} elif move_tick_threshold <= move_h_count {
 			if move_h_velocity < -move_h_fric
 				move_h_velocity += move_h_fric
 			else
@@ -72,11 +74,14 @@ if move_v_anchor != NONE {
 	if move_v_count == 0 { // just pressed now
 		y += move_v_anchor
 		move_v_velocity = 0
-	} else {
+	} elif move_tick_threshold <= move_v_count {
 		move_v_velocity = move_v_anchor * move_v_speed
+
+		if global.io_crawl
+			move_v_velocity *= 0.5
 	}
 
-	move_v_count++
+	move_v_count += Delta
 } else { // friction
 	if move_v_velocity != 0 {
 		if 0 < move_v_velocity {

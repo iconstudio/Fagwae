@@ -1,11 +1,11 @@
 {
-  "spriteId": {
-    "name": "sPlayerBullet",
-    "path": "sprites/sPlayerBullet/sPlayerBullet.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "oPlayerShieldMask",
+    "path": "sprites/oPlayerShieldMask/oPlayerShieldMask.yy",
+  },
   "persistent": false,
   "parentObjectId": {
     "name": "oPlayerCollision",
@@ -24,8 +24,6 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":7,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"oEnemyParent","path":"objects/oEnemyParent/oEnemyParent.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
@@ -35,7 +33,7 @@
     "path": "folders/Game/Player.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oPlayerBullet",
+  "name": "oPlayerShield",
   "tags": [],
   "resourceType": "GMObject",
 }
