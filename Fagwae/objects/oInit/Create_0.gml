@@ -1,10 +1,15 @@
 /// @description Initialize game
+
+// General
+game_set_speed(100, gamespeed_fps)
+randomize()
+global.__delta = 0
+
 #macro print show_debug_message
 #macro null undefined
 #macro is_null is_undefined
 #macro elif else if
 #macro this self
-global.__delta = 0
 #macro Delta global.__delta
 #macro NONE 0
 #macro RIGHT 1
@@ -12,17 +17,17 @@ global.__delta = 0
 #macro UP -1
 #macro DOWN 1
 
-// external
+// External
 #macro PROFILE_COUNT_DEF 2
 #macro PROFILE_COUNT_PAID 4
 global.PROFILE = "profile.dat"
 global.profile_count = PROFILE_COUNT_DEF
 
-// flags
+// Flags
 global.flag_is_pc = (os_type == os_windows or os_type == os_macosx or os_type == os_linux or os_type == os_win8native)
 global.flag_is_mobile = (os_type == os_android or os_type == os_ios)
 
-// screen
+// Screen
 if global.flag_is_mobile {
 	display_set_sleep_margin(5)
 	window_set_fullscreen(true)
@@ -48,6 +53,7 @@ if !shaders_are_supported() {
 	throw ("Shader is not supported.")
 }
 
+// Shader
 global.wave_uniform_time = shader_get_uniform(shaderShockwave, "time")
 global.wave_uniform_pos = shader_get_uniform(shaderShockwave, "mouse_pos")
 global.wave_uniform_resolution = shader_get_uniform(shaderShockwave, "resolution")
@@ -73,9 +79,10 @@ keyboard_set_map(vk_numpad5, vk_enter)
 #macro SCREEN_W 640
 #macro SCREEN_H 960
 
-// game
+// Game
 global.px = 0
 global.py = 0
+global.player_weapon = 0
 
 global.area_names = ["Shape", "Frame", "Disorted"]
 
@@ -83,11 +90,7 @@ global.__cheat_invincible = false
 global.__cheat_powerful = false
 global.__cheat_inf_bombs = false
 
-// general
-game_set_speed(100, gamespeed_fps)
-randomize()
-
-// audio
+// Audio
 switch os_browser {
 	case browser_not_a_browser:
 		switch os_type {

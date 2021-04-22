@@ -1,3 +1,5 @@
+status = 0
+
 hp = 3
 
 
@@ -43,4 +45,21 @@ border_v_1 = room_height - 22
 
 global.px = x
 global.py = y
+
+
+///@function got_damage(amount=1)
+function got_damage() {
+	var amount = 1
+	if 0 < argument_count
+		amount = argument[0]
+
+	if 0 < amount {
+		hp -= amount
+		if 0 < hp {
+			event_user(1)
+		} else {
+			event_user(0)
+		}
+	}
+}
 
