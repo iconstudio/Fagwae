@@ -1,4 +1,4 @@
-///@function move(begin, end, output)
+/// @function move(begin, end, output)
 function move(First, Last, Output) {
 	First = check_iterator(First)
 	Output = check_iterator(Output)
@@ -13,7 +13,7 @@ function move(First, Last, Output) {
 	return Output
 }
 
-///@function fill(begin, end, value)
+/// @function fill(begin, end, value)
 function fill(First, Last, Value) {
 	First = check_iterator(First)
 
@@ -23,7 +23,7 @@ function fill(First, Last, Value) {
 	}
 }
 
-///@function rotate(begin, middle, end)
+/// @function rotate(begin, middle, end)
 function rotate(First, Middle, Last) {
 	First = check_iterator(First)
 	Middle = check_iterator(Middle)
@@ -42,7 +42,7 @@ function rotate(First, Middle, Last) {
 	return Middle
 }
 
-///@function reverse(begin, end)
+/// @function reverse(begin, end)
 function reverse(First, Last) {
 	First = check_iterator(First)
 
@@ -55,7 +55,7 @@ function reverse(First, Last) {
 	}
 }
 
-///@function transform(begin, end, output, unary_predicate)
+/// @function transform(begin, end, output, unary_predicate)
 function transform(First, Last, Output, Pred) {
 	First = check_iterator(First)
 	Output = check_iterator(Output)
@@ -69,7 +69,7 @@ function transform(First, Last, Output, Pred) {
 	return Output
 }
 
-///@function transform_binary(begin, end, another_begin, output, binary_predicate)
+/// @function transform_binary(begin, end, another_begin, output, binary_predicate)
 function transform_binary(First, Last, PairFirst, Output, Pred) {
 	First = check_iterator(First)
 	PairFirst = check_iterator(PairFirst)
@@ -84,7 +84,7 @@ function transform_binary(First, Last, PairFirst, Output, Pred) {
 	return Output
 }
 
-///@function unique(begin, end, [predicate=compare_equal])
+/// @function unique(begin, end, [predicate=compare_equal])
 /*
 function unique(First, Last) {
 	First = check_iterator(First)
@@ -115,8 +115,8 @@ function unique(First, Last) {
 }
 */
 
-///@function sort(begin, end, [comparator])
-///@description quick sort
+/// @function sort(begin, end, [comparator])
+/// @description quick sort
 function sort(First, Last) {
 	First = check_iterator(First)
 	Last = check_iterator(Last)
@@ -151,8 +151,8 @@ function sort(First, Last) {
 	gc_collect()
 }
 
-///@function stable_sort(begin, end, [comparator=compare_less])
-///@description selection sort
+/// @function stable_sort(begin, end, [comparator=compare_less])
+/// @description selection sort
 function stable_sort(First, Last) {
 	First = check_iterator(First)
 
@@ -170,7 +170,7 @@ function stable_sort(First, Last) {
 	gc_collect()
 }
 
-///@function insertion_sort(begin, end, [comparator=compare_less])
+/// @function insertion_sort(begin, end, [comparator=compare_less])
 function insertion_sort(First, Last) {
 	First = check_iterator(First).go_next()
 
@@ -192,7 +192,7 @@ function insertion_sort(First, Last) {
 	gc_collect()
 }
 
-///@function merge_sort(begin, end, [comparator=compare_less])
+/// @function merge_sort(begin, end, [comparator=compare_less])
 function merge_sort(First, Last) {
 	First = check_iterator(First)
 	Last = check_iterator(Last)
@@ -211,8 +211,8 @@ function merge_sort(First, Last) {
 	inplace_merge(First, Middle, Last, Compare)
 }
 
-///@function IMPLEMENTED FROM VS
-///@description sort median of three elements to middle
+/// @function IMPLEMENTED FROM VS
+/// @description sort median of three elements to middle
 function sort_median(First, Middle, Last, Comparator) {
 	if Comparator(Middle.get(), First.get())
 		Middle.swap(First)
@@ -225,8 +225,8 @@ function sort_median(First, Middle, Last, Comparator) {
 	}
 }
 
-///@function IMPLEMENTED FROM VS
-///@description sort median element to middle
+/// @function IMPLEMENTED FROM VS
+/// @description sort median element to middle
 function predict_median(First, Middle, Last, Comparator) {
 	First = check_iterator(First)
 	Middle = check_iterator(Middle)
@@ -244,8 +244,8 @@ function predict_median(First, Middle, Last, Comparator) {
 	}
 }
 
-///@function IMPLEMENTED FROM VS
-///@description partition [First, Last), using Comparator
+/// @function IMPLEMENTED FROM VS
+/// @description partition [First, Last), using Comparator
 function partition_by_median_guess(First, Last, Comparator) {
 	First = check_iterator(First)
 	Last = check_iterator(Last)
@@ -324,7 +324,7 @@ function partition_by_median_guess(First, Last, Comparator) {
 	gc_collect()
 }
 
-///@function nth_element(begin, nth, end, [comparator=compare_less])
+/// @function nth_element(begin, nth, end, [comparator=compare_less])
 function nth_element(First, Nth, Last) {
 	First = check_iterator(First)
 	Nth = check_iterator(Nth)
@@ -352,7 +352,7 @@ function nth_element(First, Nth, Last) {
   insertion_sort(First, Last, Compare)
 }
 
-///@function is_sorted(begin, end, [comparator=compare_less])
+/// @function is_sorted(begin, end, [comparator=compare_less])
 function is_sorted(First, Last) {
 	First = check_iterator(First)
 	if First.equals(Last)
@@ -378,7 +378,7 @@ function is_sorted(First, Last) {
 	return true
 }
 
-///@function unguarded_partition(begin, end, pivot, [comparator=compare_less])
+/// @function unguarded_partition(begin, end, pivot, [comparator=compare_less])
 function unguarded_partition(First, Last, Pivot) {
 	First = check_iterator(First)
 	Last = check_iterator(Last)
@@ -403,7 +403,7 @@ function unguarded_partition(First, Last, Pivot) {
 	}
 }
 
-///@function partition(begin, end, predicate)
+/// @function partition(begin, end, predicate)
 function partition(First, Last, Pred) {
 	First = check_iterator(First)
 	Last = check_iterator(Last)
@@ -431,7 +431,7 @@ function partition(First, Last, Pred) {
 	return First
 }
 
-///@function is_partitioned(begin, end, predicate)
+/// @function is_partitioned(begin, end, predicate)
 function is_partitioned(First, Last, Pred) {
 	First = check_iterator(First)
 
@@ -450,7 +450,7 @@ function is_partitioned(First, Last, Pred) {
 	return true
 }
 
-///@function merge(begin, end, other_begin, other_end, output, [comparator=compare_less])
+/// @function merge(begin, end, other_begin, other_end, output, [comparator=compare_less])
 function merge(First, Last, OtherFirst, OtherLast, Output) {
 	First = check_iterator(First)
 	Last = check_iterator(Last)
@@ -484,7 +484,7 @@ function merge(First, Last, OtherFirst, OtherLast, Output) {
 	return Output
 }
 
-///@function inplace_merge(begin, middle, end, [comparator=compare_less])
+/// @function inplace_merge(begin, middle, end, [comparator=compare_less])
 function inplace_merge(First, Middle, Last) {
 	First = check_iterator(First)
 	Middle = check_iterator(Middle)

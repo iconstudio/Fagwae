@@ -13,14 +13,14 @@ __callback_open = null
 __callback_close = null
 
 
-///@function do_open()
+/// @function do_open()
 do_open = function() {
 	if !is_null(__callback_open) and not transitioning
 		menu_mode_change(__callback_open)
 }
 
 
-///@function do_close()
+/// @function do_close()
 do_close = function() {
 	if !is_null(__callback_close) and not transitioning
 		menu_mode_change(__callback_close)

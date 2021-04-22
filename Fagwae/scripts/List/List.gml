@@ -204,22 +204,22 @@ function List() constructor {
 		}
 	}
 
-	///@function all_of(begin, end, predicate)
+	/// @function all_of(begin, end, predicate)
 	static all_of = function(First, Last, Pred) {
 		return is_undefined(find_if_not(First, Last, Pred))
 	}
 
-	///@function any_of(begin, end, predicate)
+	/// @function any_of(begin, end, predicate)
 	static any_of = function(First, Last, Pred) {
 		return !is_undefined(find_if(First, Last, Pred))
 	}
 
-	///@function none_of(begin, end, predicate)
+	/// @function none_of(begin, end, predicate)
 	static none_of = function(First, Last, Pred) {
 		return is_undefined(find_if(First, Last, Pred))
 	}
 
-	///@function foreach(begin, end, predicate)
+	/// @function foreach(begin, end, predicate)
 	static foreach = function(First, Last, Pred) {
 		First = _Check_iterator(First)
 		Last = _Check_iterator(Last)
@@ -232,7 +232,7 @@ function List() constructor {
 		return Pred
 	}
 
-	///@function foreach_n(begin, count, predicate)
+	/// @function foreach_n(begin, count, predicate)
 	static foreach_n = function(First, Number, Pred) {
 		First = _Check_iterator(First)
 		for (var i = 0; i < Number; ++i)
@@ -240,12 +240,12 @@ function List() constructor {
 		return First
 	}
 
-	///@function foreach_all(predicate)
+	/// @function foreach_all(predicate)
 	static foreach_all = function(Pred) {
 		return this.foreach(0, _Size, Pred)
 	}
 
-	///@function enumerate(begin, end, predicate)
+	/// @function enumerate(begin, end, predicate)
 	static enumerate = function(First, Last, Pred) {
 		First = _Check_iterator(First)
 		Last = _Check_iterator(Last)
@@ -259,7 +259,7 @@ function List() constructor {
 		return Pred
 	}
 
-	///@function enumerate_all(predicate)
+	/// @function enumerate_all(predicate)
 	static enumerate_all = function(Pred) {
 		return this.enumerate(0, _Size, Pred)
 	}
@@ -286,7 +286,7 @@ function List() constructor {
 		}
 	}
 
-	///@function find(begin, end, value, [comparator=compare_equal])
+	/// @function find(begin, end, value, [comparator=compare_equal])
 	static find = function(First, Last, Value) {
 		First = _Check_iterator(First)
 		Last = _Check_iterator(Last)
@@ -305,7 +305,7 @@ function List() constructor {
 		return undefined
 	}
 
-	///@function find_if(begin, end, predicate)
+	/// @function find_if(begin, end, predicate)
 	static find_if = function(First, Last, Pred) {
 		First = _Check_iterator(First)
 		Last = _Check_iterator(Last)
@@ -319,7 +319,7 @@ function List() constructor {
 		return undefined
 	}
 
-	///@function find_if_not(begin, end, predicate)
+	/// @function find_if_not(begin, end, predicate)
 	static find_if_not = function(First, Last, Pred) {
 		First = _Check_iterator(First)
 		Last = _Check_iterator(Last)
@@ -333,7 +333,7 @@ function List() constructor {
 		return undefined
 	}
 
-	///@function count(begin, end, value)
+	/// @function count(begin, end, value)
 	static count = function(First, Last, Value) {
 		First = _Check_iterator(First)
 		Last = _Check_iterator(Last)
@@ -348,7 +348,7 @@ function List() constructor {
 		return Result
 	}
 
-	///@function count_if(begin, end, predicate)
+	/// @function count_if(begin, end, predicate)
 	static count_if = function(First, Last, Pred) {
 		First = _Check_iterator(First)
 		Last = _Check_iterator(Last)
@@ -363,7 +363,7 @@ function List() constructor {
 		return Result
 	}
 
-	///@function accumulate(begin, end, init, predicate)
+	/// @function accumulate(begin, end, init, predicate)
 	static accumulate = function(First, Last, Init) {
 		First = _Check_iterator(First)
 		Last = _Check_iterator(Last)
@@ -382,7 +382,7 @@ function List() constructor {
 		return Init
 	}
 
-	///@function remove(begin, end, value)
+	/// @function remove(begin, end, value)
 	static remove = function(First, Last, Value) {
 		First = _Check_iterator(First)
 		Last = _Check_iterator(Last)
@@ -399,7 +399,7 @@ function List() constructor {
 		return Result
 	}
 
-	///@function remove_if(begin, end, predicate)
+	/// @function remove_if(begin, end, predicate)
 	static remove_if = function(First, Last, Pred) {
 		First = _Check_iterator(First)
 		Last = _Check_iterator(Last)
@@ -416,7 +416,7 @@ function List() constructor {
 		return Result
 	}
 
-	///@function min_element(begin, end, [comparator=compare_less])
+	/// @function min_element(begin, end, [comparator=compare_less])
 	static min_element = function(First, Last) {
 		First = _Check_iterator(First)
 		Last = _Check_iterator(Last)
@@ -439,7 +439,7 @@ function List() constructor {
 		return Result
 	}
 
-	///@function max_element(begin, end, [comparator=compare_less])
+	/// @function max_element(begin, end, [comparator=compare_less])
 	static max_element = function(First, Last) {
 		First = _Check_iterator(First)
 		Last = _Check_iterator(Last)
@@ -462,7 +462,7 @@ function List() constructor {
 		return Result
 	}
 
-	///@function lower_bound(begin, end, value, [comparator=compare_less])
+	/// @function lower_bound(begin, end, value, [comparator=compare_less])
 	static lower_bound = function(First, Last, Value) { // return the first and largest element which less than value.
 		First = _Check_iterator(First)
 		Last = _Check_iterator(Last)
@@ -491,7 +491,7 @@ function List() constructor {
 		return First
 	}
 
-	///@function upper_bound(begin, end, value, [comparator=compare_less])
+	/// @function upper_bound(begin, end, value, [comparator=compare_less])
 	static upper_bound = function(First, Last, Value) { // return a greater element to the value.
 		First = _Check_iterator(First)
 		Last = _Check_iterator(Last)
@@ -520,7 +520,7 @@ function List() constructor {
 		return First
 	}
 
-	///@function binary_search(begin, end, value, [comparator=compare_less])
+	/// @function binary_search(begin, end, value, [comparator=compare_less])
 	static binary_search = function(First, Last, Value) {
 		First = _Check_iterator(First)
 		Last = _Check_iterator(Last)
@@ -536,7 +536,7 @@ function List() constructor {
 		return bool(First != Last and !Compare(Value, at(First)))
 	}
 
-	///@function swap(iterator_1, iterator_2)
+	/// @function swap(iterator_1, iterator_2)
 	static swap = function(ItA, ItB) {
 		ItA = _Check_iterator(ItA)
 		ItB = _Check_iterator(ItB)
@@ -545,7 +545,7 @@ function List() constructor {
 		set_at(ItB, Temp)
 	}
 
-	///@function shuffle(begin, end, [engine=irandom_range])
+	/// @function shuffle(begin, end, [engine=irandom_range])
 	static shuffle = function(First, Last) {
 		First = _Check_iterator(First)
 		Last = _Check_iterator(Last)

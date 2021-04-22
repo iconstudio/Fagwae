@@ -1,6 +1,5 @@
-status = 0
-
 hp = 3
+stun_duration = 0
 
 
 move_h_fric = realforce(39)
@@ -47,7 +46,7 @@ global.px = x
 global.py = y
 
 
-///@function got_damage(amount=1)
+/// @function got_damage(amount=1)
 function got_damage() {
 	var amount = 1
 	if 0 < argument_count

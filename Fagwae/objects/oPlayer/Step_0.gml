@@ -1,3 +1,13 @@
+/// @description Movements
+
+if 0 < stun_duration {
+	stun_duration -= Delta // Because of good experience for player
+	exit
+} else {
+	
+}
+
+
 var was_left = (move_h_anchor == LEFT)
 var was_right = (move_h_anchor == RIGHT)
 

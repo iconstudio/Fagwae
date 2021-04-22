@@ -15,40 +15,40 @@
 */
 function Stack() constructor {
 #region public
-	///@function get_size()
+	/// @function get_size()
 	static get_size = function() { return ds_stack_size(raw) }
 
-	///@function empty()
+	/// @function empty()
 	static empty = function() { return ds_stack_empty(raw) }
 
-	///@function clear()
+	/// @function clear()
 	static clear = function() { ds_stack_clear(raw) }
 
-	///@function back()
+	/// @function back()
 	static back = function() { return ds_stack_top(raw) }
 
-	///@function top()
+	/// @function top()
 	static top = function() { return ds_stack_top(raw) }
 
-	///@function push(value)
+	/// @function push(value)
 	static push = function(Value) { ds_stack_push(raw, Value) }
 
-	///@function push_back(value)
+	/// @function push_back(value)
 	static push_back = function(Value) { ds_stack_push(raw, Value) }
 
-	///@function pop()
+	/// @function pop()
 	static pop = function() { ds_stack_pop(raw) }
 
-	///@function pop_back()
+	/// @function pop_back()
 	static pop_back = function() { return ds_stack_pop(raw) }
 
-	///@function read(data_string)
+	/// @function read(data_string)
 	static read = function(Str) { ds_stack_read(raw, Str) }
 
-	///@function write()
+	/// @function write()
 	static write = function() { return ds_stack_write(raw) }
 
-	///@function destroy()
+	/// @function destroy()
 	static destroy = function() { ds_stack_destroy(raw); gc_collect() }
 
 	static type = Stack
@@ -56,22 +56,22 @@ function Stack() constructor {
 #endregion
 
 #region private
-	///@function (index, value)
+	/// @function (index, value)
 	static _Under_iterator_set = undefined
 
-	///@function (index)
+	/// @function (index)
 	static _Under_iterator_get = undefined
 
-	///@function function(value)
+	/// @function function(value)
 	static _Under_iterator_add = push
 
-	///@function (index, value)
+	/// @function (index, value)
 	static _Under_iterator_insert = undefined
 
-	///@function (index)
+	/// @function (index)
 	static _Under_iterator_next = undefined
 
-	///@function (index)
+	/// @function (index)
 	static _Under_iterator_prev = undefined
 
 	raw = ds_stack_create()

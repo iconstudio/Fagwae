@@ -1,9 +1,9 @@
 /// @description Initialize game
-
 // General
 game_set_speed(100, gamespeed_fps)
 randomize()
 global.__delta = 0
+
 
 #macro print show_debug_message
 #macro null undefined
@@ -17,15 +17,18 @@ global.__delta = 0
 #macro UP -1
 #macro DOWN 1
 
+
 // External
 #macro PROFILE_COUNT_DEF 2
 #macro PROFILE_COUNT_PAID 4
 global.PROFILE = "profile.dat"
 global.profile_count = PROFILE_COUNT_DEF
 
+
 // Flags
 global.flag_is_pc = (os_type == os_windows or os_type == os_macosx or os_type == os_linux or os_type == os_win8native)
 global.flag_is_mobile = (os_type == os_android or os_type == os_ios)
+
 
 // Screen
 if global.flag_is_mobile {
@@ -37,6 +40,7 @@ if global.flag_is_mobile {
 } else {
 	display_set_sleep_margin(30)
 }
+
 
 // Drawing
 application_surface_enable(true)
@@ -53,6 +57,7 @@ if !shaders_are_supported() {
 	throw ("Shader is not supported.")
 }
 
+
 // Shader
 global.wave_uniform_time = shader_get_uniform(shaderShockwave, "time")
 global.wave_uniform_pos = shader_get_uniform(shaderShockwave, "mouse_pos")
@@ -65,6 +70,7 @@ global.wave_uniform_refraction = shader_get_uniform(shaderShockwave, "shock_refr
 // 파도의 너비
 global.wave_uniform_size = shader_get_uniform(shaderShockwave, "shock_width")
 
+
 // UX
 device_mouse_dbclick_enable(false)
 event_user(1)
@@ -74,6 +80,7 @@ keyboard_set_map(vk_numpad4, vk_left)
 keyboard_set_map(vk_numpad6, vk_right)
 keyboard_set_map(vk_numpad8, vk_down)
 keyboard_set_map(vk_numpad5, vk_enter)
+
 
 // UI
 #macro SCREEN_W 640
@@ -89,6 +96,7 @@ global.area_names = ["Shape", "Frame", "Disorted"]
 global.__cheat_invincible = false
 global.__cheat_powerful = false
 global.__cheat_inf_bombs = false
+
 
 // Audio
 switch os_browser {
@@ -108,5 +116,6 @@ switch os_browser {
 		audio_channel_num(16)
 		break
 }
+
 
 alarm[0] = 1
