@@ -2,15 +2,9 @@
   "spriteId": null,
   "solid": false,
   "visible": true,
-  "spriteMaskId": {
-    "name": "oPlayerShieldMask",
-    "path": "sprites/oPlayerShieldMask/oPlayerShieldMask.yy",
-  },
+  "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "oPlayerAttacks",
-    "path": "objects/oPlayerAttacks/oPlayerAttacks.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -23,9 +17,7 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
@@ -33,7 +25,7 @@
     "path": "folders/Game/Player.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oPlayerShield",
+  "name": "oPlayerPowerup",
   "tags": [],
   "resourceType": "GMObject",
 }

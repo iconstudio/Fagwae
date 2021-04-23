@@ -28,7 +28,7 @@
     "path": "folders/Game/Player.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oPlayerCollision",
+  "name": "oPlayerAttacks",
   "tags": [],
   "resourceType": "GMObject",
 }

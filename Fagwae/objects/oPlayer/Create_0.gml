@@ -18,15 +18,13 @@ move_v_anchor = NONE
 
 img_angle = 0
 arm_layer = layer_get_id("player_arm")
-arm_x = 15
-arm_y = 10
-arm_left = instance_create_layer(x - arm_x, y + arm_y, arm_layer, oPlayerArm)
+arm_left = instance_create_layer(x - 2, y + 3, arm_layer, oPlayerArm)
 with arm_left {
 	image_angle = -16
 	angle_dest = 2
 }
 
-arm_right = instance_create_layer(x + arm_x, y + arm_y, arm_layer, oPlayerArm)
+arm_right = instance_create_layer(x + 2, y + 3, arm_layer, oPlayerArm)
 with arm_right {
 	image_angle = 16
 	angle_dest = 358
@@ -55,6 +53,7 @@ function got_damage() {
 
 	if 0 < amount {
 		hp -= amount
+		stun_duration = amount * 0.3
 		if 0 < hp {
 			event_user(1)
 		} else {

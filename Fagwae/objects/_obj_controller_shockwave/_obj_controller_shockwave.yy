@@ -29,8 +29,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Group_shockwave",
-    "path": "folders/객체/Group_shockwave.yy",
+    "name": "Effect",
+    "path": "folders/Game/Effect.yy",
   },
   "resourceVersion": "1.0",
   "name": "_obj_controller_shockwave",

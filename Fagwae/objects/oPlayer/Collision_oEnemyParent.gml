@@ -1,2 +1,2 @@
 /// @description Strike itself
-got_damage(1)
+got_damage(other.damage)
