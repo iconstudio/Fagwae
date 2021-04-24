@@ -54,4 +54,4 @@ function key_repeat(key) {
 draw_set_color($ffffff)
 draw_set_font(fontMainMenuEntry)
 
-menu_mode_change(main_state_intro)
+Astate_goto(main_state_intro)

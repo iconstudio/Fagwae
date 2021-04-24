@@ -7,7 +7,7 @@ sub_state_normal.set_initializer(function() {
 })
 
 
-sub_state_exit = new menu_state()
+sub_state_exit = new Astate()
 sub_state_exit.caption = "main-sub-start-exit"
 
 
@@ -29,7 +29,7 @@ sub_state_fadein.set_initializer(function() {
 })
 
 
-sub_state_close_2 = new menu_state()
+sub_state_close_2 = new Astate()
 sub_state_close_2.caption = "main-sub-start-close"
 sub_state_close_2.set_duration(0.95)
 sub_state_close_2.set_next(sub_state_normal)
@@ -40,7 +40,7 @@ sub_state_close_2.set_callback(function() {
 //sub_state_close_2.set_drawer(draw_transition)
 
 
-sub_state_close_1 = new menu_state()
+sub_state_close_1 = new Astate()
 sub_state_close_1.caption = "main-sub-start-close"
 sub_state_close_1.set_duration(1.2)
 sub_state_close_1.set_next(sub_state_close_2)
@@ -52,13 +52,13 @@ sub_state_close_1.set_callback(function() {
 
 
 // 글자가 나타남
-sub_state_open_3 = new menu_state()
+sub_state_open_3 = new Astate()
 sub_state_open_3.caption = "main-sub-exit-open-3"
 sub_state_open_3.set_duration(1)
 
 
 // 스포트라이트가 벌어짐
-sub_state_open_2 = new menu_state()
+sub_state_open_2 = new Astate()
 sub_state_open_2.caption = "main-sub-exit-open-2"
 sub_state_open_2.set_duration(0.9)
 sub_state_open_2.set_next(sub_state_normal)
@@ -71,7 +71,7 @@ sub_state_open_2.set_drawer(function() {
 
 
 // 화면이 암전되고 동시에 한가운데에 빛줄기가 나타남
-sub_state_open_1 = new menu_state()
+sub_state_open_1 = new Astate()
 sub_state_open_1.caption = "main-sub-exit-open-1"
 sub_state_open_1.set_duration(1.5)
 sub_state_open_1.set_next(sub_state_open_2)
@@ -83,7 +83,7 @@ sub_state_open_1.set_drawer(function() {
 })
 
 
-sub_state_intro = new menu_state()
+sub_state_intro = new Astate()
 sub_state_intro.caption = "main-sub-exit-intro-1"
 sub_state_intro.set_duration(1.4)
 sub_state_intro.set_next(sub_state_normal)

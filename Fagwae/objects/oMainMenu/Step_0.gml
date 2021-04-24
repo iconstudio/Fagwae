@@ -1,2 +1,3 @@
 /// @description Update
-menu_mode_update(mode)
+if mode.update() == 1
+	Astate_goto(mode.next)

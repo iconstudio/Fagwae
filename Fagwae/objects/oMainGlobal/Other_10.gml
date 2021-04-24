@@ -73,7 +73,7 @@ check_menu_inputs = function() {
 menu_fadeout = function() {
 	menu_child_execute(function(child) {
 		with child
-			menu_mode_change(sub_state_fadeout)
+			Astate_goto(sub_state_fadeout)
 	})
 }
 
@@ -81,45 +81,45 @@ menu_fadeout = function() {
 menu_fadein = function() {
 	menu_child_execute(function(child) {
 		with child
-			menu_mode_change(sub_state_fadein)
+			Astate_goto(sub_state_fadein)
 	})
 }
 
 
-main_state_idle = new menu_state()
+main_state_idle = new Astate()
 main_state_idle.set_updater(function() {
 	check_menu_inputs()
 })
 
 
-main_state_intro = new menu_state()
+main_state_intro = new Astate()
 main_state_intro.set_next(main_state_idle)
 main_state_intro.set_updater(function() {
 	menu_child_execute(function(child) {
 		with child
-			menu_mode_change(mode_enter)
+			Astate_goto(mode_enter)
 	})
 })
 
 
-main_state_dimmed = new menu_state()
+main_state_dimmed = new Astate()
 main_state_dimmed.set_duration(1.5)
 main_state_dimmed.set_updater(function() {
 	check_menu_inputs()
 })
 
 
-main_state_fadeout = new menu_state()
+main_state_fadeout = new Astate()
 main_state_fadeout.set_duration(2.1)
 main_state_fadeout.set_next(main_state_dimmed)
 
 
-main_state_fadein = new menu_state()
+main_state_fadein = new Astate()
 main_state_fadein.set_duration(1.2)
 main_state_fadein.set_next(main_state_idle)
 
 
-main_state_exit = new menu_state()
+main_state_exit = new Astate()
 main_state_exit.set_duration(1.6)
 main_state_exit.set_initializer(menu_fadeout)
 main_state_exit.set_callback(game_end)

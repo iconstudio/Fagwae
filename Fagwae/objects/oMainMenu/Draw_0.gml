@@ -1,1 +1,2 @@
-menu_mode_draw()
+if !is_null(mode) 
+	mode.draw()

@@ -7,5 +7,5 @@ menu_fadeout()
 if child != child_choice {
 	child.do_open()
 	child_choice = child
-	menu_mode_change(main_state_fadeout)
+	Astate_goto(main_state_fadeout)
 }
