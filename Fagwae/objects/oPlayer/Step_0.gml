@@ -1,4 +1,11 @@
 /// @description Movements
+if 0 < shield_duration {
+	if is_null(shield)
+		shield = instance_create_layer(x, y, "player_effect_below", oPlayerShield)
+} else {
+	
+}
+
 if 0 < stun_duration {
 	stun_duration -= Delta // Because of good experience for player
 	exit
@@ -101,8 +108,42 @@ if move_v_anchor != NONE {
 }
 
 
-if move_h_velocity != 0
+if move_h_velocity != 0 {
 	x += move_h_velocity
+
+	if move_h_velocity < 0
+		image_angle = min(move_angle_max, image_angle + move_angle_speed)
+	else
+		image_angle = max(-move_angle_max, image_angle - move_angle_speed)
+} else {
+	image_angle -= image_angle * 0.05
+}
+
+var angle_arm_left, angle_arm_right
+if move_h_anchor == NONE {
+	if global.io_left and global.io_right {
+		angle_arm_left = 6
+		angle_arm_right = 6
+	} else {
+		angle_arm_left = 2
+		angle_arm_right = 2
+	}
+} else if move_h_anchor == RIGHT {
+	angle_arm_left = 0
+	angle_arm_right = 6
+} else if move_h_anchor == LEFT {
+	angle_arm_left = 6
+	angle_arm_right = 0
+}
+
+with arm_left {
+	image_angle = angle_arm_left + other.image_angle
+}
+with arm_right {
+	image_angle = -angle_arm_right + other.image_angle
+}
+
+
 if move_v_velocity != 0
 	y += move_v_velocity
 

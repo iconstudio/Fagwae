@@ -1,4 +1,6 @@
 hp = 3
+shield = null
+shield_duration = 0
 stun_duration = 0
 
 
@@ -15,20 +17,15 @@ move_v_velocity = 0
 move_h_anchor = NONE
 move_v_anchor = NONE
 
+move_angle_max = 8
+move_angle_speed = realforce(90)
 
-img_angle = 0
+
 arm_layer = layer_get_id("player_arm")
 arm_left = instance_create_layer(x - 2, y + 3, arm_layer, oPlayerArm)
-with arm_left {
-	image_angle = -16
-	angle_dest = 2
-}
-
+arm_left.image_angle = 2
 arm_right = instance_create_layer(x + 2, y + 3, arm_layer, oPlayerArm)
-with arm_right {
-	image_angle = 16
-	angle_dest = 358
-}
+arm_right.image_angle = 358
 
 
 aura_layer = layer_get_id("player_effect_below")
