@@ -3,8 +3,8 @@
   "solid": false,
   "visible": true,
   "spriteMaskId": {
-    "name": "oPlayerShieldMask",
-    "path": "sprites/oPlayerShieldMask/oPlayerShieldMask.yy",
+    "name": "sPlayerShieldMask",
+    "path": "sprites/sPlayerShieldMask/sPlayerShieldMask.yy",
   },
   "persistent": false,
   "parentObjectId": {

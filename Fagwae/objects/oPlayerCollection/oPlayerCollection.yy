@@ -4,7 +4,10 @@
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "oDrawnSprite",
+    "path": "objects/oDrawnSprite/oDrawnSprite.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -25,7 +28,7 @@
     "path": "folders/Game/Player.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oPlayerLifeup",
+  "name": "oPlayerCollection",
   "tags": [],
   "resourceType": "GMObject",
 }

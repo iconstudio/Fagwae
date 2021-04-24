@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "sPlayerPowerup",
-    "path": "sprites/sPlayerPowerup/sPlayerPowerup.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -23,9 +20,7 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":10,"eventType":7,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
@@ -33,7 +28,7 @@
     "path": "folders/Game/Player.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oPlayerPowerup",
+  "name": "oPlayerBombup",
   "tags": [],
   "resourceType": "GMObject",
 }
