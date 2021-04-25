@@ -12,6 +12,7 @@ global.key_back = new fag_input([ord("C"), vk_backspace])
 global.key_attack = new fag_input([ord("Z"), ord("A"), vk_space])
 global.key_bomb = new fag_input([ord("X"), ord("S"), vk_control])
 global.key_crawl = new fag_input([ord("C"), ord("D"), vk_shift])
+global.key_pause = new fag_input([ord("P"), vk_escape, vk_backspace])
 
 
 global.io_mouse_left = false
@@ -36,3 +37,4 @@ global.io_p_confirm = false
 global.io_p_back = false
 global.io_p_attack = false
 global.io_p_bomb = false
+global.io_p_pause = false

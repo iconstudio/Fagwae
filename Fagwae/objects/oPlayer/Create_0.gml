@@ -3,10 +3,11 @@ shield = null
 stun_duration = 0
 
 
-move_h_fric = realforce(39)
-move_v_fric = realforce(50)
-move_h_speed = realforce(226)
-move_v_speed = realforce(198)
+// can use realforce
+move_h_fric = (450)
+move_v_fric = (390)
+move_h_speed = (226)
+move_v_speed = (178)
 
 move_h_count = 0
 move_v_count = 0
@@ -17,7 +18,7 @@ move_h_anchor = NONE
 move_v_anchor = NONE
 
 move_angle_max = 8
-move_angle_speed = realforce(90)
+move_angle_speed = (90)
 
 
 arm_layer = layer_get_id("player_arm")

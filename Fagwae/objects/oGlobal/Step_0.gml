@@ -12,15 +12,11 @@ global.io_down = global.key_down.check()
 global.io_confirm = global.key_confirm.check()
 global.io_back = global.key_back.check()
 
-global.io_crawl = global.key_crawl.check()
-
 
 global.io_p_left = global.key_left.check_pressed()
 global.io_p_right = global.key_right.check_pressed()
 global.io_p_up = global.key_up.check_pressed()
 global.io_p_down = global.key_down.check_pressed()
+
 global.io_p_confirm = global.key_confirm.check_pressed()
 global.io_p_back = global.key_back.check_pressed()
-
-global.io_p_attack = global.key_attack.check_pressed()
-global.io_p_bomb = global.key_bomb.check_pressed()

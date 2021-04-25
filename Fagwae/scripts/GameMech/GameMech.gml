@@ -1,6 +1,6 @@
 /// @function seconds(time)
-function seconds(Time) {
-	return Time * room_speed
+function seconds(time) {
+	return time * room_speed
 }
 
 

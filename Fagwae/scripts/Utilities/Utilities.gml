@@ -1,3 +1,10 @@
+/// @function bezier4(v1, v2, v3, v4, ratio)
+function bezier4(x1, x2, x3, x4, t) {
+	var Rv = 1 - t
+	return power(Rv, 3) * argument0 + 3 * t * power(Rv, 2) * argument1 + 3 * power(t, 2) * Rv * argument2 + power(t, 3) * argument3
+}
+
+
 /// @function duet
 function duet(condition, value_true, value_false) {
 	return condition ? value_true : value_false

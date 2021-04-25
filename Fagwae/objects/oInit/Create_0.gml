@@ -87,10 +87,19 @@ keyboard_set_map(vk_numpad5, vk_enter)
 #macro SCREEN_W 640
 #macro SCREEN_H 960
 
+
 // Game
 global.px = 0
 global.py = 0
 global.player_weapon = 0
+
+var shard_w = 8, shard_h = 8
+global.shard_w_count = SCREEN_W mod shard_w * shard_w
+global.shard_h_count = SCREEN_H mod shard_h * shard_h
+global.ScreenShard = function(x, y) constructor {
+	this.x = x
+	this.y = y
+}
 
 global.area_names = ["Shape", "Frame", "Disorted"]
 

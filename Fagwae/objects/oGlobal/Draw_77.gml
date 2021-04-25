@@ -10,6 +10,7 @@ gpu_set_blendmode(bm_normal)
 gpu_set_blendenable(true)
 surface_reset_target()
 
+
 if 0 < shake_time and 0 < shake_meter {
 	speed = random(shake_meter)
 	direction += random(80) + 140

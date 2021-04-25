@@ -43,7 +43,7 @@ if move_h_anchor != NONE {
 	if move_h_count == 0 { // just pressed now
 		x += move_h_anchor
 		move_h_velocity = 0
-	} else {
+	} elif move_tick_threshold <= move_h_count {
 		move_h_velocity = move_h_anchor * move_h_speed
 
 		if global.io_crawl
@@ -53,17 +53,21 @@ if move_h_anchor != NONE {
 	move_h_count += Delta
 } else { // friction
 	if move_h_velocity != 0 {
+		move_h_velocity *= 0.1
+		/*
+		var Friction = move_h_fric * Delta
 		if 0 < move_h_velocity {
-			if move_h_fric < move_h_velocity
-				move_h_velocity -= move_h_fric
+			if Friction < move_h_velocity
+				move_h_velocity -= Friction
 			else
 				move_h_velocity = 0
-		} elif move_tick_threshold <= move_h_count {
-			if move_h_velocity < -move_h_fric
-				move_h_velocity += move_h_fric
+		} else {
+			if move_h_velocity < -Friction
+				move_h_velocity += Friction
 			else
 				move_h_velocity = 0
 		}
+		*/
 	} else {
 		move_h_count = 0
 	}
@@ -84,17 +88,21 @@ if move_v_anchor != NONE {
 	move_v_count += Delta
 } else { // friction
 	if move_v_velocity != 0 {
+		move_v_velocity *= 0.1
+		/*
+		var Friction = move_v_fric * Delta
 		if 0 < move_v_velocity {
-			if move_v_fric < move_v_velocity
-				move_v_velocity -= move_v_fric
+			if Friction < move_v_velocity
+				move_v_velocity -= Friction
 			else
 				move_v_velocity = 0
 		} else {
-			if move_v_velocity < -move_v_fric
-				move_v_velocity += move_v_fric
+			if move_v_velocity < -Friction
+				move_v_velocity += Friction
 			else
 				move_v_velocity = 0
 		}
+		*/
 	} else {
 		move_v_count = 0
 	}
@@ -102,24 +110,29 @@ if move_v_anchor != NONE {
 
 
 if move_h_velocity != 0 {
-	x += move_h_velocity
+	var Hspeed = move_h_velocity * Delta// - 0.5 * Delta * Delta * move_h_fric
+	x += Hspeed
 
 	if move_h_velocity < 0
-		image_angle = min(move_angle_max, image_angle + move_angle_speed)
+		image_angle = min(move_angle_max, image_angle + move_angle_speed * Delta)
 	else
-		image_angle = max(-move_angle_max, image_angle - move_angle_speed)
+		image_angle = max(-move_angle_max, image_angle - move_angle_speed * Delta)
 } else {
 	image_angle -= image_angle * 0.05
 }
 
+
 var angle_arm_left, angle_arm_right
-if move_h_anchor == NONE {
-	if global.io_left and global.io_right {
+if global.io_crawl {
+	if move_h_anchor == RIGHT {
 		angle_arm_left = 6
+		angle_arm_right = -4
+	} elif move_h_anchor == LEFT {
+		angle_arm_left = -4
 		angle_arm_right = 6
 	} else {
-		angle_arm_left = 2
-		angle_arm_right = 2
+		angle_arm_left = 1
+		angle_arm_right = 1
 	}
 } else if move_h_anchor == RIGHT {
 	angle_arm_left = 0
@@ -127,16 +140,17 @@ if move_h_anchor == NONE {
 } else if move_h_anchor == LEFT {
 	angle_arm_left = 6
 	angle_arm_right = 0
+} else {
+	angle_arm_left = 2
+	angle_arm_right = 2
 }
 
-with arm_left {
-	image_angle = angle_arm_left + other.image_angle
-}
-with arm_right {
-	image_angle = -angle_arm_right + other.image_angle
-}
+arm_left.image_angle = angle_arm_left + image_angle
+arm_right.image_angle = -angle_arm_right + image_angle
 
 
-if move_v_velocity != 0
-	y += move_v_velocity
+if move_v_velocity != 0 {
+	var Vspeed = move_v_velocity * Delta// - 0.5 * Delta * Delta * move_v_fric
+	y += Vspeed
+}
 

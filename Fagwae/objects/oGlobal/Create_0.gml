@@ -1,6 +1,8 @@
 /// @description Initialzation
 event_user(0)
 
+global.app_is_focused = true
+
 // Shake
 shake_xn = 0
 shake_yn = 0
