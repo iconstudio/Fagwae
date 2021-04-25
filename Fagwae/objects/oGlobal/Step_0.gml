@@ -24,6 +24,3 @@ global.io_p_back = global.key_back.check_pressed()
 
 global.io_p_attack = global.key_attack.check_pressed()
 global.io_p_bomb = global.key_bomb.check_pressed()
-
-
-global.__delta = delta_time * 0.000001
