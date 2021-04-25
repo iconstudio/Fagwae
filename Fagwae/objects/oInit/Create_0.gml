@@ -6,6 +6,7 @@ global.__delta = 0
 
 
 #macro print show_debug_message
+#macro trace show_debug_message
 #macro null undefined
 #macro is_null is_undefined
 #macro elif else if
