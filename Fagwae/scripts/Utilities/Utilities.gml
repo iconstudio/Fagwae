@@ -1,15 +1,3 @@
-/// @function seconds(time)
-function seconds(Time) {
-	return Time * room_speed
-}
-
-
-/// @function realforce(speed)
-function realforce(Speed) {
-	return Speed / room_speed
-}
-
-
 /// @function duet
 function duet(condition, value_true, value_false) {
 	return condition ? value_true : value_false
