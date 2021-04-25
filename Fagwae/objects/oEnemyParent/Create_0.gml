@@ -1,1 +1,6 @@
-damage = 1
+name = ""
+
+hpmax = 1
+hp = hpmax
+
+damage = 1 // collision damage

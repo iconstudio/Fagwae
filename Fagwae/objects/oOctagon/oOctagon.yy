@@ -1,12 +1,15 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "sOctagon",
+    "path": "sprites/sOctagon/sOctagon.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "oDrawnSprite",
-    "path": "objects/oDrawnSprite/oDrawnSprite.yy",
+    "name": "oEnemyParent",
+    "path": "objects/oEnemyParent/oEnemyParent.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -20,10 +23,7 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":8,"eventType":7,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
@@ -31,7 +31,7 @@
     "path": "folders/Game/Enemy.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oEnemyParent",
+  "name": "oOctagon",
   "tags": [],
   "resourceType": "GMObject",
 }
