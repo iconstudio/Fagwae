@@ -1,2 +1,2 @@
 /// @description Hit
-stun_duration = 0.5
+cast_shield(3)

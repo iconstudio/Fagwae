@@ -1,6 +1,5 @@
 hp = 3
 shield = null
-shield_duration = 0
 stun_duration = 0
 
 
@@ -40,6 +39,17 @@ border_v_1 = room_height - 22
 
 global.px = x
 global.py = y
+
+
+/// @function cast_shield(time)
+function cast_shield(time) {
+	if is_null(shield) {
+		shield = instance_create_layer(x, y, "player_effect_below", oPlayerShield)
+		shield.duration = time
+	} else {
+		shield.duration = max(shield.duration, time)
+	}
+}
 
 
 /// @function got_damage(amount=1)

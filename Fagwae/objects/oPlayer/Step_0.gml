@@ -1,11 +1,4 @@
 /// @description Movements
-if 0 < shield_duration {
-	if is_null(shield)
-		shield = instance_create_layer(x, y, "player_effect_below", oPlayerShield)
-} else {
-	
-}
-
 if 0 < stun_duration {
 	stun_duration -= Delta // Because of good experience for player
 	exit
