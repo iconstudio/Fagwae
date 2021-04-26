@@ -38,3 +38,9 @@ global.io_p_back = false
 global.io_p_attack = false
 global.io_p_bomb = false
 global.io_p_pause = false
+
+
+global.io_r_left = false
+global.io_r_right = false
+global.io_r_up = false
+global.io_r_down = false
