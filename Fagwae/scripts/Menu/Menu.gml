@@ -17,8 +17,7 @@ function Menu() {
 	}
 
 
-	/// @function menu_child_add(entity)
-	this.menu_child_add = function(entity) {
+	this.push = function(entity) {
 		entity.parent = id
 		children.push_back(entity)
 
@@ -35,31 +34,26 @@ function Menu() {
 	}
 
 
-	/// @function menu_child_execute(function)
 	this.menu_child_execute = function(callable) {
 		children.foreach_all(callable)
 	}
 
 
-	/// @function get_size()
 	this.get_size = function() {
 		return children.get_size()
 	}
 
 
-	/// @function focus_child(child)
 	this.focus_child = function(child) {
 		child_focus = child
 	}
 
 
-	/// @function focus_index(index)
 	this.focus_index = function(index) {
 		focus_child(children.at(index))
 	}
 
 
-	/// @function get_focus()
 	this.get_focus = function() {
 		return child_focus
 	}

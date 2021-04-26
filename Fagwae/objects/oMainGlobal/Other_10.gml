@@ -128,5 +128,5 @@ main_state_exit.set_callback(game_end)
 lyr_interface = layer_get_id("interface")
 
 add_main_entry = function(mnobj, ox, oy) {
-	return menu_child_add(instance_create_layer(ox, oy, lyr_interface, mnobj))
+	return push(instance_create_layer(ox, oy, lyr_interface, mnobj))
 }
