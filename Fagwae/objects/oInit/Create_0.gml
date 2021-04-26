@@ -93,7 +93,7 @@ global.px = 0
 global.py = 0
 global.player_weapon = 0
 
-global.shard_size = 20
+global.shard_size = 8
 var shard_w = global.shard_size, shard_h = global.shard_size
 global.shard_w_count = (SCREEN_W div shard_w)
 global.shard_h_count = (SCREEN_H div shard_h)
