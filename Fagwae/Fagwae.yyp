@@ -36,6 +36,7 @@
     {"id":{"name":"_obj_controller_shockwave","path":"objects/_obj_controller_shockwave/_obj_controller_shockwave.yy",},"order":2,},
     {"id":{"name":"roomGame","path":"rooms/roomGame/roomGame.yy",},"order":4,},
     {"id":{"name":"sIntroFrameChain","path":"sprites/sIntroFrameChain/sIntroFrameChain.yy",},"order":2,},
+    {"id":{"name":"fontPause","path":"fonts/fontPause/fontPause.yy",},"order":12,},
     {"id":{"name":"GameMech","path":"scripts/GameMech/GameMech.yy",},"order":6,},
     {"id":{"name":"oOctagon","path":"objects/oOctagon/oOctagon.yy",},"order":1,},
     {"id":{"name":"sPlayerArm","path":"sprites/sPlayerArm/sPlayerArm.yy",},"order":2,},

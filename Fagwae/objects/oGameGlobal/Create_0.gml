@@ -1,9 +1,22 @@
 capture = -1
 
 
-menu_selection = 0
-menus = new List(["Resume", "Restart game", "Go to main menu"])
-menu_size = menus.get_size()
+pause_menu_selection = 0
+pause_menus = new List(["Resume", "Restart game", "Go to main menu"])
+pause_menu_drawer = method(self, function(i, caption) {
+	if pause_menu_selection == i
+		draw_set_color($ffffff)
+	else
+		draw_set_color($8d8d8d)
+	draw_text(pause_item_x, pause_item_y + i * 50, caption)
+})
+
+pause_title_x = SCREEN_W * 0.5
+pause_title_y = SCREEN_H * 0.3
+pause_item_x = SCREEN_W * 0.4 - 70
+pause_item_y = SCREEN_H * 0.3 + 90
+
+menu_size = pause_menus.get_size()
 
 
 key_anchor = NONE
@@ -15,6 +28,8 @@ key_pinned = NONE
 
 
 function do_pause() {
+	pause_menu_selection = 0
+
 	global.paused = true
 	global.pause_stack++
 

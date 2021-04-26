@@ -16,6 +16,7 @@ if global.paused {
 		} else {
 			if key_pin_stop {
 				key_anchor = NONE
+				key_pinned = NONE
 				key_pin_stop = false
 				key_pin_duration = 0
 			} else {
@@ -45,39 +46,45 @@ if global.paused {
 		if global.io_r_up {
 			if key_anchor == UP {
 				key_anchor = NONE
+				key_pinned = NONE
+				key_pin_duration = 0
 			}
 		}
 
 		if global.io_r_down {
 			if key_anchor == DOWN {
 				key_anchor = NONE
+				key_pinned = NONE
+				key_pin_duration = 0
 			}
 		}
 
 
 		if key_pinned != NONE {
 			if key_pinned == UP {
-				if menu_selection == 1 { // don't continue
-					menu_selection = 0
+				if pause_menu_selection == 1 { // don't continue
+					pause_menu_selection = 0
 					key_anchor = NONE
+					key_pinned = NONE
 					key_pin_stop = true
 				} else {
-					if menu_selection == 0 {
-						menu_selection = menu_size - 1
+					if pause_menu_selection == 0 {
+						pause_menu_selection = menu_size - 1
 					} else {
-						menu_selection--
+						pause_menu_selection--
 					}
 				}
 			} elif key_pinned == DOWN {
-				if menu_selection == menu_size - 2 { // don't continue
-					menu_selection = menu_size - 1
+				if pause_menu_selection == menu_size - 2 { // don't continue
+					pause_menu_selection = menu_size - 1
 					key_anchor = NONE
+					key_pinned = NONE
 					key_pin_stop = true
 				} else {
-					if menu_selection == menu_size - 1 {
-						menu_selection = 0
+					if pause_menu_selection == menu_size - 1 {
+						pause_menu_selection = 0
 					} else {
-						menu_selection++
+						pause_menu_selection++
 					}
 				}
 			}
