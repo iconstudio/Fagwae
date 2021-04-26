@@ -1,4 +1,7 @@
 /// @description Movements
+if Delta == 0
+	exit
+
 if 0 < stun_duration {
 	stun_duration -= Delta // Because of good experience for player
 	exit

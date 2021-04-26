@@ -24,3 +24,8 @@ function fag_input(keys) constructor {
 		})
 	}
 }
+
+
+function delta_scale(scale) {
+	global.__delta_scale = scale
+}

@@ -3,6 +3,7 @@
 game_set_speed(100, gamespeed_fps)
 randomize()
 global.__delta = 0
+global.__delta_scale = 1
 
 
 #macro print show_debug_message
@@ -89,6 +90,9 @@ keyboard_set_map(vk_numpad5, vk_enter)
 
 
 // Game
+global.paused = false
+global.pause_stack = 0
+
 global.px = 0
 global.py = 0
 global.player_weapon = 0
