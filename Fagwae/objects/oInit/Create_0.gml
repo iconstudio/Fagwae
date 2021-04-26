@@ -93,13 +93,11 @@ global.px = 0
 global.py = 0
 global.player_weapon = 0
 
-var shard_w = 8, shard_h = 8
-global.shard_w_count = SCREEN_W mod shard_w * shard_w
-global.shard_h_count = SCREEN_H mod shard_h * shard_h
-global.ScreenShard = function(x, y) constructor {
-	this.x = x
-	this.y = y
-}
+global.shard_size = 20
+var shard_w = global.shard_size, shard_h = global.shard_size
+global.shard_w_count = (SCREEN_W div shard_w)
+global.shard_h_count = (SCREEN_H div shard_h)
+
 
 global.area_names = ["Shape", "Frame", "Disorted"]
 

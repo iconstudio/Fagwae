@@ -235,6 +235,10 @@ function List() constructor {
 	/// @function foreach_n(begin, count, predicate)
 	static foreach_n = function(First, Number, Pred) {
 		First = _Check_iterator(First)
+		if _Size <= First
+			return First
+		_Check_range(First, First + Number - 1)
+
 		for (var i = 0; i < Number; ++i)
 			Pred(at(First++))
 		return First
