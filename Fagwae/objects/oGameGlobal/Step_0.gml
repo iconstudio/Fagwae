@@ -7,6 +7,11 @@ global.io_p_pause = global.key_pause.check_pressed()
 
 
 if global.paused {
+	if pause_lit_time < pause_lit_period
+		pause_lit_time += Delta
+	else
+		pause_lit_time = pause_lit_period
+
 	if global.io_p_pause {
 		undo_pause()
 	} else {
@@ -25,6 +30,7 @@ if global.paused {
 			}
 		}
 
+
 		if !global.io_up and !global.io_down {
 			key_anchor = NONE
 		}
@@ -33,12 +39,16 @@ if global.paused {
 			if key_anchor != UP {
 				key_anchor = UP
 				key_pinned = UP
+				key_pin_stop = false
 				key_pin_duration = key_pin_period_long
 			}
-		} elif global.io_p_down {
+		}
+
+		if global.io_p_down {
 			if key_anchor != DOWN {
 				key_anchor = DOWN
 				key_pinned = DOWN
+				key_pin_stop = false
 				key_pin_duration = key_pin_period_long
 			}
 		}
@@ -89,8 +99,22 @@ if global.paused {
 				}
 			}
 		}
+
+		if global.io_confirm {
+			var selected = pause_menus.at(pause_menu_selection)
+			if !is_null(selected) {
+				var predicate = selected.predicate
+				if !is_null(predicate)
+					predicate()
+			}
+		}
 	}
 } else {
+	if 0 < pause_lit_time
+		pause_lit_time -= Delta
+	else
+		pause_lit_time = 0
+
 	if os_is_paused() {
 		do_pause()
 	} elif global.io_p_pause {

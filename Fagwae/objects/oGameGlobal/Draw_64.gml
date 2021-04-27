@@ -1,8 +1,8 @@
 /// @description Drawing UIs
 if global.paused {
-	draw_set_alpha(0.5)
-	draw_set_color($0)
-	draw_rectangle(0, 0, SCREEN_W, SCREEN_H, false)
+	//draw_set_alpha(0.5)
+	//draw_set_color($0)
+	//draw_rectangle(0, 0, SCREEN_W, SCREEN_H, false)
 
 	draw_set_alpha(1)
 	draw_set_color($ffffff)
