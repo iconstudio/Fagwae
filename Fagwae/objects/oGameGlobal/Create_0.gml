@@ -1,3 +1,7 @@
+player_layer = layer_get_id("player")
+player_generator = layer_sequence_create(player_layer, SCREEN_W * 0.5, SCREEN_H * 0.5, seqPlayerInit)
+
+
 capture = -1
 
 
