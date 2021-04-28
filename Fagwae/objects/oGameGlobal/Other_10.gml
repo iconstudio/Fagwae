@@ -28,8 +28,8 @@ function do_pause() {
 	global.paused = true
 	global.pause_stack++
 
-	if !layer_sequence_is_finished(player_generator)
-		layer_sequence_pause(player_generator)
+	if player_generator.is_playing()
+		player_generator.pause()
 
 	instance_deactivate_object(oDrawnSprite)
 
@@ -50,8 +50,8 @@ function undo_pause() {
 
 		instance_activate_object(oDrawnSprite)
 
-		if layer_sequence_is_paused(player_generator)
-			layer_sequence_play(player_generator)
+		if player_generator.is_paused()
+			player_generator.play()
 
 	}
 }
