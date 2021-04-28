@@ -17,7 +17,7 @@ move_v_velocity = 0
 move_h_anchor = NONE
 move_v_anchor = NONE
 
-move_angle_max = 8
+move_angle_max = 4
 move_angle_speed = (90)
 
 
@@ -50,7 +50,7 @@ global.pscaleseq = image_xscale
 /// @function cast_shield(time)
 function cast_shield(time) {
 	if !instance_exists(shield) {
-		shield = instance_create_layer(x, y, "player_effect_below", oPlayerShield)
+		shield = instance_create_layer(x, y, "player_shield", oPlayerShield)
 		shield.time = 0
 		shield.period = time
 	} else {
