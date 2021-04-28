@@ -20,17 +20,38 @@ if y < border_v_0 {
 	move_v_velocity = 0
 }
 
+if in_sequence {
+	var out_ax = 17 * global.pscaleseq
+
+	with arm_left {
+		x = global.px - out_ax
+		y = global.py + 3
+	}
+
+	with arm_right {
+		x = global.px + out_ax
+		y = global.py + 3
+	}
+
+	global.pscaleseq = image_xscale
+} else {
+	var out_ax = lengthdir_x(17, image_angle)
+	var out_ay = lengthdir_y(17, image_angle)
+
+	with arm_left {
+		x = other.x - out_ax
+		y = other.y + 3 - out_ay
+	}
+
+	with arm_right {
+		x = other.x + out_ax
+		y = other.y + 3 + out_ay
+	}
+}
+
 
 global.px = x
 global.py = y
-
-
-var out_ax = lengthdir_x(17, image_angle)
-var out_ay = lengthdir_y(17, image_angle)
-arm_left.x = x - out_ax
-arm_left.y = y + 3 - out_ay
-arm_right.x = x + out_ax
-arm_right.y = y + 3 + out_ay
 
 
 if !is_null(hp_aura_seq) {

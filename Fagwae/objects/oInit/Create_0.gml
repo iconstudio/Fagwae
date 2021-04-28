@@ -100,6 +100,7 @@ global.pause_stack = 0
 
 global.px = 0
 global.py = 0
+global.pscaleseq = 1
 global.player_weapon = 0
 
 

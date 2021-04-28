@@ -21,11 +21,15 @@ move_angle_max = 8
 move_angle_speed = (90)
 
 
-arm_layer = layer_get_id("player_arm")
-arm_left = instance_create_layer(x - 2, y + 3, arm_layer, oPlayerArm)
-arm_left.image_angle = 2
-arm_right = instance_create_layer(x + 2, y + 3, arm_layer, oPlayerArm)
-arm_right.image_angle = 358
+arm_prefab = function(x, y, orientation) constructor {
+	this.sprite_index = sPlayerArm
+	this.x = x
+	this.y = y
+	this.image_angle = orientation
+}
+
+arm_left = new arm_prefab(x, y + 3, 2)
+arm_right = new arm_prefab(x, y + 3, 358)
 
 
 aura_layer = layer_get_id("player_effect_below")
@@ -40,6 +44,7 @@ border_v_1 = room_height - 22
 
 global.px = x
 global.py = y
+global.pscaleseq = image_xscale
 
 
 /// @function cast_shield(time)

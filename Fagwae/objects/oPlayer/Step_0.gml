@@ -1,5 +1,5 @@
 /// @description Movements
-if Delta == 0
+if Delta == 0 or in_sequence
 	exit
 
 if 0 < stun_duration {
