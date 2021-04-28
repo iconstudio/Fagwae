@@ -21,19 +21,18 @@ if y < border_v_0 {
 }
 
 if in_sequence {
-	var out_ax = 17 * global.pscaleseq
+	var out_ax = 17 * image_xscale
+	var out_ay = 3 * image_yscale
 
 	with arm_left {
 		x = global.px - out_ax
-		y = global.py + 3
+		y = global.py + out_ay
 	}
 
 	with arm_right {
 		x = global.px + out_ax
-		y = global.py + 3
+		y = global.py + out_ay
 	}
-
-	global.pscaleseq = image_xscale
 } else {
 	var out_ax = lengthdir_x(17, image_angle)
 	var out_ay = lengthdir_y(17, image_angle)

@@ -12,7 +12,7 @@ if global.io_crawl and !in_sequence
 
 var xscale = image_xscale, yscale = image_xscale
 with arm_left
-	draw_sprite_ext(sprite_index, 0, x, y, xscale,yscale, image_angle, $ffffff, 1)
+	draw_sprite_ext(sprite_index, 0, x, y, xscale, yscale, image_angle, $ffffff, 1)
 with arm_right
-	draw_sprite_ext(sprite_index, 0, x, y, xscale,yscale, image_angle, $ffffff, 1)
+	draw_sprite_ext(sprite_index, 0, x, y, xscale, yscale, image_angle, $ffffff, 1)
 
