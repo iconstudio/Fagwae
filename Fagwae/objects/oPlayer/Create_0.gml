@@ -1,5 +1,5 @@
 hp = 3
-shield = null
+shield = -1
 stun_duration = 0
 
 
@@ -49,17 +49,22 @@ global.pscaleseq = image_xscale
 
 /// @function cast_shield(time)
 function cast_shield(time) {
-	if is_null(shield) {
+	if !instance_exists(shield) {
 		shield = instance_create_layer(x, y, "player_effect_below", oPlayerShield)
-		shield.duration = time
+		shield.time = 0
+		shield.period = time
 	} else {
-		shield.duration = max(shield.duration, time)
+		shield.time = 0
+		shield.period = max(shield.period, time)
 	}
 }
 
 
 /// @function got_damage(amount=1)
 function got_damage() {
+	if instance_exists(shield)
+		exit
+
 	var amount = 1
 	if 0 < argument_count
 		amount = argument[0]
