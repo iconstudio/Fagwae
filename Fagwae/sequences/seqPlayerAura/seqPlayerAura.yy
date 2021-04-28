@@ -486,8 +486,8 @@
   },
   "eventStubScript": null,
   "parent": {
-    "name": "Graphics",
-    "path": "folders/Game/Player/Graphics.yy",
+    "name": "Player",
+    "path": "folders/Game/Player.yy",
   },
   "resourceVersion": "1.3",
   "name": "seqPlayerAura",
