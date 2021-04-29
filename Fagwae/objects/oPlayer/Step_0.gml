@@ -10,6 +10,18 @@ if 0 < stun_duration {
 }
 
 
+if global.io_attack {
+	if attacking {
+		
+	} else { // start
+		attacking = true
+	}
+} else {
+	if attacking {
+		
+	}
+}
+
 
 
 

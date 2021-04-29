@@ -13,9 +13,10 @@ attack_type_normal = {
 		var bull_r = instance_create_layer(x + 17, y + 3, "player_bullet", oPlayerBullet)
 		bull_r.vspeed = attack_bullet_vspeed
 	}),
-	duration: 0.5
+	period: 0.5
 }
 
+attacking = false
 attack_method = attack_type_normal
 attack_time = 0
 attack_period = 0.5
