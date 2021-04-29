@@ -1,9 +1,12 @@
 /// @description Update game process
+global.io_attack = global.key_attack.check()
 global.io_crawl = global.key_crawl.check()
 
-global.io_p_attack = global.key_attack.check_pressed()
+//global.io_p_attack = global.key_attack.check_pressed()
 global.io_p_bomb = global.key_bomb.check_pressed()
 global.io_p_pause = global.key_pause.check_pressed()
+
+//global.io_r_attack = global.key_attack.check_released()
 
 
 if global.paused {

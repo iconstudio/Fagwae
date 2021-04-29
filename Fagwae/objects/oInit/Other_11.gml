@@ -45,3 +45,4 @@ global.io_r_left = false
 global.io_r_right = false
 global.io_r_up = false
 global.io_r_down = false
+global.io_r_attack = false
