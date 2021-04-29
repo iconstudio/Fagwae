@@ -26,6 +26,7 @@ global.io_up = false
 global.io_down = false
 global.io_confirm = false
 global.io_back = false
+global.io_attack = false
 global.io_crawl = false
 
 

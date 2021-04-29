@@ -1,6 +1,28 @@
 hp = 3
+damage = 30
+
 shield = -1
 stun_duration = 0
+
+
+attack_bullet_vspeed = -20
+attack_type_normal = {
+	shot: method(other, function(shoot_count) {
+		var bull_l = instance_create_layer(x - 17, y + 3, "player_bullet", oPlayerBullet)
+		bull_l.vspeed = attack_bullet_vspeed
+		var bull_r = instance_create_layer(x + 17, y + 3, "player_bullet", oPlayerBullet)
+		bull_r.vspeed = attack_bullet_vspeed
+	}),
+	duration: 0.5
+}
+
+attack_method = attack_type_normal
+attack_time = 0
+attack_period = 0.5
+attack_rep_time = 0
+attack_rep_period = attack_period
+attack_rep_count = 0
+attack_rep_count_max = 5
 
 
 // can use realforce
@@ -72,6 +94,7 @@ function got_damage() {
 	if 0 < amount {
 		hp -= amount
 		stun_duration = amount * 0.3
+
 		if 0 < hp {
 			event_user(1)
 		} else {
