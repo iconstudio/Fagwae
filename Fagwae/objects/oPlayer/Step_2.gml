@@ -21,31 +21,21 @@ if y < border_v_0 {
 }
 
 if in_sequence {
-	var out_ax = 17 * image_xscale
-	var out_ay = 3 * image_yscale
+	out_ax = 17 * image_xscale
+	out_ay = 3 * image_yscale
 
-	with arm_left {
-		x = global.px - out_ax
-		y = global.py + out_ay
-	}
-
-	with arm_right {
-		x = global.px + out_ax
-		y = global.py + out_ay
-	}
+	arm_left.x = x - out_ax
+	arm_left.y = y + out_ay
+	arm_right.x = x + out_ax
+	arm_right.y = y + out_ay
 } else {
-	var out_ax = lengthdir_x(17, image_angle)
-	var out_ay = lengthdir_y(17, image_angle)
+	out_ax = lengthdir_x(17, image_angle)
+	out_ay = lengthdir_y(17, image_angle)
 
-	with arm_left {
-		x = other.x - out_ax
-		y = other.y + 3 - out_ay
-	}
-
-	with arm_right {
-		x = other.x + out_ax
-		y = other.y + 3 + out_ay
-	}
+	arm_left.x = x - out_ax
+	arm_left.y = y + 3 - out_ay
+	arm_right.x = x + out_ax
+	arm_right.y = y + 3 + out_ay
 }
 
 

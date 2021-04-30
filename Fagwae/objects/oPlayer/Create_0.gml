@@ -5,7 +5,7 @@ shield = -1
 stun_duration = 0
 
 
-attack_bullet_vspeed = -20
+attack_bullet_speed = 20
 attack_type_normal = {
 	shot: method(other, function(shoot_count) {
 		var bull_l = instance_create_layer(x - 17, y + 3, "player_bullet", oPlayerBullet)
@@ -18,12 +18,15 @@ attack_type_normal = {
 
 attacking = false
 attack_method = attack_type_normal
+
 attack_time = 0
 attack_period = 0.5
+
+attack_frame = 0
 attack_rep_time = 0
-attack_rep_period = attack_period
+attack_rep_period = 0.04
 attack_rep_count = 0
-attack_rep_count_max = 5
+attack_rep_count_max = 4
 
 
 // can use realforce
@@ -49,10 +52,14 @@ arm_prefab = function(x, y, orientation) constructor {
 	this.x = x
 	this.y = y
 	this.image_angle = orientation
+	this.angle = orientation
 }
 
+arm_angle_speed = realforce(70)
 arm_left = new arm_prefab(x, y + 3, 2)
 arm_right = new arm_prefab(x, y + 3, 358)
+out_ax = 17
+out_ay = 0
 
 
 aura_layer = layer_get_id("player_effect_below")

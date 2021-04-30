@@ -5,6 +5,20 @@ function bezier4(x1, x2, x3, x4, t) {
 }
 
 
+/// @description get_rotation_next(current, destination, increment)
+/// @function get_rotation_next
+/// @param current { real }
+/// @param target { real }
+/// @param addition { real }
+function get_rotation_next(current, destination, increment) {
+	while destination < 0
+		destination += 360
+	while 360 <= destination
+		destination -= 360
+	return clamp(-angle_difference(current, destination), -increment, increment)
+}
+
+
 /// https://eatchangmyeong.github.io/2021/04/29/how-i-made-honeyhouse.html
 function contrast_ratio(lhs, rhs) {
 	var

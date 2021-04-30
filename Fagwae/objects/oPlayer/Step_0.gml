@@ -10,19 +10,78 @@ if 0 < stun_duration {
 }
 
 
-if global.io_attack {
-	if attacking {
-		
-	} else { // start
-		attacking = true
+var angle_arm_left, angle_arm_right
+if global.io_crawl {
+	if move_h_anchor == RIGHT {
+		angle_arm_left = -2
+		angle_arm_right = -3
+	} elif move_h_anchor == LEFT {
+		angle_arm_left = 3
+		angle_arm_right = 2
+	} else {
+		angle_arm_left = 0
+		angle_arm_right = 0
 	}
+} else if move_h_anchor == RIGHT {
+	angle_arm_left = 1
+	angle_arm_right = -6
+} else if move_h_anchor == LEFT {
+	angle_arm_left = 6
+	angle_arm_right = -1
 } else {
-	if attacking {
-		
-	}
+	angle_arm_left = 3
+	angle_arm_right = -3
+}
+
+with arm_left {
+	angle += get_rotation_next(angle, angle_arm_left, other.arm_angle_speed)
+
+	image_angle = angle + other.image_angle
+}
+with arm_right {
+	angle += get_rotation_next(angle, angle_arm_right, other.arm_angle_speed)
+
+	image_angle = angle + other.image_angle
 }
 
 
+if global.io_attack {
+	attack_rep_count = attack_rep_count_max
+
+	if !attacking { // start
+		attacking = true
+	}
+} else {
+}
+
+if attacking {
+	if attack_rep_time < attack_rep_period {
+		attack_rep_time += Delta
+	} else {
+		if 0 < attack_rep_count {
+			var blt, sangle = 90 + image_angle
+			blt = instance_create_layer(x + out_ax + lengthdir_x(40, sangle + angle_arm_right), y + 3 + out_ay + lengthdir_y(40, sangle + angle_arm_right), "player_bullet", oPlayerBullet)
+			blt.direction = 90 + angle_arm_right
+			blt.image_angle = blt.direction
+			blt.image_index = attack_frame
+			blt.speed = attack_bullet_speed
+
+			blt = instance_create_layer(x - out_ax + lengthdir_x(40, sangle + angle_arm_left), y + 3 - out_ay + lengthdir_y(40, sangle + angle_arm_left), "player_bullet", oPlayerBullet)
+			blt.direction = 90 + angle_arm_left
+			blt.image_angle = blt.direction
+			blt.image_index = attack_frame
+			blt.speed = attack_bullet_speed
+
+			//audio_play_sound(soundShotPlayer, 5, false)
+		} else {
+			attacking = false
+		}
+
+		attack_rep_count--
+		attack_frame = (++attack_frame) mod 4
+		attack_rep_time = 0
+	}
+}
 
 
 var was_left = (move_h_anchor == LEFT)
@@ -138,33 +197,6 @@ if move_h_velocity != 0 {
 } else {
 	image_angle -= image_angle * 0.05
 }
-
-
-var angle_arm_left, angle_arm_right
-if global.io_crawl {
-	if move_h_anchor == RIGHT {
-		angle_arm_left = 6
-		angle_arm_right = -4
-	} elif move_h_anchor == LEFT {
-		angle_arm_left = -4
-		angle_arm_right = 6
-	} else {
-		angle_arm_left = 1
-		angle_arm_right = 1
-	}
-} else if move_h_anchor == RIGHT {
-	angle_arm_left = 0
-	angle_arm_right = 6
-} else if move_h_anchor == LEFT {
-	angle_arm_left = 6
-	angle_arm_right = 0
-} else {
-	angle_arm_left = 2
-	angle_arm_right = 2
-}
-
-arm_left.image_angle = angle_arm_left + image_angle
-arm_right.image_angle = -angle_arm_right + image_angle
 
 
 if move_v_velocity != 0 {
