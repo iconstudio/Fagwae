@@ -19,9 +19,6 @@ attack_type_normal = {
 attacking = false
 attack_method = attack_type_normal
 
-attack_time = 0
-attack_period = 0.5
-
 attack_frame = 0
 attack_rep_time = 0
 attack_rep_period = 0.04

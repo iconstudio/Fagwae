@@ -73,11 +73,11 @@ if attacking {
 			blt.speed = attack_bullet_speed
 
 			//audio_play_sound(soundShotPlayer, 5, false)
+			attack_rep_count--
 		} else {
 			attacking = false
 		}
 
-		attack_rep_count--
 		attack_frame = (++attack_frame) mod 4
 		attack_rep_time = 0
 	}
