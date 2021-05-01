@@ -51,7 +51,6 @@ if global.io_attack {
 	if !attacking { // start
 		attacking = true
 	}
-} else {
 }
 
 if attacking {
