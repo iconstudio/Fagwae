@@ -14,3 +14,7 @@ key_pin_period_short = 0.1
 key_pin_period_long = 0.5
 key_pinned = NONE
 
+
+function shake(amplitude) {
+	
+}

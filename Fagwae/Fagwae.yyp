@@ -105,9 +105,9 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"roomInit","path":"rooms/roomInit/roomInit.yy",},},
     {"roomId":{"name":"roomLoading","path":"rooms/roomLoading/roomLoading.yy",},},
-    {"roomId":{"name":"roomGame","path":"rooms/roomGame/roomGame.yy",},},
     {"roomId":{"name":"roomIntro","path":"rooms/roomIntro/roomIntro.yy",},},
     {"roomId":{"name":"roomMain","path":"rooms/roomMain/roomMain.yy",},},
+    {"roomId":{"name":"roomGame","path":"rooms/roomGame/roomGame.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/System/Intro.yy","order":9,"resourceVersion":"1.0","name":"Intro","tags":[],"resourceType":"GMFolder",},

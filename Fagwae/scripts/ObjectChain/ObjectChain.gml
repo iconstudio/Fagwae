@@ -24,7 +24,6 @@ function ArmDataCoord(ax, ay) {
 
 function Arm(attach, instance, coord_data) constructor {
 	this.mother = attach
-	this.id = instance
 	this.layer = instance.layer
 
 	if is_struct(coord_data) {
