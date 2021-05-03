@@ -1,4 +1,7 @@
 /// @description Drawing UIs
+var score_string = string(score_indicate)
+
+
 if global.paused {
 	//draw_set_alpha(0.5)
 	//draw_set_color($0)
