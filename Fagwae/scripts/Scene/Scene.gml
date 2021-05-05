@@ -31,7 +31,7 @@ function Scene(sequence) constructor {
 	this.direction = layer_sequence_get_headdir(_Data)
 
  
-	function set_coordinate(x, y) {
+	static set_coordinate = function(x, y) {
 		layer_sequence_x(_Data, x)
 		layer_sequence_y(_Data, y)
 
@@ -40,52 +40,52 @@ function Scene(sequence) constructor {
 	}
 
 
-	function set_x(value) {
+	static set_x = function(value) {
 		layer_sequence_x(_Data, value)
 
 		x = value
 	}
 
 
-	function set_y(value) {
+	static set_y = function(value) {
 		layer_sequence_y(_Data, value)
 
 		y = value
 	}
 
 
-	function set_loop(mode) {
+	static set_loop = function(mode) {
 		_RawData.loopmode = mode
 	}
 
 
-	function set_orientation(angle) {
+	static set_orientation = function(angle) {
 		layer_sequence_angle(_Data, angle)
 	}
 
 
-	function set_xscale(scale) {
+	static set_xscale = function(scale) {
 		layer_sequence_xscale(_Data, scale)
 	}
 
 
-	function set_yscale(scale) {
+	static set_yscale = function(scale) {
 		layer_sequence_yscale(_Data, scale)
 	}
 
 
-	function set_speed(value) {
+	static set_speed = function(value) {
 		speed = value
 		layer_sequence_speedscale(_Data, value)
 	}
 
 
-	function seek(frame) {
+	static seek = function(frame) {
 		layer_sequence_headpos(_Data, frame)
 	}
 
 
-	function play() {
+	static play = function() {
 		if stopped {
 			if direction == seqdir_left
 				layer_sequence_headpos(_Data, layer_sequence_get_length(_Data))
@@ -98,24 +98,24 @@ function Scene(sequence) constructor {
 	}
 
 
-	function pause() {
+	static pause = function() {
 		layer_sequence_pause(_Data)
 	}
 
 
-	function stop() {
+	static stop = function() {
 		layer_sequence_pause(_Data)
 		stopped = true
 	}
 
 
-	function restart() {
+	static restart = function() {
 		stop()
 		play()
 	}
 
 
-	function rewind() {
+	static rewind = function() {
 		stopped = false
 		direction *= -1
 		layer_sequence_headdir(_Data, direction)
@@ -123,27 +123,27 @@ function Scene(sequence) constructor {
 	}
 
 
-	function destroy() {
+	static destroy = function() {
 		layer_sequence_destroy(_Data)
 	}
 
 
-	function get_length() {
+	static get_length = function() {
 		return layer_sequence_get_length(_Data)
 	}
 
 
-	function is_finished() {
+	static is_finished = function() {
 		return layer_sequence_is_finished(_Data)
 	}
 
 
-	function is_paused() {
+	static is_paused = function() {
 		return layer_sequence_is_paused(_Data)
 	}
 
 
-	function is_playing() {
+	static is_playing = function() {
 		return !layer_sequence_is_finished(_Data) and !layer_sequence_is_paused(_Data)
 	}
 }
