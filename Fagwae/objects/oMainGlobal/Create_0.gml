@@ -15,7 +15,7 @@ menus = new List([
 	new pause_menu(null, null)
 ])
 
-menu_size = pause_menus.get_size()
+menu_size = main_menu.get_size()
 
 
 
