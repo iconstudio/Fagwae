@@ -16,7 +16,6 @@ function Trigger(data) constructor {
 	this.data = data
 	this.promise_type = Promise
 	this.promise = null
-
 	this.predicate = null
 
 
