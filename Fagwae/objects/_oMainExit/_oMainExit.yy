@@ -5,8 +5,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "oMainMenu",
-    "path": "objects/oMainMenu/oMainMenu.yy",
+    "name": "_oMainMenu",
+    "path": "objects/_oMainMenu/_oMainMenu.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -31,7 +31,7 @@
     "path": "folders/System/Main Screen.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oMainExit",
+  "name": "_oMainExit",
   "tags": [],
   "resourceType": "GMObject",
 }
