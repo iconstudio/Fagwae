@@ -32,7 +32,7 @@
     "path": "folders/System/Main Screen.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oMainMenu",
+  "name": "_oMainMenu",
   "tags": [],
   "resourceType": "GMObject",
 }

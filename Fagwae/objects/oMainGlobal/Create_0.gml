@@ -1,7 +1,15 @@
 OPENING = 0
+NORMAL = 10
 GAME_START = 50
+FADEIN = 79
 FADEOUT = 80
 QUIT = 99
+mode = OPENING
+
+fadeout_time = 0 
+fadeout_period = 1.2
+fadein_time = 0 
+fadein_period = 1.4
 
 
 main_menu = function(indicator, predicate) constructor {
@@ -12,12 +20,18 @@ main_menu = function(indicator, predicate) constructor {
 
 
 menus = new List([
-	new pause_menu(null, null)
+	new main_menu(null, null)
 ])
 
 menu_size = main_menu.get_size()
 
 
+key_anchor = NONE
+key_pin_stop = false
+key_pin_duration = -1
+key_pin_period_short = 0.1
+key_pin_period_long = 0.5
+key_pinned = NONE
 
 
 draw_set_color($ffffff)
