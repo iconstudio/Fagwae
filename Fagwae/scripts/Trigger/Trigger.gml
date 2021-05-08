@@ -1,9 +1,6 @@
 /// @function Promise(trigger)
 function Promise(target) constructor {
 	this.target = target
-
-	this.init = null
-	this.dest = null
 	this.result = null
 
 	static get = function() {
@@ -12,11 +9,39 @@ function Promise(target) constructor {
 }
 
 
-function Trigger(data) constructor {
+function Trigger(duration, data, predicate) constructor {
+	this.time = 0
+	this.period = duration
 	this.data = data
 	this.promise_type = Promise
 	this.promise = null
-	this.predicate = null
+	this.predicate = predicate
+
+
+	static clear = function() {
+		time = 0
+		if !is_null(promise) {
+			promise.result = null
+		}
+	}
+
+
+	static update = function() {
+		var Ratio = time / period
+		if time < period {
+			time += Delta
+		}
+		return Ratio
+	}
+
+
+	static execute = function() {
+		var Result = predicate()
+		if !is_null(promise) {
+			promise.result = Result
+		}
+		return Result
+	}
 
 
 	static make_promise = function() {
@@ -31,7 +56,7 @@ function Trigger(data) constructor {
 function InstanceCreatePromise(target): Promise(target) constructor {
 }
 
-
+/*
 /// @function InstanceCreateTrigger(object, layer, x, y)
 function InstanceCreateTrigger(object, layer, x, y): Trigger([object, layer, x, y]) constructor {
 	this.promise_type = InstanceCreatePromise
