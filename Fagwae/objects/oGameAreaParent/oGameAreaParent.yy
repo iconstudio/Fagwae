@@ -26,8 +26,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Game",
-    "path": "folders/Game.yy",
+    "name": "Area",
+    "path": "folders/Game/Area.yy",
   },
   "resourceVersion": "1.0",
   "name": "oGameAreaParent",

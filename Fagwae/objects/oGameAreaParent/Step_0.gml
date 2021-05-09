@@ -8,6 +8,4 @@ if !is_null(trigger_current) {
 
 		trigger_current.execute()
 	}
-} elif !triggers.is_empty() {
-	trigger_current = triggers.at(0)
 }
