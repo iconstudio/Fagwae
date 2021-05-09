@@ -81,6 +81,7 @@
     {"id":{"name":"sIntroFrame","path":"sprites/sIntroFrame/sIntroFrame.yy",},"order":1,},
     {"id":{"name":"fontMainMenuEntry","path":"fonts/fontMainMenuEntry/fontMainMenuEntry.yy",},"order":4,},
     {"id":{"name":"Algorithm","path":"scripts/Algorithm/Algorithm.yy",},"order":0,},
+    {"id":{"name":"introduction","path":"notes/introduction/introduction.yy",},"order":5,},
     {"id":{"name":"_oMainMenu","path":"objects/_oMainMenu/_oMainMenu.yy",},"order":2,},
     {"id":{"name":"sIntroLabel1","path":"sprites/sIntroLabel1/sIntroLabel1.yy",},"order":4,},
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"order":7,},
