@@ -44,6 +44,26 @@ function relative_luminance(color) {
 }
 
 
+/// @function trace
+function trace() {
+	var Count = argument_count
+	if Count == 0 {
+		exit
+	} elif Count == 1 {
+		show_debug_message(argument[0])
+		exit
+	}
+
+
+	var Result = ""
+	for (var i = 0; i < Count; ++i) {
+		Result += string(argument[i])
+	}
+
+	show_debug_message(Result)
+}
+
+
 /// @function duet
 function duet(condition, value_true, value_false) {
 	return condition ? value_true : value_false

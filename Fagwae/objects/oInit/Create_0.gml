@@ -6,8 +6,7 @@ global.__delta = 0
 global.__delta_scale = 1
 
 
-#macro print show_debug_message
-#macro trace show_debug_message
+#macro print trace
 #macro null undefined
 #macro is_null is_undefined
 #macro elif else if
@@ -90,8 +89,10 @@ keyboard_set_map(vk_numpad5, vk_enter)
 
 
 // Game
-global.area_names = ["Shape", "Frame", "Disorted"]
-global.area_title = global.area_names[0]
+enum AREA_INDEXES { SHAPE, FRAME, DISORTED }
+globalvar AREA_NAMES
+AREA_NAMES = ["Shape", "Frame", "Disorted"]
+global.area_title = AREA_NAMES[0]
 
 
 global.paused = false
