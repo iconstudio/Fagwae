@@ -47,8 +47,8 @@
   "canGenerateBitmap": true,
   "maintainGms1Font": false,
   "parent": {
-    "name": "Loading",
-    "path": "folders/System/Loading.yy",
+    "name": "Graphics",
+    "path": "folders/System/Graphics.yy",
   },
   "resourceVersion": "1.0",
   "name": "fontLoading",

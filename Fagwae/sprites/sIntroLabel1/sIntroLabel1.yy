@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Intro",
-    "path": "folders/System/Intro.yy",
+    "name": "Graphics",
+    "path": "folders/System/Graphics.yy",
   },
   "resourceVersion": "1.0",
   "name": "sIntroLabel1",

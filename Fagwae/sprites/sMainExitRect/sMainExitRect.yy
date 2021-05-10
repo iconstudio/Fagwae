@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Main Screen",
-    "path": "folders/System/Main Screen.yy",
+    "name": "Graphics",
+    "path": "folders/System/Graphics.yy",
   },
   "resourceVersion": "1.0",
   "name": "sMainExitRect",
