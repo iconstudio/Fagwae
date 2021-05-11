@@ -3,7 +3,7 @@ y = SCREEN_H * 0.2
 
 
 cp_project_enter_x = SCREEN_W * 0.5
-cp_project_enter_y = SCREEN_H * 0.5
+cp_project_enter_y = SCREEN_H * 0.36
 cp_project_enter_time = 0
 cp_project_enter_period = 0.6
 cp_project_enter_paa_time = 0

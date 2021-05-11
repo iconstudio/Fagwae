@@ -1,6 +1,12 @@
 if cp_project_enter_time < cp_project_enter_paa_period {
 	cp_project_enter_time += Delta
-} elif cp_project_enter_paa_time < cp_project_enter_paa_period {
+	if cp_project_enter_paa_period <= cp_project_enter_time {
+		
+	}
+}
+
+
+if cp_project_enter_paa_time < cp_project_enter_paa_period {
 	cp_project_enter_paa_time += Delta
 } elif cp_project_fold_time < cp_project_fold_period {
 	if cp_project_rotate_time < cp_project_rotate_period {
