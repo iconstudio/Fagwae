@@ -47,3 +47,4 @@ function score_add(value) {
 		}
 	}
 }
+

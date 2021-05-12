@@ -1,11 +1,11 @@
 /// @function seconds(time)
 function seconds(time) {
-	return time * room_speed
+	return time * GAME_FPS
 }
 
 
 /// @function realforce(speed)
 function realforce(Speed) {
-	return Speed / room_speed
+	return Speed / GAME_FPS
 }
 

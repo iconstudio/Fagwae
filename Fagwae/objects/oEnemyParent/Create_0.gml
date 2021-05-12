@@ -27,3 +27,9 @@ function got_damage() {
 	}
 }
 
+
+/// @function destroy()
+function destroy() {
+	instance_destroy()
+	event_user(15)
+}

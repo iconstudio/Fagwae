@@ -1,6 +1,7 @@
 /// @description Initialize game
 // General
-game_set_speed(100, gamespeed_fps)
+#macro GAME_FPS 100
+game_set_speed(GAME_FPS, gamespeed_fps)
 randomize()
 global.__delta = 0
 global.__delta_scale = 1
@@ -70,6 +71,26 @@ global.wave_uniform_amplitude = shader_get_uniform(shaderShockwave, "shock_ampli
 global.wave_uniform_refraction = shader_get_uniform(shaderShockwave, "shock_refraction")
 // 파도의 너비
 global.wave_uniform_size = shader_get_uniform(shaderShockwave, "shock_width")
+
+
+// Effects
+global.ptsystem_top = part_system_create_layer("effect_above")
+global.ptsystem_player = part_system_create_layer("player_effect")
+global.ptsystem_player_below = part_system_create_layer("player_effect_below")
+global.ptsystem_enemy = part_system_create_layer("enemy_effect")
+global.ptsystem_bottom = part_system_create_layer("effect_below")
+
+// White Smoke
+global.pttype_smoke_normal = part_type_create()
+part_type_shape(global.pttype_smoke_normal, pt_shape_disk)
+part_type_size(global.pttype_smoke_normal, 0.70, 0.80, 0, 0.06)
+part_type_orientation(global.pttype_smoke_normal, 0, 0, 0, 0, true)
+part_type_color3(global.pttype_smoke_normal, $FFFFFF, $D2D2D2, $000000)
+part_type_alpha3(global.pttype_smoke_normal, 1, 1, 0)
+part_type_blend(global.pttype_smoke_normal, false)
+part_type_life(global.pttype_smoke_normal, seconds(0.1), seconds(0.2))
+part_type_speed(global.pttype_smoke_normal, 420 / GAME_FPS, 600 / GAME_FPS, 0, 0)
+part_type_direction(global.pttype_smoke_normal, 0, 360, 0, 4)
 
 
 // UX
