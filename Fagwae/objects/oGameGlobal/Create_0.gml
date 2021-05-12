@@ -31,5 +31,19 @@ function score_add(value) {
 		score_indicate = max(score_indicate - value, 0)
 	} else if 0 < value {
 		score_indicate += value
+
+
+		if value < 10 {
+			var i = 0
+			
+		} else {
+			
+
+			var ValueMod = value mod 10
+			do {
+				value = value div 10
+				ValueMod = value mod 10
+			} until (ValueMod == 0)
+		}
 	}
 }
