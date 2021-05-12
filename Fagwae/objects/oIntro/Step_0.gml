@@ -18,7 +18,7 @@ if cp_project_enter_paa_time < cp_project_enter_paa_period {
 
 	cp_project_fold_time += Delta
 } else {
-	
+	room_goto_next()
 }
 
 
