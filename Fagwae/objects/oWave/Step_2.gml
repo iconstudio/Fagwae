@@ -5,10 +5,8 @@ size_previous = size_newer * ease_out_quad(wave_ratio)
 size_origin = size_newer * (wave_ratio)
 
 if wave_time < wave_period {
-	wave_time++
+	event_user(0)
+	wave_time += Delta
 } else {
 	instance_destroy()
-	exit
 }
-
-event_user(0)

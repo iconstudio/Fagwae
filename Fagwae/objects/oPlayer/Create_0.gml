@@ -1,8 +1,9 @@
 hp = 3
 damage = 30
 
-shield = -1
-stun_duration = 0
+shield = noone
+shield_duration = -1 // steps
+stun_duration = 0 // real seconds
 
 
 attack_bullet_speed = 20
@@ -71,25 +72,22 @@ border_v_1 = room_height - 22
 
 global.px = x
 global.py = y
-global.pscaleseq = image_xscale
 
 
 /// @function cast_shield(time)
 function cast_shield(time) {
 	if !instance_exists(shield) {
 		shield = instance_create_layer(x, y, "player_shield", oPlayerShield)
-		shield.time = 0
-		shield.period = time
+		shield_duration = time
 	} else {
-		shield.time = 0
-		shield.period = max(shield.period, time)
+		shield_duration = max(shield_duration, time)
 	}
 }
 
 
 /// @function got_damage(amount=1)
 function got_damage() {
-	if instance_exists(shield)
+	if 0 < shield_duration
 		exit
 
 	var amount = 1

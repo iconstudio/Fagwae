@@ -2,6 +2,14 @@
 if Delta == 0 or in_sequence
 	exit
 
+
+if 0 < shield_duration {
+	shield_duration-- // Because of good experience for player
+} else {
+	
+}
+
+
 if 0 < stun_duration {
 	stun_duration -= Delta // Because of good experience for player
 	exit
