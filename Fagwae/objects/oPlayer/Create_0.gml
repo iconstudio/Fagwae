@@ -101,11 +101,17 @@ function got_damage() {
 		stun_duration = amount * 0.3
 
 		if 0 < hp {
-			event_user(1)
+			hurt()
 		} else {
-			event_user(0)
+			destroy()
 		}
 	}
+}
+
+
+/// @function hurt()
+function hurt() {
+	cast_shield(3)
 }
 
 

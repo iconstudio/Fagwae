@@ -1,8 +1,11 @@
 name = ""
 
+
 invincible = 0
+blink = 0 // 0 ~ 1
 hpmax = 1
 hp = hpmax
+
 
 damage = 1 // collision damage
 
