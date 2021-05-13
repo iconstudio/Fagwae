@@ -2,9 +2,9 @@ player_generator = new Scene(seqPlayerInit, SCREEN_W * 0.5, SCREEN_H * 0.5, "pla
 
 
 // the score
-virtual_score = ["0"]
+actual_score = ["0"]
 // string to number
-score_indicate = 0
+virtual_score = 0
 
 
 capture = -1
@@ -28,14 +28,26 @@ function shake(amplitude) {
 
 function score_add(value) {
 	if value < 0 {
-		score_indicate = max(score_indicate - value, 0)
+		//virtual_score = max(virtual_score - value, 0)
 	} else if 0 < value {
-		score_indicate += value
+		virtual_score += value
 
 
 		if value < 10 {
-			var i = 0
-			
+			for (var i = 0; 0 < value; ++i) {
+				var NewValue = real(actual_score[i]) + value
+				if NewValue < 10 {
+					actual_score[i] = string(NewValue)
+				} else {
+					var UpValue = NewValue - 10
+					if array_length(actual_score) <= i {
+					
+					} else {
+						actual_score[i + 1] += UpValue
+					}
+					value -= UpValue
+				}
+			}
 		} else {
 			
 

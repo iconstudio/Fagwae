@@ -129,6 +129,11 @@ AREA_NAMES = ["Shape", "Frame", "Disorted"]
 global.area_title = AREA_NAMES[0]
 
 
+globalvar actual_score, virtual_score
+actual_score = null
+virtual_score = null
+
+
 global.paused = false
 global.pause_stack = 0
 
