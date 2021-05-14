@@ -6,20 +6,8 @@ shield_duration = -1 // steps
 stun_duration = 0 // real seconds
 
 
-attack_bullet_speed = 20
-attack_type_normal = {
-	shot: method(other, function(shoot_count) {
-		var bull_l = instance_create_layer(x - 17, y + 3, "player_bullet", oPlayerBullet)
-		bull_l.vspeed = attack_bullet_vspeed
-		var bull_r = instance_create_layer(x + 17, y + 3, "player_bullet", oPlayerBullet)
-		bull_r.vspeed = attack_bullet_vspeed
-	}),
-	period: 0.5
-}
-
 attacking = false
-attack_method = attack_type_normal
-
+attack_bullet_speed = 20
 attack_frame = 0
 attack_rep_time = 0
 attack_rep_period = 0.04
@@ -40,6 +28,7 @@ move_h_velocity = 0
 move_v_velocity = 0
 move_h_anchor = NONE
 move_v_anchor = NONE
+
 
 move_angle_max = 4
 move_angle_speed = (90)
