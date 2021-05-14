@@ -2,7 +2,7 @@ player_generator = new Scene(seqPlayerInit, SCREEN_W * 0.5, SCREEN_H * 0.5, "pla
 
 
 // the score
-actual_score = ["0"]
+actual_score = [0]
 // string to number
 virtual_score = 0
 
@@ -33,30 +33,27 @@ function score_add(value) {
 		virtual_score += value
 
 
-		if value < 10 {
-			for (var i = 0; 0 < value; ++i) {
-				var NewValue = real(actual_score[i]) + value
-				if NewValue < 10 {
-					actual_score[i] = string(NewValue)
-				} else {
-					var UpValue = NewValue - 10
-					if array_length(actual_score) <= i {
-					
-					} else {
-						actual_score[i + 1] += UpValue
-					}
-					value -= UpValue
-				}
-			}
-		} else {
-			
+		var i = 0, ValueMod = value mod 10, Temp = 0, Upper = 0
 
-			var ValueMod = value mod 10
-			do {
-				value = value div 10
-				ValueMod = value mod 10
-			} until (ValueMod == 0)
-		}
+		do {
+			if array_length(actual_score) <= i {
+				Temp = (actual_score[i]) + ValueMod
+				if 10 <= Temp {
+					Upper = Temp div 10
+					actual_score[i] = (Temp - Upper * 10)
+					actual_score[i + 1] += (Upper)
+					i++
+				} else {
+					actual_score[i++] = ValueMod
+				}
+			} else {
+				array_push(actual_score, (ValueMod))
+			}
+
+
+			value = value div 10
+			ValueMod = value mod 10
+		} until (ValueMod == 0)
 	}
 }
 
