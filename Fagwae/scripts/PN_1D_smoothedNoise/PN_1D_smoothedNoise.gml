@@ -1,5 +1,5 @@
 /// @function PN_1D_smoothedNoise(x, seed, wavelength, scale)
-function PN_1D_smoothedNoise(position, argument1, argument2, argument3) {
-	var factor = (position / argument2) * argument3
-	return PN_1D_noise(factor, argument1) * 0.5 + PN_1D_noise(factor - 1, argument1) * 0.25 + PN_1D_noise(factor + 1, argument1) * 0.25
+function PN_1D_smoothedNoise(position, seed, wavelength, scale) {
+	var factor = (position / wavelength) * scale
+	return PN_1D_noise(factor, seed) * 0.5 + PN_1D_noise(factor - 1, seed) * 0.25 + PN_1D_noise(factor + 1, seed) * 0.25
 }
