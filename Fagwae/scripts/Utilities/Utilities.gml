@@ -49,7 +49,7 @@ function trace() {
 	var Count = argument_count
 	if Count == 0 {
 		exit
-	} elif Count == 1 {
+	} else if Count == 1 {
 		show_debug_message(argument[0])
 		exit
 	}
