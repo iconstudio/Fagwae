@@ -18,8 +18,3 @@ function fag_input(keys) constructor {
 		return my_keys.any_of(0, size, keyboard_check_released)
 	}
 }
-
-
-function delta_scale(scale) {
-	global.__delta_scale = scale
-}
