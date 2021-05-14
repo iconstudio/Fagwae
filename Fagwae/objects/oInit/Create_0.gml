@@ -83,11 +83,13 @@ global.wave_uniform_size = shader_get_uniform(shaderShockwave, "shock_width")
 
 
 #region Effects
-global.ptsystem_top = part_system_create_layer("effect_above")
-global.ptsystem_player = part_system_create_layer("player_effect")
-global.ptsystem_player_below = part_system_create_layer("player_effect_below")
-global.ptsystem_enemy = part_system_create_layer("enemy_effect")
-global.ptsystem_bottom = part_system_create_layer("effect_below")
+#macro ENEMY_BINK_DURATION 0.3
+
+global.ptsystem_top = part_system_create_layer("effect_above", true)
+global.ptsystem_player = part_system_create_layer("player_effect", true)
+global.ptsystem_player_below = part_system_create_layer("player_effect_below", true)
+global.ptsystem_enemy = part_system_create_layer("enemy_effect", true)
+global.ptsystem_bottom = part_system_create_layer("effect_below", true)
 
 // White Smoke
 global.effect_enemy_smoke_stream_speed = 80 / GAME_FPS
@@ -124,12 +126,12 @@ keyboard_set_map(vk_numpad5, vk_enter)
 
 #region Game
 enum AREA_INDEXES { SHAPE, FRAME, DISORTED }
-globalvar AREA_NAMES
+globalvar AREA_NAMES;
 AREA_NAMES = ["Shape", "Frame", "Disorted"]
 global.area_title = AREA_NAMES[0]
 
 
-globalvar actual_score, virtual_score
+globalvar actual_score, virtual_score;
 actual_score = null
 virtual_score = null
 
@@ -152,6 +154,26 @@ global.shard_h_count = (SCREEN_H div shard_h)
 global.__cheat_invincible = false
 global.__cheat_powerful = false
 global.__cheat_inf_bombs = false
+
+
+globalvar GAMEPAD_AVAILABLE, GAMEPAD_COUNT, GAMEPAD_FRICTION;
+GAMEPAD_AVAILABLE = gamepad_is_supported()
+GAMEPAD_COUNT = gamepad_get_device_count()
+GAMEPAD_FRICTION = 0.8
+
+global.gamepad_index = -1
+global.gamepad_shake = 0
+
+if GAMEPAD_AVAILABLE {
+	if 0 < GAMEPAD_COUNT {
+		for (var i = 0; i < GAMEPAD_COUNT; ++i) {
+			if gamepad_is_connected(i) {
+				global.gamepad_index = i // only pick first controller
+				break
+			}
+		}
+	}
+}
 #endregion
 
 

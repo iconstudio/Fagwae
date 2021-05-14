@@ -9,6 +9,16 @@ global.io_p_pause = global.key_pause.check_pressed()
 //global.io_r_attack = global.key_attack.check_released()
 
 
+if global.gamepad_index != -1 and global.gamepad_shake != 0 {
+	gamepad_set_vibration(global.gamepad_index, global.gamepad_shake, global.gamepad_shake)
+
+	if 0 < global.gamepad_shake
+		global.gamepad_shake -= GAMEPAD_FRICTION * Delta
+	else
+		global.gamepad_shake += GAMEPAD_FRICTION * Delta
+}
+
+
 if global.paused {
 	if pause_lit_time < pause_lit_period
 		pause_lit_time += Delta

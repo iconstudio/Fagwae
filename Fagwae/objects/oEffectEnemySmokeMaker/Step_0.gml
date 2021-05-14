@@ -8,6 +8,8 @@ if global.effect_enemy_smoke_stream_speed < speed {
 if create_time < create_period {
 	create_time += Delta
 } else {
+	
+
 	create_time = 0
 	create_period = random_range(create_period_min, create_period_max)
 }
