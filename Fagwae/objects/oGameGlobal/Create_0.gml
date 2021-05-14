@@ -1,6 +1,9 @@
 player_generator = new Scene(seqPlayerInit, SCREEN_W * 0.5, SCREEN_H * 0.5, "player")
 
 
+SCORE_DX = SCREEN_W * 0.5
+SCORE_DY = SCREEN_W * 0.5
+
 // the score
 actual_score = [0]
 // string to number
