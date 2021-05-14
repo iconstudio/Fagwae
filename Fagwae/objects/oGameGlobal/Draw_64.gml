@@ -1,5 +1,5 @@
 /// @description Drawing UIs
-var score_string = string(score_indicate)
+var score_string = string(virtual_score)
 
 
 if global.paused {
