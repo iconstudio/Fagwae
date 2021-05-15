@@ -9,6 +9,7 @@ var score_string = string(score_manager.value_virtual)
 draw_text(SCORE_DX, SCORE_DY, score_string)
 
 
+// TODO: reverse
 var score_length = score_manager.get_size()
 if  0 < score_length {
 	ascore_dx = (SCORE_DX - 12 * (score_length - 1))
