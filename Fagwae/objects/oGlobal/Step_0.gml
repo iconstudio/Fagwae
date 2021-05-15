@@ -26,3 +26,11 @@ global.io_r_left = global.key_left.check_released()
 global.io_r_right = global.key_right.check_released()
 global.io_r_up = global.key_up.check_released()
 global.io_r_down = global.key_down.check_released()
+
+
+if global.gamepad_index == -1
+	exit
+
+
+var io_pad_left = gamepad_button_check
+
