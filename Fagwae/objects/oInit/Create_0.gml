@@ -126,14 +126,14 @@ keyboard_set_map(vk_numpad5, vk_enter)
 
 #region Game
 enum AREA_INDEXES { SHAPE, FRAME, DISORTED }
+
 globalvar AREA_NAMES;
 AREA_NAMES = ["Shape", "Frame", "Disorted"]
 global.area_title = AREA_NAMES[0]
 
 
-globalvar actual_score, virtual_score;
-actual_score = null
-virtual_score = null
+globalvar score_manager;
+score_manager = new Score()
 
 
 global.paused = false

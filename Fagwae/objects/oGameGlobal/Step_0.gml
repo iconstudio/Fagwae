@@ -133,4 +133,7 @@ if global.paused {
 	} elif global.io_p_pause {
 		do_pause()
 	}
+
+
+	score_cycle += SCORE_CYCLE_INCR
 }

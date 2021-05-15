@@ -72,17 +72,22 @@ function List() constructor {
 	/// @function raw_data()
 	static raw_data = function() { return _Data }
 
+
 	/// @function get_size()
 	static get_size = function() { return _Size }
+
 
 	/// @function get_capacity()
 	static get_capacity = function() { return _Capacity }
 
+
 	/// @function is_empty()
 	static is_empty = function() { return (_Size == 0) }
 
+
 	/// @function clear()
 	static clear = function() { _Serial_change(); _Size = 0 }
+
 
 	/// @function resize(size)
 	static resize = function(Size) {
@@ -95,26 +100,34 @@ function List() constructor {
 		}
 	}
 
+
 	/// @function reserve(size)
 	static reserve = function(Size) { if _Capacity < Size _Capacity_ensure(Size) }
+
 
 	/// @function shrink_to_fit()
 	static shrink_to_fit = function() { _Capacity_set(max(1, _Size)) }
 
+
 	/// @function at(index)
 	static at = function(Index) { return (0 < _Size and Index < _Size ? _Data[Index] : undefined) }
+
 
 	/// @function front()
 	static front = function() { return (0 < _Size ? _Data[0] : undefined) }
 
+
 	/// @function back()
 	static back = function() { return (0 < _Size ? _Data[_Size - 1] : undefined) }
+
 
 	/// @function first()
 	static first = function() { return (new Iterator(this)) }
 
+
 	/// @function last()
 	static last = function() { return (new Iterator(this).set_index(_Size)) }
+
 
 	/// @function set_at(index, value)
 	static set_at = function(Index, Value) {
@@ -123,6 +136,7 @@ function List() constructor {
 		}
 		return this
 	}
+
 
 	/// @function push_back(value)
 	static push_back = function(Value) {
@@ -135,6 +149,7 @@ function List() constructor {
 		}
 		return this
 	}
+
 
 	/// @function erase_at(index)
 	static erase_at = function(Index) {
@@ -158,6 +173,7 @@ function List() constructor {
 		array_push(_Data, undefined)
 		return Result
 	}
+
 
 	/// @function erase(begin, end)
 	static erase = function(First, Last) {
@@ -184,6 +200,7 @@ function List() constructor {
 		}
 	}
 
+
 	/// @function pop_front()
 	static pop_front = function() {
 		if 0 < _Size {
@@ -192,6 +209,7 @@ function List() constructor {
 			return undefined
 		}
 	}
+
 
 	/// @function pop_back()
 	static pop_back = function() {
@@ -204,20 +222,24 @@ function List() constructor {
 		}
 	}
 
+
 	/// @function all_of(begin, end, predicate)
 	static all_of = function(First, Last, Pred) {
 		return is_undefined(find_if_not(First, Last, Pred))
 	}
+
 
 	/// @function any_of(begin, end, predicate)
 	static any_of = function(First, Last, Pred) {
 		return !is_undefined(find_if(First, Last, Pred))
 	}
 
+
 	/// @function none_of(begin, end, predicate)
 	static none_of = function(First, Last, Pred) {
 		return is_undefined(find_if(First, Last, Pred))
 	}
+
 
 	/// @function foreach(begin, end, predicate)
 	static foreach = function(First, Last, Pred) {
@@ -232,6 +254,7 @@ function List() constructor {
 		return Pred
 	}
 
+
 	/// @function foreach_n(begin, count, predicate)
 	static foreach_n = function(First, Number, Pred) {
 		First = _Check_iterator(First)
@@ -244,10 +267,12 @@ function List() constructor {
 		return First
 	}
 
+
 	/// @function foreach_all(predicate)
 	static foreach_all = function(Pred) {
 		return this.foreach(0, _Size, Pred)
 	}
+
 
 	/// @function enumerate(begin, end, predicate)
 	static enumerate = function(First, Last, Pred) {
@@ -263,10 +288,12 @@ function List() constructor {
 		return Pred
 	}
 
+
 	/// @function enumerate_all(predicate)
 	static enumerate_all = function(Pred) {
 		return this.enumerate(0, _Size, Pred)
 	}
+
 
 	/// @function sort(begin, end, [comparator=compare_less])
 	static sort = function(First, Last) {

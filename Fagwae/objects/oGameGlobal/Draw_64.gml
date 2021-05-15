@@ -5,16 +5,16 @@ draw_set_font(fontScore)
 draw_set_halign(1)
 draw_set_valign(1)
 
-var score_string = string(virtual_score)
-draw_text_transformed(SCORE_DX, SCORE_DY, score_string, 1, 1, 0)
+var score_string = string(score_manager.value_virtual)
+draw_text(SCORE_DX, SCORE_DY, score_string)
 
-var ascore_length = array_length(actual_score)
-if 0 < ascore_length {
-	var ascore_char_width = string_width(actual_score[0])
-	var ascore_dx = (SCORE_DX - ascore_char_width * ascore_length * 0.5)
-	for (var i = 0; i < ascore_length; ++i) {
-		
-	}
+
+var score_length = score_manager.get_size()
+if  0 < score_length {
+	ascore_dx = (SCORE_DX - 12 * (score_length - 1))
+	score_manager.enumerate_all(function(i, caption) {
+		draw_text(ascore_dx + i * 24, SCORE_DY + 40, caption)
+	})
 }
 
 

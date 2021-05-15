@@ -84,6 +84,7 @@
     {"id":{"name":"sHexagon","path":"sprites/sHexagon/sHexagon.yy",},"order":1,},
     {"id":{"name":"roomLoading","path":"rooms/roomLoading/roomLoading.yy",},"order":1,},
     {"id":{"name":"sIntroLabel0","path":"sprites/sIntroLabel0/sIntroLabel0.yy",},"order":5,},
+    {"id":{"name":"Score","path":"scripts/Score/Score.yy",},"order":12,},
     {"id":{"name":"oIgnore","path":"objects/oIgnore/oIgnore.yy",},"order":4,},
     {"id":{"name":"FiniteStateMachine","path":"scripts/FiniteStateMachine/FiniteStateMachine.yy",},"order":8,},
     {"id":{"name":"sIntroFrame","path":"sprites/sIntroFrame/sIntroFrame.yy",},"order":3,},

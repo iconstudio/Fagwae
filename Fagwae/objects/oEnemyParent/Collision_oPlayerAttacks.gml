@@ -3,6 +3,8 @@ with other {
 	if !done {
 		event_user(0)
 		done = true
+	} else {
+		exit
 	}
 }
 
