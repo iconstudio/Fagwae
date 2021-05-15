@@ -42,7 +42,6 @@
     {"id":{"name":"roomGame","path":"rooms/roomGame/roomGame.yy",},"order":4,},
     {"id":{"name":"sIntroFrameChain","path":"sprites/sIntroFrameChain/sIntroFrameChain.yy",},"order":4,},
     {"id":{"name":"fontPause","path":"fonts/fontPause/fontPause.yy",},"order":1,},
-    {"id":{"name":"GameMech","path":"scripts/GameMech/GameMech.yy",},"order":6,},
     {"id":{"name":"oOctagon","path":"objects/oOctagon/oOctagon.yy",},"order":1,},
     {"id":{"name":"sPlayerArm","path":"sprites/sPlayerArm/sPlayerArm.yy",},"order":4,},
     {"id":{"name":"oLoading","path":"objects/oLoading/oLoading.yy",},"order":0,},

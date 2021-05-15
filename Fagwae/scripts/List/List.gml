@@ -317,6 +317,7 @@ function List() constructor {
 		}
 	}
 
+
 	/// @function find(begin, end, value, [comparator=compare_equal])
 	static find = function(First, Last, Value) {
 		First = _Check_iterator(First)
@@ -336,6 +337,7 @@ function List() constructor {
 		return undefined
 	}
 
+
 	/// @function find_if(begin, end, predicate)
 	static find_if = function(First, Last, Pred) {
 		First = _Check_iterator(First)
@@ -350,6 +352,7 @@ function List() constructor {
 		return undefined
 	}
 
+
 	/// @function find_if_not(begin, end, predicate)
 	static find_if_not = function(First, Last, Pred) {
 		First = _Check_iterator(First)
@@ -363,6 +366,7 @@ function List() constructor {
 		}
 		return undefined
 	}
+
 
 	/// @function count(begin, end, value)
 	static count = function(First, Last, Value) {
@@ -379,6 +383,7 @@ function List() constructor {
 		return Result
 	}
 
+
 	/// @function count_if(begin, end, predicate)
 	static count_if = function(First, Last, Pred) {
 		First = _Check_iterator(First)
@@ -393,6 +398,7 @@ function List() constructor {
 		}
 		return Result
 	}
+
 
 	/// @function accumulate(begin, end, init, predicate)
 	static accumulate = function(First, Last, Init) {
@@ -413,6 +419,7 @@ function List() constructor {
 		return Init
 	}
 
+
 	/// @function remove(begin, end, value)
 	static remove = function(First, Last, Value) {
 		First = _Check_iterator(First)
@@ -430,6 +437,7 @@ function List() constructor {
 		return Result
 	}
 
+
 	/// @function remove_if(begin, end, predicate)
 	static remove_if = function(First, Last, Pred) {
 		First = _Check_iterator(First)
@@ -446,6 +454,7 @@ function List() constructor {
 		}
 		return Result
 	}
+
 
 	/// @function min_element(begin, end, [comparator=compare_less])
 	static min_element = function(First, Last) {
@@ -470,6 +479,7 @@ function List() constructor {
 		return Result
 	}
 
+
 	/// @function max_element(begin, end, [comparator=compare_less])
 	static max_element = function(First, Last) {
 		First = _Check_iterator(First)
@@ -492,6 +502,7 @@ function List() constructor {
 		}
 		return Result
 	}
+
 
 	/// @function lower_bound(begin, end, value, [comparator=compare_less])
 	static lower_bound = function(First, Last, Value) { // return the first and largest element which less than value.
@@ -522,6 +533,7 @@ function List() constructor {
 		return First
 	}
 
+
 	/// @function upper_bound(begin, end, value, [comparator=compare_less])
 	static upper_bound = function(First, Last, Value) { // return a greater element to the value.
 		First = _Check_iterator(First)
@@ -551,6 +563,7 @@ function List() constructor {
 		return First
 	}
 
+
 	/// @function binary_search(begin, end, value, [comparator=compare_less])
 	static binary_search = function(First, Last, Value) {
 		First = _Check_iterator(First)
@@ -567,6 +580,7 @@ function List() constructor {
 		return bool(First != Last and !Compare(Value, at(First)))
 	}
 
+
 	/// @function swap(iterator_1, iterator_2)
 	static swap = function(ItA, ItB) {
 		ItA = _Check_iterator(ItA)
@@ -575,6 +589,7 @@ function List() constructor {
 		set_at(ItA, at(ItB))
 		set_at(ItB, Temp)
 	}
+
 
 	/// @function shuffle(begin, end, [engine=irandom_range])
 	static shuffle = function(First, Last) {
@@ -595,11 +610,14 @@ function List() constructor {
 		}
 	}
 
+
 	/// @function toString()
 	static toString = function() { return "List (" + string(_Serial_number) + ") - Size: " + string(_Size) + ", Cash: " + string(_Capacity) }
 
+
 	/// @function 
 	static _Check_iterator = function(Iter) { return (is_struct(Iter) ? Iter._Index : Iter) }
+
 
 	/// @function 
 	static _Check_range = function(First, Last) {
@@ -610,8 +628,10 @@ function List() constructor {
 			throw "An error occured when erasing on range(" + string(First) + ", " + string(Last) + ")\nFirst is greater then Last."
 	}
 
+
 	/// @function 
 	static _Serial_change = function() { _Serial_number++ }
+
 
 	/// @function 
 	static _Capacity_set = function(Size) {
@@ -625,8 +645,10 @@ function List() constructor {
 		}
 	}
 
+
 	/// @function 
 	static _Capacity_ensure = function(StoreSize) { _Capacity_set(ceil(StoreSize / 4) * 4 + 8) }
+
 
 	/// @function 
 	static _Capacity_append = function(Count) {
@@ -635,6 +657,7 @@ function List() constructor {
 			_Capacity_ensure(NewCap)
 	}
 
+
 	/// @function 
 	static _Element_add = function(Value) {
 		if _Capacity <= _Size
@@ -642,11 +665,13 @@ function List() constructor {
 		_Data[_Size++] = Value
 	}
 
+
 	_STD = true
 	_Serial_number = 0
 	_Data = []
 	_Capacity = 8
 	_Size = 0
+
 
 	// ** Contructor **
 	if 0 < argument_count {

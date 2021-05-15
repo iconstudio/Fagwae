@@ -1,18 +1,18 @@
 /// @description Declare keys
-global.key_left = new fag_input([vk_left, ord("H")])
-global.key_right = new fag_input([vk_right, ord("L")])
-global.key_up = new fag_input([vk_up, ord("J")])
-global.key_down = new fag_input([vk_down, ord("K")])
+global.key_left = new KeyboardAnchor([vk_left, ord("H")])
+global.key_right = new KeyboardAnchor([vk_right, ord("L")])
+global.key_up = new KeyboardAnchor([vk_up, ord("J")])
+global.key_down = new KeyboardAnchor([vk_down, ord("K")])
 
 
-global.key_confirm = new fag_input([ord("X"), vk_enter, vk_space])
-global.key_back = new fag_input([ord("C"), vk_backspace])
+global.key_confirm = new KeyboardAnchor([ord("X"), vk_enter, vk_space])
+global.key_back = new KeyboardAnchor([ord("C"), vk_backspace])
 
 
-global.key_attack = new fag_input([ord("Z"), ord("A"), vk_space])
-global.key_bomb = new fag_input([ord("X"), ord("S"), vk_control])
-global.key_crawl = new fag_input([ord("C"), ord("D"), vk_shift])
-global.key_pause = new fag_input([ord("P"), vk_escape, vk_backspace])
+global.key_attack = new KeyboardAnchor([ord("Z"), ord("A"), vk_space])
+global.key_bomb = new KeyboardAnchor([ord("X"), ord("S"), vk_control])
+global.key_crawl = new KeyboardAnchor([ord("C"), ord("D"), vk_shift])
+global.key_pause = new KeyboardAnchor([ord("P"), vk_escape, vk_backspace])
 
 
 global.io_mouse_left = false

@@ -34,13 +34,16 @@ function relative_luminance(color) {
 	static f = function(x) {
 		return x <= 0.03928
 			? x/12.92
-			: power((x + 0.055)/1.055, 2.4);
-	};
+			: power((x + 0.055)/1.055, 2.4)
+	}
+
+
 	var
 		r = colour_get_red(color)/255,
 		g = colour_get_green(color)/255,
-		b = colour_get_blue(color)/255;
-	return 0.2126*f(r) + 0.7152*f(g) + 0.0722*f(b);
+		b = colour_get_blue(color)/255
+
+	return 0.2126*f(r) + 0.7152*f(g) + 0.0722*f(b)
 }
 
 
