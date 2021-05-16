@@ -29,7 +29,7 @@ if global.gamepad_index == -1
 	exit
 
 
-if !instance_exists(oPlayer) {
+if global.paused or !instance_exists(oPlayer) {
 	var j_l_h = global.joy_left_h.get_value()
 	var j_l_v = global.joy_left_v.get_value()
 	var j_l_is_left = (j_l_h < 0.2)
