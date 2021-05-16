@@ -10,7 +10,7 @@ attacking = false
 attack_bullet_speed = 20
 attack_frame = 0
 attack_rep_time = 0
-attack_rep_period = 0.04
+attack_rep_period = 0.07
 attack_rep_count = 0
 attack_rep_count_max = 4
 
