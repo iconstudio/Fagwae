@@ -1,7 +1,7 @@
 if global.effect_enemy_smoke_stream_speed < speed {
-	speed += (global.effect_enemy_smoke_stream_speed - speed) * 0.05
+	speed += (global.effect_enemy_smoke_stream_speed - speed) * 0.08
 } elif 0 < speed {
-	speed -= speed * 0.027
+	speed -= speed * 0.057
 }
 
 
