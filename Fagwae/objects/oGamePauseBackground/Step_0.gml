@@ -1,13 +1,13 @@
 if global.paused {
-	if lit_time < lit_period
-		lit_time += Delta
+	if time < period
+		time += Delta
 	else
-		lit_time = lit_period
+		time = period
 
 
 } else {
-	if 0 < lit_time
-		lit_time -= Delta
+	if 0 < time
+		time -= Delta
 	else
 		instance_destroy()
 }
