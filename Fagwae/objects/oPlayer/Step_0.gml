@@ -90,78 +90,105 @@ if attacking {
 	}
 }
 
-var j_l_h = global.joy_left_h.get_value()
-var j_l_v = global.joy_left_v.get_value()
-var j_l_is_left = (j_l_h < 0.2)
-var j_l_is_right = (0.2 < j_l_h)
-var j_l_is_up = (j_l_v < 0.2)
-var j_l_is_down = (0.2 < j_l_v)
 
+var joystick_condition = false
+if global.gamepad_index != -1 {
+	var j_l_h = global.joy_left_h.get_value()
+	var j_l_v = global.joy_left_v.get_value()
 
-var was_left = (move_h_anchor == LEFT)
-var was_right = (move_h_anchor == RIGHT)
-
-move_h_anchor = NONE
-if (global.io_p_left and global.io_right and was_right)
-or (global.io_left and !global.io_right)
-or (!global.io_p_right and global.io_left and was_left) {
-	move_h_anchor = LEFT
-}
-else if (global.io_p_right and global.io_left and was_left)
-or (global.io_right and !global.io_left)
-or (!global.io_p_left and global.io_right and was_right) {
-	move_h_anchor = RIGHT
+	if j_l_h != 0 or j_l_v != 0
+		joystick_condition = true
 }
 
 
-var was_up = (move_v_anchor == UP)
-var was_down = (move_v_anchor == DOWN)
-
-move_v_anchor = NONE
-if (global.io_p_up and global.io_down and was_down)
-or (global.io_up and !global.io_down)
-or (!global.io_p_down and global.io_up and was_up) {
-	move_v_anchor = UP
-}
-else if (global.io_p_down and global.io_up and was_up)
-or (global.io_down and !global.io_up)
-or (!global.io_p_up and global.io_down and was_down) {
-	move_v_anchor = DOWN
-}
-
-
-if move_h_anchor != NONE {
-	if move_h_count == 0 { // just pressed now
-		x += move_h_anchor
-		move_h_velocity = 0
-	} elif move_tick_threshold <= move_h_count {
-		move_h_velocity = move_h_anchor * move_h_speed
-	}
-
-	move_h_count += Delta
-} else { // friction
-	if move_h_velocity != 0 {
-		move_h_velocity *= 0.1
+if joystick_condition { // analog inputs
+	if j_l_h == 0 { // x friction
+		if move_h_velocity != 0 {
+			move_h_velocity *= 0.1
+		} else {
+			move_h_count = 0
+		}
 	} else {
-		move_h_count = 0
-	}
-}
-
-
-if move_v_anchor != NONE {
-	if move_v_count == 0 { // just pressed now
-		y += move_v_anchor
-		move_v_velocity = 0
-	} elif move_tick_threshold <= move_v_count {
-		move_v_velocity = move_v_anchor * move_v_speed
+		move_h_velocity = move_h_speed * j_l_h
+		move_h_count++
 	}
 
-	move_v_count += Delta
-} else { // friction
-	if move_v_velocity != 0 {
-		move_v_velocity *= 0.1
+	if j_l_v == 0 { // y friction
+		if move_v_velocity != 0 {
+			move_v_velocity *= 0.1
+		} else {
+			move_v_count = 0
+		}
 	} else {
-		move_v_count = 0
+		move_v_velocity = move_v_speed * j_l_v
+		move_v_count++
+	}
+} else { // digital inputs
+	var was_left = (move_h_anchor == LEFT)
+	var was_right = (move_h_anchor == RIGHT)
+
+	move_h_anchor = NONE
+	if (global.io_p_left and global.io_right and was_right)
+	or (global.io_left and !global.io_right)
+	or (!global.io_p_right and global.io_left and was_left) {
+		move_h_anchor = LEFT
+	}
+	else if (global.io_p_right and global.io_left and was_left)
+	or (global.io_right and !global.io_left)
+	or (!global.io_p_left and global.io_right and was_right) {
+		move_h_anchor = RIGHT
+	}
+
+
+	var was_up = (move_v_anchor == UP)
+	var was_down = (move_v_anchor == DOWN)
+
+	move_v_anchor = NONE
+	if (global.io_p_up and global.io_down and was_down)
+	or (global.io_up and !global.io_down)
+	or (!global.io_p_down and global.io_up and was_up) {
+		move_v_anchor = UP
+	}
+	else if (global.io_p_down and global.io_up and was_up)
+	or (global.io_down and !global.io_up)
+	or (!global.io_p_up and global.io_down and was_down) {
+		move_v_anchor = DOWN
+	}
+
+
+	if move_h_anchor != NONE {
+		if move_h_count == 0 { // just pressed now
+			x += move_h_anchor
+			move_h_velocity = 0
+		} elif move_tick_threshold <= move_h_count {
+			move_h_velocity = move_h_anchor * move_h_speed
+		}
+
+		move_h_count += Delta
+	} else { // friction
+		if move_h_velocity != 0 {
+			move_h_velocity *= 0.1
+		} else {
+			move_h_count = 0
+		}
+	}
+
+
+	if move_v_anchor != NONE {
+		if move_v_count == 0 { // just pressed now
+			y += move_v_anchor
+			move_v_velocity = 0
+		} elif move_tick_threshold <= move_v_count {
+			move_v_velocity = move_v_anchor * move_v_speed
+		}
+
+		move_v_count += Delta
+	} else { // friction
+		if move_v_velocity != 0 {
+			move_v_velocity *= 0.1
+		} else {
+			move_v_count = 0
+		}
 	}
 }
 
