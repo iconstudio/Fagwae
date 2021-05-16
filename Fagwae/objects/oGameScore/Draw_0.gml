@@ -7,15 +7,15 @@ draw_set_halign(1)
 draw_set_valign(1)
 
 
-var score_string = string(score_manager.value_virtual)
+var score_string = string(value_virtual)
 draw_text(SCORE_DX, SCORE_DY, score_string)
 
 
 // TODO: reverse
-var score_length = score_manager.get_size()
+var score_length = get_size()
 if  0 < score_length {
 	ascore_dx = (SCORE_DX - 12 * (score_length - 1))
-	score_manager.enumerate_all(function(i, caption) {
+	enumerate_all(function(i, caption) {
 		draw_text(ascore_dx + i * 24, SCORE_DY + 40, caption)
 	})
 }

@@ -135,10 +135,6 @@ AREA_NAMES = ["Shape", "Frame", "Disorted"]
 global.area_title = AREA_NAMES[0]
 
 
-globalvar score_manager;
-score_manager = new Score()
-
-
 global.paused = false
 
 

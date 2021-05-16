@@ -1,4 +1,4 @@
 /// @description Die
-score_manager.add(score_given)
+fagwae_score_add(score_given)
 
 instance_destroy()

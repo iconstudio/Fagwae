@@ -75,7 +75,7 @@
     {"id":{"name":"sTitleFagwae","path":"sprites/sTitleFagwae/sTitleFagwae.yy",},"order":1,},
     {"id":{"name":"oGameExitToMenu","path":"objects/oGameExitToMenu/oGameExitToMenu.yy",},"order":4,},
     {"id":{"name":"sPlayerInit","path":"sprites/sPlayerInit/sPlayerInit.yy",},"order":0,},
-    {"id":{"name":"oGameScoreDrawer","path":"objects/oGameScoreDrawer/oGameScoreDrawer.yy",},"order":1,},
+    {"id":{"name":"oGameScore","path":"objects/oGameScore/oGameScore.yy",},"order":1,},
     {"id":{"name":"sPlayerBombIndicator","path":"sprites/sPlayerBombIndicator/sPlayerBombIndicator.yy",},"order":3,},
     {"id":{"name":"PN_1D_smoothedNoise","path":"scripts/PN_1D_smoothedNoise/PN_1D_smoothedNoise.yy",},"order":2,},
     {"id":{"name":"oGameAreaParent","path":"objects/oGameAreaParent/oGameAreaParent.yy",},"order":0,},

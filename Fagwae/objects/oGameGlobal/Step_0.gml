@@ -24,8 +24,5 @@ if !global.paused {
 			var Pauser = do_pause()
 		}
 	}
-
-
-	score_cycle += SCORE_CYCLE_INCR
 }
 
