@@ -13,8 +13,8 @@ size_previous = 0
 size_origin = size_target * 2
 
 
-wave_time = 0
-wave_period = 1
+time = 0
+period = 1
 
 
 wave_vertexes = 24
