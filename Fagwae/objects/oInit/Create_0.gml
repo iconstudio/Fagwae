@@ -115,6 +115,8 @@ part_type_direction(global.pttype_smoke_normal, 0, 360, 0, 4)
 
 
 #region UX
+#macro GAMEPAD_AXIS_THRESHOLD 0.15
+
 device_mouse_dbclick_enable(false)
 keyboard_set_map(vk_numpad2, vk_up)
 keyboard_set_map(vk_numpad4, vk_left)
@@ -172,6 +174,7 @@ if GAMEPAD_AVAILABLE {
 		for (var i = 0; i < GAMEPAD_COUNT; ++i) {
 			if gamepad_is_connected(i) {
 				global.gamepad_index = i // only pick first controller
+				gamepad_set_axis_deadzone(i, GAMEPAD_AXIS_THRESHOLD)
 				break
 			}
 		}
