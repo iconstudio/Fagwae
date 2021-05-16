@@ -25,7 +25,7 @@
     "path": "folders/System/Main Screen.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oMainProfileSetter",
+  "name": "oMainProfileSelector",
   "tags": [],
   "resourceType": "GMObject",
 }
