@@ -5,16 +5,20 @@ score_cycle = 0
 SCORE_CYCLE_INCR = 26
 
 
-value = new List()
+value = new List([0])
 value_virtual = 0
 
 
 clear = function() {
-		
+	value.clear()
+	value_virtual = 0
 }
 
 
 set = function(Value) {
+	if is_nan(Value)
+		exit
+
 		
 }
 
