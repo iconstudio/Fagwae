@@ -159,8 +159,8 @@
   "TextureGroups": [
     {"isScaled":false,"autocrop":false,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"Default","resourceType":"GMTextureGroup",},
     {"isScaled":false,"autocrop":false,"border":4,"mipsToGenerate":-1,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"texgrp_mainmenu","resourceType":"GMTextureGroup",},
-    {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"texgrp_game","resourceType":"GMTextureGroup",},
-    {"isScaled":false,"autocrop":true,"border":8,"mipsToGenerate":-1,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"texgrp_intro","resourceType":"GMTextureGroup",},
+    {"isScaled":true,"autocrop":true,"border":8,"mipsToGenerate":-1,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"texgrp_game","resourceType":"GMTextureGroup",},
+    {"isScaled":true,"autocrop":true,"border":8,"mipsToGenerate":-1,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"texgrp_intro","resourceType":"GMTextureGroup",},
   ],
   "IncludedFiles": [],
   "MetaData": {
