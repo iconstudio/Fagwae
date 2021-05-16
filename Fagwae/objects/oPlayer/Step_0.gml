@@ -90,6 +90,13 @@ if attacking {
 	}
 }
 
+var j_l_h = global.joy_left_h.get_value()
+var j_l_v = global.joy_left_v.get_value()
+var j_l_is_left = (j_l_h < 0.2)
+var j_l_is_right = (0.2 < j_l_h)
+var j_l_is_up = (j_l_v < 0.2)
+var j_l_is_down = (0.2 < j_l_v)
+
 
 var was_left = (move_h_anchor == LEFT)
 var was_right = (move_h_anchor == RIGHT)
@@ -129,29 +136,12 @@ if move_h_anchor != NONE {
 		move_h_velocity = 0
 	} elif move_tick_threshold <= move_h_count {
 		move_h_velocity = move_h_anchor * move_h_speed
-
-		if global.io_crawl
-			move_h_velocity *= 0.4
 	}
 
 	move_h_count += Delta
 } else { // friction
 	if move_h_velocity != 0 {
 		move_h_velocity *= 0.1
-		/*
-		var Friction = move_h_fric * Delta
-		if 0 < move_h_velocity {
-			if Friction < move_h_velocity
-				move_h_velocity -= Friction
-			else
-				move_h_velocity = 0
-		} else {
-			if move_h_velocity < -Friction
-				move_h_velocity += Friction
-			else
-				move_h_velocity = 0
-		}
-		*/
 	} else {
 		move_h_count = 0
 	}
@@ -164,33 +154,22 @@ if move_v_anchor != NONE {
 		move_v_velocity = 0
 	} elif move_tick_threshold <= move_v_count {
 		move_v_velocity = move_v_anchor * move_v_speed
-
-		if global.io_crawl
-			move_v_velocity *= 0.5
 	}
 
 	move_v_count += Delta
 } else { // friction
 	if move_v_velocity != 0 {
 		move_v_velocity *= 0.1
-		/*
-		var Friction = move_v_fric * Delta
-		if 0 < move_v_velocity {
-			if Friction < move_v_velocity
-				move_v_velocity -= Friction
-			else
-				move_v_velocity = 0
-		} else {
-			if move_v_velocity < -Friction
-				move_v_velocity += Friction
-			else
-				move_v_velocity = 0
-		}
-		*/
 	} else {
 		move_v_count = 0
 	}
 }
+
+
+if global.io_crawl
+	move_h_velocity *= 0.4
+if global.io_crawl
+	move_v_velocity *= 0.5
 
 
 if move_h_velocity != 0 {

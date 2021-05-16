@@ -16,8 +16,6 @@ attack_rep_count_max = 4
 
 
 // can use realforce
-move_h_fric = (450)
-move_v_fric = (390)
 move_h_speed = (226)
 move_v_speed = (178)
 
