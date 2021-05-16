@@ -55,10 +55,14 @@ application_surface_enable(true)
 application_surface_draw_enable(false)
 surface_depth_disable(true)
 
+global.application_texture = -1
+
+
 gpu_set_fog(false, $ffffff, 32, 32000)
 gpu_set_blendenable(true)
 gpu_set_texfilter(false)
 gpu_set_cullmode(cull_noculling)
+
 
 draw_set_color($ffffff)
 draw_set_circle_precision(96)
@@ -69,7 +73,8 @@ if !shaders_are_supported() {
 
 
 #region Shader
-global.pause_lit_stage = shader_get_uniform(shaderPauseLit, "intensity")
+global.pause_lit_stage = shader_get_sampler_index(shaderPauseLit, "pscreen")
+global.pause_lit_value = shader_get_uniform(shaderPauseLit, "intensity")
 
 
 global.wave_uniform_time = shader_get_uniform(shaderShockwave, "time")
@@ -111,13 +116,13 @@ part_type_direction(global.pttype_smoke_normal, 0, 360, 0, 4)
 
 #region UX
 device_mouse_dbclick_enable(false)
-event_user(1)
-
 keyboard_set_map(vk_numpad2, vk_up)
 keyboard_set_map(vk_numpad4, vk_left)
 keyboard_set_map(vk_numpad6, vk_right)
 keyboard_set_map(vk_numpad8, vk_down)
 keyboard_set_map(vk_numpad5, vk_enter)
+
+event_user(0)
 #endregion
 
 

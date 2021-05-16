@@ -5,10 +5,12 @@ varying vec2 v_vTexcoord;
 varying vec4 v_vColour;
 
 uniform float intensity;
+uniform sampler2D pscreen;
+
 
 void main()
 {
-	vec4 color = texture2D(gm_BaseTexture, v_vTexcoord);
+	vec4 color = texture2D(pscreen, v_vTexcoord);
 
 	float incrr = (0.5 - color.r) * 0.46013 * intensity;
 	float incrg = (0.5 - color.g) * 0.71559 * intensity;
