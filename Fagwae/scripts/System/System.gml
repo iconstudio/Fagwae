@@ -48,11 +48,10 @@ function GamepadAnchor(keys) constructor {
 }
 
 
-
-/// @function GamepadAnchor(keyboard_keys, gamepad_keys)
-function GamepadAnchor(kbkeys, gpkeys) constructor {
+/// @function GeneralInputAnchor(keyboard_keys, [gamepad_keys])
+function GeneralInputAnchor(kbkeys, gpkeys) constructor {
 	this.kb_set = new KeyboardAnchor(kbkeys)
-	if GAMEPAD_AVAILABLE and 1 < argument_count
+	if GAMEPAD_AVAILABLE and !is_null(gpkeys)
 		this.gp_set = new GamepadAnchor(gpkeys)
 	else
 		this.gp_set = null
