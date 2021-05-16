@@ -69,6 +69,9 @@ if !shaders_are_supported() {
 
 
 #region Shader
+global.pause_lit_stage = shader_get_uniform(shaderPauseLit, "intensity")
+
+
 global.wave_uniform_time = shader_get_uniform(shaderShockwave, "time")
 global.wave_uniform_pos = shader_get_uniform(shaderShockwave, "mouse_pos")
 global.wave_uniform_resolution = shader_get_uniform(shaderShockwave, "resolution")
@@ -137,7 +140,6 @@ score_manager = new Score()
 
 
 global.paused = false
-global.pause_stack = 0
 
 
 global.px = 0
