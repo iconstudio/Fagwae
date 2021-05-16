@@ -31,19 +31,40 @@ function GamepadAnchor(keys) constructor {
 
 	/// @function check()
 	static check = function() {
-		return my_keys.any_of(0, size, gamepad_button_check)
+		static checker = function(button) {
+			return gamepad_button_check(global.gamepad_index, button)
+		}
+
+
+		if global.gamepad_index != -1
+			return my_keys.any_of(0, size, checker)
+		else return false
 	}
 
 
 	/// @function check_pressed()
 	static check_pressed = function() {
-		return my_keys.any_of(0, size, gamepad_button_check_pressed)
+		static checker = function(button) {
+			return gamepad_button_check_pressed(global.gamepad_index, button)
+		}
+
+
+		if global.gamepad_index != -1
+			return my_keys.any_of(0, size, checker)
+		else return false
 	}
 
 
 	/// @function check_released()
 	static check_released = function() {
-		return my_keys.any_of(0, size, gamepad_button_check_released)
+		static checker = function(button) {
+			return gamepad_button_check_released(global.gamepad_index, button)
+		}
+
+
+		if global.gamepad_index != -1
+			return my_keys.any_of(0, size, checker)
+		else return false
 	}
 }
 
@@ -81,6 +102,60 @@ function GeneralInputAnchor(kbkeys, gpkeys) constructor {
 			return kb_set.check_released() or gp_set.check_released()
 		else
 			return kb_set.check_released()
+	}
+}
+
+
+/// @function JoystickAnchor(type)
+function JoystickAnchor(dir) constructor {
+	this.key = dir
+	this.pressed = false
+
+
+	/// @function get_value()
+	static get_value = function() {
+		static checker = function(button) {
+			return gamepad_axis_value(global.gamepad_index, key)
+		}
+
+
+		if global.gamepad_index != -1
+			return checker()
+		else return 0
+	}
+
+
+	/// @function check()
+	static check = function() {
+		return (get_value() != 0)
+	}
+
+
+	/// @function check_pressed()
+	static check_pressed = function() {
+		var value = get_value()
+		if value != 0 and !pressed {
+			if 0.5 < abs(value) {
+				pressed = true
+				return true
+			}
+		}
+
+		return false
+	}
+
+
+	/// @function check_released()
+	static check_released = function() {
+		var value = get_value()
+		if pressed {
+			if abs(value) <= 0.5 {
+				pressed = false
+				return true
+			}
+		}
+
+		return false
 	}
 }
 
