@@ -1,4 +1,4 @@
-/// @description Drawing UIs
+/// @description Drawing the score
 draw_set_alpha(1)
 draw_set_color($ffffff)
 draw_set_font(fontScore)

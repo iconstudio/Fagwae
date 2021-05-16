@@ -1,12 +1,5 @@
 /// @description Declare pause menus
-capture = -1
-menu_selection = 0
-
-
-lit_stage = shader_get_uniform(shaderPauseLit, "intensity")
-lit_value = 220 / 256
-lit_time = 0
-lit_period = 0.8
+bg_dimm = instance_exists(oGamePauseBackground) ? oGamePauseBackground.id : instance_create(oGamePauseBackground)
 
 
 title_x = SCREEN_W * 0.5
@@ -30,7 +23,6 @@ function do_pause() {
 	menu_selection = 0
 
 	global.paused = true
-	global.stack++
 
 	if player_generator.is_playing()
 		player_generator.pause()
@@ -44,20 +36,15 @@ function do_pause() {
 }
 
 
-function undo_pause() {
-	if global.stack <= 0 {
-		global.paused = false
-		if sprite_exists(capture)
-			sprite_delete(capture)
+function do_resume() {
+	global.paused = false
+	if sprite_exists(capture)
+		sprite_delete(capture)
 
-		instance_activate_all()
+	instance_activate_all()
 
-		if player_generator.is_paused()
-			player_generator.play()
-
-	} else {
-		global.stack--
-	}
+	if player_generator.is_paused()
+		player_generator.play()
 }
 
 
@@ -66,13 +53,13 @@ menu = function(caption, predicate) constructor {
 	this.predicate = method(other, predicate)
 }
 
-
 menus = new List([
-	new menu("Resume", undo_pause),
+	new menu("Resume", do_resume),
 	new menu("Restart game", do_restart),
 	new menu("Go to main menu", do_gotomain)
 ])
 
+menu_selection = 0
 menu_size = menus.get_size()
 
 

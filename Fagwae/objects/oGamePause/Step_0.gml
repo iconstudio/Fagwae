@@ -1,4 +1,4 @@
-/// @description 
+/// @description Update
 if global.paused {
 	if lit_time < lit_period
 		lit_time += Delta
@@ -6,7 +6,7 @@ if global.paused {
 		lit_time = lit_period
 
 	if global.io_p_pause {
-		undo_pause()
+		do_resume()
 	} else {
 		key_pinned = NONE
 		if 0 < key_pin_duration {

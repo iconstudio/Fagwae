@@ -17,5 +17,17 @@ if global.gamepad_index != -1 and global.gamepad_shake != 0 {
 
 
 if !global.paused {
+	if !instance_exists(oGamePause) {
+		if global.io_p_pause {
+			do_pause()
+			instance_create(oGamePause, "interface")
+		} elif global.io_p_restart {
+			do_pause()
+			var Menu = instance_create(oGamePause, "interface")
+		}
+	}
+
+
 	score_cycle += SCORE_CYCLE_INCR
 }
+

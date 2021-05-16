@@ -14,3 +14,9 @@ SCORE_DY = SCREEN_W * 0.5
 
 score_cycle = 0
 SCORE_CYCLE_INCR = 26
+
+
+function do_pause() {
+	if player_generator.is_playing()
+		player_generator.pause()
+}
