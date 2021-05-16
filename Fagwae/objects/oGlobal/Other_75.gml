@@ -10,6 +10,7 @@ if type == "gamepad discovered" {
 			gamepad_set_vibration(global.gamepad_index, 0, 0)
 
 		 global.gamepad_index = index
+		 gamepad_set_axis_deadzone(index, GAMEPAD_AXIS_THRESHOLD)
 
 
 		 var cerif = string_lower(gamepad_get_description(index))
