@@ -2,6 +2,7 @@
 if !surface_exists(surf)
 	event_user(0)
 
+
 surface_set_target(surf)
 gpu_set_blendenable(false)
 gpu_set_blendmode_ext(bm_one, bm_zero)

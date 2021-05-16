@@ -9,12 +9,18 @@ global.key_confirm = new GeneralInputAnchor([ord("X"), vk_enter, vk_space], [gp_
 global.key_back = new GeneralInputAnchor([ord("C"), vk_backspace], [gp_face2, gp_shoulderl, gp_stickl])
 
 
-global.key_attack = new GeneralInputAnchor([ord("Z"), ord("A"), vk_space], [gp_face1, gp_shoulderlb])
+global.key_attack = new GeneralInputAnchor([ord("Z"), ord("A"), vk_space], [gp_face1, gp_shoulderrb])
 global.key_bomb = new GeneralInputAnchor([ord("X"), ord("S"), vk_control], [gp_face3])
-global.key_crawl = new GeneralInputAnchor([ord("C"), ord("D"), vk_shift], [gp_shoulderlb, gp_shoulderrb])
-global.key_pause = new GeneralInputAnchor([ord("P"), vk_escape, vk_backspace], [gp_select])
-global.key_restart = new GeneralInputAnchor([ord("R")], [gp_start])
+global.key_crawl = new GeneralInputAnchor([ord("C"), ord("D"), vk_shift], [gp_shoulderl, gp_shoulderr])
+global.key_pause = new GeneralInputAnchor([ord("P"), vk_escape, vk_backspace], [gp_start])
+global.key_restart = new GeneralInputAnchor([ord("R")], [gp_select])
 global.key_crawl_toggle = new GeneralInputAnchor([ord("V"), ord("F"), vk_alt], [gp_face4])
+
+
+global.joy_left_h = new JoystickAnchor(gp_axislh)
+global.joy_left_v = new JoystickAnchor(gp_axislv)
+global.joy_right_h = new JoystickAnchor(gp_axisrh)
+global.joy_right_v = new JoystickAnchor(gp_axisrv)
 
 
 global.io_mouse_left = false
