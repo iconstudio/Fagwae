@@ -1,3 +1,12 @@
+/// @function instance_create(object, [layer=layer], [x=0], [y=0])
+function instance_create(type) {
+	var Layer = 1 < argument_count ? argument[1] : layer
+	var X = 2 < argument_count ? argument[2] : 0
+	var Y = 3 < argument_count ? argument[3] : 0
+	return instance_create_layer(X, Y, Layer, type)
+}
+
+
 /// @function bezier4(v1, v2, v3, v4, ratio)
 function bezier4(x1, x2, x3, x4, t) {
 	var Rv = 1 - t
