@@ -25,8 +25,11 @@ menu = function(caption, predicate) constructor {
 	this.predicate = method(other, predicate)
 }
 
+
+do_resume = method(oGameGlobal.id, oGameGlobal.do_resume)
+
 menus = new List([
-	new menu("Resume", method(oGameGlobal, do_resume)),
+	new menu("Resume", do_resume),
 	new menu("Restart game", do_restart),
 	new menu("Go to main menu", do_gotomain)
 ])
@@ -42,3 +45,11 @@ menu_drawer = method(self, function(i, item) {
 		draw_set_color($83104e)
 	draw_text(item_x, item_y + i * 50, item.caption)
 })
+
+
+key_anchor = NONE
+key_pin_stop = false
+key_pin_duration = -1
+key_pin_period_short = 0.1
+key_pin_period_long = 0.5
+key_pinned = NONE

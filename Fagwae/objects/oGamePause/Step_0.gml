@@ -1,7 +1,6 @@
 /// @description Update
 if global.io_p_pause {
-	with oGameGlobal
-		do_resume()
+	do_resume()
 
 	instance_destroy()
 } else {
