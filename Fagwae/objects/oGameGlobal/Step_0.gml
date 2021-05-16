@@ -113,7 +113,7 @@ if global.paused {
 			}
 		}
 
-		if global.io_confirm {
+		if global.io_p_confirm {
 			var selected = pause_menus.at(pause_menu_selection)
 			if !is_null(selected) {
 				var predicate = selected.predicate

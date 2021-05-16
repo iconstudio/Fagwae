@@ -9,9 +9,6 @@ global.io_right = global.key_right.check()
 global.io_up = global.key_up.check()
 global.io_down = global.key_down.check()
 
-global.io_confirm = global.key_confirm.check()
-global.io_back = global.key_back.check()
-
 
 global.io_p_left = global.key_left.check_pressed()
 global.io_p_right = global.key_right.check_pressed()
