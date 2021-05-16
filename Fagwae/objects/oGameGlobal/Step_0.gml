@@ -18,12 +18,10 @@ if global.gamepad_index != -1 and global.gamepad_shake != 0 {
 
 if !global.paused {
 	if !instance_exists(oGamePause) {
-		if global.io_p_pause {
+		if global.io_p_pause or os_is_paused() {
 			do_pause()
-			instance_create(oGamePause, "interface")
 		} elif global.io_p_restart {
-			do_pause()
-			var Menu = instance_create(oGamePause, "interface")
+			var Pauser = do_pause()
 		}
 	}
 

@@ -1,9 +1,11 @@
 /// @description Drawing the score
 draw_set_alpha(1)
 draw_set_color($ffffff)
+
 draw_set_font(fontScore)
 draw_set_halign(1)
 draw_set_valign(1)
+
 
 var score_string = string(score_manager.value_virtual)
 draw_text(SCORE_DX, SCORE_DY, score_string)

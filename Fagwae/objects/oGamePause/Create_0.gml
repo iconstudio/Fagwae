@@ -1,5 +1,6 @@
 /// @description Declare pause menus
 bg_dimm = instance_exists(oGamePauseBackground) ? oGamePauseBackground.id : instance_create(oGamePauseBackground)
+bg_dimm.do_capture()
 
 
 title_x = SCREEN_W * 0.5
@@ -19,42 +20,13 @@ function do_restart() {
 }
 
 
-function do_pause() {
-	menu_selection = 0
-
-	global.paused = true
-
-	if player_generator.is_playing()
-		player_generator.pause()
-
-	instance_deactivate_all(true)
-	instance_activate_object(oIgnore)
-
-	if !sprite_exists(capture) and surface_exists(application_surface) {
-		capture = sprite_create_from_surface(application_surface, 0, 0, SCREEN_W, SCREEN_H, false, false, 0, 0)
-	}
-}
-
-
-function do_resume() {
-	global.paused = false
-	if sprite_exists(capture)
-		sprite_delete(capture)
-
-	instance_activate_all()
-
-	if player_generator.is_paused()
-		player_generator.play()
-}
-
-
 menu = function(caption, predicate) constructor {
 	this.caption = caption
 	this.predicate = method(other, predicate)
 }
 
 menus = new List([
-	new menu("Resume", do_resume),
+	new menu("Resume", method(oGameGlobal, do_resume)),
 	new menu("Restart game", do_restart),
 	new menu("Go to main menu", do_gotomain)
 ])
