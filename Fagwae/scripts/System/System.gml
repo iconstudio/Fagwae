@@ -51,7 +51,7 @@ function GamepadAnchor(keys) constructor {
 /// @function GeneralInputAnchor(keyboard_keys, [gamepad_keys])
 function GeneralInputAnchor(kbkeys, gpkeys) constructor {
 	this.kb_set = new KeyboardAnchor(kbkeys)
-	if GAMEPAD_AVAILABLE and !is_null(gpkeys)
+	if gamepad_is_supported() and !is_null(gpkeys)
 		this.gp_set = new GamepadAnchor(gpkeys)
 	else
 		this.gp_set = null
