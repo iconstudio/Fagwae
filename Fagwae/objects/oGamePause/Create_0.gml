@@ -15,6 +15,12 @@ function do_gotomain() {
 }
 
 
+function do_query_restart() {
+	
+}
+
+
+
 function do_restart() {
 	
 }
@@ -30,7 +36,7 @@ do_resume = method(oGameGlobal.id, oGameGlobal.do_resume)
 
 menus = new List([
 	new menu("Resume", do_resume),
-	new menu("Restart game", do_restart),
+	new menu("Restart game", do_query_restart),
 	new menu("Go to main menu", do_gotomain)
 ])
 
