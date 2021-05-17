@@ -8,11 +8,63 @@ function DepthMenuState(menu) constructor {
 	this.fade_period = 0.1
 
 
+	this.child_first = null
+	this.child_last = null
 	this.selection = null
 
 
+	static attach = function(item) {
+		item.parent = self
+
+
+		if is_null(child_first) {
+			child_first = item
+			child_last = item
+			item.before = item
+		} else {
+			child_last.next = item
+			item.before = child_last
+
+			child_last = item
+		}
+	}
+
+
+	static dettach = function(item) {
+		if item.parent == self {
+			item.parent = null
+
+
+			var Before = item.before, Next = item.next
+			if item == child_first {
+				if !is_null(Next)
+					child_first = Next
+				else
+					child_first = null
+			}
+			if item == child_last {
+				if !is_null(Before)
+					child_last = Before
+				else
+					child_last = null
+			}
+
+
+			if !is_null(Before)
+				Before.next = Next
+			if !is_null(Next)
+				Next.before = Before
+		}
+	}
+
+
 	static draw = function(x, y) {
-		
+		var child, draw_pos
+		for (child = child_first; !is_null(child); child = child.next) {
+			draw_pos = child.draw(x, y)
+			x += draw_pos[0]
+			y += draw_pos[1]
+		}
 	}
 }
 
@@ -33,7 +85,7 @@ function DepthMenu(content, content_kind, predicate, width, height) constructor 
 	this.is_last = false
 
 
-	/// draw(x, y, index) ->next (x, y)
+	/// draw(x, y) -> next(x, y)
 	this.draw = null
 	this.draw_chosen = null
 
@@ -43,8 +95,18 @@ function DepthMenu(content, content_kind, predicate, width, height) constructor 
 	}
 
 
-	static attach = function(target_state) {
-		parent = target_state
+	static attach_to = function(target_state) {
+		if is_null(target_state) {
+			if is_null(parent) { // do nothing
+			} else {
+				target_state.dettach(self)
+			}
+		} else {
+			if !is_null(parent) {
+				parent.dettach(self)
+			}
+			target_state.attach(self)
+		}
 	}
 }
 
