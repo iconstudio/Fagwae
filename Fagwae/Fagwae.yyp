@@ -9,6 +9,7 @@
     {"id":{"name":"sPlayerBody","path":"sprites/sPlayerBody/sPlayerBody.yy",},"order":1,},
     {"id":{"name":"oPlayerBombup","path":"objects/oPlayerBombup/oPlayerBombup.yy",},"order":3,},
     {"id":{"name":"Stack","path":"scripts/Stack/Stack.yy",},"order":1,},
+    {"id":{"name":"oMenuText","path":"objects/oMenuText/oMenuText.yy",},"order":3,},
     {"id":{"name":"oInit","path":"objects/oInit/oInit.yy",},"order":1,},
     {"id":{"name":"sPlayerBullet","path":"sprites/sPlayerBullet/sPlayerBullet.yy",},"order":6,},
     {"id":{"name":"shaderShockwave","path":"shaders/shaderShockwave/shaderShockwave.yy",},"order":4,},

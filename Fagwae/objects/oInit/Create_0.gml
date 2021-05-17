@@ -137,7 +137,6 @@ event_user(0)
 enum MENU_STATUSES { NORMAL, OPENING, CLOSING, STOP = 99 }
 enum MENU_ITEM_TYPES { TEXT, SPRITE, CUSTOM = 99 }
 #macro MENU_TEXT_HEIGHT 62 // 52 + 10
-
 #endregion
 
 
