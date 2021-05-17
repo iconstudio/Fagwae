@@ -1,8 +1,12 @@
 /// @description Initialize game
 #region General
+#macro SCREEN_W 640
+#macro SCREEN_H 960
+randomize()
+
 #macro GAME_FPS 100
 game_set_speed(GAME_FPS, gamespeed_fps)
-randomize()
+
 global.__delta = 0
 global.__delta_scale = 1
 #endregion
@@ -91,7 +95,8 @@ global.wave_uniform_size = shader_get_uniform(shaderShockwave, "shock_width")
 
 
 #region Effects
-#macro ENEMY_BINK_DURATION 0.3
+#macro ENEMY_BINK_DURATION 0.1
+
 
 global.ptsystem_top = part_system_create_layer("effect_above", true)
 global.ptsystem_player = part_system_create_layer("player_effect", true)
@@ -129,8 +134,10 @@ event_user(0)
 
 
 #region UI
-#macro SCREEN_W 640
-#macro SCREEN_H 960
+enum MENU_STATUSES { NORMAL, OPENING, CLOSING, STOP = 99 }
+enum MENU_ITEM_TYPES { TEXT, SPRITE, CUSTOM = 99 }
+#macro MENU_TEXT_HEIGHT 62 // 52 + 10
+
 #endregion
 
 
