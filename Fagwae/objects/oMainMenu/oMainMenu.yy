@@ -5,8 +5,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "oIgnore",
-    "path": "objects/oIgnore/oIgnore.yy",
+    "name": "oMenuLayer",
+    "path": "objects/oMenuLayer/oMenuLayer.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -26,11 +26,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Menu",
-    "path": "folders/System/Menu.yy",
+    "name": "Main Screen",
+    "path": "folders/System/Main Screen.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oMenuState",
+  "name": "oMainMenu",
   "tags": [],
   "resourceType": "GMObject",
 }

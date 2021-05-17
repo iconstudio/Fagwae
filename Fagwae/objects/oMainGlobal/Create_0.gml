@@ -1,29 +1,4 @@
-OPENING = 0
-NORMAL = 10
-GAME_START = 50
-FADEIN = 79
-FADEOUT = 80
-QUIT = 99
-mode = OPENING
-
-fadeout_time = 0 
-fadeout_period = 1.2
-fadein_time = 0 
-fadein_period = 1.4
-
-
-main_menu = function(indicator, predicate) constructor {
-	this.caption = caption
-	this.indicater = is_null(indicator) ? null : method(other, indicator)
-	this.predicate = is_null(predicate) ? null : method(other, predicate)
-}
-
-
-menus = new List([
-	new main_menu(null, null)
-])
-
-menu_size = main_menu.get_size()
+FagwaeMain = instance_create(oMainMenu, "interface")
 
 
 key_anchor = NONE
