@@ -1,4 +1,7 @@
 /// @description Declare pause menus
+event_inherited()
+
+
 bg_dimm = instance_exists(oGamePauseBackground) ? oGamePauseBackground.id : instance_create(oGamePauseBackground)
 bg_dimm.do_capture()
 
