@@ -7,10 +7,10 @@ fade_time = 0
 fade_period = 0.1
 
 
-children = new List()
-child_first = null
-child_last = null
-selection = null
+draw_method = DepthMenuPipeVertical
+draw_set = new List()
+menu_set = new List()
+selection = 0
 
 
 attach = function(menu) {
@@ -18,9 +18,18 @@ attach = function(menu) {
 }
 
 
-join = function(item) {
+apply = function(item) {
+	draw_set.push_back(item)
 	item.parent = self
-	children.push_back(item)
+}
+
+
+join = function(item) {
+	apply(item)
+
+	var Index = menu_set.get_size()
+	menu_set.push_back(item)
+	item.order = Index
 
 
 	if is_null(child_first) {
@@ -32,35 +41,6 @@ join = function(item) {
 		item.before = child_last
 
 		child_last = item
-	}
-}
-
-
-disjoin = function(item) {
-	if item.parent == self {
-		item.parent = null
-		children.remove(0, children.get_size(), item)
-
-
-		var Before = item.before, Next = item.next
-		if item == child_first {
-			if !is_null(Next)
-				child_first = Next
-			else
-				child_first = null
-		}
-		if item == child_last {
-			if !is_null(Before)
-				child_last = Before
-			else
-				child_last = null
-		}
-
-
-		if !is_null(Before)
-			Before.next = Next
-		if !is_null(Next)
-			Next.before = Before
 	}
 }
 
