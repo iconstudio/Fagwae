@@ -40,7 +40,7 @@
     {"id":{"name":"oEnemyParent","path":"objects/oEnemyParent/oEnemyParent.yy",},"order":0,},
     {"id":{"name":"seqPlayerInit","path":"sequences/seqPlayerInit/seqPlayerInit.yy",},"order":7,},
     {"id":{"name":"_obj_controller_shockwave","path":"objects/_obj_controller_shockwave/_obj_controller_shockwave.yy",},"order":3,},
-    {"id":{"name":"oMenuLayer","path":"objects/oMenuLayer/oMenuLayer.yy",},"order":1,},
+    {"id":{"name":"oMenuGroup","path":"objects/oMenuGroup/oMenuGroup.yy",},"order":2,},
     {"id":{"name":"roomGame","path":"rooms/roomGame/roomGame.yy",},"order":4,},
     {"id":{"name":"sIntroFrameChain","path":"sprites/sIntroFrameChain/sIntroFrameChain.yy",},"order":4,},
     {"id":{"name":"fontPause","path":"fonts/fontPause/fontPause.yy",},"order":1,},
@@ -99,6 +99,7 @@
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"order":3,},
     {"id":{"name":"oPlayerBullet","path":"objects/oPlayerBullet/oPlayerBullet.yy",},"order":5,},
     {"id":{"name":"seqPlayerShield","path":"sequences/seqPlayerShield/seqPlayerShield.yy",},"order":8,},
+    {"id":{"name":"oMenuRenderer","path":"objects/oMenuRenderer/oMenuRenderer.yy",},"order":1,},
     {"id":{"name":"roomInit","path":"rooms/roomInit/roomInit.yy",},"order":0,},
   ],
   "Options": [

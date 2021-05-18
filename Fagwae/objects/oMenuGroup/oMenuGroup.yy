@@ -30,7 +30,7 @@
     "path": "folders/System/Menu.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oMenuLayer",
+  "name": "oMenuGroup",
   "tags": [],
   "resourceType": "GMObject",
 }
