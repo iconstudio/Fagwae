@@ -1,16 +1,12 @@
 /// @description Declare the main menu
-TopMainMenu = DepthMenuGroup("interface")
+event_inherited()
 
-with TopMainMenu {
-	
-}
-
-
-TopMainMenu.join(DepthMenuText("Start"))
-TopMainMenu.join(DepthMenuText("Trophy"))
-TopMainMenu.join(DepthMenuText("Journal"))
-TopMainMenu.join(DepthMenuText("Setting"))
-TopMainMenu.join(DepthMenuText("Exit"))
+Main = DepthMenuGroup("interface")
+Main_Start = DepthMenuText("Start").attach(Main)
+Main_Trop = DepthMenuText("Trophy").attach(Main)
+Main_Book = DepthMenuText("Journal").attach(Main)
+Main_Option = DepthMenuText("Setting").attach(Main)
+Main_Exit = DepthMenuText("Exit").attach(Main)
 
 
 // Start
@@ -45,4 +41,7 @@ ExitQuery.join(DepthMenuText("Yes"))
 ExitQuery.join(DepthMenuText("No"))
 
 
-FagwaeMainDepth = TopMainMenu
+render_target = Main
+
+
+draw_set_font(fontMainMenuEntry)

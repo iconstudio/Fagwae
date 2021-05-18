@@ -5,8 +5,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "oMenuRenderer",
-    "path": "objects/oMenuRenderer/oMenuRenderer.yy",
+    "name": "oIgnore",
+    "path": "objects/oIgnore/oIgnore.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -21,16 +21,17 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
+    {"isDnD":false,"eventNum":64,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Main Screen",
-    "path": "folders/System/Main Screen.yy",
+    "name": "Menu",
+    "path": "folders/System/Menu.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oMainMenu",
+  "name": "oMenuRenderer",
   "tags": [],
   "resourceType": "GMObject",
 }
