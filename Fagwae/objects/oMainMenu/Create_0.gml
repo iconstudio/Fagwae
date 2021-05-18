@@ -2,6 +2,9 @@
 event_inherited()
 
 Main = DepthMenuGroup("interface")
+Main.x = SCREEN_W * 0.5
+Main.y = SCREEN_H * 0.333
+
 Main_Start = DepthMenuText("Start").attach(Main)
 Main_Trop = DepthMenuText("Trophy").attach(Main)
 Main_Book = DepthMenuText("Journal").attach(Main)

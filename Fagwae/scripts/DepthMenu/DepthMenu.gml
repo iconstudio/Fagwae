@@ -5,44 +5,44 @@ function DepthMenuGroup(menu_layer) {
 
 
 /// @function DepthMenuPipeHorizontal
-function DepthMenuPipeHorizontal(dx, dy) {
-	static ox = dx, oy = dy
-
-
-	draw_set.accumulate(0, draw_set.get_size(), ox, function(dx, item) {
+function DepthMenuPipeHorizontal(ox, oy) {
+	draw_transform_stack_push()
+	draw_transform_set_translation(ox, oy, 0)
+	draw_set.accumulate(0, draw_set.get_size(), 0, function(dx, item) {
 		if !is_null(item.draw) {
-			item.draw(dx, oy)
+			item.draw(dx, 0)
 		}
 		return dx + item.w
 	})
+	draw_transform_stack_pop()
 }
 
 
 /// @function DepthMenuPipeVertical
-function DepthMenuPipeVertical(dx, dy) {
-	static ox = dx, oy = dy
-
-
-	draw_set.accumulate(0, draw_set.get_size(), oy, function(dy, item) {
+function DepthMenuPipeVertical(ox, oy) {
+	draw_transform_stack_push()
+	draw_transform_set_translation(ox, oy, 0)
+	draw_set.accumulate(0, draw_set.get_size(), 0, function(dy, item) {
 		if !is_null(item.draw) {
-			item.draw(ox, dy)
+			item.draw(0, dy)
 		}
 		return dy + item.h
 	})
+	draw_transform_stack_pop()
 }
 
 
 /// @function DepthMenuPipeBoth
-function DepthMenuPipeBoth(dx, dy) {
-	static ox = dx, oy = dy
-
-
-	draw_set.accumulate(0, draw_set.get_size(), [ox, oy], function(dpos, item) {
+function DepthMenuPipeBoth(ox, oy) {
+	draw_transform_stack_push()
+	draw_transform_set_translation(ox, oy, 0)
+	draw_set.accumulate(0, draw_set.get_size(), [0, 0], function(dpos, item) {
 		if !is_null(item.draw) {
 			item.draw(dpos[0], dpos[1])
 		}
 		return [dpos[0] + item.w, dpos[1] + item.h]
 	})
+	draw_transform_stack_pop()
 }
 
 
