@@ -406,11 +406,13 @@ function List() constructor {
 		Last = _Check_iterator(Last)
 		_Check_range(First, Last)
 
+		static plus = function(a, b) { return a + b }
+
 		var Pred
 		if 2 < argument_count
 			Pred = argument[3]
 		else
-			Pred = function(a, b) { return a + b }
+			Pred = plus
 
 		while First != Last {
 	        Init = Pred(Init, at(First))
