@@ -5,8 +5,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "oIgnore",
-    "path": "objects/oIgnore/oIgnore.yy",
+    "name": "oMenuRenderer",
+    "path": "objects/oMenuRenderer/oMenuRenderer.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
