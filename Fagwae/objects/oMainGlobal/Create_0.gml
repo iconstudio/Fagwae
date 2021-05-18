@@ -1,4 +1,4 @@
-FagwaeMain = instance_create(oMainMenu, "interface")
+FagwaeMainMenu = instance_create(oMainMenu, "interface")
 
 
 key_anchor = NONE
@@ -11,6 +11,7 @@ key_pinned = NONE
 
 draw_set_color($ffffff)
 draw_set_font(fontMainMenuEntry)
+
 
 audio_stop_all()
 bgm = audio_play_sound(musicMainMenu, 100, true)
