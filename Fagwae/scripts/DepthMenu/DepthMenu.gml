@@ -1,44 +1,54 @@
 /// @function DepthMenuGroup
 function DepthMenuGroup(menu_layer) {
-	return instance_create(oMenuLayer, menu_layer)
+	return instance_create(oMenuGroup, menu_layer)
 }
 
 
 /// @function DepthMenuPipeHorizontal
-function DepthMenuPipeHorizontal() {
-	draw_set.accumulate(0, draw_set.get_size(), x, function(dx, item) {
+function DepthMenuPipeHorizontal(dx, dy) {
+	static ox = dx, oy = dy
+
+
+	draw_set.accumulate(0, draw_set.get_size(), ox, function(dx, item) {
 		if !is_null(item.draw) {
-			item.draw(dx, y)
+			item.draw(dx, oy)
 		}
-		return x + item.width
+		return dx + item.w
 	})
 }
 
 
 /// @function DepthMenuPipeVertical
-function DepthMenuPipeVertical() {
-	draw_set.accumulate(0, draw_set.get_size(), y, function(dy, item) {
+function DepthMenuPipeVertical(dx, dy) {
+	static ox = dx, oy = dy
+
+
+	draw_set.accumulate(0, draw_set.get_size(), oy, function(dy, item) {
 		if !is_null(item.draw) {
-			item.draw(x, dy)
+			item.draw(ox, dy)
 		}
-		return dy + item.height
+		return dy + item.h
 	})
 }
 
 
 /// @function DepthMenuPipeBoth
-function DepthMenuPipeBoth() {
-	draw_set.accumulate(0, draw_set.get_size(), [x, y], function(dpos, item) {
+function DepthMenuPipeBoth(dx, dy) {
+	static ox = dx, oy = dy
+
+
+	draw_set.accumulate(0, draw_set.get_size(), [ox, oy], function(dpos, item) {
 		if !is_null(item.draw) {
 			item.draw(dpos[0], dpos[1])
 		}
-		return [dpos[0] + item.width, dpos[1] + item.height]
+		return [dpos[0] + item.w, dpos[1] + item.h]
 	})
 }
 
 
 /// @function DepthMenu
-function DepthMenu(content, predicate) constructor {
+function DepthMenu(renderer, content, predicate) constructor {
+	this.renderer = renderer
 	this.parent = null
 	this.order = 0
 
@@ -52,6 +62,43 @@ function DepthMenu(content, predicate) constructor {
 
 
 	this.predicate = predicate
+
+
+	static set_width = function(value) {
+		this.w = value
+
+		return self
+	}
+
+
+	static set_height = function(value) {
+		this.h = value
+
+		return self
+	}
+
+
+	static set_predicate = function(predicate) {
+		this.predicate = predicate
+
+		return self
+	}
+
+
+	static set_drawer = function(predicate) {
+		this.draw = predicate
+
+		return self
+	}
+
+
+	static attach = function(group) {
+		if !is_null(group) {
+			group.join(self)
+		}
+
+		return self
+	}
 }
 
 
@@ -61,7 +108,7 @@ function DepthMenuBlender(alpha, color) constructor {
 	this.image_blend = color
 
 
-	this.draw = function() {
+	static draw = function() {
 		draw_set_alpha(image_alpha)
 		draw_set_color(image_blend)
 	}
@@ -73,18 +120,18 @@ function DepthMenuColor(color) constructor {
 	this.image_blend = color
 
 
-	this.draw = function() {
+	static draw = function() {
 		draw_set_color(image_blend)
 	}
 }
 
 
 /// @function DepthMenuFont
-function DepthMenuBlender(font) constructor {
+function DepthMenuFont(font) constructor {
 	this.font = font
 
 
-	this.draw = function() {
+	static draw = function() {
 		draw_set_font(font)
 	}
 }
@@ -96,7 +143,7 @@ function DepthMenuAlign(halign, valign) constructor {
 	this.valign = valign
 
 
-	this.draw = function() {
+	static draw = function() {
 		draw_set_halign(halign)
 		draw_set_valign(valign)
 	}
@@ -105,12 +152,13 @@ function DepthMenuAlign(halign, valign) constructor {
 
 /// @function DepthMenuText
 function DepthMenuText(caption) {
-	static draw = function() {
-		draw_text(x, y, content)
+	static draw = function(dx, dy) {
+		draw_text(dx, dy, content)
 	}
 
 
-	var item = new DepthMenu(caption, null)
-	item.draw = draw
+	var item = new DepthMenu(id, caption, null)
+	item.set_drawer(draw)
+	item.set_height(MENU_TEXT_HEIGHT)
 	return item
 }
