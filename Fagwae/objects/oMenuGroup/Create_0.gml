@@ -55,3 +55,10 @@ select = function(index) {
 }
 
 
+set_fade_duration = function(time) {
+	fade_period = time
+
+	return self
+}
+
+
