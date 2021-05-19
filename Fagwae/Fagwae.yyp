@@ -71,7 +71,6 @@
     {"id":{"name":"List","path":"scripts/List/List.yy",},"order":4,},
     {"id":{"name":"oGameGlobal","path":"objects/oGameGlobal/oGameGlobal.yy",},"order":0,},
     {"id":{"name":"sTitleProject","path":"sprites/sTitleProject/sTitleProject.yy",},"order":0,},
-    {"id":{"name":"_oMainExit","path":"objects/_oMainExit/_oMainExit.yy",},"order":2,},
     {"id":{"name":"oMainMenu","path":"objects/oMainMenu/oMainMenu.yy",},"order":1,},
     {"id":{"name":"sIntroLabel2","path":"sprites/sIntroLabel2/sIntroLabel2.yy",},"order":7,},
     {"id":{"name":"sPlayerPowerup","path":"sprites/sPlayerPowerup/sPlayerPowerup.yy",},"order":5,},
