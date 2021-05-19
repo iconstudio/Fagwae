@@ -46,6 +46,19 @@ function DepthMenuPipeBoth(ox, oy) {
 }
 
 
+/// @function DepthMenuPipeFree
+function DepthMenuPipeFree(ox, oy) {
+	draw_transform_stack_push()
+	draw_transform_set_translation(ox, oy, 0)
+	draw_set.foreach_all(function(item) {
+		if !is_null(item.draw) {
+			item.draw(0, 0)
+		}
+	})
+	draw_transform_stack_pop()
+}
+
+
 /// @function DepthMenu
 function DepthMenu(renderer, content, predicate) constructor {
 	this.renderer = renderer
@@ -102,8 +115,16 @@ function DepthMenu(renderer, content, predicate) constructor {
 }
 
 
+/// @function DepthMenuDummy
+function DepthMenuDummy() constructor {
+	this.w = 0
+	this.h = 0
+	this.draw = null
+}
+
+
 /// @function DepthMenuBlender
-function DepthMenuBlender(alpha, color) constructor {
+function DepthMenuBlender(alpha, color): DepthMenuDummy() constructor {
 	this.image_alpha = alpha
 	this.image_blend = color
 
@@ -116,7 +137,7 @@ function DepthMenuBlender(alpha, color) constructor {
 
 
 /// @function DepthMenuColor
-function DepthMenuColor(color) constructor {
+function DepthMenuColor(color): DepthMenuDummy() constructor {
 	this.image_blend = color
 
 
@@ -127,7 +148,7 @@ function DepthMenuColor(color) constructor {
 
 
 /// @function DepthMenuFont
-function DepthMenuFont(font) constructor {
+function DepthMenuFont(font): DepthMenuDummy() constructor {
 	this.font = font
 
 
@@ -138,7 +159,7 @@ function DepthMenuFont(font) constructor {
 
 
 /// @function DepthMenuAlign
-function DepthMenuAlign(halign, valign) constructor {
+function DepthMenuAlign(halign, valign): DepthMenuDummy() constructor {
 	this.halign = halign
 	this.valign = valign
 
