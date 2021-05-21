@@ -1,6 +1,7 @@
 player_generator = new Scene(seqPlayerInit, SCREEN_W * 0.5, SCREEN_H * 0.5, "player")
 
 
+new Scene(seqAreaTest);
 score_manager = instance_create(oGameScore, "scoreboard")
 
 
