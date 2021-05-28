@@ -14,6 +14,9 @@ score_given = 17
 damage = 1 // collision damage
 
 
+
+
+
 /// @function got_damage(amount=1)
 function got_damage() {
 	if dead or invincible == -1 or 0 < invincible
