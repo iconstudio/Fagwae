@@ -14,13 +14,14 @@ score_given = 17
 damage = 1 // collision damage
 
 
-
+arms = null
 
 
 /// @function got_damage(amount=1)
 function got_damage() {
 	if dead or invincible == -1 or 0 < invincible
 		exit
+
 
 	var amount = 1
 	if 0 < argument_count
@@ -36,11 +37,4 @@ function got_damage() {
 			event_user(0)
 		}
 	}
-}
-
-
-/// @function destroy()
-function destroy() {
-	instance_destroy()
-	event_user(15)
 }
