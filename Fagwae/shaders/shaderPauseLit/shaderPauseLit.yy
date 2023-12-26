@@ -1,11 +1,10 @@
 {
-  "type": 1,
+  "resourceType": "GMShader",
+  "resourceVersion": "1.0",
+  "name": "shaderPauseLit",
   "parent": {
     "name": "Graphics",
     "path": "folders/Game/Graphics.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "shaderPauseLit",
-  "tags": [],
-  "resourceType": "GMShader",
+  "type": 1,
 }

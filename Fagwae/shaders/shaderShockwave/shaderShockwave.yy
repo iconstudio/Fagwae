@@ -1,11 +1,10 @@
 {
-  "type": 1,
+  "resourceType": "GMShader",
+  "resourceVersion": "1.0",
+  "name": "shaderShockwave",
   "parent": {
     "name": "Effect",
     "path": "folders/Game/Effect.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "shaderShockwave",
-  "tags": [],
-  "resourceType": "GMShader",
+  "type": 1,
 }
